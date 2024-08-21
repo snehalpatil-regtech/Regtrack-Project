@@ -57,7 +57,7 @@ public class CompanyCount extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\CompanyAdminResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Implementation.html",true);
 		test = extent.startTest("Loging In - Company Admin");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -923,8 +923,19 @@ public class CompanyCount extends BasePage {
 				
 				extent.endTest(test);
 				extent.flush();
+			}*/
+			
+			@Test(priority = 0) 
+			void AssignComplianceInternal() throws InterruptedException, IOException
+			{
+				test = extent.startTest("Internal Compliances - Assign Compliance ");
+				
+				CompanyMethods.AssignComplianceInternal(test);
+				
+				extent.endTest(test);
+				extent.flush();
 			}
-	*/
+	
 	
 	@AfterMethod
   	void browserClosing() throws InterruptedException

@@ -50,7 +50,7 @@ public class DeptStatutory extends BasePage {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Department1";           //Check link in excel sheet first.
+	public static String link = "Department";           //Check link in excel sheet first.
 			
 		
 	/*
@@ -65,7 +65,7 @@ public class DeptStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -2901,6 +2901,81 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 	*/
+		//@Test(priority = 0)
+		void SummaryofOverdueSF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Summary of Overdue Compliances?");
+			
+			DeptCountPOM.SummaryofOverdueSF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		//@Test(priority = 0)
+		void PerformanceSummarySF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Performance Summary Graph?");
+			
+			DeptCountPOM.PerformanceSummarySF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+	//	@Test(priority = 41)
+		void RiskSummarySF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Risk Summary Graph?");
+			
+			DeptCountPOM.RiskSummarySF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 42)
+		void DepartmentSummarySF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Department Summary Graph?");
+			
+			DeptCountPOM.DepartmentSummarySF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 43)
+		void PerformerSummaryDueForPeriodSF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Performance Summary(Due for the period) Graph?");
+			
+			DeptCountPOM.PerformerSummaryDueForPeriodSF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 45)
+		void DetailedReportSF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
+			
+			DeptCountPOM.DetailedReportSF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 46)
+		void ComplianceDocumentsSF() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");
+			
+			DeptCountPOM.ComplianceDocumentsSF(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
 	
 	
 	@AfterMethod

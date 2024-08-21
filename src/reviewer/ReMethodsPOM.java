@@ -268,12 +268,12 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(300);
 		OverduePOM.clickCompliance().click();					//Clicking on 'Compliance' under My Workspace
 		
-		Thread.sleep(1000);
+		/*Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOf(OverduePOM.clickMoreActions()));	//Waiting for records table to get visible.
 		OverduePOM.clickUserRole().click();
 		Thread.sleep(300);
 		elementsList = OverduePOM.selectUserRole();
-		elementsList.get(1).click();
+		elementsList.get(1).click();*/
 		
 		Thread.sleep(3000);
 		OverduePOM.clickMoreActions1().click();				//Clicking on 'More Actions' drop down.
@@ -1942,7 +1942,7 @@ int NewCountCompletedIn = Integer.parseInt(ReviewerPOM.ClickCompletedIn().getTex
 		
 		Thread.sleep(8000);
 		elementsList = ReviewerPOM.clickOverView();
-		elementsList.get(1).click();
+		elementsList.get(0).click();
 		Thread.sleep(2000);
 		ReviewerPOM.CloseOverview().click();
 		Thread.sleep(3000);
@@ -3348,13 +3348,13 @@ Thread.sleep(3000);
 		
 		ReviewerPOM.ClickClosedEventsPer().click();		//Clicking on Statutory Review value.
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
+	/*	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
 		elementsList = ReviewerPOM.clickOverViewPerCE();
 		elementsList.get(1).click();
 		Thread.sleep(3000);
 		ReviewerPOM.CloseOverview1().click();
 		Thread.sleep(3000);
-		test.log(LogStatus.PASS,"Overview Successfully");
+		test.log(LogStatus.PASS,"Overview Successfully");*/
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
@@ -3482,6 +3482,89 @@ Thread.sleep(3000);
 	
 	Thread.sleep(1000);
 	
+	}
+	
+	public static void CompletedStatutorySF(ExtentTest test)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),  (35));
+		
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.ClickCompletedSta()));	//Wait until Internal Pending For Review count gets visible.
+		
+		int DasCountCompletedSta = Integer.parseInt(ReviewerPOM.ClickCompletedSta().getText());	//Reading old value of Internal Reject
+		
+		ReviewerPOM.ClickCompletedSta().click();		//Clicking on Statutory Review value.
+		Thread.sleep(8000);
+		
+		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));
+		Thread.sleep(8000);
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		Thread.sleep(8000);
+		ReviewerPOM.Apply().click();
+		
+		//elementsList = ReviewerPOM.clickOverView1();	Thread.sleep(3000);
+		
+		
+		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[26]/a[2]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='OverViews']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	
+	
+	
+		CFOcountPOM.closeDocument1().click();
+
+		getDriver().switchTo().defaultContent();
+		//Thread.sleep(3000);
+		//CFOcountPOM.closeCategories().click();
+		//Thread.sleep(1000);
 	}
 	
 	

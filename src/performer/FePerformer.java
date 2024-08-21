@@ -22,6 +22,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import cfo.CFOcountPOM;
 import login.BasePage;
 
 public class FePerformer extends BasePage {
@@ -45,7 +46,7 @@ public class FePerformer extends BasePage {
 	public static XSSFWorkbook workbook = null;		//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;			//Sheet variable
 	
-	public static String link = "fe";
+	public static String link = "PerTlcg";
 	
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -328,6 +329,8 @@ public class FePerformer extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
+		
+		
 	
 	
 	

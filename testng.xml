@@ -3,8 +3,8 @@
 <suite thread-count="2" parallel="classes" name="Suite">
   <test  name="Test">
     <classes>
-     <class name="criticalTestScripts.InternalMgmt"/>
-      <class name="criticalTestScripts.StatutoryMGMT"/>
+     <class name="criticalTestScripts.Performer"/>
+      <class name="criticalTestScripts.Reviewer"/>
       
     </classes>
   </test> <!-- Test -->

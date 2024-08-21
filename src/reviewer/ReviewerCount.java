@@ -108,7 +108,7 @@ public class ReviewerCount extends BasePage
 	//	extent.flush();
 	}
 
-/*	@Test(priority = 2) //pass
+	@Test(priority = 2) //pass
 	 void ReviewCountStatutoryApprove() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Statutory Pending For Review Count and Completed when Approved");
@@ -535,7 +535,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
 	
-  @Test(priority = 13) 
+  @Test(priority =13) 
   void OverdueInternalCri() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue ");
@@ -571,7 +571,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
      
- /*  @Test(priority = 16) //pass 
+ /*@Test(priority = 16) //pass 
     void EventsCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Event Count Match");
@@ -582,7 +582,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
  
-   @Test(priority = 17) //pass
+  @Test(priority = 17) //pass
     void ActivatedEventsCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Activated Events Count Match");
@@ -594,7 +594,7 @@ public class ReviewerCount extends BasePage
 		extent.flush();
 	}
     
-    @Test(priority = 18) //pass 
+   @Test(priority = 18) //pass 
     void ClosedEventsCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Closed  Events Count Match");
@@ -607,7 +607,7 @@ public class ReviewerCount extends BasePage
 	}
     
     
-	@Test(priority = 19) // pass
+	@Test(priority = 0) // pass
 	void MyReminderStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Reminder - Statutory Count Verification");
@@ -628,7 +628,7 @@ public class ReviewerCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
 	
 	@Test(priority = 21) //pass
@@ -665,10 +665,10 @@ public class ReviewerCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	// --------- Reviewer Task  -----
-  /*    
-  //   @Test(priority = 11) //pass
+     
+  /*  @Test(priority = 11) //pass
   	void ReviewerTaskPFRStatutory  () throws InterruptedException, IOException
   	{
     	  test = extent.startTest("Statutory 'Pending For Review' - Reviewer Task");
@@ -1428,7 +1428,7 @@ extent.flush();
         	  	test.log(LogStatus.PASS, "Test Passed.");
         	  	extent.endTest(test);
         	  	extent.flush();
-        	}
+        	}*/
         	
         	
         	 @Test(priority = 15) //pass
@@ -1501,7 +1501,7 @@ extent.flush();
 			
 			extent.endTest(test);
 			extent.flush();
-		}*/
+		}
 	 
 	 @Test(priority =21) 
 		void Compliancecalendar() throws InterruptedException, IOException
@@ -1545,7 +1545,7 @@ extent.flush();
 		test = extent.startTest("To check  Detailed report filters working or not Verification");
 		//test.log(LogStatus.INFO, "Test Initiated");
 		
-		ApprovalcountPOM.DetailedReportFilterRe(test,  "Reviewer");
+		ApprovalcountPOM.DetailedReportFilterper(test,  "Reviewer");
 		
 		extent.endTest(test);
 		extent.flush();
@@ -2271,6 +2271,38 @@ extent.flush();
     				test = extent.startTest("my Report - Detailed  report - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my report page?");
     					
     				MethodsPOM.DetailedReportDA(test);
+    				
+    				extent.endTest(test);
+    				extent.flush();
+    			}
+    			
+    			@Test(priority = 81)
+    			void CompletedStatutorySF() throws InterruptedException, IOException
+    			{
+    				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
+    				
+    				ReMethodsPOM.CompletedStatutorySF(test);
+    				
+    				extent.endTest(test);
+    				extent.flush();
+    			}
+    			
+    			@Test(priority = 82)
+    			void DetailedReportSF() throws InterruptedException, IOException
+    			{
+    				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
+    				
+    				MethodsPOM.DetailedReportSF(test);
+    				
+    				extent.endTest(test);
+    				extent.flush();
+    			}
+    			@Test(priority = 83)
+    			void ComplianceDocumentsSF() throws InterruptedException, IOException
+    			{
+    				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");
+    				
+    				MethodsPOM.ComplianceDocumentsSF(test);
     				
     				extent.endTest(test);
     				extent.flush();

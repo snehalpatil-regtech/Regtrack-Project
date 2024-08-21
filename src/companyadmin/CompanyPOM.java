@@ -1354,17 +1354,71 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnSave']"));
 		return admin;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static WebElement clickInternalCompliance()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]/a"));
+		return admin;
+	}
+	public static WebElement clickAssignCompliance()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[6]/a"));
+		return admin;
+	}
+	public static WebElement clickLocation()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxFilterLocation']"));
+		return admin;
+	}
+	public static WebElement clickLocationExpand()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvFilterLocationn0']/img"));
+		return admin;
+	}
+	public static WebElement selectLocation()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvFilterLocationt2']"));
+		return admin;
+	}
+	public static WebElement clickPerformer()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_upComplianceTypeList']/center/table/tbody/tr[2]/td[2]/span[1]/a/span[1]"));
+		return admin;
+	}
+	public static WebElement selectPerformer()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.linkText("Amol Patil"));
+		return admin;
+	}
+	public static WebElement clickReviewer()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_upComplianceTypeList']/center/table/tbody/tr[2]/td[4]/span[1]/a/span[1]"));
+		return admin;
+	}
+	public static WebElement selectReviewer()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.linkText("Amit shaha"));
+		return admin;
+	}
+	public static WebElement clickCategory()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_upComplianceTypeList']/center/table/tbody/tr[3]/td[2]/span[1]/a/span[1]"));
+		return admin;
+	}
+	public static WebElement selectCategory()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.linkText("Category 28 May 2021"));
+		return admin;
+	}
+	public static WebElement selectCheckbox()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_grdComplianceRoleMatrix_chkAssign_0']"));
+		return admin;
+	}
+	public static WebElement clickSaveBtn()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_Button1']"));
+		return admin;
+	}
 	
 	
 	

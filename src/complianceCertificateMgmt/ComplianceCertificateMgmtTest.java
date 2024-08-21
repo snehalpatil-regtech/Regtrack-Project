@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import complianceCertificateOfficer.ComplianceCertificateOfficerMethod;
 import complianceCertificateReviewer.ComplianceCertificateReviewerMethod;
 import login.BasePage;
 
@@ -57,9 +59,9 @@ public class ComplianceCertificateMgmtTest extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	//	String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-		extent = new com.relevantcodes.extentreports.ExtentReports("C:\\Users\\Mayuri Gaikwad\\Desktop\\PerformerPom\\Reports\\CertificateOwner.html",true);
-		test = extent.startTest("Verify OpenBrowser");
-		test.log(LogStatus.PASS, "Browser test is initiated");
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\CertificateOwner.html",true);
+		test = extent.startTest("Loging In - Certificate Management");
+		test.log(LogStatus.PASS, "Logging into system");
 		
 		/*XSSFSheet sheet = ReadExcel();
 		Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
@@ -73,28 +75,12 @@ public class ComplianceCertificateMgmtTest extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 1)
+	@BeforeMethod
 	void Login() throws InterruptedException, IOException
 	{
-		test = extent.startTest("Loging In - Compliance  Certificate Mgmt");
-		test.log(LogStatus.PASS, "Logging into system");
-		
-	/*	XSSFSheet sheet = ReadExcel();
-		Row row1 = sheet.getRow(1);						//Selected 1st index row (Second row)
-		Cell c1 = row1.getCell(1);						//Selected cell (1 row,1 column)
-		String uname = c1.getStringCellValue();			//Got the URL stored at position 1,1
-		
-		Row row2 = sheet.getRow(2);						//Selected 2nd index row (Third row)
-		Cell c2 = row2.getCell(1);						//Selected cell (2 row,1 column)
-		String password = c2.getStringCellValue();		//Got the URL stored at position 2,1
-		
-		driver = login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
-		*/
-			
-		test.log(LogStatus.PASS, "Test Passed.");
-		extent.endTest(test);
-		extent.flush();
+		initialization(link,19,"Statutory");
 	}
+	
 	
 	public static void progress1(WebDriver driver)
 	{
@@ -149,6 +135,28 @@ public class ComplianceCertificateMgmtTest extends BasePage {
 		test = extent.startTest("Period - February-23 - Compliance Tech");
 		
 		ComplianceCertificateMgmtMethod.CertificateUser(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 6)
+	void CertificateOfficerPM() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateOfficerMethod.CertificateOfficerPM(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 7)
+	void CertificateOfficerP1M() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"No Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateOfficerMethod.CertificateOfficerP1M(test);
 		
 		extent.endTest(test);
 		extent.flush();

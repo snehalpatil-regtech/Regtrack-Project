@@ -301,7 +301,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static List<WebElement> clickOverView()	//Searching all 'Work File Timeline' text boxes
 	{
-		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[26]/a[2]"));
+		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[26]/a[2]"));
 		return elementsList;
 	}
 	

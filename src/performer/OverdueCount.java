@@ -8,6 +8,9 @@ import java.util.List;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -29,6 +32,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import approval.ApprovalcountPOM;
 import cfo.CFOcountPOM;
 import cfo.MgmtAMethod;
+import companyadmin.CompanyPOM;
 import departmentHead.DeptCountPOM;
 import login.BasePage;
 import reviewer.ReMethodsPOM;
@@ -55,6 +59,7 @@ public class OverdueCount extends BasePage
 	public static XSSFSheet sheet = null;			//Sheet variable
 	
 	public static String link = "mgmt1";
+	static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
@@ -133,7 +138,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-//	@Test(priority = 2)//pass     Critical
+/*	@Test(priority = 2)//pass     Critical
 	void Upcoming_ComplianceStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Upcoming Compliance Verification");
@@ -145,7 +150,7 @@ public class OverdueCount extends BasePage
 	extent.flush();
 	}
 	
-//	@Test(priority = 3)//pass
+	@Test(priority = 3)//pass
 	void Upcoming_ComplianceStatutoryCkeckView() throws InterruptedException
 	{
 		test = extent.startTest("Statutory Upcoming Compliance Check View Button Verification");
@@ -157,7 +162,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	 @Test(priority = 4) //pass
+	 @Test(priority = 4) //pass
 	void Upcoming_ComplianceInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Upcoming Compliance Verification");
@@ -169,7 +174,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	void DashboardStatutoryOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Dashboard Statutory Overdue Value Verification");
@@ -259,7 +264,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 6)  //pass
+	@Test(priority = 6)  //pass
 	void DashboardInternalOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Dashboard Internal Overdue Value Verification");
@@ -352,7 +357,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
- //  @Test(priority = 7) //pass non -critical
+  @Test(priority = 7) //pass non -critical
 	void MyWorkComplianceClear() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Workspace - Compliance - To check Clear button Working or not");
@@ -364,7 +369,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 8) //pass
+	@Test(priority = 8) //pass
 	void StatutoryOverdueMitigationplan() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Mitigation Plan");
@@ -373,7 +378,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
 /*	@Test(priority = 9) //pass
 	void StatutoryOverdueMitigationplanM() throws InterruptedException, IOException
@@ -435,7 +440,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}*/
 	
-//	@Test(priority = 14) //pass
+	/*@Test(priority = 14) //pass
 	void StatutoryOverdueMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Overdue - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -447,7 +452,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 15) //pass
+	@Test(priority = 15) //pass
 	void InternalOverdueMitigationplan() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Overdue - Mitigation Plan");
@@ -457,7 +462,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
 /*	@Test(priority = 16) //pass
 	void InternalOverdueMitigationplanMul() throws InterruptedException, IOException
@@ -519,7 +524,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}*/
 	
-//	@Test(priority = 21) 
+/*	@Test(priority = 21) 
 		void InternalOverdueMP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Internal Overdue - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -531,7 +536,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 
-	//@Test(priority = 22) //pass
+//@Test(priority = 22) //pass
 	void StatutoryOverdueMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter - Statutory Overdue - Mitigation Plan - Pending Updation filter working or not");
@@ -543,7 +548,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 26) //pass
+	//@Test(priority = 26) //pass
 	void InternalOverdueMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter - Internal Overdue - Mitigation Plan - Pending Updation filter working or not");
@@ -555,7 +560,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	//	@Test(priority = 27) //pass   Critical
+	//@Test(priority = 27) //pass   Critical Not run
 	void StatutoryChecklistAction() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Checklist Count Through Action");
@@ -567,7 +572,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-//	@Test(priority = 28) //pass
+	@Test(priority = 28) //pass
 	void StatutoryChecklistBox() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Checklist CheckBoxes check ");
@@ -591,8 +596,8 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-
-//	@Test(priority = 30)  //pass
+ 
+	//@Test(priority = 30)  //pass Not run
 	void InternalCheckListAction() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Checklist Count Through Action");
@@ -604,7 +609,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 31)  //pass
+	@Test(priority = 31)  //pass
 	void InternalCheckListCheckBox() throws InterruptedException
 	{
 		test = extent.startTest("Internal Checklist CheckBoxes check");
@@ -616,7 +621,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 		
-//	@Test(priority = 32)  //pass non-critical
+	@Test(priority = 32)  //pass non-critical
 	void StatutoryCheckListMitigationP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Mitigation Plan");
@@ -626,7 +631,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}	
+	}	*/
 	
 /*	@Test(priority = 30)  //pass
 	void StatutoryCheckListMitigationPMul() throws InterruptedException, IOException
@@ -688,7 +693,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}*/
 	
-//	@Test(priority = 35)  //pass
+/*	@Test(priority = 35)  //pass
 	void StatutoryCheckListMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory CheckList - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -700,7 +705,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 36)  //pass
+	@Test(priority = 36)  //pass
 	void InternalCheckListMitigationP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Mitigation Plan");
@@ -710,7 +715,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
 /*	@Test(priority = 37)  //pass
 	void InternalCheckListMpMul() throws InterruptedException, IOException
@@ -772,7 +777,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}*/
 	
-//	@Test(priority =42)  //pass
+/*	@Test(priority =42)  //pass
 	void InternalCheckListMP() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal CheckList - Edit - To check whether the overdue compliance complied or not without updated mitigation plan?");
@@ -784,7 +789,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	//@Test(priority = 43)  //pass
+@Test(priority = 43)  //pass
 	void StatutoryCheckListMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter -Statutory CheckList -  Mitigation Plan - Pending Updation filter working or not");
@@ -796,7 +801,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-	//@Test(priority = 44)  //pass
+@Test(priority = 44)  //pass
 	void InternalCheckListMitigationPFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Filter -Internal CheckList - Mitigation Plan - Pending Updation filter working or not");
@@ -809,7 +814,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-//	@Test(priority =45) // pass Critical
+	@Test(priority =45) // pass Critical
 	void DashboardRejectStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Rejected Compliance Count - Dashboard");
@@ -821,7 +826,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 46)  // pass
+	@Test(priority = 46)  // pass
 	void DashboardRejectInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Rejected Compliance Count - Dashboard");
@@ -833,7 +838,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority =47) // pass non-critical
+	@Test(priority =47) // pass non-critical
 	void DashboardPFRStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Pending For Review - Export");
@@ -845,7 +850,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 48)  // pass
+	@Test(priority = 48)  // pass
 	void DashboardPFRInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Internal Pending For Review - Export");
@@ -855,7 +860,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
 /*	@Test(priority =18) // no present
 	void WorkspaceADExportStatutory() throws InterruptedException, IOException
@@ -1062,7 +1067,7 @@ public class OverdueCount extends BasePage
 	}*/
 	
 	
-//	@Test(priority = 49) //pass non-critical
+/*	@Test(priority = 49) //pass non-critical
 	void WorkspaceOverdueStatutory() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - Statutory Overdue Value Verification");
@@ -1074,7 +1079,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 50)
+	@Test(priority = 50)
 	void WorkspaceOverdueInternal() throws InterruptedException
 	{
 		test = extent.startTest("My Workspace - Internal Overdue Value Verification");
@@ -1087,7 +1092,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-//	  @Test(priority = 51) //pass
+  @Test(priority = 51) //pass
 	    void ActivatedEventsPer() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Event Owner Summary - Statutory Activated Events Count Match");
@@ -1099,7 +1104,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 	    
-	  // @Test(priority = 52) //pass 
+	@Test(priority = 52) //pass 
 	    void ClosedEventsPer() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Event Owner Summary - Statutory Closed  Events Count Match");
@@ -1111,7 +1116,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 	    
-//	  @Test(priority = 53) //pass 
+  @Test(priority = 53) //pass 
 	    void AssignedEvents() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Event Owner Summary - Statutory Assigned  Event Count Match");
@@ -1120,9 +1125,9 @@ public class OverdueCount extends BasePage
 			
 			extent.endTest(test);
 			extent.flush();
-		}
+		}*/
 	
-//   @Test(priority = 54) //pass
+   @Test(priority = 54) //pass
   void PerformerTaskUpcoming() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Statutory Upcoming Count Match");
@@ -1134,7 +1139,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 55) //pass
+	@Test(priority = 55) //pass
   void PerformerTaskUpcomingIn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Internal Upcoming Count Match");
@@ -1147,7 +1152,7 @@ public class OverdueCount extends BasePage
 	}
 	
 
-//  @Test(priority = 56) //pass
+ @Test(priority = 56) //pass
  void PerformerTaskOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Statutory Overdue Count Match");
@@ -1159,7 +1164,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	@Test(priority = 57) //pass
+@Test(priority = 57) //pass
  void PerformerTaskOverdueIn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Performer Task Summary - Internal Overdue Count Match");
@@ -1171,7 +1176,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
-//	 @Test(priority = 58) //pass
+ @Test(priority = 58) //pass
 	   void PerformerTaskRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Rejected Count Match");
@@ -1183,7 +1188,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 		
-//		@Test(priority = 59) //pass
+	@Test(priority = 59) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");
@@ -1195,7 +1200,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 	
-//	 @Test(priority = 60) 
+ @Test(priority = 60) 
 	   void PerformerTaskPFR() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Pending For Review Count Match");
@@ -1206,8 +1211,7 @@ public class OverdueCount extends BasePage
 			extent.endTest(test);
 			extent.flush();
 		}
-		
-//		@Test(priority = 61) //pass
+		@Test(priority = 61) //pass
 	   void PerformerTaskPFRIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Pending For Review Count Match");
@@ -1223,7 +1227,7 @@ public class OverdueCount extends BasePage
 	 
 	
 			
-//		@Test(priority = 62) 
+	@Test(priority = 62) 
 		void DetailedReport1() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Statutory Count Verification");
@@ -1235,7 +1239,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		}
 		
-//		@Test(priority = 63) 
+	@Test(priority = 63) 
 		void DetailedReportIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report -Internal Count Verification");
@@ -1247,7 +1251,7 @@ public class OverdueCount extends BasePage
 		}
 
 	
-//		@Test(priority = 64) 
+	@Test(priority = 64) 
 	void DetailedReportFilterper() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check  Detailed report filters working or not Verification");
@@ -1260,7 +1264,7 @@ public class OverdueCount extends BasePage
 	}
 	
 
-	//@Test(priority = 65)  
+@Test(priority = 65)  
 	void DetailedReportStautau() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Detailed Report -Statutory -Status -Closed Timely display Verification");
@@ -1274,7 +1278,7 @@ public class OverdueCount extends BasePage
 	
 	
 	
-//	@Test(priority = 66) //pass
+	@Test(priority = 66) //pass
 	void AssignmentReport() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Assignment Report count verification");
@@ -1287,7 +1291,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-//	@Test(priority = 67)// non-critical
+	@Test(priority = 67)// non-critical
 	void AssignmentReportFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = Compliance ID Filter Working Or not");
@@ -1320,7 +1324,7 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}	
 	
-//	@Test(priority = 70)
+	@Test(priority = 70)
 	void ComplianceIDFilter1Invalid() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Assignment Report' :- Statutory & Statutory CheckList = To check whether the data is seen on the grid after entering invalid data in compliance ID search box Filter.");
@@ -1383,7 +1387,7 @@ public class OverdueCount extends BasePage
 		test = extent.startTest("Compliance Documents Statutory verification");
 		
 		
-		MethodsPOM.complianceDocumentSta(test);
+		MethodsPOM.complianceDocumentStaCri(test);
 		
 	           extent.endTest(test);
 				extent.flush();
@@ -1395,7 +1399,7 @@ public class OverdueCount extends BasePage
 			test = extent.startTest("Compliance Documents Internal verification");
 			
 			
-			MethodsPOM.complianceDocumentIn(test);
+			MethodsPOM.complianceDocumentInCri(test);
 			
 		extent.endTest(test);
 		extent.flush();
@@ -1520,9 +1524,12 @@ public class OverdueCount extends BasePage
 		      			}
 	
 
-  //   @Test(priority = 20)
-	void PerformerTaskAddUpcomingStatutory() throws InterruptedException{
+ @Test(priority = 0)
+	void PerformerTaskAddUpcomingStatutory() throws InterruptedException, EncryptedDocumentException, IOException
+  {
 		test = extent.startTest("Dashboard Statutory Upcoming Performer Task Verification");
+		
+		
 		
 		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1540,7 +1547,7 @@ public class OverdueCount extends BasePage
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_grdTaskPerformer']")));	//Waiting for records table to get visible
 		Thread.sleep(3000);
 		OverduePOM.ClickTaskCreation().click();				//Clicking on 'Task Creation' tab
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_grdTask']")));	//Waiting for records table to get visible
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_grdTask']")));	//Waiting for records table to get visible
 		
 		int total = Integer.parseInt(OverduePOM.readReminder1().getText());	//Reading total records displayed
 		OverduePOM.clickAddNew1().click();					//Clicking on 'Add New' button
@@ -1556,32 +1563,45 @@ public class OverdueCount extends BasePage
 	//	wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickComplianceDropDown()));
 		OverduePOM.clickComplianceDropDown().click();			//Clicking on 'Compliance' drop down.
 		drp = new Select(OverduePOM.clickComplianceDropDown());
+		Thread.sleep(2000);
 		drp.selectByIndex(1);										
-		Thread.sleep(500);
-   sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
-		int row = 0;
-		Thread.sleep(500);
-		Row row0 = sheet.getRow(row);					//Selected 0th index row (First row)
-		Cell c1 = null;
-		row0= sheet.getRow(3);
-		c1 = row0.getCell(1);						//Selected cell (0 row,2 column)	(2 column = third column)
-	OverduePOM.clickTaskTitle().sendKeys(c1.getStringCellValue());	//Writing Task title
+		
+		
+//		FileInputStream fis = new FileInputStream(filePath);
+//	    Workbook workbook = WorkbookFactory.create(fis);
+//		Thread.sleep(5000);
+//		Sheet sheet = workbook.getSheetAt(4);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
+////		//int row = 0;
+////		Thread.sleep(5000);
+////		Row row0 = sheet.getRow(row);					//Selected 0th index row (First row)
+//		Cell c1 = null;
+//		row0= sheet.getRow(3);
+//		c1 = row0.getCell(1);						//Selected cell (0 row,2 column)	(2 column = third column)
+//		OverduePOM.clickTaskTitle().sendKeys(c1.getStringCellValue());	//Writing Task title
+		
+		 FileInputStream fis = new FileInputStream(filePath);
+	     Workbook workbook = WorkbookFactory.create(fis);
+	     Sheet sheet = workbook.getSheetAt(0);
+	     Row row1 = sheet.getRow(3);
+	     Cell c1 = row1.getCell(1);
+	     OverduePOM.clickTaskTitle().sendKeys(c1.getStringCellValue());
+	 
 	
-	row0 = sheet.getRow(4);							//Selected 1st index row (Second row)
-	c1 = row0.getCell(1);							//Selected cell (1 row,2 column)
-	OverduePOM.clickDescription().sendKeys(c1.getStringCellValue());	//Writing description
+		Row row0 = sheet.getRow(4);							//Selected 1st index row (Second row)
+		Cell c0 = row0.getCell(1);							//Selected cell (1 row,2 column)
+		OverduePOM.clickDescription().sendKeys(c0.getStringCellValue());	//Writing description
 	
-	row0 = sheet.getRow(5);							//Selected 2nd index row (Third row)
-	c1 = row0.getCell(1);							//Selected cell (2 row,2 column)
-	int day = (int) c1.getNumericCellValue();
-	OverduePOM.clickDueDay().sendKeys(""+day+"");	//Writing Due days
+		row0 = sheet.getRow(5);							//Selected 2nd index row (Third row)
+		c1 = row0.getCell(1);							//Selected cell (2 row,2 column)
+		int day = (int) c1.getNumericCellValue();
+		OverduePOM.clickDueDay().sendKeys(""+day+"");	//Writing Due days
 	
-  Select taskType=new Select(	OverduePOM.clickTaskType());
-  taskType.selectByIndex(1);
-  Thread.sleep(1000);
+		Select taskType=new Select(	OverduePOM.clickTaskType());
+		taskType.selectByIndex(1);
+		Thread.sleep(1000);
 
-	OverduePOM.clickConditionCheckbox().click();	//Clicking on 'Is Task Conditional' checkbox
-	
+		OverduePOM.clickConditionCheckbox().click();	//Clicking on 'Is Task Conditional' checkbox
+		
 	js.executeScript("window.scrollBy(0,2000)");
 	row0 = sheet.getRow(6);							//Selected 3rd index row (Fourth row)
 	c1 = row0.getCell(1);							//Selected cell (3 row,2 column)
@@ -1598,7 +1618,7 @@ public class OverdueCount extends BasePage
 	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 	Thread.sleep(1500);
 	//String workingDir = System.getProperty("user.dir");
-	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 	
 	Thread.sleep(1000);
 	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -1609,11 +1629,11 @@ public class OverdueCount extends BasePage
 	
 	if(saveMsg.equalsIgnoreCase("Task Saved Successfully."))
 	{
-		test.log(LogStatus.INFO, "Message displayed - 'Task Saved Successfully'");
+		test.log(LogStatus.PASS, "Message displayed - 'Task Saved Successfully'");
 	}
 	else
 	{
-		test.log(LogStatus.INFO, "Message displayed - 'Task already exist.'");
+		test.log(LogStatus.FAIL, "Message displayed - 'Task already exist.'");
 	}
 	
 	getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnCancel']")).click();
@@ -1652,24 +1672,24 @@ public class OverdueCount extends BasePage
 	OverduePOM.clickAddNew2().click();			//Clicking on 'Add New' in Sub Task.
 	Thread.sleep(3000);
 	 sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
-		 row = 0;
-		Thread.sleep(500);
-		Row row01 = sheet.getRow(row);					//Selected 0th index row (First row)
-		Cell c11 = null;
-		row01= sheet.getRow(10);
-		c11 = row01.getCell(1);						//Selected cell (0 row,2 column)	(2 column = third column)
-	OverduePOM.clickTaskTitle().sendKeys(c11.getStringCellValue());	//Writing Task title
+//		 row = 0;
+//		Thread.sleep(500);
+//		Row row01 = sheet.getRow(row);					//Selected 0th index row (First row)
+//		Cell c11 = null;
+		Row row01= sheet.getRow(10);
+		Cell c11 = row01.getCell(1);						//Selected cell (0 row,2 column)	(2 column = third column)
+		OverduePOM.clickTaskTitle().sendKeys(c11.getStringCellValue());	//Writing Task title
 
-	row01 = sheet.getRow(11);							//Selected 1st index row (Second row)
-	c11 = row01.getCell(1);							//Selected cell (1 row,2 column)
-	OverduePOM.clickDescription().sendKeys(c11.getStringCellValue());	//Writing description
+		row01 = sheet.getRow(11);							//Selected 1st index row (Second row)
+		c11 = row01.getCell(1);							//Selected cell (1 row,2 column)
+		OverduePOM.clickDescription().sendKeys(c11.getStringCellValue());	//Writing description
 
-	row01 = sheet.getRow(12);							//Selected 2nd index row (Third row)
-	c11 = row01.getCell(1);							//Selected cell (2 row,2 column)
-	int day1 = (int) c11.getNumericCellValue();
-	OverduePOM.clickDueDay().sendKeys(""+day1+"");	//Writing Due days
+		row01 = sheet.getRow(12);							//Selected 2nd index row (Third row)
+		c11 = row01.getCell(1);							//Selected cell (2 row,2 column)
+		int day1 = (int) c11.getNumericCellValue();
+		OverduePOM.clickDueDay().sendKeys(""+day1+"");	//Writing Due days
 
-	OverduePOM.clickConditionCheckbox().click();	//Clicking on 'Is Task Conditional' checkbox
+		OverduePOM.clickConditionCheckbox().click();	//Clicking on 'Is Task Conditional' checkbox
 
 	js.executeScript("window.scrollBy(0,2000)");
 	row01 = sheet.getRow(13);							//Selected 3rd index row (Fourth row)
@@ -1687,7 +1707,7 @@ public class OverdueCount extends BasePage
 	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 	Thread.sleep(1500);
 	//String workingDir = System.getProperty("user.dir");
-	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 
 	Thread.sleep(1000);
 	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -1799,7 +1819,7 @@ public class OverdueCount extends BasePage
 					js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 					Thread.sleep(1500);
 				//	String workingDir = System.getProperty("user.dir");
-					OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+					OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 					
 					Thread.sleep(1000);
 					OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -1891,7 +1911,7 @@ public class OverdueCount extends BasePage
   	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
   	Thread.sleep(1500);
   	//String workingDir = System.getProperty("user.dir");
-  	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+  	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 
   	Thread.sleep(1000);
   	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -1960,28 +1980,29 @@ public class OverdueCount extends BasePage
 			OverduePOM.clickComplianceDropDown().click();			//Clicking on 'Compliance' drop down.
 			drp = new Select(OverduePOM.clickComplianceDropDown());
 			drp.selectByIndex(1);										
+			
 			Thread.sleep(500);
-	   sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
+			sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
 			int row = 0;
 			Thread.sleep(500);
 			Row row0 = sheet.getRow(row);					//Selected 0th index row (First row)
 			Cell c1 = null;
 			row0= sheet.getRow(3);
 			c1 = row0.getCell(1);						//Selected cell (0 row,2 column)	(2 column = third column)
-		OverduePOM.clickTaskTitle().sendKeys(c1.getStringCellValue());	//Writing Task title
+			OverduePOM.clickTaskTitle().sendKeys(c1.getStringCellValue());	//Writing Task title
 		
-		row0 = sheet.getRow(4);							//Selected 1st index row (Second row)
-		c1 = row0.getCell(1);							//Selected cell (1 row,2 column)
-		OverduePOM.clickDescription().sendKeys(c1.getStringCellValue());	//Writing description
-		
-		row0 = sheet.getRow(5);							//Selected 2nd index row (Third row)
-		c1 = row0.getCell(1);							//Selected cell (2 row,2 column)
-		int day = (int) c1.getNumericCellValue();
-		OverduePOM.clickDueDay().sendKeys(""+day+"");	//Writing Due days
-		
-	  Select taskType=new Select(	OverduePOM.clickTaskType());
-	  taskType.selectByIndex(1);
-	  Thread.sleep(1000);
+			row0 = sheet.getRow(4);							//Selected 1st index row (Second row)
+			c1 = row0.getCell(1);							//Selected cell (1 row,2 column)
+			OverduePOM.clickDescription().sendKeys(c1.getStringCellValue());	//Writing description
+			
+			row0 = sheet.getRow(5);							//Selected 2nd index row (Third row)
+			c1 = row0.getCell(1);							//Selected cell (2 row,2 column)
+			int day = (int) c1.getNumericCellValue();
+			OverduePOM.clickDueDay().sendKeys(""+day+"");	//Writing Due days
+			
+		  Select taskType=new Select(	OverduePOM.clickTaskType());
+		  taskType.selectByIndex(1);
+		  Thread.sleep(1000);
 
 		OverduePOM.clickConditionCheckbox().click();	//Clicking on 'Is Task Conditional' checkbox
 		
@@ -2001,7 +2022,7 @@ public class OverdueCount extends BasePage
 		js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 		Thread.sleep(1500);
 	//	String workingDir = System.getProperty("user.dir");
-		OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+		OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 		
 		Thread.sleep(1000);
 		OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2083,7 +2104,7 @@ public class OverdueCount extends BasePage
   	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
   	Thread.sleep(1500);
   	//String workingDir = System.getProperty("user.dir");
-  	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+  	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 
   	Thread.sleep(1000);
   	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2115,7 +2136,7 @@ public class OverdueCount extends BasePage
 				extent.endTest(test);
 				extent.flush();
 	 }
-	//	@Test(priority = 23)
+//@Test(priority = 23)
 		void PerformerTaskOverdueInternal() throws InterruptedException{
 		 
 		 test = extent.startTest("Dashboard Internal Overdue Performer Task Verification");
@@ -2196,7 +2217,7 @@ public class OverdueCount extends BasePage
 					js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 					Thread.sleep(1500);
 				//	String workingDir = System.getProperty("user.dir");
-					OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+					OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 					
 					Thread.sleep(1000);
 					OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2278,7 +2299,7 @@ public class OverdueCount extends BasePage
 				  	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 				  	Thread.sleep(1500);
 				  	//String workingDir = System.getProperty("user.dir");
-				  	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+				  	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 
 				  	Thread.sleep(1000);
 				  	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2310,7 +2331,7 @@ public class OverdueCount extends BasePage
 					extent.flush();
 		}
 		
-	//	 @Test(priority = 24)
+// @Test(priority = 24)
 			void PerformerTaskRejectedStatutory() throws InterruptedException{
 			 
 			 test = extent.startTest("Dashboard Statutory Overdue Performer Task Verification");
@@ -2388,7 +2409,7 @@ public class OverdueCount extends BasePage
 			js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 			Thread.sleep(1500);
 			String workingDir = System.getProperty("user.dir");
-			OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+			OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 			
 			Thread.sleep(1000);
 			OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2470,7 +2491,7 @@ public class OverdueCount extends BasePage
 		  	js.executeScript("window.scrollBy(0,1000)");	//Scrolling down window by 2000 px.
 		  	Thread.sleep(1500);
 		  	//String workingDir = System.getProperty("user.dir");
-		  	OverduePOM.SampleFormUpload().sendKeys("C:/March2022/PerformerPom/Reports/PerformerResults.html");
+		  	OverduePOM.SampleFormUpload().sendKeys("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html");
 
 		  	Thread.sleep(1000);
 		  	OverduePOM.clickSaveButton().click();		//Clicking on 'Save' Button
@@ -2502,7 +2523,7 @@ public class OverdueCount extends BasePage
 			extent.flush();
 		 }
 			
-	//		@Test(priority = 25)
+	//	@Test(priority = 25)
 			void PerformerTaskRejectedInternal() throws InterruptedException{
 			 
 			 test = extent.startTest("Dashboard Internal Rejected Performer Task Verification");
@@ -2543,7 +2564,7 @@ public class OverdueCount extends BasePage
 						drp.selectByIndex(1);
 						Thread.sleep(1000);
 						
-					   sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
+					 //  sheet = workbook.getSheetAt(0);					//Retrieving fourth sheet of Workbook(Named - Update Tasks)
 							int row = 0;
 							Thread.sleep(500);
 							Row row0 = sheet.getRow(row);					//Selected 0th index row (First row)
@@ -2696,8 +2717,8 @@ public class OverdueCount extends BasePage
 						extent.endTest(test);
 						extent.flush();
 			}
-			/*
-	            @Test(priority = 40)
+			
+	        /*    @Test(priority = 40)
 				void PerformerTaskPerformUpcomingStatutory() throws InterruptedException{
 					test = extent.startTest("Dashboard Statutory Upcoming Performer Task Count Verification");
 					
@@ -2886,8 +2907,8 @@ public class OverdueCount extends BasePage
 					extent.endTest(test);
 					extent.flush();
 					
-				}
-	       */
+				}*/
+	  
 		
 		@Test(priority = 77)// non-critical
 		void DailyUpdates() throws InterruptedException, IOException
@@ -2967,7 +2988,7 @@ public class OverdueCount extends BasePage
 				Thread.sleep(1000);
 				OverduePOM.TypeMsg().sendKeys("Automation testing");
 				Thread.sleep(1000);
-				OverduePOM.choosefile().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases .xlsx");
+				OverduePOM.choosefile().sendKeys("E:\\Test Cases\\Approver Test Case.xlsx");
 				Thread.sleep(1000);
 				//OverduePOM.send().click();
 				By locator = By.xpath("//*[@id='btnsendmailNew']");
@@ -3021,11 +3042,11 @@ public class OverdueCount extends BasePage
 		      				Thread.sleep(2000);
 		      				getDriver().findElement(By.xpath("//*[@id='btnsave']")).click();
 		      				Thread.sleep(2000);
-		      	String Msg=			getDriver().switchTo().alert().getText();
-		      	Thread.sleep(2000);
-		      	test.log(LogStatus.PASS, "Message Displayed : -"+Msg);
-		      	Thread.sleep(2000);
-		      	getDriver().switchTo().alert().accept();
+						      	String Msg=			getDriver().switchTo().alert().getText();
+						      	Thread.sleep(2000);
+						      	test.log(LogStatus.PASS, "Message Displayed : -"+Msg);
+						      	Thread.sleep(2000);
+						      	getDriver().switchTo().alert().accept();
 		      				Thread.sleep(2000);
 		      				Thread.sleep(500);
 		      				OverduePOM.clickDashboard().click();
@@ -3230,7 +3251,7 @@ public class OverdueCount extends BasePage
 				extent.flush();
 			}
 			
-			//@Test(priority = 33)
+			@Test(priority = 33)
 			void OverdueDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Performer Summary - Overdue - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my workspace page?");
@@ -3263,7 +3284,7 @@ public class OverdueCount extends BasePage
 				extent.flush();
 			}
 			
-		//	@Test(priority = 35)
+		//@Test(priority = 35)
 			void ComplianceDocumentsDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("My Documents - Compliance Documents - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my document page?");
@@ -3296,7 +3317,7 @@ public class OverdueCount extends BasePage
 				extent.flush();
 			}
 			
-	//		@Test(priority = 37)
+		@Test(priority = 37)
 			void DetailedReportDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("my Report - Detailed  report - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my report page?");
@@ -3448,6 +3469,27 @@ public class OverdueCount extends BasePage
 				extent.endTest(test);
 				extent.flush();
 			}
+		       
+		       @Test(priority = 25)
+				void DetailedReportSF() throws InterruptedException, IOException
+				{
+					test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Deatiled Report?");
+					
+					MethodsPOM.DetailedReportSF(test);
+					
+					extent.endTest(test);
+					extent.flush();
+				}
+				@Test(priority = 26)
+				void ComplianceDocumentsSF() throws InterruptedException, IOException
+				{
+					test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");
+					
+					MethodsPOM.ComplianceDocumentsSF(test);
+					
+					extent.endTest(test);
+					extent.flush();
+				}
 		       
   
 }

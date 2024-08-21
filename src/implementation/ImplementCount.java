@@ -58,7 +58,7 @@ public class ImplementCount extends BasePage{
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Implementation.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Implementation.html",true);
 		test = extent.startTest("Loging In - Implementation");
 		
 		/*XSSFSheet sheet = ReadExcel();
@@ -1667,7 +1667,118 @@ public class ImplementCount extends BasePage{
 			extent.endTest(test);
 			extent.flush();
 		}
+		@Test(priority = 120)
+		void ExcludeNotActivated() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Compliance  - Compliance assignment - Exclude not activated - To Check whether Statutory Not Activated Compliance Exclude Funcationality working or not?");
 			
+			
+			ImplementMethods.ExcludeNotActivated(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 121)
+		void ExcludeNotActivatedSC() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Compliance  - Compliance assignment - Exclude not activated - Statutory Checklist - To Check whether Statutory Checklist Not Activated Compliance Exclude Funcationality working or not?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedSC(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 122)
+		void ExcludeNotActivatedInternal() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Manage Compliance  - Compliance assignment - Exclude not activated - Internal Compliance - To Check whether Internal Not Activated Compliance Exclude Funcationality working or not?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedInternal(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 123)
+		void ExcludeNotActivatedIC() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Manage Compliance  - Compliance assignment - Exclude not activated - Internal Checklist Compliance - To Check whether Internal Checklist Not Activated Compliance Exclude Funcationality working or not?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedIC(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}	
+		@Test(priority = 124)
+		void ExcludeNotActivatedMultipleCompliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Manage Compliance  - Compliance assignment - Exclude not activated  - To Check Statutory multiple Not Activated Compliance Exclude Funcationality working or not ?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedMultipleCompliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}	
+		@Test(priority = 125)
+		void ExcludeNotActivatedSCMultipleCompliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Manage Compliance  - Compliance assignment - Exclude not activated  - To Check Statutory Checklist multiple Not Activated Compliance Exclude Funcationality working or not ?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedSCMultipleCompliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}	
+		
+		@Test(priority = 126)
+		void ExcludeNotActivatedInternalMultipleCompliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Compliance  - Compliance assignment - Exclude not activated - Internal - To Check whether Intetnal multiple Not Activated Compliance Exclude Funcationality working or not?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedInternalMultipleCompliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 127)
+		void ExcludeNotActivatedICMultipleCompliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Compliance  - Compliance assignment - Exclude not activated  - To Check whether Intetnal Checklist multiple Not Activated Compliance Exclude Funcationality working or not?");
+			
+			
+			ImplementMethods.ExcludeNotActivatedICMultipleCompliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 128)
+		void WithoutSelectCompliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Compliance  - Compliance assignment - Exclude not activated  - To Check whether excluded Not Activated page - without selecting Compliance click on Exclude Button validation message display or not ?");
+			
+			
+			ImplementMethods.WithoutSelectCompliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 0)
+		void EventAssignmentExportImport() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Event  - Event Assignment Export Import- Entity wise data dowloaded or not?");
+			
+			
+			ImplementMethods.EventAssignmentExportImport(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
 		
      	@AfterMethod
 	  	void browserClosing() throws InterruptedException

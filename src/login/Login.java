@@ -3,6 +3,7 @@ package login;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -89,7 +90,7 @@ public class Login extends BasePage
 	
 	public static WebDriver UserLogin(String username, String password, String method) throws InterruptedException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
+		//WebDriverWait wait = new WebDriverWait(getDriver(), 40);
 		WebDriverWait wait1 = new WebDriverWait(getDriver(), 60);
 		
 		LoginPOM.setUname().sendKeys(username);		//Sent username to input box 
@@ -109,13 +110,15 @@ public class Login extends BasePage
 				//----------------------------------------------------------
 				
 				wait1.until(ExpectedConditions.invisibilityOf(LoginPOM.clickQALink()));
-		/*	}
+			}
 			catch(Exception e)
 			{
 				
-			}*/
+			}
 			
 			Thread.sleep(500);
+			try
+			{
 			wait1.until(ExpectedConditions.visibilityOf(LoginPOM.Question1()));
 			wait1.until(ExpectedConditions.elementToBeClickable(LoginPOM.Question1()));
 			String que1 = LoginPOM.Question1().getText();	//Storing the question in que variable.
@@ -165,10 +168,10 @@ public class Login extends BasePage
 				ans1 = getAnswerDept(que1);						//Storing the answer in ans variable.
 			//	ans1 = "123";	
 			}
-		/*	else if(method.equalsIgnoreCase("Implementation") )
-			{
-				ans1 = getAnswerDept(que1);						//Storing the answer in ans variable.
-		}*/
+//			else if(method.equalsIgnoreCase("Implementation") )
+//			{
+//				ans1 = getAnswerDept(que1);						//Storing the answer in ans variable.
+//	     	}
 			else if(method.equalsIgnoreCase("Implementation") )
 			{
 				ans1 = "123";						//Storing the answer in ans variable.
@@ -196,7 +199,7 @@ public class Login extends BasePage
 			}
 			else if(method.equalsIgnoreCase("CertificateOwner"))
 			{
-				ans1 = getAnswerCFO(que1);						//Storing the answer in ans variable.
+				ans1 = "123";						//Storing the answer in ans variable.
 			}
 			else if(method.equalsIgnoreCase("FM"))
 			{
@@ -267,7 +270,7 @@ public class Login extends BasePage
 				ans2 = getAnswerDept(que2);						//Storing the answer in ans variable.
 			//	ans2 = "123";	
 			}
-		/*else if(method.equalsIgnoreCase("Implementation") )
+	/*	else if(method.equalsIgnoreCase("Implementation") )
 			{
 				ans2 = getAnswerDept(que2);						//Storing the answer in ans variable.
 			}*/
@@ -299,7 +302,7 @@ public class Login extends BasePage
 			}
 			else if(method.equalsIgnoreCase("CertificateOwner") )
 			{
-				ans2 = getAnswerCFO(que2);						//Storing the answer in ans variable.
+				ans2 = "123";						//Storing the answer in ans variable.
 			}
 			else if(method.equalsIgnoreCase("FM") )
 			{
@@ -376,7 +379,7 @@ public class Login extends BasePage
 				{
 					
 					
-					wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.closeMessage()));
+					wait1.until(ExpectedConditions.elementToBeClickable(OverduePOM.closeMessage()));
 					OverduePOM.closeMessage().click();		//then close the message.
 				}
 			}

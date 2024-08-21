@@ -395,7 +395,11 @@ public class OverduePOM extends BasePage
 		date = getDriver().findElement(By.xpath("//*[@id='tbxDate']"));
 		return date;
 	}
-	
+	public static WebElement selectDateStatutoryChecklist( )			//Method to search Date Box
+	{
+		date = getDriver().findElement(By.xpath("//*[@id='tbxNewDate']"));
+		return date;
+	}
 	public static WebElement selectDateStatutory11( )			//Method to search Date Box
 	{
 		date = getDriver().findElement(By.linkText("1"));
@@ -635,7 +639,11 @@ public class OverduePOM extends BasePage
 		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[2]/td[2]/a"));
 		return selectDate;
 	}
-	
+	public static WebElement selectDate4( )					//Method to click on date at second row and fourth column
+	{
+		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[6]/a"));
+		return selectDate;
+	}
 	public static WebElement selectDate2( )					//Method to click on date at second row and fifth column
 	{
 		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[3]/td[3]/a"));
@@ -662,7 +670,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement CalendarCount( )					//Method to search the forward arrow to load next page records 
 	{
-		nextPage = getDriver().findElement(By.xpath("//*[@id='collapsePerformerCalender']/div/div[1]/div[1]/div/div[3]/div[6]/span"));
+		nextPage = getDriver().findElement(By.xpath("//*[@id='collapsePerformerCalender']/div/div[1]/div[1]/div/div[3]/div[8]/span"));
 		return nextPage;
 	}
 	
@@ -1685,7 +1693,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickMoreActions1( )			//Searching 'More Actions' drop down 
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-dropdown-wrap k-state-default'])[5]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-dropdown-wrap k-state-default'])[6]"));
 		return performer;
 	}
 	
@@ -3469,7 +3477,33 @@ public class OverduePOM extends BasePage
 		return performer;
 	}
 	
+	public static WebElement Clickoverview( )			//Searching 'My Reminder' button
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='viewSampleDoc']"));
+		return performer;
+	}
 	
+	public static WebElement ClickoverviewClose( )			//Searching 'My Reminder' button
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='DocumentReviewPopUp2']/div/div/div[1]/button"));
+		return performer;
+	}
+	
+	public static WebElement Download()					//
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='downloadSampleDoc']"));
+		return performer;
+	}
+	public static WebElement clickReports( )					//Searching 'My Reports' element
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='leftdocumentsmenu1']"));
+		return performer;
+	}
+	public static WebElement clickDetailedReport( )			//Searching 'Detailed Report' element under 'My reports'
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='Myreport']"));
+		return performer;
+	}
 	
 	public static void MyReminder(  ExtentTest test, String compliance) throws InterruptedException
 	{

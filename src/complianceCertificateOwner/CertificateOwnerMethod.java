@@ -5,6 +5,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -16,6 +21,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import cfo.CFOcountPOM;
+import companyadmin.CompanyPOM;
 import implementation.ImplementPOM;
 import login.BasePage;
 
@@ -24,6 +30,8 @@ public class CertificateOwnerMethod extends BasePage{
 	public static FileInputStream fis = null;	//File input stream variable
 	public static XSSFWorkbook workbook = null;	//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;		//Sheet variable
+	
+	 static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
 	
 	public static void CertificateOwner( ExtentTest test)
 			throws InterruptedException, IOException {
@@ -264,14 +272,14 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 		Thread.sleep(2000);
 		CertificateOwnerPOM.PeriodView().click();
 		Thread.sleep(2000);
-		File dir2 = new File("C:\\Users\\Mayuri Gaikwad\\Downloads");
+		File dir2 = new File("C:\\Users\\snehalp\\Downloads");
 		File[] dirContents1 = dir2.listFiles(); // Counting number of files in directory before download
 
 		
 		CertificateOwnerPOM.ExporttoPDFPe().click(); // Exporting (Downloading) file
 		Thread.sleep(2000);
 		
-		File dir3 = new File("C:\\Users\\Mayuri Gaikwad\\Downloads");
+		File dir3 = new File("C:\\Users\\snehalp\\Downloads");
 		File[] allFilesNew1 = dir3.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents1.length < allFilesNew1.length) {
@@ -328,11 +336,212 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 		
 	}
 	
+	public static void NoticeCreated( ExtentTest test)throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOwnerPOM.CertificateOwner().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Addnotice().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Act().click();
+		Thread.sleep(1000);
+		CertificateOwnerPOM.Act1().click();
+		Thread.sleep(3000);
+		
+		
+		 FileInputStream fis = new FileInputStream(filePath);
+	        Workbook workbook = WorkbookFactory.create(fis);
+	        Sheet sheet = workbook.getSheetAt(16);
+		
+	
+		int row = 0;
+		Thread.sleep(500);
+		Row row0 = sheet.getRow(row); // Selected 0th index row (First row)
+		Cell c1 = null;
+		row0 = sheet.getRow(3);
+		c1 = row0.getCell(1); // Selected cell (0 row,2 column) (2 column = third column)
+		CertificateOwnerPOM.Description().sendKeys(c1.getStringCellValue()); // Writing Task title
+		
+		
+		Thread.sleep(2000);
+		
+		row0 = sheet.getRow(4);
+		c1 = row0.getCell(1); // Selected cell (0 row,2 column) (2 column = third column)
+
+		int No = (int) c1.getNumericCellValue();
+		CertificateOwnerPOM.Liability().sendKeys("" + No + ""); // Writing Task title
+		Thread.sleep(4000);
+		
+		row0 = sheet.getRow(5);
+		c1 = row0.getCell(1); // Selected cell (0 row,2 column) (2 column = third column)
+		CertificateOwnerPOM.Status().sendKeys(c1.getStringCellValue()); // Writing Task title
+		Thread.sleep(2000);
+		
+		CertificateOwnerPOM.NoticeReceiptDate().click();
+		Thread.sleep(1000);
+		CertificateOwnerPOM.NoticeReceiptDate1().click();
+		Thread.sleep(3000);
+		
+		CertificateOwnerPOM.NoticeDueDate().click();
+		Thread.sleep(1000);
+		CertificateOwnerPOM.NoticeDueDate1().click();
+		Thread.sleep(3000);
+		
+		row0 = sheet.getRow(6);
+		c1 = row0.getCell(1); // Selected cell (0 row,2 column) (2 column = third column)
+		CertificateOwnerPOM.ActionTaken().sendKeys(c1.getStringCellValue()); // Writing Task title
+		Thread.sleep(2000);
+		
+		
+		Thread.sleep(2000);
+		CertificateOwnerPOM.SubmitN().click(); 
+		Thread.sleep(6000);
+	
+	String Msg=	getDriver().switchTo().alert().getText();
+	Thread.sleep(2000);
+	getDriver().switchTo().alert().accept();
+	test.log(LogStatus.PASS,  "Message Display " +Msg);
+	Thread.sleep(2000);
+		
+		CertificateOwnerPOM.Close().click(); 
+	}
+	
+	public static void NoticeCreatedEdit( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOwnerPOM.CertificateOwner().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Addnotice().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Edit().click();
+		Thread.sleep(4000);
+		
+		
+	
+		
+		
+		 FileInputStream fis = new FileInputStream(filePath);
+	        Workbook workbook = WorkbookFactory.create(fis);
+	        Sheet sheet = workbook.getSheetAt(16);
+	        CertificateOwnerPOM.Description().clear();
+	        Thread.sleep(4000);
+		int row = 0;
+		Thread.sleep(500);
+		Row row0 = sheet.getRow(row); // Selected 0th index row (First row)
+		Cell c1 = null;
+		row0 = sheet.getRow(7);
+		c1 = row0.getCell(1); // Selected cell (0 row,2 column) (2 column = third column)
+		CertificateOwnerPOM.Description().sendKeys(c1.getStringCellValue()); // Writing Task title
+		Thread.sleep(2000);
+		
+	
+		
+		Thread.sleep(2000);
+		CertificateOwnerPOM.SubmitN().click(); 
+		Thread.sleep(6000);
+	
+	String Msg=	getDriver().switchTo().alert().getText();
+	Thread.sleep(2000);
+	getDriver().switchTo().alert().accept();
+	test.log(LogStatus.PASS,  "Message Display " +Msg);
+	Thread.sleep(2000);
+		
+		CertificateOwnerPOM.Close().click(); 
+	}
 	
 	
+	public static void NoticeCreatedDelete( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOwnerPOM.CertificateOwner().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Addnotice().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Delete().click();
+		Thread.sleep(4000);
+		
+		getDriver().switchTo().alert().accept();
+		Thread.sleep(4000);
+	String Msg=	getDriver().switchTo().alert().getText();
+	Thread.sleep(2000);
+	getDriver().switchTo().alert().accept();
+	test.log(LogStatus.PASS,  "Message Display " +Msg);
+	Thread.sleep(2000);
+		
+		CertificateOwnerPOM.Close().click(); 
+	}
 	
 	
+	public static void NoticeCreatedExport( ExtentTest test)
+			throws InterruptedException, IOException {
 	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOwnerPOM.CertificateOwner().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(8000);
+		
+		CertificateOwnerPOM.Addnotice().click();
+		Thread.sleep(8000);
+		
+		File dir2 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents1 = dir2.listFiles(); // Counting number of files in directory before download
+
+		
+		CertificateOwnerPOM.Export().click(); // Exporting (Downloading) file
+		Thread.sleep(2000);
+		
+		File dir3 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew1 = dir3.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents1.length < allFilesNew1.length) {
+			test.log(LogStatus.PASS,  " File downloaded successfully.");
+		} else {
+			test.log(LogStatus.FAIL, "  File does not downloaded.");
+		}
+		
+		
+		
+		CertificateOwnerPOM.Close().click(); 
+	}
 	
 	
 	

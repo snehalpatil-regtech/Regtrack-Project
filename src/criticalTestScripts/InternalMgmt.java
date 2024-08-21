@@ -228,7 +228,7 @@ public class InternalMgmt extends BasePage {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
 			
 			Thread.sleep(1000);
-			CFOcountPOM.clickExportImage2().click();                    //export excel
+			CFOcountPOM.clickExportImage().click();                    //export excel
 			Thread.sleep(5000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");	
 	
@@ -1722,7 +1722,7 @@ public class InternalMgmt extends BasePage {
 		{
 			CFOcountPOM.clickRiskHighNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
 			Thread.sleep(2000);
-			CFOcountPOM.RiskGraphCountNAC( test, "High - Not Applicable", RiskHigh_NotApplicable, "Statutory");
+			CFOcountPOM.RiskGraphCountNA( test, "High - Not Applicable", RiskHigh_NotApplicable, "Statutory");
 		}
 		else
 		{
@@ -1733,7 +1733,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-   @Test(priority = 25)
+   @Test(priority =25)
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1779,7 +1779,7 @@ public class InternalMgmt extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Closed Delayed' Count = "+RiskMedium_ClosedDelayed);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
 		int RiskMedium_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskMedium_ClosedTimely > 0)
 		{
@@ -1791,7 +1791,7 @@ public class InternalMgmt extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
-		}*/
+		}
 		
 		Thread.sleep(3000);
 		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
@@ -1799,7 +1799,7 @@ public class InternalMgmt extends BasePage {
 		{
 			CFOcountPOM.clickRiskMediumNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
 			Thread.sleep(2000);
-			CFOcountPOM.RiskGraphCountNAC( test, "Medium - Not Applicable", RiskMedium_NotApplicable, "Statutory");
+			CFOcountPOM.RiskGraphCountNA( test, "Medium - Not Applicable", RiskMedium_NotApplicable, "Statutory");
 		}
 		else
 		{
@@ -1877,7 +1877,7 @@ public class InternalMgmt extends BasePage {
 		{
 			CFOcountPOM.clickRiskLowNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
 			Thread.sleep(2000);
-			CFOcountPOM.RiskGraphCountNAC( test, "Low - Not Applicable", RiskLow_NotApplicable, "Statutory");
+			CFOcountPOM.RiskGraphCountNA( test, "Low - Not Applicable", RiskLow_NotApplicable, "Statutory");
 		}
 		else
 		{
@@ -1891,7 +1891,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 27)
+	@Test(priority =27)
 	void DepartmentSummaryInternal() throws InterruptedException
 	{
 		Thread.sleep(3000);	
@@ -1907,12 +1907,12 @@ public class InternalMgmt extends BasePage {
 		
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		Thread.sleep(1000);
-		String FinaOverdue = CFOcountPOM.clickHumanOverduem().getText();			//Reading the Overdue value of Human Resource
+		String FinaOverdue = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
 		FinaOverdue = FinaOverdue.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Fina_Overdue = Integer.parseInt(FinaOverdue);						
 		if(Fina_Overdue > 0)
 		{
-			CFOcountPOM.clickHumanOverduem().click();
+			CFOcountPOM.clickHROverduem().click();
 			CFOcountPOM.RiskGraphCountIn1( test, "Admin -Overdue", Fina_Overdue, "Internal");
 		}
 		else
@@ -2021,6 +2021,7 @@ public class InternalMgmt extends BasePage {
 	void ClosedTimely_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Closed Timely' Count Verification");
+		test.log(LogStatus.INFO, "Select Start date 01-04-2021");
 		
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2122,6 +2123,7 @@ public class InternalMgmt extends BasePage {
 	void ClosedDelayed_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Closed Delayed' Count Verification");
+		
 		Thread.sleep(2000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2233,6 +2235,7 @@ public class InternalMgmt extends BasePage {
 	void NotCompleted_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Not Completed' Count Verification");
+		
 		
 		Thread.sleep(2000);
 		Actions action = new Actions(getDriver());
@@ -2900,7 +2903,7 @@ public class InternalMgmt extends BasePage {
 			{
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPe( test, "Low", low, "Internal");
+				CFOcountPOM.GraphCountInPec( test, "Low", low, "Internal");
 			}
 			else
 			{
@@ -3102,7 +3105,8 @@ public class InternalMgmt extends BasePage {
 		{
 			if(critical >= 0)
 			{
-				CFOcountPOM.GraphCountInPeUpIn( test, "Critical", critical, "Internal");
+				CFOcountPOM.GraphCountInPec( test, "Critical", critical, "Internal");
+				//GraphCountInPeUpIn
 			}
 			else
 			{
@@ -3113,7 +3117,7 @@ public class InternalMgmt extends BasePage {
 			{
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "High", high, "Internal");
+				CFOcountPOM.GraphCountInPec( test, "High", high, "Internal");
 			}
 			else
 			{
@@ -3124,7 +3128,7 @@ public class InternalMgmt extends BasePage {
 			{
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "Medium", medium, "Internal");
+				CFOcountPOM.GraphCountInPec( test, "Medium", medium, "Internal");
 			}
 			else
 			{
@@ -3135,7 +3139,7 @@ public class InternalMgmt extends BasePage {
 			{
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "Low", low, "Internal");
+				CFOcountPOM.GraphCountInPec( test, "Low", low, "Internal");
 			}
 			else
 			{

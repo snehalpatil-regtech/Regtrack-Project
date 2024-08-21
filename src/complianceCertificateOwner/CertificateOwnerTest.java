@@ -60,7 +60,7 @@ public class CertificateOwnerTest extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	//	String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-		extent = new com.relevantcodes.extentreports.ExtentReports("C:\\Users\\Mayuri\\Desktop\\Compliance\\AvacomAll\\Reports\\CertificateOwner.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\CertificateOwner.html",true);
 		test = extent.startTest("Loging In - Certificate Owner");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -167,8 +167,51 @@ public class CertificateOwnerTest extends BasePage {
 		extent.flush();
 	}
 	*/
+	@Test(priority =6)
+	void NoticeCreated() throws InterruptedException, IOException
+	{
+		test = extent.startTest("To check whether the new notice can be created or not ?");
+		
+		CertificateOwnerMethod.NoticeCreated(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
 	
-	@Test(priority = 6) //pass 
+	@Test(priority = 7)
+	void NoticeCreatedEdit() throws InterruptedException, IOException
+	{
+		test = extent.startTest("To check whether the Notice can be updated or not?");
+		
+		CertificateOwnerMethod.NoticeCreatedEdit(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 0)
+	void NoticeCreatedDelete() throws InterruptedException, IOException
+	{
+		test = extent.startTest("To check whether the Notice can be deleted or not ?");
+		
+		CertificateOwnerMethod.NoticeCreatedDelete(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority =9)
+	void NoticeCreatedExport() throws InterruptedException, IOException
+	{
+		test = extent.startTest("To check whether the export button working or not on the popup of add notice details?");
+		
+		CertificateOwnerMethod.NoticeCreatedExport(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 6) //pass 
     void WhatsNew() throws InterruptedException, IOException
 			{
 				test = extent.startTest("' what's New ' Verification");
@@ -183,7 +226,8 @@ public class CertificateOwnerTest extends BasePage {
 
 	@AfterMethod
   	void browserClosing() throws InterruptedException
-  	{closeBrowser();
+  	{
+		closeBrowser();
   		Thread.sleep(1000);
   	//	driver.close();
   	}	

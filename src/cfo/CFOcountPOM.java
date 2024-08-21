@@ -844,6 +844,13 @@ public class CFOcountPOM extends BasePage
 		return piechart;
 	}
 	
+	public static WebElement readTotalItems5( )				//Method to read total no of items.
+	{
+	
+		piechart=getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_lblTotalRecord']"));
+		return piechart;
+	}
+	
 	
 	public static WebElement readTotalItemsD( )				//Method to read total no of items.
 	{
@@ -914,7 +921,11 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
 		return bargraph;
 	}
-	
+	public static WebElement clickIndustrySpeCriticalM1( )			//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])"));
+		return bargraph;
+	}
 	public static WebElement clickIndustrySpeHigh( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[14]"));
@@ -929,25 +940,25 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickBSECritical( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[1]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
 		return bargraph;
 	}
 	
 	public static WebElement clickBSEHigh( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[4]"));
 		return bargraph;
 	}
 	
 	public static WebElement clickBSEMedium( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[3]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[6]"));
 		return bargraph;
 	}
 	
 	public static WebElement clickBSELow( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[4]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[8]"));
 		return bargraph;
 	}
 	
@@ -1099,7 +1110,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskCriticalNotCompletedDept( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[50]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[64]"));
 		
 
 		return risksummary;
@@ -1569,13 +1580,13 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickFinanceInProgressInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[37]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
 		return department;
 	}
 	
 	public static WebElement clickFinanceRejectedInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[38]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[48]"));
 		return department;
 	}
 	
@@ -1593,7 +1604,7 @@ public class CFOcountPOM extends BasePage
 	                         
 	public static WebElement clickFinanceNotAppliInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[39]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[51]"));
 		return department;
 	}
 	
@@ -1661,7 +1672,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickHumanClosedTimelym( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[34]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[36]"));
 		return department;
 	}
 	
@@ -1741,7 +1752,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickAdminOverdueA( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[53]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[57]"));
 		return department;
 	}
 	
@@ -1778,7 +1789,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickFinanceOverdueDept( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[17]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[21]"));
 		return department;
 	}
 	
@@ -1796,7 +1807,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickHumanPendingReviewm( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[36]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[42]"));
 		return department;
 	}
 	
@@ -2151,7 +2162,16 @@ public class CFOcountPOM extends BasePage
 		grading = getDriver().findElement(By.xpath("(//*[@class='GradingRating3'])[1]"));
 		return grading;//*[@id="basic"]/tbody/tr[2]/td[3]
 	}//*[@id="basic"]/tbody/tr[2]/td[4]
-	
+	public static WebElement clickRedGrading1( )				//Method to search second red box of Grading Report
+	{
+		grading = getDriver().findElement(By.xpath("(//*[@class='GradingRating3'])[46]"));
+		return grading;//*[@id="basic"]/tbody/tr[2]/td[3]
+	}
+	public static WebElement clickRedGrading2()				//Method to search second red box of Grading Report
+	{
+		grading = getDriver().findElement(By.xpath("(//*[@class='GradingRating3'])[134]"));
+		return grading;//*[@id="basic"]/tbody/tr[2]/td[3]
+	}
 	public static WebElement clickYellowGrading( )			//Method to search first yellow box of Grading Report
 	{
 		grading = getDriver().findElement(By.xpath("(//*[@class='GradingRating2'])[1]"));
@@ -2981,13 +3001,21 @@ public class CFOcountPOM extends BasePage
 		compliances = getDriver().findElement(By.xpath("//*[@id='txtSearchComplianceID']"));
 		return compliances;
 	} 
-	
+	public static WebElement ComplianceID1( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='txtSearchComplianceID1']"));
+		return compliances;
+	} 
 	public static WebElement Details( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='lidocuments']"));
 		return compliances;
 	} 
-	
+	public static WebElement Details1( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='lidocuments1']"));
+		return compliances;
+	} 
 	public static WebElement APText( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='lblActionableProcedureText']"));
@@ -3011,7 +3039,11 @@ public class CFOcountPOM extends BasePage
 		compliances = getDriver().findElement(By.xpath("//*[@id='divAdvanceSearchModel']/div[2]/span[1]/span/span[2]/span"));
 		return compliances;
 	} 
-	
+	public static WebElement PeriodD1( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='divAdvanceSearchModel']/div[2]/span[1]/span/span[1]"));
+		return compliances;
+	} 
 	public static WebElement ShortReport( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='Myreport7']/a"));
@@ -5436,7 +5468,7 @@ else {
 				CFOcountPOM.closeDocument().click();
 				Thread.sleep(3000);
 		
-		 CFOcountPOM.clickExportImage().click();
+				CFOcountPOM.clickExportImage().click();
 			Thread.sleep(4000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			
@@ -5750,7 +5782,7 @@ else {
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]/a");
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -8118,7 +8150,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 			Thread.sleep(3000);
 			ViewButton.get(0).click();
 			Thread.sleep(4000);
-			test.log(LogStatus.PASS, " :- View successfully.");
+			test.log(LogStatus.PASS, "  View successfully.");
 			CFOcountPOM.closeViewDoc().click();
 			Thread.sleep(3000);
 			ViewButton.get(1).click();
@@ -8256,7 +8288,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 			test.log(LogStatus.PASS, "  File downloaded successfully.");
 			ViewButton.get(1).click();
 			Thread.sleep(5000);
-			CFOcountPOM.closeDocument2().click();
+			CFOcountPOM.closeDownloadTab1().click();
 			Thread.sleep(5000);
 			test.log(LogStatus.PASS, "  OverView successfully.");
 			 By locator1 = By.xpath("//*[@id='sel_chkbx']");
@@ -13007,7 +13039,598 @@ for(String Fal : fail)
 
 }
 
+
+public static void SummaryofOverdueSF(  ExtentTest test)throws InterruptedException
+{
 	
 	
+		Thread.sleep(5000);
+		CFOcountPOM.ClickShowAll().click();        //Clicking on Show All
+		Thread.sleep(8000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+	
+		WebElement farme=getDriver().findElement(By.xpath("//*[@id='showdetails']"));
+		getDriver().switchTo().frame(farme);
+		Thread.sleep(8000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
+		Thread.sleep(3000); 
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		Thread.sleep(3000);
+		
+		CFOcountPOM.clickApplyF().click();
+		Thread.sleep(8000);
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		List<WebElement> ViewButtons = getDriver().findElements(locator);							
+		ViewButtons.get(0).click();
+		Thread.sleep(3000);
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='APIOverView']"));
+		getDriver()  .switchTo().frame(farme1);
+	      Thread.sleep(3000);
+	      CFOcountPOM.Details().click();
+	      Thread.sleep(5000);
+	      OverduePOM.Clickoverview().click();
+    	  Thread.sleep(3000);
+    	  OverduePOM.ClickoverviewClose().click();
+    	  Thread.sleep(3000);
+  		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+  	
+		
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} else {
+			test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+			Thread.sleep(3000);
+			getDriver().switchTo().parentFrame();
+			Thread.sleep(3000);
+			CFOcountPOM.closeDocument().click();
+			Thread.sleep(3000);
+			getDriver().switchTo().defaultContent();
+			Thread.sleep(3000);
+			CFOcountPOM.closeCategories().click();
+			Thread.sleep(1000);
+	
+	
+}
+
+public static void PerformanceSummarySF(ExtentTest test)throws InterruptedException
+{
+		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		js.executeScript("window.scrollBy(0,500)");	
+		Thread.sleep(3000);
+		CFOcountPOM.clickClosedDelayed().click();								//CLicking on 'Not Completed' count
+		
+		Thread.sleep(3000);
+		CFOcountPOM.readHigh().click();		
+		Thread.sleep(3000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		CFOcountPOM.ComplianceID().sendKeys("83902");
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='APIOverView']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	
+	
+	
+		CFOcountPOM.closeDocument().click();
+
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(1000);
+
+
+}
+public static void RiskSummarySF(ExtentTest test)throws InterruptedException
+{
+		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		js.executeScript("window.scrollBy(0,1450)");	
+		Thread.sleep(3000);
+		CFOcountPOM.clickRiskHighNotCompleted().click();								//CLicking on 'Not Completed' count
+		
+				
+		Thread.sleep(3000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='APIOverView']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	
+	
+	
+		CFOcountPOM.closeDocument().click();
+
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(1000);
+
+
+}
+public static void DepartmentSummarySF(ExtentTest test)throws InterruptedException
+{
+		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		js.executeScript("window.scrollBy(0,2000)");	
+		Thread.sleep(3000);
+		CFOcountPOM.clickHROverduem().click();								//CLicking on 'Not Completed' count
+		
+				
+		Thread.sleep(3000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='APIOverView']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	
+	
+	
+		CFOcountPOM.closeDocument().click();
+
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(1000);
+
+
+}
+public static void PerformerSummaryDueForPeriodSF(ExtentTest test)throws InterruptedException
+{
+		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
+		
+		Thread.sleep(5000);
+		js.executeScript("window.scrollBy(0,2500)");	
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		CFOcountPOM.clickNotCompleted().click();								//CLicking on 'Not Completed' count
+		Thread.sleep(3000);
+		CFOcountPOM.readHigh().click();
+			
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+	
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='APIOverView']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+		CFOcountPOM.closeDocument().click();
+}
+	
+public static void GradingReportSF(ExtentTest test)throws InterruptedException
+{
+
+	JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
+	js.executeScript("window.scrollBy(0,3500)");					//Scrolling down window by 2600 px.
+	Thread.sleep(2000);	
+	CFOcountPOM.clickRedGrading1().click();
+	Thread.sleep(8000);	
+	WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
+		CFOcountPOM.ComplianceID().sendKeys("6696");
+		
+		Thread.sleep(8000);
+		
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a[1]");
+	
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='OverViews']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+      	CFOcountPOM.Details1().click();
+      	Thread.sleep(5000);
+      	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+	
+	
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+		CFOcountPOM.closeDocument1().click();
+		
+		Thread.sleep(1000);
+		CFOcountPOM.closePopup().click();	
+}
+
+public static void DetailedReportSF(ExtentTest test) throws InterruptedException, IOException
+{		
+	WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+    
+	Thread.sleep(500);
+	clickReports().click();					//Clicking on 'My Reports'
+	Thread.sleep(3000);
+	clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+	Thread.sleep(2000);
+	CFOcountPOM.ComplianceType().click();
+	Thread.sleep(2000);
+	CFOcountPOM.StatutoryM().click();
+	Thread.sleep(4000);
+	CFOcountPOM.ComplianceType().click();
+	Thread.sleep(2000);
+	CFOcountPOM.Apply().click();
+	Thread.sleep(2000);
+	CFOcountPOM.Apply().click();
+	Thread.sleep(4000);
+//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+	
+	
+	CFOcountPOM.ComplianceID().sendKeys("6696");
+	Thread.sleep(4000);
+	By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
+	wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	Thread.sleep(4000);
+	
+	WebElement ViewButton =getDriver() .findElement(locator);	
+	Thread.sleep(3000);
+	JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+	jse.executeScript("arguments[0].click();", ViewButton);
+	Thread.sleep(4000);
+	WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='OverViews1']"));
+	getDriver()  .switchTo().frame(farme1);
+	Thread.sleep(3000);
+  	CFOcountPOM.Details().click();
+  	Thread.sleep(5000);
+  	OverduePOM.Clickoverview().click();
+  	Thread.sleep(3000);
+  	OverduePOM.ClickoverviewClose().click();
+  	Thread.sleep(3000);
+	test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+
+
+	Thread.sleep(3000);
+	File dir = new File("C:\\Users\\snehalp\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	OverduePOM.Download().click(); // Exporting (Downloading) file
+
+	Thread.sleep(3000);
+	File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) 
+	{
+		test.log(LogStatus.PASS,  "File downloaded successfully.");
+	} 
+	else 
+	{
+	test.log(LogStatus.FAIL,  "File does not downloaded.");
+	}
+	Thread.sleep(3000);
+	getDriver().switchTo().parentFrame();
+	
+	Thread.sleep(3000);
+	CFOcountPOM.closeDocument2().click();
+}
+
+public static void ComplianceDocumentsSF(ExtentTest test  ) throws InterruptedException, IOException
+{
+	
+		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+    
+		Thread.sleep(1000);
+		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
+		Thread.sleep(3000);
+		CFOcountPOM.clickComplianceDocuments().click();			//Clicking on 'Compliance Documents '
+		
+		Thread.sleep(3000);
+		CFOcountPOM.PeriodD1().click();	
+		
+		Thread.sleep(3000);
+		CFOcountPOM.AllPeriod().click();
+		
+		
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+		Thread.sleep(3000);
+		CFOcountPOM.ComplianceID1().sendKeys("6696");
+		
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(2000);
+		By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a[3]");
+		
+		WebElement ViewButton =getDriver() .findElement(locator);	
+		Thread.sleep(3000);
+		JavascriptExecutor jse= (JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		WebElement farme1=	getDriver().findElement(By.xpath("//*[@id='OverViews1']"));
+		getDriver()  .switchTo().frame(farme1);
+		Thread.sleep(3000);
+	  	CFOcountPOM.Details().click();
+	  	Thread.sleep(5000);
+	  	OverduePOM.Clickoverview().click();
+	  	Thread.sleep(3000);
+	  	OverduePOM.ClickoverviewClose().click();
+	  	Thread.sleep(3000);
+		test.log(LogStatus.PASS, "The view icon should get working and document should be displayed on the popup.");
+
+
+		Thread.sleep(3000);
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		OverduePOM.Download().click(); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) 
+		{
+			test.log(LogStatus.PASS,  "File downloaded successfully.");
+		} 
+		else 
+		{
+		test.log(LogStatus.FAIL,  "File does not downloaded.");
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		
+		Thread.sleep(3000);
+		CFOcountPOM.closeDocument2().click();
+	}
+	
+	
+		
 }
 

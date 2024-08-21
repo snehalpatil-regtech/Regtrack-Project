@@ -18,6 +18,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -42,7 +43,7 @@ public class CompanyMethods extends BasePage {
 	public static XSSFWorkbook workbook = null;	//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;		//Sheet variable
 	
-	 static String filePath ="D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\TestData\\ComplianceSheet.xlsx";
+	 static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
 
 
 	
@@ -840,7 +841,7 @@ public class CompanyMethods extends BasePage {
 
 	      action.moveToElement(CompanyPOM.ManageUsers()).click().build().perform();
 	      Thread.sleep(1000);
-	  	CompanyPOM.Department().click();
+	      CompanyPOM.Department().click();
 	  	 Thread.sleep(5000);
 	  	 //------------------------ Add New ---------------------------
 	  	CompanyPOM.AddNew().click();
@@ -4298,8 +4299,6 @@ Thread.sleep(2000);
 		SwitchtoChild(test);
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
-																												
-
 		action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
 		Thread.sleep(1000);
 		CompanyPOM.ChecklistAssignment().click();
@@ -4921,8 +4920,9 @@ Thread.sleep(2000);
 	}
 	
 	
-	public static void EntitiesAssignmentsMC( ExtentTest test)
-			throws InterruptedException, IOException {
+	public static void EntitiesAssignmentsMC( ExtentTest test)throws InterruptedException, IOException 
+	
+	{
 		Actions action = new Actions(getDriver());
 		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
 		Thread.sleep(3000);
@@ -5260,7 +5260,7 @@ Thread.sleep(2000);
 				Thread.sleep(2000);
 				ImplementPOM.LicenseDelete1().click();
 				Thread.sleep(4000);
-			String Msg = getDriver().switchTo().alert().getText();
+				String Msg = getDriver().switchTo().alert().getText();
 				Thread.sleep(1000);
 				getDriver().switchTo().alert().accept();
 
@@ -5269,6 +5269,72 @@ Thread.sleep(2000);
 				
 				SwitchtoParent(test);
 		
+	}
+	
+public static void AssignComplianceInternal( ExtentTest test) throws InterruptedException, IOException
+	{
+	Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		// switching child window
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+	
+  		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+  		
+  		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+		//Thread.sleep(4000);
+		//CompanyPOM.clickInternalCompliance().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickAssignCompliance().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickLocation().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickLocationExpand().click();
+		Thread.sleep(4000);
+		CompanyPOM.selectLocation().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickPerformer().click();
+		Thread.sleep(4000);
+		CompanyPOM.selectPerformer().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickReviewer().click();
+		Thread.sleep(4000);
+		CompanyPOM.selectReviewer().click();
+		Thread.sleep(4000);
+		CompanyPOM.clickCategory().click();
+		Thread.sleep(4000);
+		CompanyPOM.selectCategory().click();
+		Thread.sleep(4000);
+		CompanyPOM.selectCheckbox().click();
+		
+	
+		//scroll down a page
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(4000);
+		CompanyPOM.clickSaveBtn().click();
+		
+		Thread.sleep(8000);
+	    // Switching to Alert        
+        Alert alert1 = getDriver().switchTo().alert();		
+        		
+        // Capturing alert message.    
+        String alertMessage1= getDriver().switchTo().alert().getText();	
+        
+        
+        test.log(LogStatus.PASS, alertMessage1);
+        		
+        // Displaying alert message		
+        System.out.println(alertMessage1);
+        
+        // Accepting alert		
+        	alert1.accept();
+        
+        Thread.sleep(4000);
+		SwitchtoParent(test);
+		
+		
+	
 	}
 	
 	

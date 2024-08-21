@@ -22,6 +22,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import cfo.CFOcountPOM;
+import complianceCertificateMgmt.ComplianceCertificateMgmtMethod;
 import complianceCertificateOwner.CertificateOwnerPOM;
 import complianceCertificateReviewer.ComplianceCertificateReviewerMethod;
 import login.BasePage;
@@ -84,6 +85,12 @@ public static WebElement PeriodDecVIPView1()		//Method for closing Message Popup
 public static WebElement ReOpen()		//Method for closing Message Popup
 {
 	Officer = getDriver().findElement(By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[2]/td[12]/a[2]"));
+	return Officer;
+}
+
+public static WebElement Text()		//Method for closing Message Popup
+{
+	Officer = getDriver().findElement(By.xpath("/html/body/p[4]/font/strong"));
 	return Officer;
 }
 	
@@ -427,13 +434,233 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 			Thread.sleep(1000);
 	}
 	
+	public static void CertificateOfficerP( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOfficer().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		Thread.sleep(5000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	String text=	Text().getText();
+	
+	test.log(LogStatus.PASS, "After adding the notice by the owner for a particular period text displyed :- " +text);
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		CertificateOwnerPOM.Back().click(); 
+	}
+	
+	public static void CertificateOfficerP1( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		
+		CertificateOfficer().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		Thread.sleep(5000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	String text=Text().getText();
+	
+	if(text.equalsIgnoreCase("No Notice has been received under the Regulatory Act during this Subjected / Compliance Period - Kindly Refer to the Annexure.")) {
+	test.log(LogStatus.PASS, "If Notice has been not added by the owner then text displyed :- " +text);
+	}else {
+		test.log(LogStatus.FAIL, " text displyed :- " +text);
+
+	}
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		CertificateOwnerPOM.Back().click(); 
+	}
 	
 	
+	public static void CertificateOfficerPR( ExtentTest test)throws InterruptedException, IOException {
 	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		Thread.sleep(1000);
+		ComplianceCertificateReviewerMethod.CertificateReviewer().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		Thread.sleep(5000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	String text=	Text().getText();
 	
+	test.log(LogStatus.PASS, "After adding the notice by the owner for a particular period text displyed :- " +text);
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		CertificateOwnerPOM.Back().click(); 
+	}
 	
+	public static void CertificateOfficerP1R( ExtentTest test)throws InterruptedException, IOException {
 	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
+		
+		CertificateOwnerPOM.clickMyCertificate().click();
+		Thread.sleep(1000);
+		ComplianceCertificateReviewerMethod.CertificateReviewer().click();
+		Thread.sleep(3000);
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		Thread.sleep(5000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+		String text=	Text().getText();
+	if(text.equalsIgnoreCase("No Notice has been received under the Regulatory Act during this Subjected / Compliance Period - Kindly Refer to the Annexure.")) {
+	test.log(LogStatus.PASS, "If Notice has been not added by the owner then text displyed :- " +text);
+	}else {
+		test.log(LogStatus.FAIL, " text displyed :- " +text);
+
+	}
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		CertificateOwnerPOM.Back().click(); 
+	}
 	
+	public static void CertificateOfficerPM( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,3600)");					//Scrolling down window by 2600 px.
+		Thread.sleep(1000);
+		ComplianceCertificateMgmtMethod.ClickShowAll().click();
+		Thread.sleep(4000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));
+		
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		Thread.sleep(5000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	String text=	Text().getText();
+	
+	test.log(LogStatus.PASS, "After adding the notice by the owner for a particular period text displyed :- " +text);
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(500);
+		ComplianceCertificateMgmtMethod.ClickShowAllClose().click();
+		Thread.sleep(2000);
+		
+	}
+	
+	public static void CertificateOfficerP1M( ExtentTest test)
+			throws InterruptedException, IOException {
+	
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,3600)");					//Scrolling down window by 2600 px.
+		Thread.sleep(1000);
+		ComplianceCertificateMgmtMethod.ClickShowAll().click();
+		Thread.sleep(4000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));
+		
+		CertificateOwnerPOM.View().click();
+		Thread.sleep(5000);
+		
+		
+		CertificateOwnerPOM.ClickPreview().click(); 
+		//Thread.sleep(8000);
+		
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_RadDisplayControl_contentIframe"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+		String text=	Text().getText();
+		if(text.equalsIgnoreCase("No Notice has been received under the Regulatory Act during this Subjected / Compliance Period - Kindly Refer to the Annexure.")) {
+			test.log(LogStatus.PASS, "If Notice has been not added by the owner then text displyed :- " +text);
+		}
+		else 
+		{
+		test.log(LogStatus.FAIL, " text displyed :- " +text);
+
+		}
+		
+	getDriver().switchTo().parentFrame();
+	Thread.sleep(8000);
+		CertificateOwnerPOM.Previewclose().click(); 
+		Thread.sleep(8000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(500);
+		ComplianceCertificateMgmtMethod.ClickShowAllClose().click();
+		Thread.sleep(2000);
+	}
 	
 	
 	

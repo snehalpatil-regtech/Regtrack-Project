@@ -20,6 +20,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import complianceCertificateOfficer.ComplianceCertificateOfficerMethod;
 import complianceCertificateOwner.CertificateOwnerMethod;
 import login.BasePage;
 
@@ -57,7 +58,7 @@ public class ComplianceCertificateReviewerTest extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	//	String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-		extent = new com.relevantcodes.extentreports.ExtentReports("C:\\Users\\Mayuri Gaikwad\\Desktop\\PerformerPom\\Reports\\CertificateOwner.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\CertificateOwner.html",true);
 		test = extent.startTest("Verify OpenBrowser");
 		test.log(LogStatus.PASS, "Browser test is initiated");
 		
@@ -112,7 +113,7 @@ public class ComplianceCertificateReviewerTest extends BasePage {
 		}
 	}
 	
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	void CustomersCreate() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Certificate Reviewer");
@@ -123,7 +124,7 @@ public class ComplianceCertificateReviewerTest extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void CertificateReviewerParticularPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Certificate Reviewer -Particular Period");
@@ -134,7 +135,7 @@ public class ComplianceCertificateReviewerTest extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	void ComplianceCertificateReviewerMethod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Certificate Reviewer Particular Period - Compliance");
@@ -145,12 +146,34 @@ public class ComplianceCertificateReviewerTest extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	void CertificatePerformerUser() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Reviewer - Reviewer User -Compliance Tech");
 		
 		ComplianceCertificateReviewerMethod.CertificatePerformerUser(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 0)
+	void CertificateOfficerPR() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateReviewerMethod.CertificateOfficerPR(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	//@Test(priority =0)
+	void CertificateOfficerP1() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"No Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateReviewerMethod.CertificateOfficerP1R(test);
 		
 		extent.endTest(test);
 		extent.flush();

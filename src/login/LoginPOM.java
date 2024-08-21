@@ -73,19 +73,20 @@ import org.openqa.selenium.WebElement;
 		
 		public static WebElement clickQALink()	//Method for searching QALink for user login
 		{
-			QALink = getDriver().findElement(By.xpath("//a[@id='lnkSecurityQA']"));
-			return QALink;
+			//QALink = getDriver().findElement(By.xpath("//a[@id='lnkSecurityQA']"));
+			QALink = getDriver().findElement(By.linkText("Do not have access to OTP?"));
+	return QALink;
 		}
 		
 		public static WebElement Answer1()		//Method for searching input box of first answer
 		{
-			ans1 = getDriver().findElement(By.xpath("//input[@name='txtAnswer1']"));
+			ans1 = getDriver().findElement(By.xpath("//*[@id='txtAnswer1']"));
 			return ans1;
 		}
 		
 		public static WebElement Answer2()		//Method for searching input box of second answer
 		{
-			ans2 = getDriver().findElement(By.xpath("//input[@name='txtAnswar2']"));
+			ans2 = getDriver().findElement(By.xpath("//*[@id='txtAnswar2']"));
 			return ans2;
 		}
 		public static WebElement Question1()	//Method for searching first Question 

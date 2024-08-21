@@ -34,7 +34,7 @@ private static WebElement owner = null;				//WebElement variable created for 'Ca
 	
 	public static WebElement View()		//Method for closing Message Popup
 	{
-		owner = getDriver().findElement(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[8]/a[1]"));
+		owner = getDriver().findElement(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[2]/td[8]/a[1]"));
 		return owner;                       
 	}
 	
@@ -216,29 +216,103 @@ private static WebElement owner = null;				//WebElement variable created for 'Ca
 		return owner;
 	}
 	
+	public static WebElement Addnotice()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[6]/a[1]"));
+		return owner;
+	}
+	
+	public static WebElement Act()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='AddExceptPopUp']/div/fieldset/div[1]/span[1]/span/span[2]/span"));
+		return owner;
+	}
+	
+	public static WebElement Act1()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li"));
+		return owner;
+	}
+	
+	public static WebElement Description()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='txtDescription']"));
+		return owner;
+	}
+	
+	public static WebElement Liability ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='txtLiability']"));
+		return owner;
+	}
+	
+	public static WebElement Status ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='txtStatus']"));
+		return owner;
+	}
+	
+	public static WebElement NoticeReceiptDate ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='AddExceptPopUp']/div/fieldset/div[1]/span[2]/span/span[2]/span"));
+		return owner;
+	}
+	
+	public static WebElement NoticeReceiptDate1 ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.linkText("1"));
+		return owner;
+	}
 	
 	
+	public static WebElement NoticeDueDate ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='AddExceptPopUp']/div/fieldset/div[2]/span/span/span[2]/span"));
+		return owner;
+	}
+	
+	public static WebElement NoticeDueDate1 ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.linkText("25"));
+		return owner;
+	}
 	
 	
+	public static WebElement ActionTaken ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='txtActionTaken']"));
+		return owner;
+	}
 	
+	public static WebElement SubmitN ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='btnadd']"));
+		return owner;
+	}
 	
+	public static WebElement Close ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@class='k-button k-bare k-button-icon k-window-action']"));
+		return owner;
+	}
 	
+	public static WebElement Edit ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@class='k-button k-button-icontext Ex-edit k-grid-editEx']"));
+		return owner;
+	}
 	
+	public static WebElement Delete ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@class='k-button k-button-icontext Ex-delete k-grid-deleteEx']"));
+		return owner;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static WebElement Export ()		//Method for closing Message Popup
+	{
+		owner = getDriver().findElement(By.xpath("//*[@id='btnExortNotice']"));
+		return owner;
+	}
 	
 	
 	

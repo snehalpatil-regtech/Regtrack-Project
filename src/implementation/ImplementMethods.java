@@ -8194,9 +8194,522 @@ public static void DeReOpeningofComplianceDis( ExtentTest test)
 	
 }
 
-
-
+public static void ExcludeNotActivated( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
 }
+
+public static void ExcludeNotActivatedSC( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}		
+	
+public static void ExcludeNotActivatedInternal( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType1().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}	
+
+public static void ExcludeNotActivatedIC( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType2().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}
+
+public static void ExcludeNotActivatedMultipleCompliance( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox1().click();
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox2().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}
+
+public static void ExcludeNotActivatedSCMultipleCompliance( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox1().click();
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox2().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}	
+
+public static void ExcludeNotActivatedInternalMultipleCompliance( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType1().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox2().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}	
+
+public static void ExcludeNotActivatedICMultipleCompliance( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickComplianceType().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectComplianceType2().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCheckBox2().click();
+	
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}
+public static void WithoutSelectCompliance( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageCompliances().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ComplianceAssignment().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.ExcludeNotActivated().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer1().click();
+	
+	
+	Thread.sleep(4000);
+	Actions a = new Actions(getDriver());
+	//scroll down a page
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	a.sendKeys(Keys.PAGE_DOWN).build().perform(); 
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickExclude().click();
+	
+	Thread.sleep(4000);
+	String msg=ImplementPOM.excludeValidMsg().getText();
+	
+	if(msg.equalsIgnoreCase(msg))
+	{
+		test.log(LogStatus.PASS, "Message displayed ="+msg);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL,"Message displayed =" +msg);
+	}
+}
+
+public static void EventAssignmentExportImport( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	ImplementPOM.ManageEvents().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentExportImport().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickEvent().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickCustomer1().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectCustomer2().click();
+	
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickEntity().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectEntity().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickOk().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickLocation().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.selectLocation().click();
+	
+	Thread.sleep(4000);
+	ImplementPOM.clickSelect().click();
+	
+	Thread.sleep(4000);
+	
+	
+	if(ImplementPOM.clickDownload().isDisplayed())
+	{
+		Thread.sleep(4000);
+		ImplementPOM.clickDownload().click();
+		test.log(LogStatus.PASS, "Data should be download successfully.");
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "Data should not be download successfully.");
+		
+	}
+	
+	
+}
+	
+}
+
+
+
+
 	
 	
 	

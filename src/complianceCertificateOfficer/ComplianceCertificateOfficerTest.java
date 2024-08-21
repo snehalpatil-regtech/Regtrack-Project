@@ -60,7 +60,7 @@ public class ComplianceCertificateOfficerTest extends BasePage{
 	void setBrowser() throws InterruptedException, IOException
 	{
 	//	String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-		extent = new com.relevantcodes.extentreports.ExtentReports("C:\\Users\\Mayuri\\Desktop\\Compliance\\AvacomAll\\Reports\\CertificateOwner.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\CertificateOwner.html",true);
 		test = extent.startTest("Loging In - Certificate Officer");
 		test.log(LogStatus.PASS, "Logging into system");
 	/*	
@@ -166,7 +166,29 @@ public class ComplianceCertificateOfficerTest extends BasePage{
 		extent.flush();
 	}*/
 	
-	@Test(priority = 6) //pass 
+	@Test(priority = 6)
+	void CertificateOfficerP() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateOfficerMethod.CertificateOfficerP(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 7)
+	void CertificateOfficerP1() throws InterruptedException, IOException
+	{
+		test = extent.startTest("A \"No Notice has been received under the Regulatory Act during this Subjected / Compliance Period\" that note appears in the compliance certificate draft or not?");
+		
+		ComplianceCertificateOfficerMethod.CertificateOfficerP1(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 6) //pass 
     void WhatsNew() throws InterruptedException, IOException
 			{
 				test = extent.startTest("' what's New ' Verification");

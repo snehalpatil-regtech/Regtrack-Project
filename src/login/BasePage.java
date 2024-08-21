@@ -163,7 +163,7 @@ import performer.OverduePOM;
 	private void openBrower(int no) throws IOException {
 
 		if (browser.contains("chrome")) {
-					System.setProperty("webdriver.chrome.driver", "E:\\eclips-projects\\Selenium\\chromedriver-win64_1\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "E:\\eclips-projects\\Selenium\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 					//WebDriverManager.chromedriver().setup();
 					ChromeOptions options = new ChromeOptions();
 					options.addArguments("--remote-allow-origins=*");
@@ -226,7 +226,7 @@ import performer.OverduePOM;
 		}else {
 			
 		}
-		
+		Thread.sleep(3000);
 		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(3000);
 		
@@ -254,9 +254,9 @@ import performer.OverduePOM;
 		login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 		
 		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
-		wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
+		//wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
-		ApprovalcountPOM.clickManagement().click();
+		//ApprovalcountPOM.clickManagement().click();
 		Thread.sleep(5000);
 		
 		try

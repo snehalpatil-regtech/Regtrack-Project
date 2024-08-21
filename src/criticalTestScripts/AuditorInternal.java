@@ -51,7 +51,7 @@ public class AuditorInternal extends BasePage {
 	public int penalty = 0;						//Variable created for reading Penalty
 	
 	
-	public static String link = "Auditor";			//Check link in excel sheet first.
+	public static String link = "mgmt1";			//Check link in excel sheet first.
 	/*
 	public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -66,7 +66,7 @@ public class AuditorInternal extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\AuditorInternal.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\AuditorInternal.html",true);
 		test = extent.startTest("Loging In - Auditor (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -901,6 +901,391 @@ public class AuditorInternal extends BasePage {
 		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	
+	
+	@Test(priority = 11)
+	void BargraphBSECriticalStatutory() throws InterruptedException
+	{
+		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
+		
+		
+		Thread.sleep(2000);
+		CFOcountPOM.YearTodate().click();
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		Thread.sleep(4000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
+		
+		
+		Thread.sleep(4000);
+		int BSEHigh = Integer.parseInt(CFOcountPOM.clickBSECritical().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickBSECritical().click();					//Clicking on High bar of Labour  
+		
+		Thread.sleep(2000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;				//Calculating the values to match with High value of Labour.
+		/*
+		if(BSEHigh == total)
+		{
+			test.log(LogStatus.PASS, "'Internal Audit  - Critical' Compliance Count matches to sum of all types of compliances.");
+			test.log(LogStatus.PASS, "Total 'BSE - Critical' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Internal Audit - Critical' Compliance Count doesn't matches to sum of all types of compliances.");
+			test.log(LogStatus.FAIL, "Total 'BSE - Critical' Compliances : "+total+" | Total Sum : "+BSEHigh);
+		}
+		*/
+		if(BSEHigh > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Timely", ClosedTimely);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Closed Timely' Count = "+ClosedTimely);
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Delayed", ClosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+ClosedDelayed);
+			}
+			if(NotCompleted > 0)
+			{
+				CFOcountPOM.BarGraphCountIn1( test, "Not Completed", NotCompleted);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Not Completed' Count = "+NotCompleted);
+			}
+			if(NotApplicable > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Not Applicable", NotApplicable);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+NotApplicable);
+			}
+			
+			Thread.sleep(500);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(2000);
+				}
+		else
+		{
+			test.log(LogStatus.PASS, "'Internal Audit ' - Critical' Count = "+BSEHigh);
+			
+			Thread.sleep(500);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(2000);
+		}
+				extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 0)
+	void BargraphBSEHighStatutory() throws InterruptedException
+	{
+		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
+		
+		
+		CFOcountPOM.YearTodate().click();
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,750)");						//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		String FinaOverdue = CFOcountPOM.clickBSEHigh().getText();			//Reading the Overdue value of Human Resource
+		FinaOverdue = FinaOverdue.replaceAll(" ","");									//Removing all white spaces from string. 
+		int BSEHigh = Integer.parseInt(FinaOverdue);
+		Thread.sleep(4000);
+	//	int BSEHigh = Integer.parseInt(CFOcountPOM.clickBSEHigh().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickBSEHigh().click();					//Clicking on High bar of Labour  
+		
+		Thread.sleep(2000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;				//Calculating the values to match with High value of Labour.
+		/*
+		if(BSEHigh == total)
+		{
+			test.log(LogStatus.PASS, "'Internal Audit  - High' Compliance Count matches to sum of all types of compliances.");
+			test.log(LogStatus.PASS, "Total 'Internal Audit - High' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'BSE - High' Compliance Count doesn't matches to sum of all types of compliances.");
+			test.log(LogStatus.FAIL, "Total 'Internal Audit - High' Compliances : "+total+" | Total Sum : "+BSEHigh);
+		}
+		*/
+		if(BSEHigh > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Timely", ClosedTimely);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+ClosedTimely);
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Delayed", ClosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High - Closed Delayed' Count = "+ClosedDelayed);
+			}
+			if(NotCompleted > 0)
+			{
+				CFOcountPOM.BarGraphCountIn1( test, "Not Completed", NotCompleted);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High - Not Completed' Count = "+NotCompleted);
+			}
+			if(NotApplicable > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Not Applicable", NotApplicable);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High - Not Applicable' Count = "+NotApplicable);
+			}
+			
+			Thread.sleep(500);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(2000);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Internal Audit - High' Count = "+BSEHigh);
+			
+			Thread.sleep(500);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(3000);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 13)
+	void BargraphBSEMediumStatutory() throws InterruptedException
+	{
+		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
+		
+		CFOcountPOM.YearTodate().click();
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		Thread.sleep(4000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+     	js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
+		
+		
+		Thread.sleep(4000);
+		int BSEMedium = Integer.parseInt(CFOcountPOM.clickBSEMedium().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickBSEMedium().click();					//Clicking on High bar of Labour  
+		
+		Thread.sleep(3000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;				//Calculating the values to match with High value of Labour.
+		/*
+		if(BSEMedium == total)
+		{
+			test.log(LogStatus.PASS, "'BSE  - Medium' Compliance Count matches to sum of all types of compliances.");
+			test.log(LogStatus.PASS, "Total 'Internal Audit - Medium' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'BSE - Medium' Compliance Count doesn't matches to sum of all types of compliances.");
+			test.log(LogStatus.FAIL, "Total 'Internal Audit - Medium' Compliances : "+total+" | Total Sum : "+BSEMedium);
+		}
+		*/
+		if(BSEMedium > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Timely", ClosedTimely);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+ClosedTimely);
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Delayed", ClosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Closed Delayed' Count = "+ClosedDelayed);
+			}
+			if(NotCompleted > 0)
+			{
+				CFOcountPOM.BarGraphCountIn1( test, "Not Completed", NotCompleted);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+NotCompleted);
+			}
+			if(NotApplicable > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Not Applicable", NotApplicable);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Not Applicable' Count = "+NotApplicable);
+			}
+			
+			Thread.sleep(500);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(2000);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Internal Audit - 'Medium Count = "+BSEMedium);
+			
+			Thread.sleep(1000);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(3000);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 0)
+	void BargraphBSELowStatutory() throws InterruptedException
+	{
+		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
+		
+		CFOcountPOM.YearTodate().click();
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	     js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
+		
+		
+		Thread.sleep(4000);
+		int BSELow = Integer.parseInt(CFOcountPOM.clickBSELow().getText());	//Reading the Medium value of Labour compliance
+		CFOcountPOM.clickBSELow().click();					//Clicking on High bar of Labour  
+		
+		Thread.sleep(3000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;				//Calculating the values to match with High value of Labour.
+		/*
+		if(BSELow == total)
+		{
+			test.log(LogStatus.PASS, "'Internal Audit  - Low' Compliance Count matches to sum of all types of compliances.");
+			test.log(LogStatus.PASS, "Total 'Internal Audit - Low' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Internal Audit - Low' Compliance Count doesn't matches to sum of all types of compliances.");
+			test.log(LogStatus.FAIL, "Total 'Internal Audit - Low' Compliances : "+total+" | Total Sum : "+BSELow);
+		}
+		*/
+		if(BSELow > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Timely", ClosedTimely);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Closed Timely' Count = "+ClosedTimely);
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Closed Delayed", ClosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+ClosedDelayed);
+			}
+			if(NotCompleted >= 0)
+			{
+				CFOcountPOM.BarGraphCountIn1( test, "Not Completed", NotCompleted);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+NotCompleted);
+			}
+			if(NotApplicable >= 0)
+			{
+				CFOcountPOM.BarGraphCountIn( test, "Not Applicable", NotApplicable);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Not Applicable' Count = "+NotApplicable);
+			}
+			
+			Thread.sleep(1000);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(3000);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Internal Audit - Low' Count = "+BSELow);
+			
+			Thread.sleep(1000);
+			WebElement element = CFOcountPOM.clickBack();
+			Actions actions = new Actions(getDriver());
+			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
+			Thread.sleep(2000);
 		}
 		extent.endTest(test);
 		extent.flush();

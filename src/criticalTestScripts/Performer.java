@@ -56,7 +56,7 @@ public class Performer extends BasePage {
 	public static XSSFWorkbook workbook = null;		//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;			//Sheet variable
 	
-	public static String link = "FE";
+	public static String link = "mgmt1";
 	
 	/*public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -167,7 +167,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	
-		@Test(priority = 5) 
+	//	@Test(priority = 0) 
 		void StatutoryChecklistAction() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Statutory Checklist Count Through Action");
@@ -179,7 +179,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 6) 
+		@Test(priority = 6) 
 		void StatutoryChecklistBox() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- To Check Perform Multiple statutory Checklist Compliance working or not ");
@@ -191,7 +191,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 7)  
+	//	@Test(priority = 7)  
 		void InternalCheckListAction() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Internal Checklist Count Through Action");
@@ -203,7 +203,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 8)  
+		@Test(priority =8)  
 		void InternalCheckListCheckBox() throws InterruptedException
 		{
 			test = extent.startTest("Performer Summary :- To Check Perform Multiple  Internal Checklist Compliance working or not");
@@ -280,8 +280,8 @@ public class Performer extends BasePage {
 		test = extent.startTest("Performer Task Summary - Statutory Upcoming Count Match");
 		
 		
-		MethodsPOM.PerformerTaskUpcoming(test,"Statutory");
-		
+		//MethodsPOM.PerformerTaskUpcoming(test,"Statutory");
+		MethodsPOM.PerformUpcomingStatutory(test);
 		extent.endTest(test);
 		extent.flush();
 	}
@@ -317,7 +317,7 @@ public class Performer extends BasePage {
 		test = extent.startTest("Performer Task Summary - Internal Overdue Count Match");
 		
 		
-		MethodsPOM.PerformerTaskOverdue(test,"Internal");
+		MethodsPOM.PerformerTaskOverdueInternal(test,"Internal");
 		
 		extent.endTest(test);
 		extent.flush();
@@ -335,13 +335,13 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 19) //pass
+		@Test(priority = 0) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");
 			
 			
-			MethodsPOM.PerformerTaskRejected(test,"Internal");
+			MethodsPOM.PerformerTaskRejectedInternal(test,"Internal");
 			
 			extent.endTest(test);
 			extent.flush();
@@ -370,7 +370,7 @@ public class Performer extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-	 @Test(priority = 22) //pass
+	// @Test(priority = 22) //pass
 	    void DueButNotSubmitted() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Statutory Due But Not Submitted Count Match");
@@ -382,7 +382,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	 
-	 @Test(priority = 23) //pass
+	// @Test(priority = 23) //pass
 	    void DueButNotSubmittedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Internal Due But Not Submitted Count Match");
@@ -394,7 +394,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	    
-	  @Test(priority = 24) //pass
+	//  @Test(priority = 24) //pass
 	    void PendingForReview() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Statutory Pending For Review Count Match");
@@ -406,7 +406,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	 
-	 @Test(priority = 25) //pass
+	// @Test(priority = 25) //pass
 	    void PendingForReviewIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Internal Pending For Review Count Match");
@@ -418,7 +418,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	 
-	 @Test(priority = 26) //pass
+//	 //@Test(priority = 26) //pass
 	    void Rejectedtask() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Statutory Rejected Count Match");
@@ -430,7 +430,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	 
-	 @Test(priority = 27) //pass
+//	// @Test(priority = 27) //pass
 	    void RejectedtaskIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Reviewer Task Summary - Internal Rejected Count Match");
@@ -443,7 +443,7 @@ public class Performer extends BasePage {
 		}
 	
 	
-    //  	@Test(priority = 11) 
+    	@Test(priority = 28) 
 	       void ComplianceSatCalender() throws InterruptedException
 				{
 					test = extent.startTest("My Compliance Calender Statutory perform Verification");
@@ -471,6 +471,8 @@ public class Performer extends BasePage {
 					
 					
 					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ContentPlaceHolder1_iPerformerFrame"));
+					
+					//ContentPlaceHolder1_iPerformerFrame
 					js.executeScript("window.scrollBy(0,500)");                	
 				
 					Thread.sleep(500);
@@ -498,6 +500,8 @@ public class Performer extends BasePage {
 					}catch(Exception e) {
 						
 					}
+					
+					Thread.sleep(2000);
 					OverduePOM.remark().sendKeys("Automation");
 					Thread.sleep(1000);
 					getDriver().findElement(By.xpath("//*[@id='btnSave']")).click();
@@ -528,7 +532,7 @@ public class Performer extends BasePage {
 	   	extent.flush();
 	   	}
 	   	
-	 //  	@Test(priority = 19) 
+		@Test(priority = 29) 
     void ComplianceSatCalender1() throws InterruptedException, AWTException
 			{
 				test = extent.startTest(" Calender Statutory Count Verification");
@@ -640,7 +644,7 @@ public class Performer extends BasePage {
 				extent.flush();
 	}
 	
-//	@Test(priority = 19) 
+	@Test(priority = 33) 
 		void ComplianceDocumentsInter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents Internal verification");
