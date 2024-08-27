@@ -62,7 +62,11 @@ public class ReviewerPOM extends BasePage
 		statutoryAction = getDriver().findElement(By.xpath("(//*[@class='k-button k-button-icontext ob-overview k-grid-edit2'])[1]"));	//XPath for clicking first action button  
 		return statutoryAction;
 	}
-	
+	public static WebElement clickActionPFR()			//Method for searching action button
+	{
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_grdTaskReviewer_btnChangeStatusReviewer_0']"));	//XPath for clicking first action button  
+		return statutoryAction;
+	}
 	public static List<WebElement> clickAction2()			//Method for searching action button
 	{
 		elementsList = getDriver().findElements(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[24]/a[1]"));	//XPath for clicking first action button  
@@ -158,7 +162,11 @@ public class ReviewerPOM extends BasePage
 		closedTimely = getDriver().findElement(By.xpath("//*[@id='rdbtnStatus1']/tbody/tr/td[2]/label"));
 		return closedTimely;
 	}
-	
+	public static WebElement clickClosedTimelyPFRTask()		//Method for searching Closed-Timely radio button
+	{
+		closedTimely = getDriver().findElement(By.xpath("//*[@id='rdbtnStatus']/tbody/tr/td[2]/label"));
+		return closedTimely;
+	}
 	public static WebElement clickClosedTimelyAS()		//Method for searching Closed-Timely radio button
 	{
 		closedTimely = getDriver().findElement(By.xpath("//*[@id='rdbtnStatus1_1']"));
@@ -213,7 +221,11 @@ public class ReviewerPOM extends BasePage
 		textArea = getDriver().findElement(By.xpath("//*[@id='tbxRemarks1']"));
 		return textArea;
 	}
-	
+	public static WebElement insertTextArea1()			//Method for searching text area
+	{
+		textArea = getDriver().findElement(By.xpath("//*[@id='tbxRemarks']"));
+		return textArea;
+	}
 	public static WebElement insertTextAreaInternal()	//Method for searching Internal text area
 	{
 		textAreaInternal = getDriver().findElement(By.xpath("//textarea[@id='tbxRemarks3']"));
@@ -231,7 +243,11 @@ public class ReviewerPOM extends BasePage
 		reject = getDriver().findElement(By.xpath("//input[@value='Reject']"));
 		return reject;
 	}
-	
+	public static WebElement clickSubmit()				//Method searching Reject button
+	{
+		reject = getDriver().findElement(By.xpath("//*[@id='btnSave']"));
+		return reject;
+	}
 	public static WebElement readStatutoryReject()		//Method for searching Statutory Reject button to read statutory value  
 	{
 		statutoryRejectValue = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyRejectedcount']"));

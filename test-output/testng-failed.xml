@@ -3,41 +3,31 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.Performer">
+      <class name="criticalTestScripts.Reviewer">
         <methods>
-          <include name="PerformerTaskUpcomingIn"/>
-          <include name="InternalOverdueCri"/>
-          <include name="StatutoryChecklistBox"/>
+          <include name="RejectedtaskIn"/>
+          <include name="DueButNotSubmitted"/>
           <include name="setBrowser"/>
-          <include name="AssignedEvents"/>
-          <include name="PerformerTaskRejected"/>
+          <include name="PendingReviewInternalCri1"/>
           <include name="browserClosing"/>
-          <include name="StatutoryOverdueCri"/>
-          <include name="InternalCheckListCheckBox"/>
-          <include name="PerformerTaskUpcoming"/>
-          <include name="Closing"/>
-          <include name="DashboardRejectInternal"/>
-          <include name="Upcoming_ComplianceInternal"/>
-          <include name="PerformerTaskPFRIn"/>
-          <include name="PerformerTaskOverdue"/>
-          <include name="PerformerTaskRejectedIn"/>
-          <include name="DetailedReportIn"/>
-          <include name="AssignmentReport"/>
-          <include name="Upcoming_ComplianceStatutory"/>
+          <include name="ReviewCountStatutoryApprove"/>
+          <include name="PendingForReviewIn"/>
+          <include name="ReviewCountStatutoryReject"/>
+          <include name="DueButNotSubmittedIn"/>
           <include name="ComplianceDocumentsInter"/>
-          <include name="ClosedEventsPer"/>
-          <include name="DashboardRejectStatutory"/>
-          <include name="PerformerTaskOverdueIn"/>
-          <include name="PerformerTaskPFR"/>
-          <include name="ComplianceSatCalender1"/>
-          <include name="ComplianceSatCalender"/>
-          <include name="ActivatedEventsPer"/>
+          <include name="OverdueStatutoryCri"/>
+          <include name="OverdueInternalCri"/>
+          <include name="PendingForReview"/>
           <include name="Login"/>
+          <include name="ReviewCountInternalReject"/>
+          <include name="AssignmentReport"/>
+          <include name="ComplianceDocumentsSat"/>
           <include name="Compliancecalendar"/>
           <include name="DetailedReport1"/>
-          <include name="ComplianceDocumentsSat"/>
+          <include name="DetailedReportIn"/>
+          <include name="Rejectedtask"/>
         </methods>
-      </class> <!-- criticalTestScripts.Performer -->
+      </class> <!-- criticalTestScripts.Reviewer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

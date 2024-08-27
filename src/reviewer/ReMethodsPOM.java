@@ -1102,18 +1102,18 @@ public class ReMethodsPOM extends BasePage
 
 	
 
-Thread.sleep(2500);
-
-getDriver().navigate().refresh();
-
-wait.until(ExpectedConditions.visibilityOf(performer.OverduePOM.clickDashboard()));
-performer.OverduePOM.clickDashboard().click();
-
-Thread.sleep(7000);
-wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.clickInternalReview()));
-int newInternalReviewValue = Integer.parseInt(ReviewerPOM.clickInternalReview().getText());	//Reading new value of Internal Pending For Review
-int newInternalRejectValue = Integer.parseInt(ReviewerPOM.readInternalReject().getText());	//Reading old value of Internal Reject
-int NewCountCompletedIn = Integer.parseInt(ReviewerPOM.ClickCompletedIn().getText());	//Reading old value of Internal Reject
+		Thread.sleep(2500);
+		
+		getDriver().navigate().refresh();
+		
+		wait.until(ExpectedConditions.visibilityOf(performer.OverduePOM.clickDashboard()));
+		performer.OverduePOM.clickDashboard().click();
+		
+		Thread.sleep(7000);
+		wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.clickInternalReview()));
+		int newInternalReviewValue = Integer.parseInt(ReviewerPOM.clickInternalReview().getText());	//Reading new value of Internal Pending For Review
+		int newInternalRejectValue = Integer.parseInt(ReviewerPOM.readInternalReject().getText());	//Reading old value of Internal Reject
+		int NewCountCompletedIn = Integer.parseInt(ReviewerPOM.ClickCompletedIn().getText());	//Reading old value of Internal Reject
 
 
 	if(newInternalReviewValue < oldInternalReviewValue)

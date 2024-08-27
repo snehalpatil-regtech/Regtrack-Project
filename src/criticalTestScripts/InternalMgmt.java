@@ -1571,7 +1571,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 23)
+	@Test(priority = 0)
 	void RiskSummaryCriticalInternal() throws InterruptedException
 	{
 	
@@ -1633,6 +1633,25 @@ public class InternalMgmt extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Closed Timely' Count = "+RiskCritical_ClosedTimely);
 		}
+		
+		Thread.sleep(2000);
+		List<WebElement>roc2 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-2'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc2, "Closed Timely");
+		
+		
+		Thread.sleep(3000);
+		int RiskCritical_DueToday = Integer.parseInt(CFOcountPOM.clickRiskCriticalDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskCritical_DueToday > 0)
+		{
+			CFOcountPOM.clickRiskCriticalDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount( test, "Critical - Due Today", RiskCritical_ClosedTimely, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_ClosedTimely);
+		}
+		
 		
 		Thread.sleep(3000);
 		int RiskCritical_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskCriticalNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance

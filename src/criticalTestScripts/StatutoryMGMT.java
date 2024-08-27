@@ -1663,6 +1663,26 @@ public class StatutoryMGMT extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
 			}
+			
+			Thread.sleep(2000);
+			List<WebElement>roc3 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-2'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc3, "Not Applicable");
+			
+			Thread.sleep(3000);
+			int RiskCritical_DueToday = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskCritical_DueToday > 0)
+			{
+				CFOcountPOM.clickRiskCriticalClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				CFOcountPOM.RiskGraphCount( test, "Critical - Due Today", RiskCritical_ClosedTimely, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_ClosedTimely);
+			}
+			
+			
+			
 			Thread.sleep(2000);
 			extent.endTest(test);
 			extent.flush();

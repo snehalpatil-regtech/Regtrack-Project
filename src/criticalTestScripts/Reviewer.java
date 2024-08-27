@@ -529,7 +529,7 @@ public class Reviewer  extends BasePage {
   @Test(priority = 11) //pass
     void PendingForReview() throws InterruptedException, IOException
 	{
-		test = extent.startTest("Reviewer Task Summary - Statutory Pending For Review Count Match");
+		test = extent.startTest("Reviewer Task Summary - Statutory Pending For Review Count and Completed when Approved");
 		
 		
 		MethodsPOM.PendingForReview(test,"Statutory");
@@ -541,10 +541,33 @@ public class Reviewer  extends BasePage {
  @Test(priority = 12) //pass
     void PendingForReviewIn() throws InterruptedException, IOException
 	{
-		test = extent.startTest("Reviewer Task Summary - Internal Pending For Review Count Match");
+		test = extent.startTest("Reviewer Task Summary - Internal Pending For Review Count and Completed when Approved");
 		
 		
-		MethodsPOM.PendingForReview(test,"Internal");
+		MethodsPOM.PendingForReviewInternalTask(test,"Internal");
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+ 
+ @Test(priority = 13) //pass
+ void PendingForReviewTaskRejected() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Reviewer Task Summary - Statutory Pending For Review Count and Rejected when Rejected");
+		
+		
+		MethodsPOM.PendingForReviewTaskRejected(test,"Statutory");
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+ @Test(priority = 14) //pass
+ void PendingForReviewTaskInRejected() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Reviewer Task Summary - Internal Pending For Review Count and Rejected when Rejected");
+		
+		
+		MethodsPOM.PendingForReviewTaskInRejected(test);
 		
 		extent.endTest(test);
 		extent.flush();

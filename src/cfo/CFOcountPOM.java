@@ -1197,6 +1197,11 @@ public class CFOcountPOM extends BasePage
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[9]"));
 		return risksummary;
 	}
+	public static WebElement clickRiskCriticalDueToday( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		return risksummary;
+	}
 	
 	public static WebElement clickRiskCriticalNotApplicable( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
@@ -5979,13 +5984,13 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance  Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
 		}
 		
-		Thread.sleep(4000);
-		 CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			CFOcountPOM.clickExportImage().click();
 			Thread.sleep(4000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
