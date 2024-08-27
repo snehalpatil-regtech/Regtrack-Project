@@ -81,7 +81,7 @@ public class InternalMgmt extends BasePage {
 	void Login() throws InterruptedException, IOException
 	{
 	
-		initialization(link,3,"internal");
+		initialization(link,2,"internal");
 		/*
 		XSSFSheet sheet = ReadExcel();
 		Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
