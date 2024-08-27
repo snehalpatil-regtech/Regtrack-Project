@@ -230,7 +230,7 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickExportImage().click();                    //export excel
 			Thread.sleep(5000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");	
+			test.log(LogStatus.PASS, "Excel file download Successfully");	
 	
 			Thread.sleep(5000);
 		
