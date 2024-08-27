@@ -81,7 +81,7 @@ public class ApprovalStatutory extends BasePage {
 	void Login() throws InterruptedException, IOException
 	{
 		
-		initialization1(link,7,"Statutory");
+		initialization1(link,5,"Statutory");
 	
 	/*	XSSFSheet sheet = ReadExcel();
 		Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
