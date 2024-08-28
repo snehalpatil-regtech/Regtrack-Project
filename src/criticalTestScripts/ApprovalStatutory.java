@@ -67,7 +67,7 @@ public class ApprovalStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Approver.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver.html",true);
 		test = extent.startTest("Loging In - Approval (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -738,7 +738,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-	@Test(priority = 12)
+	@Test(priority = 0)
 		void RiskSummaryCriticalStatutory() throws InterruptedException
 		{
 		
@@ -803,7 +803,21 @@ public class ApprovalStatutory extends BasePage {
 				test.log(LogStatus.PASS, "'Critical - Closed Timely' Count = "+RiskCritical_ClosedTimely);
 			}
 			
-		/*	Thread.sleep(3000);
+			
+			Thread.sleep(3000);
+			int RiskCritical_DueToday = Integer.parseInt(CFOcountPOM.clickRiskCriticalDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskCritical_DueToday > 0)
+			{
+				CFOcountPOM.clickRiskCriticalDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				CFOcountPOM.RiskGraphCount1( test, "Critical - Due Today", RiskCritical_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_DueToday);
+			}
+			
+			Thread.sleep(3000);
 			int RiskCritical_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskCriticalNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskCritical_NotApplicable > 0)
 			{
@@ -815,7 +829,7 @@ public class ApprovalStatutory extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
 			}
-			*/
+			
 			Thread.sleep(2000);
 			extent.endTest(test);
 			extent.flush();

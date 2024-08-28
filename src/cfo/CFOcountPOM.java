@@ -1349,7 +1349,11 @@ public class CFOcountPOM extends BasePage
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
 		return risksummary;
 	}
-	
+	public static WebElement clickRiskHighDueToday( )			//Method to search 'High Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[14]"));
+		return risksummary;
+	}
 	public static WebElement clickRiskHighClosedTimelyIN( )			//Method to search 'High Risk - In Time' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[52]"));
@@ -1419,8 +1423,14 @@ public class CFOcountPOM extends BasePage
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[11]"));
 		return risksummary;
-	}//*[@id="highcharts-6"]/svg/g[5]/g[1]/rect[1]
+	}
 	
+	public static WebElement clickRiskMediumDueToday( )		//Method to search 'Medium Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[15]"));
+		return risksummary;
+	}
+
 	public static WebElement clickRiskMediumClosedTimelyA( )		//Method to search 'Medium Risk - In Time' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[15]"));
@@ -1487,7 +1497,11 @@ public class CFOcountPOM extends BasePage
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[12]"));
 		return risksummary;
 	}
-	
+	public static WebElement clickRiskLowDueToday( )			//Method to search 'Low Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		return risksummary;
+	}
 	public static WebElement clickRiskLowClosedTimelyA( )			//Method to search 'Low Risk - In Time' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
@@ -5990,7 +6004,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6309,15 +6323,19 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			
 			WebElement ViewButton = getDriver().findElement(locator);	
 			Thread.sleep(4000);
-		JavascriptExecutor jse=(JavascriptExecutor) getDriver();
-		Thread.sleep(2000);
-		jse.executeScript("arguments[0].click();", ViewButton);
+			JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+			Thread.sleep(2000);
+			jse.executeScript("arguments[0].click();", ViewButton);
 			Thread.sleep(4000);
 			test.log(LogStatus.PASS, "overView Successfully");
-			try {
-			CFOcountPOM.closeDocument().click();
+			try
+			{	Thread.sleep(2000);
+				CFOcountPOM.closeDocument().click();
 			
-			}catch(Exception e) {
+			}
+			catch(Exception e)
+			{
+				Thread.sleep(2000);
 				CFOcountPOM.closeDocument1().click();
 			}
 			Thread.sleep(3000);

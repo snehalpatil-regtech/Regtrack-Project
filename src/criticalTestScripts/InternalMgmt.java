@@ -66,7 +66,7 @@ public class InternalMgmt extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{	
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\CFOResultsInternal.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\CFOResultsInternal.html",true);
 		//extent = new ExtentReports(System.getProperty("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\//CFOResultsInternal.html.html")+"//CFOResultsInternal.html.html",true);
 		//extent.loadConfig(new File("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\extent-config.xml"));
 		test = extent.startTest("Loging In - CFO Finance (Internal)");
@@ -1571,7 +1571,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 23)
 	void RiskSummaryCriticalInternal() throws InterruptedException
 	{
 	
@@ -1645,11 +1645,11 @@ public class InternalMgmt extends BasePage {
 		{
 			CFOcountPOM.clickRiskCriticalDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
 			
-			CFOcountPOM.RiskGraphCount( test, "Critical - Due Today", RiskCritical_ClosedTimely, "Statutory");
+			CFOcountPOM.RiskGraphCount1( test, "Critical - Due Today", RiskCritical_DueToday, "Statutory");
 		}
 		else
 		{
-			test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_ClosedTimely);
+			test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_DueToday);
 		}
 		
 		
@@ -1671,7 +1671,7 @@ public class InternalMgmt extends BasePage {
 	}
 	
 	
-	@Test(priority = 24)
+	@Test(priority =23)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1735,6 +1735,21 @@ public class InternalMgmt extends BasePage {
 			test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+RiskHigh_ClosedTimely);
 		}
 		
+		
+		Thread.sleep(3000);
+		int RiskHigh_DueToday = Integer.parseInt(CFOcountPOM.clickRiskHighDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskHigh_DueToday > 0)
+		{
+			Thread.sleep(500);
+			CFOcountPOM.clickRiskHighDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount1( test, "High - Due Today", RiskHigh_DueToday, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'High - Due Today' Count = "+RiskHigh_DueToday);
+		}
+		
 		Thread.sleep(3000);
 		int RiskHigh_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskHighNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskHigh_NotApplicable > 0)
@@ -1752,7 +1767,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-   @Test(priority =25)
+   @Test(priority =24)
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1812,6 +1827,21 @@ public class InternalMgmt extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
 		}
 		
+		
+		Thread.sleep(3000);
+		int RiskMedium_DueToday = Integer.parseInt(CFOcountPOM.clickRiskMediumDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskMedium_DueToday > 0)
+		{
+			Thread.sleep(500);
+			CFOcountPOM.clickRiskMediumDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskMedium_DueToday, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
+		}
+		
 		Thread.sleep(3000);
 		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskMedium_NotApplicable > 0)
@@ -1829,7 +1859,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-@Test(priority = 26)
+@Test(priority = 25)
 	void RiskSummaryLowStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1888,6 +1918,21 @@ public class InternalMgmt extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'Low - Closed Timely' Count = "+RiskLow_ClosedTimely);
+		}
+		
+		
+		Thread.sleep(3000);
+		int RiskLow_DueToday = Integer.parseInt(CFOcountPOM.clickRiskLowDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskLow_DueToday > 0)
+		{
+			Thread.sleep(500);
+			CFOcountPOM.clickRiskLowDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskLow_DueToday, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskLow_DueToday);
 		}
 		
 		Thread.sleep(3000);
