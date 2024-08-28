@@ -738,7 +738,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-	@Test(priority = 0)
+	@Test(priority = 10)
 		void RiskSummaryCriticalStatutory() throws InterruptedException
 		{
 		
@@ -836,7 +836,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-		@Test(priority = 13)
+		@Test(priority = 11)
 		void RiskSummaryHighStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -904,7 +904,21 @@ public class ApprovalStatutory extends BasePage {
 				test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+RiskHigh_ClosedTimely);
 			}
 			
-		/*	Thread.sleep(3000);
+			Thread.sleep(3000);
+			int RiskHigh_DueToday = Integer.parseInt(CFOcountPOM.clickRiskHighDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskHigh_DueToday > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskHighDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				
+				CFOcountPOM.RiskGraphCount1( test, "High - Due Today", RiskHigh_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High - Due Today' Count = "+RiskHigh_DueToday);
+			}
+			
+			Thread.sleep(3000);
 			int RiskHigh_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskHighNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskHigh_NotApplicable > 0)
 			{
@@ -915,13 +929,13 @@ public class ApprovalStatutory extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'High - Not Applicable' Count = "+RiskHigh_NotApplicable);
-			}*/
+			}
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 14)
+		@Test(priority =12)
 		void RiskSummaryMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -988,7 +1002,21 @@ public class ApprovalStatutory extends BasePage {
 				test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
 			}
 			
-		/*	Thread.sleep(3000);
+			Thread.sleep(3000);
+			int RiskMedium_DueToday = Integer.parseInt(CFOcountPOM.clickRiskMediumDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskMedium_DueToday > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskMediumDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				
+				CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskMedium_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
+			}
+			
+			Thread.sleep(3000);
 			int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskMedium_NotApplicable > 0)
 			{
@@ -999,14 +1027,117 @@ public class ApprovalStatutory extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Medium - Not Applicable' Count = "+RiskMedium_NotApplicable);
-			}*/
+			}
 			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
+		@Test(priority = 13)
+		void RiskSummaryLowStatutory() throws InterruptedException
+		{		
+			test = extent.startTest("Risk Summary - 'Low' Count Verification");
+			
+			Thread.sleep(500);
+			Thread.sleep(3000);
+			CFOcountPOM.YearTodate().click();
+			Thread.sleep(1000);
+			CFOcountPOM.ALL().click();
+			Thread.sleep(1000);
+			CFOcountPOM.clickApply().click();
+			Thread.sleep(5000);
+			
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+			js.executeScript("window.scrollBy(0,1500)");
+			Thread.sleep(4000);
+			String NotCompleted = CFOcountPOM.clickRiskLowNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
+			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+			int RiskLow_NotCompleted = Integer.parseInt(NotCompleted);
 		
-		@Test(priority = 0)
+		//	int RiskLow_NotCompleted = Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_NotCompleted > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskLowNotCompleted().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				ApprovalcountPOM.RiskGraphCount1S( test, "Low - Not Completed", RiskLow_NotCompleted, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+RiskLow_NotCompleted);
+			}
+			
+			Thread.sleep(2000);
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+				
+			Thread.sleep(5000);
+			
+		/*	int RiskLow_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_ClosedDelayed > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskLowClosedDelayed().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				ApprovalcountPOM.RiskGraphCountS( test, "Low - Closed Delayed", RiskLow_ClosedDelayed, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+RiskLow_ClosedDelayed);
+			}
+			*/
+			Thread.sleep(3000);
+			int RiskLow_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskLowClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_ClosedTimely > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskLowClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				ApprovalcountPOM.RiskGraphCountS( test, "Low - Closed Timely", RiskLow_ClosedTimely, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Closed Timely' Count = "+RiskLow_ClosedTimely);
+			}
+			
+			Thread.sleep(3000);
+			int RiskLow_DueToday = Integer.parseInt(CFOcountPOM.clickRiskLowDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_DueToday > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskLowDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				
+				CFOcountPOM.RiskGraphCount1( test, "Low - Due Today", RiskLow_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Due Today' Count = "+RiskLow_DueToday);
+			}
+			
+			
+			Thread.sleep(3000);
+			int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_NotApplicable > 0)
+			{
+				CFOcountPOM.clickRiskLowNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				CFOcountPOM.RiskGraphCountNAC( test, "Low - Not Applicable", RiskLow_NotApplicable, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Not Applicable' Count = "+RiskLow_NotApplicable);
+			}
+			
+			
+			Thread.sleep(500);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(2000);
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		
+		@Test(priority = 15)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1107,7 +1238,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 0)
+		@Test(priority =16)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1211,7 +1342,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 0)
+	@Test(priority = 17)
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1310,7 +1441,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-@Test(priority = 0)
+@Test(priority = 18)
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1416,93 +1547,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-		@Test(priority = 15)
-		void RiskSummaryLowStatutory() throws InterruptedException
-		{		
-			test = extent.startTest("Risk Summary - 'Low' Count Verification");
-			
-			Thread.sleep(500);
-			Thread.sleep(3000);
-			CFOcountPOM.YearTodate().click();
-			Thread.sleep(1000);
-			CFOcountPOM.ALL().click();
-			Thread.sleep(1000);
-			CFOcountPOM.clickApply().click();
-			Thread.sleep(5000);
-			
-			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1500)");
-			Thread.sleep(4000);
-			String NotCompleted = CFOcountPOM.clickRiskLowNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
-			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
-			int RiskLow_NotCompleted = Integer.parseInt(NotCompleted);
-		
-		//	int RiskLow_NotCompleted = Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());	//Reading the High Risk value of Not Completed compliance
-			if(RiskLow_NotCompleted > 0)
-			{
-				Thread.sleep(500);
-				CFOcountPOM.clickRiskLowNotCompleted().click();			//Clicking on Not Completed compliances bar of High risk.  
-				Thread.sleep(2000);
-				ApprovalcountPOM.RiskGraphCount1S( test, "Low - Not Completed", RiskLow_NotCompleted, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+RiskLow_NotCompleted);
-			}
-			
-			Thread.sleep(2000);
-			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
-			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
-				
-			Thread.sleep(5000);
-			
-		/*	int RiskLow_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
-			if(RiskLow_ClosedDelayed > 0)
-			{
-				Thread.sleep(500);
-				CFOcountPOM.clickRiskLowClosedDelayed().click();			//Clicking on Not Completed compliances bar of High risk.  
-				Thread.sleep(2000);
-				ApprovalcountPOM.RiskGraphCountS( test, "Low - Closed Delayed", RiskLow_ClosedDelayed, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+RiskLow_ClosedDelayed);
-			}
-			*/
-			Thread.sleep(3000);
-			int RiskLow_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskLowClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
-			if(RiskLow_ClosedTimely > 0)
-			{
-				Thread.sleep(500);
-				CFOcountPOM.clickRiskLowClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
-				Thread.sleep(2000);
-				ApprovalcountPOM.RiskGraphCountS( test, "Low - Closed Timely", RiskLow_ClosedTimely, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Low - Closed Timely' Count = "+RiskLow_ClosedTimely);
-			}
-			
-			/*Thread.sleep(3000);
-			int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
-			if(RiskLow_NotApplicable > 0)
-			{
-				CFOcountPOM.clickRiskLowNotApplicable().click();			//Clicking on Not Completed compliances bar of High risk.  
-				Thread.sleep(2000);
-				CFOcountPOM.RiskGraphCountNAC( test, "Low - Not Applicable", RiskLow_NotApplicable, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Low - Not Applicable' Count = "+RiskLow_NotApplicable);
-			}
-			
-			*/
-			Thread.sleep(500);
-			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-			Thread.sleep(2000);
-			extent.endTest(test);
-			extent.flush();
-		}
+	
 		
 		@Test(priority = 17)
 		void DepartmentSummaryAccountStatutory() throws InterruptedException

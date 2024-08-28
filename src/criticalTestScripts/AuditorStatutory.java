@@ -1443,7 +1443,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 16)
 	void RiskSummaryHighStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
