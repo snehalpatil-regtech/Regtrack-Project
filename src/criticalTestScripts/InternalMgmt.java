@@ -1928,11 +1928,11 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(500);
 			CFOcountPOM.clickRiskLowDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
 			
-			CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskLow_DueToday, "Statutory");
+			CFOcountPOM.RiskGraphCount1( test, "Low - Due Today", RiskLow_DueToday, "Statutory");
 		}
 		else
 		{
-			test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskLow_DueToday);
+			test.log(LogStatus.PASS, "'Low - Due Today' Count = "+RiskLow_DueToday);
 		}
 		
 		Thread.sleep(3000);
