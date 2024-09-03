@@ -1878,7 +1878,7 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(8000);
 		
 		elementsList = ReviewerPOM.clickOverView();
-		elementsList.get(2).click();
+		elementsList.get(1).click();
 		Thread.sleep(3000);
 		ReviewerPOM.CloseOverview().click();
 		Thread.sleep(3000);
@@ -1942,7 +1942,7 @@ public class ReMethodsPOM extends BasePage
 		
 		Thread.sleep(8000);
 		elementsList = ReviewerPOM.clickOverView();
-		elementsList.get(0).click();
+		elementsList.get(1).click();
 		Thread.sleep(2000);
 		ReviewerPOM.CloseOverview().click();
 		Thread.sleep(3000);

@@ -111,7 +111,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 	}
 	
-//	@Test(priority = 1)
+	//@Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -122,7 +122,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 2)
+	//@Test(priority = 2)
 	void CompliancesCountMatch() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -285,7 +285,7 @@ public class StatutoryMGMT extends BasePage {
 		
 	}
 	
-//	@Test(priority = 5)
+//@Test(priority = 5)
 		void NotCompleted_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -771,7 +771,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 10)
+	@Test(priority = 10)
 		void dueToday_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -871,7 +871,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 11)
+	@Test(priority = 11)
 		void pendingForReview_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -973,7 +973,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 		
-//    @Test(priority = 12)
+    @Test(priority = 12)
 		void inProgress_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1073,7 +1073,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-//@Test(priority = 13)
+@Test(priority = 13)
 		void rejected_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1173,7 +1173,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 14)
+@Test(priority = 14)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1274,7 +1274,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 23)
+@Test(priority = 23)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1377,8 +1377,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-		
-	@Test(priority = 24)
+@Test(priority = 24)
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -2098,6 +2097,41 @@ public class StatutoryMGMT extends BasePage {
 				test.log(LogStatus.PASS, "Pending For Review Complaince Count = "+ Pending_Review + ".");
 			}
 			
+			
+			
+			Thread.sleep(3000);
+			
+			String FinaInprogress = CFOcountPOM.clickFinanceInProgressInternal().getText();			//Reading the Overdue value of Human Resource
+			FinaInprogress = FinaInprogress.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Fina_InProgress = Integer.parseInt(FinaInprogress);						
+			if(Fina_InProgress > 0)
+			{
+				CFOcountPOM.clickFinanceInProgressInternal().click();
+				CFOcountPOM.RiskGraphCount( test, "Admin -In Progress", Fina_InProgress, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Admin - In Progress ' Complaince Count = "+ Fina_InProgress + ".");
+			}
+			
+					Thread.sleep(3000);
+			String FinaRejected = CFOcountPOM.clickFinanceRejectedInternal().getText();			//Reading the Overdue value of Human Resource
+			FinaRejected = FinaRejected.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Fina_Rejected= Integer.parseInt(FinaRejected);						
+			if(Fina_Rejected > 0)
+			{
+				CFOcountPOM.clickFinanceRejectedInternal().click();
+				CFOcountPOM.RiskGraphCount( test, "Admin -Rejected", Fina_Rejected, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Admin - Rejected' Complaince Count = "+ Fina_Rejected + ".");
+			}
+			
+			
+			
+			
+			
 			//-----------------------------------------------------
 			
 				try
@@ -2133,6 +2167,7 @@ public class StatutoryMGMT extends BasePage {
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
+			test.log(LogStatus.INFO, "Select Start date 01-04-2021");
 			Thread.sleep(3000);
 			CFOcountPOM.RefreshNow().click();
 			Thread.sleep(1000);
@@ -3474,7 +3509,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 67)
+		@Test(priority = 1)
 		void StandardReportCriticalRisk() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report - Critical Risk Summary Report Verification");
@@ -3486,7 +3521,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 68)
+		@Test(priority = 2)
 		void StandardReportOverallIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Overall Summary Report Verification");
@@ -3498,7 +3533,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	     @Test(priority = 69)
+	     @Test(priority = 3)
 		void StandardReportLocationIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Location Summary Report Verification");
@@ -3510,7 +3545,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 70)
+		@Test(priority = 4)
 		void StandardReportUserIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -User Summary Report Verification");
@@ -3522,7 +3557,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 71)
+		@Test(priority = 5)
 		void StandardReportCategoryIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Category Summary Report Verification");
@@ -3534,7 +3569,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 72)
+		@Test(priority = 6)
 		void StandardReportRiskIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal-Risk Summary Report Verification");
@@ -3546,7 +3581,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 73)
+		@Test(priority = 7)
 		void StandardReportDetailedIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal-Detailed Summary Report  Verification");
@@ -3558,7 +3593,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 74)
+		@Test(priority = 8)
 		void StandardReportCriticalRiskIN() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Standard Report Internal -Critical Risk Summary Report  Verification");
@@ -3570,7 +3605,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 			
-			@Test(priority = 75)
+			@Test(priority = 9)
 			void ComplianceDocuments() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Compliance Documents  verification");

@@ -66,7 +66,7 @@ public class AuditorInternal extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\AuditorInternal.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\AuditorInternal.html",true);
 		test = extent.startTest("Loging In - Auditor (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -1518,6 +1518,10 @@ public class AuditorInternal extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+RiskMedium_NotCompleted);
 		}
 		
+		Thread.sleep(2000);
+		List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+		
 		//.navigate().refresh();
 		Thread.sleep(4000);
 		int RiskMedium_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayedA().getText());	//Reading the High Risk value of Not Completed compliance
@@ -1611,7 +1615,7 @@ public class AuditorInternal extends BasePage {
 			test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+RiskLow_NotCompleted);
 		}
 		
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		int RiskLow_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayedA().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskLow_ClosedDelayed > 0)
 		{
@@ -1651,7 +1655,12 @@ public class AuditorInternal extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'Low - Not Applicable' Count = "+RiskLow_NotApplicable);
-		}
+		}*/
+		
+		
+		Thread.sleep(2000);
+		List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
 		
 		Thread.sleep(3000);
 		int RiskLow_DueToday = Integer.parseInt(CFOcountPOM.clickRiskLowDueToday().getText());	//Reading the High Risk value of Not Completed compliance

@@ -70,7 +70,7 @@ public class Performer extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\PerformerResults.html",true);
 		test = extent.startTest("Loging In - Performer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -335,7 +335,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 0) //pass
+		@Test(priority = 19) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");

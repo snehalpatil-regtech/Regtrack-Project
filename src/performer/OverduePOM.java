@@ -641,12 +641,12 @@ public class OverduePOM extends BasePage
 	}
 	public static WebElement selectDate4( )					//Method to click on date at second row and fourth column
 	{
-		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[6]/a"));
+		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[1]/a"));
 		return selectDate;
 	}
 	public static WebElement selectDate2( )					//Method to click on date at second row and fifth column
 	{
-		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[3]/td[3]/a"));
+		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[7]/a"));
 		return selectDate;
 	}
 	

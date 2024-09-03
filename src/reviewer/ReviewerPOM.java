@@ -317,7 +317,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static List<WebElement> clickOverView()	//Searching all 'Work File Timeline' text boxes
 	{
-		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[26]/a[2]"));
+		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[26]/a"));
 		return elementsList;
 	}
 	
@@ -403,7 +403,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement CloseOverview1()
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@class='k-button k-bare k-button-icon k-window-action']"));
+		statutoryAction = getDriver().findElement(By.xpath("/html/body/div[15]/div[1]/div/a"));
 		return statutoryAction;
 	}
 	

@@ -3,40 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.ApprovalStatutory">
+      <class name="criticalTestScripts.Performer">
         <methods>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="ClosedDelayed_PieChart"/>
-          <include name="ClosedTimely_PieChart"/>
-          <include name="NotCompleted_PieChart"/>
-          <include name="NotCompleted_PieChartPeriod"/>
-          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="DashboardRejectStatutory"/>
+          <include name="ActivatedEventsPer"/>
           <include name="Closing"/>
-          <include name="browserClosing"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
           <include name="Login"/>
-          <include name="BargraphIndustrySpeHighStatutory"/>
-          <include name="BargraphIndustrySpeMediumStatutory"/>
-          <include name="RiskSummaryLowStatutory"/>
           <include name="setBrowser"/>
-          <include name="NotApplicable_PieChart"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="BargraphIndustrySpeLowStatutory"/>
-          <include name="Overdue_PieChartPeriod"/>
-          <include name="inProgress_PieChartPeriod"/>
-          <include name="pendingForReview_PieChart"/>
-          <include name="Overdue_PieChart"/>
-          <include name="inProgress_PieChart"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="rejected_PieChart"/>
-          <include name="Upcoming_PieChartPeriod"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="pendingForReview_PieChartPeriod"/>
-          <include name="dueToday_PieChart"/>
+          <include name="browserClosing"/>
+          <include name="ComplianceSatCalender"/>
+          <include name="StatutoryOverdueCri"/>
         </methods>
-      </class> <!-- criticalTestScripts.ApprovalStatutory -->
+      </class> <!-- criticalTestScripts.Performer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

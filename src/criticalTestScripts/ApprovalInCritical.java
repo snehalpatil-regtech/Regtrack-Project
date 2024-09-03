@@ -65,7 +65,7 @@ public class ApprovalInCritical extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Approver(Internal).html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver(Internal).html",true);
 		test = extent.startTest("Loging In - Approval (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -1485,7 +1485,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 19)
 	void BargraphBSELowStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
@@ -1583,7 +1583,7 @@ public class ApprovalInCritical extends BasePage {
 	
 	
 	
-	@Test(priority = 16)
+	@Test(priority = 20)
 	void RiskSummaryCriticalInternal() throws InterruptedException
 	{
 	
@@ -1645,12 +1645,25 @@ public class ApprovalInCritical extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Closed Timely' Count = "+RiskCritical_ClosedTimely);
 		}
+		
+		Thread.sleep(3000);
+		int RiskCritical_DueToday = Integer.parseInt(CFOcountPOM.clickRiskCriticalDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskCritical_DueToday > 0)
+		{
+			CFOcountPOM.clickRiskCriticalDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount1( test, "Critical - Due Today", RiskCritical_DueToday, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_DueToday);
+		}
 		extent.endTest(test);
 		extent.flush();
 	}
 	
 	
-	@Test(priority = 17)
+	@Test(priority = 21)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1682,7 +1695,8 @@ public class ApprovalInCritical extends BasePage {
 			test.log(LogStatus.PASS, "'High - Not Completed' Count = "+RiskHigh_NotCompleted);
 		}
 			
-		List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+		Thread.sleep(2000);
+		List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
 		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
 			
 		Thread.sleep(5000);
@@ -1713,11 +1727,25 @@ public class ApprovalInCritical extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+RiskHigh_ClosedTimely);
 		}
+		
+		Thread.sleep(3000);
+		int RiskHigh_DueToday = Integer.parseInt(CFOcountPOM.clickRiskHighDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+		if(RiskHigh_DueToday > 0)
+		{
+			Thread.sleep(500);
+			CFOcountPOM.clickRiskHighDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+			
+			CFOcountPOM.RiskGraphCount1( test, "High - Due Today", RiskHigh_DueToday, "Statutory");
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'High - Due Today' Count = "+RiskHigh_DueToday);
+		}
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-  @Test(priority = 18)
+  @Test(priority = 22)
 		void RiskSummaryMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1743,6 +1771,24 @@ public class ApprovalInCritical extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+RiskMedium_NotCompleted);
+			}
+			
+			Thread.sleep(2000);
+			List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+			
+			Thread.sleep(3000);
+			int RiskMedium_DueToday = Integer.parseInt(CFOcountPOM.clickRiskMediumDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskMedium_DueToday > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskMediumDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				
+				CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskMedium_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
 			}
 			
 		/*	List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
@@ -1780,7 +1826,7 @@ public class ApprovalInCritical extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 19)
+		@Test(priority = 23)
 		void RiskSummaryLowStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1807,6 +1853,25 @@ public class ApprovalInCritical extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+RiskLow_NotCompleted);
+			}
+			
+			
+			Thread.sleep(2000);
+			List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+			
+			Thread.sleep(3000);
+			int RiskLow_DueToday = Integer.parseInt(CFOcountPOM.clickRiskLowDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+			if(RiskLow_DueToday > 0)
+			{
+				Thread.sleep(500);
+				CFOcountPOM.clickRiskLowDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+				
+				CFOcountPOM.RiskGraphCount1( test, "Low - Due Today", RiskLow_DueToday, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low - Due Today' Count = "+RiskLow_DueToday);
 			}
 			Thread.sleep(2000);
 		/*	List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
