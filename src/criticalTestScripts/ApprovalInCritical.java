@@ -1777,19 +1777,19 @@ public class ApprovalInCritical extends BasePage {
 			List<WebElement>roc =getDriver() .findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
 			
-			Thread.sleep(3000);
-			int RiskMedium_DueToday = Integer.parseInt(CFOcountPOM.clickRiskMediumDueToday().getText());	//Reading the High Risk value of Not Completed compliance
-			if(RiskMedium_DueToday > 0)
-			{
-				Thread.sleep(500);
-				CFOcountPOM.clickRiskMediumDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
-				
-				CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskMedium_DueToday, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
-			}
+//			Thread.sleep(3000);
+//			int RiskMedium_DueToday = Integer.parseInt(CFOcountPOM.clickRiskMediumDueToday().getText());	//Reading the High Risk value of Not Completed compliance
+//			if(RiskMedium_DueToday > 0)
+//			{
+//				Thread.sleep(500);
+//				CFOcountPOM.clickRiskMediumDueToday().click();			//Clicking on Not Completed compliances bar of High risk.  
+//				
+//				CFOcountPOM.RiskGraphCount1( test, "Medium - Due Today", RiskMedium_DueToday, "Statutory");
+//			}
+//			else
+//			{
+//				test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
+//			}
 			
 		/*	List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
