@@ -587,7 +587,7 @@ Thread.sleep(5000);
 	
 	public static void RiskGraphCount( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (70));
+		WebDriverWait wait = new WebDriverWait(getDriver(), (90));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -631,7 +631,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			Thread.sleep(3000);
 			
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
+		js.executeScript("window.scrollBy(0,1000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
 		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
 		String s1 = CFOcountPOM.readTotalItemsD().getText();		//Reading total number of items.
@@ -1925,9 +1925,10 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	
 	public static void GraphCountSatPe( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))

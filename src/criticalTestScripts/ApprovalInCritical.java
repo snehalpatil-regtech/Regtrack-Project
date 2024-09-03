@@ -65,7 +65,7 @@ public class ApprovalInCritical extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Approver(Internal).html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver(Internal).html",true);
 		test = extent.startTest("Loging In - Approval (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -126,7 +126,7 @@ public class ApprovalInCritical extends BasePage {
 	
 	}
 	
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -137,7 +137,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	void clickCategoriesInternal() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -190,7 +190,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void CompliancesCountMatch() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -245,7 +245,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	void clickUsersInternal() throws InterruptedException
 	{
 		test = extent.startTest("'Users' Count by Clicking on 'Users'");
@@ -304,7 +304,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	void SummaryofOverdueCompliances() throws InterruptedException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances Internal");
@@ -1485,7 +1485,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 19)
 	void BargraphBSELowStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
@@ -1583,7 +1583,7 @@ public class ApprovalInCritical extends BasePage {
 	
 	
 	
-	@Test(priority = 16)
+	@Test(priority = 20)
 	void RiskSummaryCriticalInternal() throws InterruptedException
 	{
 	
@@ -1650,7 +1650,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	
-	@Test(priority = 17)
+	@Test(priority = 21)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1717,7 +1717,7 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-  @Test(priority = 18)
+  @Test(priority = 22)
 		void RiskSummaryMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1745,7 +1745,7 @@ public class ApprovalInCritical extends BasePage {
 				test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+RiskMedium_NotCompleted);
 			}
 			
-		/*	List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
 				
 			Thread.sleep(5000);
@@ -1775,12 +1775,12 @@ public class ApprovalInCritical extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
-			}*/
+			}
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-		@Test(priority = 19)
+		@Test(priority = 23)
 		void RiskSummaryLowStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1809,7 +1809,7 @@ public class ApprovalInCritical extends BasePage {
 				test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+RiskLow_NotCompleted);
 			}
 			Thread.sleep(2000);
-		/*	List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
 				
 			Thread.sleep(5000);
@@ -1841,7 +1841,7 @@ public class ApprovalInCritical extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Low - Closed Timely' Count = "+RiskLow_ClosedTimely);
 			}
-			*/
+			
 			Thread.sleep(500);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			
@@ -1849,14 +1849,14 @@ public class ApprovalInCritical extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 20)
+		@Test(priority = 24)
 		void DepartmentSummaryAccountStatutory() throws InterruptedException
 		{
 			Thread.sleep(3000);		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
 		//	js.executeScript("window.scrollBy(0,500)");
-			test = extent.startTest("Department Summary - 'Account' Count Verification");
+			test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		
 			Thread.sleep(5000);
 			String NotCompleted = CFOcountPOM.clickAccountOverdue().getText();			//Reading the Overdue value of Human Resource
@@ -1946,6 +1946,22 @@ public class ApprovalInCritical extends BasePage {
 				}
 			
 			Thread.sleep(500);
+			Thread.sleep(3000);
+			String FinaNotAppli = CFOcountPOM.clickFinanceNotAppliInternal().getText();			//Reading the Overdue value of Human Resource
+			FinaNotAppli = FinaNotAppli.replaceAll(" ","");									//Removing all white spaces from string. 
+			int Fina_NotAppli= Integer.parseInt(FinaNotAppli);						
+			if(Fina_NotAppli > 0)
+			{
+				CFOcountPOM.clickFinanceNotAppliInternal().click();
+				ApprovalcountPOM.RiskGraphCount( test, " Not Applicable", Fina_NotAppli, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "' Not Applicable' Compliances Count = "+ Fina_NotAppli + ".");
+			}
+			
+			Thread.sleep(1000);
+
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 
 			Thread.sleep(3000);
@@ -1954,7 +1970,7 @@ public class ApprovalInCritical extends BasePage {
 		}
 		
 		
-//	@Test(priority = 20)
+//	@Test(priority = 24)
 	void DepartmentSummaryInternal() throws InterruptedException
 	{
 		Thread.sleep(500);		

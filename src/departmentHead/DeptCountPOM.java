@@ -419,7 +419,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static void GraphCount( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
@@ -840,7 +840,7 @@ public class DeptCountPOM extends BasePage {
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			Thread.sleep(8000);
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 				Thread.sleep(8000);
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(7000);
@@ -1256,7 +1256,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);

@@ -3,91 +3,47 @@
 <suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="criticalTestScripts.StatutoryMGMT">
+      <class name="criticalTestScripts.AuditorInternal">
         <methods>
-          <include name="StandardReportUserIn"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="StandardReportCriticalRisk"/>
-          <include name="pendingForReview_PieChartPeriod"/>
-          <include name="Upcoming_PieChartPeriod"/>
-          <include name="StandardReportRiskIN"/>
-          <include name="ComplianceDocuments"/>
-          <include name="DepartmentSummaryHumanResourceStatutory"/>
-          <include name="StandardReportOverallIN"/>
-          <include name="StandardReportLocation"/>
-          <include name="StandardReportDetailed"/>
-          <include name="Login"/>
-          <include name="inProgress_PieChartPeriod"/>
-          <include name="Overdue_PieChartPeriod"/>
           <include name="browserClosing"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="StandardReportLocationIN"/>
-          <include name="dueToday_PieChartPeriod"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="StandardReportCategoryIn"/>
-          <include name="StandardReportCategory"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="StandardReportUser"/>
-          <include name="StandardReportRisk"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="setBrowser"/>
-          <include name="StandardReportOverall"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
-          <include name="DetailedReport"/>
-          <include name="complianceCalendar"/>
-          <include name="StandardReportDetailedIN"/>
-          <include name="StandardReportCriticalRiskIN"/>
-          <include name="AssignmentReport"/>
-          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="Login"/>
           <include name="Closing"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="rejected_PieChartPeriod"/>
+          <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
         </methods>
-      </class> <!-- criticalTestScripts.StatutoryMGMT -->
-      <class name="criticalTestScripts.InternalMgmt">
+      </class> <!-- criticalTestScripts.AuditorInternal -->
+      <class name="criticalTestScripts.ApprovalStatutory">
         <methods>
-          <include name="ComplianceDocumentsIN"/>
-          <include name="Upcoming_PieChartPeriod"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="ClickCompliancesInternal"/>
-          <include name="clickUsersInternal"/>
-          <include name="clickCategoriesInternal"/>
-          <include name="Closing"/>
-          <include name="dueToday_PieChartPeriod"/>
-          <include name="BargraphBSEMediumStatutory"/>
-          <include name="Overdue_PieChartInternalPeriod"/>
-          <include name="Login"/>
-          <include name="Rejected_PieChartInternal"/>
-          <include name="NotApplicable_PieChartIN"/>
-          <include name="RiskSummaryHighInternal"/>
-          <include name="dueToday_PieChartInternal"/>
-          <include name="Overdue_PieChartInternal"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="Rejected_PieChartInternalPeriod"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="SummaryofOverdueCompliances"/>
-          <include name="NotCompleted_PieChart"/>
-          <include name="DepartmentSummaryInternal"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="setBrowser"/>
-          <include name="browserClosing"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
-          <include name="PFR_PieChartInternalPeriod"/>
-          <include name="BargraphBSEHighStatutory"/>
-          <include name="inProgress_PieChartInternal"/>
-          <include name="BargraphBSECriticalStatutory"/>
-          <include name="InProgress_PieChartInternalPeriod"/>
-          <include name="BargraphBSELowStatutory"/>
-          <include name="NotCompleted_PieChartPeriod"/>
-          <include name="DetailedReportIn"/>
-          <include name="AssignmentReport"/>
-          <include name="LocationCount"/>
+          <include name="rejected_PieChartPeriod"/>
           <include name="ClosedDelayed_PieChart"/>
           <include name="ClosedTimely_PieChart"/>
-          <include name="PFR_PieChartInternal"/>
-          <include name="RiskSummaryCriticalInternal"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="Closing"/>
+          <include name="browserClosing"/>
+          <include name="Login"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="setBrowser"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="inProgress_PieChart"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="rejected_PieChart"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="pendingForReview_PieChartPeriod"/>
         </methods>
-      </class> <!-- criticalTestScripts.InternalMgmt -->
+      </class> <!-- criticalTestScripts.ApprovalStatutory -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
