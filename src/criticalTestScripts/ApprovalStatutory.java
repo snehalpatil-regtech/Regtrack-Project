@@ -68,6 +68,7 @@ public class ApprovalStatutory extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver.html",true);
+
 		test = extent.startTest("Loging In - Approval (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		

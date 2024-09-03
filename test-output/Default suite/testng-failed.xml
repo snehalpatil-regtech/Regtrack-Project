@@ -3,8 +3,9 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.ApprovalStatutory">
+      <class name="criticalTestScripts.ApprovalInCritical">
         <methods>
+<<<<<<< Updated upstream
           <include name="rejected_PieChartPeriod"/>
           <include name="ClosedTimely_PieChartPeriod"/>
           <include name="RiskSummaryHighStatutory"/>
@@ -24,8 +25,43 @@
           <include name="Upcoming_PieChartPeriod"/>
           <include name="NotApplicable_PieChartPeriod"/>
           <include name="pendingForReview_PieChartPeriod"/>
+=======
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="Overdue_PieChartInternal"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="dueToday_PieChartInternal"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="RiskSummaryHighInternal"/>
+          <include name="Rejected_PieChartInternalPeriod"/>
+          <include name="ComplianceDocuments"/>
+          <include name="Login"/>
+          <include name="Rejected_PieChartInternal"/>
+          <include name="Overdue_PieChartInternalPeriod"/>
+          <include name="BargraphBSEMediumStatutory"/>
+          <include name="browserClosing"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="setBrowser"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="complianceCalendar"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="RiskSummaryCriticalInternal"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="NotApplicable_PieChartInternal"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="InProgress_PieChartInternalPeriod"/>
+          <include name="DetailedReportIn"/>
+          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="PFR_PieChartInternal"/>
+          <include name="Closing"/>
+          <include name="BargraphBSECriticalStatutory"/>
+          <include name="BargraphBSEHighStatutory"/>
+          <include name="inProgress_PieChartInternal"/>
+          <include name="PFR_PieChartInternalPeriod"/>
+>>>>>>> Stashed changes
         </methods>
-      </class> <!-- criticalTestScripts.ApprovalStatutory -->
+      </class> <!-- criticalTestScripts.ApprovalInCritical -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -66,7 +66,9 @@ public class AuditorInternal extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
+
 		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\AuditorInternal.html",true);
+
 		test = extent.startTest("Loging In - Auditor (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		

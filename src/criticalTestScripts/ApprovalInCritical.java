@@ -65,7 +65,9 @@ public class ApprovalInCritical extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 	
+
 		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver(Internal).html",true);
+
 		test = extent.startTest("Loging In - Approval (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		

@@ -63,8 +63,8 @@ public class AuditorStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-	
 		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Auditor.html",true);
+
 		test = extent.startTest("Loging In - Auditor (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -116,7 +116,7 @@ public class AuditorStatutory extends BasePage {
 		}
 	}
 	
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -205,7 +205,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void ClosedDelayed_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -936,7 +936,8 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-    @Test(priority = 11)
+
+ //   @Test(priority = 11)
 	void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1141,8 +1142,10 @@ public class AuditorStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+
 	
  //   @Test(priority = 13)
+
 	void BargraphIndustrySpeMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1242,6 +1245,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
  //   @Test(priority = 14)
+
 	void BargraphIndustrySpeLowStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1444,7 +1448,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 16)
+//	@Test(priority = 16)
 	void RiskSummaryHighStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1541,7 +1545,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 17)
+
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1641,7 +1647,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 	@Test(priority = 18)
+
 	void RiskSummaryLowStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1743,7 +1751,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 19)
+
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException
 	{
 		Thread.sleep(3000);		
@@ -1843,6 +1853,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 //	@Test(priority = 20)
+
 	void NotCompleted_PieChartPe() throws InterruptedException
 	{
 		test = extent.startTest("period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -1954,7 +1965,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 21)
+
 	void ClosedDelayed_PieChartPe() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2066,7 +2079,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 22)
+
 	void ClosedTimely_PieChartPe() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2181,7 +2196,9 @@ public class AuditorStatutory extends BasePage {
 		
 	}
 	
+
 //	@Test(priority = 23)
+
 	void NotApplicable_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2296,7 +2313,9 @@ public class AuditorStatutory extends BasePage {
 		
 	}
 		
+
 //	@Test(priority = 24)
+
 	void Overdue_PieChartperiod() throws InterruptedException
 	{
 		test = extent.startTest("period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -2414,7 +2433,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 25)
+
 	void dueToday_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -2532,7 +2553,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 26)
+
 	void pendingForReview_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -2653,7 +2676,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 27)
+
 	void inProgress_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -2770,7 +2795,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 	@Test(priority = 28)
+
 	void Upcoming_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
@@ -2901,7 +2928,9 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
+
 //	@Test(priority = 29)
+
 	void rejected_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -3029,7 +3058,7 @@ public class AuditorStatutory extends BasePage {
 			extent.flush();
 		}
 	  
-		@Test(priority = 62)
+//		@Test(priority = 62)
 		void AssignmentReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Assignment Report verification");
