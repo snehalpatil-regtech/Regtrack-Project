@@ -788,15 +788,16 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 	
 	public static void GraphCount( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		}
 		else if(risk.equalsIgnoreCase("Medium"))
 		{
@@ -1036,13 +1037,15 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 	
 	public static void GraphCount1Sta( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Medium"))
@@ -1053,7 +1056,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 		{
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
-		
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
@@ -1114,7 +1117,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -1455,26 +1458,56 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 		
 		Thread.sleep(4000);
 		
+		Thread.sleep(4000);
+		 CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(3000);
+			
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(4000);
+			// retrieving "foo-button" HTML element
+			WebElement ViewButton = getDriver().findElement(locator);	
+			Thread.sleep(4000);
+		JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+		Thread.sleep(2000);
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "overView Successfully");
+			try {
+			CFOcountPOM.closeDocument().click();
+			Thread.sleep(3000);
+			}catch(Exception e) {
+				CFOcountPOM.closeDocument1().click();
+				Thread.sleep(3000);
+			}
+	
+		Thread.sleep(1000);
+	
+	
 		getDriver().switchTo().parentFrame();
 		CFOcountPOM.closeCategories().click();					//Closing the Not Completed compliance window.
-		
+		Thread.sleep(1000);
 		
 		}else {
 			int count=0;
-			Thread.sleep(1000);
+			
+			Thread.sleep(3000);
 			js.executeScript("window.scrollBy(300,0)");	
 			Thread.sleep(1000);
 			getDriver().switchTo().parentFrame();
 			CFOcountPOM.closeCategories().click();
 			Thread.sleep(1000);
 			if(count==ComplianceCount) {
-				test.log(LogStatus.PASS, "'"+ComplianceType+"'  compliance count matches to numbers of items from grid.= 0");
-				
-				}
-				else {
-					test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count = "+ ComplianceCount + " | Total no of items from grid = "+ count);
-				}
+			test.log(LogStatus.PASS, "'"+ComplianceType+"'  compliance count matches to numbers of items from grid.= 0");
 			
+			}
+			else {
+				test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count = "+ ComplianceCount + " | Total no of items from grid = "+ count);
+			}
+				
 			
 		}
 	}
@@ -1637,7 +1670,7 @@ Thread.sleep(5000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[21]/a[1]");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -1740,6 +1773,35 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[21]/a[1]");
 		Thread.sleep(4000);
 		
 	
+		Thread.sleep(4000);
+		 CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(3000);
+			
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(4000);
+			// retrieving "foo-button" HTML element
+			WebElement ViewButton = getDriver().findElement(locator);	
+			Thread.sleep(4000);
+		JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+		Thread.sleep(2000);
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "overView Successfully");
+			try {
+			CFOcountPOM.closeDocument().click();
+			Thread.sleep(3000);
+			}catch(Exception e) {
+				CFOcountPOM.closeDocument1().click();
+				Thread.sleep(3000);
+			}
+	
+		Thread.sleep(1000);
+	
+	
 		getDriver().switchTo().parentFrame();
 		CFOcountPOM.closeCategories().click();					//Closing the Not Completed compliance window.
 		Thread.sleep(1000);
@@ -1760,6 +1822,11 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[21]/a[1]");
 			else {
 				test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count = "+ ComplianceCount + " | Total no of items from grid = "+ count);
 			}
+			
+		
+			getDriver().switchTo().parentFrame();
+			CFOcountPOM.closeCategories().click();					//Closing the Not Completed compliance window.
+			Thread.sleep(1000);			
 			
 		}
 	}

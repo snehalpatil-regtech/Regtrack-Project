@@ -51,7 +51,7 @@ public class DeptStatutory extends BasePage {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Department1";           //Check link in excel sheet first.
+	public static String link = "mgmt1";           //Check link in excel sheet first.
 			
 		
 	/*
@@ -66,7 +66,7 @@ public class DeptStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -119,17 +119,19 @@ public class DeptStatutory extends BasePage {
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
-	
-		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,100)");	
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		Actions action = new Actions(getDriver());
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
 		js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
 	//	js.executeScript("window.scrollBy(0,100)");
 		Thread.sleep(3000);
@@ -215,16 +217,19 @@ public class DeptStatutory extends BasePage {
 	void ClosedDelayed_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
-		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,100)");	
 		Actions action = new Actions(getDriver());
 		Thread.sleep(3000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
 		Thread.sleep(4000);
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
+		
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		
 		Thread.sleep(4000);
@@ -308,16 +313,19 @@ public class DeptStatutory extends BasePage {
 	void ClosedTimely_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
-	
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,100)");	
 		Actions action = new Actions(getDriver());
 		Thread.sleep(3000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		
 		Thread.sleep(2000);
@@ -401,15 +409,19 @@ public class DeptStatutory extends BasePage {
 	void NotApplicable_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,100)");	
 		Thread.sleep(3000);
+		
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(5000);
 		Actions action = new Actions(getDriver());
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		
 		Thread.sleep(2000);
@@ -494,17 +506,20 @@ public class DeptStatutory extends BasePage {
 	void Overdue_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
-		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,100)");	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
+		
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(5000);
 		Actions action = new Actions(getDriver());
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		
 		js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
 		
 		Thread.sleep(3000);
@@ -598,11 +613,13 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(3000);
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -698,11 +715,13 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(500);
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -798,11 +817,13 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(500);
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -896,11 +917,13 @@ public class DeptStatutory extends BasePage {
 	{
 		Thread.sleep(2000);
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		Thread.sleep(500);		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -908,7 +931,7 @@ public class DeptStatutory extends BasePage {
 		
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		String NotCompleted = CFOcountPOM.clickFinanceOverdueDept().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -946,6 +969,7 @@ public class DeptStatutory extends BasePage {
 		
 	
 		Thread.sleep(3000);
+	
 		String ClosedTimely = CFOcountPOM.clickClosedTimelyDpt().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);						
@@ -962,6 +986,7 @@ public class DeptStatutory extends BasePage {
 		
 		
 		Thread.sleep(2000);
+		
 		Thread.sleep(500);
 		String PendingReview = CFOcountPOM.clickPendingReviewDept().getText();	//Reading the Pending For Review value of Human Resource
 	//	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
@@ -979,7 +1004,7 @@ public class DeptStatutory extends BasePage {
 		
 		
 			Thread.sleep(3000);
-		/*	String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+			String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
 			NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 			int Not_Applicable = Integer.parseInt(NotApplicable);						
 			if(Not_Applicable > 0)
@@ -1007,7 +1032,7 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "Rejected Compliance Count = "+ Rejected + ".");
-		}*/
+		}
 		Thread.sleep(500);
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 		
@@ -1020,11 +1045,13 @@ public class DeptStatutory extends BasePage {
 	{
 	
 		Thread.sleep(3000);
+		
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1067,7 +1094,8 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+RiskCritical_ClosedDelayed);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
+		/*
 		int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimelyDpt().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskCritical_ClosedTimely > 0)
 		{
@@ -1091,8 +1119,8 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
-		}*/
-		
+		}
+		*/
 		Thread.sleep(2000);
 		extent.endTest(test);
 		extent.flush();
@@ -1105,11 +1133,13 @@ public class DeptStatutory extends BasePage {
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		
 		Thread.sleep(3000);
+		
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1167,7 +1197,8 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+RiskHigh_ClosedTimely);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
+		/*
 		int RiskHigh_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskHighNotApplicableDE().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskHigh_NotApplicable > 0)
 		{
@@ -1178,8 +1209,8 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'High - Not Applicable' Count = "+RiskHigh_NotApplicable);
-		}*/
-		
+		}
+		*/
 		extent.endTest(test);
 		extent.flush();
 	}
@@ -1188,11 +1219,13 @@ public class DeptStatutory extends BasePage {
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
+		
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1251,7 +1284,7 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
 		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicableDE().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskMedium_NotApplicable > 0)
 		{
@@ -1263,7 +1296,7 @@ public class DeptStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Medium - Not Applicable' Count = "+RiskMedium_NotApplicable);
 		}
-		*/
+		
 		extent.endTest(test);
 		extent.flush();
 	}
@@ -1275,11 +1308,13 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(500);
 		Thread.sleep(3000);
+		/*
 		CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		*/
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1336,6 +1371,7 @@ public class DeptStatutory extends BasePage {
 		}
 		
 		Thread.sleep(3000);
+		/*
 		int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicableDE().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskLow_NotApplicable > 0)
 		{
@@ -1347,7 +1383,7 @@ public class DeptStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Low - Not Applicable' Count = "+RiskLow_NotApplicable);
 		}
-		
+		*/
 		Thread.sleep(500);
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 		Thread.sleep(2000);

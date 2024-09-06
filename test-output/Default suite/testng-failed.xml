@@ -3,18 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.Performer">
+      <class name="cfo.Mgmt">
         <methods>
-          <include name="DashboardRejectStatutory"/>
-          <include name="ActivatedEventsPer"/>
+          <include name="GradingReportSF"/>
+          <include name="DepartmentSummaryHumanResourceStatutory"/>
+          <include name="browserClosing"/>
+          <include name="CriticalDocuments"/>
+          <include name="PenaltySummaryStatutory"/>
+          <include name="SummaryofOverdueCompliances"/>
           <include name="Closing"/>
           <include name="Login"/>
+          <include name="RiskSummarySF"/>
           <include name="setBrowser"/>
-          <include name="browserClosing"/>
-          <include name="ComplianceSatCalender"/>
-          <include name="StatutoryOverdueCri"/>
         </methods>
-      </class> <!-- criticalTestScripts.Performer -->
+      </class> <!-- cfo.Mgmt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

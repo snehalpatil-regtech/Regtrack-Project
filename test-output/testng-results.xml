@@ -1,256 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="27" passed="23" failed="4" skipped="0">
+<testng-results ignored="0" total="82" passed="76" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-01T19:20:29 IST" name="Default suite" finished-at="2024-09-01T20:27:20 IST" duration-ms="4010850">
+  <suite started-at="2024-09-05T17:31:16 IST" name="Default suite" finished-at="2024-09-06T00:08:03 IST" duration-ms="23807099">
     <groups>
     </groups>
-    <test started-at="2024-09-01T19:20:29 IST" name="Default test" finished-at="2024-09-01T20:27:20 IST" duration-ms="4010850">
-      <class name="criticalTestScripts.Performer">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:20:29 IST" name="setBrowser" finished-at="2024-09-01T19:20:30 IST" duration-ms="881" status="PASS">
+    <test started-at="2024-09-05T17:31:16 IST" name="Default test" finished-at="2024-09-06T00:08:03 IST" duration-ms="23807099">
+      <class name="cfo.Mgmt">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:31:16 IST" name="setBrowser" finished-at="2024-09-05T17:31:17 IST" duration-ms="1453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:20:30 IST" name="Login" finished-at="2024-09-01T19:21:50 IST" duration-ms="79900" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:31:17 IST" name="Login" finished-at="2024-09-05T17:32:46 IST" duration-ms="88529" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Upcoming_ComplianceStatutory()[pri:1, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:21:50 IST" name="Upcoming_ComplianceStatutory" finished-at="2024-09-01T19:24:14 IST" duration-ms="144360" status="PASS">
+        <test-method signature="Entities()[pri:1, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:32:46 IST" name="Entities" finished-at="2024-09-05T17:33:28 IST" duration-ms="42177" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Upcoming_ComplianceStatutory -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:24:14 IST" name="browserClosing" finished-at="2024-09-01T19:24:15 IST" duration-ms="589" status="PASS">
+        </test-method> <!-- Entities -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:33:28 IST" name="browserClosing" finished-at="2024-09-05T17:33:29 IST" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:24:15 IST" name="Login" finished-at="2024-09-01T19:25:34 IST" duration-ms="79237" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:33:29 IST" name="Login" finished-at="2024-09-05T17:34:56 IST" duration-ms="86844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Upcoming_ComplianceInternal()[pri:2, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:25:34 IST" name="Upcoming_ComplianceInternal" finished-at="2024-09-01T19:28:00 IST" duration-ms="145810" status="PASS">
+        <test-method signature="LocationCount()[pri:2, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:34:56 IST" name="LocationCount" finished-at="2024-09-05T17:35:02 IST" duration-ms="6131" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Upcoming_ComplianceInternal -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:28:00 IST" name="browserClosing" finished-at="2024-09-01T19:28:01 IST" duration-ms="450" status="PASS">
+        </test-method> <!-- LocationCount -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:35:02 IST" name="browserClosing" finished-at="2024-09-05T17:35:02 IST" duration-ms="608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:28:01 IST" name="Login" finished-at="2024-09-01T19:29:19 IST" duration-ms="78458" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:35:02 IST" name="Login" finished-at="2024-09-05T17:36:28 IST" duration-ms="85744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="StatutoryOverdueCri()[pri:3, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:29:19 IST" name="StatutoryOverdueCri" finished-at="2024-09-01T19:31:41 IST" duration-ms="141521" status="FAIL">
-          <exception class="org.openqa.selenium.NoAlertPresentException">
-            <message>
-              <![CDATA[no such alert
-  (Session info: chrome=128.0.6613.113)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63384}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cae1e5d97efbff3ba1db0a5e8aaac1a9]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=128.0.6613.113)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63384}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: cae1e5d97efbff3ba1db0a5e8aaac1a9
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-at performer.MethodsPOM.StatutoryOverdueCri(MethodsPOM.java:1760)
-at criticalTestScripts.Performer.StatutoryOverdueCri(Performer.java:152)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+        <test-method signature="CategoriesCountMatch()[pri:3, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:36:28 IST" name="CategoriesCountMatch" finished-at="2024-09-05T17:37:30 IST" duration-ms="61481" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StatutoryOverdueCri -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:31:41 IST" name="browserClosing" finished-at="2024-09-01T19:31:41 IST" duration-ms="376" status="PASS">
+        </test-method> <!-- CategoriesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:37:30 IST" name="browserClosing" finished-at="2024-09-05T17:37:30 IST" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:31:41 IST" name="Login" finished-at="2024-09-01T19:32:58 IST" duration-ms="76791" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:37:30 IST" name="Login" finished-at="2024-09-05T17:38:58 IST" duration-ms="87601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="InternalOverdueCri()[pri:4, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:32:58 IST" name="InternalOverdueCri" finished-at="2024-09-01T19:35:13 IST" duration-ms="135227" status="PASS">
+        <test-method signature="FilterWiseCategoriesCountMatch()[pri:4, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:38:58 IST" name="FilterWiseCategoriesCountMatch" finished-at="2024-09-05T17:39:55 IST" duration-ms="57607" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InternalOverdueCri -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:35:13 IST" name="browserClosing" finished-at="2024-09-01T19:35:13 IST" duration-ms="503" status="PASS">
+        </test-method> <!-- FilterWiseCategoriesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:39:55 IST" name="browserClosing" finished-at="2024-09-05T17:39:56 IST" duration-ms="713" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:35:13 IST" name="Login" finished-at="2024-09-01T19:36:33 IST" duration-ms="79497" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:39:56 IST" name="Login" finished-at="2024-09-05T17:41:24 IST" duration-ms="87494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="StatutoryChecklistBox()[pri:6, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:36:33 IST" name="StatutoryChecklistBox" finished-at="2024-09-01T19:37:00 IST" duration-ms="26563" status="PASS">
+        <test-method signature="CompliancesCountMatch()[pri:5, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:41:24 IST" name="CompliancesCountMatch" finished-at="2024-09-05T17:42:19 IST" duration-ms="55371" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StatutoryChecklistBox -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:37:00 IST" name="browserClosing" finished-at="2024-09-01T19:37:00 IST" duration-ms="383" status="PASS">
+        </test-method> <!-- CompliancesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:42:19 IST" name="browserClosing" finished-at="2024-09-05T17:42:20 IST" duration-ms="655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:37:00 IST" name="Login" finished-at="2024-09-01T19:38:16 IST" duration-ms="76514" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:42:20 IST" name="Login" finished-at="2024-09-05T17:43:47 IST" duration-ms="87162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="InternalCheckListCheckBox()[pri:8, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:38:16 IST" name="InternalCheckListCheckBox" finished-at="2024-09-01T19:38:40 IST" duration-ms="23751" status="PASS">
+        <test-method signature="FilterWiseCompliancesCountMatch()[pri:6, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:43:47 IST" name="FilterWiseCompliancesCountMatch" finished-at="2024-09-05T17:44:52 IST" duration-ms="65372" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InternalCheckListCheckBox -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:38:40 IST" name="browserClosing" finished-at="2024-09-01T19:38:41 IST" duration-ms="373" status="PASS">
+        </test-method> <!-- FilterWiseCompliancesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:44:52 IST" name="browserClosing" finished-at="2024-09-05T17:44:53 IST" duration-ms="554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:38:41 IST" name="Login" finished-at="2024-09-01T19:40:00 IST" duration-ms="79318" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:44:53 IST" name="Login" finished-at="2024-09-05T17:46:17 IST" duration-ms="84476" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="DashboardRejectStatutory()[pri:9, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:40:00 IST" name="DashboardRejectStatutory" finished-at="2024-09-01T19:40:56 IST" duration-ms="56456" status="FAIL">
-          <exception class="org.openqa.selenium.NoAlertPresentException">
-            <message>
-              <![CDATA[no such alert
-  (Session info: chrome=128.0.6613.113)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64102}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9832b8b6278309976ce04ef49f28c3c3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=128.0.6613.113)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64102}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9832b8b6278309976ce04ef49f28c3c3
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
-at performer.MethodsPOM.RejectAction(MethodsPOM.java:3785)
-at performer.MethodsPOM.DashboardRejectedCri(MethodsPOM.java:4100)
-at criticalTestScripts.Performer.DashboardRejectStatutory(Performer.java:224)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+        <test-method signature="UsersCountMatch()[pri:7, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:46:17 IST" name="UsersCountMatch" finished-at="2024-09-05T17:47:10 IST" duration-ms="52899" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DashboardRejectStatutory -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:40:56 IST" name="browserClosing" finished-at="2024-09-01T19:40:57 IST" duration-ms="342" status="PASS">
+        </test-method> <!-- UsersCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:47:10 IST" name="browserClosing" finished-at="2024-09-05T17:47:11 IST" duration-ms="866" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:40:57 IST" name="Login" finished-at="2024-09-01T19:42:14 IST" duration-ms="77024" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:47:11 IST" name="Login" finished-at="2024-09-05T17:48:34 IST" duration-ms="83052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="DashboardRejectInternal()[pri:10, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:42:14 IST" name="DashboardRejectInternal" finished-at="2024-09-01T19:43:23 IST" duration-ms="69085" status="PASS">
+        <test-method signature="clickPenaltyStatutory()[pri:8, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:48:34 IST" name="clickPenaltyStatutory" finished-at="2024-09-05T17:50:14 IST" duration-ms="99401" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DashboardRejectInternal -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:43:23 IST" name="browserClosing" finished-at="2024-09-01T19:43:23 IST" duration-ms="379" status="PASS">
+        </test-method> <!-- clickPenaltyStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:50:14 IST" name="browserClosing" finished-at="2024-09-05T17:50:14 IST" duration-ms="477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:43:23 IST" name="Login" finished-at="2024-09-01T19:44:39 IST" duration-ms="75882" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:50:14 IST" name="Login" finished-at="2024-09-05T17:51:39 IST" duration-ms="84586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ActivatedEventsPer()[pri:11, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:44:39 IST" name="ActivatedEventsPer" finished-at="2024-09-01T19:45:16 IST" duration-ms="36482" status="FAIL">
+        <test-method signature="SummaryofOverdueCompliances()[pri:9, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:51:39 IST" name="SummaryofOverdueCompliances" finished-at="2024-09-05T17:52:38 IST" duration-ms="59827" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
-  (Session info: chrome=128.0.6613.113)
+  (Session info: chrome=128.0.6613.114)
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 186d090b86ad097d4cdb7035974f5641]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4c44d2a95403edb495212ddbb1e1f67]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=128.0.6613.113)
+  (Session info: chrome=128.0.6613.114)
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0115', ip: '172.17.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.113, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 186d090b86ad097d4cdb7035974f5641
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65307}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4c44d2a95403edb495212ddbb1e1f67
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -262,8 +141,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at reviewer.ReMethodsPOM.ActivatedEventsPer(ReMethodsPOM.java:3295)
-at criticalTestScripts.Performer.ActivatedEventsPer(Performer.java:248)
+at cfo.Mgmt.SummaryofOverdueCompliances(Mgmt.java:477)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -295,148 +173,282 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ActivatedEventsPer -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:45:16 IST" name="browserClosing" finished-at="2024-09-01T19:45:16 IST" duration-ms="480" status="PASS">
+        </test-method> <!-- SummaryofOverdueCompliances -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:52:38 IST" name="browserClosing" finished-at="2024-09-05T17:52:39 IST" duration-ms="449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:45:16 IST" name="Login" finished-at="2024-09-01T19:46:32 IST" duration-ms="76258" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:52:39 IST" name="Login" finished-at="2024-09-05T17:54:02 IST" duration-ms="83267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ClosedEventsPer()[pri:12, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:46:32 IST" name="ClosedEventsPer" finished-at="2024-09-01T19:46:43 IST" duration-ms="10641" status="PASS">
+        <test-method signature="SummaryofOverdueFilter()[pri:10, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:54:02 IST" name="SummaryofOverdueFilter" finished-at="2024-09-05T17:55:05 IST" duration-ms="62407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClosedEventsPer -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:46:43 IST" name="browserClosing" finished-at="2024-09-01T19:46:43 IST" duration-ms="547" status="PASS">
+        </test-method> <!-- SummaryofOverdueFilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:55:05 IST" name="browserClosing" finished-at="2024-09-05T17:55:05 IST" duration-ms="477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:46:43 IST" name="Login" finished-at="2024-09-01T19:48:04 IST" duration-ms="80299" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:55:05 IST" name="Login" finished-at="2024-09-05T17:56:28 IST" duration-ms="83296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AssignedEvents()[pri:13, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:48:04 IST" name="AssignedEvents" finished-at="2024-09-01T19:48:18 IST" duration-ms="13969" status="PASS">
+        <test-method signature="SummaryofOverdueMail()[pri:11, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:56:28 IST" name="SummaryofOverdueMail" finished-at="2024-09-05T17:58:07 IST" duration-ms="98627" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AssignedEvents -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:48:18 IST" name="browserClosing" finished-at="2024-09-01T19:48:18 IST" duration-ms="486" status="PASS">
+        </test-method> <!-- SummaryofOverdueMail -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:58:07 IST" name="browserClosing" finished-at="2024-09-05T17:58:08 IST" duration-ms="710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:48:18 IST" name="Login" finished-at="2024-09-01T19:49:35 IST" duration-ms="76924" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:58:08 IST" name="Login" finished-at="2024-09-05T17:59:30 IST" duration-ms="82735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskUpcoming()[pri:14, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:49:35 IST" name="PerformerTaskUpcoming" finished-at="2024-09-01T19:51:04 IST" duration-ms="89157" status="PASS">
+        <test-method signature="NotCompleted_PieChart()[pri:12, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T17:59:30 IST" name="NotCompleted_PieChart" finished-at="2024-09-05T18:05:56 IST" duration-ms="385137" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskUpcoming -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:51:04 IST" name="browserClosing" finished-at="2024-09-01T19:51:05 IST" duration-ms="458" status="PASS">
+        </test-method> <!-- NotCompleted_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:05:56 IST" name="browserClosing" finished-at="2024-09-05T18:05:56 IST" duration-ms="780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:51:05 IST" name="Login" finished-at="2024-09-01T19:52:21 IST" duration-ms="76543" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:05:56 IST" name="Login" finished-at="2024-09-05T18:07:20 IST" duration-ms="83452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskUpcomingIn()[pri:15, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:52:21 IST" name="PerformerTaskUpcomingIn" finished-at="2024-09-01T19:53:39 IST" duration-ms="77347" status="PASS">
+        <test-method signature="ClosedDelayed_PieChart()[pri:13, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:07:20 IST" name="ClosedDelayed_PieChart" finished-at="2024-09-05T18:13:35 IST" duration-ms="375117" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskUpcomingIn -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:53:39 IST" name="browserClosing" finished-at="2024-09-01T19:53:39 IST" duration-ms="549" status="PASS">
+        </test-method> <!-- ClosedDelayed_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:13:35 IST" name="browserClosing" finished-at="2024-09-05T18:13:36 IST" duration-ms="848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:53:39 IST" name="Login" finished-at="2024-09-01T19:54:56 IST" duration-ms="76742" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:13:36 IST" name="Login" finished-at="2024-09-05T18:15:30 IST" duration-ms="113771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskOverdue()[pri:16, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:54:56 IST" name="PerformerTaskOverdue" finished-at="2024-09-01T19:56:24 IST" duration-ms="88496" status="PASS">
+        <test-method signature="ClosedTimely_PieChart()[pri:14, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:15:30 IST" name="ClosedTimely_PieChart" finished-at="2024-09-05T18:21:42 IST" duration-ms="372322" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskOverdue -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:56:24 IST" name="browserClosing" finished-at="2024-09-01T19:56:25 IST" duration-ms="466" status="PASS">
+        </test-method> <!-- ClosedTimely_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:21:42 IST" name="browserClosing" finished-at="2024-09-05T18:21:43 IST" duration-ms="787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:56:25 IST" name="Login" finished-at="2024-09-01T19:57:43 IST" duration-ms="78276" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:21:43 IST" name="Login" finished-at="2024-09-05T18:23:07 IST" duration-ms="84183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskOverdueIn()[pri:17, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:57:43 IST" name="PerformerTaskOverdueIn" finished-at="2024-09-01T19:59:13 IST" duration-ms="89966" status="PASS">
+        <test-method signature="NotApplicable_PieChart()[pri:15, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:23:07 IST" name="NotApplicable_PieChart" finished-at="2024-09-05T18:29:21 IST" duration-ms="373967" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskOverdueIn -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:59:13 IST" name="browserClosing" finished-at="2024-09-01T19:59:14 IST" duration-ms="645" status="PASS">
+        </test-method> <!-- NotApplicable_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:29:21 IST" name="browserClosing" finished-at="2024-09-05T18:29:22 IST" duration-ms="862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T19:59:14 IST" name="Login" finished-at="2024-09-01T20:00:30 IST" duration-ms="76499" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:29:22 IST" name="Login" finished-at="2024-09-05T18:30:46 IST" duration-ms="84008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskRejected()[pri:18, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:00:30 IST" name="PerformerTaskRejected" finished-at="2024-09-01T20:01:46 IST" duration-ms="75460" status="PASS">
+        <test-method signature="Overdue_PieChart()[pri:16, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:30:46 IST" name="Overdue_PieChart" finished-at="2024-09-05T18:36:58 IST" duration-ms="372735" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskRejected -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:01:46 IST" name="browserClosing" finished-at="2024-09-01T20:01:46 IST" duration-ms="576" status="PASS">
+        </test-method> <!-- Overdue_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:36:58 IST" name="browserClosing" finished-at="2024-09-05T18:36:59 IST" duration-ms="876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:01:46 IST" name="Login" finished-at="2024-09-01T20:03:03 IST" duration-ms="76611" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:36:59 IST" name="Login" finished-at="2024-09-05T18:38:29 IST" duration-ms="89688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskRejectedIn()[pri:19, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:03:03 IST" name="PerformerTaskRejectedIn" finished-at="2024-09-01T20:04:21 IST" duration-ms="78353" status="PASS">
+        <test-method signature="dueToday_PieChart()[pri:17, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:38:29 IST" name="dueToday_PieChart" finished-at="2024-09-05T18:40:28 IST" duration-ms="119231" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskRejectedIn -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:04:21 IST" name="browserClosing" finished-at="2024-09-01T20:04:22 IST" duration-ms="570" status="PASS">
+        </test-method> <!-- dueToday_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:40:28 IST" name="browserClosing" finished-at="2024-09-05T18:40:29 IST" duration-ms="841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:04:22 IST" name="Login" finished-at="2024-09-01T20:05:38 IST" duration-ms="76411" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:40:29 IST" name="Login" finished-at="2024-09-05T18:41:58 IST" duration-ms="88492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskPFR()[pri:20, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:05:38 IST" name="PerformerTaskPFR" finished-at="2024-09-01T20:05:52 IST" duration-ms="13533" status="PASS">
+        <test-method signature="pendingForReview_PieChart()[pri:18, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:41:58 IST" name="pendingForReview_PieChart" finished-at="2024-09-05T18:48:30 IST" duration-ms="392499" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskPFR -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:05:52 IST" name="browserClosing" finished-at="2024-09-01T20:05:52 IST" duration-ms="650" status="PASS">
+        </test-method> <!-- pendingForReview_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:48:30 IST" name="browserClosing" finished-at="2024-09-05T18:48:31 IST" duration-ms="819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:05:52 IST" name="Login" finished-at="2024-09-01T20:07:09 IST" duration-ms="76584" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:48:31 IST" name="Login" finished-at="2024-09-05T18:49:57 IST" duration-ms="86108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="PerformerTaskPFRIn()[pri:21, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:07:09 IST" name="PerformerTaskPFRIn" finished-at="2024-09-01T20:07:23 IST" duration-ms="13542" status="PASS">
+        <test-method signature="inProgress_PieChart()[pri:19, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:49:57 IST" name="inProgress_PieChart" finished-at="2024-09-05T18:56:28 IST" duration-ms="391472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PerformerTaskPFRIn -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:07:23 IST" name="browserClosing" finished-at="2024-09-01T20:07:23 IST" duration-ms="625" status="PASS">
+        </test-method> <!-- inProgress_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:56:28 IST" name="browserClosing" finished-at="2024-09-05T18:56:29 IST" duration-ms="634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:07:23 IST" name="Login" finished-at="2024-09-01T20:08:41 IST" duration-ms="77656" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:56:29 IST" name="Login" finished-at="2024-09-05T18:57:52 IST" duration-ms="83232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ComplianceSatCalender()[pri:28, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:08:41 IST" name="ComplianceSatCalender" finished-at="2024-09-01T20:10:04 IST" duration-ms="83374" status="FAIL">
-          <exception class="java.lang.IndexOutOfBoundsException">
+        <test-method signature="rejected_PieChart()[pri:20, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T18:57:52 IST" name="rejected_PieChart" finished-at="2024-09-05T19:04:22 IST" duration-ms="389266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejected_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:04:22 IST" name="browserClosing" finished-at="2024-09-05T19:04:22 IST" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:04:22 IST" name="Login" finished-at="2024-09-05T19:05:45 IST" duration-ms="83045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeCriticalStatutory()[pri:21, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:05:45 IST" name="BargraphIndustrySpeCriticalStatutory" finished-at="2024-09-05T19:13:04 IST" duration-ms="438518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeCriticalStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:13:04 IST" name="browserClosing" finished-at="2024-09-05T19:13:05 IST" duration-ms="1327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:13:05 IST" name="Login" finished-at="2024-09-05T19:14:32 IST" duration-ms="87110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeHighStatutory()[pri:22, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:14:32 IST" name="BargraphIndustrySpeHighStatutory" finished-at="2024-09-05T19:22:04 IST" duration-ms="451753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeHighStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:22:04 IST" name="browserClosing" finished-at="2024-09-05T19:22:05 IST" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:22:05 IST" name="Login" finished-at="2024-09-05T19:23:28 IST" duration-ms="83902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeMediumStatutory()[pri:23, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:23:28 IST" name="BargraphIndustrySpeMediumStatutory" finished-at="2024-09-05T19:30:57 IST" duration-ms="448135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeMediumStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:30:57 IST" name="browserClosing" finished-at="2024-09-05T19:30:57 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:30:57 IST" name="Login" finished-at="2024-09-05T19:32:19 IST" duration-ms="82326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeLowStatutory()[pri:24, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:32:19 IST" name="BargraphIndustrySpeLowStatutory" finished-at="2024-09-05T19:40:14 IST" duration-ms="474871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeLowStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:40:14 IST" name="browserClosing" finished-at="2024-09-05T19:40:15 IST" duration-ms="888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:40:15 IST" name="Login" finished-at="2024-09-05T19:41:41 IST" duration-ms="86064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryCriticalStatutory()[pri:25, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:41:41 IST" name="RiskSummaryCriticalStatutory" finished-at="2024-09-05T19:48:04 IST" duration-ms="383112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryCriticalStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:48:04 IST" name="browserClosing" finished-at="2024-09-05T19:48:05 IST" duration-ms="551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:48:05 IST" name="Login" finished-at="2024-09-05T19:49:38 IST" duration-ms="93001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryHighStatutory()[pri:26, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:49:38 IST" name="RiskSummaryHighStatutory" finished-at="2024-09-05T19:56:34 IST" duration-ms="416489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryHighStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:56:34 IST" name="browserClosing" finished-at="2024-09-05T19:56:35 IST" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:56:35 IST" name="Login" finished-at="2024-09-05T19:58:00 IST" duration-ms="84675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryMediumStatutory()[pri:27, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T19:58:00 IST" name="RiskSummaryMediumStatutory" finished-at="2024-09-05T20:04:52 IST" duration-ms="412482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryMediumStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:04:52 IST" name="browserClosing" finished-at="2024-09-05T20:04:53 IST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:04:53 IST" name="Login" finished-at="2024-09-05T20:06:14 IST" duration-ms="81081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryLowStatutory()[pri:28, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:06:14 IST" name="RiskSummaryLowStatutory" finished-at="2024-09-05T20:13:17 IST" duration-ms="423201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryLowStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:13:17 IST" name="browserClosing" finished-at="2024-09-05T20:13:18 IST" duration-ms="860" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:13:18 IST" name="Login" finished-at="2024-09-05T20:14:40 IST" duration-ms="81609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DepartmentSummaryHumanResourceStatutory()[pri:29, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:14:40 IST" name="DepartmentSummaryHumanResourceStatutory" finished-at="2024-09-05T20:21:16 IST" duration-ms="395887" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Index 0 out of bounds for length 0]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='k-pager-info k-label']"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54475}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3292ad0c39f6ff7c2501c46f1e9459cb
+*** Element info: {Using=xpath, value=//*[@class='k-pager-info k-label']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
-at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
-at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
-at java.base/java.util.Objects.checkIndex(Objects.java:385)
-at java.base/java.util.ArrayList.get(ArrayList.java:427)
-at criticalTestScripts.Performer.ComplianceSatCalender(Performer.java:464)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='k-pager-info k-label']"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54475}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3292ad0c39f6ff7c2501c46f1e9459cb
+*** Element info: {Using=xpath, value=//*[@class='k-pager-info k-label']}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at cfo.CFOcountPOM.readTotalItemsD(CFOcountPOM.java:865)
+at cfo.CFOcountPOM.RiskGraphCount(CFOcountPOM.java:5974)
+at cfo.Mgmt.DepartmentSummaryHumanResourceStatutory(Mgmt.java:2238)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -465,103 +477,911 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ComplianceSatCalender -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:10:04 IST" name="browserClosing" finished-at="2024-09-01T20:10:05 IST" duration-ms="482" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:10:05 IST" name="Login" finished-at="2024-09-01T20:11:24 IST" duration-ms="79462" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="Compliancecalendar()[pri:28, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:11:24 IST" name="Compliancecalendar" finished-at="2024-09-01T20:12:33 IST" duration-ms="68428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Compliancecalendar -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:12:33 IST" name="browserClosing" finished-at="2024-09-01T20:12:33 IST" duration-ms="676" status="PASS">
+        </test-method> <!-- DepartmentSummaryHumanResourceStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:21:16 IST" name="browserClosing" finished-at="2024-09-05T20:21:16 IST" duration-ms="532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:12:33 IST" name="Login" finished-at="2024-09-01T20:13:53 IST" duration-ms="79648" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:21:16 IST" name="Login" finished-at="2024-09-05T20:22:37 IST" duration-ms="81072" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ComplianceSatCalender1()[pri:29, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:13:53 IST" name="ComplianceSatCalender1" finished-at="2024-09-01T20:14:51 IST" duration-ms="57902" status="PASS">
+        <test-method signature="NotCompleted_PieChartPeriod()[pri:31, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:22:37 IST" name="NotCompleted_PieChartPeriod" finished-at="2024-09-05T20:32:55 IST" duration-ms="617713" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ComplianceSatCalender1 -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:14:51 IST" name="browserClosing" finished-at="2024-09-01T20:14:52 IST" duration-ms="680" status="PASS">
+        </test-method> <!-- NotCompleted_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:32:55 IST" name="browserClosing" finished-at="2024-09-05T20:32:56 IST" duration-ms="734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:14:52 IST" name="Login" finished-at="2024-09-01T20:16:08 IST" duration-ms="76598" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:32:56 IST" name="Login" finished-at="2024-09-05T20:34:19 IST" duration-ms="82843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="DetailedReport1()[pri:29, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:16:08 IST" name="DetailedReport1" finished-at="2024-09-01T20:16:53 IST" duration-ms="44808" status="PASS">
+        <test-method signature="ClosedDelayed_PieChartPeriod()[pri:32, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:34:19 IST" name="ClosedDelayed_PieChartPeriod" finished-at="2024-09-05T20:44:37 IST" duration-ms="618695" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DetailedReport1 -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:16:53 IST" name="browserClosing" finished-at="2024-09-01T20:16:54 IST" duration-ms="616" status="PASS">
+        </test-method> <!-- ClosedDelayed_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:44:37 IST" name="browserClosing" finished-at="2024-09-05T20:44:38 IST" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:16:54 IST" name="Login" finished-at="2024-09-01T20:18:12 IST" duration-ms="78130" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:44:38 IST" name="Login" finished-at="2024-09-05T20:46:00 IST" duration-ms="82231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="DetailedReportIn()[pri:30, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:18:12 IST" name="DetailedReportIn" finished-at="2024-09-01T20:18:56 IST" duration-ms="44658" status="PASS">
+        <test-method signature="ClosedTimely_PieChartPeriod()[pri:33, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:46:00 IST" name="ClosedTimely_PieChartPeriod" finished-at="2024-09-05T20:56:17 IST" duration-ms="616576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosedTimely_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:56:17 IST" name="browserClosing" finished-at="2024-09-05T20:56:17 IST" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:56:17 IST" name="Login" finished-at="2024-09-05T20:57:39 IST" duration-ms="81662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotApplicable_PieChartPeriod()[pri:34, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T20:57:39 IST" name="NotApplicable_PieChartPeriod" finished-at="2024-09-05T21:08:01 IST" duration-ms="622054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotApplicable_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:08:01 IST" name="browserClosing" finished-at="2024-09-05T21:08:02 IST" duration-ms="713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:08:02 IST" name="Login" finished-at="2024-09-05T21:09:24 IST" duration-ms="82516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="Overdue_PieChartPeriod()[pri:35, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:09:24 IST" name="Overdue_PieChartPeriod" finished-at="2024-09-05T21:17:46 IST" duration-ms="501897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Overdue_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:17:46 IST" name="browserClosing" finished-at="2024-09-05T21:17:47 IST" duration-ms="726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:17:47 IST" name="Login" finished-at="2024-09-05T21:19:09 IST" duration-ms="81549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="dueToday_PieChartPeriod()[pri:36, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:19:09 IST" name="dueToday_PieChartPeriod" finished-at="2024-09-05T21:25:56 IST" duration-ms="407257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dueToday_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:25:56 IST" name="browserClosing" finished-at="2024-09-05T21:25:56 IST" duration-ms="557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:25:56 IST" name="Login" finished-at="2024-09-05T21:27:19 IST" duration-ms="82411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="pendingForReview_PieChartPeriod()[pri:37, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:27:19 IST" name="pendingForReview_PieChartPeriod" finished-at="2024-09-05T21:37:03 IST" duration-ms="584353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingForReview_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:37:03 IST" name="browserClosing" finished-at="2024-09-05T21:37:04 IST" duration-ms="727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:37:04 IST" name="Login" finished-at="2024-09-05T21:38:26 IST" duration-ms="81657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="inProgress_PieChartPeriod()[pri:38, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:38:26 IST" name="inProgress_PieChartPeriod" finished-at="2024-09-05T21:48:13 IST" duration-ms="587754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inProgress_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:48:13 IST" name="browserClosing" finished-at="2024-09-05T21:48:14 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:48:14 IST" name="Login" finished-at="2024-09-05T21:49:36 IST" duration-ms="82465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="Upcoming_PieChartPeriod()[pri:39, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:49:36 IST" name="Upcoming_PieChartPeriod" finished-at="2024-09-05T21:58:37 IST" duration-ms="541062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upcoming_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:58:37 IST" name="browserClosing" finished-at="2024-09-05T21:58:38 IST" duration-ms="618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T21:58:38 IST" name="Login" finished-at="2024-09-05T22:00:00 IST" duration-ms="81836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="rejected_PieChartPeriod()[pri:40, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:00:00 IST" name="rejected_PieChartPeriod" finished-at="2024-09-05T22:09:51 IST" duration-ms="591443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejected_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:09:51 IST" name="browserClosing" finished-at="2024-09-05T22:09:52 IST" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:09:52 IST" name="Login" finished-at="2024-09-05T22:11:13 IST" duration-ms="81517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="PenaltySummaryStatutory()[pri:41, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:11:13 IST" name="PenaltySummaryStatutory" finished-at="2024-09-05T22:13:33 IST" duration-ms="139741" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[36]"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a599bbe6a71b7d6f3199b37f4e16428
+*** Element info: {Using=xpath, value=(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[36]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[36]"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a599bbe6a71b7d6f3199b37f4e16428
+*** Element info: {Using=xpath, value=(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[36]}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at cfo.CFOcountPOM.clickPenaltyHigh(CFOcountPOM.java:2057)
+at cfo.Mgmt.PenaltySummaryStatutory(Mgmt.java:3580)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PenaltySummaryStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:13:33 IST" name="browserClosing" finished-at="2024-09-05T22:13:34 IST" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:13:34 IST" name="Login" finished-at="2024-09-05T22:14:56 IST" duration-ms="82129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="GradingReportStatutory()[pri:42, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:14:56 IST" name="GradingReportStatutory" finished-at="2024-09-05T22:16:09 IST" duration-ms="73420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GradingReportStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:16:09 IST" name="browserClosing" finished-at="2024-09-05T22:16:10 IST" duration-ms="596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:16:10 IST" name="Login" finished-at="2024-09-05T22:17:32 IST" duration-ms="82090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="UpcomingFilterMgmt()[pri:42, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:17:32 IST" name="UpcomingFilterMgmt" finished-at="2024-09-05T22:20:11 IST" duration-ms="159050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpcomingFilterMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:20:11 IST" name="browserClosing" finished-at="2024-09-05T22:20:12 IST" duration-ms="626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:20:12 IST" name="Login" finished-at="2024-09-05T22:21:35 IST" duration-ms="83719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="complianceCalendar()[pri:43, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:21:35 IST" name="complianceCalendar" finished-at="2024-09-05T22:22:37 IST" duration-ms="62170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- complianceCalendar -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:22:38 IST" name="browserClosing" finished-at="2024-09-05T22:22:38 IST" duration-ms="651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:22:38 IST" name="Login" finished-at="2024-09-05T22:23:59 IST" duration-ms="81222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DailyUpdates()[pri:44, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:23:59 IST" name="DailyUpdates" finished-at="2024-09-05T22:24:44 IST" duration-ms="45007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DailyUpdates -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:24:44 IST" name="browserClosing" finished-at="2024-09-05T22:24:45 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:24:45 IST" name="Login" finished-at="2024-09-05T22:26:06 IST" duration-ms="81353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NewsLetter()[pri:45, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:26:06 IST" name="NewsLetter" finished-at="2024-09-05T22:26:28 IST" duration-ms="21940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewsLetter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:26:28 IST" name="browserClosing" finished-at="2024-09-05T22:26:29 IST" duration-ms="542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:26:29 IST" name="Login" finished-at="2024-09-05T22:27:50 IST" duration-ms="81680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilterMgmt()[pri:46, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:27:50 IST" name="ComplianceIDFilterMgmt" finished-at="2024-09-05T22:28:42 IST" duration-ms="51782" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilterMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:28:42 IST" name="browserClosing" finished-at="2024-09-05T22:28:43 IST" duration-ms="645" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:28:43 IST" name="Login" finished-at="2024-09-05T22:30:05 IST" duration-ms="82101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilterEBMgmt()[pri:47, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:30:05 IST" name="ComplianceIDFilterEBMgmt" finished-at="2024-09-05T22:31:02 IST" duration-ms="57089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilterEBMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:31:02 IST" name="browserClosing" finished-at="2024-09-05T22:31:03 IST" duration-ms="576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:31:03 IST" name="Login" finished-at="2024-09-05T22:32:24 IST" duration-ms="80994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilterINMgmt()[pri:48, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:32:24 IST" name="ComplianceIDFilterINMgmt" finished-at="2024-09-05T22:33:21 IST" duration-ms="57489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilterINMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:33:21 IST" name="browserClosing" finished-at="2024-09-05T22:33:22 IST" duration-ms="679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:33:22 IST" name="Login" finished-at="2024-09-05T22:34:43 IST" duration-ms="81510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilter1Invalid()[pri:49, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:34:43 IST" name="ComplianceIDFilter1Invalid" finished-at="2024-09-05T22:35:35 IST" duration-ms="51824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilter1Invalid -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:35:35 IST" name="browserClosing" finished-at="2024-09-05T22:35:36 IST" duration-ms="611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:35:36 IST" name="Login" finished-at="2024-09-05T22:36:57 IST" duration-ms="81586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilterEBInvalid()[pri:50, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:36:57 IST" name="ComplianceIDFilterEBInvalid" finished-at="2024-09-05T22:37:55 IST" duration-ms="57781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilterEBInvalid -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:37:55 IST" name="browserClosing" finished-at="2024-09-05T22:37:56 IST" duration-ms="893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:37:56 IST" name="Login" finished-at="2024-09-05T22:39:20 IST" duration-ms="83599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceIDFilterINInvalid()[pri:51, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:39:20 IST" name="ComplianceIDFilterINInvalid" finished-at="2024-09-05T22:40:23 IST" duration-ms="63008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceIDFilterINInvalid -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:40:23 IST" name="browserClosing" finished-at="2024-09-05T22:40:23 IST" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:40:23 IST" name="Login" finished-at="2024-09-05T22:41:45 IST" duration-ms="81797" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="UsageReport()[pri:52, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:41:45 IST" name="UsageReport" finished-at="2024-09-05T22:42:19 IST" duration-ms="34275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UsageReport -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:42:19 IST" name="browserClosing" finished-at="2024-09-05T22:42:20 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:42:20 IST" name="Login" finished-at="2024-09-05T22:43:41 IST" duration-ms="81274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceDocuments()[pri:55, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:43:41 IST" name="ComplianceDocuments" finished-at="2024-09-05T22:45:33 IST" duration-ms="112238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceDocuments -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:45:33 IST" name="browserClosing" finished-at="2024-09-05T22:45:34 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:45:34 IST" name="Login" finished-at="2024-09-05T22:46:55 IST" duration-ms="81296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceDocumentsIN()[pri:55, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:46:55 IST" name="ComplianceDocumentsIN" finished-at="2024-09-05T22:49:15 IST" duration-ms="139863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceDocumentsIN -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:49:15 IST" name="browserClosing" finished-at="2024-09-05T22:49:15 IST" duration-ms="525" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:49:15 IST" name="Login" finished-at="2024-09-05T22:50:36 IST" duration-ms="80862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CriticalDocuments()[pri:56, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:50:36 IST" name="CriticalDocuments" finished-at="2024-09-05T22:51:50 IST" duration-ms="73918" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=128.0.6613.114)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 052f5284c3e55630ebfc4d5c7e1298cf]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.114)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 052f5284c3e55630ebfc4d5c7e1298cf
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at performer.OverduePOM.CriticalDocuments(OverduePOM.java:3864)
+at cfo.Mgmt.CriticalDocuments(Mgmt.java:4306)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CriticalDocuments -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:51:50 IST" name="browserClosing" finished-at="2024-09-05T22:51:51 IST" duration-ms="519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:51:51 IST" name="Login" finished-at="2024-09-05T22:53:13 IST" duration-ms="81826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ActDocuments()[pri:57, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:53:13 IST" name="ActDocuments" finished-at="2024-09-05T22:55:03 IST" duration-ms="110712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ActDocuments -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:55:03 IST" name="browserClosing" finished-at="2024-09-05T22:55:04 IST" duration-ms="554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:55:04 IST" name="Login" finished-at="2024-09-05T22:56:25 IST" duration-ms="81143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DetailedReport()[pri:59, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:56:25 IST" name="DetailedReport" finished-at="2024-09-05T22:57:14 IST" duration-ms="49288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DetailedReport -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:57:14 IST" name="browserClosing" finished-at="2024-09-05T22:57:15 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:57:15 IST" name="Login" finished-at="2024-09-05T22:58:37 IST" duration-ms="81686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DetailedReportIn()[pri:60, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:58:37 IST" name="DetailedReportIn" finished-at="2024-09-05T22:59:33 IST" duration-ms="56355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DetailedReportIn -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:18:56 IST" name="browserClosing" finished-at="2024-09-01T20:18:57 IST" duration-ms="551" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:59:33 IST" name="browserClosing" finished-at="2024-09-05T22:59:33 IST" duration-ms="377" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:18:57 IST" name="Login" finished-at="2024-09-01T20:20:14 IST" duration-ms="76771" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T22:59:33 IST" name="Login" finished-at="2024-09-05T23:00:55 IST" duration-ms="82075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AssignmentReport()[pri:31, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:20:14 IST" name="AssignmentReport" finished-at="2024-09-01T20:20:41 IST" duration-ms="27191" status="PASS">
+        <test-method signature="DetailedReportFilterMgmt()[pri:61, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:00:55 IST" name="DetailedReportFilterMgmt" finished-at="2024-09-05T23:02:02 IST" duration-ms="66210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DetailedReportFilterMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:02:02 IST" name="browserClosing" finished-at="2024-09-05T23:02:02 IST" duration-ms="510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:02:02 IST" name="Login" finished-at="2024-09-05T23:03:28 IST" duration-ms="86097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="AssignmentReport()[pri:62, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:03:28 IST" name="AssignmentReport" finished-at="2024-09-05T23:03:33 IST" duration-ms="4999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssignmentReport -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:20:41 IST" name="browserClosing" finished-at="2024-09-01T20:20:41 IST" duration-ms="529" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:03:33 IST" name="browserClosing" finished-at="2024-09-05T23:03:34 IST" duration-ms="525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:20:41 IST" name="Login" finished-at="2024-09-01T20:21:57 IST" duration-ms="76076" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:03:34 IST" name="Login" finished-at="2024-09-05T23:04:55 IST" duration-ms="81046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ComplianceDocumentsSat()[pri:32, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:21:57 IST" name="ComplianceDocumentsSat" finished-at="2024-09-01T20:23:44 IST" duration-ms="106195" status="PASS">
+        <test-method signature="MyNotifications()[pri:81, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:04:55 IST" name="MyNotifications" finished-at="2024-09-05T23:05:24 IST" duration-ms="29579" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ComplianceDocumentsSat -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:23:44 IST" name="browserClosing" finished-at="2024-09-01T20:23:44 IST" duration-ms="532" status="PASS">
+        </test-method> <!-- MyNotifications -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:05:24 IST" name="browserClosing" finished-at="2024-09-05T23:05:25 IST" duration-ms="570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:23:44 IST" name="Login" finished-at="2024-09-01T20:25:00 IST" duration-ms="76229" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:05:25 IST" name="Login" finished-at="2024-09-05T23:06:46 IST" duration-ms="80602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ComplianceDocumentsInter()[pri:33, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:25:00 IST" name="ComplianceDocumentsInter" finished-at="2024-09-01T20:27:20 IST" duration-ms="139082" status="PASS">
+        <test-method signature="MessageCenter()[pri:82, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:06:46 IST" name="MessageCenter" finished-at="2024-09-05T23:07:07 IST" duration-ms="21406" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ComplianceDocumentsInter -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:27:20 IST" name="browserClosing" finished-at="2024-09-01T20:27:20 IST" duration-ms="594" status="PASS">
+        </test-method> <!-- MessageCenter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:07:07 IST" name="browserClosing" finished-at="2024-09-05T23:07:08 IST" duration-ms="578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Closing()[pri:0, instance:criticalTestScripts.Performer@35cabb2a]" started-at="2024-09-01T20:27:20 IST" name="Closing" finished-at="2024-09-01T20:27:20 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:07:08 IST" name="Login" finished-at="2024-09-05T23:08:29 IST" duration-ms="81862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="InternalMsg()[pri:83, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:08:29 IST" name="InternalMsg" finished-at="2024-09-05T23:08:53 IST" duration-ms="23569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InternalMsg -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:08:53 IST" name="browserClosing" finished-at="2024-09-05T23:08:54 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:08:54 IST" name="Login" finished-at="2024-09-05T23:10:17 IST" duration-ms="83922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="SupportTicket()[pri:84, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:10:17 IST" name="SupportTicket" finished-at="2024-09-05T23:10:33 IST" duration-ms="15965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SupportTicket -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:10:33 IST" name="browserClosing" finished-at="2024-09-05T23:10:34 IST" duration-ms="535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:10:34 IST" name="Login" finished-at="2024-09-05T23:11:55 IST" duration-ms="81432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="PerformanceSummaryReopen()[pri:86, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:11:55 IST" name="PerformanceSummaryReopen" finished-at="2024-09-05T23:14:17 IST" duration-ms="141462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PerformanceSummaryReopen -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:14:17 IST" name="browserClosing" finished-at="2024-09-05T23:14:17 IST" duration-ms="648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:14:17 IST" name="Login" finished-at="2024-09-05T23:15:40 IST" duration-ms="82252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskGraphReOpen()[pri:87, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:15:40 IST" name="RiskGraphReOpen" finished-at="2024-09-05T23:17:48 IST" duration-ms="127903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskGraphReOpen -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:17:48 IST" name="browserClosing" finished-at="2024-09-05T23:17:48 IST" duration-ms="643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:17:48 IST" name="Login" finished-at="2024-09-05T23:19:09 IST" duration-ms="81017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="WhatsNew()[pri:88, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:19:09 IST" name="WhatsNew" finished-at="2024-09-05T23:19:50 IST" duration-ms="40769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhatsNew -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:19:50 IST" name="browserClosing" finished-at="2024-09-05T23:19:51 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:19:51 IST" name="Login" finished-at="2024-09-05T23:21:12 IST" duration-ms="81355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="MyDashboardClearfilter()[pri:89, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:21:12 IST" name="MyDashboardClearfilter" finished-at="2024-09-05T23:21:22 IST" duration-ms="9947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyDashboardClearfilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:21:22 IST" name="browserClosing" finished-at="2024-09-05T23:21:22 IST" duration-ms="541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:21:22 IST" name="Login" finished-at="2024-09-05T23:22:43 IST" duration-ms="80701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CompletionStatusFilter()[pri:90, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:22:43 IST" name="CompletionStatusFilter" finished-at="2024-09-05T23:25:00 IST" duration-ms="137254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompletionStatusFilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:25:00 IST" name="browserClosing" finished-at="2024-09-05T23:25:01 IST" duration-ms="685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:25:01 IST" name="Login" finished-at="2024-09-05T23:26:23 IST" duration-ms="81701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotCompletionStatusFilterMgmt()[pri:91, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:26:23 IST" name="NotCompletionStatusFilterMgmt" finished-at="2024-09-05T23:28:15 IST" duration-ms="112575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotCompletionStatusFilterMgmt -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:28:15 IST" name="browserClosing" finished-at="2024-09-05T23:28:16 IST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:28:16 IST" name="Login" finished-at="2024-09-05T23:29:39 IST" duration-ms="82814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryFilterM()[pri:92, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:29:39 IST" name="RiskSummaryFilterM" finished-at="2024-09-05T23:31:37 IST" duration-ms="118174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryFilterM -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:31:37 IST" name="browserClosing" finished-at="2024-09-05T23:31:38 IST" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:31:38 IST" name="Login" finished-at="2024-09-05T23:33:00 IST" duration-ms="82684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeptSummaryFilterM()[pri:93, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:33:00 IST" name="DeptSummaryFilterM" finished-at="2024-09-05T23:35:16 IST" duration-ms="135972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeptSummaryFilterM -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:35:16 IST" name="browserClosing" finished-at="2024-09-05T23:35:17 IST" duration-ms="537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:35:17 IST" name="Login" finished-at="2024-09-05T23:37:04 IST" duration-ms="107531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CompletionStatusFilterMgmtPe()[pri:94, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:37:04 IST" name="CompletionStatusFilterMgmtPe" finished-at="2024-09-05T23:40:00 IST" duration-ms="175185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompletionStatusFilterMgmtPe -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:40:00 IST" name="browserClosing" finished-at="2024-09-05T23:40:00 IST" duration-ms="606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:40:00 IST" name="Login" finished-at="2024-09-05T23:41:22 IST" duration-ms="81742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotCompletionStatusFilterMgmtPe()[pri:95, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:41:22 IST" name="NotCompletionStatusFilterMgmtPe" finished-at="2024-09-05T23:44:12 IST" duration-ms="170105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotCompletionStatusFilterMgmtPe -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:44:12 IST" name="browserClosing" finished-at="2024-09-05T23:44:13 IST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:44:13 IST" name="Login" finished-at="2024-09-05T23:45:34 IST" duration-ms="81804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="SummaryofOverdueSF()[pri:112, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:45:34 IST" name="SummaryofOverdueSF" finished-at="2024-09-05T23:46:56 IST" duration-ms="81738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SummaryofOverdueSF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:46:56 IST" name="browserClosing" finished-at="2024-09-05T23:46:57 IST" duration-ms="560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:46:57 IST" name="Login" finished-at="2024-09-05T23:48:19 IST" duration-ms="82094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="PerformanceSummarySF()[pri:113, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:48:19 IST" name="PerformanceSummarySF" finished-at="2024-09-05T23:50:11 IST" duration-ms="112404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PerformanceSummarySF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:50:11 IST" name="browserClosing" finished-at="2024-09-05T23:50:12 IST" duration-ms="535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:50:12 IST" name="Login" finished-at="2024-09-05T23:51:33 IST" duration-ms="81519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummarySF()[pri:114, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:51:33 IST" name="RiskSummarySF" finished-at="2024-09-05T23:53:36 IST" duration-ms="123196" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3] (tried for 35 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3] (tried for 35 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at cfo.CFOcountPOM.RiskSummarySF(CFOcountPOM.java:13264)
+at cfo.Mgmt.RiskSummarySF(Mgmt.java:4789)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3]"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 60ce7497fb43ff48024e6e46047e5d07
+*** Element info: {Using=xpath, value=//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[3]}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummarySF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:53:36 IST" name="browserClosing" finished-at="2024-09-05T23:53:37 IST" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:53:37 IST" name="Login" finished-at="2024-09-05T23:54:58 IST" duration-ms="81411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DepartmentSummarySF()[pri:115, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:54:58 IST" name="DepartmentSummarySF" finished-at="2024-09-05T23:56:48 IST" duration-ms="109516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DepartmentSummarySF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:56:48 IST" name="browserClosing" finished-at="2024-09-05T23:56:49 IST" duration-ms="682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:56:49 IST" name="Login" finished-at="2024-09-05T23:58:11 IST" duration-ms="81849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="PerformerSummaryDueForPeriodSF()[pri:116, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-05T23:58:11 IST" name="PerformerSummaryDueForPeriodSF" finished-at="2024-09-06T00:00:28 IST" duration-ms="137087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PerformerSummaryDueForPeriodSF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:00:28 IST" name="browserClosing" finished-at="2024-09-06T00:00:28 IST" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:00:28 IST" name="Login" finished-at="2024-09-06T00:01:52 IST" duration-ms="83286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="GradingReportSF()[pri:117, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:01:52 IST" name="GradingReportSF" finished-at="2024-09-06T00:03:10 IST" duration-ms="78669" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a[1] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a[1] (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at cfo.CFOcountPOM.GradingReportSF(CFOcountPOM.java:13489)
+at cfo.Mgmt.GradingReportSF(Mgmt.java:4820)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a[1]"}
+  (Session info: chrome=128.0.6613.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0115', ip: '192.168.5.60', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.114, chrome: {chromedriverVersion: 127.0.6533.72 (9755e24ca85a..., userDataDir: C:\Users\snehalp\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57580}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 35926d85166e89e24de8cfb0c92dab76
+*** Element info: {Using=xpath, value=//*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a[1]}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GradingReportSF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:03:10 IST" name="browserClosing" finished-at="2024-09-06T00:03:11 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:03:11 IST" name="Login" finished-at="2024-09-06T00:04:32 IST" duration-ms="81517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DetailedReportSF()[pri:118, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:04:32 IST" name="DetailedReportSF" finished-at="2024-09-06T00:05:40 IST" duration-ms="68160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DetailedReportSF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:05:40 IST" name="browserClosing" finished-at="2024-09-06T00:05:41 IST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:05:41 IST" name="Login" finished-at="2024-09-06T00:07:02 IST" duration-ms="81120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceDocumentsSF()[pri:119, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:07:02 IST" name="ComplianceDocumentsSF" finished-at="2024-09-06T00:08:02 IST" duration-ms="60211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ComplianceDocumentsSF -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:08:02 IST" name="browserClosing" finished-at="2024-09-06T00:08:03 IST" duration-ms="596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Closing()[pri:0, instance:cfo.Mgmt@1189dd52]" started-at="2024-09-06T00:08:03 IST" name="Closing" finished-at="2024-09-06T00:08:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Closing -->
-      </class> <!-- criticalTestScripts.Performer -->
+      </class> <!-- cfo.Mgmt -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
