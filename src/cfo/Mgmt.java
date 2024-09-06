@@ -4087,13 +4087,13 @@
 			extent.flush();
 		}
 		
-	//	@Test(priority = 62)
+		@Test(priority = 62)
 		void AssignmentReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Assignment Report verification");
 		
 			
-			CFOcountPOM.AssignmentReport(test );
+			CFOcountPOM.AssignmentReportSta(test );
 			
 			extent.endTest(test);
 			extent.flush();

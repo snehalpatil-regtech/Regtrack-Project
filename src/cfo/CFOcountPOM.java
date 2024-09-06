@@ -4467,53 +4467,51 @@ else {
 			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
 		}
 		
-			Thread.sleep(3000);
-			if(risk.equalsIgnoreCase("High")) {
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
-
-			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-			Thread.sleep(6000);
-			
-			List<WebElement> ViewButton = getDriver().findElements(locator);	
-			Thread.sleep(6000);
-			
-			ViewButton.get(0).click();
-		    Thread.sleep(4000);
-			test.log(LogStatus.PASS, "overView successfully");
-			CFOcountPOM.closeDocument().click();
-			Thread.sleep(3000);
-			
+		
+		Thread.sleep(3000);
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(6000);
+					
+		List<WebElement> ViewButton = getDriver().findElements(locator);	
+		Thread.sleep(6000);
+					
+		ViewButton.get(0).click();
+		Thread.sleep(4000);
+		test.log(LogStatus.PASS, "overView successfully");
+		CFOcountPOM.closeDocument().click();
+		Thread.sleep(3000);
+					
 	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
-	
-		
+			
+				
 		Thread.sleep(2000);
 		File dir = new File("C:\\Users\\snehalp\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
-		
+				
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
-		
-		Thread.sleep(3000);//C://Users//jiya//Downloads//
+				
+		Thread.sleep(3000);
 		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
-		
+				
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
 			test.log(LogStatus.PASS,  " Excel file Export Successfully.");
 		} else {
-			test.log(LogStatus.FAIL, " Excel file does not downloaded.");
+		test.log(LogStatus.FAIL, " Excel file does not downloaded.");
 		}
-			}
-		
+				
 		Thread.sleep(500);
 		getDriver().switchTo().parentFrame();
 		CFOcountPOM.closeCategories1().click();					//Closing the High Risk Window.
-		
-		
-		}
-else {
-			
+	}
+		else 
+		{
 			Thread.sleep(2000);
 			js.executeScript("window.scrollBy(300,0)");	
 			Thread.sleep(1000);
@@ -4522,8 +4520,7 @@ else {
 			CFOcountPOM.closeCategories1().click();
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "'"+risk+"' risk  compliance count matches to numbers of items from grid.= 0");
-				
-		}
+		}	
 	}
  	
 	
@@ -4608,53 +4605,51 @@ else {
 			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
 		}
 		
-			Thread.sleep(3000);
-			if(risk.equalsIgnoreCase("High")) {
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
-
-			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-			Thread.sleep(6000);
-			
-			List<WebElement> ViewButton = getDriver().findElements(locator);	
-			Thread.sleep(6000);
-			
-			ViewButton.get(0).click();
-		    Thread.sleep(5000);
-			test.log(LogStatus.PASS, "overView successfully");
-			CFOcountPOM.closeDocument().click();
-			Thread.sleep(3000);
-			
+		
+		Thread.sleep(3000);
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(6000);
+					
+		List<WebElement> ViewButton = getDriver().findElements(locator);	
+		Thread.sleep(6000);
+					
+		ViewButton.get(0).click();
+		Thread.sleep(4000);
+		test.log(LogStatus.PASS, "overView successfully");
+		CFOcountPOM.closeDocument().click();
+		Thread.sleep(3000);
+					
 	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
-	
-		
+			
+				
 		Thread.sleep(2000);
 		File dir = new File("C:\\Users\\snehalp\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
-		
+				
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
-		
-		Thread.sleep(3000);//C://Users//jiya//Downloads//
+				
+		Thread.sleep(3000);
 		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
-		
+				
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
 			test.log(LogStatus.PASS,  " Excel file Export Successfully.");
 		} else {
-			test.log(LogStatus.FAIL, " Excel file does not downloaded.");
+		test.log(LogStatus.FAIL, " Excel file does not downloaded.");
 		}
-			}
-		
+				
 		Thread.sleep(500);
 		getDriver().switchTo().parentFrame();
 		CFOcountPOM.closeCategories1().click();					//Closing the High Risk Window.
-		
-		
-		}
-else {
-			
+	}
+		else 
+		{
 			Thread.sleep(2000);
 			js.executeScript("window.scrollBy(300,0)");	
 			Thread.sleep(1000);
@@ -4663,8 +4658,7 @@ else {
 			CFOcountPOM.closeCategories1().click();
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "'"+risk+"' risk  compliance count matches to numbers of items from grid.= 0");
-				
-		}
+		}	
 	}
  	
  	
@@ -6012,7 +6006,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6114,7 +6108,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6343,7 +6337,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));

@@ -2993,7 +2993,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 36)
+	@Test(priority = 38)
 	void Upcoming_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");

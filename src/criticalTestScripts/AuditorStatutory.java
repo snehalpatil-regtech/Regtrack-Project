@@ -2805,7 +2805,7 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(2000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,1700)");			//Scrolling down window by 1000 px.
+		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
 		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	

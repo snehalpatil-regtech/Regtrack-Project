@@ -3155,17 +3155,20 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(4000);
 			WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
 		
-		String text =	roc.getText();
+			String text =	roc.getText();
 		
-		if(text.equalsIgnoreCase("Upcoming")) {
-			test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+			if(text.equalsIgnoreCase("Upcoming")) 
+			{
+				test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
 
-		}else {
-			test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+			}
+			else 
+			{
+				test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
 
-		}
+			}
 			
-			int rejectedValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
+			int upcomingValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
 			CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
 			
 			Thread.sleep(3000);
@@ -3187,7 +3190,7 @@ public class StatutoryMGMT extends BasePage {
 				test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
 			}
 		*/
-			if(rejectedValue > 0)
+			if(upcomingValue > 0)
 			{
 				if(critical >= 0)
 				{
@@ -3239,7 +3242,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			else
 			{
-				test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+rejectedValue);
+				test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+upcomingValue);
 				Thread.sleep(2000);
 				getDriver().switchTo().parentFrame();
 				Thread.sleep(2000);
