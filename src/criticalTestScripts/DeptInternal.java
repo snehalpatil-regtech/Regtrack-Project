@@ -51,7 +51,7 @@ public class DeptInternal extends BasePage  {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Department1";			//Check link in excel sheet first.
+	public static String link = "mgmt1";			//Check link in excel sheet first.
 	
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -65,7 +65,7 @@ public class DeptInternal extends BasePage  {
 	void setBrowser() throws Exception
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Department(Internal).html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department(Internal).html",true);
 		test = extent.startTest("Loging In - Department Head (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		

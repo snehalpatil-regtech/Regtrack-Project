@@ -19,8 +19,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-	import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 	import org.openqa.selenium.chrome.ChromeOptions;
 	import org.openqa.selenium.edge.EdgeDriver;
 	import org.openqa.selenium.firefox.FirefoxDriver;
@@ -227,8 +229,21 @@ import performer.OverduePOM;
 			
 		}
 		Thread.sleep(3000);
-		CFOcountPOM.RefreshNow().click();
-		Thread.sleep(3000);
+	//	CFOcountPOM.RefreshNowD().click();
+	//	Thread.sleep(3000);
+		
+		// Combine the two XPaths with the '|' operator
+        WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+        if (element != null) {
+        	element.click();
+            System.out.println("Element found!");
+            // Perform actions on the element
+        } else {
+        	
+            System.out.println("Element not found");
+        }
+		
 		
 	}
 	
@@ -291,8 +306,19 @@ import performer.OverduePOM;
 		}
 		
 		
-		CFOcountPOM.RefreshNow().click();
-		Thread.sleep(3000);
+	//	CFOcountPOM.RefreshNow().click();
+	//	Thread.sleep(3000);
+		
+		WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+        if (element != null) {
+        	element.click();
+            System.out.println("Element found!");
+            // Perform actions on the element
+        } else {
+        	
+            System.out.println("Element not found");
+        }
 		
 	}
 	

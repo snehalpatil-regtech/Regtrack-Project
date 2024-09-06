@@ -3,20 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cfo.Mgmt">
+      <class name="criticalTestScripts.DeptStaExcluding">
         <methods>
-          <include name="GradingReportSF"/>
-          <include name="DepartmentSummaryHumanResourceStatutory"/>
-          <include name="browserClosing"/>
-          <include name="CriticalDocuments"/>
-          <include name="PenaltySummaryStatutory"/>
-          <include name="SummaryofOverdueCompliances"/>
-          <include name="Closing"/>
-          <include name="Login"/>
-          <include name="RiskSummarySF"/>
           <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="inProgress_PieChart"/>
+          <include name="browserClosing"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="Login"/>
+          <include name="Closing"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="rejected_PieChart"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="ComplianceDocuments"/>
         </methods>
-      </class> <!-- cfo.Mgmt -->
+      </class> <!-- criticalTestScripts.DeptStaExcluding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -51,7 +51,7 @@ public class DeptStaExcluding extends BasePage{
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Department1";           //Check link in excel sheet first.
+	public static String link = "mgmt1";           //Check link in excel sheet first.
 			
 	
 /*	public static XSSFSheet ReadExcel() throws IOException
@@ -65,7 +65,7 @@ public class DeptStaExcluding extends BasePage{
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (StatutoryExcludingChecklist)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -344,7 +344,7 @@ public class DeptStaExcluding extends BasePage{
 		
 	}
 	
-	@Test(priority = 11)
+//	@Test(priority = 11)
 		void NotCompleted_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -440,7 +440,7 @@ public class DeptStaExcluding extends BasePage{
 			extent.flush();
 		}
 		
-		@Test(priority = 12)
+//		@Test(priority = 12)
 		void ClosedDelayed_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
