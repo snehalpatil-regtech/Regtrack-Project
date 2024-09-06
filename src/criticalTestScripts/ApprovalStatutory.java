@@ -51,7 +51,7 @@ public class ApprovalStatutory extends BasePage {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "mgmt1";           //Check link in excel sheet first.
+	public static String link = "Approval";           //Check link in excel sheet first.
 			
 		
 	/*
