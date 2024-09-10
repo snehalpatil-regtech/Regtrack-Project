@@ -3,24 +3,24 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.DeptStaExcluding">
+      <class name="auditor.AuditorcountStatutory">
         <methods>
-          <include name="setBrowser"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="inProgress_PieChart"/>
-          <include name="browserClosing"/>
-          <include name="DepartmentSummaryFinanceStatutory"/>
-          <include name="pendingForReview_PieChart"/>
+          <include name="ComplianceDocumentsSF"/>
+          <include name="PerformanceSummarySF"/>
           <include name="Login"/>
           <include name="Closing"/>
-          <include name="ClosedTimely_PieChart"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="rejected_PieChart"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="ComplianceDocuments"/>
+          <include name="RiskSummarySF"/>
+          <include name="browserClosing"/>
+          <include name="PerformerSummaryDueForPeriodSF"/>
+          <include name="DetailedReport"/>
+          <include name="ComplianceDocumentsFilter"/>
+          <include name="DepartmentSummarySF"/>
+          <include name="setBrowser"/>
+          <include name="DeviationApproverColDSAu"/>
+          <include name="DetailedReportSF"/>
+          <include name="ComplianceDocumentsDAM"/>
         </methods>
-      </class> <!-- criticalTestScripts.DeptStaExcluding -->
+      </class> <!-- auditor.AuditorcountStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1134,28 +1134,49 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
 		Thread.sleep(3000);
 		CFOcountPOM.clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
-		
+		Thread.sleep(7000);
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+		Thread.sleep(7000);
+		OverduePOM.clickcomplianceType().click();
+		Thread.sleep(1000);
+		OverduePOM.clickcomplianceSta().click();
+		Thread.sleep(1000);
+	//	OverduePOM.clickcomplianceIN().click();
+	//	Thread.sleep(4000);
+		CFOcountPOM.clickExportImage2().click();			//Exporting (Downloading) file
+		Thread.sleep(500);
+		test.log(LogStatus.PASS, "Export successfully");
 		Thread.sleep(4000);
-		CFOcountPOM.clickExportImage().click();			//Exporting (Downloading) file
-		Thread.sleep(5000);
-		test.log(LogStatus.PASS, "Export File successfully");
-		By locator = By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[1]/td/a[1]");
-		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		Thread.sleep(4000);
-		// retrieving "foo-button" HTML element
+		
 		WebElement ViewButton = getDriver().findElement(locator);	
 		Thread.sleep(4000);
 	JavascriptExecutor jse=(JavascriptExecutor) getDriver(); 
 	Thread.sleep(2000);
 	jse.executeScript("arguments[0].click();", ViewButton);
-		Thread.sleep(5000);
-		CFOcountPOM.closeDocument1().click();
 		Thread.sleep(1000);
+		CFOcountPOM.closeDocument1().click();
 		test.log(LogStatus.PASS, "overView successfully");
-	//	CFOcountPOM.closeDocument1().click();
+	
+		Thread.sleep(3000);
+		OverduePOM.clickRiskD().click();
+		Thread.sleep(1000);
+		By locatorR = By.xpath("(//*[@class='k-checkbox-label checkbox-span'])[2]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement clickHigh = getDriver().findElement(locatorR);	
+		Thread.sleep(4000);
+	jse.executeScript("arguments[0].click();", clickHigh);
+		Thread.sleep(4000);
+		
+		OverduePOM.clickclear().click();
+		test.log(LogStatus.PASS, "Clear Button is working");
+		Thread.sleep(7000);
+		
+		/*
 		Thread.sleep(4000);
 		CFOcountPOM.clickAdvancedSearch().click();
 		Thread.sleep(3000);
@@ -1219,7 +1240,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 			CFOcountPOM.clickExportExcel().click();
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "Advanced Search -After Selecting Month - Export successfully");
-			//clickStartDate1().click();*/
+			//clickStartDate1().click();
 			CFOcountPOM.clickStartDate11().sendKeys("23-Nov-2022");
 			CFOcountPOM.clickLastDate11().sendKeys("30-Nov-2022");
 			Thread.sleep(2000);
@@ -1228,6 +1249,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 			test.log(LogStatus.PASS, "Advanced Search -Apply Button Working  successfully");
 			CFOcountPOM.closeDocumentAS().click();
 			Thread.sleep(2000);
+			*/
 			performer.OverduePOM.clickDashboard().click();
 	}
 	
@@ -2196,8 +2218,8 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 		Thread.sleep(1000);
 		OverduePOM.clickcomplianceType().click();
 		Thread.sleep(1000);
-		OverduePOM.clickcomplianceSta().click();
-		Thread.sleep(1000);
+	//	OverduePOM.clickcomplianceSta().click();
+	//	Thread.sleep(1000);
 		OverduePOM.clickcomplianceIN().click();
 		Thread.sleep(4000);
 		CFOcountPOM.clickExportImage().click();			//Exporting (Downloading) file
@@ -2232,6 +2254,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 		OverduePOM.clickclearBtn().click();
 		test.log(LogStatus.PASS, "Clear Button is working");
 		Thread.sleep(7000);
+		/*
 		CFOcountPOM.clickAdvancedSearch().click();
 		Thread.sleep(8000);
 		
@@ -2258,7 +2281,7 @@ jse.executeScript("arguments[0].click();", click1);
 	Thread.sleep(4000);*/
 	Thread.sleep(1000);
 //	OverduePOM.clickcomplianceINASMA().click();
-	
+	/*
 		Thread.sleep(3000);
 		By locator1 = By.xpath("//*[@id='grid1']/div[2]/table/tbody/tr[1]/td/a[1]");
 		
@@ -2317,6 +2340,7 @@ jse.executeScript("arguments[0].click();", click1);
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "Advanced Search-After Apply Month-Export Succefully");
 			//clickStartDate1().click();*/
+	/*
 			CFOcountPOM.clickStartDate11().sendKeys("23-Nov-2022");
 			CFOcountPOM.clickLastDate11().sendKeys("30-Nov-2022");
 			Thread.sleep(2000);
@@ -2340,6 +2364,7 @@ jse.executeScript("arguments[0].click();", click1);
 			test.log(LogStatus.PASS, "Advanced Search-Clear Button is working");
 			CFOcountPOM.closeDocumentAS().click();
 			Thread.sleep(2000);
+			*/
 			OverduePOM.clickDashboard().click();
 	}
 	

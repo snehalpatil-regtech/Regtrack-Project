@@ -88,9 +88,17 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement EntityLocationExpand()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//*[@class='k-icon k-i-expand']"));
+		categories = getDriver().findElement(By.xpath("//span[@class='k-checkbox-label checkbox-span']"));
 		return categories;
 	}
+	
+	public static WebElement SelectAll1()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("(//span[.='Select All'])[1]"));
+		return categories;
+	}
+
+	
 	
 	public static WebElement EntityLocationExpand1()		//Method for closing Message Popup
 	{
@@ -199,7 +207,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement EntityLocationExpandASAu()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[16]"));
+		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[3]"));
 		return categories;
 	}
 	
@@ -3582,7 +3590,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		Thread.sleep(500);
 		EntityLocationExpand().click();
 		Thread.sleep(500);
-		EntityLocationExpand().click();
+		SelectAll1().click();
 		Thread.sleep(500);
       String locationtext =EntityLocationExpandASAu().getText();
        Thread.sleep(500);

@@ -1044,6 +1044,14 @@ public class OverduePOM extends BasePage
 		return performer;
 	}
 	
+	public static WebElement clickclear( )			//Searching 'My Workspace' element.
+	{
+		performer = getDriver().findElement(By.xpath("//button[@id='Clearfilter']"));	//*[@onclick='CheckProduct();']
+		return performer;
+	}
+
+	
+	
 	public static WebElement clickclearBtnA( )			//Searching 'My Workspace' element.
 	{
 		performer = getDriver().findElement(By.xpath("//*[@id='Clearfilter']"));	//*[@onclick='CheckProduct();']
@@ -1065,7 +1073,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickcomplianceSta( )			//Searching 'My Workspace' element.
 	{
-		performer = getDriver().findElement(By.xpath("(//span[@class='k-checkbox-wrapper'])[1]"));	//*[@onclick='CheckProduct();']
+		performer = getDriver().findElement(By.xpath("(//span[@class='k-in'])[20]"));	//*[@onclick='CheckProduct();']
 		return performer;
 	}
 
