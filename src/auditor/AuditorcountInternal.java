@@ -50,7 +50,7 @@ public class AuditorcountInternal extends BasePage {
 	public int penalty = 0;						//Variable created for reading Penalty
 	
 	
-	public static String link = "Auditor";			//Check link in excel sheet first.
+	public static String link = "mgmt1";			//Check link in excel sheet first.
 	
 	/*public static XSSFSheet ReadExcel() throws IOException
 	{
