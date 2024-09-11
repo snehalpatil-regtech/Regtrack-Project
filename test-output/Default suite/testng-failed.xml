@@ -3,24 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="auditor.AuditorcountStatutory">
+      <class name="departmentHead.DeptStatutory">
         <methods>
-          <include name="ComplianceDocumentsSF"/>
-          <include name="PerformanceSummarySF"/>
+          <include name="setBrowser"/>
           <include name="Login"/>
           <include name="Closing"/>
-          <include name="RiskSummarySF"/>
           <include name="browserClosing"/>
-          <include name="PerformerSummaryDueForPeriodSF"/>
-          <include name="DetailedReport"/>
-          <include name="ComplianceDocumentsFilter"/>
-          <include name="DepartmentSummarySF"/>
-          <include name="setBrowser"/>
-          <include name="DeviationApproverColDSAu"/>
-          <include name="DetailedReportSF"/>
-          <include name="ComplianceDocumentsDAM"/>
+          <include name="CompletionStatusFilter"/>
         </methods>
-      </class> <!-- auditor.AuditorcountStatutory -->
+      </class> <!-- departmentHead.DeptStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

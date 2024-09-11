@@ -50,7 +50,7 @@ public class DeptStatutory extends BasePage {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Department";           //Check link in excel sheet first.
+	public static String link = "mgmt1";           //Check link in excel sheet first.
 			
 		
 	/*
@@ -65,7 +65,7 @@ public class DeptStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -113,6 +113,231 @@ public class DeptStatutory extends BasePage {
 			
 		}
 	}
+	
+	
+//	@Test(priority = 1)
+	void Entities() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entities");
+		
+		ApprovalcountPOM.Entities( test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 2)
+	void LocationCount() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Location");
+		
+		ApprovalcountPOM.LocationCount( test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 3)
+	void DepartmentCountMatch() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Department'");
+		
+		
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		String string_Categories =CFOcountPOM.clickCategories().getText();		//Storing old value of Statutory overdue.
+	int	CategoriesCountDas = Integer.parseInt(string_Categories);
+		CFOcountPOM.clickCategories().click();
+		Thread.sleep(5000);
+		
+	//	litigationPerformer.MethodsPOM.progress();
+		
+		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD1().click();					//Clicking on total items count
+		Thread.sleep(500);
+		String item = CFOcountPOM.readTotalItemsD1().getText();	//Reading total items String value
+		String[] bits = item.split(" ");								//Splitting the String
+		String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of users)
+		int CatcountGrid = Integer.parseInt(compliancesCount);
+		
+		if(CategoriesCountDas == CatcountGrid)
+		{
+		
+			test.log(LogStatus.PASS, "No of Categories in the grid = "+CatcountGrid+" | Dashboard Categories  Count = "+CategoriesCountDas);
+		}
+		else
+		{
+			
+			test.log(LogStatus.FAIL, "No of Categories in the grid = "+CatcountGrid+" | Dashboard Categories  Count = "+CategoriesCountDas);
+		}
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(2000,0)");     //Scrolling UP window by 2000 px.
+		Thread.sleep(3000);
+		getDriver().switchTo().defaultContent();
+		
+		Thread.sleep(4000);
+		
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(2000);
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 5)
+	void CompliancesCountMatch() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Compliances'");
+		
+		
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		String string_Compliances =CFOcountPOM.readCompliances().getText();		//Storing old value of Statutory overdue.
+	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
+		CFOcountPOM.readCompliances().click();
+		Thread.sleep(2000);
+		
+	//	litigationPerformer.MethodsPOM.progress();
+		
+		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(5000);
+		CFOcountPOM.clickExportImage().click();                    //export excel
+		Thread.sleep(5000);
+		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+	
+		
+		js.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on total items count
+		Thread.sleep(500);
+		String item = CFOcountPOM.readTotalItemsD().getText();	//Reading total items String value
+		String[] bits = item.split(" ");								//Splitting the String
+		String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of users)
+		int ComcountGrid = Integer.parseInt(compliancesCount);
+		if(CompliancesCountDas == ComcountGrid)
+		{
+			//test.log(LogStatus.PASS, "Number of Compliances grid matches to Dashboard Compliances  Count.");
+			test.log(LogStatus.PASS, "No of Compliances in the grid = "+ComcountGrid+" | Dashboard Compliances  Count = "+CompliancesCountDas);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "Number of compliances does not matches to Dashboard Statutory Overdue Count.");
+			test.log(LogStatus.FAIL, "No of Compliances in the grid = "+ComcountGrid+" | Dashboard Compliances  Count = "+CompliancesCountDas);
+		}
+	//	js.executeScript("window.scrollBy(500,0)");						//Scrolling UP window by 2000 px.
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(4000);
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(3000);
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+// @Test(priority = 7)
+	void UsersCountMatch() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Users'");
+		
+		
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		String string_User =CFOcountPOM.clickUsersCount().getText();		//Storing old value of Statutory overdue.
+	int	UserCountDas = Integer.parseInt(string_User);
+		CFOcountPOM.clickUsersCount().click();
+		Thread.sleep(2000);
+		
+		//litigationPerformer.MethodsPOM.progress();
+		
+		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on total items count
+		Thread.sleep(500);
+		String item = CFOcountPOM.readTotalItemsD().getText();	//Reading total items String value
+		String[] bits = item.split(" ");								//Splitting the String
+		String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of users)
+		int UserGrid = Integer.parseInt(compliancesCount);
+		if(UserCountDas == UserGrid)
+		{
+		//	test.log(LogStatus.PASS, "Number of User grid matches to Dashboard User  Count.");
+			test.log(LogStatus.PASS, "No of User in the grid = "+UserGrid+" | Dashboard User  Count = "+UserCountDas);
+		}
+		else
+		{
+		//	test.log(LogStatus.FAIL, "Number of User does not matches to Dashboard User  Count.");
+			test.log(LogStatus.FAIL, "No of User in the grid = "+UserGrid+" | Dashboard User  Count = "+UserCountDas);
+		}
+		
+		js.executeScript("window.scrollBy(500,0)");						//Scrolling UP window by 2000 px.
+		Thread.sleep(4000);
+		CFOcountPOM.clickExportImage().click();
+		Thread.sleep(5000);
+		test.log(LogStatus.PASS, "Excel file Export Successfully");
+		Thread.sleep(3000);
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		CFOcountPOM.closeCategories().click();
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+//	@Test(priority = 9)
+	void SummaryofOverdueCompliances() throws InterruptedException
+	{
+		test = extent.startTest(" Summary of Overdue Compliances");
+		
+		Thread.sleep(4000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		
+		if(CFOcountPOM.ClickShowAll().isEnabled()) {
+			CFOcountPOM.ClickShowAll().click();        //Clicking on Show All
+			Thread.sleep(3000);
+			test.log(LogStatus.PASS, " 'Show All ' link Clickable Successfully");
+			}
+		
+		Thread.sleep(3000);
+	//	litigationPerformer.MethodsPOM.progress();
+		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		
+	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
+	getDriver().switchTo().frame(farme);
+      Thread.sleep(55000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
+		 Thread.sleep(4000); 
+					
+		 CFOcountPOM.clickExportImage1().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(4000);
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td/a[1]");
+		
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(4000);
+			// retrieving "foo-button" HTML element
+			List<WebElement> ViewButtons = getDriver().findElements(locator);							
+			ViewButtons.get(1).click();
+			Thread.sleep(3000);
+			test.log(LogStatus.PASS, "overView Successfully");
+			CFOcountPOM.closeDocument().click();
+			Thread.sleep(3000);
+			getDriver().switchTo().defaultContent();
+			
+			Thread.sleep(3000);
+			CFOcountPOM.closeCategories().click();
+			Thread.sleep(1000);
+		extent.endTest(test);
+		extent.flush();			
+		
+	}
+	
 	
 //	@Test(priority = 11)
 	void NotCompleted_PieChart() throws InterruptedException
@@ -890,7 +1115,7 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 10)
+	@Test(priority = 10)
 	void CompletionStatusFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of \"Performance Summary Graph for Completion Status - Critical Risk or not?");
@@ -912,16 +1137,18 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	//	@Test(priority = 19)
+//	@Test(priority = 19)
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException
 	{
 		Thread.sleep(2000);
 		Thread.sleep(2000);
+		
 		DeptCountPOM.SelectYear().click();
 		Thread.sleep(1000);
 		DeptCountPOM.SelectAll().click();
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
+		
 		Thread.sleep(4000);
 		Thread.sleep(500);		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -929,7 +1156,7 @@ public class DeptStatutory extends BasePage {
 		
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		String NotCompleted = CFOcountPOM.clickFinanceOverdueDept().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -967,6 +1194,7 @@ public class DeptStatutory extends BasePage {
 		
 	
 		Thread.sleep(3000);
+	
 		String ClosedTimely = CFOcountPOM.clickClosedTimelyDpt().getText();		//Reading the Closed Timely value of Human Resource
 		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Closed_Timely = Integer.parseInt(ClosedTimely);						
@@ -983,6 +1211,7 @@ public class DeptStatutory extends BasePage {
 		
 		
 		Thread.sleep(2000);
+		
 		Thread.sleep(500);
 		String PendingReview = CFOcountPOM.clickPendingReviewDept().getText();	//Reading the Pending For Review value of Human Resource
 	//	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
@@ -1000,7 +1229,7 @@ public class DeptStatutory extends BasePage {
 		
 		
 			Thread.sleep(3000);
-		/*	String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+			String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
 			NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 			int Not_Applicable = Integer.parseInt(NotApplicable);						
 			if(Not_Applicable > 0)
@@ -1028,7 +1257,7 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "Rejected Compliance Count = "+ Rejected + ".");
-		}*/
+		}
 		Thread.sleep(500);
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 		
@@ -1036,7 +1265,7 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 20)
+//	@Test(priority = 20)
 	void DeptSummaryFilter() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Lable,Status,Department,License Type,Mitigation plan are working on the graph of Department Summary - Overdue Status or not?");
@@ -1099,7 +1328,7 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+RiskCritical_ClosedDelayed);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
 		int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimelyDpt().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskCritical_ClosedTimely > 0)
 		{
@@ -1123,7 +1352,7 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
-		}*/
+		}
 		
 		Thread.sleep(2000);
 		extent.endTest(test);
@@ -1199,7 +1428,7 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'High - Closed Timely' Count = "+RiskHigh_ClosedTimely);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
 		int RiskHigh_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskHighNotApplicableDE().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskHigh_NotApplicable > 0)
 		{
@@ -1210,7 +1439,7 @@ public class DeptStatutory extends BasePage {
 		else
 		{
 			test.log(LogStatus.PASS, "'High - Not Applicable' Count = "+RiskHigh_NotApplicable);
-		}*/
+		}
 		
 		extent.endTest(test);
 		extent.flush();
@@ -1283,7 +1512,7 @@ public class DeptStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
 		}
 		
-	/*	Thread.sleep(3000);
+		Thread.sleep(3000);
 		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicableDE().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskMedium_NotApplicable > 0)
 		{
@@ -1295,7 +1524,7 @@ public class DeptStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Medium - Not Applicable' Count = "+RiskMedium_NotApplicable);
 		}
-		*/
+		
 		extent.endTest(test);
 		extent.flush();
 	}
@@ -2934,6 +3163,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
+		/*
 		@Test(priority = 42)
 		void DepartmentSummarySF() throws InterruptedException, IOException
 		{
@@ -2976,7 +3206,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	
+	*/
 	
 	@AfterMethod
   	void browserClosing() throws InterruptedException

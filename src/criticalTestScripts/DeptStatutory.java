@@ -1321,7 +1321,7 @@ public class DeptStatutory extends BasePage {
 		}
 		
 		Thread.sleep(3000);
-		/*
+		
 		int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimelyDpt().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskCritical_ClosedTimely > 0)
 		{
@@ -1346,7 +1346,7 @@ public class DeptStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
 		}
-		*/
+		
 		Thread.sleep(2000);
 		extent.endTest(test);
 		extent.flush();

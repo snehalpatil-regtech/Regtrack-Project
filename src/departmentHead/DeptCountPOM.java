@@ -137,6 +137,29 @@ public class DeptCountPOM extends BasePage {
 		return categories;
 	}
 	
+	public static WebElement Apply1()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//button[@id='Applybtn']"));
+		
+		return categories;
+	}
+
+	public static WebElement Period()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='divAdvanceSearchModel']/div[2]/span[1]"));
+		
+		return categories;
+	}
+
+	
+	public static WebElement PeriodDD()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//li[.='All Period']"));
+		
+		return categories;
+	}
+
+	
 	public static WebElement StatusDe()		//Method for closing Message Popup
 	{
 		categories = getDriver().findElement(By.xpath("//*[@id='grid']/div[1]/div[1]/div/div[3]/div"));
@@ -145,7 +168,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement Status1()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
+		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[16]"));
 		return categories;
 	}
 	
@@ -3606,6 +3629,13 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
        Thread.sleep(500);
        Status().click();
        Thread.sleep(6000);
+       Period().click();
+       Thread.sleep(6000);
+       PeriodDD().click();
+       Thread.sleep(6000);     
+       Apply1().click();
+       Thread.sleep(6000);
+       
         List<String> li=new ArrayList<String>();
         
         li.add(locationtext);
@@ -3616,7 +3646,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		filter.add("Location");
 		filter.add("Status");	
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,150)");	
+		js.executeScript("window.scrollBy(0,1000)");	
 		Thread.sleep(3000);
 		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
 		String s = CFOcountPOM.readTotalItemsD().getText();
@@ -3624,9 +3654,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		if(!s.equalsIgnoreCase("No items to display")) {
 		Thread.sleep(5000);
 	
-		List<WebElement> entitycol=getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[4]"));
+		List<WebElement> entitycol=getDriver().findElements(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[6]"));
 		
-		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr/td[13]"));
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[15]"));
 		
 		Thread.sleep(2000);
 
@@ -3691,7 +3721,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 			test.log(LogStatus.PASS,"No records found");	
 		}
 		Thread.sleep(3000);
-		
+		/*
 		CFOcountPOM.clickAdvancedSearch().click();
 		Thread.sleep(3000);
 		
@@ -3793,8 +3823,10 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		}
 		
 		Thread.sleep(3000);
+		
 		CFOcountPOM.closeDocumentAS().click();
 		Thread.sleep(3000);
+		*/
 	
 				OverduePOM.clickDashboard().click();
 		

@@ -409,7 +409,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement SelectActF11D ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[45]"));
+		compliances = getDriver().findElement(By.cssSelector("#\\39 230129d-935d-44fd-ba4e-ec7dd262c1dd_tv_active > div > span.k-in"));
 		return compliances;
 	}
 	
@@ -5378,7 +5378,7 @@ else {
 		Thread.sleep(3000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,500)");			
+		js.executeScript("window.scrollBy(0,600)");			
 	
 		Thread.sleep(3000);
 		int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
@@ -5398,11 +5398,13 @@ else {
     
        Thread.sleep(3000);
        SelectActF().click();
-       Thread.sleep(500);
+       Thread.sleep(2000);
        String Acttext =SelectActF11D().getText();
-       Thread.sleep(500);
+       Thread.sleep(2000);
        SelectActF11D().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);
