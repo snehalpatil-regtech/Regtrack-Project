@@ -5,11 +5,36 @@
     <classes>
       <class name="departmentHead.DeptStatutory">
         <methods>
+          <include name="NotApplicable_PieChart"/>
+          <include name="RiskSummaryLowStatutory"/>
           <include name="setBrowser"/>
-          <include name="Login"/>
-          <include name="Closing"/>
           <include name="browserClosing"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
           <include name="CompletionStatusFilter"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="Inprogress_PieChartPeriod"/>
+          <include name="NotCompletionStatusFilter"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="RiskSummaryFilter"/>
+          <include name="Closing"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="Overdue_PieChart"/>
+          <include name="rejected_PieChart"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="DeptSummaryFilter"/>
+          <include name="inProgress_PieChart"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="Login"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
         </methods>
       </class> <!-- departmentHead.DeptStatutory -->
     </classes>

@@ -373,7 +373,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskHighDep ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[10]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
 		return compliances;
 	}
 	
@@ -409,9 +409,16 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement SelectActF11D ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.cssSelector("#\\39 230129d-935d-44fd-ba4e-ec7dd262c1dd_tv_active > div > span.k-in"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[41]"));
 		return compliances;
 	}
+	
+	public static WebElement SelectActF11D1 ()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[40]"));
+		return compliances;
+	}
+
 	
 	public static WebElement MitigationPlan ()		//Method for reading Compliances value on Dashboard
 	{
@@ -481,7 +488,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement StatusOverdueD ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[14]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[11]"));
 		return compliances;
 	}
 	
@@ -5561,7 +5568,7 @@ else {
 		Thread.sleep(3000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,500)");			
+		js.executeScript("window.scrollBy(0,600)");			
 	
 		Thread.sleep(3000);
 	
@@ -5586,6 +5593,8 @@ else {
        Thread.sleep(500);
        SelectActF11D().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -7253,6 +7262,8 @@ else {
        Thread.sleep(500);
        SelectActF11D().click();
        Thread.sleep(3000);
+       Thread.sleep(3000);
+       SelectActF().click();
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -7777,7 +7788,7 @@ else {
 		Thread.sleep(3000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		js.executeScript("window.scrollBy(0,1000)");			
+		js.executeScript("window.scrollBy(0,1200)");			
 	
 		Thread.sleep(3000);
 		String NotCompleted = CFOcountPOM.clickFinanceOverdueDept().getText();	
@@ -7800,10 +7811,12 @@ else {
        
        SelectActF().click();
        Thread.sleep(500);
-       String Acttext =SelectActF11D().getText();
+       String Acttext =SelectActF11D1().getText();
        Thread.sleep(500);
-       SelectActF11D().click();
+       SelectActF11D1().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);

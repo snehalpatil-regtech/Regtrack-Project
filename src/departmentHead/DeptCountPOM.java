@@ -865,33 +865,35 @@ public class DeptCountPOM extends BasePage {
 		}
 		
 		
+		CFOcountPOM.clickExportImage().click();
+		Thread.sleep(6000);
+		test.log(LogStatus.PASS, "Excel file Export Successfully");
 		Thread.sleep(8000);
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(8000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
-			Thread.sleep(8000);
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
-				Thread.sleep(8000);
-				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-				Thread.sleep(7000);
-				// retrieving "foo-button" HTML element
-				List<WebElement> ViewButton = getDriver().findElements(locator);	
-				Thread.sleep(4000);
-				
-				ViewButton.get(2).click();
-			
-				Thread.sleep(4000);
-				test.log(LogStatus.PASS, "overView successfully");
-				CFOcountPOM.closeDocument().click();
-				Thread.sleep(3000);
+		
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+  wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	Thread.sleep(8000);
 	
-		Thread.sleep(500);
+	WebElement ViewButton = getDriver().findElement(locator);	
+	Thread.sleep(3000);
+JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+jse.executeScript("arguments[0].click();", ViewButton);
+	Thread.sleep(4000);
+
 		
-		
-		Thread.sleep(500);
-		getDriver().switchTo().parentFrame();
-		CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+		test.log(LogStatus.PASS, "overView Successfully");
+		try {
+			CFOcountPOM.closeDocument().click();
+			
+			}catch(Exception e) {
+				CFOcountPOM.closeDocument1().click();
+			}
+	
+	Thread.sleep(500);
+	getDriver().switchTo().parentFrame();
+	CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+	
+	Thread.sleep(5000);					//Closing the High Risk Window.
 		
 		
 		

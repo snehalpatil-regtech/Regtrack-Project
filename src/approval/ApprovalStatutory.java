@@ -68,7 +68,7 @@ public class ApprovalStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Approver.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Approver.html",true);
 		test = extent.startTest("Loging In - Approval (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -81,7 +81,7 @@ public class ApprovalStatutory extends BasePage {
 	void Login() throws InterruptedException, IOException
 	{
 		
-		initialization1(link,5,"Statutory");
+		initialization1(link,6,"Statutory");
 	
 	/*	XSSFSheet sheet = ReadExcel();
 		Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
@@ -737,10 +737,10 @@ public class ApprovalStatutory extends BasePage {
 			
 			extent.endTest(test);
 			extent.flush();
-		}
+		}*/
 		
 		
-	//	@Test(priority = 10)
+		@Test(priority = 10)
 		void CompletionStatusFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of \"Performance Summary Graph for Completion Status - Critical Risk or not?");
@@ -751,7 +751,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 11)
+		@Test(priority = 11)
 		void NotCompletionStatusFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of \"Performance Summary Graph for Not Completed Status  -  Critical Risk or not?");
@@ -760,7 +760,7 @@ public class ApprovalStatutory extends BasePage {
 			
 			extent.endTest(test);
 			extent.flush();
-		}*/
+		}
 		
 	//	@Test(priority = 12)
 		void RiskSummaryCriticalStatutory() throws InterruptedException
