@@ -1118,7 +1118,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskCriticalNotCompletedDept( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[64]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[22]"));
 		
 
 		return risksummary;
@@ -1243,13 +1243,13 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskCriticalNotApplicableDE( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[62]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[34]"));
 		return risksummary;
 	}
 	
 	public static WebElement clickRiskHighNotApplicableDE( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[63]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[35]"));
 		return risksummary;
 	}
 	
@@ -1261,7 +1261,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskLowNotApplicableDE( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[65]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[37]"));
 		return risksummary;
 	}
 	
@@ -1280,7 +1280,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskCriticalClosedTimelyDpt( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[58]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[30]"));
 		return risksummary;
 	}
 	
@@ -1904,6 +1904,23 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
 		return department;
 	}
+	
+	
+	public static WebElement ClickInProgress( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		return department;
+	}
+	
+	public static WebElement ClickRejected( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		return department;
+	}
+	
+
+	
+	
 	
 	public static WebElement clickRejectDept( )		//Method to search 'High Risk' bar of Department Summary.
 	{

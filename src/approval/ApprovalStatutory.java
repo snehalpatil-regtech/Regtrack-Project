@@ -142,7 +142,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 	}
 	
-/*	@Test(priority = 1)
+	@Test(priority = 1)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -199,7 +199,7 @@ public class ApprovalStatutory extends BasePage {
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}/*
 	
 	@Test(priority = 2)
 		void ClosedDelayed_PieChart() throws InterruptedException
