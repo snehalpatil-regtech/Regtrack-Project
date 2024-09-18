@@ -3,17 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="departmentHead.DeptStatutory">
+      <class name="approval.ApprovalStatutory">
         <methods>
-          <include name="setBrowser"/>
-          <include name="Login"/>
-          <include name="Closing"/>
+          <include name="DeviationApproverColDSAPP"/>
           <include name="browserClosing"/>
-          <include name="Overdue_PieChartPeriod"/>
-          <include name="ComplianceDocuments"/>
-          <include name="AssignmentReport"/>
+          <include name="setBrowser"/>
+          <include name="DeviationApproverColGR1"/>
+          <include name="ComplianceDocumentsDAM"/>
+          <include name="DeviationApproverColPSDFPAPP"/>
+          <include name="DeviationApproverColPSApp"/>
+          <include name="Login"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="DeviationApproverColRSAPP"/>
+          <include name="Closing"/>
         </methods>
-      </class> <!-- departmentHead.DeptStatutory -->
+      </class> <!-- approval.ApprovalStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

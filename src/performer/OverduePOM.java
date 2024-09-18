@@ -3394,19 +3394,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationAppliedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[152]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[32]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationRejectedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[153]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[33]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationApprovedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[154]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[34]"));
 		return performer;
 	}
 	

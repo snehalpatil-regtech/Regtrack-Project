@@ -1,93 +1,981 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="11" failed="1" skipped="2">
+<testng-results ignored="0" total="54" passed="47" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-16T07:11:42 IST" name="Default suite" finished-at="2024-09-16T09:19:15 IST" duration-ms="7652674">
+  <suite started-at="2024-09-16T23:22:49 IST" name="Default suite" finished-at="2024-09-17T08:29:59 IST" duration-ms="32830650">
     <groups>
     </groups>
-    <test started-at="2024-09-16T07:11:42 IST" name="Default test" finished-at="2024-09-16T09:19:15 IST" duration-ms="7652674">
-      <class name="departmentHead.DeptStatutory">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:11:42 IST" name="setBrowser" finished-at="2024-09-16T07:11:43 IST" duration-ms="524" status="PASS">
+    <test started-at="2024-09-16T23:22:49 IST" name="Default test" finished-at="2024-09-17T08:29:59 IST" duration-ms="32830650">
+      <class name="approval.ApprovalStatutory">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:22:49 IST" name="setBrowser" finished-at="2024-09-16T23:22:49 IST" duration-ms="523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:11:43 IST" name="Login" finished-at="2024-09-16T07:13:39 IST" duration-ms="115743" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:22:49 IST" name="Login" finished-at="2024-09-16T23:25:14 IST" duration-ms="145232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="NotCompletionStatusFilter()[pri:20, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:13:39 IST" name="NotCompletionStatusFilter" finished-at="2024-09-16T07:17:07 IST" duration-ms="208145" status="PASS">
+        <test-method signature="Entities()[pri:1, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:25:14 IST" name="Entities" finished-at="2024-09-16T23:25:57 IST" duration-ms="42263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Entities -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:25:57 IST" name="browserClosing" finished-at="2024-09-16T23:25:57 IST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:25:57 IST" name="Login" finished-at="2024-09-16T23:28:07 IST" duration-ms="130335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="LocationCount()[pri:2, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:28:07 IST" name="LocationCount" finished-at="2024-09-16T23:28:13 IST" duration-ms="6132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LocationCount -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:28:13 IST" name="browserClosing" finished-at="2024-09-16T23:28:14 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:28:14 IST" name="Login" finished-at="2024-09-16T23:30:37 IST" duration-ms="143963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CategoriesCountMatch()[pri:4, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:30:37 IST" name="CategoriesCountMatch" finished-at="2024-09-16T23:31:40 IST" duration-ms="62698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CategoriesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:31:40 IST" name="browserClosing" finished-at="2024-09-16T23:31:40 IST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:31:40 IST" name="Login" finished-at="2024-09-16T23:34:16 IST" duration-ms="155133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CompliancesCountMatch()[pri:5, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:34:16 IST" name="CompliancesCountMatch" finished-at="2024-09-16T23:35:10 IST" duration-ms="54623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompliancesCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:35:10 IST" name="browserClosing" finished-at="2024-09-16T23:35:10 IST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:35:10 IST" name="Login" finished-at="2024-09-16T23:37:31 IST" duration-ms="140756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="UsersCountMatch()[pri:8, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:37:31 IST" name="UsersCountMatch" finished-at="2024-09-16T23:38:29 IST" duration-ms="57599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UsersCountMatch -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:38:29 IST" name="browserClosing" finished-at="2024-09-16T23:38:29 IST" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:38:29 IST" name="Login" finished-at="2024-09-16T23:40:52 IST" duration-ms="143056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="SummaryofOverdueCompliances()[pri:9, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:40:52 IST" name="SummaryofOverdueCompliances" finished-at="2024-09-16T23:41:44 IST" duration-ms="52056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SummaryofOverdueCompliances -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:41:44 IST" name="browserClosing" finished-at="2024-09-16T23:41:44 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:41:44 IST" name="Login" finished-at="2024-09-16T23:43:59 IST" duration-ms="134777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotCompleted_PieChart()[pri:10, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:43:59 IST" name="NotCompleted_PieChart" finished-at="2024-09-16T23:50:13 IST" duration-ms="373672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotCompleted_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:50:13 IST" name="browserClosing" finished-at="2024-09-16T23:50:13 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:50:13 IST" name="Login" finished-at="2024-09-16T23:52:43 IST" duration-ms="149879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ClosedDelayed_PieChart()[pri:11, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:52:43 IST" name="ClosedDelayed_PieChart" finished-at="2024-09-16T23:58:32 IST" duration-ms="349076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosedDelayed_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:58:32 IST" name="browserClosing" finished-at="2024-09-16T23:58:32 IST" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-16T23:58:32 IST" name="Login" finished-at="2024-09-17T00:01:03 IST" duration-ms="150939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ClosedTimely_PieChart()[pri:12, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:01:03 IST" name="ClosedTimely_PieChart" finished-at="2024-09-17T00:07:58 IST" duration-ms="415236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosedTimely_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:07:58 IST" name="browserClosing" finished-at="2024-09-17T00:07:59 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:07:59 IST" name="Login" finished-at="2024-09-17T00:10:39 IST" duration-ms="160691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotApplicable_PieChart()[pri:13, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:10:39 IST" name="NotApplicable_PieChart" finished-at="2024-09-17T00:16:41 IST" duration-ms="361439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotApplicable_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:16:41 IST" name="browserClosing" finished-at="2024-09-17T00:16:41 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:16:41 IST" name="Login" finished-at="2024-09-17T00:19:14 IST" duration-ms="152842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="Overdue_PieChart()[pri:14, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:19:14 IST" name="Overdue_PieChart" finished-at="2024-09-17T00:24:52 IST" duration-ms="338383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Overdue_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:24:52 IST" name="browserClosing" finished-at="2024-09-17T00:24:52 IST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:24:52 IST" name="Login" finished-at="2024-09-17T00:27:31 IST" duration-ms="158534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="dueToday_PieChart()[pri:15, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:27:31 IST" name="dueToday_PieChart" finished-at="2024-09-17T00:33:13 IST" duration-ms="342488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dueToday_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:33:13 IST" name="browserClosing" finished-at="2024-09-17T00:33:14 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:33:14 IST" name="Login" finished-at="2024-09-17T00:35:40 IST" duration-ms="145915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="pendingForReview_PieChart()[pri:16, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:35:40 IST" name="pendingForReview_PieChart" finished-at="2024-09-17T00:41:56 IST" duration-ms="376560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingForReview_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:41:56 IST" name="browserClosing" finished-at="2024-09-17T00:41:57 IST" duration-ms="427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:41:57 IST" name="Login" finished-at="2024-09-17T00:44:19 IST" duration-ms="142124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="inProgress_PieChart()[pri:17, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:44:19 IST" name="inProgress_PieChart" finished-at="2024-09-17T00:50:52 IST" duration-ms="393231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inProgress_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:50:52 IST" name="browserClosing" finished-at="2024-09-17T00:50:52 IST" duration-ms="377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:50:52 IST" name="Login" finished-at="2024-09-17T00:53:01 IST" duration-ms="129063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="rejected_PieChart()[pri:18, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:53:01 IST" name="rejected_PieChart" finished-at="2024-09-17T00:59:34 IST" duration-ms="392733" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejected_PieChart -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:59:34 IST" name="browserClosing" finished-at="2024-09-17T00:59:35 IST" duration-ms="474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T00:59:35 IST" name="Login" finished-at="2024-09-17T01:01:58 IST" duration-ms="142998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="CompletionStatusFilter()[pri:19, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:01:58 IST" name="CompletionStatusFilter" finished-at="2024-09-17T01:04:52 IST" duration-ms="174054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompletionStatusFilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:04:52 IST" name="browserClosing" finished-at="2024-09-17T01:04:52 IST" duration-ms="468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:04:52 IST" name="Login" finished-at="2024-09-17T01:07:35 IST" duration-ms="163060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotCompletionStatusFilter()[pri:20, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:07:35 IST" name="NotCompletionStatusFilter" finished-at="2024-09-17T01:10:03 IST" duration-ms="147711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NotCompletionStatusFilter -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:17:07 IST" name="browserClosing" finished-at="2024-09-16T07:17:08 IST" duration-ms="1292" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:10:03 IST" name="browserClosing" finished-at="2024-09-17T01:10:03 IST" duration-ms="403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:17:08 IST" name="Login" finished-at="2024-09-16T07:18:53 IST" duration-ms="104432" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:10:03 IST" name="Login" finished-at="2024-09-17T01:13:13 IST" duration-ms="189504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ClosedDelayed_PieChartPeriod()[pri:29, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:18:53 IST" name="ClosedDelayed_PieChartPeriod" finished-at="2024-09-16T07:29:26 IST" duration-ms="633675" status="PASS">
+        <test-method signature="BargraphIndustrySpeCriticalStatutory()[pri:21, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:13:13 IST" name="BargraphIndustrySpeCriticalStatutory" finished-at="2024-09-17T01:21:43 IST" duration-ms="510524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeCriticalStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:21:43 IST" name="browserClosing" finished-at="2024-09-17T01:21:44 IST" duration-ms="561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:21:44 IST" name="Login" finished-at="2024-09-17T01:24:07 IST" duration-ms="142748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeHighStatutory()[pri:22, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:24:07 IST" name="BargraphIndustrySpeHighStatutory" finished-at="2024-09-17T01:31:47 IST" duration-ms="460694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeHighStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:31:47 IST" name="browserClosing" finished-at="2024-09-17T01:31:48 IST" duration-ms="430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:31:48 IST" name="Login" finished-at="2024-09-17T01:34:04 IST" duration-ms="135761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeMediumStatutory()[pri:23, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:34:04 IST" name="BargraphIndustrySpeMediumStatutory" finished-at="2024-09-17T01:42:07 IST" duration-ms="483615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeMediumStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:42:07 IST" name="browserClosing" finished-at="2024-09-17T01:42:08 IST" duration-ms="524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:42:08 IST" name="Login" finished-at="2024-09-17T01:44:21 IST" duration-ms="133727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="BargraphIndustrySpeLowStatutory()[pri:24, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:44:21 IST" name="BargraphIndustrySpeLowStatutory" finished-at="2024-09-17T01:52:29 IST" duration-ms="487978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BargraphIndustrySpeLowStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:52:29 IST" name="browserClosing" finished-at="2024-09-17T01:52:30 IST" duration-ms="568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:52:30 IST" name="Login" finished-at="2024-09-17T01:54:39 IST" duration-ms="129310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryCriticalStatutory()[pri:25, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T01:54:39 IST" name="RiskSummaryCriticalStatutory" finished-at="2024-09-17T02:01:16 IST" duration-ms="396580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryCriticalStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:01:16 IST" name="browserClosing" finished-at="2024-09-17T02:01:16 IST" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:01:16 IST" name="Login" finished-at="2024-09-17T02:03:33 IST" duration-ms="136615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryHighStatutory()[pri:26, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:03:33 IST" name="RiskSummaryHighStatutory" finished-at="2024-09-17T02:12:19 IST" duration-ms="525891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryHighStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:12:19 IST" name="browserClosing" finished-at="2024-09-17T02:12:19 IST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:12:19 IST" name="Login" finished-at="2024-09-17T02:14:44 IST" duration-ms="145020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryMediumStatutory()[pri:27, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:14:44 IST" name="RiskSummaryMediumStatutory" finished-at="2024-09-17T02:22:53 IST" duration-ms="488757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryMediumStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:22:53 IST" name="browserClosing" finished-at="2024-09-17T02:22:54 IST" duration-ms="508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:22:54 IST" name="Login" finished-at="2024-09-17T02:25:06 IST" duration-ms="131941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryLowStatutory()[pri:28, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:25:06 IST" name="RiskSummaryLowStatutory" finished-at="2024-09-17T02:34:16 IST" duration-ms="550067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryLowStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:34:16 IST" name="browserClosing" finished-at="2024-09-17T02:34:16 IST" duration-ms="672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:34:16 IST" name="Login" finished-at="2024-09-17T02:36:27 IST" duration-ms="130219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryFilter()[pri:29, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:36:27 IST" name="RiskSummaryFilter" finished-at="2024-09-17T02:38:33 IST" duration-ms="126714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryFilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:38:33 IST" name="browserClosing" finished-at="2024-09-17T02:38:34 IST" duration-ms="408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:38:34 IST" name="Login" finished-at="2024-09-17T02:40:44 IST" duration-ms="130093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="RiskSummaryFilterNA()[pri:30, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:40:44 IST" name="RiskSummaryFilterNA" finished-at="2024-09-17T02:42:37 IST" duration-ms="113116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RiskSummaryFilterNA -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:42:37 IST" name="browserClosing" finished-at="2024-09-17T02:42:37 IST" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:42:37 IST" name="Login" finished-at="2024-09-17T02:44:47 IST" duration-ms="129807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DepartmentSummaryAccountStatutory()[pri:31, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:44:47 IST" name="DepartmentSummaryAccountStatutory" finished-at="2024-09-17T02:56:45 IST" duration-ms="718167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DepartmentSummaryAccountStatutory -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:56:45 IST" name="browserClosing" finished-at="2024-09-17T02:56:46 IST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:56:46 IST" name="Login" finished-at="2024-09-17T02:58:55 IST" duration-ms="128705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeptSummaryFilter()[pri:32, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T02:58:55 IST" name="DeptSummaryFilter" finished-at="2024-09-17T03:01:17 IST" duration-ms="142671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeptSummaryFilter -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:01:17 IST" name="browserClosing" finished-at="2024-09-17T03:01:18 IST" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:01:18 IST" name="Login" finished-at="2024-09-17T03:03:44 IST" duration-ms="146443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="NotCompleted_PieChartPeriod()[pri:33, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:03:44 IST" name="NotCompleted_PieChartPeriod" finished-at="2024-09-17T03:14:34 IST" duration-ms="649541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NotCompleted_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:14:34 IST" name="browserClosing" finished-at="2024-09-17T03:14:34 IST" duration-ms="548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:14:34 IST" name="Login" finished-at="2024-09-17T03:16:46 IST" duration-ms="131907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ClosedDelayed_PieChartPeriod()[pri:34, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:16:46 IST" name="ClosedDelayed_PieChartPeriod" finished-at="2024-09-17T03:26:02 IST" duration-ms="555874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClosedDelayed_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:29:26 IST" name="browserClosing" finished-at="2024-09-16T07:29:28 IST" duration-ms="1316" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:26:02 IST" name="browserClosing" finished-at="2024-09-17T03:26:03 IST" duration-ms="656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:29:28 IST" name="Login" finished-at="2024-09-16T07:31:18 IST" duration-ms="110590" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:26:03 IST" name="Login" finished-at="2024-09-17T03:28:14 IST" duration-ms="130857" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ClosedTimely_PieChartPeriod()[pri:30, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:31:18 IST" name="ClosedTimely_PieChartPeriod" finished-at="2024-09-16T07:41:52 IST" duration-ms="634167" status="PASS">
+        <test-method signature="ClosedTimely_PieChartPeriod()[pri:35, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:28:14 IST" name="ClosedTimely_PieChartPeriod" finished-at="2024-09-17T03:37:27 IST" duration-ms="553731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClosedTimely_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:41:52 IST" name="browserClosing" finished-at="2024-09-16T07:41:54 IST" duration-ms="1274" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:37:27 IST" name="browserClosing" finished-at="2024-09-17T03:37:28 IST" duration-ms="512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:41:54 IST" name="Login" finished-at="2024-09-16T07:43:38 IST" duration-ms="104722" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:37:28 IST" name="Login" finished-at="2024-09-17T03:39:32 IST" duration-ms="124144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="NotApplicable_PieChartPeriod()[pri:31, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:43:38 IST" name="NotApplicable_PieChartPeriod" finished-at="2024-09-16T07:54:10 IST" duration-ms="631432" status="PASS">
+        <test-method signature="NotApplicable_PieChartPeriod()[pri:36, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:39:32 IST" name="NotApplicable_PieChartPeriod" finished-at="2024-09-17T03:48:50 IST" duration-ms="557571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NotApplicable_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:54:10 IST" name="browserClosing" finished-at="2024-09-16T07:54:11 IST" duration-ms="1280" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:48:50 IST" name="browserClosing" finished-at="2024-09-17T03:48:50 IST" duration-ms="702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:54:11 IST" name="Login" finished-at="2024-09-16T07:56:17 IST" duration-ms="126068" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:48:50 IST" name="Login" finished-at="2024-09-17T03:50:59 IST" duration-ms="128394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Overdue_PieChartPeriod()[pri:32, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T07:56:17 IST" name="Overdue_PieChartPeriod" finished-at="2024-09-16T08:01:14 IST" duration-ms="297351" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="Overdue_PieChartPeriod()[pri:37, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:50:59 IST" name="Overdue_PieChartPeriod" finished-at="2024-09-17T03:59:47 IST" duration-ms="527760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Overdue_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:59:47 IST" name="browserClosing" finished-at="2024-09-17T03:59:47 IST" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T03:59:47 IST" name="Login" finished-at="2024-09-17T04:02:03 IST" duration-ms="136319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="pendingForReview_PieChartPeriod()[pri:38, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:02:03 IST" name="pendingForReview_PieChartPeriod" finished-at="2024-09-17T04:10:53 IST" duration-ms="529736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pendingForReview_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:10:53 IST" name="browserClosing" finished-at="2024-09-17T04:10:54 IST" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:10:54 IST" name="Login" finished-at="2024-09-17T04:13:02 IST" duration-ms="128419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="inProgress_PieChartPeriod()[pri:39, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:13:02 IST" name="inProgress_PieChartPeriod" finished-at="2024-09-17T04:22:22 IST" duration-ms="559590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inProgress_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:22:22 IST" name="browserClosing" finished-at="2024-09-17T04:22:22 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:22:22 IST" name="Login" finished-at="2024-09-17T04:25:51 IST" duration-ms="208311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="Upcoming_PieChartPeriod()[pri:40, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:25:51 IST" name="Upcoming_PieChartPeriod" finished-at="2024-09-17T04:35:11 IST" duration-ms="560089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Upcoming_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:35:11 IST" name="browserClosing" finished-at="2024-09-17T04:35:11 IST" duration-ms="465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:35:11 IST" name="Login" finished-at="2024-09-17T04:37:20 IST" duration-ms="128384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="rejected_PieChartPeriod()[pri:41, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T04:37:20 IST" name="rejected_PieChartPeriod" finished-at="2024-09-17T07:39:08 IST" duration-ms="10908432" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='k-pager-info k-label']"}
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
   (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eef011662d5e31c1f3a9c23455b52a3e
-*** Element info: {Using=xpath, value=//*[@class='k-pager-info k-label']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53276}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9747c356c430f272cba096f011fe31d5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='k-pager-info k-label']"}
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53276}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9747c356c430f272cba096f011fe31d5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+at approval.ApprovalcountPOM.GraphCountPe1Sta(ApprovalcountPOM.java:2119)
+at approval.ApprovalStatutory.rejected_PieChartPeriod(ApprovalStatutory.java:3075)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejected_PieChartPeriod -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:39:08 IST" name="browserClosing" finished-at="2024-09-17T07:39:25 IST" duration-ms="17116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:39:25 IST" name="Login" finished-at="2024-09-17T07:44:36 IST" duration-ms="310696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColSOO()[pri:42, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:44:36 IST" name="DeviationApproverColSOO" finished-at="2024-09-17T07:45:18 IST" duration-ms="42317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColSOO -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:45:18 IST" name="browserClosing" finished-at="2024-09-17T07:45:18 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:45:18 IST" name="Login" finished-at="2024-09-17T07:47:23 IST" duration-ms="124812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationClosureStatuscolSOO()[pri:43, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:47:23 IST" name="DeviationClosureStatuscolSOO" finished-at="2024-09-17T07:47:47 IST" duration-ms="23872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationClosureStatuscolSOO -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:47:47 IST" name="browserClosing" finished-at="2024-09-17T07:47:47 IST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:47:47 IST" name="Login" finished-at="2024-09-17T07:49:56 IST" duration-ms="128596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="SOOStatus()[pri:44, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:49:56 IST" name="SOOStatus" finished-at="2024-09-17T07:50:11 IST" duration-ms="14892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SOOStatus -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:50:11 IST" name="browserClosing" finished-at="2024-09-17T07:50:11 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:50:11 IST" name="Login" finished-at="2024-09-17T07:52:12 IST" duration-ms="121080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColPSApp()[pri:45, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:52:12 IST" name="DeviationApproverColPSApp" finished-at="2024-09-17T07:53:34 IST" duration-ms="81725" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60638}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 620bf60ae9eb513368f55c87b34da566]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60638}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 620bf60ae9eb513368f55c87b34da566
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at cfo.CFOcountPOM.DeviationApproverColPSApp(CFOcountPOM.java:10642)
+at approval.ApprovalStatutory.DeviationApproverColPSApp(ApprovalStatutory.java:3471)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColPSApp -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:53:34 IST" name="browserClosing" finished-at="2024-09-17T07:53:34 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:53:34 IST" name="Login" finished-at="2024-09-17T07:55:44 IST" duration-ms="130364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColRSAPP()[pri:46, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:55:44 IST" name="DeviationApproverColRSAPP" finished-at="2024-09-17T07:57:03 IST" duration-ms="78570" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60832}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4ebf5f6f68bd0c7b1bbd77a20e850a5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60832}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e4ebf5f6f68bd0c7b1bbd77a20e850a5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at cfo.CFOcountPOM.DeviationApproverColRSAPP(CFOcountPOM.java:11255)
+at approval.ApprovalStatutory.DeviationApproverColRSAPP(ApprovalStatutory.java:3482)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColRSAPP -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:57:03 IST" name="browserClosing" finished-at="2024-09-17T07:57:03 IST" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:57:03 IST" name="Login" finished-at="2024-09-17T07:59:06 IST" duration-ms="123072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColDSAPP()[pri:47, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T07:59:06 IST" name="DeviationApproverColDSAPP" finished-at="2024-09-17T08:00:04 IST" duration-ms="57677" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 279). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 028905b97980ae5f98aacf9fd94d1078]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (401, 279). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 028905b97980ae5f98aacf9fd94d1078
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at cfo.CFOcountPOM.DeviationApproverColDSAPP(CFOcountPOM.java:11819)
+at approval.ApprovalStatutory.DeviationApproverColDSAPP(ApprovalStatutory.java:3493)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColDSAPP -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:00:04 IST" name="browserClosing" finished-at="2024-09-17T08:00:04 IST" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:00:04 IST" name="Login" finished-at="2024-09-17T08:02:07 IST" duration-ms="122936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColPSDFPAPP()[pri:48, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:02:07 IST" name="DeviationApproverColPSDFPAPP" finished-at="2024-09-17T08:04:11 IST" duration-ms="123552" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (391, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3e827347cd12fda6fa30b8c2d41d48]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="k-icon k-i-more-vertical"></span> is not clickable at point (391, 304). Other element would receive the click: <span class="k-in">...</span>
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61282}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a3e827347cd12fda6fa30b8c2d41d48
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at cfo.CFOcountPOM.DeviationApproverColPSDFPAPP(CFOcountPOM.java:12430)
+at approval.ApprovalStatutory.DeviationApproverColPSDFPAPP(ApprovalStatutory.java:3504)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColPSDFPAPP -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:04:11 IST" name="browserClosing" finished-at="2024-09-17T08:04:11 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:04:11 IST" name="Login" finished-at="2024-09-17T08:06:11 IST" duration-ms="120430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="DeviationApproverColGR1()[pri:49, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:06:11 IST" name="DeviationApproverColGR1" finished-at="2024-09-17T08:06:47 IST" duration-ms="35067" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61508}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ce6a5a744c7bd4a66e8ca17d3994db2d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61508}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ce6a5a744c7bd4a66e8ca17d3994db2d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at cfo.CFOcountPOM.DeviationApproverColGR1(CFOcountPOM.java:12997)
+at approval.ApprovalStatutory.DeviationApproverColGR1(ApprovalStatutory.java:3515)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeviationApproverColGR1 -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:06:47 IST" name="browserClosing" finished-at="2024-09-17T08:06:47 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserClosing -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:06:47 IST" name="Login" finished-at="2024-09-17T08:08:56 IST" duration-ms="128903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="ComplianceDocumentsDAM()[pri:50, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:08:56 IST" name="ComplianceDocumentsDAM" finished-at="2024-09-17T08:09:38 IST" duration-ms="42544" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='k-in'])[99]"}
   (Session info: chrome=128.0.6613.138)
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eef011662d5e31c1f3a9c23455b52a3e
-*** Element info: {Using=xpath, value=//*[@class='k-pager-info k-label']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56950ee4fe4fbe5b821492720e62bf5b
+*** Element info: {Using=xpath, value=(//*[@class='k-in'])[99]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//*[@class='k-in'])[99]"}
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
+System info: host: 'TRPL-PUN-0125', ip: '192.168.5.48', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61686}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56950ee4fe4fbe5b821492720e62bf5b
+*** Element info: {Using=xpath, value=(//*[@class='k-in'])[99]}
+at jdk.internal.reflect.GeneratedConstructorAccessor55.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -101,9 +989,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at cfo.CFOcountPOM.readTotalItemsD(CFOcountPOM.java:865)
-at departmentHead.DeptCountPOM.GraphCountInPe1(DeptCountPOM.java:1573)
-at departmentHead.DeptStatutory.Overdue_PieChartPeriod(DeptStatutory.java:2185)
+at performer.OverduePOM.DeviationAppliedCD(OverduePOM.java:3325)
+at performer.MethodsPOM.ComplianceDocumentsDAM(MethodsPOM.java:11295)
+at approval.ApprovalStatutory.ComplianceDocumentsDAM(ApprovalStatutory.java:3526)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -137,331 +1025,100 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Overdue_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:01:14 IST" name="browserClosing" finished-at="2024-09-16T08:01:16 IST" duration-ms="1285" status="PASS">
+        </test-method> <!-- ComplianceDocumentsDAM -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:09:38 IST" name="browserClosing" finished-at="2024-09-17T08:09:38 IST" duration-ms="209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:01:16 IST" name="Login" finished-at="2024-09-16T08:03:00 IST" duration-ms="104593" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:09:38 IST" name="Login" finished-at="2024-09-17T08:11:44 IST" duration-ms="125520" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="dueToday_PieChartPeriod()[pri:33, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:03:00 IST" name="dueToday_PieChartPeriod" finished-at="2024-09-16T08:11:46 IST" duration-ms="525722" status="PASS">
+        <test-method signature="DeviationApproverColCDAPP()[pri:51, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:11:44 IST" name="DeviationApproverColCDAPP" finished-at="2024-09-17T08:12:55 IST" duration-ms="70719" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dueToday_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:11:46 IST" name="browserClosing" finished-at="2024-09-16T08:11:47 IST" duration-ms="1294" status="PASS">
+        </test-method> <!-- DeviationApproverColCDAPP -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:12:55 IST" name="browserClosing" finished-at="2024-09-17T08:12:55 IST" duration-ms="219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:11:47 IST" name="Login" finished-at="2024-09-16T08:13:31 IST" duration-ms="103935" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:12:55 IST" name="Login" finished-at="2024-09-17T08:14:57 IST" duration-ms="122125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="pendingForReview_PieChartPeriod()[pri:34, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:13:31 IST" name="pendingForReview_PieChartPeriod" finished-at="2024-09-16T08:24:03 IST" duration-ms="631857" status="PASS">
+        <test-method signature="DeviationClosureStatuscolCD()[pri:52, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:14:57 IST" name="DeviationClosureStatuscolCD" finished-at="2024-09-17T08:15:22 IST" duration-ms="24972" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pendingForReview_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:24:03 IST" name="browserClosing" finished-at="2024-09-16T08:24:04 IST" duration-ms="1291" status="PASS">
+        </test-method> <!-- DeviationClosureStatuscolCD -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:15:22 IST" name="browserClosing" finished-at="2024-09-17T08:15:22 IST" duration-ms="217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:24:04 IST" name="Login" finished-at="2024-09-16T08:25:48 IST" duration-ms="103607" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:15:22 IST" name="Login" finished-at="2024-09-17T08:17:22 IST" duration-ms="119761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Inprogress_PieChartPeriod()[pri:35, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:25:48 IST" name="Inprogress_PieChartPeriod" finished-at="2024-09-16T08:36:23 IST" duration-ms="634546" status="PASS">
+        <test-method signature="DetailedReportDA()[pri:53, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:17:22 IST" name="DetailedReportDA" finished-at="2024-09-17T08:17:51 IST" duration-ms="28647" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Inprogress_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:36:23 IST" name="browserClosing" finished-at="2024-09-16T08:36:24 IST" duration-ms="1287" status="PASS">
+        </test-method> <!-- DetailedReportDA -->
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:17:51 IST" name="browserClosing" finished-at="2024-09-17T08:17:51 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:36:24 IST" name="Login" finished-at="2024-09-16T08:38:07 IST" duration-ms="103019" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:17:51 IST" name="Login" finished-at="2024-09-17T08:19:54 IST" duration-ms="123039" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Upcoming_PieChartPeriod()[pri:36, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:38:07 IST" name="Upcoming_PieChartPeriod" finished-at="2024-09-16T08:48:01 IST" duration-ms="594429" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Upcoming_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:48:01 IST" name="browserClosing" finished-at="2024-09-16T08:48:03 IST" duration-ms="1306" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:48:03 IST" name="Login" finished-at="2024-09-16T08:49:48 IST" duration-ms="105370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="rejected_PieChartPeriod()[pri:37, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T08:49:48 IST" name="rejected_PieChartPeriod" finished-at="2024-09-16T09:00:19 IST" duration-ms="630980" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- rejected_PieChartPeriod -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:00:19 IST" name="browserClosing" finished-at="2024-09-16T09:00:20 IST" duration-ms="1303" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:00:20 IST" name="Login" finished-at="2024-09-16T09:06:03 IST" duration-ms="342356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method signature="complianceCalendar()[pri:38, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:06:03 IST" name="complianceCalendar" finished-at="2024-09-16T09:07:51 IST" duration-ms="107941" status="PASS">
+        <test-method signature="complianceCalendar()[pri:64, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:19:54 IST" name="complianceCalendar" finished-at="2024-09-17T08:20:54 IST" duration-ms="60131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- complianceCalendar -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:07:51 IST" name="browserClosing" finished-at="2024-09-16T09:07:52 IST" duration-ms="1275" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:20:54 IST" name="browserClosing" finished-at="2024-09-17T08:20:54 IST" duration-ms="237" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:07:52 IST" name="Login" finished-at="2024-09-16T09:12:26 IST" duration-ms="273670" status="PASS">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:20:54 IST" name="Login" finished-at="2024-09-17T08:22:57 IST" duration-ms="122930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="DetailedReport()[pri:59, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:12:26 IST" name="DetailedReport" finished-at="2024-09-16T09:13:44 IST" duration-ms="78801" status="PASS">
+        <test-method signature="DetailedReport()[pri:65, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:22:57 IST" name="DetailedReport" finished-at="2024-09-17T08:23:46 IST" duration-ms="49086" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DetailedReport -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:13:44 IST" name="browserClosing" finished-at="2024-09-16T09:13:46 IST" duration-ms="1303" status="PASS">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:23:46 IST" name="browserClosing" finished-at="2024-09-17T08:23:46 IST" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:13:46 IST" name="Login" finished-at="2024-09-16T09:19:15 IST" duration-ms="329408" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at login.Login.UserLogin(Login.java:360)
-at login.BasePage.initialization(BasePage.java:210)
-at departmentHead.DeptStatutory.Login(DeptStatutory.java:81)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:23:46 IST" name="Login" finished-at="2024-09-17T08:25:49 IST" duration-ms="122525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AssignmentReport()[pri:62, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="AssignmentReport" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at login.Login.UserLogin(Login.java:360)
-at login.BasePage.initialization(BasePage.java:210)
-at departmentHead.DeptStatutory.Login(DeptStatutory.java:81)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="AssignmentReport()[pri:66, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:25:49 IST" name="AssignmentReport" finished-at="2024-09-17T08:26:02 IST" duration-ms="13390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssignmentReport -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="browserClosing" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:26:02 IST" name="browserClosing" finished-at="2024-09-17T08:26:03 IST" duration-ms="218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Login()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="Login" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Login()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:26:03 IST" name="Login" finished-at="2024-09-17T08:28:06 IST" duration-ms="123618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ComplianceDocuments()[pri:74, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="ComplianceDocuments" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 300.000
-  (Session info: chrome=128.0.6613.138)
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'TRPL-PUN-0125', ip: '192.168.31.67', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 127.0.6533.57 (d4459446bf8a..., userDataDir: C:\Users\shitalb\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c117aa9f366a16f12f92c1c3c0348f8
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at login.Login.UserLogin(Login.java:360)
-at login.BasePage.initialization(BasePage.java:210)
-at departmentHead.DeptStatutory.Login(DeptStatutory.java:81)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="ComplianceDocuments()[pri:74, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:28:06 IST" name="ComplianceDocuments" finished-at="2024-09-17T08:29:59 IST" duration-ms="112763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ComplianceDocuments -->
-        <test-method is-config="true" signature="browserClosing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="browserClosing" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="browserClosing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:29:59 IST" name="browserClosing" finished-at="2024-09-17T08:29:59 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserClosing -->
-        <test-method is-config="true" signature="Closing()[pri:0, instance:departmentHead.DeptStatutory@58cbafc2]" started-at="2024-09-16T09:19:15 IST" name="Closing" finished-at="2024-09-16T09:19:15 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="Closing()[pri:0, instance:approval.ApprovalStatutory@75d3a5e0]" started-at="2024-09-17T08:29:59 IST" name="Closing" finished-at="2024-09-17T08:29:59 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Closing -->
-      </class> <!-- departmentHead.DeptStatutory -->
+      </class> <!-- approval.ApprovalStatutory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
