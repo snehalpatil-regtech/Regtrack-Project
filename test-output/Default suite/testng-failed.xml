@@ -3,21 +3,55 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="approval.ApprovalStatutory">
+      <class name="criticalTestScripts.StatutoryMGMT">
         <methods>
-          <include name="DeviationApproverColDSAPP"/>
-          <include name="browserClosing"/>
-          <include name="setBrowser"/>
-          <include name="DeviationApproverColGR1"/>
-          <include name="ComplianceDocumentsDAM"/>
-          <include name="DeviationApproverColPSDFPAPP"/>
-          <include name="DeviationApproverColPSApp"/>
+          <include name="StandardReportUserIn"/>
+          <include name="dueToday_PieChart"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="StandardReportCriticalRisk"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="StandardReportRiskIN"/>
+          <include name="ComplianceDocuments"/>
+          <include name="DepartmentSummaryHumanResourceStatutory"/>
+          <include name="StandardReportOverallIN"/>
+          <include name="inProgress_PieChart"/>
+          <include name="StandardReportLocation"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="StandardReportDetailed"/>
           <include name="Login"/>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="DeviationApproverColRSAPP"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="browserClosing"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="StandardReportLocationIN"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="StandardReportCategoryIn"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="StandardReportCategory"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="StandardReportUser"/>
+          <include name="StandardReportRisk"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="setBrowser"/>
+          <include name="StandardReportOverall"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="DetailedReport"/>
+          <include name="complianceCalendar"/>
+          <include name="StandardReportDetailedIN"/>
+          <include name="StandardReportCriticalRiskIN"/>
+          <include name="AssignmentReport"/>
+          <include name="NotCompleted_PieChartPeriod"/>
           <include name="Closing"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="rejected_PieChartPeriod"/>
         </methods>
-      </class> <!-- approval.ApprovalStatutory -->
+      </class> <!-- criticalTestScripts.StatutoryMGMT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
