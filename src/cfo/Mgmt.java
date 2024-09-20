@@ -256,7 +256,7 @@
 			Thread.sleep(2000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
 			String string_Compliances =CFOcountPOM.TotalCompliancesM().getText();		//Storing old value of Statutory overdue.
-		int	CompliancesCountDas = Integer.parseInt(string_Compliances);
+			int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 			CFOcountPOM.TotalCompliancesM().click();
 			Thread.sleep(5000);
 			
