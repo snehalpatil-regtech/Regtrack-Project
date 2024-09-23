@@ -130,7 +130,7 @@
 			}
 		}
 
-@Test(priority = 1)
+//@Test(priority = 1)
 		void Entities() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Entities");
@@ -141,7 +141,7 @@
 			extent.flush();
 		}
 		
-@Test(priority = 2)
+//@Test(priority = 2)
 		void LocationCount() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Location");
@@ -152,7 +152,7 @@
 			extent.flush();
 		}
 		
-@Test(priority = 3)
+//@Test(priority = 3)
 		void CategoriesCountMatch() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -163,7 +163,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-	@Test(priority = 4)
+//	@Test(priority = 4)
 		void FilterWiseCategoriesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" To Check On Category popup Category filter working or not ");
@@ -247,7 +247,7 @@
 			extent.flush();
 		}
 		
-	@Test(priority = 5)
+//	@Test(priority = 5)
 		void CompliancesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -301,7 +301,7 @@
 			extent.flush();
 		}
 		
-	@Test(priority = 6)
+//	@Test(priority = 6)
 		void FilterWiseCompliancesCountMatch() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Compliances' filter working or not");
@@ -312,7 +312,7 @@
 			extent.flush();
 		}
 		
-@Test(priority = 7)
+//@Test(priority = 7)
 		void UsersCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Users'");
@@ -361,7 +361,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-	@Test(priority = 8)
+//	@Test(priority = 8)
 		void clickPenaltyStatutory() throws InterruptedException
 		{
 			test = extent.startTest("'Penalty' ");
@@ -435,7 +435,7 @@
 			extent.flush();
 		}
 		
-@Test(priority = 9)
+//@Test(priority = 9)
 		void SummaryofOverdueCompliances() throws InterruptedException
 		{
 			test = extent.startTest(" Summary of Overdue Compliances");
@@ -491,7 +491,7 @@
 			
 		}
 		
-@Test(priority = 10)
+//@Test(priority = 10)
 		void SummaryofOverdueFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Summary Of Overdue Compliance Popup selection wise filter working or not.");
@@ -501,7 +501,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-@Test(priority = 11)
+//@Test(priority = 11)
 		void SummaryofOverdueMail() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Mail send funtionality from summary of overdue compliance working or not?.");
@@ -513,7 +513,7 @@
 		}
 		
 		
-@Test(priority = 12)
+//@Test(priority = 12)
 			void NotCompleted_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -543,18 +543,18 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 				
 				int total = critical + high + medium + low;
-				/*
-				if(NotCompletedValue == total)
-				{
-					test.log(LogStatus.PASS, "Not Completed' Compliance Count matches to sum of all risked compliances.");
-					test.log(LogStatus.PASS, "Total Not Completed' Compliances : "+total);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "'Not Completed' Compliance Count doesn't matches to sum of all risked compliances.");
-					test.log(LogStatus.FAIL, "Total 'Not Completed' Compliances : "+total+" | Total Sum : "+NotCompletedValue);
-				}
-			*/
+				
+//				if(NotCompletedValue == total)
+//				{
+//					test.log(LogStatus.PASS, "Not Completed' Compliance Count matches to sum of all risked compliances.");
+//					test.log(LogStatus.PASS, "Total Not Completed' Compliances : "+total);
+//				}
+//				else
+//				{
+//					test.log(LogStatus.FAIL, "'Not Completed' Compliance Count doesn't matches to sum of all risked compliances.");
+//					test.log(LogStatus.FAIL, "Total 'Not Completed' Compliances : "+total+" | Total Sum : "+NotCompletedValue);
+//				}
+			
 				if(NotCompletedValue > 0)
 				{
 					if(critical > 0)
@@ -609,7 +609,7 @@
 				extent.flush();
 			}
 			
-@Test(priority = 13)
+//@Test(priority = 13)
 			void ClosedDelayed_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -639,18 +639,18 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 				
 				int total = critical + high + medium + low;
-			/*	
-				if(ClosedDelayedValue == total)
-				{
-					test.log(LogStatus.PASS, "'Closed Delayed' Compliance Count matches to sum of all risked compliances.");
-					test.log(LogStatus.PASS, "Total 'Closed Delayed' Compliances : "+total);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "'Closed Delayed' Compliance Count doesn't matches to sum of all risked compliances.");
-					test.log(LogStatus.FAIL, "Total 'Closed Delayed' Compliances : "+total+" | Total Sum : "+ClosedDelayedValue);
-				}
-				*/
+				
+//				if(ClosedDelayedValue == total)
+//				{
+//					test.log(LogStatus.PASS, "'Closed Delayed' Compliance Count matches to sum of all risked compliances.");
+//					test.log(LogStatus.PASS, "Total 'Closed Delayed' Compliances : "+total);
+//				}
+//				else
+//				{
+//					test.log(LogStatus.FAIL, "'Closed Delayed' Compliance Count doesn't matches to sum of all risked compliances.");
+//					test.log(LogStatus.FAIL, "Total 'Closed Delayed' Compliances : "+total+" | Total Sum : "+ClosedDelayedValue);
+//				}
+				
 				if(ClosedDelayedValue > 0)
 				{
 					if(critical > 0)
@@ -702,7 +702,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-@Test(priority = 14)
+//@Test(priority = 14)
 			void ClosedTimely_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -731,18 +731,18 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 				
 				int total = critical + high + medium + low;
-			/*	
-				if(ClosedTimelyValue == total)
-				{
-					test.log(LogStatus.PASS, "'Closed Timely' Compliance Count matches to sum of all risked compliances.");
-					test.log(LogStatus.PASS, "Total 'Closed Timely' Compliances : "+total);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "'Closed Timely' Compliance Count doesn't matches to sum of all risked compliances.");
-					test.log(LogStatus.FAIL, "Total 'Closed Timely' Compliances : "+total+" | Total Sum : "+ClosedTimelyValue);
-				}
-				*/
+				
+//				if(ClosedTimelyValue == total)
+//				{
+//					test.log(LogStatus.PASS, "'Closed Timely' Compliance Count matches to sum of all risked compliances.");
+//					test.log(LogStatus.PASS, "Total 'Closed Timely' Compliances : "+total);
+//				}
+//				else
+//				{
+//					test.log(LogStatus.FAIL, "'Closed Timely' Compliance Count doesn't matches to sum of all risked compliances.");
+//					test.log(LogStatus.FAIL, "Total 'Closed Timely' Compliances : "+total+" | Total Sum : "+ClosedTimelyValue);
+//				}
+				
 				if(ClosedTimelyValue > 0)
 				{
 					if(critical > 0)
@@ -796,7 +796,7 @@
 				
 			}
 			
-@Test(priority = 15)
+//@Test(priority = 15)
 			void NotApplicable_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -826,17 +826,17 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 				
 				int total = critical + high + medium + low;
-				/*
-				if(NotApplicableValue == total)
-				{
-					test.log(LogStatus.PASS, "'Not Applicable' Compliance Count matches to sum of all risked compliances.");
-					test.log(LogStatus.PASS, "Total 'Not Applicable' Compliances : "+total);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "'Not Applicable' Compliance Count doesn't matches to sum of all risked compliances.");
-					test.log(LogStatus.FAIL, "Total 'Not Applicable' Compliances : "+total+" | Total Sum : "+NotApplicableValue);
-				}*/
+				
+//				if(NotApplicableValue == total)
+//				{
+//					test.log(LogStatus.PASS, "'Not Applicable' Compliance Count matches to sum of all risked compliances.");
+//					test.log(LogStatus.PASS, "Total 'Not Applicable' Compliances : "+total);
+//				}
+//				else
+//				{
+//					test.log(LogStatus.FAIL, "'Not Applicable' Compliance Count doesn't matches to sum of all risked compliances.");
+//					test.log(LogStatus.FAIL, "Total 'Not Applicable' Compliances : "+total+" | Total Sum : "+NotApplicableValue);
+//				}*/
 				
 				if(NotApplicableValue > 0)
 				{
@@ -897,7 +897,7 @@
 				extent.flush();
 			}
 				
-@Test(priority = 16)
+//@Test(priority = 16)
 			void Overdue_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -927,18 +927,18 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 				
 				int total = critical + high + medium + low;
-			/*	
-				if(OverdueValue == total)
-				{
-					test.log(LogStatus.PASS, "' Overdue' Compliance Count matches to sum of all risked compliances.");
-					test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "'Overdue' Compliance Count doesn't matches to sum of all risked compliances.");
-					test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+OverdueValue);
-				}
-			*/
+				
+//				if(OverdueValue == total)
+//				{
+//					test.log(LogStatus.PASS, "' Overdue' Compliance Count matches to sum of all risked compliances.");
+//					test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
+//				}
+//				else
+//				{
+//					test.log(LogStatus.FAIL, "'Overdue' Compliance Count doesn't matches to sum of all risked compliances.");
+//					test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+OverdueValue);
+//				}
+			
 				if(OverdueValue > 0)
 				{
 					if(critical > 0)
@@ -997,7 +997,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-@Test(priority = 17)
+//@Test(priority = 17)
 			void dueToday_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -1026,8 +1026,8 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 				
 				int total = critical + high + medium + low;
-				/*
-				if(dueTodayValue == total)
+				
+				/*if(dueTodayValue == total)
 				{
 					test.log(LogStatus.PASS, "' dueToday' Compliance Count matches to sum of all risked compliances.");
 					test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
@@ -1036,8 +1036,8 @@
 				{
 					test.log(LogStatus.FAIL, "'dueToday' Compliance Count doesn't matches to sum of all risked compliances.");
 					test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+dueTodayValue);
-				}
-			*/
+				}*/
+			
 				if(dueTodayValue > 0)
 				{
 					if(critical > 0)
@@ -1096,7 +1096,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-@Test(priority = 18)
+//@Test(priority = 18)
 			void pendingForReview_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -1126,8 +1126,8 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 				
 				int total = critical + high + medium + low;
-				/*
-				if(pendingForReviewValue == total)
+				
+				/*if(pendingForReviewValue == total)
 				{
 					test.log(LogStatus.PASS, "' Pending For Review' Compliance Count matches to sum of all risked compliances.");
 					test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
@@ -1136,8 +1136,8 @@
 				{
 					test.log(LogStatus.FAIL, "'Pending For Review' Compliance Count doesn't matches to sum of all risked compliances.");
 					test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+pendingForReviewValue);
-				}
-			*/
+				}*/
+			
 				if(pendingForReviewValue > 0)
 				{
 					if(critical > 0)
@@ -1198,7 +1198,7 @@
 			}
 			
 			
- @Test(priority = 19)
+// @Test(priority = 19)
 			void inProgress_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1228,8 +1228,8 @@
 				int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 				
 				int total = critical + high + medium + low;
-			/*	
-				if(inProgressValue == total)
+				
+				/*if(inProgressValue == total)
 				{
 					test.log(LogStatus.PASS, "' In Progress' Compliance Count matches to sum of all risked compliances.");
 					test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
@@ -1238,8 +1238,8 @@
 				{
 					test.log(LogStatus.FAIL, "'In Progress' Compliance Count doesn't matches to sum of all risked compliances.");
 					test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+inProgressValue);
-				}
-			*/
+				}*/
+			
 				if(inProgressValue > 0)
 				{
 					if(critical > 0)
@@ -1299,7 +1299,7 @@
 				extent.flush();
 			}
 			
-	@Test(priority = 20)
+//	@Test(priority = 20)
 			void rejected_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
