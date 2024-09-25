@@ -31,19 +31,43 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxFilterLocation']"));
 		return admin;
 	}
-	
+	public static WebElement Locationentity()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[1]"));
+		return admin;
+	}
+	public static WebElement UserDropDown()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div"));
+		return admin;
+	}		
+	public static WebElement UserDropDownSelectValue()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("(//span[@class='k-checkbox-wrapper'])[1]"));
+		return admin;
+	}		
 	public static WebElement Expand()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvFilterLocationn1']/img"));
 		return admin;
 	}
 	
+	public static WebElement Expand1()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("(//span[@class='k-checkbox-label checkbox-span'])[3]"));
+		return admin;
+	}
 	public static WebElement  DPvtLtdAS()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvFilterLocationt2']"));
 		return admin;
 	}
-
+	
+	public static WebElement  SelectAll()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("(//span[.='Select All'])[2]"));
+		return admin;
+	}
 	public static WebElement clickStatutoryAssi()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:3']/li[1]/a"));
@@ -97,7 +121,11 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_lbtnExportExcel']/img"));
 		return admin;
 	}
-	
+	public static WebElement Exportlog()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='exportAdvanced']"));
+		return admin;
+	}	
 	public static WebElement clickExport1()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_lbtnExportExcel1']/img"));
@@ -113,6 +141,22 @@ public class CompanyPOM extends BasePage {
 	public static WebElement EventAssignments()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:89']/li[3]"));
+		return admin;
+	}
+	
+	public static WebElement ClearbuttonLogReport()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//button[@id='ClearfilterMain']"));
+		return admin;
+	}
+	public static WebElement Apply()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
+		return admin;
+	}	
+	public static WebElement readTotalItems()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//span[@class='k-pager-info k-label']"));
 		return admin;
 	}
 	
@@ -381,9 +425,38 @@ public class CompanyPOM extends BasePage {
 	
 	public static WebElement  User()		//Method for closing Message Popup
 	{
-		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:15']/li[2]/a"));
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:8']/li[2]/a"));
 		return admin;                       
 	}
+	public static WebElement  MyCompanies()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:8']/li[3]/a"));
+		return admin;                       
+	}
+
+	public static WebElement  Fortnightlycompliancedocument()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:8']/li[10]/a"));
+		return admin;                       
+	}
+	public static WebElement  Dropdown()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_div2']/span[1]/a"));
+		return admin;                       
+	}
+
+	public static WebElement  Statutory()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//ul[@id='ui-id-15']//li[1]"));
+		return admin;                       
+	}
+
+	public static WebElement  Internal()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='ui-id-1']/li[2]"));
+		return admin;                       
+	}
+
 	
 	public static WebElement  AddNewUser()		//Method for closing Message Popup
 	{
@@ -944,6 +1017,11 @@ public class CompanyPOM extends BasePage {
 		return admin;
 	}
 	
+	public static WebElement DowloadDocument()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_grdComplianceRoleMatrix_lnkDownloadDocument_0']/img"));
+		return admin;
+	}
 	public static WebElement  SecurityGroupMU()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:15']/li[7]/a"));
@@ -1235,6 +1313,56 @@ public class CompanyPOM extends BasePage {
 		return admin;
 	}
 	
+	public static WebElement DepartmentReassignment()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:39']/li[9]/a"));
+		return admin;
+	}
+
+	public static WebElement SelectEntityLocationFilter()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_tbxFilterLocation']"));
+		return admin;
+	}
+
+	public static WebElement Checkbox()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_tvFilterLocationn0CheckBox']"));
+		return admin;
+	}
+	
+	public static WebElement SelectButton()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnlocation']"));
+		return admin;
+	}
+
+	public static WebElement ExportButton()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnDownload']"));
+		return admin;
+	}
+	
+	public static WebElement ChooseFileDR()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_FU_Upload']"));
+		return admin;
+	}
+	
+	public static WebElement Uploadbutton()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnUploadSave']"));
+		return admin;
+	}
+
+	public static WebElement ValidationMessage()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//div[@id='BodyContent_ctl01']//li"));
+		return admin;
+	}
+
+	
+
 	public static WebElement ReOpeningofCompliance()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:39']/li[1]/a"));
@@ -1253,6 +1381,14 @@ public class CompanyPOM extends BasePage {
 		return admin;
 	}
 	
+	public static WebElement MCReportUR()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:20']/li[6]/a"));
+		return admin;
+	}
+	
+
+	
 	public static WebElement EntitiesAssignmentsMC1()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:49']/li[1]/a"));
@@ -1264,6 +1400,76 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:49']/li[3]/a"));
 		return admin;
 	}
+	
+	public static WebElement UsageReport()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:55']/li[1]/a"));
+		return admin;
+	}
+	public static WebElement Licenselist()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:55']/li[2]/a"));
+		return admin;
+	}	
+	public static WebElement LocationSelect()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxBranch']"));
+		return admin;
+	}	
+	public static WebElement LocationSelectValue()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvBranches']/table[1]"));
+		return admin;
+	}	
+
+	public static WebElement Fromdate()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_txtStartDate']"));
+		return admin;
+	}	
+	public static WebElement Formdate1jan()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]"));
+		return admin;
+	}	
+	public static WebElement ExportExcel()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnExportExcel']"));
+		return admin;
+	}	
+
+	
+	public static WebElement Todate()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_txtEndDate']"));
+		return admin;
+	}	
+	public static WebElement Todatesep1()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[1]"));
+		return admin;
+	}	
+	public static WebElement EntityLocation()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxFilterLocation']"));
+		return admin;
+	}		
+	public static WebElement EntityLocationValue()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tvFilterLocationt3']"));
+		return admin;
+	}	
+	public static WebElement Licensetypename()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_upLicenseList']/table/tbody/tr/td[4]/span/a"));
+		return admin;
+	}	
+	public static WebElement Licensetypenamevalue()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//ul[@id='ui-id-3']//li[58]//a[.='Boiler']"));
+		return admin;
+	}	
+
 	
 	public static WebElement DepartmentEntitiesAssignmentsMC()		//Method for closing Message Popup
 	{
@@ -1364,6 +1570,45 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[6]/a"));
 		return admin;
 	}
+	
+	public static WebElement UploadInternalTab()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[17]/a"));
+		return admin;
+	}
+	public static WebElement LicenseEntities()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[15]/a"));
+		return admin;
+	}
+	public static WebElement EntitiesAssignment()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[14]/a"));
+		return admin;
+	}
+	public static WebElement UploadAssignment()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[13]/a"));
+		return admin;
+	}
+	public static WebElement ActivateChecklist()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[12]/a"));
+		return admin;
+	}
+
+	public static WebElement ExportExcelL()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_lbtnExportExcel']/img"));
+		return admin;
+	}
+	public static WebElement ExcelFormat()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnExcelFormat']"));
+		return admin;
+	}
+
+	
 	public static WebElement clickLocation()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxFilterLocation']"));
@@ -1419,6 +1664,18 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_Button1']"));
 		return admin;
 	}
+	public static WebElement ShortReport()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnShortReport']"));
+		return admin;
+	}
+
+	public static WebElement DocumentDownload()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_grdAllReport_lbkDownload_0']/img"));
+		return admin;
+	}
+
 	
 	
 	
