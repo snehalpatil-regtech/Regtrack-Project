@@ -245,6 +245,32 @@ public class DeptStaExcluding extends BasePage{
 		extent.flush();
 	}
 	
+	
+	@Test(priority = 5)
+	void CompliancesCountChange() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Compliances'");
+		
+		
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		String string_Compliances =CFOcountPOM.readCompliances().getText();		//Storing old value of Statutory overdue.
+	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
+		CFOcountPOM.readCompliances().click();
+		Thread.sleep(2000);
+		
+		Thread.sleep(2000);
+		DeptCountPOM.SelectYear().click();
+		Thread.sleep(1000);
+		DeptCountPOM.SelectAll().click();
+		Thread.sleep(3000);
+		DeptCountPOM.ClickApply().click();
+		Thread.sleep(4000);
+	}
+	
+	
+	
+	
  @Test(priority = 7)
 	void UsersCountMatch() throws InterruptedException
 	{

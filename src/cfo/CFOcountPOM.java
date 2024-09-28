@@ -1268,7 +1268,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskCriticalClosedTimelyA( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[9]"));
 		return risksummary;
 	}
 	
@@ -1335,7 +1335,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskHighClosedDelayedA( )	//Method to search 'High Risk - After Due Date' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[6]"));
 		return risksummary;
 	}
 	
@@ -1371,7 +1371,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskHighClosedTimelyA( )			//Method to search 'High Risk - In Time' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[14]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
 		return risksummary;
 	}
 	
@@ -1417,7 +1417,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRiskMediumClosedDelayedA( )	//Method to search 'Medium Risk - After Due Date' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[11]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[7]"));
 		return risksummary;
 	}
 	
@@ -1441,7 +1441,7 @@ public class CFOcountPOM extends BasePage
 
 	public static WebElement clickRiskMediumClosedTimelyA( )		//Method to search 'Medium Risk - In Time' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[15]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[11]"));
 		return risksummary;
 	}
 	
@@ -1512,7 +1512,7 @@ public class CFOcountPOM extends BasePage
 	}
 	public static WebElement clickRiskLowClosedTimelyA( )			//Method to search 'Low Risk - In Time' compliance of Risk Summary.
 	{
-		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[12]"));
 		return risksummary;
 	}
 	
@@ -1869,9 +1869,17 @@ public class CFOcountPOM extends BasePage
 		return department;
 	}
 	
+	public static WebElement clickInProgress( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
+
+	
+	
 	public static WebElement clickAccountRejected( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[48]"));
 		return department;
 	}
 	
@@ -4506,14 +4514,14 @@ else {
 			
 				
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\shitalb\\Downloads");
+		File dir = new File("C:\\Users\\snehalp\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 				
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 				
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 				
 		Thread.sleep(3000);
@@ -6034,11 +6042,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 				Thread.sleep(4000);
 				CFOcountPOM.closeDocument1().click();
 				test.log(LogStatus.PASS, "View successfully");
-				Thread.sleep(3000);
 				
-				ViewButton.get(1).click();
+				Thread.sleep(5000);
+				 ViewButton.get(1).click();
+			
+				 Thread.sleep(4000);
+				 test.log(LogStatus.PASS, "Download Doc successfully");
+			
 				Thread.sleep(4000);
-				test.log(LogStatus.PASS, "Download Doc successfully");
 				ViewButton.get(2).click();
 			
 				Thread.sleep(4000);
@@ -10097,7 +10108,7 @@ public static void DeviationApproverColSOO(ExtentTest test)throws InterruptedExc
 	if(!s.equalsIgnoreCase("No items to display")) {
 	Thread.sleep(5000);
 
-	List<WebElement> DA=getDriver().findElements(By.xpath("//*[@id=\"grid\"]/div[3]/table/tbody/tr/td[21]"));
+	List<WebElement> DA=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]"));
 
 
 	Thread.sleep(2000);

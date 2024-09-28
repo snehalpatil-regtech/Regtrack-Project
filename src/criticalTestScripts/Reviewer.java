@@ -62,7 +62,7 @@ public class Reviewer  extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\ReviewerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
 		test = extent.startTest("Logging In - Reviewer");
 		test.log(LogStatus.PASS, "Logging into system");
 		

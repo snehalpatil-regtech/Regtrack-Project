@@ -57,7 +57,8 @@
 </dependency>
 
 
-	 </dependencies>
+	
+  </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

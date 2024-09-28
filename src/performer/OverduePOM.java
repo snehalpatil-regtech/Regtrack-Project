@@ -641,7 +641,7 @@ public class OverduePOM extends BasePage
 	}
 	public static WebElement selectDate4( )					//Method to click on date at second row and fourth column
 	{
-		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[1]/a"));
+		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[7]/a"));
 		return selectDate;
 	}
 	public static WebElement selectDate2( )					//Method to click on date at second row and fifth column
@@ -3394,19 +3394,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationAppliedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[152]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[32]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationRejectedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[153]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[33]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationApprovedM()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[154]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[34]"));
 		return performer;
 	}
 	

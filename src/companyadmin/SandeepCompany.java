@@ -44,7 +44,7 @@ public class SandeepCompany extends BasePage {
 	public int penalty = 0;						//Variable created for reading Penalty
 	
 	
-	public static String link = "GMTA";  
+	public static String link = "mgmt1";  
 	
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -57,7 +57,7 @@ public class SandeepCompany extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\CompanyAdminResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\CompanyAdminResults.html",true);
 		test = extent.startTest("Loging In - Company Admin");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -106,7 +106,9 @@ public class SandeepCompany extends BasePage {
 		}
 	}
 	
-	//@Test(priority = 1)
+	
+
+//	@Test(priority = 4)
 	void GroupingMaster() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - To check whether the tab of Grouping Master is seen under manage compliances or not.  ");
@@ -117,8 +119,9 @@ public class SandeepCompany extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+
 	
-	//@Test(priority = 2)
+	//@Test(priority = 5)
 	void GroupingMasterDis() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - To check whether the sub tabs of group master and compliance tagging are seen under the tab of grouping master or not");
@@ -130,7 +133,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 3)
+//	@Test(priority = 6)
 	void GroupMaster() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters -Grouping Master - To check whether the group master tab Clickable or not.");
@@ -142,7 +145,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 4)
+	//@Test(priority = 7)
 	void GroupMasterAN() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - To check whether the Add New tab Clickable or not.");
@@ -154,7 +157,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 5)
+	//@Test(priority = 8)
 	void GroupMasterANW() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - To check whether the field of group name is mandatory or not on the popup of add new on the tab of group master..");
@@ -166,7 +169,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 6)
+//	@Test(priority = 9)
 	void AddNewGM() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - Add New -  To check whether new group can be added or not.");
@@ -178,7 +181,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 7)
+	//@Test(priority = 10)
 	void AddNewAE() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - Add New - To check whether duplicate group can be added or not.");
@@ -190,7 +193,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 8)
+//	@Test(priority = 11)
 	void UpdateGM() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - Edit - To check whether group can be updated or not.");
@@ -202,7 +205,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 9)
+	//@Test(priority = 12)
 	void DeleteGM() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - To check whether group can be deleted or not.");
@@ -214,7 +217,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 10)
+	//@Test(priority = 13)
 	void DeleteGMT() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - To check whether the group gets deleted or not if compliances are tagged to the group.");
@@ -226,7 +229,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 11)
+//	@Test(priority = 14)
 	void FilterGM() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Group Master - To check whether the search box is working or not on the tab of group master.");
@@ -238,7 +241,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 12)
+//	@Test(priority = 15)
 	void ComplianceTagging() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - To check whether the Compliance Tagging tab Clickable or not.");
@@ -250,7 +253,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 13)
+//	@Test(priority = 16)
 	void ComplianceTaggingAN() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Compliance Tagging - To check whether the Add New tab Clickable or not.");
@@ -262,7 +265,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 14)
+	//@Test(priority = 17)
 	void FilterCT() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Manage Compliances- Masters - Grouping Master - Compliance Tagging - To check whether the search box is working or not on the tab of compliance tagging .");
@@ -274,7 +277,8 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-	//@Test(priority = 15)
+
+	//@Test(priority = 20)
 	void SecondaryRe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Task - Task Details - To check whether the dropdown of secondary reviewer for the task is seen or not on the popup of show assignment details.");
@@ -286,7 +290,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 16)
+//	@Test(priority = 21)
 	void SecondaryReDisplay() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Task - Task Details - To check whether the record of assignment to secondary reviewer is seen or not on the popup of show assignment details after the assignment of task is done to the secondary reviewer.");
@@ -298,7 +302,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 17)
+//	@Test(priority = 22)
 	void STSecondaryRe() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Task - Task Details - To check whether the dropdown of secondary reviewer for the sub-task is seen or not on the popup of show assignment details.");
@@ -310,7 +314,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 18)
+//	@Test(priority = 23)
 	void STSecondaryReDisplay() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Task - Task Details - To check whether the record of assignment to secondary reviewer is seen or not on the popup of show assignment details after the assignment of sub-task is done to the secondary reviewer.");
@@ -322,7 +326,7 @@ public class SandeepCompany extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 19)
+//	@Test(priority = 24)
 		void SecondaryReIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Task - Task Details - Internal - To check whether the dropdown of secondary reviewer for the task is seen or not on the popup of show assignment details.");
@@ -334,7 +338,7 @@ public class SandeepCompany extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 20)
+	//	@Test(priority = 25)
 		void SecondaryReDisplayIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Task - Task Details - Internal - To check whether the record of assignment to secondary reviewer is seen or not on the popup of show assignment details after the assignment of task is done to the secondary reviewer.");
@@ -346,7 +350,7 @@ public class SandeepCompany extends BasePage {
 			extent.flush();
 		}
 	
-	//	@Test(priority = 17)
+	//	@Test(priority = 26)
 		void STSecondaryReIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Task - Task Details - Internal - To check whether the dropdown of secondary reviewer for the sub-task is seen or not on the popup of show assignment details.");
@@ -358,7 +362,7 @@ public class SandeepCompany extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 18)
+	//	@Test(priority = 27)
 		void STSecondaryReDisplayIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Task - Task Details - Internal - To check whether the record of assignment to secondary reviewer is seen or not on the popup of show assignment details after the assignment of sub-task is done to the secondary reviewer.");
@@ -371,7 +375,7 @@ public class SandeepCompany extends BasePage {
 		}
 		
 
-
+		
 	
 	@AfterMethod
   	void browserClosing() throws InterruptedException

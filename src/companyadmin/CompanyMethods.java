@@ -35,7 +35,6 @@ import companyAdminDiy.CompanyAdminDiyLocator;
 import implementation.ImplementPOM;
 import login.BasePage;
 import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class CompanyMethods extends BasePage {
 	
@@ -43,7 +42,7 @@ public class CompanyMethods extends BasePage {
 	public static XSSFWorkbook workbook = null;	//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;		//Sheet variable
 	
-	 static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
+	 static String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 
 
 	
@@ -101,6 +100,30 @@ public class CompanyMethods extends BasePage {
 	       
 	}
 
+	public static void SwitchToNewlyOpenedWindow( ExtentTest test) throws InterruptedException
+	{
+		
+		
+		String parentwindow = getDriver().getWindowHandle();
+		Set<String> allwindow = getDriver().getWindowHandles();
+		
+		for(String window : allwindow)
+		{
+			
+			if(!window.equalsIgnoreCase(parentwindow))
+			{
+				
+				getDriver().switchTo().window(window);
+				
+			
+			}
+			
+			
+		}
+		
+		
+	}
+
 	
 	public static void Reports( ExtentTest test) throws InterruptedException, IOException
 	{		
@@ -127,14 +150,14 @@ public class CompanyMethods extends BasePage {
 	      		  	 
 	 	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='BodyContent_grdEventCannedReport']")));	//Wait until records table get visible.
 	 		Thread.sleep(3000);
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 			Thread.sleep(8000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -158,14 +181,14 @@ public class CompanyMethods extends BasePage {
    		  	 Thread.sleep(1000);
    		   CompanyPOM.DPvtLtdAS().click();
    		  	 Thread.sleep(1000);
-   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 			 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 			Thread.sleep(8000);
-			 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -189,14 +212,14 @@ public class CompanyMethods extends BasePage {
 	   		   CompanyPOM.DPvtLtdAS().click();
 	   		  	 Thread.sleep(5000);
 	   			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));
-	   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+	   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 				 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(3000);
 				CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 				Thread.sleep(8000);
-				 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+				 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 				 Thread.sleep(4000);
 				 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
@@ -217,7 +240,7 @@ public class CompanyMethods extends BasePage {
 	   		  	 Thread.sleep(1000);
 	   		   CompanyPOM.DPvtLtdAS().click();
 	   		  	 Thread.sleep(4000);
-	   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+	   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 	   		 Thread.sleep(4000);
 				 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
@@ -225,7 +248,7 @@ public class CompanyMethods extends BasePage {
 				CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 				Thread.sleep(8000);
-				 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+				 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 				 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) {
@@ -249,14 +272,14 @@ public class CompanyMethods extends BasePage {
 		   		  	 Thread.sleep(1000);
 		   		   CompanyPOM.DPvtLtdAS().click();
 		   		  	 Thread.sleep(4000);
-		   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+		   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 					 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 					Thread.sleep(1000);
 					CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 					Thread.sleep(8000);
-					 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+					 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 					 Thread.sleep(4000);
 					 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 					Thread.sleep(3000);
@@ -282,14 +305,14 @@ public class CompanyMethods extends BasePage {
 			   		  	 Thread.sleep(1000);
 			   		   CompanyPOM.DPvtLtdAS().click();
 			   		  	 Thread.sleep(4000);
-			   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+			   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 						 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 						Thread.sleep(1000);
 						CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 						Thread.sleep(8000);
-						 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+						 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 						 Thread.sleep(4000);
 						 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 						Thread.sleep(3000);
@@ -312,14 +335,14 @@ public class CompanyMethods extends BasePage {
 		   		  	 Thread.sleep(1000);
 		   		   CompanyPOM.DPvtLtdAS().click();
 		   		  	 Thread.sleep(4000);
-		   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+		   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 					 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 					Thread.sleep(1000);
 					CompanyPOM.clickExport().click(); // Exporting (Downloading) file
 
 					Thread.sleep(8000);
-					 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+					 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 					 Thread.sleep(4000);
 					 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 					Thread.sleep(3000);
@@ -345,14 +368,14 @@ public class CompanyMethods extends BasePage {
 		   		  	 Thread.sleep(4000);
 		   		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));
 		   		 Thread.sleep(4000);
-		   		  dir = new File("C:\\Users\\mayurig\\Downloads");
+		   		  dir = new File("C:\\Users\\shitalb\\Downloads");
 					 dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 					Thread.sleep(4000);
 					CompanyPOM.clickExport1().click(); // Exporting (Downloading) file
 
 					Thread.sleep(8000);
-					 dir1 = new File("C:\\Users\\mayurig\\Downloads");
+					 dir1 = new File("C:\\Users\\shitalb\\Downloads");
 					 Thread.sleep(8000);
 					 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 					Thread.sleep(3000);
@@ -389,14 +412,14 @@ public class CompanyMethods extends BasePage {
 				  	 Thread.sleep(3000);
 		  	 
 		  	Thread.sleep(3000);
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.ExporttoExcel().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -410,14 +433,14 @@ public class CompanyMethods extends BasePage {
 			  	 Thread.sleep(3000);
 	  	 
 			 	Thread.sleep(3000);
-				File dir2 = new File("C:\\Users\\mayurig\\Downloads");
+				File dir2 = new File("C:\\Users\\shitalb\\Downloads");
 				File[] dirContents1 = dir2.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(500);
 				CompanyPOM.ExporttoExcel().click(); // Exporting (Downloading) file
 
 				Thread.sleep(3000);
-				File dir3 = new File("C:\\Users\\mayurig\\Downloads");
+				File dir3 = new File("C:\\Users\\shitalb\\Downloads");
 				File[] allFilesNew1 = dir3.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents1.length < allFilesNew1.length) {
@@ -469,14 +492,14 @@ public class CompanyMethods extends BasePage {
 				  	 Thread.sleep(6000);
 				  	 try {
 				  	Thread.sleep(3000);
-					File dir2 = new File("C:\\Users\\mayurig\\Downloads");
+					File dir2 = new File("C:\\Users\\shitalb\\Downloads");
 					File[] dirContents1 = dir2.listFiles(); // Counting number of files in directory before download
 
 					Thread.sleep(500);
 					CompanyPOM.Download().click(); // Exporting (Downloading) file
 
 					Thread.sleep(8000);
-					File dir3 = new File("C:\\Users\\mayurig\\Downloads");
+					File dir3 = new File("C:\\Users\\shitalb\\Downloads");
 					Thread.sleep(8000);
 					File[] allFilesNew1 = dir3.listFiles(); // Counting number of files in directory after download
 					Thread.sleep(3000);
@@ -701,14 +724,14 @@ public class CompanyMethods extends BasePage {
 		  	 Thread.sleep(4000);
 		  
 		 	
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(3000);
 			CompanyPOM.DownloadEC().click(); // Exporting (Downloading) file
 
 			Thread.sleep(8000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -1008,14 +1031,14 @@ public class CompanyMethods extends BasePage {
 			Thread.sleep(6000);
 			test.log(LogStatus.PASS, "User - Filter working Successfully");
 			
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.ExportUser().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -1054,6 +1077,108 @@ public class CompanyMethods extends BasePage {
 			 SwitchtoParent(test);
 		      Thread.sleep(3000);
 	}
+	
+	public static void  MyCompanies( ExtentTest test) throws InterruptedException, IOException
+	{		
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));	//Wait until records table get visible.
+
+	      action.moveToElement(CompanyPOM.ManageUsers()).click().build().perform();
+	      Thread.sleep(1000);
+	      CompanyPOM.MyCompanies().click();
+		  	 Thread.sleep(5000);
+		  	File dir = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.Export().click(); // Exporting (Downloading) file
+
+			Thread.sleep(3000);
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " File downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " :- File does not downloaded.");
+			}
+			SwitchtoParent(test);
+		     Thread.sleep(3000);
+	      
+	}
+	
+	public static void  Fortnightlycompliance( ExtentTest test) throws InterruptedException, IOException
+	{		
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]")));	//Wait until records table get visible.
+
+	      action.moveToElement(CompanyPOM.ManageUsers()).click().build().perform();
+	      Thread.sleep(1000);
+	      CompanyPOM.Fortnightlycompliancedocument().click();
+		  	 Thread.sleep(5000);
+		  	 /*
+		      CompanyPOM.Dropdown().click();
+			  	 Thread.sleep(2000);
+			  	CompanyPOM.Statutory().click();
+			  	 Thread.sleep(5000);
+			  	 */
+		  	 
+		  	File dir = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.DowloadDocument().click(); // Exporting (Downloading) file
+
+			Thread.sleep(3000);
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " Statutory - File downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " Statutory :- File does not downloaded.");
+			}
+			Thread.sleep(5000);
+		      CompanyPOM.Dropdown().click();
+			  	 Thread.sleep(2000);
+			  	CompanyPOM.Internal().click();
+			  	 Thread.sleep(5000);
+		  	 
+		  	File dir0 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents0 = dir0.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.DowloadDocument().click(); // Exporting (Downloading) file
+
+			Thread.sleep(3000);
+			File dir2 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew2 = dir2.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents0.length < allFilesNew2.length) {
+				test.log(LogStatus.PASS,  " Internal - File downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " Internal:- File does not downloaded.");
+			}
+			SwitchtoParent(test);
+		     Thread.sleep(3000);
+	      
+	}
+	
+	
+	
+	
 	
 	public static void  BlockScheduleStatutory( ExtentTest test) throws InterruptedException, IOException
 	{		
@@ -2660,7 +2785,7 @@ Thread.sleep(2000);
 		  	 Thread.sleep(2000);
 		  	 
 		 
-		 			CompanyPOM.ChooseFileIp().sendKeys("C:\\Users\\mayurig\\Downloads\\IPAddress.xlsx"); // Writing Task title
+		 			CompanyPOM.ChooseFileIp().sendKeys("C:\\Users\\shitalb\\Downloads\\IPAddress.xlsx"); // Writing Task title
 			Thread.sleep(3000);
 			  CompanyPOM.UploadIp().click();
 			  	 Thread.sleep(3000);
@@ -2690,14 +2815,14 @@ Thread.sleep(2000);
 		  	 Thread.sleep(2000);
 		  	 
 		 
-		 	File dir = new File("C:\\Users\\mayurig\\Downloads");
+		 	File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.SampleFormat().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -2838,14 +2963,14 @@ Thread.sleep(2000);
 		  	 Thread.sleep(2000);
 		  	 
 		 
-		 	File dir = new File("C:\\Users\\mayurig\\Downloads");
+		 	File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			CompanyPOM.Export().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -3801,14 +3926,14 @@ Thread.sleep(2000);
 	Thread.sleep(8000);
 		  
 		 	
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(3000);
 			CompanyPOM.WidgetMasterSF().click(); // Exporting (Downloading) file
 
 			Thread.sleep(8000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -3818,7 +3943,7 @@ Thread.sleep(2000);
 			}
 			Thread.sleep(3000);
 			
-			CompanyPOM.ChooseFileSF().sendKeys("C:\\Users\\mayurig\\Downloads\\WidgetSampleUploadFormat.xlsx"); // Writing Task title
+			CompanyPOM.ChooseFileSF().sendKeys("C:\\Users\\shitalb\\Downloads\\WidgetSampleUploadFormat.xlsx"); // Writing Task title
 			Thread.sleep(3000);
 			  CompanyPOM.UploadWM().click();
 			  	 Thread.sleep(3000);
@@ -4272,14 +4397,14 @@ Thread.sleep(2000);
 		Thread.sleep(1000);
 		test.log(LogStatus.PASS, "Intermediate Compliance - Delete Successfully");
 		
-		File dir = new File("C:\\Users\\mayurig\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		CompanyPOM.ExportIC().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -4335,14 +4460,14 @@ Thread.sleep(2000);
 		Thread.sleep(1000);
 		test.log(LogStatus.PASS, "Intermediate CheckList - Delete Successfully");
 		
-		File dir = new File("C:\\Users\\mayurig\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		CompanyPOM.ExportIC().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -4401,14 +4526,14 @@ Thread.sleep(2000);
 
 		test.log(LogStatus.PASS, "Message displayed -:- " + ActivateMsg);
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\mayurig\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(1000);
 		ImplementPOM.ExportActivate().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);// C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -4470,14 +4595,14 @@ Thread.sleep(2000);
 
 		test.log(LogStatus.PASS, "Message displayed -:- " + ActivateMsg);
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\mayurig\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(1000);
 		ImplementPOM.ExportActivate().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);// C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -4645,14 +4770,14 @@ Thread.sleep(2000);
 		
 		//---------------------Export------------------------
 		//	Thread.sleep(3000);
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			ImplementPOM.ExportClient().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -4661,7 +4786,7 @@ Thread.sleep(2000);
 				test.log(LogStatus.FAIL,  " File does not downloaded.");
 			}
 			
-			CompanyPOM.ChangeRiskofComplianceCF().sendKeys("C:\\Users\\mayurig\\Downloads\\ComplianceRiskDetails.xlsx"); // Writing Task title
+			CompanyPOM.ChangeRiskofComplianceCF().sendKeys("C:\\Users\\shitalb\\Downloads\\ComplianceRiskDetails.xlsx"); // Writing Task title
 			Thread.sleep(8000);
 			  CompanyPOM.UploadIp().click();
 			  	 Thread.sleep(3000);
@@ -4777,14 +4902,14 @@ Thread.sleep(2000);
 		Thread.sleep(8000);
 		//---------------------Export------------------------
 		//	Thread.sleep(3000);
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			ImplementPOM.SampleFormatCF().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) {
@@ -4794,7 +4919,7 @@ Thread.sleep(2000);
 			}
 		
 		//----------------- File Upload ----------------
-		ImplementPOM.Choose().sendKeys("C:\\Users\\mayurig\\Downloads\\ClientBasedFrequency_Sample.xlsx");
+		ImplementPOM.Choose().sendKeys("C:\\Users\\shitalb\\Downloads\\ClientBasedFrequency_Sample.xlsx");
 		Thread.sleep(8000);
 		ImplementPOM.Upload1().click();
 		Thread.sleep(8000);
@@ -5042,14 +5167,14 @@ Thread.sleep(2000);
 		//----------------Export file-----------------------
 		
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\mayurig\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		ImplementPOM.ClickExport().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -5210,14 +5335,14 @@ Thread.sleep(2000);
 		test.log(LogStatus.PASS,  " Add New  License Entities Assignments successfully.");
 		//---------------------Export------------------------
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\Mayuri Gaikwad\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		ImplementPOM.ClickExport().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\Mayuri Gaikwad\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -5336,6 +5461,793 @@ public static void AssignComplianceInternal( ExtentTest test) throws Interrupted
 		
 	
 	}
+
+public static void DepartmentReassignmentExport( ExtentTest test)
+		throws InterruptedException, IOException {
+	Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	Thread.sleep(3000);
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]")));	//Wait until records table get visible.
+  	action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
+      Thread.sleep(1000);
+	Thread.sleep(4000);
+	   CompanyPOM.Configuration().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.DepartmentReassignment().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.SelectEntityLocationFilter().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.Checkbox().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.SelectButton().click();
+	  	 Thread.sleep(2000);
+	  	Thread.sleep(3000);
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(500);
+		CompanyPOM.ExportButton().click();
+	  	 Thread.sleep(2000); // Exporting (Downloading) file
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS,  " File downloaded successfully.");
+		} else {
+			test.log(LogStatus.INFO,  " :- File does not downloaded.");
+		}
+		Thread.sleep(500);
+
+	  	
+		  	
+
+}
+
 	
+public static void DepartmentReassignmentUpload( ExtentTest test)
+		throws InterruptedException, IOException {
+	Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	Thread.sleep(3000);
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]")));	//Wait until records table get visible.
+  	action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
+      Thread.sleep(1000);
+	Thread.sleep(4000);
+	   CompanyPOM.Configuration().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.DepartmentReassignment().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.SelectEntityLocationFilter().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.Checkbox().click();
+	  	 Thread.sleep(2000);
+	  	CompanyPOM.SelectButton().click();
+	  	 Thread.sleep(2000);
+	  	Thread.sleep(3000);
+	  	Thread.sleep(500);
+	  	CompanyPOM.Uploadbutton().click();
+	  	 Thread.sleep(2000);
+	  	 
+	  	try {
+            // Wait up to 70 seconds for the link to appear
+	  		WebDriverWait wait1 = new WebDriverWait( getDriver(), 70);
+            By locator = By.xpath("//div[@id='BodyContent_ctl01']//li");
+            
+			wait1.until(ExpectedConditions.presenceOfElementLocated(locator));
+	  		
+            System.out.println("Link is present!");
+    		test.log(LogStatus.PASS, "Message displayed without upload file -- validation message displayed");
+
+        } catch (Exception e) {
+        	test.log(LogStatus.PASS, "Message displayed without upload file -- validation message not displayed");
+        	
+        }
+	  	CompanyPOM.ChooseFileDR().sendKeys("E:\\Ethics Committee Details.xlsx"); // Writing Task title
+		Thread.sleep(3000);
+		CompanyPOM.Uploadbutton().click();
+	  	 Thread.sleep(2000);
+		String Msg7 = CompanyPOM.ValidationMessage().getText();
+	//  	CompanyPOM.ChooseFileDR().click();
+	 // 	 Thread.sleep(2000);
+	  	
+		test.log(LogStatus.PASS, "Message displayed after upload invalid file -:- " + Msg7);
+		Thread.sleep(4000);
+		
+	  	SwitchtoParent(test);
+	  	Thread.sleep(2000);
+	  	
+	  	
+}
+
+public static void AllReport( ExtentTest test) throws InterruptedException, IOException
+{
+			
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    // switching child window
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));	//Wait until records table get visible.
+//-------------------------------Statutory Assignment Report-------------------------------
+	      action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+	      Thread.sleep(1000);
+	      CompanyPOM.clickStatutoryAssi().click();
+	      		  	 Thread.sleep(2000);
+	      		   CompanyPOM.SelectLocationSA().click();
+	      		  	 Thread.sleep(1000);
+	      		   CompanyPOM.Expand().click();
+	      		  	 Thread.sleep(1000);
+	      		   CompanyPOM.DPvtLtdAS().click();
+	      		  	 Thread.sleep(1000);
+	      		  	 
+	      		  	 
+	 	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='BodyContent_grdAllReport_lbkDownload_0']/img")));	//Wait until records table get visible.
+	 		Thread.sleep(3000);
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.clickExport().click(); // Exporting (Downloading) file
+
+			Thread.sleep(8000);
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " File downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " :- File does not downloaded.");
+			}
+			
+			
+			Thread.sleep(1000);
+			/*
+		  	action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+		      Thread.sleep(1000);
+		    CompanyPOM.clickCheckListAssi().click();
+		    Thread.sleep(4000);
+		    Thread.sleep(2000);
+   		   CompanyPOM.SelectLocationSA().click();
+   		  	 Thread.sleep(1000);
+   		   CompanyPOM.Expand().click();
+   		  	 Thread.sleep(1000);
+   		   CompanyPOM.DPvtLtdAS().click();
+   		   */
+   		  	 Thread.sleep(2000);
+   		  dir = new File("C:\\Users\\shitalb\\Downloads");
+			 dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.clickExport1().click(); // Exporting (Downloading) file
+
+			Thread.sleep(8000);
+			 dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " File downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " :- File does not downloaded.");
+			}
+			  	
+			Thread.sleep(1000);
+			/*
+		  	action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+		      Thread.sleep(1000);
+		    CompanyPOM.clickCheckListAssi().click();
+		    Thread.sleep(4000);
+		    Thread.sleep(2000);
+   		   CompanyPOM.SelectLocationSA().click();
+   		  	 Thread.sleep(1000);
+   		   CompanyPOM.Expand().click();
+   		  	 Thread.sleep(1000);
+   		   CompanyPOM.DPvtLtdAS().click();
+   		   */
+   		  	 Thread.sleep(1000);
+   		  dir = new File("C:\\Users\\shitalb\\Downloads");
+			 dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.ShortReport().click(); // Exporting (Downloading) file
+
+			Thread.sleep(8000);
+			 dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " Short Report downloaded successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " Short Report does not downloaded.");
+			}
+			Thread.sleep(1000);
+	   		  dir = new File("C:\\Users\\shitalb\\Downloads");
+				 dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+				Thread.sleep(500);
+				CompanyPOM.DocumentDownload().click(); // Exporting (Downloading) file
+
+				Thread.sleep(8000);
+				 dir1 = new File("C:\\Users\\shitalb\\Downloads");
+				 allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+				Thread.sleep(3000);
+				if (dirContents.length < allFilesNew.length) {
+					test.log(LogStatus.PASS,  " Document downloaded successfully.");
+				} else {
+					test.log(LogStatus.FAIL,  " Document does not downloaded.");
+				}
+
+			
+
+}
+
+public static void LogReport( ExtentTest test) throws InterruptedException, IOException
+{
+			
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    // switching child window
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));	//Wait until records table get visible.
+//-------------------------------Statutory Assignment Report-------------------------------
+	      action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+	      Thread.sleep(2000);
+	      CompanyPOM.clickCheckListAssi().click();
+	      		  	 Thread.sleep(2000);
+	      		  	SwitchToNewlyOpenedWindow(test);
+	      			Thread.sleep(3000);
+	      		   CompanyPOM.Locationentity().click();
+	      		  	 Thread.sleep(1000);
+	      		  	CompanyPOM.SelectAll().click();
+	      		  	 Thread.sleep(1000);
+	      		  	CompanyPOM.Locationentity().click();
+	      		  	 Thread.sleep(1000);
+	      		  	CompanyPOM.Apply().click();
+	      		  	 Thread.sleep(3000);
+	      		  	 
+	      		  	
+	 	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']")));	//Wait until records table get visible.
+	 		Thread.sleep(3000);
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.Exportlog().click(); // Exporting (Downloading) file
+
+			Thread.sleep(8000);
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " Log Report Exported successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " :- Log Report Exported does not Exported.");
+			}
+						
+			Thread.sleep(1000);
+			CompanyPOM.ClearbuttonLogReport().click();
+ 		  	 Thread.sleep(2000);
+ 		  	test.log(LogStatus.PASS,  " Clear button working successfully.");
+ 		   Thread.sleep(2000);
+
+}
+
+public static void UserLogReport( ExtentTest test) throws InterruptedException, IOException
+{
+			
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    // switching child window
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));	//Wait until records table get visible.
+//-------------------------------Statutory Assignment Report-------------------------------
+	      action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+	      Thread.sleep(2000);
+	      CompanyPOM.clickEventBasedAssi().click();
+	      		  	 Thread.sleep(2000);
+	      		  	SwitchToNewlyOpenedWindow(test);
+	      			Thread.sleep(3000);
+	 	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']")));//Wait until records table get visible.	 	  	
+	 		Thread.sleep(3000);
+	 		ExcelcountAndGridMatch(test,workbook);
+	 		Thread.sleep(2000);
+	 		 CompanyPOM.UserDropDown().click();
+  		  	 Thread.sleep(4000);
+  		  	CompanyPOM.UserDropDownSelectValue().click();
+  		  	 Thread.sleep(1000);
+  		  	CompanyPOM.UserDropDown().click();
+  		  	 Thread.sleep(1000);
+  		  	CompanyPOM.Apply().click();
+  		  	 Thread.sleep(3000);
+			CompanyPOM.ClearbuttonLogReport().click();
+ 		  	 Thread.sleep(2000);
+ 		  	test.log(LogStatus.PASS,  " Clear button working successfully.");
+ 		   Thread.sleep(2000);
+
+}
+
+public static void ExcelcountAndGridMatch( ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+{
+		    
+  
+    JavascriptExecutor js = (JavascriptExecutor) getDriver();
+    
+    js.executeScript("window.scrollBy(0,1000)");
+    Thread.sleep(2000); 		
+    
+    Thread.sleep(7000);
+    CompanyPOM.readTotalItems().click();
+	String item = CompanyPOM.readTotalItems().getText();
+	String[] bits = item.split(" ");								//Splitting the String
+	String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of users)
+	int count1 = Integer.parseInt(compliancesCount);
+
+	if(compliancesCount.equalsIgnoreCase("to"))
+	{
+		Thread.sleep(5000);
+	   item = CompanyPOM.readTotalItems().getText();
+		bits = item.split(" ");
+    
+	}
+	
+	Thread.sleep(2000);
+    JavascriptExecutor js1 = (JavascriptExecutor) getDriver();
+    
+    js1.executeScript("window.scrollBy(0,-1000)");
+    Thread.sleep(2000);
+
+Thread.sleep(1000);
+File dir = new File("C:\\Users\\shitalb\\Downloads");
+File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
+
+Thread.sleep(1000);
+CompanyPOM.Exportlog().click();
+Thread.sleep(9000);					//Clicking on 'Excel Report' image.
+test.log(LogStatus.PASS, "User Log Report downloaded successfully.");
+
+Thread.sleep(5500);
+File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+File[] allFilesNew = dir1.listFiles();							//Counting number of files in directory after download
+
+if(dirContents.length < allFilesNew.length)
+{
+
+
+File lastModifiedFile = allFilesNew[0];			//Storing any 0th index file in 'lastModifiedFile' file name.
+for (int i = 1; i < allFilesNew.length; i++) 	//For loop till the number of files in directory.
+{
+   if (lastModifiedFile.lastModified() < allFilesNew[i].lastModified()) 	//If allFilesNew[i] file is having large/latest time time of update then latest modified file be allFilesNew[i] file.
+   {
+       lastModifiedFile = allFilesNew[i];
+   }
+}
+
+Thread.sleep(1000);
+fis = new FileInputStream(lastModifiedFile);
+workbook = new XSSFWorkbook(fis);
+sheet = workbook.getSheetAt(0);					//Retrieving first sheet of Workbook
+/*
+int no = sheet.getFirstRowNum();
+Row row = sheet.getRow(no);
+Cell c1 = row.getCell(0);
+int records =(int) c1.getNumericCellValue();
+*/
+sheet = workbook.getSheetAt(0);
+int columnNumber = 3;
+int rowCount = 0;
+int actualRow=0;
+
+for(Row row : sheet)
+{
+	
+	Cell cell =row.getCell(columnNumber);
+	if(cell != null) {
+		
+		rowCount++;
+		actualRow = rowCount-1;
+	}
+	
+}
+fis.close();
+
+if(count1 == actualRow)
+{
+	//test.log(LogStatus.PASS, "No of records from grid matches to no of records in Excel Sheet.");
+	test.log(LogStatus.PASS, "Total records from Grid = "+count1+" | Total records from Report = "+actualRow);
+}
+else
+{
+	//test.log(LogStatus.FAIL, "No of records from grid doesn't matches to no of records in Excel Sheet.");
+	test.log(LogStatus.FAIL, "Total records from Grid = "+count1+" | Total records from Excel Sheet = "+actualRow);
+}
+}
+else
+{
+test.log(LogStatus.FAIL, "File doesn't downloaded successfully.");
+}
+
+    
+
+}
+
+public static void UsageReport( ExtentTest test)
+		throws InterruptedException, IOException {
+	Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+	Thread.sleep(3000);
+
+	
+				//---------------------------Add New Entities Assignments	--------------------------------																						
+
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 																					
+
+	action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
+	Thread.sleep(1000);
+	CompanyPOM.MCReportUR().click();
+	Thread.sleep(3000);
+	CompanyPOM.UsageReport().click();
+	Thread.sleep(4000);
+	CompanyPOM.LocationSelect().click();
+	Thread.sleep(3000);
+	CompanyPOM.LocationSelectValue().click();
+	Thread.sleep(4000);
+//	CompanyPOM.LocationSelect().click();
+//	Thread.sleep(3000);
+	CompanyPOM.Fromdate().click();
+	Thread.sleep(3000);
+	String OptionText = "Option 1";
+	String xpathExpression = String.format("//select[@class='ui-datepicker-month']/option[1]",OptionText);
+	WebElement dropdownOption = getDriver().findElement(By.xpath(xpathExpression));
+	dropdownOption.click();
+	Thread.sleep(1000);
+	String OptionText1 = "Option 73";
+	String xpathExpression1 = String.format("//select[@class='ui-datepicker-year']/option[73]",OptionText1);
+	WebElement dropdownOption1 = getDriver().findElement(By.xpath(xpathExpression1));
+	dropdownOption1.click();
+	Thread.sleep(1000);
+	CompanyPOM.Formdate1jan().click();
+	Thread.sleep(2000);
+	CompanyPOM.Todate().click();
+	Thread.sleep(4000);
+	CompanyPOM.Todatesep1().click();
+	Thread.sleep(2000);
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcel().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Usage Report Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Usage Report Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+}
+
+public static void LicenceList( ExtentTest test)
+		throws InterruptedException, IOException {
+	Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	Thread.sleep(3000);
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a")));	//Wait until records table get visible.
+	action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
+	Thread.sleep(1000);
+	CompanyPOM.MCReportUR().click();
+	Thread.sleep(3000);
+	CompanyPOM.Licenselist().click();
+	Thread.sleep(4000);
+	CompanyPOM.EntityLocation().click();
+	Thread.sleep(3000);
+	CompanyPOM.Expand().click();
+	Thread.sleep(3000);
+	String locationtext = CompanyPOM.EntityLocationValue().getText();
+	Thread.sleep(2000);
+	CompanyPOM.EntityLocationValue().click();
+	Thread.sleep(9000);
+	CompanyPOM.Licensetypename().click();
+	Thread.sleep(500);
+	String licensetypenametext = CompanyPOM.Licensetypenamevalue().getText();
+	Thread.sleep(2000);
+	CompanyPOM.Licensetypenamevalue().click();
+	Thread.sleep(2000);
+	  	  
+	 	
+	  	 
+			
+			  Thread.sleep(500);
+		        List<String> li=new ArrayList<String>();
+		        
+		        li.add(locationtext);
+		        li.add(licensetypenametext);
+		       
+		        Thread.sleep(3000);
+		        
+				List<String> filter=new ArrayList<String>();	
+				filter.add("Location");
+				filter.add("License Type");
+			
+				List<WebElement> Location= getDriver().findElements(By.xpath("//*[@id='BodyContent_grdLicenseList']/tbody/tr[3]/td[1]"));
+				List<WebElement> LicenseType= getDriver().findElements(By.xpath("//*[@id='BodyContent_grdLicenseList']/tbody/tr[3]/td[2]"));
+
+
+				for(int i=0; i<li.size(); i++){
+					
+					List<String> text= new ArrayList<String>();
+					HashSet<String> pass=new LinkedHashSet<>();
+					HashSet<String> fail=new LinkedHashSet<>();
+					List<WebElement> raw=new ArrayList<WebElement>();
+
+						if(i==0)
+						{
+							raw.addAll(Location);
+						}
+						if(i==1)
+						{
+							raw.addAll(LicenseType);
+						}
+						
+						for(int k=0;k<raw.size();k++)
+						{
+							text.add(raw.get(k).getText());
+						}
+
+						for(int l=0;l<text.size();l++)
+							{
+						if(text.get(l).equals(li.get(i)))
+							{
+								pass.add(text.get(l));	
+								System.out.println("pass : "+text.get(l)+" : "+li.get(i));
+
+							}
+						else
+						{
+							fail.add(text.get(l));		
+							System.out.println("fail : "+text.get(l)+" : "+li.get(i));
+							System.out.println(i);
+
+						}
+						 }
+				 
+			for(String Fal : fail)
+				 {
+						test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+				 }	
+				 for(String Pas : pass)
+				 {
+					 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+						test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+						System.out.println(filter.get(i)+" : "+Pas);
+			 }
+				 text.clear();
+				pass.clear();
+				fail.clear();
+				raw.clear();
+				
+				
+				}
+				}
+				
+	
+
+
+public static void UploadInternalData( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.UploadInternalTab().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExcelFormat().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
 	
 	}
+
+public static void LicenseEntitiesAssignment( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.LicenseEntities().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcelL().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+
+public static void EntitiesAssignment( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.EntitiesAssignment().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcelL().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+public static void UploadAssignment( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.UploadAssignment().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExcelFormat().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+
+public static void ActivateChecklist( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.ActivateChecklist().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcelL().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+

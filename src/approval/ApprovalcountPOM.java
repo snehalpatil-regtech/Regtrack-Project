@@ -355,7 +355,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskHigh ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[5]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[8]"));
 		return compliances;
 	}
 	
@@ -373,7 +373,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskHighDep ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[8]"));
 		return compliances;
 	}
 	
@@ -391,13 +391,13 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement SelectActF1 ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[1]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[42]"));
 		return compliances;
 	}
 	
 	public static WebElement SelectActF11 ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[35]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[41]"));
 		return compliances;
 	}
 	
@@ -458,13 +458,13 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement StatusOverdue ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[9]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[12]"));
 		return compliances;
 	}
 	
 	public static WebElement StatusNA()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[21]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[19]"));
 		return compliances;
 	}
 	
@@ -1840,7 +1840,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 	
 	public static void GraphCountPe( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
@@ -2091,13 +2091,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 	
 	public static void GraphCountPe1Sta( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Medium"))
@@ -2169,7 +2170,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[20]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5776,6 +5777,8 @@ else {
        Thread.sleep(500);
        SelectActF1().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(3000);
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -6140,6 +6143,8 @@ else {
        Thread.sleep(500);
        SelectActF1().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -6499,6 +6504,8 @@ else {
        Thread.sleep(500);
        SelectActF1().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -6702,6 +6709,8 @@ else {
        Thread.sleep(500);
        SelectActF1().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);
@@ -7447,6 +7456,8 @@ else {
        Thread.sleep(500);
        SelectActF11().click();
        Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
        
        MitigationPlan().click();
        Thread.sleep(500);

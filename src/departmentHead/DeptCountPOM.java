@@ -364,7 +364,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement RiskM()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[4]"));
+		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])"));
 		return categories;
 	}
 	
