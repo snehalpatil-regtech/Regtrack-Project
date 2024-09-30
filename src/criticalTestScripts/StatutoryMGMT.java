@@ -110,7 +110,7 @@ public class StatutoryMGMT extends BasePage {
 			
 		}
 	}
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
