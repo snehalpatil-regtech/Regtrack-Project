@@ -1576,6 +1576,33 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[17]/a"));
 		return admin;
 	}
+	public static WebElement ChooseFileInternal()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_MasterFileUpload']"));
+		return admin;
+	}
+	public static WebElement UploadInternal()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnUploadFile']"));
+		return admin;
+	}
+	public static WebElement ValMessage()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_ValidationSummary1']"));
+		return admin;
+	}
+
+	public static WebElement SaveValMessage()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_ValidationSummary1']//li"));
+		return admin;
+	}
+	public static WebElement SaveIN()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnSave']"));
+		return admin;
+	}
+
 	public static WebElement LicenseEntities()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[15]/a"));
@@ -1596,7 +1623,24 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[12]/a"));
 		return admin;
 	}
+	
+	public static WebElement Compliance()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[4]/a"));
+		return admin;
+	}
+	public static WebElement CompAssignments()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:63']/li[5]/a"));
+		return admin;
+	}
+	public static WebElement AddNewlink()		//Method for closing Message Popup
+	{
+		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnAddCompliance']"));
+		return admin;
+	}
 
+	
 	public static WebElement ExportExcelL()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_lbtnExportExcel']/img"));
@@ -1607,8 +1651,6 @@ public class CompanyPOM extends BasePage {
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_btnExcelFormat']"));
 		return admin;
 	}
-
-	
 	public static WebElement clickLocation()		//Method for closing Message Popup
 	{
 		admin = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbxFilterLocation']"));

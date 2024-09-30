@@ -78,7 +78,7 @@ public class CompanyCount extends BasePage {
 	void Login() throws InterruptedException, IOException
 	{
 		
-		initialization(link,12,"Statutory");
+		initialization1(link,12,"Statutory");
 	/*	XSSFSheet sheet = ReadExcel();
 		Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
 		Cell c1 = row0.getCell(1);						//Selected cell (0 row,1 column)
@@ -998,8 +998,8 @@ public class CompanyCount extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-	*/
-//		@Test(priority = 71)
+	
+		@Test(priority = 71)
 		void UsageReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Manage Compliances - Report - Usage Report");
@@ -1010,7 +1010,7 @@ public class CompanyCount extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-
+*/
 //		@Test(priority = 71)
 		void LicenceList() throws InterruptedException, IOException
 		{
@@ -1060,7 +1060,7 @@ public class CompanyCount extends BasePage {
 			
 			
 	*/
-//		@Test(priority = 74) 
+		@Test(priority = 74) 
 		void UploadInternalData() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Internal Compliances - Upload Internal Data ");
@@ -1103,12 +1103,45 @@ public class CompanyCount extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-		@Test(priority = 74) 
+//		@Test(priority = 74) 
 		void ActivateChecklist() throws InterruptedException, IOException
 		{
-			test = extent.startTest("Internal Compliances -  Upload Assignment ");
+			test = extent.startTest("Internal Compliances -  Activate Checklist ");
 			
 			CompanyMethods.ActivateChecklist(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 74) 
+		void ComplianceAssignment() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Internal Compliances - Compliance Assignment ");
+			
+			CompanyMethods.ComplianceAssignments(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 74) 
+		void Compliance() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Internal Compliances - Compliance ");
+			
+			CompanyMethods.Compliance(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+		@Test(priority = 74) 
+		void ComplianceAddnewlink() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Internal Compliances - Compliance ");
+			
+			CompanyMethods.ComplianceAddnewlink(test);
 			
 			extent.endTest(test);
 			extent.flush();

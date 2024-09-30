@@ -1,5 +1,6 @@
 package criticalTestScripts;
 
+import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
@@ -117,7 +118,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 	
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -206,7 +207,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	void ClosedDelayed_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -292,7 +293,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 4)
+	@Test(priority = 4)
 	void ClosedTimely_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -378,7 +379,7 @@ public class AuditorStatutory extends BasePage {
 		
 	}
 	
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	void NotApplicable_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -473,7 +474,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 		
-//	@Test(priority = 6)
+	@Test(priority = 6)
 	void Overdue_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -566,7 +567,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 7)
+	@Test(priority = 7)
 	void dueToday_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -659,7 +660,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 8)
+	@Test(priority = 8)
 	void pendingForReview_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -752,7 +753,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 9)
+	@Test(priority = 9)
 	void inProgress_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -845,7 +846,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 10)
+	@Test(priority = 10)
 	void rejected_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -938,7 +939,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
- //   @Test(priority = 11)
+    @Test(priority = 11)
 	void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1040,7 +1041,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 	
-//	@Test(priority = 12)
+	@Test(priority = 12)
 	void BargraphIndustrySpeHighStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1054,11 +1055,12 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(5000);
 		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 		
 		String PendingReview = CFOcountPOM.clickIndustrySpeHighM().getText();	//Reading the Pending For Review value of Human Resource
-		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+	//	PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
 		
 		Thread.sleep(4000);
 		int IndustrySpeHigh = Integer.parseInt(PendingReview);	//Reading the Medium value of Labour compliance
@@ -1145,7 +1147,7 @@ public class AuditorStatutory extends BasePage {
 	}
 
 	
- //   @Test(priority = 13)
+    @Test(priority = 13)
 
 	void BargraphIndustrySpeMediumStatutory() throws InterruptedException
 	{
@@ -1245,7 +1247,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
- //   @Test(priority = 14)
+    @Test(priority = 14)
 
 	void BargraphIndustrySpeLowStatutory() throws InterruptedException
 	{
@@ -1354,7 +1356,7 @@ public class AuditorStatutory extends BasePage {
 	
 	
 	
-//	@Test(priority = 15)
+	@Test(priority = 15)
 	void RiskSummaryCriticalStatutory() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -1449,7 +1451,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 16)
+	@Test(priority = 16)
 	void RiskSummaryHighStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1547,7 +1549,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 17)
+	@Test(priority = 17)
 
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
@@ -1613,7 +1615,10 @@ public class AuditorStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Closed Timely' Count = "+RiskMedium_ClosedTimely);
 		}
 		Thread.sleep(500);
-		
+		List<WebElement>CD = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(CD, "Closed Delayed");
+		List<WebElement>CT = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-2'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(CT, "Closed Timely");
 		Thread.sleep(3000);
 		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskMedium_NotApplicable > 0)
@@ -1720,6 +1725,11 @@ public class AuditorStatutory extends BasePage {
 		
 		
 		Thread.sleep(3000);
+		List<WebElement>CD = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(CD, "Closed Delayed");
+		List<WebElement>CT = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-2'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(CT, "Closed Timely");
+		Thread.sleep(3000);
 		int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskLow_NotApplicable > 0)
 		{
@@ -1753,7 +1763,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 19)
+	@Test(priority = 19)
 
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException
 	{
@@ -1763,8 +1773,6 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(3000);	
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		
-
-	  	Thread.sleep(4000);
 	 
 		String NotCompleted = CFOcountPOM.clickAdminOverdueA().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -1832,6 +1840,34 @@ public class AuditorStatutory extends BasePage {
 			test.log(LogStatus.PASS, "Pending For Review Compliance Count = "+ Pending_Review + ".");
 		}
 		
+			
+			Thread.sleep(500);
+			String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+			InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
+			int In_Progress = Integer.parseInt(InProgress);						
+			if(In_Progress > 0)
+			{
+				CFOcountPOM.clickAdminInprogress().click();
+				AuditorcountPOM.RiskGraphCount2( test, "InProgress", In_Progress, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "InProgress Compliance Count = "+ In_Progress + ".");
+			}
+			
+			Thread.sleep(500);
+			String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+			Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
+			int R_ejected = Integer.parseInt(Rejected);						
+			if(In_Progress > 0)
+			{
+				CFOcountPOM.clickAdminInRejected().click();
+				AuditorcountPOM.RiskGraphCount2( test, "Rejected", R_ejected, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "Rejected Compliance Count = "+ R_ejected + ".");
+			}
 			Thread.sleep(500);
 			String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
 			NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
@@ -1845,6 +1881,25 @@ public class AuditorStatutory extends BasePage {
 			{
 				test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
 			}
+			Thread.sleep(500);
+			WebElement CD = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > rect"));
+			CD.click();
+			WebElement CT = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+			CT.click();
+			WebElement PR = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));
+			PR.click();
+			String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+			DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+			int Due_Today = Integer.parseInt(DueToday);						
+			if(Due_Today > 0)
+			{
+				CFOcountPOM.clickAdminDueToday().click();
+				AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "DueToday Compliance Count = "+ Due_Today + ".");
+			}
 		
 		Thread.sleep(500);
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
@@ -1853,11 +1908,11 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 20)
+	@Test(priority = 20)
 
 	void NotCompleted_PieChartPe() throws InterruptedException
 	{
-		test = extent.startTest("period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
+	//	test = extent.startTest("period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 		
 		
 		Thread.sleep(3000);
@@ -1873,17 +1928,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
-		
+		test = extent.startTest("period-Pie Chart "+date+"-"+month+"-"+year+" "+"-Completion Status- 'Not Completed' Count Verification");
+
 		int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
 		CFOcountPOM.clickNotCompleted().click();									//CLicking on 'Not Completed' count
 		
@@ -1967,11 +2029,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 21)
+	@Test(priority = 21)
 
 	void ClosedDelayed_PieChartPe() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
+	//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 		
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -1985,16 +2047,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart "+date+"-"+month+"-"+year+" "+"- Completion Status- 'Closed Delayed' Count Verification");
+
 		int ClosedDelayedValue = Integer.parseInt(CFOcountPOM.clickClosedDelayed().getText());	//Reading value of 'After Due Date'
 		
 		CFOcountPOM.clickClosedDelayed().click();								//CLicking on 'Not Completed' count
@@ -2081,11 +2151,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 22)
+	@Test(priority = 22)
 
 	void ClosedTimely_PieChartPe() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
+	//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 	
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -2098,17 +2168,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
-		
+		test = extent.startTest("Period-Pie Chart "+date+"-"+month+"-"+year+" "+"- Completion Status- 'Closed Timely' Count Verification");
+
 		Thread.sleep(2500);
 		int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimely().getText());	//Reading value of 'After Due Date'
 		CFOcountPOM.clickClosedTimely().click();								//CLicking on 'Not Completed' count
@@ -2198,11 +2275,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 23)
+	@Test(priority = 23)
 
 	void NotApplicable_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
+		//test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 	
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -2215,17 +2292,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
-		
+		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"- Completion Status- 'Not Applicable' Count Verification");
+
 		Thread.sleep(2500);
 		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotApplicable().getText());	//Reading value of 'After Due Date'
 		CFOcountPOM.clickNotApplicable().click();								//CLicking on 'Not Completed' count
@@ -2315,11 +2399,11 @@ public class AuditorStatutory extends BasePage {
 	}
 		
 
-//	@Test(priority = 24)
+	@Test(priority = 24)
 
 	void Overdue_PieChartperiod() throws InterruptedException
 	{
-		test = extent.startTest("period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
+		//test = extent.startTest("period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		
 		
 		Thread.sleep(1000);
@@ -2336,16 +2420,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("period-Pie Chart "+date+"-"+month+"-"+year+" "+"-Not Completed Status- 'Overdue' Count Verification");
+
 		int OverdueValue = Integer.parseInt(CFOcountPOM.clickOverdue().getText());	//Reading value of 'Not Completed'
 		CFOcountPOM.clickOverdue().click();									//CLicking on 'Not Completed' count
 		
@@ -2435,11 +2527,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 25)
+	@Test(priority = 25)
 
 	void dueToday_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
+		//test = extent.startTest("period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 		
 		
 		Thread.sleep(1000);
@@ -2456,16 +2548,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("period-Pie Chart -"+date+"-"+month+"-"+year+" "+"-Not Completed Status- 'dueToday' Count Verification");
+
 		int OverdueValue = Integer.parseInt(CFOcountPOM.clickdueToday().getText());	//Reading value of 'Not Completed'
 		CFOcountPOM.clickdueToday().click();									//CLicking on 'Not Completed' count
 		
@@ -2555,11 +2655,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 26)
+	@Test(priority = 26)
 
 	void pendingForReview_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
+	//	test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 		
 		
 		Thread.sleep(2000);
@@ -2576,16 +2676,23 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"- Not Completed Status- 'Pending For Review' Count Verification");
 
 		int pendingForReviewValue = Integer.parseInt(CFOcountPOM.clickpendingForReview().getText());	//Reading value of 'Not Completed'
 		CFOcountPOM.clickpendingForReview().click();									//CLicking on 'Not Completed' count
@@ -2678,11 +2785,12 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 27)
+	@Test(priority = 27)
 
 	void inProgress_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'In Progress' Count Verification");
+		//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'In Progress' Count Verification");
+		
 		
 		
 		Thread.sleep(2000);
@@ -2697,16 +2805,23 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(3000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"-Not Completed Status- 'In Progress' Count Verification");
 
 		int inProgressValue = Integer.parseInt(CFOcountPOM.clickinProgress().getText());	//Reading value of 'Not Completed'
 		CFOcountPOM.clickinProgress().click();									//CLicking on 'Not Completed' count
@@ -2801,7 +2916,7 @@ public class AuditorStatutory extends BasePage {
 
 	void Upcoming_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
+		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 	
 		Thread.sleep(2000);
 		
@@ -2816,17 +2931,24 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
-		
+		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"-Not Completed Status- ' Upcoming' Count Verification");
+
 		Thread.sleep(4000);
 		WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
 	
@@ -2930,11 +3052,11 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 29)
+	@Test(priority = 29)
 
 	void rejected_PieChartPeriod() throws InterruptedException
 	{
-		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
+		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
 		
 		Thread.sleep(2000);
 	
@@ -2948,16 +3070,23 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
 		Thread.sleep(1000);
+		String year = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Year().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateMonth().click();	
 		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
 		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date().getText();
 		Thread.sleep(3000);
 		AuditorcountPOM.Date().click();	
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"-Not Completed Status- ' Rejected' Count Verification");
 
 		
 		int rejectedValue = Integer.parseInt(CFOcountPOM.clickRejectedPe11().getText());	//Reading value of 'Not Completed'
@@ -3048,7 +3177,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	  @Test(priority = 59)
+	  @Test(priority = 59)
 		void DetailedReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report Count Verification");
@@ -3059,7 +3188,7 @@ public class AuditorStatutory extends BasePage {
 			extent.flush();
 		}
 	  
-//		@Test(priority = 62)
+		@Test(priority = 62)
 		void AssignmentReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Assignment Report verification");
@@ -3070,7 +3199,7 @@ public class AuditorStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 74)
+		@Test(priority = 74)
 		void ComplianceDocuments() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents  verification");

@@ -453,18 +453,22 @@ public class DeptCountPOM extends BasePage {
 		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Medium"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readMedium().click();						//Clicking on Medium value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Low"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		Thread.sleep(8000);

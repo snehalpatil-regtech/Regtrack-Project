@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< Updated upstream
       <class name="criticalTestScripts.StatutoryMGMT">
         <methods>
           <include name="StandardReportUserIn"/>
@@ -18,6 +19,44 @@
           <include name="Closing"/>
         </methods>
       </class> <!-- criticalTestScripts.StatutoryMGMT -->
+=======
+      <class name="criticalTestScripts.AuditorStatutory">
+        <methods>
+          <include name="inProgress_PieChart"/>
+          <include name="dueToday_PieChart"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="Overdue_PieChart"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="Overdue_PieChartperiod"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="ComplianceDocuments"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="Login"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="NotCompleted_PieChartPe"/>
+          <include name="browserClosing"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
+          <include name="setBrowser"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="ClosedDelayed_PieChartPe"/>
+          <include name="ClosedTimely_PieChartPe"/>
+          <include name="DetailedReport"/>
+          <include name="AssignmentReport"/>
+          <include name="ClosedDelayed_PieChart"/>
+          <include name="Closing"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="rejected_PieChartPeriod"/>
+        </methods>
+      </class> <!-- criticalTestScripts.AuditorStatutory -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

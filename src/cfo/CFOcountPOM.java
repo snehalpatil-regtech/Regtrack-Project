@@ -926,7 +926,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickIndustrySpeCriticalM( )			//"Statutory" Method to search Labour compliance High risk value.
 	{
-		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[3]"));
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
 		return bargraph;
 	}
 	public static WebElement clickIndustrySpeCriticalM1( )			//"Statutory" Method to search Labour compliance High risk value.
@@ -1705,7 +1705,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickClosedTimelyDpt( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[4]"));
 		return department;
 	}
 	
@@ -1900,6 +1900,17 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[42]"));
 		return department;
 	}
+	public static WebElement clickAdminInProgressIn( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
+	public static WebElement clickAdminRejectedIn( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[48]"));
+		return department;
+	}
+
 	
 	public static WebElement clickFinancePendingReviewDept( )		//Method to search 'High Risk' bar of Department Summary.
 	{
@@ -1948,12 +1959,47 @@ public class CFOcountPOM extends BasePage
 		return department;
 	}
 	
+	public static WebElement clickHumanInprogress( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		return department;
+	}
+
+	public static WebElement clickHumanRejected( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		return department;
+	}
+
 	public static WebElement clickAdminNotApplicable( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[51]"));
 		return department;
 	}
+	public static WebElement clickAdminDuetodayIn( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[54]"));
+		return department;
+	}
+
 	
+	public static WebElement clickAdminDueToday( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[54]"));
+		return department;
+	}
+
+	public static WebElement clickAdminInprogress( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
+	public static WebElement clickAdminInRejected( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[48]"));
+		return department;
+	}
+
 	public static WebElement clickHRNotApplicable( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[24]"));
@@ -6081,6 +6127,109 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 	
 	}
 	
+	public static void RiskGraphCountInternal(  ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+	
+		
+		Thread.sleep(8000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Switching to iFrame.
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@class='k-selectable']")));	//Wait until records table get visible.
+			Thread.sleep(7000);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Thread.sleep(4000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
+		Thread.sleep(2000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s1 = CFOcountPOM.readTotalItemsD().getText();		//Reading total number of items.
+		String[] bits = s1.split(" ");									//Splitting the String
+		String itomsCount = bits[bits.length - 2];						//Getting the second last word (total number of items)
+		
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			Thread.sleep(1000);
+			s1 = CFOcountPOM.readTotalItemsD().getText();
+			bits = s1.split(" ");										//Splitting the String
+			itomsCount = bits[bits.length - 2];
+		}
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			itomsCount = "0";
+		}
+		int count1 = Integer.parseInt(itomsCount);
+		
+		if(count1 == ComplianceCount)
+		{
+			//test.log(LogStatus.PASS, "'"+ComplianceType+"' Compliance Count matches to number of items from grid.");
+			test.log(LogStatus.PASS, "'"+ComplianceType+"' Compliance  Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count doesn't matches to number of items from grid.");
+			test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance  Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
+		}
+		
+			Thread.sleep(4000);
+			CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(3000);
+			
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+
+				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+				Thread.sleep(4000);
+				
+				List<WebElement> ViewButton = getDriver().findElements(locator);	
+				Thread.sleep(3000);
+				ViewButton.get(0).click();
+				Thread.sleep(4000);
+				CFOcountPOM.closeDocument1().click();
+				test.log(LogStatus.PASS, "View successfully");
+				Thread.sleep(3000);
+				
+				ViewButton.get(1).click();
+				Thread.sleep(4000);
+				test.log(LogStatus.PASS, "Download Doc successfully");
+				ViewButton.get(2).click();
+			
+				Thread.sleep(4000);
+				test.log(LogStatus.PASS, "overView successfully");
+				CFOcountPOM.closeDocument().click();
+				Thread.sleep(3000);
+				
+			/*	ViewButton.get(3).click();
+					Thread.sleep(1000);
+					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("OverViews4"));	//Wait until frame get visible and switch to it.
+					Thread.sleep(500);
+					CFOcountPOM.EnterRemark().sendKeys("remark");
+					Thread.sleep(1000);
+					CFOcountPOM.ReOpen().click();
+					Thread.sleep(8000);
+					String msg =getDriver().switchTo().alert().getText();
+					Thread.sleep(1000);
+					getDriver().switchTo().alert().accept();
+					test.log(LogStatus.PASS, "Message Display " +msg);
+		Thread.sleep(1000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(5000);*/
+		
+		
+		Thread.sleep(500);
+		getDriver().switchTo().parentFrame();
+		CFOcountPOM.closeCategories().click();					//Closing the Not Completed compliance window.
+		Thread.sleep(500);
+	
+	}
+	
+	
 	public static void RiskGraphCountNA(  ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
@@ -6136,7 +6285,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6215,6 +6364,84 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			Thread.sleep(3000);
 			
 			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+
+				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+				Thread.sleep(4000);
+				
+				List<WebElement> ViewButton = getDriver().findElements(locator);	
+				Thread.sleep(3000);
+				
+				ViewButton.get(2).click();
+			
+				Thread.sleep(4000);
+				test.log(LogStatus.PASS, "overView successfully");
+				CFOcountPOM.closeDocument().click();
+				Thread.sleep(3000);
+
+		
+		
+		Thread.sleep(5000);
+		getDriver().switchTo().parentFrame();
+		CFOcountPOM.closeCategories().click();					//Closing the Not Completed compliance window.
+		Thread.sleep(500);
+	
+	}
+	
+	public static void RiskGraphCountNAInternal(  ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+	
+		
+		Thread.sleep(8000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Switching to iFrame.
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@class='k-selectable']")));	//Wait until records table get visible.
+			Thread.sleep(7000);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Thread.sleep(4000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
+		Thread.sleep(2000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s1 = CFOcountPOM.readTotalItemsD().getText();		//Reading total number of items.
+		String[] bits = s1.split(" ");									//Splitting the String
+		String itomsCount = bits[bits.length - 2];						//Getting the second last word (total number of items)
+		
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			Thread.sleep(1000);
+			s1 = CFOcountPOM.readTotalItemsD().getText();
+			bits = s1.split(" ");										//Splitting the String
+			itomsCount = bits[bits.length - 2];
+		}
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			itomsCount = "0";
+		}
+		int count1 = Integer.parseInt(itomsCount);
+		
+		if(count1 == ComplianceCount)
+		{
+			//test.log(LogStatus.PASS, "'"+ComplianceType+"' Compliance Count matches to number of items from grid.");
+			test.log(LogStatus.PASS, "'"+ComplianceType+"' Compliance  Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count doesn't matches to number of items from grid.");
+			test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance  Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
+		}
+		Thread.sleep(4000);
+		 CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(3000);
+			
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);

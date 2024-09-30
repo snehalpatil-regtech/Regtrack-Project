@@ -6073,8 +6073,7 @@ Actions action = new Actions(getDriver());
 	CompanyPOM.UploadInternalTab().click();
 	File dir = new File("C:\\Users\\shitalb\\Downloads");
 	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
-
-	Thread.sleep(500);
+	Thread.sleep(1000);
 	CompanyPOM.ExcelFormat().click(); // Exporting (Downloading) file
 
 	Thread.sleep(8000);
@@ -6084,10 +6083,43 @@ Actions action = new Actions(getDriver());
 	if (dirContents.length < allFilesNew.length) {
 		test.log(LogStatus.PASS,  " Excel Exported successfully.");
 	} else {
-		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+		test.log(LogStatus.FAIL,  " :- Excel does not Exported.");
 	}
 				
-	Thread.sleep(1000);
+	Thread.sleep(3000);
+	CompanyPOM.ChooseFileInternal().sendKeys("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\UploadSheet\\Internal Compliance Upload Format (3).xlsx"); // Writing Task title
+	Thread.sleep(3000);
+	CompanyPOM.UploadInternal().click();
+	Thread.sleep(2000);
+	String t = CompanyPOM.ValMessage().getText();
+	Thread.sleep(2000);
+	if(t.equalsIgnoreCase("Entity Details Saved Successfully")) 
+	 {
+			test.log(LogStatus.PASS, t);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, t);
+			
+			
+		} 
+	Thread.sleep(2000);
+	CompanyPOM.ValMessage().click();
+	Thread.sleep(2000);
+	String t1 = CompanyPOM.SaveValMessage().getText();
+	Thread.sleep(2000);
+	if(t1.equalsIgnoreCase("Entity Details Saved Successfully")) 
+	 {
+			test.log(LogStatus.PASS, t1);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, t1);
+			
+			
+		} 
+		
+		Thread.sleep(5000);
 	SwitchtoParent(test);
 	
 	}
@@ -6239,7 +6271,109 @@ Actions action = new Actions(getDriver());
 	
 	}
 
+public static void ComplianceAssignments( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
 
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.ActivateChecklist().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcelL().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+
+public static void Compliance( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.Compliance().click();
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+	Thread.sleep(500);
+	CompanyPOM.ExportExcelL().click(); // Exporting (Downloading) file
+
+	Thread.sleep(8000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+	Thread.sleep(3000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Excel Exported successfully.");
+	} else {
+		test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
+
+public static void ComplianceAddnewlink( ExtentTest test) throws InterruptedException, IOException
+{
+Actions action = new Actions(getDriver());
+	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	Thread.sleep(3000);
+	// switching child window
+	SwitchtoChild(test);
+	Thread.sleep(3000);
+
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]")));	//Wait until records table get visible.
+		
+		action.moveToElement(CompanyPOM.clickInternalCompliance()).click().build().perform();
+	//Thread.sleep(4000);
+	//CompanyPOM.clickInternalCompliance().click();
+	Thread.sleep(4000);
+	CompanyPOM.Compliance().click();
+	Thread.sleep(2000);
+	if(CompanyPOM.AddNewlink().isDisplayed()) {
+		test.log(LogStatus.PASS, "Add new link should be seen after click on compliance tab" );
+	}
+	else {
+		test.log(LogStatus.FAIL, "Add new link should not be seen after click on compliance tab" );
+
+	}
+				
+	Thread.sleep(1000);
+	SwitchtoParent(test);
+	
+	}
 
 }
 

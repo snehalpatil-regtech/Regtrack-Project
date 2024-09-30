@@ -1569,6 +1569,125 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 		}
 	}
 	
+	public static void GraphCount4( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	{
+		Thread.sleep(2000);
+		if(risk.equalsIgnoreCase("Critical"))
+		{
+			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+		}
+		else if(risk.equalsIgnoreCase("High"))
+		{
+			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
+		}
+		else if(risk.equalsIgnoreCase("Medium"))
+		{
+			CFOcountPOM.readMedium().click();						//Clicking on Medium value of Pie Chart of 'Not Completed'.
+		}
+		else if(risk.equalsIgnoreCase("Low"))
+		{
+			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
+		}
+		Thread.sleep(10000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), (80));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,300)");	
+		Thread.sleep(5000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		Thread.sleep(1000);
+		String s = CFOcountPOM.readTotalItemsD().getText();
+		Thread.sleep(8000);
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(10000);
+		try
+		{
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+			Thread.sleep(3000);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Thread.sleep(8000);
+		String s1 = CFOcountPOM.readTotalItemsD().getText();		//Reading total number of items.
+		String[] bits = s1.split(" ");									//Splitting the String
+		String itomsCount = bits[bits.length - 2];						//Getting the second last word (total number of items)
+		
+		int count = 0;
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			Thread.sleep(2500);
+			s1 = CFOcountPOM.readTotalItems().getText();
+			bits = s1.split(" ");										//Splitting the String
+			itomsCount = bits[bits.length - 2];
+		}
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			count = 0;
+		}
+		else
+		{
+			count = Integer.parseInt(itomsCount);
+		}
+		
+		
+		if(count == complianceCount)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
+		}
+		
+		Thread.sleep(4000);
+		 CFOcountPOM.clickExportImage().click();
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Excel file Export Successfully");
+			Thread.sleep(3000);
+			
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
+			
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+			Thread.sleep(8000);
+			
+			WebElement ViewButton = getDriver().findElement(locator);	
+			Thread.sleep(3000);
+		JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+		jse.executeScript("arguments[0].click();", ViewButton);
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "overView Successfully");
+			try {
+				CFOcountPOM.closeDocument().click();
+				}catch(Exception e){
+					CFOcountPOM.closeDocument1().click();
+				}
+		
+			getDriver().switchTo().parentFrame();
+		Thread.sleep(1000);
+		CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+		Thread.sleep(2000);
+		
+	}else {
+		
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(300,0)");	
+		Thread.sleep(1000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(1000);
+		CFOcountPOM.closeCategories().click();
+		Thread.sleep(1000);
+		test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.= 0");
+		
+		
+	}
+	}
+	
 	public static void GraphCountIn2( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
 		Thread.sleep(500);
@@ -2078,17 +2197,19 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	
 	public static void GraphCountSatPe1( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
 	{
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
 		{
 			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Medium"))
 		{
+			Thread.sleep(3000);
 			CFOcountPOM.readMedium().click();						//Clicking on Medium value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Low"))
