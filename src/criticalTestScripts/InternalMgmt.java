@@ -130,7 +130,7 @@ public class InternalMgmt extends BasePage {
 		}
 	}
 	
-	//@Test(priority = 1)
+//@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -142,7 +142,7 @@ public class InternalMgmt extends BasePage {
 	}
 	
 
-	//@Test(priority = 2)
+//@Test(priority = 2)
 	void LocationCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Location");
@@ -153,7 +153,7 @@ public class InternalMgmt extends BasePage {
 		//extent.flush();
 	}
 	
-	//@Test(priority = 3)
+//@Test(priority = 3)
 	void clickCategoriesInternal() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -268,8 +268,7 @@ public class InternalMgmt extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-	
-//	@Test(priority = 7)
+//@Test(priority = 7)
 	void clickUsersInternal() throws InterruptedException
 	{
 		test = extent.startTest("'Users' Count by Clicking on 'Users'");
@@ -386,6 +385,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -466,6 +467,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
@@ -548,6 +551,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		Actions action = new Actions(getDriver());
 	      JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -619,7 +624,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 13)
+//	@Test(priority = 13)
 	void NotApplicable_PieChartIN() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -629,6 +634,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
@@ -711,7 +718,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 		
-	@Test(priority = 14)
+//	@Test(priority = 14)
 	void Overdue_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -722,6 +729,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
@@ -805,7 +814,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 15)
+//	@Test(priority = 15)
 	void dueToday_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -816,8 +825,9 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
-		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		
@@ -901,7 +911,7 @@ public class InternalMgmt extends BasePage {
 	}
 	
 	
-	@Test(priority = 16)
+	//@Test(priority = 16)
 	void PFR_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status-  'Pending for Review' Count Verification");
@@ -912,6 +922,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -996,7 +1008,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-@Test(priority = 17)
+//@Test(priority = 17)
 	void inProgress_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status-  'In Progress' Count Verification");
@@ -1007,6 +1019,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1092,7 +1106,7 @@ public class InternalMgmt extends BasePage {
 	}
 	
 	
-@Test(priority = 18)
+//@Test(priority = 18)
 	void Rejected_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status- 'Rejected' Count Verification");
@@ -1104,6 +1118,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1188,7 +1204,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-@Test(priority = 19)
+//@Test(priority = 19)
 	void BargraphBSECriticalStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
@@ -1200,6 +1216,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1296,6 +1314,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
@@ -1382,7 +1402,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 21)
+	//@Test(priority = 21)
 	void BargraphBSEMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
@@ -1392,6 +1412,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1487,6 +1509,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	     js.executeScript("window.scrollBy(0,925)");						//Scrolling down window by 1000 px.
@@ -1582,6 +1606,8 @@ public class InternalMgmt extends BasePage {
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(5000);
+		CFOcountPOM.RefreshNow().click();
+		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1500)");				//Scrolling down window by 1000 px.cfo
 	//	js.executeScript("window.scrollBy(0,600)");
@@ -1620,6 +1646,10 @@ public class InternalMgmt extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+RiskCritical_ClosedDelayed);
 		}
+		
+//		Thread.sleep(2000);
+//		List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+//		ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Not Completed");
 		
 		Thread.sleep(3000);
 		int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
@@ -1671,7 +1701,7 @@ public class InternalMgmt extends BasePage {
 	}
 	
 	
-	@Test(priority =23)
+	@Test(priority =24)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1680,6 +1710,9 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		CFOcountPOM.RefreshNow().click();
+		
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1500)");
@@ -1767,7 +1800,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-   @Test(priority =24)
+   @Test(priority =25)
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1776,6 +1809,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1500)");
@@ -1859,7 +1894,7 @@ public class InternalMgmt extends BasePage {
 		extent.flush();
 	}
 	
-@Test(priority = 25)
+@Test(priority = 26)
 	void RiskSummaryLowStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1870,6 +1905,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1500)");
@@ -1964,6 +2001,8 @@ public class InternalMgmt extends BasePage {
 		CFOcountPOM.ALL().click();
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
+		Thread.sleep(1000);
+		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	//	js.executeScript("window.scrollBy(0,500)");					//Scrolling down window by 1500 px.

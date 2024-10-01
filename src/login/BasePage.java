@@ -228,9 +228,20 @@ import performer.OverduePOM;
 		}else {
 			
 		}
+		
+//		Thread.sleep(3000);
+//		CFOcountPOM.YearTodate().click();
+//		Thread.sleep(1000);
+//		CFOcountPOM.ALL().click();
+//		Thread.sleep(1000);
+//		CFOcountPOM.clickApply().click();
+		
 		Thread.sleep(3000);
-	//	CFOcountPOM.RefreshNowD().click();
-	//	Thread.sleep(3000);
+		//CFOcountPOM.RefreshNowD().click();
+		
+		//CFOcountPOM.RefreshNow().click();
+		
+		Thread.sleep(3000);
 		
 		// Combine the two XPaths with the '|' operator
         WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
