@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -45,7 +46,7 @@ public class MgmtSonyTest extends BasePage {
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "mgmt";  
+	public static String link = "cfo";  
 	
 	/*public static XSSFSheet ReadExcel() throws IOException
 	{
@@ -59,7 +60,7 @@ public class MgmtSonyTest extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\MgmtBita.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\MgmtBita.html",true);
 		test = extent.startTest("Loging In - MGMT (Statutory)- Sony");
 		test.log(LogStatus.PASS, "Logging into system");
 	
@@ -115,6 +116,79 @@ public class MgmtSonyTest extends BasePage {
 		
 		ApprovalcountPOM.Entities(test);
 		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 0)
+	void TotalComplianceCountChange() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Total Compliances'");
+		
+        ApprovalcountPOM.TotalCompliances(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	
+
+	}
+	
+	@Test(priority = 2)
+	void clickTotalCompliance() throws InterruptedException
+	{
+		test = extent.startTest(" Count by Clicking on 'Total Compliances'");
+		
+		
+		Thread.sleep(500);
+		if(OverduePOM.closeMessage().isDisplayed())				//If Compliance Updation message popped up,
+		{
+			OverduePOM.closeMessage().click();					//then close the message.
+		}
+		
+		Thread.sleep(1500);
+		int valueUsers = Integer.parseInt(ApprovalcountPOM.TotalCompliances().getText());	//Storing value of 'Users' as a String to compare.
+		Thread.sleep(500);
+		ApprovalcountPOM.TotalCompliances().click();					//Clicking on 'Users'. 
+		Thread.sleep(5000);
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		
+		Thread.sleep(2000);
+		CFOcountPOM.clickExportImage2().click();                    //export excel
+		Thread.sleep(5000);
+		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+		
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,1000)");					//Scrolling down window by 1000 px.
+		
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD().click();
+		
+		String getCount = CFOcountPOM.readTotalItemsD().getText();	//Storing no of Items 'Users' count as string.
+		String[] bits = getCount.split(" ");							//Splitting the String
+		String usersCount = bits[bits.length - 2];						//Getting the second last word (total number of users)
+		if(usersCount.equalsIgnoreCase("to"))
+		{
+			Thread.sleep(2500);
+			getCount = CFOcountPOM.readTotalItemsD().getText();
+			bits = getCount.split(" ");								//Splitting the String
+			usersCount = bits[bits.length - 2];
+		}
+		int count = Integer.parseInt(usersCount);
+		
+		getDriver().switchTo().parentFrame();								//Switching back to parent frame. 
+		Thread.sleep(1000);
+		CFOcountPOM.closeCategories().click();					//Closing the 'Compliance' window.
+		
+		if(valueUsers == count)								//Checking if String getCount contains the Value (in string format) 
+		{
+			test.log(LogStatus.PASS, "'Total Compliances' count matches to 'Total Compliances' items. Dashboard Value = "+ valueUsers+ ", Actual Value = "+ getCount);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "Total Compliances count does not matches. Dashboard Value = "+ valueUsers+ ", Actual Value = "+ getCount);
+		}
 		extent.endTest(test);
 		extent.flush();
 	}

@@ -71,7 +71,7 @@
 		void setBrowser() throws InterruptedException, IOException
 		{
 		//	String workingDir = System.getProperty("web.chrome.","C:/March2022/PerformerPom//chrome.exe");
-			extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\MgmtBita.htm",true);
+			extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\MgmtBita.htm",true);
 			test = extent.startTest("Loging In - MGMT (Statutory)");
 			test.log(LogStatus.PASS, "Logging into system");
 		/*	
@@ -434,8 +434,31 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+//		@Test(priority = 9)
+		void PenaltyMultipleFilter() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
+			
+			CFOcountPOM.PenaltyMultipleFilter(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+		@Test(priority = 9)
+		void PenaltyMultipleFilterInterest() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To Check Whether On  Penalty- Interest box Popup selection wise filter working or not.");
+			
+			CFOcountPOM.PenaltyMultipleFilterInterest(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
 		
-//@Test(priority = 9)
+		
+//@Test(priority = 10)
 		void SummaryofOverdueCompliances() throws InterruptedException
 		{
 			test = extent.startTest(" Summary of Overdue Compliances");
@@ -491,7 +514,7 @@
 			
 		}
 		
-@Test(priority = 0)
+@Test(priority = 10)
 		void SummaryofOverdueFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Summary Of Overdue Compliance Popup selection wise filter working or not.");
@@ -4832,7 +4855,19 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+		
 		@Test(priority = 119)
+		void PerformReviewEmailCol() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+				
+			MethodsPOM.PerformReviewEmailCol(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+		@Test(priority = 120)
 		void ComplianceDocumentsSF() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");

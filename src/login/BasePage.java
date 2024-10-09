@@ -282,8 +282,8 @@ import performer.OverduePOM;
 		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
 		//wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
-		//ApprovalcountPOM.clickManagement().click();
-		Thread.sleep(5000);
+		
+
 		
 		try
 		{
@@ -297,10 +297,11 @@ import performer.OverduePOM;
 		catch(Exception e)
 		{
 		}
-		
-		
-		if(text.equalsIgnoreCase("internal")) {
 		Thread.sleep(3000);
+		ApprovalcountPOM.clickManagement().click();
+		Thread.sleep(3000);
+		if(text.equalsIgnoreCase("internal")) {
+			Thread.sleep(3000);
 		Select drp = new Select(CFOcountPOM.selectInternal());
 		Thread.sleep(700);
 		drp.selectByIndex(1);

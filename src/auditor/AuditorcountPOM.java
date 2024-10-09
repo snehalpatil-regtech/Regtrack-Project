@@ -1141,30 +1141,39 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 		Thread.sleep(1000);
 		OverduePOM.clickcomplianceSta().click();
 		Thread.sleep(1000);
-	//	OverduePOM.clickcomplianceIN().click();
-	//	Thread.sleep(4000);
+		OverduePOM.Apply().click();
+		Thread.sleep(4000);
 		CFOcountPOM.clickExportImage2().click();			//Exporting (Downloading) file
 		Thread.sleep(500);
 		test.log(LogStatus.PASS, "Export successfully");
 		Thread.sleep(4000);
+		JavascriptExecutor jse=(JavascriptExecutor) getDriver(); 
+		
 		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		Thread.sleep(4000);
 		
 		WebElement ViewButton = getDriver().findElement(locator);	
 		Thread.sleep(4000);
-	JavascriptExecutor jse=(JavascriptExecutor) getDriver(); 
+	
 	Thread.sleep(2000);
 	jse.executeScript("arguments[0].click();", ViewButton);
 		Thread.sleep(1000);
+		try {
 		CFOcountPOM.closeDocument1().click();
+		}
+		catch(Exception e)
+		{
+			CFOcountPOM.closeDocument2().click();
+			
+		}
 		test.log(LogStatus.PASS, "overView successfully");
-	
+		
 		Thread.sleep(3000);
-		OverduePOM.clickRiskD().click();
+		OverduePOM.clickRiskd().click();
 		Thread.sleep(1000);
 		By locatorR = By.xpath("(//*[@class='k-checkbox-label checkbox-span'])[2]");
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		wait.until(ExpectedConditions.presenceOfElementLocated(locatorR));
 		Thread.sleep(4000);
 		
 		WebElement clickHigh = getDriver().findElement(locatorR);	
@@ -2327,15 +2336,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	
 	public static void DetailedReportIn(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (160));
-	    
-		Thread.sleep(500);
+		WebDriverWait wait = new WebDriverWait(getDriver(), (160));	    
+		Thread.sleep(3000);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
 		Thread.sleep(3000);
 		CFOcountPOM.clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
 		Thread.sleep(7000);
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 		Thread.sleep(1000);
 		OverduePOM.clickcomplianceType().click();
 		Thread.sleep(1000);
@@ -2343,11 +2351,13 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	//	Thread.sleep(1000);
 		OverduePOM.clickcomplianceIN().click();
 		Thread.sleep(4000);
-		CFOcountPOM.clickExportImage().click();			//Exporting (Downloading) file
+		OverduePOM.Apply().click();
+		Thread.sleep(4000);
+		CFOcountPOM.clickExportImage2().click();			//Exporting (Downloading) file
 		Thread.sleep(500);
 		test.log(LogStatus.PASS, "Export successfully");
 		Thread.sleep(4000);
-		By locator = By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[1]/td/a[1]");
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td/a");
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		Thread.sleep(4000);
 		
@@ -2357,13 +2367,21 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	Thread.sleep(2000);
 	jse.executeScript("arguments[0].click();", ViewButton);
 		Thread.sleep(1000);
-		CFOcountPOM.closeDocument1().click();
+		try {
+			CFOcountPOM.closeDocument1().click();
+			}
+			catch(Exception e)
+			{
+				CFOcountPOM.closeDocument2().click();
+				
+			}
+		//CFOcountPOM.closeDocument1().click();
 		test.log(LogStatus.PASS, "overView successfully");
 	
 		Thread.sleep(3000);
-		OverduePOM.clickRiskD().click();
+		OverduePOM.clickRiskd().click();
 		Thread.sleep(1000);
-		By locatorR = By.xpath("(//*[@class='k-checkbox-label checkbox-span'])[8]");
+		By locatorR = By.xpath("(//*[@class='k-checkbox-label checkbox-span'])[2]");
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		Thread.sleep(4000);
 		
@@ -2372,7 +2390,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	jse.executeScript("arguments[0].click();", clickHigh);
 		Thread.sleep(4000);
 		
-		OverduePOM.clickclearBtn().click();
+		OverduePOM.clickclear().click();
 		test.log(LogStatus.PASS, "Clear Button is working");
 		Thread.sleep(7000);
 		/*

@@ -51,12 +51,12 @@ public class ReviewerCount extends BasePage
 	public static List<WebElement> elementsList = null;
 	public static List<WebElement> elementsList1 = null;
 	
-	static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	public static String link = "mgmt1";
 	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
-		fis = new FileInputStream("E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx");
+		fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(1);					//Retrieving second sheet of Workbook
 		return sheet;
@@ -66,7 +66,7 @@ public class ReviewerCount extends BasePage
 	void setBrowser() throws InterruptedException, IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\ReviewerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
 		test = extent.startTest("Logging In - Reviewer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -2297,7 +2297,19 @@ extent.flush();
     				extent.endTest(test);
     				extent.flush();
     			}
+    			
     			@Test(priority = 83)
+				void PerformReviewEmailCol() throws InterruptedException, IOException
+				{
+					test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+						
+					MethodsPOM.PerformReviewEmailCol(test);
+					
+					extent.endTest(test);
+					extent.flush();
+				}
+
+    			@Test(priority = 84)
     			void ComplianceDocumentsSF() throws InterruptedException, IOException
     			{
     				test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");

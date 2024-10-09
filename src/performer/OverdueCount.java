@@ -59,7 +59,7 @@ public class OverdueCount extends BasePage
 	public static XSSFSheet sheet = null;			//Sheet variable
 	
 	public static String link = "mgmt1";
-	static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
@@ -73,7 +73,7 @@ public class OverdueCount extends BasePage
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\PerformerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\PerformerResults.html",true);
 		test = extent.startTest("Loging In - Performer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -1276,7 +1276,17 @@ public class OverdueCount extends BasePage
 		extent.flush();
 	}
 	
+@Test(priority = 65)
+void PerformReviewEmailCol() throws InterruptedException, IOException
+{
+	test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+		
+	MethodsPOM.PerformReviewEmailCol(test);
 	
+	extent.endTest(test);
+	extent.flush();
+}
+
 	
 	@Test(priority = 66) //pass
 	void AssignmentReport() throws InterruptedException, IOException

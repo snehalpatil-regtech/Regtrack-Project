@@ -61,7 +61,7 @@ public class FePerformer extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\PerformerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\PerformerResults.html",true);
 		test = extent.startTest("Loging In - Performer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -330,6 +330,17 @@ public class FePerformer extends BasePage {
 			extent.flush();
 		}
 		
+	//	@Test(priority = 39)
+		void PerformReviewEmailCol() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+				
+			MethodsPOM.PerformReviewEmailCol(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
 		
 	
 	

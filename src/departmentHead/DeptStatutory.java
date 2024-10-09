@@ -1,5 +1,6 @@
 package departmentHead;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
@@ -29,6 +30,7 @@ import auditor.AuditorcountPOM;
 import cfo.CFOcountPOM;
 import cfo.MgmtAMethod;
 import login.BasePage;
+import performer.MethodsPOM;
 
 public class DeptStatutory extends BasePage {
 	
@@ -288,8 +290,123 @@ public class DeptStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+	*/
+	@Test(priority = 8)
+	void clickPenaltyStatutory() throws InterruptedException
+	{
+		test = extent.startTest("'Penalty' ");
+		//test.log(LogStatus.INFO, "Test Initiated");
+		
+		Thread.sleep(1500);
+	//	String oldStr = CFOcountPOM.readPenaltyCount().getText();
+	//	String newStr = oldStr.replaceAll(",","");		//Removing comma () from the read input.
+	//	int valuePenalty = Integer.parseInt(newStr);	//Storing old value of 'Compliances'.
+		
+		CFOcountPOM.readPenaltyCount().click();					//Clicking on 'Penalty'.
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(1000);
+		CFOcountPOM.clickExportImage().click();
+		Thread.sleep(5000);
+		test.log(LogStatus.PASS, "Penalty - Excel file Export Successfully");
+		CFOcountPOM.clickLocationPe().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Location().click();
+		 Thread.sleep(2000);
+		 CFOcountPOM.LocationDD().click();
+		 Thread.sleep(2000);
+		 CFOcountPOM.Location().click();
+	//	CFOcountPOM.Location().click();
+	//	 Thread.sleep(2000);
+	//	 CFOcountPOM.LocationDD().click();
+	//	 Thread.sleep(2000);
+		/*Thread.sleep(1000);
+		CFOcountPOM.clickExpand1().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickABita().click();*/
+		Thread.sleep(1000);
+		CFOcountPOM.clickClear().click();
+		test.log(LogStatus.PASS, " Penalty - Clear Button Working  Successfully");
+		Thread.sleep(1000);
+		CFOcountPOM.clickInterest().click();
+		Thread.sleep(4000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFGradingGraphDisplay"));	//Wait until frame get visible and switch to it.
+
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
+		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+		Thread.sleep(1000);
+		CFOcountPOM.clickExportImage().click();
+
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS, "Interest - Excel File downloaded successfully.");
+		} else {
+			test.log(LogStatus.FAIL,  "  File does not downloaded.");
+		}
+		Thread.sleep(500);
+		Thread.sleep(1000);
+	//	CFOcountPOM.clickLocationInterest().click();
+	//	Thread.sleep(2000);
+		 CFOcountPOM.Location().click();
+		 Thread.sleep(2000);
+		 CFOcountPOM.LocationDD().click();
+		 Thread.sleep(2000);
+		 CFOcountPOM.Location().click();
+		 Thread.sleep(2000);
+	//	CFOcountPOM.clickExpand2().click();
+	//	Thread.sleep(1000);
+	//	CFOcountPOM.clickBita().click();
+		//Thread.sleep(2000);
+		if(CFOcountPOM.clickClear().isEnabled()) {
+		CFOcountPOM.clickClear().click();
+		test.log(LogStatus.PASS, " Interest - Clear Button Working  Successfully");
+		Thread.sleep(1000);
+		}
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		getDriver().switchTo().defaultContent();
+		Thread.sleep(3000);
+		CFOcountPOM.closeCategories().click();
+		
+		Thread.sleep(3000);
+		
+		//CFOcountPOM.CountPenalty( test, valuePenalty);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+
+		@Test(priority = 9)
+		void PenaltyMultipleFilter() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
+			
+			CFOcountPOM.PenaltyMultipleFilter(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+		@Test(priority = 10)
+		void PenaltyMultipleFilterInterest() throws InterruptedException, IOException
+		{
+			test = extent.startTest("To Check Whether On  Penalty- Interest box Popup selection wise filter working or not.");
+			
+			CFOcountPOM.PenaltyMultipleFilterInterest(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+		
 	
-	@Test(priority = 9)
+	/*
+	@Test(priority = 11)
 	void SummaryofOverdueCompliances() throws InterruptedException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances");
@@ -2868,6 +2985,18 @@ public class DeptStatutory extends BasePage {
 					extent.flush();
 				}
 			  
+				@Test(priority = 60)
+				void PerformReviewEmailCol() throws InterruptedException, IOException
+				{
+					test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+						
+					MethodsPOM.PerformReviewEmailCol(test);
+					
+					extent.endTest(test);
+					extent.flush();
+				}
+
+		
 	//			@Test(priority = 62)
 				void AssignmentReport() throws InterruptedException, IOException
 				{

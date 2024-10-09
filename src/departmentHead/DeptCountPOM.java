@@ -168,7 +168,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement Status1()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[16]"));
+		categories = getDriver().findElement(By.xpath("(//*[@class='k-in'])[18]"));
 		return categories;
 	}
 	
@@ -3633,8 +3633,8 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
        Thread.sleep(500);
        Status1().click();
        Thread.sleep(500);
-       Status().click();
-       Thread.sleep(6000);
+     //  Status().click();
+    //   Thread.sleep(6000);
        Period().click();
        Thread.sleep(6000);
        PeriodDD().click();

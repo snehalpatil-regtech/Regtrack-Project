@@ -126,7 +126,7 @@ public class DeptInternal extends BasePage  {
 		}
 	}
 	
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -137,7 +137,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	void LocationCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Location");
@@ -149,7 +149,7 @@ public class DeptInternal extends BasePage  {
 	}
 		
 	
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	void clickCategoriesInternal() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Department'");
@@ -201,7 +201,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	void ClickCompliancesInternal() throws InterruptedException
 	{
 		test = extent.startTest("'Complainces' Count by Clicking on 'Compliances'");
@@ -262,7 +262,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 7)
+	@Test(priority = 7)
 	void clickUsersInternal() throws InterruptedException
 	{
 		test = extent.startTest("'Users' Count by Clicking on 'Users'");
@@ -322,7 +322,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 8)
+	@Test(priority = 8)
 	void SummaryofOverdueCompliances() throws InterruptedException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances Internal");
@@ -373,7 +373,7 @@ public class DeptInternal extends BasePage  {
 		
 	}
 	
-//	@Test(priority = 9)
+	@Test(priority = 9)
 	void ClosedTimely_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - 'Closed Timely' Count Verification");
@@ -466,7 +466,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 10)
+	@Test(priority = 10)
 	void ClosedDelayed_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - 'Closed Delayed' Count Verification");
@@ -560,7 +560,7 @@ public class DeptInternal extends BasePage  {
 	}
 	
 	
-//	@Test(priority = 11)
+	@Test(priority = 11)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - 'Not Completed' Count Verification");
@@ -653,7 +653,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 12)
+	@Test(priority = 12)
 	void NotApplicable_PieChartIN() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - 'Not Applicable' Count Verification");
@@ -746,7 +746,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 		
-//	@Test(priority = 13)
+	@Test(priority = 13)
 	void Overdue_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - 'Overdue' Count Verification");
@@ -842,7 +842,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 14)
+	@Test(priority = 14)
 	void PFR_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status- 'Pending For Review' Count Verification");
@@ -941,7 +941,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 15)
+	@Test(priority = 15)
 	void inProgress_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status- 'In Progress' Count Verification");
@@ -1040,7 +1040,7 @@ public class DeptInternal extends BasePage  {
 		extent.flush();
 	}
 	
-//	@Test(priority = 16)
+	@Test(priority = 16)
 	void Rejected_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status- ' Rejected' Count Verification");
@@ -1153,7 +1153,7 @@ public class DeptInternal extends BasePage  {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(4000);
-		js.executeScript("window.scrollBy(0,1700)");
+		js.executeScript("window.scrollBy(0,1300)");
 			
 			test = extent.startTest("Department Summary - 'Admin' Count Verification");
 			
@@ -1235,7 +1235,7 @@ public class DeptInternal extends BasePage  {
 			if(Fina_InProgress > 0)
 			{
 				CFOcountPOM.clickFinanceInProgressInternal().click();
-				CFOcountPOM.RiskGraphCount( test, " -In Progress", Fina_InProgress, "Internal");
+				CFOcountPOM.RiskGraphCountIn( test, " -In Progress", Fina_InProgress, "Internal");
 			}
 			else
 			{
@@ -1291,7 +1291,7 @@ public class DeptInternal extends BasePage  {
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2000)");				//Scrolling down window by 1000 px.cfo
+			js.executeScript("window.scrollBy(0,1700)");				//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,600)");
 			test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 			
@@ -1371,7 +1371,7 @@ public class DeptInternal extends BasePage  {
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2000)");
+			js.executeScript("window.scrollBy(0,1700)");
 		//	js.executeScript("window.scrollBy(0,500)");
 			Thread.sleep(500);
 			String NotCompleted = CFOcountPOM.clickRiskHighNotCompletedDIn().getText();		//Reading the Closed Timely value of Human Resource
@@ -1457,7 +1457,7 @@ public class DeptInternal extends BasePage  {
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,2000)");
+			js.executeScript("window.scrollBy(0,1700)");
 		//	js.executeScript("window.scrollBy(0,1400)");
 			Thread.sleep(3000);
 			String NotCompleted = CFOcountPOM.clickRiskMediumNotCompletedDIn().getText();		//Reading the Closed Timely value of Human Resource
@@ -1528,7 +1528,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 21)
+		@Test(priority = 21)
 		void RiskSummaryLowStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1542,8 +1542,8 @@ public class DeptInternal extends BasePage  {
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1500)");
-			Thread.sleep(2000);
+			js.executeScript("window.scrollBy(0,1700)");
+			Thread.sleep(3000);
 			
 			int RiskLow_NotCompleted = Integer.parseInt(CFOcountPOM.clickRiskLowNotCompletedDIn().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskLow_NotCompleted > 0)
@@ -1612,7 +1612,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 22)
+		@Test(priority = 22)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -1724,7 +1724,7 @@ public class DeptInternal extends BasePage  {
 		
 		}
 		
-//		@Test(priority = 23)
+		@Test(priority = 23)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -1837,7 +1837,7 @@ public class DeptInternal extends BasePage  {
 			
 		}
 		
-//		@Test(priority = 24)
+		@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Not Completed' Count Verification");
@@ -1950,7 +1950,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 25)
+		@Test(priority = 25)
 			void NotApplicable_PieChartPeriod() throws InterruptedException
 			{
 				test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2065,7 +2065,7 @@ public class DeptInternal extends BasePage  {
 				
 			}
 			
-//		@Test(priority = 26)
+		@Test(priority = 26)
 		void Overdue_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Overdue' Count Verification");
@@ -2297,7 +2297,7 @@ public class DeptInternal extends BasePage  {
 		}
 		
 		
-//		@Test(priority = 28)
+		@Test(priority = 28)
 		void PFR_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'PFR' Count Verification");
@@ -2398,7 +2398,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 29)
+		@Test(priority = 29)
 		void InProgress_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - Not Completed Status - 'in Progress' Count Verification");
@@ -2513,7 +2513,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 30)
+		@Test(priority = 30)
 		void Upcoming_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
@@ -2758,7 +2758,7 @@ public class DeptInternal extends BasePage  {
 		}
 		
 	
-	 @Test(priority = 59)
+//	 @Test(priority = 59)
 		void DetailedReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report Count Verification");
@@ -2769,7 +2769,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 	  
-		@Test(priority = 62)
+//		@Test(priority = 62)
 		void AssignmentReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Assignment Report verification");

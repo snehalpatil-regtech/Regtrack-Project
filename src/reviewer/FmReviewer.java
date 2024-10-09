@@ -34,6 +34,7 @@ public class FmReviewer extends BasePage {
 	public static List<WebElement> elementsList = null;
 	public static List<WebElement> elementsList1 = null;
 	
+	
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
@@ -47,7 +48,7 @@ public class FmReviewer extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\Reports\\ReviewerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
 		test = extent.startTest("Logging In - Reviewer");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -170,8 +171,8 @@ public class FmReviewer extends BasePage {
 					extent.flush();
 				}
 				
-				
-				
+
+
 	
 	@AfterMethod
   	void browserClosing() throws InterruptedException

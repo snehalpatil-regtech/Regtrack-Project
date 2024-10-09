@@ -989,6 +989,14 @@ public class OverduePOM extends BasePage
 		return performer;
 	}
 	
+	public static WebElement clickRiskd( )			//Searching 'My Workspace' element.
+	{
+		performer = getDriver().findElement(By.xpath("//*[@id='childrow']/div/div[2]/div[1]/div[1]/div[5]/div"));	//*[@onclick='CheckProduct();']
+		return performer;
+	}
+
+	
+	
 	public static WebElement clickRiskShowAll( )			//Searching 'My Workspace' element.
 	{
 		performer = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[2]/div/span[1]"));	//*[@onclick='CheckProduct();']
@@ -1128,7 +1136,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickcomplianceIN( )			//Searching 'My Workspace' element.
 	{
-		performer = getDriver().findElement(By.xpath("(//span[@class='k-checkbox-wrapper'])[2]"));	//*[@onclick='CheckProduct();']
+		performer = getDriver().findElement(By.xpath("(//span[@class='k-in'])[21]"));	//*[@onclick='CheckProduct();']
 		return performer;
 	}
 	
@@ -1588,6 +1596,7 @@ public class OverduePOM extends BasePage
 		performer = getDriver().findElement(By.xpath("//*[@id = 'ContentPlaceHolder1_btnCreateFolder1']"));
 		return performer;
 	}
+	//*[@id="ContentPlaceHolder1_FolderValidation"]/ul/li[1]
 	
 	public static WebElement readFolderMsg( )			//Searching Message after creating folder.
 	{
@@ -3191,6 +3200,18 @@ public class OverduePOM extends BasePage
 		performer = getDriver().findElement(By.xpath("(//*[@data-field='Deviation_Closure_Status'])[2]"));
 		return performer;
 	}
+	public static WebElement PerformerEmailmenu()					//
+	{
+		performer = getDriver().findElement(By.xpath("//div[@class='k-animation-container']//ul//li[13]"));
+		return performer;
+	}
+
+	public static WebElement ReviewerEmailmenu()					//
+	{
+		performer = getDriver().findElement(By.xpath("//div[@class='k-animation-container']//ul//li[15]"));
+		return performer;
+	}
+
 	
 	public static WebElement DeviationClosureStatuscolD()					//
 	{
@@ -3215,7 +3236,18 @@ public class OverduePOM extends BasePage
 		performer = getDriver().findElement(By.xpath("(//*[@class='k-link'])[18]"));
 		return performer;
 	}
-	
+	public static WebElement Performercol()					//
+	{
+		performer = getDriver().findElement(By.xpath("//table[@role='grid']//colgroup/col[8]"));
+		return performer;
+	}
+
+	public static WebElement Reviewercol()					//
+	{
+		performer = getDriver().findElement(By.xpath("//table[@role='grid']//colgroup/col[10]"));
+		return performer;
+	}
+
 	public static WebElement DeviationClosureStatusM()					//
 	{
 		performer = getDriver().findElement(By.xpath("(//*[@class='k-link'])[19]"));
@@ -3430,19 +3462,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationAppliedAu()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[15]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[22]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationRejectedAU()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[16]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[23]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationApprovedAu()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[17]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[23]"));
 		return performer;
 	}
 	
@@ -3733,7 +3765,7 @@ public class OverduePOM extends BasePage
 		Thread.sleep(500);
 		String name = readFolderName().getText();		//Reading the folder name to create new folder.
 		
-		String folder = name+"E"; 
+		String folder = name+"A"; 
 		
 		clickNew().click();							//Clicking on '+New' button.
 		
@@ -3761,13 +3793,15 @@ public class OverduePOM extends BasePage
 		Thread.sleep(500);
 	//	String msg = driver.switchTo().alert().getText();
 		//test.log(LogStatus.INFO, msg);
-		Thread.sleep(300);try {
-			
-		
-			getDriver().switchTo().alert().accept();
+		Thread.sleep(500);
+		try {
+			String t = OverduePOM.readFolderMsg().getText();
+			test.log(LogStatus.PASS, t);
+			//getDriver().switchTo().alert().accept();
 		}catch(Exception e) {
 			
 		}
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@align='left'])[1]")));
 		name = readFolderName().getText();				//Reading the folder name we had created
 		
@@ -3780,7 +3814,7 @@ public class OverduePOM extends BasePage
 			test.log(LogStatus.FAIL, "Created folder '"+folder+"' doesn't displayed in the records.");
 		}
 		
-		Thread.sleep(500);
+		Thread.sleep(4000);
 		readFolderName().click();						//Clicking on folder name we had created.
 		Thread.sleep(1000);
 		readFolderName().click();						//Clicking on folder name we had created.
@@ -3804,7 +3838,7 @@ public class OverduePOM extends BasePage
 		
 		Thread.sleep(500);
 		String workingDir = System.getProperty("user.dir");
-		uploadNewFile().sendKeys("E:\\Test Cases\\Sony test cases.xlsx");	//uploading new file		
+		uploadNewFile().sendKeys("E:\\Ethics Committee Details.xlsx");	//uploading new file		
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(clickUploadDocument()));

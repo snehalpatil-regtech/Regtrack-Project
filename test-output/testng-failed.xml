@@ -4,18 +4,30 @@
   <test thread-count="5" name="Default test(failed)">
     <classes>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <class name="criticalTestScripts.DeptInternal">
+=======
+      <class name="auditor.AuditorcountStatutory">
+>>>>>>> Stashed changes
         <methods>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="PerformReviewEmailCol"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="DeviationApproverColPSDFPAu"/>
+          <include name="DeviationApproverColRSAu"/>
+          <include name="dueToday_PieChartPeriod"/>
           <include name="Login"/>
-          <include name="RiskSummaryCriticalInternal"/>
-          <include name="browserClosing"/>
-          <include name="DepartmentSummaryInternal"/>
-          <include name="ComplianceDocuments"/>
           <include name="Closing"/>
+          <include name="browserClosing"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
+          <include name="DeviationApproverColPSAu"/>
+          <include name="CriticalDocuments"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="DeviationApproverColDSAu"/>
           <include name="setBrowser"/>
-          <include name="RiskSummaryHighInternal"/>
-          <include name="RiskSummaryMediumInternal"/>
+          <include name="RiskSummaryLowStatutory"/>
         </methods>
+<<<<<<< Updated upstream
       </class> <!-- criticalTestScripts.DeptInternal -->
 =======
       <class name="criticalTestScripts.InternalMgmt">
@@ -31,6 +43,9 @@
           <include name="RiskSummaryCriticalInternal"/>
         </methods>
       </class> <!-- criticalTestScripts.InternalMgmt -->
+>>>>>>> Stashed changes
+=======
+      </class> <!-- auditor.AuditorcountStatutory -->
 >>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
