@@ -2125,33 +2125,63 @@ public class StatutoryMGMT extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Admin - Rejected' Complaince Count = "+ Fina_Rejected + ".");
 			}
-			
-			
-			
-			
-			
-			//-----------------------------------------------------
-			
-				try
-			{
+		
+//			//-----------------------------------------------------
+//			
+//				try
+//			{
+//				Thread.sleep(500);
+//				String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+//				NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+//				int Not_Applicable = Integer.parseInt(NotApplicable);						
+//				if(Not_Applicable > 0)
+//				{
+//					CFOcountPOM.clickHumanNotApplicable().click();
+//					CFOcountPOM.RiskGraphCount( test, "Not Applicable", Not_Applicable, "Statutory");
+//				}
+//				else
+//				{
+//					test.log(LogStatus.PASS, "Not Applicable Complaince Count = "+ Not_Applicable + ".");
+//				}
+//			}
+//			catch(Exception e)
+//			{
+//				
+//			}
+				
 				Thread.sleep(500);
-				String NotApplicable = CFOcountPOM.clickHumanNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+				String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
 				NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
 				int Not_Applicable = Integer.parseInt(NotApplicable);						
 				if(Not_Applicable > 0)
 				{
-					CFOcountPOM.clickHumanNotApplicable().click();
-					CFOcountPOM.RiskGraphCount( test, "Not Applicable", Not_Applicable, "Statutory");
+					CFOcountPOM.clickAdminNotApplicable().click();
+					AuditorcountPOM.RiskGraphCount2( test, "Not Applicable", Not_Applicable, "Statutory");
 				}
 				else
 				{
-					test.log(LogStatus.PASS, "Not Applicable Complaince Count = "+ Not_Applicable + ".");
+					test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
 				}
-			}
-			catch(Exception e)
-			{
-				
-			}
+				Thread.sleep(500);
+				WebElement CD = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > rect"));
+				CD.click();
+				WebElement CT = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+				CT.click();
+				WebElement PR = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));
+				PR.click();
+				String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+				DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+				int Due_Today = Integer.parseInt(DueToday);						
+				if(Due_Today > 0)
+				{
+					CFOcountPOM.clickAdminDueToday().click();
+					AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "DueToday Compliance Count = "+ Due_Today + ".");
+				}
+					
 			Thread.sleep(500);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
