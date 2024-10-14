@@ -41,7 +41,7 @@ public class ImplementMethods extends BasePage {
 	public static XSSFWorkbook workbook = null;	//Excel sheet workbook variable
 	public static XSSFSheet sheet = null;		//Sheet variable
 	
-	static String filePath ="D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 
 	
 	public static void CreateCustomers( ExtentTest test)
@@ -8704,12 +8704,146 @@ public static void EventAssignmentExportImport( ExtentTest test) throws Interrup
 	
 	
 }
+
+
+public static void EventAssignmentTab( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	ImplementPOM.ManageEvents().click();
+	Thread.sleep(4000);
+	if(ImplementPOM.eventReassignment().isDisplayed())
+	{
+		Thread.sleep(4000);
+		ImplementPOM.eventReassignment().click();
+		test.log(LogStatus.PASS, "Event Reasignment link displayed Under Event tab");
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "Event Reasignment link does not displayed Under Event tab");
+		
+	}
+	Thread.sleep(4000);
+	if(ImplementPOM.eventAssignmentExport().isDisplayed()&&ImplementPOM.eventAssignmentUpload().isDisplayed()&&ImplementPOM.eventAssignmentChooseFile().isDisplayed())
+	{
+		Thread.sleep(4000);
+	//	ImplementPOM.eventAssignment().click();
+		test.log(LogStatus.PASS, "Excel Event Reasssignment & Upload Reassignment Option displayed on Event Reasignment page. ");
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "Excel Event Reasssignment & Upload Reassignment Option displayed on Event Reasignment page. ");
+		
+	}
+	Thread.sleep(4000);
+	By locator = By.xpath("//a[@class='ui-button ui-widget ui-state-default ui-button-icon-only custom-combobox-toggle ui-corner-right']");
+	
+	wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	Thread.sleep(4000);
+	// retrieving "foo-button" HTML element
+	List<WebElement> ViewButton = getDriver().findElements(locator);	
+	Thread.sleep(3000);
+	ViewButton.get(0).click();
+	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentCustomerDD().click();
+	Thread.sleep(3000);	
+//	ViewButton.get(1).click();
+//	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentLocation().click();
+	Thread.sleep(500);	
+	ImplementPOM.eventAssignmentLocationCheckbox().click();
+	Thread.sleep(500);	
+	ImplementPOM.eventAssignmentLocationSelect().click();
+	Thread.sleep(500);	
+	Thread.sleep(2000);
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+			
+	Thread.sleep(500);
+	ImplementPOM.eventAssignmentExport().click();	//Exporting (Downloading) file
+			
+	Thread.sleep(9000);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+			
+	Thread.sleep(9000);
+	if (dirContents.length < allFilesNew.length) {
+		test.log(LogStatus.PASS,  " Event Reasignment Excel downloaded.");
+	} else {
+	test.log(LogStatus.FAIL, " Event Reasignment Excel Does not downloaded.");
+	}
+
+	Thread.sleep(500);
+//	ImplementPOM.ERUploadedDocument().click();	
+	Thread.sleep(20000);
+	File dirs = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents1 = dirs.listFiles();						//Counting number of files in directory before download
+			
+	Thread.sleep(2000);
+	ImplementPOM.ERUploadedDocument().click();	//Exporting (Downloading) file
+			
+	Thread.sleep(20000);
+	File dir2 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew1 = dir2.listFiles();						//Counting number of files in directory after download
+			
+	Thread.sleep(3000);
+	if (dirContents1.length < allFilesNew1.length) {
+		test.log(LogStatus.PASS,  " Uploaded Reasignment Excel downloaded.");
+	} else {
+	test.log(LogStatus.FAIL, " Uploaded Reasignment Excel Does not downloaded.");
+	}
+			
+	Thread.sleep(500);	
+	
+}
+
+public static void EventReassignment( ExtentTest test) throws InterruptedException
+{
+	Thread.sleep(4000);
+	WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	ImplementPOM.ManageEvents().click();
+	Thread.sleep(4000);
+	ImplementPOM.eventReassignment().click();
+	Thread.sleep(4000);
+	
+	Thread.sleep(4000);
+	By locator = By.xpath("//a[@class='ui-button ui-widget ui-state-default ui-button-icon-only custom-combobox-toggle ui-corner-right']");
+	
+	wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	Thread.sleep(4000);
+	// retrieving "foo-button" HTML element
+	List<WebElement> ViewButton = getDriver().findElements(locator);	
+	Thread.sleep(3000);
+	ViewButton.get(0).click();
+	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentCustomerDD1().click();
+	Thread.sleep(3000);	
+//	ViewButton.get(1).click();
+//	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentLocation().click();
+	Thread.sleep(500);	
+	ImplementPOM.eventAssignmentLocationCheckbox().click();
+	Thread.sleep(500);	
+	ImplementPOM.eventAssignmentLocationSelect().click();
+	Thread.sleep(500);	
+	ImplementPOM.eventAssignmentChooseFile().sendKeys("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\UploadSheet\\EventReassignmentReport (1).xlsx");
+	Thread.sleep(4000);
+	ImplementPOM.eventAssignmentUpload().click();
+	Thread.sleep(4000);
+	String t = ImplementPOM.EventReassignmentValidationmsg().getText();
+	Thread.sleep(4000);
+	if (t.equalsIgnoreCase("Event Reassignment done successfully.")) {
+		test.log(LogStatus.PASS,  t);
+	} else {
+	test.log(LogStatus.FAIL, t);
+	}
+	
 	
 }
 
 
 
-
+}
 	
 	
 	

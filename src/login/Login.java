@@ -178,6 +178,7 @@ public class Login extends BasePage
 			}
 			else if(method.equalsIgnoreCase("PerTlcg") )
 			{
+				
 				ans1 = "123";						//Storing the answer in ans variable.
 			}
 			else if(method.equalsIgnoreCase("richa") )
@@ -355,11 +356,28 @@ public class Login extends BasePage
 			{
 //				ArsLocators.clickARS().click();			//Clicking on Litigation Image.
 			}
+		/*
 			else
 			{
+				
 				LoginPOM.clickComplicane().click();			//Clicking on Compliance Image.
 				Thread.sleep(6000);
 			}
+			*/
+		else
+		{
+			try {
+				LoginPOM.clickComplicane().click();			//Clicking on Compliance Image.
+				Thread.sleep(6000);			//Clicking on Compliance Image.
+				
+				Thread.sleep(2000);
+			}catch(Exception e)
+			{
+				
+			}
+			
+		}
+		
 		Thread.sleep(6000);
 		try {
 			Thread.sleep(6000);

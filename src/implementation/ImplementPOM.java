@@ -5081,9 +5081,69 @@ public static WebElement  SeComplianceTypeIn()		//Method for closing Message Pop
   
  public static WebElement eventAssignmentExportImport()		//Method for closing Message Popup
 	{
-		implement = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:118']/li[8]/a"));
+		implement = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:120']/li[8]/a"));
 		return implement;                       
 	}
+ public static WebElement eventReassignment()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//*[@id='CMPMenuBar:submenu:120']/li[10]/a"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentExport()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//a[@id='BodyContent_lbtnDownloadAssignment']/img"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentCustomerDD()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//*[@id='ui-id-1']//li[2]"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentCustomerDD1()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//ul[@id='ui-id-1']//li[90]"));
+		return implement;                       
+	}
+ public static WebElement ERUploadedDocument()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//*[@id='BodyContent_grdEventUpData']/tbody/tr[3]/td[3]/div/a"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentLocation()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//input[@id='BodyContent_tbxFilterLocation']"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentLocationCheckbox()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//input[@id='BodyContent_tvFilterLocationn0CheckBox']"));
+		return implement;                       
+	}
+ public static WebElement eventAssignmentLocationSelect()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnlocation']"));
+		return implement;                       
+	}
+
+
+ public static WebElement eventAssignmentUpload()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//input[@id='BodyContent_btnEUploadFile']"));
+		return implement;                       
+	}
+ public static WebElement EventReassignmentValidationmsg()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//*[@id='BodyContent_ValidationSummary2']//li"));
+		return implement;                       
+	}
+
+
+ public static WebElement eventAssignmentChooseFile()		//Method for closing Message Popup
+	{
+		implement = getDriver().findElement(By.xpath("//input[@id='BodyContent_EMasterFileUpload']"));
+		return implement;                       
+	}
+
  public static WebElement clickEvent()		//Method for closing Message Popup
 	{
 		implement = getDriver().findElement(By.xpath("//*[@id='BodyContent_tbEvent']"));

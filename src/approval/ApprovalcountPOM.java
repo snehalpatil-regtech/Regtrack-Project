@@ -380,7 +380,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskHighDep ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[9]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
 		return compliances;
 	}
 	
@@ -398,7 +398,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement SelectActF1 ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[29]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[23]"));
 		return compliances;
 	}
 	
@@ -425,7 +425,12 @@ public class ApprovalcountPOM extends BasePage {
 		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[40]"));
 		return compliances;
 	}
-
+	public static WebElement SelectActNA ()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[42]"));
+		return compliances;
+	}
+	
 	
 	public static WebElement MitigationPlan ()		//Method for reading Compliances value on Dashboard
 	{
@@ -471,7 +476,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement StatusNA()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[21]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[19]"));
 		return compliances;
 	}
 	
@@ -6797,14 +6802,14 @@ else {
 		RiskF().click();
 		Thread.sleep(500);
 	
-      String Risktext =RiskHighDep().getText();
+      String Risktext =RiskCritical().getText();
     
        Thread.sleep(3000);
        SelectActF().click();
        Thread.sleep(500);
-       String Acttext =SelectActF1().getText();
+       String Acttext =SelectActNA().getText();
        Thread.sleep(500);
-       SelectActF1().click();
+       SelectActNA().click();
        Thread.sleep(3000);
        SelectActF().click();
        Thread.sleep(500);

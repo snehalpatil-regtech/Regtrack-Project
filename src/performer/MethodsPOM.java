@@ -11864,6 +11864,69 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	}
 	
+	public static void PerformReviewEmailColIn(ExtentTest test)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+		Thread.sleep(4000);
+		CFOcountPOM.clickReport().click();					//Clicking on 'My Reports'
+		Thread.sleep(3000);
+		CFOcountPOM.clickDetailedReports().click();			//Clicking on 'Detailed Reports' 
+		Thread.sleep(2000);
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Innternal().click();
+		Thread.sleep(4000);
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(2000);
+	//	CFOcountPOM.Apply().click();
+	//	Thread.sleep(4000);
+		
+		OverduePOM.ComplianceIDtri().click();
+		Thread.sleep(3000);
+		
+		OverduePOM.Clickcolumns().click();
+		Thread.sleep(2000);
+		OverduePOM.PerformerEmailmenu().click();
+		Thread.sleep(2000);
+		OverduePOM.ReviewerEmailmenu().click();
+		Thread.sleep(2000);
+		OverduePOM.ComplianceIDtri().click();
+		Thread.sleep(3000);
+		
+	//	WebElement scrollElement = getDriver().findElement(By.xpath("//*[@id='grid']/div[4]"));
+	//	Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	//	js.executeScript("window.scrollBy(0,500)");	
+	//	Thread.sleep(3000);
+	//	js.executeScript("window.scrollBy(1000,0)");	
+	//	js.executeScript("arguments[0].scrollLeft += 500;",scrollElement);	
+		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("document.querySelector(\"div[id='grid'] div[class='k-grid-content k-auto-scrollable']\").scrollLeft=5000");
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,-500)");
+//String textPC=	OverduePOM.Performercol().getText();
+//String textRC=	OverduePOM.Reviewercol().getText();
+Thread.sleep(6000);
+if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplayed()) {
+	test.log(LogStatus.PASS, "The additional column of \"Performer Email and Reviewer Email \" should be display on the gird.");
+}else {
+	test.log(LogStatus.FAIL, "The additional column of \"Performer Email and Reviewer Email\" not display on the gird.");
+}
+/*
+		if(textPC.equalsIgnoreCase("Performer Email") && textRC.equalsIgnoreCase("Reviewer Email") ) {
+			test.log(LogStatus.PASS, " The additional column of \"Performer Email and Reviewer Email \" should be display on the gird.");
+
+		}else {
+			test.log(LogStatus.FAIL, " The additional column of \"Performer Email and Reviewer Email\" not display on the gird.");
+
+		}
+	*/
+	Thread.sleep(1000);
+	
+	}
 	
 
 	public static void DetailedReportDA(ExtentTest test)throws InterruptedException

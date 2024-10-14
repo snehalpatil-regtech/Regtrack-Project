@@ -45,11 +45,11 @@ public class ImplementCount extends BasePage{
 	public int interest = 0;					//Variable created for reading Interest
 	public int penalty = 0;						//Variable created for reading Penalty
 	
-	public static String link = "Implementation";  
+	public static String link = "Shivraj";  
 
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
-		fis = new FileInputStream("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\TestData\\ComplianceSheet.xlsx");
+		fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(13);					//Retrieving third sheet of Workbook
 		return sheet;
@@ -58,7 +58,7 @@ public class ImplementCount extends BasePage{
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\AVACOM Project\\AvacomModified\\Reports\\Implementation.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Implementation.html",true);
 		test = extent.startTest("Loging In - Implementation");
 		
 		/*XSSFSheet sheet = ReadExcel();
@@ -116,6 +116,7 @@ public class ImplementCount extends BasePage{
 		}
 	}
 	
+	/*
 	@Test(priority = 2)
 	void CustomersCreate() throws InterruptedException, IOException
 	{
@@ -1767,11 +1768,11 @@ public class ImplementCount extends BasePage{
 			extent.endTest(test);
 			extent.flush();
 		}
-		
-		@Test(priority = 0)
+		*/
+//		@Test(priority = 129)
 		void EventAssignmentExportImport() throws InterruptedException, IOException
 		{
-			test = extent.startTest(" Manage Event  - Event Assignment Export Import- Entity wise data dowloaded or not?");
+			test = extent.startTest(" Manage Events  - Event Assignment Export Import- Entity wise data dowloaded or not?");
 			
 			
 			ImplementMethods.EventAssignmentExportImport(test);
@@ -1780,13 +1781,44 @@ public class ImplementCount extends BasePage{
 			extent.flush();
 		}
 		
+	//	@Test(priority = 130)
+		void EventAssignmentTab() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Events  - Event Reassignment verification");
+			
+			
+			ImplementMethods.EventAssignmentTab(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		@Test(priority = 130)
+		void EventReassignment() throws InterruptedException, IOException
+		{
+			test = extent.startTest(" Manage Events  - Event Reassignment Upload");
+			
+			
+			ImplementMethods.EventReassignment(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+		
+		
      	@AfterMethod
 	  	void browserClosing() throws InterruptedException
 	  	{
      		closeBrowser();
 	  		Thread.sleep(1000);
 	  	//	driver.close();
-	  	}	  
+	  	}
+     	
+     	@AfterTest
+      	void Closing() throws InterruptedException
+      	{
+      		
+      	}	
 	
     /* 	companyadmin@regtrack.com
      	reviewer@regtrack.com

@@ -242,7 +242,7 @@ import performer.OverduePOM;
 		//CFOcountPOM.RefreshNow().click();
 		
 		Thread.sleep(3000);
-		
+		try {
 		// Combine the two XPaths with the '|' operator
         WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
 
@@ -254,7 +254,11 @@ import performer.OverduePOM;
         	
             System.out.println("Element not found");
         }
-		
+		}
+		catch(Exception e)
+		{
+			
+		}
 		
 	}
 	

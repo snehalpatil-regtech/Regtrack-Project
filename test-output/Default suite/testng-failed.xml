@@ -3,50 +3,54 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <class name="criticalTestScripts.DeptInternal">
-=======
-      <class name="auditor.AuditorcountStatutory">
->>>>>>> Stashed changes
+      <class name="approval.ApprovalStatutory">
         <methods>
-          <include name="RiskSummaryMediumStatutory"/>
+          <include name="NotCompletionStatusFilter"/>
           <include name="PerformReviewEmailCol"/>
+          <include name="DeviationApproverColGR1"/>
+          <include name="RiskSummaryFilter"/>
+          <include name="ClosedTimely_PieChart"/>
+          <include name="ClosedDelayed_PieChart"/>
           <include name="rejected_PieChartPeriod"/>
-          <include name="DeviationApproverColPSDFPAu"/>
-          <include name="DeviationApproverColRSAu"/>
-          <include name="dueToday_PieChartPeriod"/>
-          <include name="Login"/>
-          <include name="Closing"/>
-          <include name="browserClosing"/>
-          <include name="DepartmentSummaryFinanceStatutory"/>
-          <include name="DeviationApproverColPSAu"/>
-          <include name="CriticalDocuments"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="DeviationApproverColDSAu"/>
-          <include name="setBrowser"/>
-          <include name="RiskSummaryLowStatutory"/>
-        </methods>
-<<<<<<< Updated upstream
-      </class> <!-- criticalTestScripts.DeptInternal -->
-=======
-      <class name="criticalTestScripts.InternalMgmt">
-        <methods>
-          <include name="Login"/>
-          <include name="RiskSummaryHighInternal"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="setBrowser"/>
-          <include name="browserClosing"/>
-          <include name="Closing"/>
           <include name="AssignmentReport"/>
+          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="NotCompleted_PieChartPeriod"/>
+          <include name="browserClosing"/>
+          <include name="RiskSummaryLowStatutory"/>
+          <include name="setBrowser"/>
+          <include name="ComplianceDocumentsDAM"/>
+          <include name="NotApplicable_PieChart"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="DetailedReport"/>
+          <include name="CompletionStatusFilter"/>
+          <include name="complianceCalendar"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="ClosedDelayed_PieChartPeriod"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="clickPenaltyStatutory"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="ComplianceDocuments"/>
+          <include name="Login"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
           <include name="RiskSummaryMediumStatutory"/>
-          <include name="RiskSummaryCriticalInternal"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="Overdue_PieChart"/>
+          <include name="dueToday_PieChart"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="rejected_PieChart"/>
+          <include name="RiskSummaryFilterNA"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="inProgress_PieChart"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="pendingForReview_PieChart"/>
+          <include name="DeptSummaryFilter"/>
+          <include name="Closing"/>
         </methods>
-      </class> <!-- criticalTestScripts.InternalMgmt -->
->>>>>>> Stashed changes
-=======
-      </class> <!-- auditor.AuditorcountStatutory -->
->>>>>>> Stashed changes
+      </class> <!-- approval.ApprovalStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -521,7 +521,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement ActDD( )				//Method to read and click on Penalty.
 	{
-		penalty = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[33]"));
+		penalty = getDriver().findElement(By.xpath("//*[@id='dropdownACT_listbox']/li[14]"));
 		return penalty;
 	}
 
@@ -3161,6 +3161,12 @@ public class CFOcountPOM extends BasePage
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-checkbox-wrapper'])[20]"));
 		return compliances;
 	} 
+	public static WebElement Innternal( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-checkbox-wrapper'])[21]"));
+		return compliances;
+	} 
+
 	
 	public static WebElement EventBased( )		//Method for reading Compliances value on Dashboard
 	{

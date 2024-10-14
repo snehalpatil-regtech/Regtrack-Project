@@ -4866,8 +4866,21 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+		
 
 		@Test(priority = 120)
+		void PerformReviewEmailColIn() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Detailed Report - Internal - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+				
+			MethodsPOM.PerformReviewEmailColIn(test);
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+
+
+		@Test(priority = 121)
 		void ComplianceDocumentsSF() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Compliance Document?");

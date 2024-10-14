@@ -145,7 +145,7 @@ public class ApprovalStatutory extends BasePage {
 	
 	
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -155,7 +155,7 @@ public class ApprovalStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-	/*
+	
 	@Test(priority = 2)
 	void LocationCount() throws InterruptedException, IOException
 	{
@@ -166,8 +166,8 @@ public class ApprovalStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-	*/
-//	@Test(priority = 4)
+	
+	@Test(priority = 4)
 		void CategoriesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -271,7 +271,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 5)
+	@Test(priority = 5)
 		void CompliancesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -374,7 +374,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 0)
+		@Test(priority = 9)
 			void clickPenaltyStatutory() throws InterruptedException
 			{
 				test = extent.startTest("'Penalty' ");
@@ -457,7 +457,7 @@ public class ApprovalStatutory extends BasePage {
 				extent.flush();
 			}
 
-//		@Test(priority = 9)
+		@Test(priority = 10)
 		void PenaltyMultipleFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
@@ -479,7 +479,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 11)
+		@Test(priority = 11)
 		void SummaryofOverdueCompliances() throws InterruptedException
 		{
 			test = extent.startTest(" Summary of Overdue Compliances");
@@ -532,7 +532,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 	
 	
-//	@Test(priority = 12)
+	@Test(priority = 12)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -542,6 +542,8 @@ public class ApprovalStatutory extends BasePage {
 		Thread.sleep(1000);
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(5000);
+		CFOcountPOM.RefreshNow().click();
+		Thread.sleep(3000);
 		Thread.sleep(3000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -591,7 +593,7 @@ public class ApprovalStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 12)
+	@Test(priority = 13)
 		void ClosedDelayed_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -601,6 +603,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(1000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -649,7 +653,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 	
-//	@Test(priority = 12)
+	@Test(priority = 14)
 		void ClosedTimely_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -660,6 +664,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
@@ -709,7 +715,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-//		@Test(priority = 13)
+	@Test(priority = 15)
 		void NotApplicable_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -721,6 +727,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
@@ -771,7 +779,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 14)
+		@Test(priority = 16)
 		void Overdue_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -781,6 +789,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
 			
@@ -835,7 +845,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 15)
+		@Test(priority = 17)
 		void dueToday_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -847,6 +857,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.
@@ -921,7 +933,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 			
-	//	@Test(priority = 16)
+		@Test(priority = 18)
 		void pendingForReview_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -933,6 +945,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (40));
 	
@@ -988,7 +1002,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 17)
+		@Test(priority = 19)
 		void inProgress_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -999,6 +1013,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			WebDriverWait wait = new WebDriverWait( getDriver(), (40));
 		
@@ -1056,7 +1072,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 18)
+		@Test(priority = 20)
 		void rejected_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1069,6 +1085,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			WebDriverWait wait = new WebDriverWait( getDriver(),(40));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
@@ -1130,7 +1148,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-	//	@Test(priority = 19)
+		@Test(priority = 21)
 		void CompletionStatusFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of \"Performance Summary Graph for Completion Status - Critical Risk or not?");
@@ -1141,7 +1159,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 20)
+		@Test(priority = 22)
 		void NotCompletionStatusFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of \"Performance Summary Graph for Not Completed Status  -  Critical Risk or not?");
@@ -1153,7 +1171,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 21)
+		@Test(priority = 23)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1254,7 +1272,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority =22)
+		@Test(priority =24)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1358,7 +1376,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 23)
+	@Test(priority = 25)
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1457,7 +1475,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
- //       @Test(priority = 24)
+        @Test(priority = 26)
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1563,7 +1581,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 
 		
-	//	@Test(priority = 25)
+		@Test(priority = 27)
 		void RiskSummaryCriticalStatutory() throws InterruptedException
 		{
 		
@@ -1574,6 +1592,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1500)");					//Scrolling down window by 1000 px.cfo
@@ -1662,7 +1682,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 26)
+		@Test(priority = 28)
 		void RiskSummaryHighStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1674,6 +1694,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1500)");
@@ -1762,7 +1784,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 27)
+		@Test(priority = 29)
 		void RiskSummaryMediumStatutory() throws InterruptedException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1772,6 +1794,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1500)");		
@@ -1869,7 +1893,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 28)
+		@Test(priority = 30)
 		void RiskSummaryLowStatutory() throws InterruptedException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1882,6 +1906,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1500)");
@@ -1982,7 +2008,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 29)
+	@Test(priority = 31)
 		void RiskSummaryFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of Risk Summary -Not Completed Status or not?");
@@ -1993,7 +2019,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 30)
+		@Test(priority = 32)
 		void RiskSummaryFilterNA() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of Risk Summary - Not applicable Status or not?");
@@ -2004,7 +2030,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 	
-	//	@Test(priority = 31)
+		@Test(priority = 33)
 		void DepartmentSummaryAccountStatutory() throws InterruptedException
 		{
 			Thread.sleep(500);
@@ -2015,6 +2041,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(3000);		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
@@ -2150,7 +2178,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 	
-//		@Test(priority = 32)
+		@Test(priority = 34)
 		void DeptSummaryFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Lable,Status,Department,License Type,Mitigation plan are working on the graph of Department Summary - Overdue Status or not?");
@@ -2161,12 +2189,14 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 33)
+		@Test(priority = 35)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
 			
+			Thread.sleep(3000);
+			CFOcountPOM.RefreshNow().click();
 			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2280,11 +2310,13 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 34)
+	@Test(priority = 36)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
-			
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
@@ -2395,11 +2427,13 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 35)
+		@Test(priority = 37)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
-			
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
@@ -2511,11 +2545,13 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-//		@Test(priority = 36)
+		@Test(priority = 38)
 		void NotApplicable_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
-			
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
@@ -2627,12 +2663,14 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 37)
+		@Test(priority = 39)
 		void Overdue_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
-			
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(3000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
@@ -2746,11 +2784,13 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 			
-//		@Test(priority = 38)
+		@Test(priority = 40)
 		void pendingForReview_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
-		
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (40));
 		/*	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
@@ -2872,11 +2912,13 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//    @Test(priority = 39)
+	    @Test(priority = 41)
 		void inProgress_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
-			
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
@@ -2988,11 +3030,13 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 40)
+		@Test(priority = 42)
 		void Upcoming_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
-		
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(2000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3119,11 +3163,13 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 41)
+	@Test(priority = 43)
 		void rejected_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
-		
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(3000);
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (40));
 		/*	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
@@ -3536,7 +3582,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		*/
-		@Test(priority = 42)
+	//	@Test(priority = 44)
 		void DeviationApproverColSOO() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in summary of overdue of Approver dashboard ?");
@@ -3547,7 +3593,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 43)
+	//	@Test(priority = 45)
 		void DeviationClosureStatuscolSOO() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check whether the name of additional column \"deviation closure status\" appears or not in grid");
@@ -3558,7 +3604,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 44)
+	//	@Test(priority = 46)
 		void SOOStatus() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Summary of Overdue Compliances - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown  in summary of overdue of Approver ");
@@ -3569,7 +3615,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 45)
+	//	@Test(priority = 47)
 		void DeviationApproverColPSApp() throws InterruptedException, IOException
 		{
 			test = extent.startTest("performance summary graph - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the performance summary graph of management  ");
@@ -3580,7 +3626,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 46)
+	//@Test(priority = 48)
 		void DeviationApproverColRSAPP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("risk summary graph - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the risk summary graph of management dashboard ?  ");
@@ -3591,7 +3637,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 47)
+	//	@Test(priority = 49)
 		void DeviationApproverColDSAPP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("department summary graph - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the department summary graph of management   ");
@@ -3602,7 +3648,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 48)
+	//	@Test(priority = 50)
 		void DeviationApproverColPSDFPAPP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performance Summary (Due for the period) - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in thePerformance Summary (Due for the period) of management   ");
@@ -3613,7 +3659,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 49)
+		@Test(priority = 51)
 		void DeviationApproverColGR1() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" grading report - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\" in the grading report of management dashboard ? ");
@@ -3624,7 +3670,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 50)
+		@Test(priority = 52)
 		void ComplianceDocumentsDAM() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Documents - Compliance Documents - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my document page?");
@@ -3635,7 +3681,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 51)
+//		@Test(priority = 53)
 		void DeviationApproverColCDAPP() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Documents - Compliance Documents - To check whether the name of \"deviation approver\" appears or not on the additional column of \"deviation approver\"in grid  of My document page?");
@@ -3646,7 +3692,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 52)
+	//	@Test(priority = 54)
 		void DeviationClosureStatuscolCD() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My Documents - Compliance Documents - To check whether the name of additional column \"deviation closure status\" appears or not in grid");
@@ -3657,7 +3703,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 53)
+	//	@Test(priority = 55)
 		void DetailedReportDA() throws InterruptedException, IOException
 		{
 			test = extent.startTest("my Report - Detailed  report - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my report page?");
@@ -3891,7 +3937,7 @@ public class ApprovalStatutory extends BasePage {
 			@Test(priority = 66)
 			void PerformReviewEmailCol() throws InterruptedException, IOException
 			{
-				test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+				test = extent.startTest("Detailed Report -Statutory - Performer Email column and Reviewer Email column Visible on grid Verification. ");
 					
 				MethodsPOM.PerformReviewEmailCol(test);
 				
@@ -3899,8 +3945,19 @@ public class ApprovalStatutory extends BasePage {
 				extent.flush();
 			}
 
+			@Test(priority = 66)
+			void PerformReviewEmailColIn() throws InterruptedException, IOException
+			{
+				test = extent.startTest("Detailed Report - Internal - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+					
+				MethodsPOM.PerformReviewEmailColIn(test);
+				
+				extent.endTest(test);
+				extent.flush();
+			}
+
 		  
-			@Test(priority = 67)
+		@Test(priority = 67)
 			void AssignmentReport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Assignment Report verification");

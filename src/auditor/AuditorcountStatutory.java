@@ -3553,6 +3553,19 @@ public class AuditorcountStatutory extends BasePage {
 				extent.endTest(test);
 				extent.flush();
 			}
+			
+
+			@Test(priority = 83)
+			void PerformReviewEmailColIn() throws InterruptedException, IOException
+			{
+				test = extent.startTest("Detailed Report - Internal - Performer Email column and Reviewer Email column Visible on grid Verification. ");
+					
+				MethodsPOM.PerformReviewEmailColIn(test);
+				
+				extent.endTest(test);
+				extent.flush();
+			}
+
 
 	       /*
 	     @Test(priority = 82)
