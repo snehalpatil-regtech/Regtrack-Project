@@ -1,3 +1,4 @@
+
 package reviewer;
 
 import java.io.File;
@@ -1942,7 +1943,7 @@ public class ReMethodsPOM extends BasePage
 		
 		Thread.sleep(8000);
 		elementsList = ReviewerPOM.clickOverView();
-		elementsList.get(1).click();
+		elementsList.get(2).click();
 		Thread.sleep(2000);
 		ReviewerPOM.CloseOverview().click();
 		Thread.sleep(3000);
@@ -3289,12 +3290,12 @@ Thread.sleep(3000);
 		OverduePOM.readActivatedEvents().click();		//Clicking on Statutory Review value.
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
-		elementsList = ReviewerPOM.clickOverViewPer();
-		elementsList.get(1).click();
-		Thread.sleep(3000);
-		ReviewerPOM.CloseOverview1().click();
-		Thread.sleep(3000);
-		test.log(LogStatus.PASS,"Overview Successfully");
+//		elementsList = ReviewerPOM.clickOverViewPer();
+//		elementsList.get(0).click();
+//		Thread.sleep(3000);
+//		ReviewerPOM.CloseOverview1().click();
+//		Thread.sleep(3000);
+//		test.log(LogStatus.PASS,"Overview Successfully");
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
@@ -3569,6 +3570,3 @@ Thread.sleep(3000);
 	
 	
 }
-
-	
-

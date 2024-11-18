@@ -3,7 +3,6 @@ package auditor;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;//
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -37,6 +36,11 @@ public class AuditorcountPOM extends BasePage {
 		date = getDriver().findElement(By.xpath("//*[@id='txtAdvStartDate']"));
 		return date;
 	}
+	public static WebElement DateTextEnd()		//Method for closing Message Popup
+	{
+		date = getDriver().findElement(By.xpath("//*[@id='txtAdvEndDate']"));
+		return date;
+	}
 	
 	
 	public static WebElement DateYear()		//Method for closing Message Popup
@@ -51,6 +55,11 @@ public class AuditorcountPOM extends BasePage {
 		return date;
 	}
 	
+	public static WebElement Years()		//Method for closing Message Popup
+	{
+		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/div/div/select[2]/option[11]"));
+		return date;
+	}
 	public static WebElement DateMonth()		//Method for closing Message Popup
 	{
 		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/div/div/select[1]"));
@@ -63,12 +72,25 @@ public class AuditorcountPOM extends BasePage {
 		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/div/div/select[1]/option[4]"));
 		return date;
 	}
+	public static WebElement Month1()	
+	//Method for closing Message Popup
+	{
+		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/div/div/select[1]/option[12]"));
+		return date;
+	}
+	
 	
 	public static WebElement Date()		//Method for closing Message Popup
 	{
 		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]/a"));
 		return date;
 	}
+	public static WebElement Date1()		//Method for closing Message Popup
+	{
+		date = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[3]/a"));
+		return date;
+	}
+
 	
 	public static WebElement Apply()		//Method for closing Message Popup
 	{
@@ -340,6 +362,7 @@ public class AuditorcountPOM extends BasePage {
 		}
 		else if(risk.equalsIgnoreCase("High"))
 		{
+			Thread.sleep(500);
 			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
 		}
 		else if(risk.equalsIgnoreCase("Medium"))

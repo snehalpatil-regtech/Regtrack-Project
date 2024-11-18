@@ -64,7 +64,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickStatutoryOverdue( )		//Method for clicking on Statutory Overdue value
 	{
-		overdue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divOverduePEOcount']"));
+		overdue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divOverduePREOcount']"));
 		return overdue;
 	}
 	
@@ -142,7 +142,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement readPendingReviewStatutory( )	//Method to read Statutory Pending Review
 	{
-		review = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerPendingforReviewPEOcount']"));
+		review = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerPendingforReviewPREOcount']"));
 		return review;
 	}
 	
@@ -403,6 +403,8 @@ public class OverduePOM extends BasePage
 	public static WebElement selectDateStatutory11( )			//Method to search Date Box
 	{
 		date = getDriver().findElement(By.linkText("1"));
+	//	date = getDriver().findElement(By.xpath("//*[@class='ui-state-default ui-state-highlight ui-state-active']"));
+		//*[@class="ui-state-default ui-state-highlight ui-state-active"]
 		return date;
 	}
 	
@@ -539,13 +541,13 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickInternalOverdue( )			//Method for clicking on Internal Overdue value
 	{
-		overdue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divOverdueInternalPEOcount']"));
+		overdue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divOverdueInternalPREOcount']"));
 		return overdue;
 	}
 	
 	public static WebElement readPendingReviewInternal( )	//Method to read Statutory Pending Review
 	{
-		review = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerPendingforRevieweInternalPEOcount']"));
+		review = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerPendingforRevieweInternalPREOcount']"));
 		return review;
 	}
 	
@@ -641,12 +643,12 @@ public class OverduePOM extends BasePage
 	}
 	public static WebElement selectDate4( )					//Method to click on date at second row and fourth column
 	{
-		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[4]/td[7]/a"));
+		selectDate = getDriver().findElement(By.linkText("29"));
 		return selectDate;
 	}
 	public static WebElement selectDate2( )					//Method to click on date at second row and fifth column
 	{
-		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[5]/td[7]/a"));
+		selectDate = getDriver().findElement(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[2]/td[3]/a"));
 		return selectDate;
 	}
 	
@@ -682,7 +684,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickStatutoryChecklist( )		//Method to click on Statutory Checklist value
 	{
-		statutoryChecklist = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerChecklistPEOcount']"));
+		statutoryChecklist = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerChecklistPREOcount']"));
 		return statutoryChecklist;
 	}
 	
@@ -726,8 +728,8 @@ public class OverduePOM extends BasePage
 	
 	public static List<WebElement> clickStatutoryChecklistAction( )	//Method to click on Action button. (Independent of Statutory or Internal)
 	{
-		//elementsList = getDriver().findElements(By.xpath("//a[@class='k-button k-button-icontext ob-edit k-grid-edit3']"));
-		elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr[1]/td[23]/a[1]"));
+		elementsList = getDriver().findElements(By.xpath("//a[@class='k-button k-button-icontext ob-edit k-grid-edit3']"));
+		//elementsList = getDriver().findElements(By.xpath("//*[@id='grid']/div[4]/table/tbody/tr[1]/td[23]/a"));
 		return elementsList;
 	}
 	
@@ -765,13 +767,13 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickInternalChecklist( )	//Method to click on Internal Checklist value
 	{
-		internalChecklist = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerChecklistInternalPEOcount']"));
+		internalChecklist = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divPerformerChecklistInternalPREOcount']"));
 		return internalChecklist;
 	}
 	//div[@class = 'k-multiselect-wrap k-floatwrap']
 	public static WebElement readActivatedEvents( )		//Method to click on Internal Checklist value
 	{
-		activatedEvents = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divActivatedEventPEOcount']"));
+		activatedEvents = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divActivatedEventPREOcount']"));
 		return activatedEvents;                        //*[@id="ContentPlaceHolder1_divActivatedEventPEOcount"]
 	}
 	
@@ -783,7 +785,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickAssignedEvents( )		//Method to click on Internal Checklist value
 	{
-		assignedEvents = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divAssignedEventPEOcount']"));
+		assignedEvents = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divAssignedEventPREOcount']"));
 		return assignedEvents;                        //*[@id="ContentPlaceHolder1_divAssignedEventPEOcount"]
 	}
 	
@@ -1764,13 +1766,13 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickStatutoryRejected( )	//Searching Statutory Reject value to click 
 	{
-		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPEOcount']"));
+		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPREOcount']"));
 		return performer;
 	}
 	
 	public static WebElement clickInternalRejected( )	//Searching Internal Reject value to click
 	{
-		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedInternalPEOcount']"));
+		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedInternalPREOcount']"));
 		return performer;
 	}
 	
@@ -2140,7 +2142,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickUpcomingStatutory( )	//
 	{
-		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divupcomingPEOcount']"));
+		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divupcomingPREOcount']"));
 		return performer;
 	}
 	
@@ -2158,7 +2160,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickUpcomingInternal( )	//
 	{
-		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divupcomingInternalPEOcount']"));
+		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divupcomingInternalPREOcount']"));
 		return performer;
 	}
 	
@@ -2557,7 +2559,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement clickPTUpcomingStatutory( )	//
 	{
-		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingStat']"));
+		performer = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingStatBoth']"));
 		return performer;
 	}
 	
@@ -3233,7 +3235,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationClosureStatusCD()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-link'])[18]"));
+		performer = getDriver().findElement(By.xpath("//a[.='Deviation Closure Status']"));
 		return performer;
 	}
 	public static WebElement Performercol()					//
@@ -3348,7 +3350,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationApproved()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[27]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[26]"));
 		return performer;
 	}
 	
@@ -3372,19 +3374,19 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationAppliedCD1()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[54]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[25]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationRejectedCD1()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[55]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[26]"));
 		return performer;
 	}
 	
 	public static WebElement DeviationApprovedCD1()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[56]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[27]"));
 		return performer;
 	}
 	
@@ -3474,7 +3476,7 @@ public class OverduePOM extends BasePage
 	
 	public static WebElement DeviationApprovedAu()					//
 	{
-		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[23]"));
+		performer = getDriver().findElement(By.xpath("(//*[@class='k-in'])[24]"));
 		return performer;
 	}
 	
@@ -4058,4 +4060,7 @@ public class OverduePOM extends BasePage
 	
 	
 	
+
+
+
 

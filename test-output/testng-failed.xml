@@ -3,54 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="approval.ApprovalStatutory">
+      <class name="auditor.AuditorcountInternal">
         <methods>
-          <include name="NotCompletionStatusFilter"/>
-          <include name="PerformReviewEmailCol"/>
-          <include name="DeviationApproverColGR1"/>
-          <include name="RiskSummaryFilter"/>
-          <include name="ClosedTimely_PieChart"/>
-          <include name="ClosedDelayed_PieChart"/>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="AssignmentReport"/>
-          <include name="DepartmentSummaryAccountStatutory"/>
-          <include name="NotCompleted_PieChartPeriod"/>
-          <include name="browserClosing"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="setBrowser"/>
-          <include name="ComplianceDocumentsDAM"/>
-          <include name="NotApplicable_PieChart"/>
-          <include name="NotCompleted_PieChart"/>
-          <include name="DetailedReport"/>
-          <include name="CompletionStatusFilter"/>
-          <include name="complianceCalendar"/>
-          <include name="BargraphIndustrySpeMediumStatutory"/>
-          <include name="BargraphIndustrySpeHighStatutory"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
-          <include name="inProgress_PieChartPeriod"/>
-          <include name="clickPenaltyStatutory"/>
-          <include name="Overdue_PieChartPeriod"/>
-          <include name="BargraphIndustrySpeLowStatutory"/>
-          <include name="ComplianceDocuments"/>
-          <include name="Login"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="Overdue_PieChart"/>
-          <include name="dueToday_PieChart"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="pendingForReview_PieChartPeriod"/>
-          <include name="Upcoming_PieChartPeriod"/>
-          <include name="rejected_PieChart"/>
-          <include name="RiskSummaryFilterNA"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="inProgress_PieChart"/>
-          <include name="BargraphIndustrySpeCriticalStatutory"/>
-          <include name="pendingForReview_PieChart"/>
-          <include name="DeptSummaryFilter"/>
           <include name="Closing"/>
+          <include name="Login"/>
+          <include name="UpcomingFilter1"/>
+          <include name="UpcomingFilterIn"/>
+          <include name="setBrowser"/>
+          <include name="browserClosing"/>
+          <include name="RiskSummaryFilterNA"/>
         </methods>
-      </class> <!-- approval.ApprovalStatutory -->
+      </class> <!-- auditor.AuditorcountInternal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

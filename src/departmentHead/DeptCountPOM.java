@@ -43,6 +43,12 @@ public class DeptCountPOM extends BasePage {
 		categories = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_ddlperiod']/option[7]"));
 		return categories;
 	}
+	public static WebElement Refresh()		//Method for closing Message Popup
+	{
+		categories = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+		return categories;
+	}
+	
 	
 	public static WebElement ClickApply()		//Method for closing Message Popup
 	{
@@ -346,7 +352,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement StatusM()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[2]/div/span[1]"));
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[3]"));
 		return categories;
 	}
 	
@@ -5161,7 +5167,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		jse.executeScript("arguments[0].click();", ViewButton);
 			Thread.sleep(4000);
 		}catch(Exception e) {
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[2]");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[2]");
 				
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -5174,14 +5180,14 @@ WebDriverWait wait = new WebDriverWait(getDriver(), (140));
 		}
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("frameMitigationOverViews"));	//Wait until frame get visible and switch to it.
 
-			File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File dir = new File("C:\\Users\\shitalb\\Downloads");
 			File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 			
 			Thread.sleep(500);
 			OverduePOM.Dwounload().click();				//Exporting (Downloading) file
 			
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 			File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 			
 			

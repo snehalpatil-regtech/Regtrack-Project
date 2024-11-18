@@ -5779,6 +5779,52 @@ public static void UserLogReport( ExtentTest test) throws InterruptedException, 
 
 }
 
+public static void ReassignmentExcludeReport( ExtentTest test) throws InterruptedException, IOException
+{
+			
+		Actions action = new Actions(getDriver());
+		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		Thread.sleep(3000);
+	    // switching child window
+		SwitchtoChild(test);
+		Thread.sleep(3000);
+		
+	  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]")));	//Wait until records table get visible.
+//-------------------------------Statutory Assignment Report-------------------------------
+	      action.moveToElement(CompanyPOM.clickReport()).click().build().perform();
+	      Thread.sleep(2000);
+	      CompanyPOM.clickInternalAssi().click();
+	      		  	 Thread.sleep(2000);
+	      		  //	SwitchToNewlyOpenedWindow(test);
+	      			//Thread.sleep(3000);
+	 	//  	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']")));//Wait until records table get visible.	 	  	
+	 		Thread.sleep(3000);
+	 		CompanyPOM.SelectLocationSA().click();
+ 		  	 Thread.sleep(1000);
+ 		   CompanyPOM.Expand().click();
+ 		  	 Thread.sleep(1000);
+ 		   CompanyPOM.DPvtLtdAS().click();
+ 		  	 Thread.sleep(3000);
+ 		  	File dir = new File("C:\\Users\\shitalb\\Downloads");
+			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
+
+			Thread.sleep(500);
+			CompanyPOM.clickExport().click(); // Exporting (Downloading) file
+
+			Thread.sleep(8000);
+			File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
+			Thread.sleep(3000);
+			if (dirContents.length < allFilesNew.length) {
+				test.log(LogStatus.PASS,  " Excel Exported successfully.");
+			} else {
+				test.log(LogStatus.FAIL,  " :- Excel Exported does not Exported.");
+			}
+						
+			Thread.sleep(1000);
+
+}
+
 public static void ExcelcountAndGridMatch( ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 {
 		    

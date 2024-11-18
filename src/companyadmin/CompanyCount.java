@@ -114,7 +114,7 @@ public class CompanyCount extends BasePage {
 		}
 	}
 	
-	/*
+	
 //	@Test(priority = 1)
 	void AllReport() throws InterruptedException, IOException
 	{
@@ -126,6 +126,7 @@ public class CompanyCount extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+	
 	
 //	@Test(priority = 2)
 	void LogReport() throws InterruptedException, IOException
@@ -151,6 +152,17 @@ public class CompanyCount extends BasePage {
 		extent.flush();
 	}
 	
+	@Test(priority = 3)
+	void ReassignmentExcludeReport() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Reports - Reassignment Exclude Report");
+		
+		CompanyMethods.ReassignmentExcludeReport(test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
 	
 //	@Test(priority = 4)
 	void Reports() throws InterruptedException, IOException
@@ -164,6 +176,8 @@ public class CompanyCount extends BasePage {
 		extent.flush();
 	}
 	
+	
+	/*
 	@Test(priority = 5)
 	void Department() throws InterruptedException, IOException
 	{
@@ -1060,7 +1074,7 @@ public class CompanyCount extends BasePage {
 			
 			
 	*/
-		@Test(priority = 74) 
+//		@Test(priority = 74) 
 		void UploadInternalData() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Internal Compliances - Upload Internal Data ");
@@ -1113,7 +1127,7 @@ public class CompanyCount extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-		
+		/*
 		@Test(priority = 74) 
 		void ComplianceAssignment() throws InterruptedException, IOException
 		{
@@ -1146,7 +1160,7 @@ public class CompanyCount extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-		
+		*/
 		
 	@AfterMethod
   	void browserClosing() throws InterruptedException

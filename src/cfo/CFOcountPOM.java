@@ -1,8 +1,11 @@
 package cfo;
-import java.io.File;
-import java.io.FileInputStream;
+//import java.io.File;
+//import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+//import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -99,10 +102,62 @@ public class CFOcountPOM extends BasePage
 		return compliances;                        
 	}
 	
+	public static WebElement clickRiskHighNA( )			//Method to search 'High Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[18]"));
+		return risksummary;
+	}
+	public static WebElement clickIndustrySpeCriticalMDemo( )			//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[6]"));
+		return bargraph;
+	}
+	
+
+	public static WebElement clickRiskMediumNA( )			//Method to search 'High Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[19]"));
+		return risksummary;
+	}
+	public static WebElement clickAdmiInprogress( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[41]"));
+		return department;
+	}
+
+	public static WebElement clickRiskLowNA( )			//Method to search 'Low Risk - In Time' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[20]"));
+		return risksummary;
+	}
+
+	public static WebElement clickadminNotApplicable( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
+	public static WebElement clickUpcomingPe1( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("//div[@id='perStatusPieChartDiv']//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-4 highcharts-drilldown-data-label']"));
+		return department;
+	}
+	
+	
+	public static WebElement NotApplicableCritical( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[9]"));
+		return risksummary;
+	}
+	
 	public static WebElement ViewTextIORIn( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='windowInternalSummarypopup']/div/div[2]/div[2]/div[1]/div[3]/div[1]/div/div/div[1]/div/div[13]/div[1]"));
 		return compliances;                        
+	}
+	public static WebElement ClearBtn()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='ClearfilterMain']"));
+		return compliances;
 	}
 	
 	public static WebElement ViewTextUser( )		//Method for reading Compliances value on Dashboard
@@ -176,6 +231,149 @@ public class CFOcountPOM extends BasePage
 		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label"));
 		return compliances;
 	}
+	public static WebElement clickHumanNotApplicableDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[73]"));
+		return department;
+	}
+	public static WebElement clickRiskCriticalNotCompletedDeptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[85]"));
+		
+
+		return risksummary;
+	}
+	public static WebElement clickRiskCriticalNotApplicableDEDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[97]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskMediumNotCompletedDeptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[86]"));
+		
+
+		return risksummary;
+	}
+	public static WebElement clickRiskHighClosedTimelyDptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[94]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskHighNotApplicableDEDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[98]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskMediumClosedTimelyDptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[95]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskMediumNotApplicableDEDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[99]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskLowNotCompletedDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[88]"));
+		
+
+		return risksummary;
+	}
+	public static WebElement clickRiskLowNotApplicableDEDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[100]"));
+		return risksummary;
+	}
+	public static WebElement clickRiskLowClosedDelayedDptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[92]"));
+		return risksummary;                        
+	}
+	public static WebElement clickRiskHighClosedDelayedDptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[90]"));
+		return risksummary;                        
+	}
+	public static WebElement clickRiskCriticalClosedTimelyDptDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[93]"));
+		return risksummary;
+	}
+	public static WebElement clickAccountOverdueDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[60]"));
+		return department;
+	}
+	public static WebElement clickAccountInprogressDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[82]"));
+		return department;
+	}
+	public static WebElement clickHumanInprogressDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[49]"));
+		return department;
+	}
+	public static WebElement clickHumanRejectedDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[61]"));
+		return department;
+	}
+	public static WebElement clickPendingReviewDeptDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[37]"));
+		return department;
+	}
+	
+	public static WebElement clickFinanceOverdueDeptDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[25]"));
+		return department;
+	}
+	public static WebElement clickClosedTimelyDptDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		return department;
+	}
+	
+	public static WebElement clickAccountDuetodayDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[115]"));
+		return department;
+	}
+
+	public static WebElement clickAccountNADemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[104]"));
+		return department;
+	}
+
+	public static WebElement clickAccountRejectedDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[93]"));
+		return department;
+	}
+	
+	public static WebElement clickAccountClosedDelayedDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[38]"));
+		return department;
+	}
+	public static WebElement clickAccountPendingReviewDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[71]"));
+		return department;
+	}
+
+	public static WebElement clickAccountClosedTimelyDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[49]"));
+		return department;
+	}
+
 	
 	public static WebElement RefreshNowD( )		//Method for reading Compliances value on Dashboard
 	{
@@ -183,7 +381,18 @@ public class CFOcountPOM extends BasePage
 		return compliances;
 	}
 
+	public static WebElement clickIndustrySpeHighMDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[14]"));
+		return bargraph;
+	}
 	
+	public static WebElement  clickIndustrySpeLowMDemo( )				//"Statutory" Method to search Labour compliance low risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[30]"));
+		return bargraph;
+	}
+
 	
 	
 	public static WebElement readCompliancesInternal( )		//Method for reading Compliances value on Dashboard
@@ -801,7 +1010,12 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickRejectedPe11( )					//Method to search In Time count to click on from Pie Chart.
 	{
-		piechart = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-5 highcharts-drilldown-data-label'])"));
+		piechart = getDriver().findElement(By.xpath("(//*[name()='g'][@class='highcharts-label highcharts-data-label highcharts-data-label-color-4 highcharts-drilldown-data-label'])[2]"));
+		return piechart;
+	}
+	public static WebElement clickRejectedPe12( )					//Method to search In Time count to click on from Pie Chart.
+	{
+		piechart = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-4 highcharts-drilldown-data-label'])[3]"));
 		return piechart;
 	}
 	
@@ -990,6 +1204,11 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
 		return bargraph;
 	}
+	public static WebElement clickIndustrySpeCriticalDemo( )			//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[1]"));
+		return bargraph;
+	}
 	public static WebElement clickIndustrySpeCriticalM1( )			//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])"));
@@ -1006,31 +1225,57 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[8]"));
 		return bargraph;
 	}
-	
+	public static WebElement clickIndustrySpeHighDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
+		return bargraph;
+	}
 	public static WebElement clickBSECritical( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[2]"));
 		return bargraph;
 	}
-	
+	public static WebElement clickInternalComplianceCritialDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[14]"));
+		return bargraph;
+	}
+	public static WebElement clickInternalComplianceHighDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[38]"));
+		return bargraph;
+	}
 	public static WebElement clickBSEHigh( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[4]"));
+		//(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[4]
 		return bargraph;
 	}
 	
 	public static WebElement clickBSEMedium( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[6]"));
+		//(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[6]
 		return bargraph;
 	}
-	
+	public static WebElement clickInternalComplianceMediumDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[62]"));
+		//(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[6]
+		return bargraph;
+	}
 	public static WebElement clickBSELow( )				//"Statutory" Method to search Labour compliance High risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[8]"));
+		//(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[8]
 		return bargraph;
 	}
-	
+	public static WebElement clickInternalComplianceLowDemo( )				//"Statutory" Method to search Labour compliance High risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[86]"));
+		//(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[8]
+		return bargraph;
+	}
 	public static WebElement clickIndustrySpeMedium( )			//"Statutory" Method to search Labour compliance Medium risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[22]"));
@@ -1042,7 +1287,11 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[14]"));
 		return bargraph;
 	}
-	
+	public static WebElement clickIndustrySpeMediumDemo( )			//"Statutory" Method to search Labour compliance Medium risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[3]"));
+		return bargraph;
+	}
 	
 	public static WebElement clickLabourMedium1( )			//Method to search Labour compliance Medium risk value.
 	{
@@ -1061,7 +1310,11 @@ public class CFOcountPOM extends BasePage
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[20]"));
 		return bargraph;
 	}
-	
+	public static WebElement  clickIndustrySpeLowDemo( )				//"Statutory" Method to search Labour compliance low risk value.
+	{
+		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[4]"));
+		return bargraph;
+	}
 	public static WebElement clickLabourLow1( )				//Method to search Labour compliance low risk value.
 	{
 		bargraph = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-drilldown-data-label'])[25]"));
@@ -1120,7 +1373,12 @@ public class CFOcountPOM extends BasePage
 	{
 		bargraph = getDriver().findElement(By.xpath("//*[@id='divApiOverView']/div/div/div[1]/button"));
 		return bargraph;                         //*[@id="divreports"]/div/div/div[1]/button                
-	}                                       
+	}  
+	public static WebElement closeDocuments( )				//Method to search cross of document to close it.
+	{
+		bargraph = getDriver().findElement(By.xpath("//*[@id='divApiOverView']/div/div/div[1]/button"));
+		return bargraph;                         //*[@id="divreports"]/div/div/div[1]/button                
+	}  
 	
 	public static WebElement closeDocumentA( )				//Method to search cross of document to close it.
 	{
@@ -1277,7 +1535,11 @@ public class CFOcountPOM extends BasePage
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[17]"));
 		return risksummary;
 	}
-	
+	public static WebElement clickRiskCriticalNotApplicableDemo( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
+	{
+		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[34]"));
+		return risksummary;
+	}
 	public static WebElement clickRiskHighNotApplicable( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[18]"));
@@ -1293,6 +1555,7 @@ public class CFOcountPOM extends BasePage
 	public static WebElement clickRiskMediumNotApplicable( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[19]"));
+
 		return risksummary;
 	}
 	public static WebElement RiskLowNotApplicable( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
@@ -1304,6 +1567,7 @@ public class CFOcountPOM extends BasePage
 	public static WebElement RiskMediumNotApplicable( )	//Method to search 'High Risk - Not Completed' compliance of Risk Summary.
 	{
 		risksummary = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[36]"));
+
 		return risksummary;
 	}
 
@@ -1659,7 +1923,11 @@ public class CFOcountPOM extends BasePage
 		return department;
 	}
 	
-	
+	public static WebElement clickAdminClosedTimelyInternalDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[2]"));
+		return department;
+	}
 	public static WebElement clickAccountOverdueInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[31]"));
@@ -1689,11 +1957,21 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
 		return department;
 	}
-	
+	public static WebElement clickAdminPenFReviewInternalDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[3]"));
+		return department;
+	}
+
 	
 	public static WebElement clickFinanceInProgressInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
-		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
+	public static WebElement clickAdminInProgressInternalDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[4]"));
 		return department;
 	}
 	
@@ -1706,6 +1984,11 @@ public class CFOcountPOM extends BasePage
 	public static WebElement clickAccountRejectedInternalD( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		return department;
+	}
+	public static WebElement clickAdminRejectedInternalDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[5]"));
 		return department;
 	}
 	
@@ -1726,7 +2009,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[19]"));
 		return department;
 	}
-	
+	public static WebElement clickAdminNotAppliInternalDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[6]"));
+		return department;
+	}
 	
 	public static WebElement clickBTRNotComplInternal( )		//Method to search 'High Risk' bar of Department Summary.
 	{
@@ -1819,7 +2106,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[36]"));
 		return department;
 	}
-	
+	public static WebElement clickComplianceIsecClosedTimelyDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[37]"));
+		return department;
+	}
 	public static WebElement clickFinanceClosedTimely( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[50]"));
@@ -1868,7 +2159,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[39]"));
 		return department;
 	}
-	
+	public static WebElement clickComplianceIsecOverdueDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[41]"));
+		return department;
+	}
 	public static WebElement clickAdminOverdueAIn( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[39]"));
@@ -1985,7 +2280,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[42]"));
 		return department;
 	}
-	
+	public static WebElement clickComplianceIsecPendingReviewDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[45]"));
+		return department;
+	}
 	public static WebElement clickAdminPendingReviewIn( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[42]"));
@@ -2076,6 +2375,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[51]"));
 		return department;
 	}
+	public static WebElement clickComplianceIsecNotApplicableDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[57]"));
+		return department;
+	}
 	public static WebElement clickAdminDuetodayIn( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[54]"));
@@ -2099,7 +2403,11 @@ public class CFOcountPOM extends BasePage
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[48]"));
 		return department;
 	}
-
+	public static WebElement clickComplianceIsecInRejectedDemo( )		//Method to search 'High Risk' bar of Department Summary.
+	{
+		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[53]"));
+		return department;
+	}
 	public static WebElement clickHRNotApplicable( )		//Method to search 'High Risk' bar of Department Summary.
 	{
 		department = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[24]"));
@@ -4392,14 +4700,14 @@ public class CFOcountPOM extends BasePage
 	
 		
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -4538,14 +4846,14 @@ else {
 	
 		
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -4694,6 +5002,7 @@ else {
 		} else {
 		test.log(LogStatus.FAIL, " Excel file does not downloaded.");
 		}
+	
 				
 		Thread.sleep(500);
 		getDriver().switchTo().parentFrame();
@@ -4710,6 +5019,166 @@ else {
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "'"+risk+"' risk  compliance count matches to numbers of items from grid.= 0");
 		}	
+		
+		
+		
+		
+	}
+ 	
+	public static void GraphCountInPeUp1(  ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	{
+		Thread.sleep(3000);
+		if(risk.equalsIgnoreCase("Critical"))
+		{
+			CFOcountPOM.readCritical().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			Thread.sleep(1000);
+		}
+		else if(risk.equalsIgnoreCase("High"))
+		{
+			CFOcountPOM.readHigh().click();						//Clicking on High value of Pie Chart of 'Not Completed'.
+			Thread.sleep(1000);
+		}
+		else if(risk.equalsIgnoreCase("Medium"))
+		{
+			CFOcountPOM.readMedium().click();						//Clicking on Medium value of Pie Chart of 'Not Completed'.
+			Thread.sleep(1000);
+		}
+		else if(risk.equalsIgnoreCase("Low"))
+		{
+			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
+			Thread.sleep(1000);
+		}
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,300)");	
+		Thread.sleep(5000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s = CFOcountPOM.readTotalItemsD().getText();
+		Thread.sleep(2000);
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+		try
+		{
+			
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+			Thread.sleep(3000);
+		}
+		catch(Exception e)
+		{
+			
+		}
+		Thread.sleep(1000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s1 = CFOcountPOM.readTotalItemsD().getText();		//Reading total number of items.
+		String[] bits = s1.split(" ");									//Splitting the String
+		String itomsCount = bits[bits.length - 2];						//Getting the second last word (total number of items)
+		
+		int count = 0;
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			Thread.sleep(2500);
+			s1 = CFOcountPOM.readTotalItems().getText();
+			bits = s1.split(" ");										//Splitting the String
+			itomsCount = bits[bits.length - 2];
+		}
+		if(itomsCount.equalsIgnoreCase("to"))							//If not items found
+		{
+			count = 0;
+		}
+		else
+		{
+			count = Integer.parseInt(itomsCount);
+		}
+		
+		if(count == complianceCount)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
+		}
+		else
+		{
+		//	test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
+		}
+		
+		
+		Thread.sleep(3000);
+		
+		By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(6000);
+					
+		List<WebElement> ViewButton = getDriver().findElements(locator);	
+		Thread.sleep(6000);
+					
+		ViewButton.get(0).click();
+		Thread.sleep(4000);
+		test.log(LogStatus.PASS, "overView successfully");
+		CFOcountPOM.closeDocument().click();
+		Thread.sleep(3000);
+					
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
+			
+				
+		Thread.sleep(2000);
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
+		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+				
+		Thread.sleep(500);
+		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
+				
+		Thread.sleep(3000);
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+				
+		Thread.sleep(3000);
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS,  " Excel file Export Successfully.");
+		} else {
+		test.log(LogStatus.FAIL, " Excel file does not downloaded.");
+		}
+		
+		Thread.sleep(3000);
+		if(CFOcountPOM.clickClear().isEnabled())
+		{
+				Thread.sleep(3000);
+				CFOcountPOM.clickClear().click();
+				test.log(LogStatus.PASS,"Clear Button Working Properly");
+		}
+		else
+		{
+			test.log(LogStatus.FAIL,"Clear Button does not Working Properly");
+		}
+				
+		Thread.sleep(500);
+		//ClearBtn().click();
+	//	test.log(LogStatus.PASS, "The applied filter should get cleared after clicking on the clear button.");
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		CFOcountPOM.closeCategories1().click();					//Closing the High Risk Window.
+	}
+		else 
+		{
+			Thread.sleep(2000);
+			js.executeScript("window.scrollBy(300,0)");	
+			Thread.sleep(1000);
+			getDriver().switchTo().parentFrame();
+			Thread.sleep(3000);
+			CFOcountPOM.closeCategories1().click();
+			Thread.sleep(3000);
+			test.log(LogStatus.PASS, "'"+risk+"' risk  compliance count matches to numbers of items from grid.= 0");
+		}	
+		
+		
+		
+		
 	}
  	
 	
@@ -4816,14 +5285,14 @@ else {
 			
 				
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 				
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 				
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 				
 		Thread.sleep(3000);
@@ -4831,6 +5300,19 @@ else {
 			test.log(LogStatus.PASS,  " Excel file Export Successfully.");
 		} else {
 		test.log(LogStatus.FAIL, " Excel file does not downloaded.");
+		}
+		
+		
+		Thread.sleep(3000);
+		if(CFOcountPOM.clickClear().isEnabled())
+		{
+				Thread.sleep(3000);
+				CFOcountPOM.clickClear().click();
+				test.log(LogStatus.PASS,"while click On Clear Button selected filter should be cleared");
+		}
+		else
+		{
+			test.log(LogStatus.FAIL,"while click On Clear Button selected filter should not be cleared");
 		}
 				
 		Thread.sleep(500);
@@ -4946,14 +5428,14 @@ else {
 			}
 		
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -5079,14 +5561,14 @@ else {
 			}
 		
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportImage().click();	//Exporting (Downloading) file
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -6403,7 +6885,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6815,7 +7297,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -8419,7 +8901,7 @@ Thread.sleep(2000);
 			js.executeScript("window.scrollBy(0,-1000)");					//Scrolling down window by 2600 px.
 			
 		//	String file = "//home//ashitosh-avantis//Downloads//Detailed Report .xlsx";
-			String file = "C:\\Users\\snehalp\\Downloads\\Report.xlsx";
+			String file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
 			Detailed( file, Compliance, test);
 		}
 		 
@@ -8428,14 +8910,14 @@ Thread.sleep(2000);
 
 	public static void Detailed( String file, String compliance, ExtentTest test) throws InterruptedException, IOException
 	{
-		File dir = new File("C:/Users/snehalp/Downloads/");
+		File dir = new File("C://Users//snehalp//Downloads");
 		File[] allFiles = dir.listFiles();					//Counting number of files in directory before download
 		
 		Thread.sleep(1000);
 		CFOcountPOM.clickExportImage().click();			//Exporting (Downloading) file
 		
 		Thread.sleep(4000);
-		File dir1 = new File("C:/Users/snehalp/Downloads/");
+		File dir1 = new File("C://Users//snehalp//Downloads");
 		File[] allFilesNew = dir1.listFiles();					//Counting number of files in directory after download
 		
 		if(allFiles.length < allFilesNew.length)
@@ -8775,7 +9257,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickAllDropDown()));
 		
 		String vendors = "All Vendors";
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();					//Counting number of files in directory before download
 		
 		Thread.sleep(500);
@@ -8783,7 +9265,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 //		action.moveToElement(CFOcountPOM.clickExportReport()).click().build().perform();	//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();					//Counting number of files in directory after download
 		
 		if(dirContents.length < allFilesNew.length)
@@ -8871,7 +9353,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		elementsList = clickType2();
 		elementsList.get(1).click();
 		
-		String file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
+		String file = "E:\\Test Cases\\Sony test cases.xlsx";
 		String compliance = "Statutory";
 		Assignment( test, file, compliance);
 //		Thread.sleep(1000);
@@ -8906,7 +9388,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		Thread.sleep(500);
 //		//litigationPerformer.MethodsPOM.progress();
 		
-		file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
+		file = "E:\\Test Cases\\Sony test cases.xlsx";
 		compliance = "Internal";
 		Assignment( test, file, compliance);
 		Thread.sleep(1000);
@@ -8938,9 +9420,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		elementsList = clickType2();
 		elementsList.get(1).click();
 		
-		String file = "C:\\Users\\shitalb\\Downloads\\StatutoryReport.xlsx";
+		String file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
 		String compliance = "Statutory";
-//		Assignment( test, file, compliance);
+		Assignment( test, file, compliance);
 		Thread.sleep(1000);
 		
 		//OverduePOM.clickDashboard().click();
@@ -8976,7 +9458,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		Thread.sleep(1000);
 		//litigationPerformer.MethodsPOM.progress();
 		
-		String	file = "E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
+		String	file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
 		String	compliance = "Internal";
 		Assignment(test, file, compliance);
 		Thread.sleep(1000);
@@ -9433,14 +9915,14 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 		test.log(LogStatus.PASS,"'"+risk+"'Risk: "+ "View successfully");
 		Thread.sleep(3000);
 		Thread.sleep(1000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		ViewButton.get(1).click();
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -9537,14 +10019,14 @@ public static void GraphCountPFRIn(  ExtentTest test, String risk, int complianc
 		test.log(LogStatus.PASS,"'"+risk+"'Risk: "+ "View successfully");
 		Thread.sleep(3000);
 		Thread.sleep(1000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		ViewButton.get(1).click();
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -9695,9 +10177,9 @@ public static void SummaryofOverdueMail(  ExtentTest test)throws InterruptedExce
 	Thread.sleep(8000);
 	WebDriverWait wait = new WebDriverWait(getDriver(), (100));
 	
-WebElement farme=getDriver().findElement(By.xpath("//*[@id='showdetails']"));
-getDriver().switchTo().frame(farme);
-  Thread.sleep(8000);
+	WebElement farme=getDriver().findElement(By.xpath("//*[@id='showdetails']"));
+	getDriver().switchTo().frame(farme);
+	Thread.sleep(8000);
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
 	 Thread.sleep(3000); 
 	 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[22]/a[2]");
@@ -9775,14 +10257,14 @@ public static void Shortreport(  ExtentTest test) throws InterruptedException, I
 			js.executeScript("window.scrollBy(0,-2000)");				//Scrolling down window by 2600 px.
 			
 	
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportExcel().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		if(dirContents.length < allFilesNew.length)
@@ -9908,14 +10390,14 @@ public static void ShortreportIn(  ExtentTest test) throws InterruptedException,
 			js.executeScript("window.scrollBy(0,-2000)");				//Scrolling down window by 2600 px.
 			
 	
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		CFOcountPOM.clickExportExcel().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		if(dirContents.length < allFilesNew.length)
@@ -13498,14 +13980,14 @@ public static void SummaryofOverdueSF(  ExtentTest test)throws InterruptedExcept
   	
 		
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -13575,14 +14057,14 @@ public static void PerformanceSummarySF(ExtentTest test)throws InterruptedExcept
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -13656,14 +14138,14 @@ public static void RiskSummarySF(ExtentTest test)throws InterruptedException
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -13737,14 +14219,14 @@ public static void DepartmentSummarySF(ExtentTest test)throws InterruptedExcepti
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -13818,14 +14300,14 @@ public static void PerformerSummaryDueForPeriodSF(ExtentTest test)throws Interru
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -13880,14 +14362,14 @@ public static void GradingReportSF(ExtentTest test)throws InterruptedException
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -13953,14 +14435,14 @@ public static void DetailedReportSF(ExtentTest test) throws InterruptedException
 
 
 	Thread.sleep(3000);
-	File dir = new File("C:\\Users\\snehalp\\Downloads");
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
 	File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 	Thread.sleep(500);
 	OverduePOM.Download().click(); // Exporting (Downloading) file
 
 	Thread.sleep(3000);
-	File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 	File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 	Thread.sleep(3000);
 	if (dirContents.length < allFilesNew.length) 
@@ -14023,14 +14505,14 @@ public static void ComplianceDocumentsSF(ExtentTest test  ) throws InterruptedEx
 
 
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\shitalb\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -14342,4 +14824,7 @@ Thread.sleep(1000);
 }
 		
 }
+
+	
+
 

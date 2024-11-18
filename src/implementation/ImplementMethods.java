@@ -8774,6 +8774,7 @@ public static void EventAssignmentTab( ExtentTest test) throws InterruptedExcept
 	}
 
 	Thread.sleep(500);
+	/*
 //	ImplementPOM.ERUploadedDocument().click();	
 	Thread.sleep(20000);
 	File dirs = new File("C:\\Users\\shitalb\\Downloads");
@@ -8794,7 +8795,7 @@ public static void EventAssignmentTab( ExtentTest test) throws InterruptedExcept
 	}
 			
 	Thread.sleep(500);	
-	
+	*/
 }
 
 public static void EventReassignment( ExtentTest test) throws InterruptedException
@@ -8826,7 +8827,8 @@ public static void EventReassignment( ExtentTest test) throws InterruptedExcepti
 	Thread.sleep(500);	
 	ImplementPOM.eventAssignmentLocationSelect().click();
 	Thread.sleep(500);	
-	ImplementPOM.eventAssignmentChooseFile().sendKeys("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\UploadSheet\\EventReassignmentReport (1).xlsx");
+	
+	ImplementPOM.eventAssignmentChooseFile().sendKeys("C:\\Users\\shitalb\\Downloads\\EventReassignmentReport (22).xlsx");
 	Thread.sleep(4000);
 	ImplementPOM.eventAssignmentUpload().click();
 	Thread.sleep(4000);

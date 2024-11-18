@@ -41,7 +41,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement clickStatutoryReview()		//Method for searching Statutory Review value element.
 	{
-		statutoryReview = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyReviewerPendingforReviewercount']"));
+		statutoryReview = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divReviewerPendingforReviewePREOcount']"));
 		return statutoryReview;
 	}
 	
@@ -250,7 +250,7 @@ public class ReviewerPOM extends BasePage
 	}
 	public static WebElement readStatutoryReject()		//Method for searching Statutory Reject button to read statutory value  
 	{
-		statutoryRejectValue = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyRejectedcount']"));
+		statutoryRejectValue = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divReviewerRejectedPREOcount']"));
 		return statutoryRejectValue;
 	}
 	
@@ -262,13 +262,13 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement clickInternalReview()		//Method for searching Internal Review value element.
 	{
-		internalReview = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divRevieweronlyReviewerPendingforReviewerInternalcount']"));
+		internalReview = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divReviewerPendingforRevieweInternalPREOcount']"));
 		return internalReview;
 	}
 	
 	public static WebElement readInternalReject()
 	{
-		internalRejectValue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divRevieweronlyRejectedInternalcount']"));
+		internalRejectValue = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divReviewerRejectedInternalPREOcount']"));
 		return internalRejectValue;
 	}
 	
@@ -403,7 +403,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement CloseOverview1()
 	{
-		statutoryAction = getDriver().findElement(By.xpath("/html/body/div[15]/div[1]/div/a"));
+		statutoryAction = getDriver().findElement(By.cssSelector("body > div:nth-child(17) > div.k-window-titlebar.k-header > div > a"));
 		return statutoryAction;
 	}
 	
@@ -503,25 +503,25 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickReviewerTaskPFRStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickReviewerTaskPFRInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerPendingReviewIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickReviewerTaskRejectStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerRejectedStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerRejectedStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickReviewerTaskRejectInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerRejectedInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerRejectedIntBoth']"));
 		return statutoryAction;
 	}
 	
@@ -533,7 +533,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubStatBoth']"));
 		return statutoryAction;
 	}
 	
@@ -545,7 +545,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ReviewerTaskDBNSInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivReviewerDueNotSubIntBoth']"));
 		return statutoryAction;
 	}
 	
@@ -563,25 +563,25 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickCompletedSta()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyCompletedcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divCompletedPREOcount']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickCompletedIn()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyCompletedInternalcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divCompletedInternalPREOcount']"));
 		return statutoryAction;//*[@id="grid"]/div[4]/table/tbody/tr[1]/td[25]/a[5]
 	}
 	
 	public static WebElement ClickOverdueSta()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyDueButNotSubmittedcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divDueButNotSubmittedPREOcount']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickOverdueIn()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divRevieweronlyDueButNotSubmittedInternalcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divDueButNotSubmittedInternalPREOcount']"));
 		return statutoryAction;
 	}
 	
@@ -617,7 +617,7 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickClosedEventsPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divClosedEventPEOcount']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divClosedEventPREOcount']"));
 		return statutoryAction;
 	}
 	
@@ -739,43 +739,43 @@ public class ReviewerPOM extends BasePage
 	
 	public static WebElement ClickUpcomingInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerUpcomingIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickOverdueStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickOverdueInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerOverdueIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickRejectedStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickRejectedInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedIntBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickPendingForReviewStatutoryPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewStat']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewStatBoth']"));
 		return statutoryAction;
 	}
 	
 	public static WebElement ClickPendingForReviewInternalPer()		//Searching first checkbox
 	{
-		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewInt']"));
+		statutoryAction = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerPendingReviewIntBoth']"));
 		return statutoryAction;
 	}
 	

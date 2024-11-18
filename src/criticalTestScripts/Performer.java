@@ -20,6 +20,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -167,7 +169,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 	
-	//	@Test(priority = 0) 
+		@Test(priority = 5) 
 		void StatutoryChecklistAction() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Statutory Checklist Count Through Action");
@@ -191,7 +193,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 7)  
+		@Test(priority = 7)  
 		void InternalCheckListAction() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Summary :- Internal Checklist Count Through Action");
@@ -529,7 +531,7 @@ public class Performer extends BasePage {
 	   		ReMethodsPOM.CalendarDownload(test);
 	   		
 	   	extent.endTest(test);
-	   	extent.flush();
+	   	extent.flush(); 
 	   	}
 	   	
 		@Test(priority = 29) 
@@ -541,13 +543,32 @@ public class Performer extends BasePage {
 				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,650)");					//Scrolling down window by 2600 px.
-				Thread.sleep(8000);
-				 Robot robot = new Robot();
-				  robot.keyPress(KeyEvent.VK_CONTROL);
-				   robot.keyPress(KeyEvent.VK_SUBTRACT);
+//				Thread.sleep(8000);
+//				 Robot robot = new Robot();
+//				  robot.keyPress(KeyEvent.VK_CONTROL);
+				//   robot.keyPress(KeyEvent.VK_SUBTRACT);
 				//   robot.keyRelease(KeyEvent.VK_SUBTRACT);
 				//   robot.keyRelease(KeyEvent.VK_CONTROL);
-				   Thread.sleep(8000);
+				
+
+				
+				try {
+			           
+
+		            // Set zoom level to 50% (0.5) for zooming out
+		            setZoomLevel(getDriver(), 0.9);
+
+		            // Wait to observe the effect
+		            Thread.sleep(2000);
+
+		            // Set zoom level back to 100% (1.0) to reset to normal
+		          //  setZoomLevel(getDriver(), 1.0);
+
+		        } catch (InterruptedException e) {
+		            e.printStackTrace();
+		        }
+				
+				Thread.sleep(8000);
 				String string_Compliances =OverduePOM.CalendarCount().getText();		//Storing old value of Statutory overdue.
 				int	CalendarCount = Integer.parseInt(string_Compliances);
 				OverduePOM.CalendarCount1().click();
@@ -656,6 +677,16 @@ public class Performer extends BasePage {
 		 extent.flush();
 		 
 		}
+	
+	
+
+	public static void setZoomLevel(WebDriver driver, double zoomLevel) 
+	{
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.body.style.zoom='" + zoomLevel + "'");
+    }
+	
+	
 
 	
 		@AfterMethod

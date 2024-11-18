@@ -3,7 +3,6 @@ package approval;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -362,10 +361,14 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskHigh ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[8]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
 		return compliances;
 	}
-	
+	public static WebElement RiskHigh1 ()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
+		return compliances;
+	}
 	public static WebElement RiskHighM ()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[9]"));
@@ -374,7 +377,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement RiskCritical ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[8]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[7]"));
 		return compliances;
 	}
 	
@@ -398,7 +401,7 @@ public class ApprovalcountPOM extends BasePage {
 	
 	public static WebElement SelectActF1 ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[23]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[25]"));
 		return compliances;
 	}
 	
@@ -427,7 +430,7 @@ public class ApprovalcountPOM extends BasePage {
 	}
 	public static WebElement SelectActNA ()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[42]"));
+		compliances = getDriver().findElement(By.xpath("(//span[@class='k-in'])[29]"));
 		return compliances;
 	}
 	
@@ -474,9 +477,14 @@ public class ApprovalcountPOM extends BasePage {
 		return compliances;
 	}
 	
+	public static WebElement StatusUpcoming ()		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@class='k-in' and .='Upcoming']"));
+		return compliances;
+	}
 	public static WebElement StatusNA()		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[19]"));
+		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[21]"));
 		return compliances;
 	}
 	
@@ -703,6 +711,182 @@ public static void LocationCount( ExtentTest test)throws InterruptedException
 	
 	Thread.sleep(3000);
 }
+
+public static void CompliancesCount( ExtentTest test)throws InterruptedException
+{
+
+	Thread.sleep(500);
+	if(OverduePOM.closeMessage().isDisplayed())				//If Compliance Updation message popped up,
+	{
+		OverduePOM.closeMessage().click();					//then close the message.
+	}
+	
+	Thread.sleep(1500);
+	
+	int valuebeforeTotalcompliance = Integer.parseInt(ApprovalcountPOM.TotalCompliances().getText());	//Storing value of 'Users' as a String to compare.
+	Thread.sleep(2000);
+
+	String OptionText1 = "Option 1";
+	String xpathExpression1 = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[1]",OptionText1);
+	WebElement dropdownOption1 = getDriver().findElement(By.xpath(xpathExpression1));
+	dropdownOption1.click();
+
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+	/*
+	String OptionText = "Option 1";
+	String xpathExpression = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[1]",OptionText);
+	WebElement dropdownOption = getDriver().findElement(By.xpath(xpathExpression));
+	dropdownOption.click();
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+*/
+	// Combine the two XPaths with the '|' operator
+    WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+    if (element != null) {
+    	element.click();
+      //  System.out.println("Refresh After Selecting Filter ");
+        // Perform actions on the element
+    } else {
+    	
+       // System.out.println("Not Refresh After Selecting Filter");
+    }
+    Thread.sleep(3000);
+	int valueTotalcompliance = Integer.parseInt(ApprovalcountPOM.TotalCompliances().getText());	//Storing value of 'Users' as a String to compare.
+
+	if(valuebeforeTotalcompliance!= valueTotalcompliance)								//Checking if String getCount contains the Value (in string format) 
+	{
+		test.log(LogStatus.PASS, "Before Select Statutory excluding checklist -'Total Compliances' count "+ valuebeforeTotalcompliance+ ",- After Select Statutory excluding checklist -'Total Compliances' count "+ valueTotalcompliance);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "Total Compliances count does not matches. Dashboard Value = "+ valuebeforeTotalcompliance+ ", - Actual Value = "+ valueTotalcompliance);
+	}
+	Thread.sleep(3000);
+	
+	String OptionText = "Option 3";
+	String xpathExpression = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[3]",OptionText);
+	WebElement dropdownOption = getDriver().findElement(By.xpath(xpathExpression));
+	dropdownOption.click();
+	Thread.sleep(1000);
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+	WebElement elements = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+    if (elements != null) {
+    	elements.click();
+      //  System.out.println("Refresh After Selecting Filter ");
+        // Perform actions on the element
+    } else {
+    	
+      //  System.out.println("Not Refresh After Selecting Filter");
+    }
+    
+	
+    Thread.sleep(3000);
+	int Totalcompliancecount1 = Integer.parseInt(ApprovalcountPOM.TotalCompliances().getText());	//Storing value of 'Users' as a String to compare.
+
+	if(valueTotalcompliance!= Totalcompliancecount1)								//Checking if String getCount contains the Value (in string format) 
+	{
+		test.log(LogStatus.PASS, "Before Select statutory -'Total Compliances' count "+ valueTotalcompliance+ ",After Select statutory -'Total Compliances' count "+ Totalcompliancecount1);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "Total Compliances count does not matches. Total Compliances = "+ valueTotalcompliance+ ", Actual Value = "+ Totalcompliancecount1);
+	}
+	Thread.sleep(3000);
+	
+}
+
+public static void CompliancesCountChanges( ExtentTest test)throws InterruptedException
+{
+
+	Thread.sleep(500);
+	if(OverduePOM.closeMessage().isDisplayed())				//If Compliance Updation message popped up,
+	{
+		OverduePOM.closeMessage().click();					//then close the message.
+	}
+	
+	Thread.sleep(1500);
+	//String string_Compliances =CFOcountPOM.readCompliancesInternal().getText();		//Storing old value of Statutory overdue.
+//	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
+	int valuebeforeTotalcompliance = Integer.parseInt(CFOcountPOM.readCompliancesInternal().getText());	//Storing value of 'Users' as a String to compare.
+	Thread.sleep(2000);
+
+	String OptionText1 = "Option 1";
+	String xpathExpression1 = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[1]",OptionText1);
+	WebElement dropdownOption1 = getDriver().findElement(By.xpath(xpathExpression1));
+	dropdownOption1.click();
+
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+	/*
+	String OptionText = "Option 1";
+	String xpathExpression = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[1]",OptionText);
+	WebElement dropdownOption = getDriver().findElement(By.xpath(xpathExpression));
+	dropdownOption.click();
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+*/
+	// Combine the two XPaths with the '|' operator
+    WebElement element = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+    if (element != null) {
+    	element.click();
+      //  System.out.println("Refresh After Selecting Filter ");
+        // Perform actions on the element
+    } else {
+    	
+       // System.out.println("Not Refresh After Selecting Filter");
+    }
+    Thread.sleep(3000);
+	int valueTotalcompliance = Integer.parseInt(CFOcountPOM.readCompliancesInternal().getText());	//Storing value of 'Users' as a String to compare.
+
+	if(valuebeforeTotalcompliance!= valueTotalcompliance)								//Checking if String getCount contains the Value (in string format) 
+	{
+		test.log(LogStatus.PASS, "Before Select Statutory excluding checklist -'Total Compliances' count "+ valuebeforeTotalcompliance+ ", After Select Statutory excluding checklist -'Total Compliances' count "+ valueTotalcompliance);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, " Compliances count does not Change after select filter Statutory excluding checklist = "+ valuebeforeTotalcompliance+ ",  Actual Value = "+ valueTotalcompliance);
+	}
+	Thread.sleep(3000);
+	
+	String OptionText = "Option 3";
+	String xpathExpression = String.format("//select[@id='ContentPlaceHolder1_ddlStatus']/option[3]",OptionText);
+	WebElement dropdownOption = getDriver().findElement(By.xpath(xpathExpression));
+	dropdownOption.click();
+	Thread.sleep(1000);
+	CFOcountPOM.clickApply().click();
+	Thread.sleep(3000);
+	WebElement elements = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_btnRefresh1']/label | //*[@id='ContentPlaceHolder1_btnRefresh']/label"));
+
+    if (elements != null) {
+    	elements.click();
+      //  System.out.println("Refresh After Selecting Filter ");
+        // Perform actions on the element
+    } else {
+    	
+      //  System.out.println("Not Refresh After Selecting Filter");
+    }
+    
+	
+    Thread.sleep(3000);
+	int Totalcompliancecount1 = Integer.parseInt(CFOcountPOM.readCompliancesInternal().getText());	//Storing value of 'Users' as a String to compare.
+
+	if(valueTotalcompliance!= Totalcompliancecount1)								//Checking if String getCount contains the Value (in string format) 
+	{
+		test.log(LogStatus.PASS, "Before Select statutory -' Compliances' count "+ valueTotalcompliance+ ", After Select statutory -' Compliances' count "+ Totalcompliancecount1);
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, " Compliances count does not Change after select filter Statutory  = "+ valueTotalcompliance+ ", Actual Value = "+ Totalcompliancecount1);
+	}
+	Thread.sleep(3000);
+	
+}
+
 
 public static void SummaryofOverdueCompliancesFilter( ExtentTest test)throws InterruptedException
 {
@@ -1466,7 +1650,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -1779,7 +1963,7 @@ Thread.sleep(5000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -4591,8 +4775,8 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]/a");
 			List<WebElement> ViewButton = getDriver().findElements(locator);	
 			Thread.sleep(2000);
 			ViewButton.get(0).click();
-			Thread.sleep(4000);
-			CFOcountPOM.closeDocument1().click();
+			Thread.sleep(4000);			
+		    CFOcountPOM.closeDocument1().click();		
 			Thread.sleep(3000);
 			test.log(LogStatus.PASS, "Document downloaded successfully");
 			ViewButton.get(1).click();
@@ -6802,7 +6986,7 @@ else {
 		RiskF().click();
 		Thread.sleep(500);
 	
-      String Risktext =RiskCritical().getText();
+      String Risktext =RiskHighM().getText();
     
        Thread.sleep(3000);
        SelectActF().click();
@@ -9942,5 +10126,670 @@ else {
 
 	}
 	
+	public static void UpcomingFilter(ExtentTest test ) throws InterruptedException, IOException
+	{	
+		
+       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	    
+       Thread.sleep(2000);
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		
+		Thread.sleep(4000);
+		AuditorcountPOM.DateTextEnd().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year = AuditorcountPOM.Years().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Years().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month1().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date1().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.Apply().click();	
+		Thread.sleep(5000);			
+	
+		Thread.sleep(3000);
+		CFOcountPOM.clickUpcomingPe1().click();	
+		Thread.sleep(2000);
+	//	CFOcountPOM.readCritical().click();	
+		CFOcountPOM.readHigh().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+		Thread.sleep(4000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	//	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+	//	Thread.sleep(500);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	
+		RiskF().click();
+		Thread.sleep(500);
+	
+      String Risktext =RiskHighM().getText();
+    
+       Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
+       String Acttext =SelectActF1().getText();
+       Thread.sleep(500);
+       SelectActF1().click();
+       Thread.sleep(3000);
+       SelectActF().click();
+       Thread.sleep(500);
+       
+       MitigationPlan().click();
+       Thread.sleep(500);
+     
+       MitigationPlan1().click();
+       Thread.sleep(2000);
+      
+       Thread.sleep(3000);
+       StatusF().click();
+       Thread.sleep(500);
+       
+       StatusAll().click();
+       Thread.sleep(3000);
+       StatusAll().click();
+       Thread.sleep(3000);
+       String Statustext =StatusUpcoming().getText();
+       Thread.sleep(500);
+       StatusUpcoming().click();
+       Thread.sleep(3000);
+       StatusF().click();
+       Thread.sleep(2000);
+       
+        List<String> li=new ArrayList<String>();
+        
+        li.add(Risktext);
+        li.add(Acttext);
+        li.add("1");
+        Thread.sleep(3000);
+        li.add(Statustext);
+        
+		List<String> filter=new ArrayList<String>();	
+		filter.add("Risk");
+		filter.add("Act");
+		filter.add("Mitigation Plan");	
+		filter.add("Status");	
+		
+		MgmtSonyMethod.ClickTriA().click();
+	       Thread.sleep(1000);
+	       MgmtSonyMethod.Columns().click();
+	       Thread.sleep(500);
+	       MgmtSonyMethod.RiskCheck().click();
+	       Thread.sleep(1000);
+	       MgmtSonyMethod.MitigationPlanA().click();
+	       Thread.sleep(2000);
+	      // MgmtSonyMethod.ClickTriA().click();
+	       Thread.sleep(3000);
+	
+		js.executeScript("window.scrollBy(0,1000)");	
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s = CFOcountPOM.readTotalItemsD().getText();
+		Thread.sleep(500);
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+	
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[16]"));
+		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]"));
+		
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[6]"));
+		
+		Thread.sleep(2000);
+
+		for(int i=0; i<li.size(); i++){
+			
+			List<String> text= new ArrayList<String>();
+			HashSet<String> pass=new LinkedHashSet<>();
+			HashSet<String> fail=new LinkedHashSet<>();
+			List<WebElement> raw=new ArrayList<WebElement>();
+
+				if(i==0)
+				{
+					raw.addAll(Risk);
+				}
+			else if(i==1)
+				{
+					raw.addAll(Act);
+				}
+			else if(i==2)
+			{
+				raw.addAll(MitigationPlan);
+			}
+			else if(i==3)
+			{
+				raw.addAll(statuscol);
+			}
+				
+				
+			for(int k=0;k<raw.size();k++)
+				{
+					text.add(raw.get(k).getText());
+				}
+
+				for(int l=0;l<text.size();l++)
+					{
+				if(text.get(l).equals(li.get(i)))
+					{
+						pass.add(text.get(l));	
+						System.out.println("pass : "+text.get(l)+" : "+li.get(i));
+
+					}
+				else
+				{
+					fail.add(text.get(l));		
+					System.out.println("fail : "+text.get(l)+" : "+li.get(i));
+					System.out.println(i);
+
+				}
+				 }
+		 
+	for(String Fal : fail)
+		 {
+				test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+		 }	
+		 for(String Pas : pass)
+		 {
+			 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+				test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+				System.out.println(filter.get(i)+" : "+Pas);
+	 }
+		 text.clear();
+		pass.clear();
+		fail.clear();
+		raw.clear();
+		
+		
+		}
+		}else {
+			test.log(LogStatus.PASS,"No records found");	
+		}
+		Thread.sleep(3000);
+		
+		ClearBtn().click();
+		test.log(LogStatus.PASS, "The applied filter should get cleared after clicking on the clear button.");
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		try {         
+
+           // Set zoom level to 50% (0.5) for zooming out
+           setZoomLevel(getDriver(), 0.9);
+
+//           // Wait to observe the effect
+           Thread.sleep(2000);
+//
+//           // Set zoom level back to 100% (1.0) to reset to normal
+//         //  setZoomLevel(getDriver(), 1.0);
+//
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+       }
+		CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+		Thread.sleep(1000);
+		OverduePOM.clickDashboard().click();
+		
+	}
+	
+	public static void UpcomingFilter1(ExtentTest test ) throws InterruptedException, IOException
+	{	
+		
+       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	    
+       Thread.sleep(2000);
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		
+		Thread.sleep(4000);
+		AuditorcountPOM.DateTextEnd().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year = AuditorcountPOM.Years().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Years().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month1().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date1().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.Apply().click();	
+		Thread.sleep(5000);			
+	
+		Thread.sleep(3000);
+		CFOcountPOM.clickUpcomingPe1().click();	
+		Thread.sleep(2000);
+	//	CFOcountPOM.readCritical().click();	
+		CFOcountPOM.readHigh().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+		Thread.sleep(4000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+	//	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+	//	Thread.sleep(500);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		
+	
+		RiskF().click();
+		Thread.sleep(500);
+	
+      String Risktext =RiskHighM().getText();
+    
+       Thread.sleep(3000);
+       
+       SelectActF().click();
+       Thread.sleep(500);
+       String Acttext =SelectActF1().getText();
+       Thread.sleep(500);
+       SelectActF1().click();
+       Thread.sleep(3000);
+       SelectActF().click();
+       
+       Thread.sleep(500);
+       
+       
+       MitigationPlan().click();
+       Thread.sleep(500);
+     
+       MitigationPlan1().click();
+       Thread.sleep(2000);
+      
+       Thread.sleep(3000);
+       StatusF().click();
+       Thread.sleep(500);
+       
+       StatusAll().click();
+       Thread.sleep(3000);
+       StatusAll().click();
+       Thread.sleep(3000);
+       String Statustext =StatusUpcoming().getText();
+       Thread.sleep(500);
+       StatusUpcoming().click();
+       Thread.sleep(3000);
+       StatusF().click();
+       Thread.sleep(2000);
+       
+        List<String> li=new ArrayList<String>();
+        
+        li.add(Risktext);
+        li.add(Acttext);
+        li.add("1");
+        Thread.sleep(3000);
+        li.add(Statustext);
+        
+		List<String> filter=new ArrayList<String>();	
+		filter.add("Risk");
+		filter.add("Act");
+		filter.add("Mitigation Plan");	
+		filter.add("Status");	
+		
+		MgmtSonyMethod.ClickTriA().click();
+	       Thread.sleep(1000);
+	       MgmtSonyMethod.Columns().click();
+	       Thread.sleep(500);
+	       MgmtSonyMethod.RiskCheck().click();
+	       Thread.sleep(1000);
+	       MgmtSonyMethod.MitigationPlanA().click();
+	       Thread.sleep(2000);
+	      // MgmtSonyMethod.ClickTriA().click();
+	       Thread.sleep(3000);
+	
+		js.executeScript("window.scrollBy(0,1000)");	
+		Thread.sleep(3000);
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s = CFOcountPOM.readTotalItemsD().getText();
+		Thread.sleep(500);
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+	
+		List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[16]"));
+		List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[2]"));
+		List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]"));
+		
+		List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[6]"));
+		
+		Thread.sleep(2000);
+
+		for(int i=0; i<li.size(); i++){
+			
+			List<String> text= new ArrayList<String>();
+			HashSet<String> pass=new LinkedHashSet<>();
+			HashSet<String> fail=new LinkedHashSet<>();
+			List<WebElement> raw=new ArrayList<WebElement>();
+
+				if(i==0)
+				{
+					raw.addAll(Risk);
+				}
+			else if(i==1)
+				{
+					raw.addAll(Act);
+				}
+			else if(i==2)
+			{
+				raw.addAll(MitigationPlan);
+			}
+			else if(i==3)
+			{
+				raw.addAll(statuscol);
+			}
+				
+				
+			for(int k=0;k<raw.size();k++)
+				{
+					text.add(raw.get(k).getText());
+				}
+
+				for(int l=0;l<text.size();l++)
+					{
+				if(text.get(l).equals(li.get(i)))
+					{
+						pass.add(text.get(l));	
+						System.out.println("pass : "+text.get(l)+" : "+li.get(i));
+
+					}
+				else
+				{
+					fail.add(text.get(l));		
+					System.out.println("fail : "+text.get(l)+" : "+li.get(i));
+					System.out.println(i);
+
+				}
+				 }
+		 
+	for(String Fal : fail)
+		 {
+				test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+		 }	
+		 for(String Pas : pass)
+		 {
+			 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+				test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+				System.out.println(filter.get(i)+" : "+Pas);
+	 }
+		 text.clear();
+		pass.clear();
+		fail.clear();
+		raw.clear();
+		
+		
+		}
+		}else {
+			test.log(LogStatus.PASS,"No records found");	
+		}
+		Thread.sleep(3000);
+		
+		ClearBtn().click();
+		test.log(LogStatus.PASS, "The applied filter should get cleared after clicking on the clear button.");
+		Thread.sleep(3000);
+		getDriver().switchTo().parentFrame();
+		try {         
+
+           // Set zoom level to 50% (0.5) for zooming out
+           setZoomLevel(getDriver(), 0.8);
+
+//           // Wait to observe the effect
+           Thread.sleep(2000);
+//
+//           // Set zoom level back to 100% (1.0) to reset to normal
+//         //  setZoomLevel(getDriver(), 1.0);
+//
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+       }
+		CFOcountPOM.closeDocuments().click();					//Closing the High Risk Window.
+		Thread.sleep(1000);
+		OverduePOM.clickDashboard().click();
+		
+	}
+	
+		public static void setZoomLevel(WebDriver driver, double zoomLevel) {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("document.body.style.zoom='" + zoomLevel + "'");
+	    }
+		
+		public static void UpcomingFilterIn(ExtentTest test ) throws InterruptedException, IOException
+		{	
+			
+	       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		    
+	       Thread.sleep(2000);
+			
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
+			Thread.sleep(2000);
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+			
+			Thread.sleep(4000);
+			AuditorcountPOM.DateTextEnd().click();	
+			Thread.sleep(1000);
+			AuditorcountPOM.DateYear().click();	
+			Thread.sleep(1000);
+			String year = AuditorcountPOM.Years().getText();
+			Thread.sleep(3000);
+			AuditorcountPOM.Years().click();	
+			Thread.sleep(3000);
+			AuditorcountPOM.DateMonth().click();	
+			Thread.sleep(1000);
+			String month = AuditorcountPOM.Month1().getText();
+			Thread.sleep(3000);
+			AuditorcountPOM.Month1().click();	
+			Thread.sleep(3000);
+			String date = AuditorcountPOM.Date1().getText();
+			Thread.sleep(3000);
+			AuditorcountPOM.Date1().click();	
+			Thread.sleep(3000);
+			AuditorcountPOM.Apply().click();	
+			Thread.sleep(5000);			
+		
+			Thread.sleep(3000);
+			CFOcountPOM.clickUpcomingPe1().click();	
+			Thread.sleep(2000);
+		//	CFOcountPOM.readCritical().click();	
+			CFOcountPOM.readHigh().click();					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			Thread.sleep(4000);
+			getDriver().switchTo().parentFrame();
+			Thread.sleep(3000);
+		//	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		//	Thread.sleep(500);
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+			Thread.sleep(8000);
+			
+		
+			RiskF().click();
+			Thread.sleep(500);
+		
+	      String Risktext =RiskHighM().getText();
+	    
+	       Thread.sleep(3000);
+	       /*
+	       SelectActF().click();
+	       Thread.sleep(500);
+	       String Acttext =SelectActF1().getText();
+	       Thread.sleep(500);
+	       SelectActF1().click();
+	       Thread.sleep(3000);
+	       SelectActF().click();
+	       */
+	       Thread.sleep(500);
+	       
+	       MitigationPlan().click();
+	       Thread.sleep(500);
+	     
+	       MitigationPlan1().click();
+	       Thread.sleep(2000);
+	      
+	       Thread.sleep(3000);
+	       StatusF().click();
+	       Thread.sleep(500);
+	       
+	       StatusAll().click();
+	       Thread.sleep(3000);
+	       StatusAll().click();
+	       Thread.sleep(3000);
+	       String Statustext =StatusUpcoming().getText();
+	       Thread.sleep(500);
+	       StatusUpcoming().click();
+	       Thread.sleep(3000);
+	       StatusF().click();
+	       Thread.sleep(2000);
+	       
+	        List<String> li=new ArrayList<String>();
+	        
+	        li.add(Risktext);
+	      //  li.add(Acttext);
+	        li.add("1");
+	        Thread.sleep(3000);
+	        li.add(Statustext);
+	        
+			List<String> filter=new ArrayList<String>();	
+			filter.add("Risk");
+		//	filter.add("Act");
+			filter.add("Mitigation Plan");	
+			filter.add("Status");	
+			
+			MgmtSonyMethod.ClickTriA().click();
+		       Thread.sleep(1000);
+		       MgmtSonyMethod.Columns().click();
+		       Thread.sleep(500);
+		       MgmtSonyMethod.RiskCheck().click();
+		       Thread.sleep(1000);
+		       MgmtSonyMethod.MitigationPlanA().click();
+		       Thread.sleep(2000);
+		      // MgmtSonyMethod.ClickTriA().click();
+		       Thread.sleep(3000);
+		
+			js.executeScript("window.scrollBy(0,1000)");	
+			Thread.sleep(3000);
+			CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+			String s = CFOcountPOM.readTotalItemsD().getText();
+			Thread.sleep(500);
+			if(!s.equalsIgnoreCase("No items to display")) {
+			Thread.sleep(5000);
+		
+			List<WebElement> Risk=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[16]"));
+		//	List<WebElement> Act=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[2]"));
+			List<WebElement> MitigationPlan=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]"));
+			
+			List<WebElement> statuscol=getDriver().findElements(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[6]"));
+			
+			Thread.sleep(2000);
+
+			for(int i=0; i<li.size(); i++){
+				
+				List<String> text= new ArrayList<String>();
+				HashSet<String> pass=new LinkedHashSet<>();
+				HashSet<String> fail=new LinkedHashSet<>();
+				List<WebElement> raw=new ArrayList<WebElement>();
+
+					if(i==0)
+					{
+						raw.addAll(Risk);
+					}
+				/*else if(i==1)
+					{
+						raw.addAll(Act);
+					}
+					*/
+				else if(i==1)
+				{
+					raw.addAll(MitigationPlan);
+				}
+				else if(i==2)
+				{
+					raw.addAll(statuscol);
+				}
+					
+					
+				for(int k=0;k<raw.size();k++)
+					{
+						text.add(raw.get(k).getText());
+					}
+
+					for(int l=0;l<text.size();l++)
+						{
+					if(text.get(l).equals(li.get(i)))
+						{
+							pass.add(text.get(l));	
+							System.out.println("pass : "+text.get(l)+" : "+li.get(i));
+
+						}
+					else
+					{
+						fail.add(text.get(l));		
+						System.out.println("fail : "+text.get(l)+" : "+li.get(i));
+						System.out.println(i);
+
+					}
+					 }
+			 
+		for(String Fal : fail)
+			 {
+					test.log(LogStatus.FAIL, filter.get(i)+" column shows incorrect value : "+Fal);
+			 }	
+			 for(String Pas : pass)
+			 {
+				 test.log(LogStatus.PASS,  filter.get(i)+" dropdown working properly.");
+					test.log(LogStatus.PASS, filter.get(i)+" displayed : "+Pas);	
+					System.out.println(filter.get(i)+" : "+Pas);
+		 }
+			 text.clear();
+			pass.clear();
+			fail.clear();
+			raw.clear();
+			
+			
+			}
+			}else {
+				test.log(LogStatus.PASS,"No records found");	
+			}
+			Thread.sleep(3000);
+			
+			ClearBtn().click();
+			test.log(LogStatus.PASS, "The applied filter should get cleared after clicking on the clear button.");
+			Thread.sleep(3000);
+			getDriver().switchTo().parentFrame();
+			try {         
+
+	           // Set zoom level to 50% (0.5) for zooming out
+	           setZoomLevel(getDriver(), 0.8);
+
+//	           // Wait to observe the effect
+	           Thread.sleep(2000);
+	//
+//	           // Set zoom level back to 100% (1.0) to reset to normal
+//	         //  setZoomLevel(getDriver(), 1.0);
+	//
+	       } catch (InterruptedException e) {
+	           e.printStackTrace();
+	       }
+			CFOcountPOM.closeDocuments().click();					//Closing the High Risk Window.
+			Thread.sleep(1000);
+			OverduePOM.clickDashboard().click();
+			
+		}
+		
 	
 }

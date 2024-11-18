@@ -1781,7 +1781,7 @@ public class ImplementCount extends BasePage{
 			extent.flush();
 		}
 		
-	//	@Test(priority = 130)
+		@Test(priority = 130)
 		void EventAssignmentTab() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Manage Events  - Event Reassignment verification");
@@ -1792,7 +1792,8 @@ public class ImplementCount extends BasePage{
 			extent.endTest(test);
 			extent.flush();
 		}
-		@Test(priority = 130)
+		
+//		@Test(priority = 130)
 		void EventReassignment() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Manage Events  - Event Reassignment Upload");

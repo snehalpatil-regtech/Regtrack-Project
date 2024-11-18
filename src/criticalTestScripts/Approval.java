@@ -374,7 +374,7 @@ public class Approval extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 8)
+		@Test(priority = 8)
 			void clickPenaltyStatutory() throws InterruptedException
 			{
 				test = extent.startTest("'Penalty' ");
@@ -406,14 +406,14 @@ public class Approval extends BasePage {
 				Thread.sleep(4000);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFGradingGraphDisplay"));	//Wait until frame get visible and switch to it.
 
-				File dir = new File("C:\\Users\\snehalp\\Downloads");
+				File dir = new File("C:\\Users\\shitalb\\Downloads");
 				File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 				Thread.sleep(1000);
 				CFOcountPOM.clickExportImage().click();
 
 				Thread.sleep(3000);
-				File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+				File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 				File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 				Thread.sleep(3000);
 				if (dirContents.length < allFilesNew.length) {
@@ -447,7 +447,7 @@ public class Approval extends BasePage {
 				extent.endTest(test);
 				extent.flush();
 			}
-//			@Test(priority = 9)
+		@Test(priority = 9)
 			void PenaltyMultipleFilter() throws InterruptedException, IOException
 			{
 				test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
@@ -1292,7 +1292,8 @@ public class Approval extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+RiskCritical_ClosedDelayed);
 			}
-			
+			List<WebElement>roc1 =getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Closed Delayed");
 			Thread.sleep(3000);
 			int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskCritical_ClosedTimely > 0)
@@ -1304,6 +1305,21 @@ public class Approval extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Critical - Closed Timely' Count = "+RiskCritical_ClosedTimely);
+			}
+			Thread.sleep(2000);
+			List<WebElement>roc2 =getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc2, "Closed Timely");
+			Thread.sleep(3000);
+			int NotApplicable = Integer.parseInt(CFOcountPOM.NotApplicableCritical().getText());	//Reading the High Risk value of Not Completed compliance
+			if(NotApplicable > 0)
+			{
+				CFOcountPOM.NotApplicableCritical().click();			//Clicking on Not Completed compliances bar of High risk.  
+				Thread.sleep(2000);
+				ApprovalcountPOM.RiskGraphCount( test, "Critical - Not Applicable", NotApplicable, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+NotApplicable);
 			}
 			Thread.sleep(2000);
 			extent.endTest(test);
@@ -1420,7 +1436,7 @@ public class Approval extends BasePage {
 			Thread.sleep(5000);
 		
 			
-		/*	int RiskMedium_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
+			int RiskMedium_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
 			Thread.sleep(500);
 			if(RiskMedium_ClosedDelayed > 0)
 			{
@@ -1433,7 +1449,7 @@ public class Approval extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Medium - Closed Delayed' Count = "+RiskMedium_ClosedDelayed);
 			}
-			*/
+			
 			Thread.sleep(3000);
 			int RiskMedium_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
 			Thread.sleep(500);
@@ -1492,7 +1508,7 @@ public class Approval extends BasePage {
 				
 			Thread.sleep(5000);
 			
-		/*	int RiskLow_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
+			int RiskLow_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskLow_ClosedDelayed > 0)
 			{
 				Thread.sleep(500);
@@ -1503,7 +1519,7 @@ public class Approval extends BasePage {
 			else
 			{
 				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+RiskLow_ClosedDelayed);
-			}*/
+			}
 			
 			Thread.sleep(3000);
 			int RiskLow_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskLowClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
