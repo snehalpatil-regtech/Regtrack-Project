@@ -73,7 +73,10 @@
 		//	String workingDir = System.getProperty("web.chrome.","C:/March2022/PerformerPom//chrome.exe");
 			extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\MgmtBita.htm",true);
 			test = extent.startTest("Loging In - MGMT (Statutory)");
-			test.log(LogStatus.PASS, "Logging into system");
+			test.log(LogStatus.PASS, "https://login.teamleaseregtech.com/");
+			test.log(LogStatus.PASS, "snehal10.patil@tlregtech.in");
+			test.log(LogStatus.PASS, "admin#111");
+
 		/*	
 			XSSFSheet sheet = ReadExcel();
 			Row row0 = sheet.getRow(0);						//Selected 0th index row (First row)
@@ -632,6 +635,9 @@
 				extent.flush();
 			}
 			
+		
+			
+			
 //@Test(priority = 13)
 			void ClosedDelayed_PieChart() throws InterruptedException
 			{
@@ -920,7 +926,17 @@
 				extent.flush();
 			}
 				
-//@Test(priority = 16)
+			@Test(priority = 16)
+			void CompletionGraphIsSMETAColumn() throws InterruptedException, IOException
+			{
+				test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");
+				String Status = "Not Completed"+"Closed Delayed"+"Closed Timely"+"Not Applicable";				
+				MethodsPOM.IsSMETA(test,Status);				
+				extent.endTest(test);
+				extent.flush();
+			}
+
+//@Test(priority = 17)
 			void Overdue_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -1020,7 +1036,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-//@Test(priority = 17)
+//@Test(priority = 18)
 			void dueToday_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -1119,7 +1135,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-//@Test(priority = 18)
+//@Test(priority = 19)
 			void pendingForReview_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -1221,7 +1237,7 @@
 			}
 			
 			
-// @Test(priority = 19)
+// @Test(priority = 20)
 			void inProgress_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1322,7 +1338,7 @@
 				extent.flush();
 			}
 			
-//	@Test(priority = 20)
+//	@Test(priority = 21)
 			void rejected_PieChart() throws InterruptedException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1422,8 +1438,17 @@
 				extent.flush();
 			}
 			
-	@Test(priority = 21)
-			void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
+			@Test(priority = 21)
+					void NotCompletion_IsSmeta() throws InterruptedException, IOException
+					{
+						test = extent.startTest("Pie Chart - Performance Summary - Not Completion Status- 'Is SMETA Column added' Verification");					
+		                String Status = "Overdue"+"DueToday"+"Pending For Review"+"In Progress"+"Rejected";				
+						MethodsPOM.IsSMETANotCompletion(test,Status);
+						extent.endTest(test);
+						extent.flush();
+					}
+	@Test(priority = 22)
+			void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
 			
@@ -1523,8 +1548,8 @@
 				extent.flush();
 			}
 			
-		@Test(priority = 22)
-			void BargraphIndustrySpeHighStatutory() throws InterruptedException
+		@Test(priority = 23)
+			void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -1627,8 +1652,8 @@
 				extent.flush();
 			}
 			
-@Test(priority = 23)
-			void BargraphIndustrySpeMediumStatutory() throws InterruptedException
+@Test(priority = 24)
+			void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
 			//	test.log(LogStatus.INFO, "Test Initiated");
@@ -1726,8 +1751,8 @@
 				extent.flush();
 			}
 			
-	@Test(priority = 24)
-			void BargraphIndustrySpeLowStatutory() throws InterruptedException
+	@Test(priority = 25)
+			void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
 			
@@ -1830,9 +1855,20 @@
 				extent.endTest(test);
 				extent.flush();
 			}
+	
+	@Test(priority = 26)
+		void OverallFunIsSmeta() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Bar Graph - Completion Status- Overall Function - 'Is SMETA Column added' Verification");					
+            String Status = "Closed Timely"+"Closed Delayed"+"Not completed"+"Not Applicable";				
+			MethodsPOM.IsSMETAOverallFunction(test,Status);
+			extent.endTest(test);
+			extent.flush();
+		}
+
 			
-@Test(priority = 25)
-			void RiskSummaryCriticalStatutory() throws InterruptedException
+@Test(priority = 27)
+			void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 			{
 			
 				Thread.sleep(3000);
@@ -1916,8 +1952,8 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-		@Test(priority = 26)
-			void RiskSummaryHighStatutory() throws InterruptedException
+		@Test(priority = 28)
+			void RiskSummaryHighStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'High' Count Verification");
 				Thread.sleep(3000);
@@ -2005,8 +2041,8 @@
 				extent.flush();
 			}
 			
-@Test(priority = 27)
-			void RiskSummaryMediumStatutory() throws InterruptedException
+@Test(priority = 29)
+			void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 				CFOcountPOM.YearTodate().click();
@@ -2094,8 +2130,8 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-@Test(priority =28)
-			void RiskSummaryLowStatutory() throws InterruptedException
+@Test(priority =30)
+			void RiskSummaryLowStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'Low' Count Verification");
 				
@@ -2189,8 +2225,18 @@
 				extent.flush();
 			}
 			
-		@Test(priority = 29)
-			void DepartmentSummaryHumanResourceStatutory() throws InterruptedException
+    @Test(priority = 31)
+	void RiskSummIsSmeta() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Bar Graph - Risk Summary graph - 'Is SMETA Column added' Verification");					
+        String Status = "Not completed"+"Closed Delayed"+"Closed Timely"+"DueToday"+"Not Applicable";				
+		MethodsPOM.IsSMETARisksummary(test,Status);
+		extent.endTest(test);
+		extent.flush();
+	}
+
+		@Test(priority = 32)
+			void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
 			{
 				Thread.sleep(3000);		
 				
@@ -2250,7 +2296,7 @@
 				  WebElement roc1 =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > text"));
 					
 				  roc1.click();
-				
+				  
 				Thread.sleep(3000);
 				String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
 				ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -2265,7 +2311,7 @@
 					test.log(LogStatus.PASS, "Closed Timely Complaince Count = "+ Closed_Timely + ".");
 				}
 				
-					
+				
 				Thread.sleep(3000);
 				String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
 				PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
@@ -2280,6 +2326,43 @@
 					test.log(LogStatus.PASS, "Pending For Review Complaince Count = "+ Pending_Review + ".");
 				}
 				
+				Thread.sleep(3000);
+				String InProgress = CFOcountPOM.clickInProgress().getText();	//Reading the Pending For Review value of Human Resource
+				//NotApplicable = NotApplicable.replaceAll(" ","");	
+				Thread.sleep(3000);//Removing all white spaces from string. 
+				int In_Progress = Integer.parseInt(InProgress);						
+				if(In_Progress > 0)
+				{
+					Thread.sleep(3000);
+					CFOcountPOM.clickInProgress().click();
+					ApprovalcountPOM.RiskGraphCount( test, "In Progress", In_Progress, "Statutory");
+				}
+				else
+				{
+					test.log(LogStatus.PASS, "In Progress Complaince Count = "+ In_Progress + ".");
+				}
+			
+			Thread.sleep(500);
+
+				
+				
+				Thread.sleep(3000);
+					String Rejected = CFOcountPOM.clickAccountRejected().getText();	//Reading the Pending For Review value of Human Resource
+					//NotApplicable = NotApplicable.replaceAll(" ","");	
+					Thread.sleep(3000);//Removing all white spaces from string. 
+					int Rejecte_d = Integer.parseInt(Rejected);						
+					if(Rejecte_d > 0)
+					{
+						Thread.sleep(3000);
+						CFOcountPOM.clickAccountRejected().click();
+						ApprovalcountPOM.RiskGraphCount( test, "Rejected", Rejecte_d, "Statutory");
+					}
+					else
+					{
+						test.log(LogStatus.PASS, "Rejected Complaince Count = "+ Rejecte_d + ".");
+					}
+				
+				Thread.sleep(500);
 				//-----------------------------------------------------
 				
 					try
@@ -2302,6 +2385,7 @@
 				{
 					
 				}
+					
 				Thread.sleep(500);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
@@ -2309,6 +2393,16 @@
 				extent.flush();
 			}
 			
+		@Test(priority = 33)
+		void DepartSummIsSmeta() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Bar Graph - Department Summary graph - 'Is SMETA Column added' Verification");					
+	        String Status = "Overdue"+"Closed Delayed"+"Closed Timely"+ "Pending For Review" + "In Progress" + "Rejected"+"Not Applicable"+"DueToday";				
+			MethodsPOM.IsSMETADepSumm(test,Status);
+			extent.endTest(test);
+			extent.flush();
+		}
+
 			
 		@Test(priority = 31)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
@@ -2429,7 +2523,7 @@
 		}
 		
 	@Test(priority = 32)
-		void ClosedDelayed_PieChartPeriod() throws InterruptedException
+		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 		
@@ -2546,7 +2640,7 @@
 		}
 		
 	@Test(priority = 33)
-		void ClosedTimely_PieChartPeriod() throws InterruptedException
+		void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 		
@@ -2576,7 +2670,7 @@
 			Thread.sleep(3000);
 			AuditorcountPOM.Apply().click();	
 			Thread.sleep(5000);
-			
+
 			int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimely().getText());	//Reading value of 'After Due Date'
 			CFOcountPOM.clickClosedTimely().click();								//CLicking on 'Not Completed' count
 			
@@ -2664,7 +2758,7 @@
 		}
 		
 	@Test(priority = 34)
-		void NotApplicable_PieChartPeriod() throws InterruptedException
+		void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 		
@@ -2694,7 +2788,6 @@
 			AuditorcountPOM.Apply().click();	
 			Thread.sleep(5000);
 			
-			wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickNotApplicable()));
 			int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotApplicable().getText());	//Reading value of 'After Due Date'
 			CFOcountPOM.clickNotApplicable().click();								//CLicking on 'Not Completed' count
 			
@@ -2784,8 +2877,379 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+	
+	@Test(priority = 35)
+
+	void UpcomingPieChartPeriod() throws InterruptedException
+	{
+		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
+	
+		Thread.sleep(2000);
 		
-   @Test(priority = 35)
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,2400)");			//Scrolling down window by 1000 px.
+		Thread.sleep(800);
+		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		
+		AuditorcountPOM.DateText().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year1 = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Year().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month1 = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date1 = AuditorcountPOM.Date().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateTextEnd().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year = AuditorcountPOM.Years().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Years().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month1().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date1().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.Apply().click();	
+		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart -"+date1+"-"+month1+"-"+year1+" - "+date+"-"+month+"-"+year+" "+"- Completion Status- ' Upcoming' Count Verification");				
+
+		Thread.sleep(4000);
+		WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
+	
+	String text =	roc.getText();
+	
+	if(text.equalsIgnoreCase("Upcoming")) {
+		test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+
+	}else {
+		test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+
+	}
+		
+		int rejectedValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
+		CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
+		
+		Thread.sleep(3000);
+		int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
+		int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
+		int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
+		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
+		
+		int total = critical + high + medium + low;
+		/*
+		if(rejectedValue == total)
+		{
+			test.log(LogStatus.PASS, "' Rejected' Compliance Count matches to sum of all risked compliances.");
+			test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
+			test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
+		}
+	*/
+		if(rejectedValue > 0)
+		{
+			if(critical >= 0)
+			{
+				CFOcountPOM.GraphCountInPeUp1( test, "Critical", critical, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical' Risk Compliance Count = "+critical);
+			}
+			
+			if(high >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "High", high, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High' Risk Compliance Count = "+high);
+			}
+			
+			if(medium >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "Medium", medium, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium' Risk Compliance Count = "+medium);
+			}
+			
+			if(low >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "Low", low, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low' Risk Compliance Count = "+low);
+			}
+			
+			//Thread.sleep(5000);
+		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+			
+			Thread.sleep(2000);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(3000);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Upcoming' Compliance Count = "+rejectedValue);
+			Thread.sleep(2000);
+			getDriver().switchTo().parentFrame();
+			Thread.sleep(2000);
+			Thread.sleep(500);
+		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
+			Thread.sleep(2000);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(2000);
+		}
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+		
+	@Test(priority = 36)
+	void DueforperiodIsSMETAColumn() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Not Completed - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
+
+		CFOcountPOM.clickNotCompleted().click();
+        Thread.sleep(500);	
+        if(NotCompletedValue > 0)
+		{
+      //  String status = "Critical"+"High"+"Medium"+"Low";
+		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		Thread.sleep(1000);
+		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+		Thread.sleep(3000);	
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		Thread.sleep(1000);
+		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+		Thread.sleep(3000);	
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		Thread.sleep(1000);
+		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+		Thread.sleep(3000);	
+		}
+        else
+		{
+			test.log(LogStatus.PASS, "'Completion' Compliance Count " +NotCompletedValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+		
+		
+	}
+	
+	@Test(priority = 37)
+	void periodIsSMETAColumnCloseddelayed() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Delayed - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int ClosedDelayedlyValue = Integer.parseInt(CFOcountPOM.clickClosedDelayed().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickClosedDelayed().click();
+        Thread.sleep(500);	
+        if(ClosedDelayedlyValue > 0)
+        {
+            Thread.sleep(500);
+        	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+    		Thread.sleep(3000);
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+    		Thread.sleep(3000);	
+        }
+        else
+		{
+			test.log(LogStatus.PASS, "'Closed Delayed' Compliance Count = " + ClosedDelayedlyValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+    
+	@Test(priority = 38)
+	void periodIsSMETAColumnTimely() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimely().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickClosedTimely().click();
+        Thread.sleep(500);	
+        if(ClosedTimelyValue > 0)
+        {
+            Thread.sleep(500);
+        	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+    		Thread.sleep(3000);
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+    		Thread.sleep(3000);	
+        }
+        else
+		{
+			test.log(LogStatus.PASS, "'Closed Timely' Compliance Count = " + ClosedTimelyValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority =39)
+	void periodIsSMETAColumnNotApplicable() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Not Applicable - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotApplicable().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickNotApplicable().click();
+        Thread.sleep(500);	
+        if(NotApplicableValue > 0)
+        {
+            Thread.sleep(500);
+        	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+    		Thread.sleep(3000);
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+    		Thread.sleep(3000);	
+        }
+        else
+		{
+			test.log(LogStatus.PASS, "'Not Applicable' Compliance Count = " + NotApplicableValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority =40)
+	void periodIsSMETAColumnUpcoming() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Upcoming - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickUpcomingPe().click();
+        Thread.sleep(500);	
+        if(NotApplicableValue > 0)
+        {
+            Thread.sleep(500);
+        	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+    		Thread.sleep(3000);
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+    		Thread.sleep(3000);	
+    		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+    		Thread.sleep(1000);
+    		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+    		Thread.sleep(3000);	
+        }
+        else
+		{
+			test.log(LogStatus.PASS, "'Not Applicable' Compliance Count = " + NotApplicableValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	
+   @Test(priority = 41)
 		void Overdue_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -2906,8 +3370,50 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+   
+	@Test(priority =42)
+	void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Overdue - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickOverdue().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickOverdue().click();
+       Thread.sleep(500);	
+       if(NotApplicableValue > 0)
+       {
+           Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+   		Thread.sleep(3000);
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Overdue' Compliance Count = " + NotApplicableValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
 		
-	@Test(priority = 36)
+	@Test(priority = 43)
 		void dueToday_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -3028,8 +3534,50 @@
 			extent.flush();
 		}
 		
-	@Test(priority = 37)
-		void pendingForReview_PieChartPeriod() throws InterruptedException
+	@Test(priority =44)
+	void periodIsSMETAColumnDuetoday() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - DueToday - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickdueToday().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickdueToday().click();
+       Thread.sleep(500);	
+       if(NotApplicableValue > 0)
+       {
+           Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+   		Thread.sleep(3000);
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'DueToday' Compliance Count = " + NotApplicableValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 45)
+		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -3148,9 +3696,51 @@
 			extent.endTest(test);
 			extent.flush();
 		}
+	
+	@Test(priority = 46)
+	void periodIsSMETAColumnPendingForReview() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - Pending For Review - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickpendingForReview().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickpendingForReview().click();
+       Thread.sleep(500);	
+       if(NotApplicableValue > 0)
+       {
+           Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+   		Thread.sleep(3000);
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Pending For Review' Compliance Count = " + NotApplicableValue);
+		}
+		extent.endTest(test);
+		extent.flush();
+	}
 		
-	@Test(priority = 38)
-		void inProgress_PieChartPeriod() throws InterruptedException
+	@Test(priority = 47)
+		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
 		
@@ -3269,140 +3859,53 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-		
-@Test(priority = 39)
-		void Upcoming_PieChartPeriod() throws InterruptedException
+	
+	@Test(priority = 48)
+	void periodIsSMETAColumnInprogress() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Period-Pie Chart -Completion Status - In Progress - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickinProgress().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickinProgress().click();
+       Thread.sleep(500);	
+       if(NotApplicableValue > 0)
+       {
+           Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+   		Thread.sleep(3000);
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+   		Thread.sleep(3000);	
+   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+   		Thread.sleep(1000);
+   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
 		{
-			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
-		
-			Thread.sleep(2000);
-			
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-			
-			Thread.sleep(4000);
-			AuditorcountPOM.DateText().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.DateYear().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.Year().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.DateMonth().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.Month().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.Date().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.Apply().click();	
-			Thread.sleep(5000);
-			
-			Thread.sleep(4000);
-			WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
-		
-		String text =	roc.getText();
-		
-		if(text.equalsIgnoreCase("Upcoming")) {
-			test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
-
-		}else {
-			test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
-
+			test.log(LogStatus.PASS, "'In Progress' Compliance Count = " + NotApplicableValue);
 		}
-			
-			int rejectedValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
-			CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
-			
-			Thread.sleep(3000);
-			int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
-			int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
-			int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
-			int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
-			
-			int total = critical + high + medium + low;
-			/*
-			if(rejectedValue == total)
-			{
-				test.log(LogStatus.PASS, "' Rejected' Compliance Count matches to sum of all risked compliances.");
-				test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
-			}
-			else
-			{
-				test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
-				test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
-			}
-		*/
-			if(rejectedValue > 0)
-			{
-				if(critical >= 0)
-				{
-					CFOcountPOM.GraphCountInPeUp( test, "Critical", critical, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Critical' Risk Compliance Count = "+critical);
-				}
-				
-				if(high >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "High", high, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'High' Risk Compliance Count = "+high);
-				}
-				
-				if(medium >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "Medium", medium, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Medium' Risk Compliance Count = "+medium);
-				}
-				
-				if(low >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "Low", low, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Low' Risk Compliance Count = "+low);
-				}
-				
-				//Thread.sleep(5000);
-			//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
-				Thread.sleep(2000);
-				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-				Thread.sleep(3000);
-			}
-			else
-			{
-				test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+rejectedValue);
-				Thread.sleep(2000);
-				getDriver().switchTo().parentFrame();
-				Thread.sleep(2000);
-				Thread.sleep(500);
-			//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
-				Thread.sleep(2000);
-				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-				Thread.sleep(2000);
-			}
-			
-			extent.endTest(test);
-			extent.flush();
-		}
+		extent.endTest(test);
+		extent.flush();
+	}
 		
-	  @Test(priority = 40)
-		void rejected_PieChartPeriod() throws InterruptedException
+
+		
+	  @Test(priority = 49)
+		void rejected_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
 		
@@ -3518,7 +4021,51 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-		@Test(priority = 42)
+	  
+		@Test(priority = 50)
+		void periodIsSMETAColumnRejected() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Period-Pie Chart -Completion Status - Rejected - Is SMETA Column Count Verification");
+			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+			js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+			Thread.sleep(3000);
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+			Thread.sleep(3000);
+			int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickRejectedPe11().getText());	//Reading value of 'After Due Date'
+			Thread.sleep(500);	
+			CFOcountPOM.clickRejectedPe11().click();
+	       Thread.sleep(500);	
+	       if(NotApplicableValue > 0)
+	       {
+	           Thread.sleep(500);
+	       	MethodsPOM.IsSmetaColumnDueForPeriod(test,"Critical");	
+	   		Thread.sleep(3000);
+	   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+	   		Thread.sleep(1000);
+	   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"High");	
+	   		Thread.sleep(3000);	
+	   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+	   		Thread.sleep(1000);
+	   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Medium");
+	   		Thread.sleep(3000);	
+	   		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+	   		Thread.sleep(1000);
+	   		MethodsPOM.IsSmetaColumnDueForPeriod(test,"Low");
+	   		Thread.sleep(3000);	
+	       }
+	       else
+			{
+				test.log(LogStatus.PASS, "'Rejected' Compliance Count = " + NotApplicableValue);
+			}
+			extent.endTest(test);
+			extent.flush();
+		}
+			
+	  
+		@Test(priority = 51)
 		void UpcomingFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the all filters functionally working or not while clicking on Period-Pie Chart - Not Completed Status- ' Upcoming ' -  Critical Risk or not?.");
@@ -3531,7 +4078,7 @@
 		
 	  
 		
-		@Test(priority = 41)
+		@Test(priority = 52)
 		void PenaltySummaryStatutory() throws InterruptedException
 		{		
 			Thread.sleep(500);		
@@ -3717,7 +4264,7 @@
 			extent.flush();
 		}
 		
-		@Test(priority = 42)
+		@Test(priority = 53)
 		void GradingReportStatutory() throws InterruptedException, IOException
 		{
 					Thread.sleep(3000);		
@@ -3764,7 +4311,7 @@
 				extent.flush();
 		}
 		
-		@Test(priority = 43)
+		@Test(priority = 54)
 		void complianceCalendar() throws InterruptedException
 		{
 			test = extent.startTest("compliance Calendar Verifications");
@@ -3837,7 +4384,7 @@
 				extent.flush();
 		}
 		
-		@Test(priority = 44)
+		@Test(priority = 55)
 		void DailyUpdates() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
@@ -3877,7 +4424,7 @@
 			extent.flush();
 		}
 		
-  @Test(priority = 45)
+  @Test(priority = 56)
 		void NewsLetter() throws InterruptedException, IOException
 		{
 			Thread.sleep(500);		

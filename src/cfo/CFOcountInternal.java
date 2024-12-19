@@ -1854,7 +1854,7 @@ public class CFOcountInternal extends BasePage
 	
 	
 	@Test(priority = 22)
-	void RiskSummaryHighInternal() throws InterruptedException
+	void RiskSummaryHighInternal() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -1935,7 +1935,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
    @Test(priority = 23)
-	void RiskSummaryMediumStatutory() throws InterruptedException
+	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -2012,7 +2012,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 @Test(priority = 24)
-	void RiskSummaryLowStatutory() throws InterruptedException
+	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
 		
@@ -3007,7 +3007,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 33)
-	void InProgress_PieChartInternalPeriod() throws InterruptedException
+	void InProgress_PieChartInternalPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'in Progress' Count Verification");
 		

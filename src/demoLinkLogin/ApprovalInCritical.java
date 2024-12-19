@@ -1610,7 +1610,7 @@ package demoLinkLogin;
 		
 		
 		@Test(priority = 20)
-		void RiskSummaryCriticalInternal() throws InterruptedException
+		void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 		{
 		
 			Thread.sleep(3000);
@@ -1706,7 +1706,7 @@ package demoLinkLogin;
 		
 		
 		@Test(priority = 21)
-		void RiskSummaryHighInternal() throws InterruptedException
+		void RiskSummaryHighInternal() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -1802,7 +1802,7 @@ package demoLinkLogin;
 		}
 		
 	  @Test(priority = 22)
-			void RiskSummaryMediumStatutory() throws InterruptedException
+			void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 				Thread.sleep(1000);
@@ -1899,7 +1899,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 23)
-			void RiskSummaryLowStatutory() throws InterruptedException
+			void RiskSummaryLowStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'Low' Count Verification");
 				Thread.sleep(2000);

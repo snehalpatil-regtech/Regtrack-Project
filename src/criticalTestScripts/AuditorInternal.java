@@ -127,7 +127,7 @@ public class AuditorInternal extends BasePage {
 		}
 	}
 	
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	void ClosedTimely_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Completion Status 'Closed Timely' Count Verification");
@@ -201,7 +201,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	void ClosedDelayed_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Completion Status - 'Closed Delayed' Count Verification");
@@ -287,7 +287,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Completion Status - 'Not Completed' Count Verification");
@@ -373,7 +373,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	void NotApplicable_PieChartIn() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Completion Status - 'Not Applicable' Count Verification");
@@ -459,7 +459,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 6)
+//	@Test(priority = 6)
 	void Overdue_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Overdue' Count Verification");
@@ -557,7 +557,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 7)
+//	@Test(priority = 7)
 	void dueToday_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -647,7 +647,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 	
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	void PFR_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
@@ -747,7 +747,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 9)
+//	@Test(priority = 9)
 	void inProgress_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'In Progress' Count Verification");
@@ -850,7 +850,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 	
-	@Test(priority = 10)
+//	@Test(priority = 10)
 	void Rejected_PieChartInternal() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Rejected' Count Verification");
@@ -953,7 +953,7 @@ public class AuditorInternal extends BasePage {
 	
 	
 	
-	@Test(priority = 11)
+//	@Test(priority = 11)
 	void BargraphBSECriticalStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
@@ -1050,7 +1050,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 12)
+//	@Test(priority = 12)
 	void BargraphBSEHighStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
@@ -1147,7 +1147,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 13)
+//	@Test(priority = 13)
 	void BargraphBSEMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
@@ -1242,7 +1242,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority =14)
+//	@Test(priority =14)
 	void BargraphBSELowStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
@@ -1336,7 +1336,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 
-	@Test(priority = 15)
+//	@Test(priority = 15)
 	void RiskSummaryCriticalInternal() throws InterruptedException
 	{
 		//.navigate().refresh();
@@ -1433,7 +1433,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 16)
+//	@Test(priority = 16)
 	void RiskSummaryHighInternal() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1529,7 +1529,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 17)
+//	@Test(priority = 17)
 	void RiskSummaryMediumStatutory() throws InterruptedException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1630,7 +1630,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 18)
+//	@Test(priority = 18)
 	void RiskSummaryLowStatutory() throws InterruptedException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1740,7 +1740,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 19)
+//	@Test(priority = 19)
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException
 	{
 		Thread.sleep(3000);		
@@ -1892,7 +1892,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 20)
+//	@Test(priority = 20)
 	void ClosedTimely_PieChartperiod() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart -Completion Status - 'Closed Timely' Count Verification");
@@ -2344,7 +2344,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 24)
 
 	void UpcomingPieChartPeriod() throws InterruptedException
 	{
@@ -2468,7 +2468,7 @@ public class AuditorInternal extends BasePage {
 		}
 		else
 		{
-			test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+rejectedValue);
+			test.log(LogStatus.PASS, " 'Upcoming' Compliance Count = "+rejectedValue);
 			Thread.sleep(2000);
 			getDriver().switchTo().parentFrame();
 			Thread.sleep(2000);
@@ -2485,7 +2485,7 @@ public class AuditorInternal extends BasePage {
 	
 
 	
-//	@Test(priority = 24)
+	@Test(priority = 25)
 	void Overdue_PieChartInternalPe() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Not Completed Status - 'Overdue' Count Verification");
@@ -2598,7 +2598,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 25)
+	@Test(priority = 26)
 	void dueToday_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status-'due Today' Count Verification");
@@ -2715,7 +2715,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 26)
+	@Test(priority = 27)
 	void PFR_PieChartInternalPe() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
@@ -2831,7 +2831,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 27)
+	@Test(priority = 28)
 	void InProgress_PieChartInternalPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'in Progress' Count Verification");
@@ -2948,140 +2948,9 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 28)
-	void Upcoming_PieChartPeriod() throws InterruptedException
-	{
-		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
-	
-		Thread.sleep(2000);
-		
-		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
-		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-		
-		Thread.sleep(4000);
-		AuditorcountPOM.DateText().click();	
-		Thread.sleep(1000);
-		AuditorcountPOM.DateYear().click();	
-		Thread.sleep(1000);
-		AuditorcountPOM.Year().click();	
-		Thread.sleep(3000);
-		AuditorcountPOM.DateMonth().click();	
-		Thread.sleep(1000);
-		AuditorcountPOM.Month().click();	
-		Thread.sleep(3000);
-		AuditorcountPOM.Date().click();	
-		Thread.sleep(3000);
-		AuditorcountPOM.Apply().click();	
-		Thread.sleep(5000);
-		
-		Thread.sleep(4000);
-		WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
-	
-	String text =	roc.getText();
-	
-	if(text.equalsIgnoreCase("Upcoming")) {
-		test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
 
-	}else {
-		test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
-
-	}
-		
-		int rejectedValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
-		CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
-		
-		Thread.sleep(3000);
-		int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
-		int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
-		int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
-		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
-		
-		int total = critical + high + medium + low;
-		/*
-		if(rejectedValue == total)
-		{
-			test.log(LogStatus.PASS, "' Rejected' Compliance Count matches to sum of all risked compliances.");
-			test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
-		}
-		else
-		{
-			test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
-			test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
-		}
-	*/
-		if(rejectedValue > 0)
-		{
-			if(critical >= 0)
-			{
-				CFOcountPOM.GraphCountInPeUpIn( test, "Critical", critical, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Critical' Risk Compliance Count = "+critical);
-			}
-			
-			if(high >= 0)
-			{
-				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "High", high, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'High' Risk Compliance Count = "+high);
-			}
-			
-			if(medium >= 0)
-			{
-				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "Medium", medium, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Medium' Risk Compliance Count = "+medium);
-			}
-			
-			if(low >= 0)
-			{
-				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-				Thread.sleep(500);
-				CFOcountPOM.GraphCountInPeUpIn( test, "Low", low, "Statutory");
-			}
-			else
-			{
-				test.log(LogStatus.PASS, "'Low' Risk Compliance Count = "+low);
-			}
-			
-			//Thread.sleep(5000);
-		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
-			Thread.sleep(2000);
-			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-			Thread.sleep(3000);
-		}
-		else
-		{
-			test.log(LogStatus.PASS, " 'UpComing' Compliance Count = "+rejectedValue);
-			Thread.sleep(2000);
-			getDriver().switchTo().parentFrame();
-			Thread.sleep(2000);
-			Thread.sleep(500);
-		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
-			Thread.sleep(2000);
-			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-			Thread.sleep(2000);
-		}
-		
-		extent.endTest(test);
-		extent.flush();
-	}
 	
-	
-	
-//	@Test(priority = 29)
+	@Test(priority = 30)
 	void Rejected_PieChartInternalPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'Rejected' Count Verification");

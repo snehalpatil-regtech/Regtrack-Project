@@ -1301,7 +1301,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 20)
-		void RiskSummaryCriticalStatutory() throws InterruptedException
+		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 		
 			Thread.sleep(3000);
@@ -1388,7 +1388,7 @@ package demoLinkLogin;
 		
 		
 		@Test(priority = 21)
-		void RiskSummaryHighStatutory() throws InterruptedException
+		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
 			
@@ -1476,7 +1476,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 22)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			
@@ -1562,7 +1562,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 23)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			
@@ -2572,7 +2572,7 @@ package demoLinkLogin;
 			}
 			
 		//	@Test(priority = 32)
-			void Upcoming_PieChartPeriod() throws InterruptedException
+			void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 			

@@ -1285,7 +1285,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	@Test(priority = 20)
-	void RiskSummaryCriticalStatutory() throws InterruptedException
+	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 	
 		Thread.sleep(3000);
@@ -1372,7 +1372,7 @@ public class DeptStatutory extends BasePage {
 	
 	
 	@Test(priority = 21)
-	void RiskSummaryHighStatutory() throws InterruptedException
+	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		
@@ -1460,7 +1460,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	@Test(priority = 22)
-	void RiskSummaryMediumStatutory() throws InterruptedException
+	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 		
@@ -1546,7 +1546,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	@Test(priority = 23)
-	void RiskSummaryLowStatutory() throws InterruptedException
+	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
 		
@@ -1635,7 +1635,7 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 24)
+	@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -1763,7 +1763,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 25)
+		@Test(priority = 25)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -1886,7 +1886,7 @@ public class DeptStatutory extends BasePage {
 			
 		}
 		
-//		@Test(priority = 26)
+		@Test(priority = 26)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2008,7 +2008,7 @@ public class DeptStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 27)
+		@Test(priority = 27)
 		void NotApplicable_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2127,8 +2127,8 @@ public class DeptStatutory extends BasePage {
 			
 		}
 		
-		@Test(priority = 0)
-			void Upcoming_PieChartPeriod() throws InterruptedException
+		@Test(priority = 27)
+			void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 			{
 			//	test = extent.startTest("Period-Pie Chart - Completed Status- ' Upcoming' Count Verification");
 			
@@ -2282,7 +2282,7 @@ public class DeptStatutory extends BasePage {
 			}
 			
 		
-//	@Test(priority = 28)
+	@Test(priority = 28)
 		void Overdue_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -2408,7 +2408,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 29)
+	@Test(priority = 29)
 		void dueToday_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -2535,7 +2535,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	@Test(priority = 30)
+	@Test(priority = 30)
 		void pendingForReview_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -2661,10 +2661,10 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 31)
+		@Test(priority = 31)
 		void Inprogress_PieChartPeriod() throws InterruptedException
 		{
-			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'In Progress' Count Verification");
+			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'In Progress' Count Verification");
 			
 			Thread.sleep(3000);
 			
@@ -2788,10 +2788,10 @@ public class DeptStatutory extends BasePage {
 		
 	
 		
-//	@Test(priority = 33)
+	@Test(priority = 33)
 		void rejected_PieChartPeriod() throws InterruptedException
 		{
-			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
+		//	test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
 			
 			Thread.sleep(3000);
 			

@@ -1287,7 +1287,7 @@ public class DeptStaExcluding extends BasePage{
 		}
 		
 //		@Test(priority = 20) 
-		void RiskSummaryCriticalStatutory() throws InterruptedException
+		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 			DeptCountPOM.SelectYear().click();
 			Thread.sleep(1000);
@@ -1367,7 +1367,7 @@ public class DeptStaExcluding extends BasePage{
 		}
 		
 	//	@Test(priority = 21)
-		void RiskSummaryHighStatutory() throws InterruptedException
+		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
 			DeptCountPOM.SelectYear().click();
@@ -1447,7 +1447,7 @@ public class DeptStaExcluding extends BasePage{
 		}
 		
 //		@Test(priority = 22)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			
@@ -1525,7 +1525,7 @@ public class DeptStaExcluding extends BasePage{
 		}
 		
 //		@Test(priority = 23)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			Thread.sleep(3000);

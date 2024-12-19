@@ -352,7 +352,7 @@ public class DeptCountPOM extends BasePage {
 	
 	public static WebElement StatusM()		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[3]"));
+		categories = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[2]"));
 		return categories;
 	}
 	
@@ -547,7 +547,7 @@ public class DeptCountPOM extends BasePage {
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(8000);
 			
-	  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+	  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	  wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		Thread.sleep(8000);
 		
@@ -880,7 +880,7 @@ public class DeptCountPOM extends BasePage {
 		test.log(LogStatus.PASS, "Excel file Export Successfully");
 		Thread.sleep(8000);
 		
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
   wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	Thread.sleep(8000);
 	
@@ -971,7 +971,7 @@ jse.executeScript("arguments[0].click();", ViewButton);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -1186,7 +1186,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -1299,7 +1299,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -1635,7 +1635,7 @@ Thread.sleep(5000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[23]/a[1]");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -2003,7 +2003,7 @@ Thread.sleep(5000);
 			test.log(LogStatus.PASS, "Excel file Export Successfully");
 			Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[22]/a");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[23]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);

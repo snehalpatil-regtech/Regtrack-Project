@@ -845,8 +845,144 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 		
 	}
-			
+	
+	@Test(priority = 15)
+	void IsSMETAColumnNotcom() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Pie Chart -Completion Status - Not Completed status - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,600)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'After Due Date'
+		Thread.sleep(500);	
+		CFOcountPOM.clickNotCompleted().click();
+       Thread.sleep(500);	
+       if(NotApplicableValue > 0)
+       {
+        Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumn(test,"Critical");	
+   		Thread.sleep(3000);
+   		MethodsPOM.IsSmetaColumn(test,"High");	
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Medium");
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Not Completed' Compliance Count = " + NotApplicableValue);
+		}
+       extent.endTest(test);
+		extent.flush();
+       
+	}
+		
+	@Test(priority = 16)
+	void IsSMETAColumnclosedDel() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Pie Chart -Completion Status - Closed Delayed status - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,600)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+        int ClosedDelayedValue = Integer.parseInt(CFOcountPOM.clickClosedDelayed().getText());	//Reading value of 'After Due Date'
+		
+		CFOcountPOM.clickClosedDelayed().click();
+       Thread.sleep(500);	
+       if(ClosedDelayedValue > 0)
+       {
+        Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumn(test,"Critical");	
+   		Thread.sleep(3000);
+   		MethodsPOM.IsSmetaColumn(test,"High");	
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Medium");
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Closed Delayed' Compliance Count = " + ClosedDelayedValue);
+		}	
+       extent.endTest(test);
+		extent.flush();
+       
+	}
 
+	@Test(priority = 17)
+	void IsSMETAColumnclosedTime() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Pie Chart -Completion Status - Closed Timely status - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,600)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimely().getText());	//Reading value of 'After Due Date'
+		CFOcountPOM.clickClosedTimely().click();
+       Thread.sleep(500);	
+       if(ClosedTimelyValue > 0)
+       {
+        Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumn(test,"Critical");	
+   		Thread.sleep(3000);
+   		MethodsPOM.IsSmetaColumn(test,"High");	
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Medium");
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Closed Timely' Compliance Count = " + ClosedTimelyValue);
+		}	
+       extent.endTest(test);
+		extent.flush();
+       
+	}
+	
+	@Test(priority = 0)
+	void IsSMETAColumnNotApp() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Pie Chart -Completion Status - Not Applicable status - Is SMETA Column Count Verification");
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scrollBy(0,600)");					//Scrolling down window by 1000 px.
+		Thread.sleep(3000);
+		int NotAppliValue = Integer.parseInt(CFOcountPOM.clickNotApplicable().getText());	//Reading value of 'After Due Date'
+		CFOcountPOM.clickNotApplicable().click();	
+       Thread.sleep(500);	
+       if(NotAppliValue > 0)
+       {
+        Thread.sleep(500);
+       	MethodsPOM.IsSmetaColumn(test,"Critical");	
+   		Thread.sleep(3000);
+   		MethodsPOM.IsSmetaColumn(test,"High");	
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Medium");
+   		Thread.sleep(3000);	
+   		MethodsPOM.IsSmetaColumn(test,"Low");
+   		Thread.sleep(3000);	
+       }
+       else
+		{
+			test.log(LogStatus.PASS, "'Not Applicable' Compliance Count = " + NotAppliValue);
+		}	
+       extent.endTest(test);
+		extent.flush();
+       
+	}
 		@Test(priority = 15)
 	void Overdue_PieChart() throws InterruptedException
 	{
@@ -1529,7 +1665,7 @@ public class DeptStatutory extends BasePage {
 	
 	
 		@Test(priority = 24)
-	void RiskSummaryHighStatutory() throws InterruptedException
+	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		
@@ -1614,7 +1750,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 		@Test(priority = 25)
-	void RiskSummaryMediumStatutory() throws InterruptedException
+	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -1698,7 +1834,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	@Test(priority = 26)
-	void RiskSummaryLowStatutory() throws InterruptedException
+	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
 		

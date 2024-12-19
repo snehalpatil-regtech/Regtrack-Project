@@ -1527,7 +1527,7 @@ public class ApprovalcountInternal extends BasePage{
 	
 	
 	@Test(priority = 17)
-	void RiskSummaryHighInternal() throws InterruptedException
+	void RiskSummaryHighInternal() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -1609,7 +1609,7 @@ public class ApprovalcountInternal extends BasePage{
 	}
 	
        //@Test(priority = 18)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			Thread.sleep(1000);
@@ -1686,7 +1686,7 @@ public class ApprovalcountInternal extends BasePage{
 		}
 		
 	//	@Test(priority = 19)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			Thread.sleep(2000);

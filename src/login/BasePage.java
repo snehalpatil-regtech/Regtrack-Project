@@ -207,6 +207,7 @@ import performer.OverduePOM;
 		read_Login_username( no);
 		read_Login_password( no);
 		
+		
 		login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 		
 		if(text.equalsIgnoreCase("internal")) {
@@ -302,8 +303,8 @@ import performer.OverduePOM;
 		{
 		}
 		Thread.sleep(3000);
-	//	ApprovalcountPOM.clickManagement().click();
-	//	Thread.sleep(3000);
+		ApprovalcountPOM.clickManagement().click();
+		Thread.sleep(3000);
 		if(text.equalsIgnoreCase("internal")) {
 			Thread.sleep(3000);
 		Select drp = new Select(CFOcountPOM.selectInternal());

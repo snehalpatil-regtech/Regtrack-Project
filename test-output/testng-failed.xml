@@ -3,17 +3,46 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="auditor.AuditorcountInternal">
+      <class name="approval.ApprovalStatutory">
         <methods>
-          <include name="Closing"/>
-          <include name="Login"/>
-          <include name="UpcomingFilter1"/>
-          <include name="UpcomingFilterIn"/>
-          <include name="setBrowser"/>
+          <include name="PerformReviewEmailCol"/>
+          <include name="DeviationApproverColGR1"/>
+          <include name="RiskSummaryFilter"/>
+          <include name="DetailedReportDA"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="AssignmentReport"/>
+          <include name="DepartmentSummaryAccountStatutory"/>
+          <include name="DeviationApproverColSOO"/>
           <include name="browserClosing"/>
-          <include name="RiskSummaryFilterNA"/>
+          <include name="setBrowser"/>
+          <include name="ComplianceDocumentsDAM"/>
+          <include name="periodIsSMETAColumnInprogress"/>
+          <include name="DetailedReport"/>
+          <include name="CompletionStatusFilter"/>
+          <include name="complianceCalendar"/>
+          <include name="DeviationApproverColRSAPP"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="DeviationApproverColDSAPP"/>
+          <include name="Overdue_PieChartPeriod"/>
+          <include name="ComplianceDocuments"/>
+          <include name="PerformReviewEmailColIn"/>
+          <include name="UpcomingFilter"/>
+          <include name="RiskSummIsSmeta"/>
+          <include name="Login"/>
+          <include name="periodIsSMETAColumnPendingForReview"/>
+          <include name="periodIsSMETAColumnNotApplicable"/>
+          <include name="DeviationApproverColPSDFPAPP"/>
+          <include name="periodIsSMETAColumnOverdue"/>
+          <include name="DeviationApproverColPSApp"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="periodIsSMETAColumnUpcoming"/>
+          <include name="periodIsSMETAColumnRejected"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="SOOStatus"/>
+          <include name="DepartSummIsSmeta"/>
+          <include name="Closing"/>
         </methods>
-      </class> <!-- auditor.AuditorcountInternal -->
+      </class> <!-- approval.ApprovalStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

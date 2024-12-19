@@ -1234,7 +1234,16 @@ public class DeptInternal extends BasePage  {
 			
 			
 			Thread.sleep(500);
-			String FinaPFReview = CFOcountPOM.clickAccountPenFReviewInternalD().getText();			//Reading the Overdue value of Human Resource
+			WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-4 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > rect"));
+			Thread.sleep(1000);
+			  roc.click();
+			  WebElement roc1 =getDriver() .findElement(By.cssSelector("#highcharts-4 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+				Thread.sleep(1000);
+				  roc1.click();
+				  WebElement roc3=getDriver() .findElement(By.cssSelector("#highcharts-4 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+					Thread.sleep(1000);
+					  roc3.click();
+					  String FinaPFReview = CFOcountPOM.clickAccountPenFReviewInternalD().getText();			//Reading the Overdue value of Human Resource
 			FinaPFReview = FinaPFReview.replaceAll(" ","");									//Removing all white spaces from string. 
 			int Fina_PFR = Integer.parseInt(FinaPFReview);						
 			if(Fina_PFR > 0)
@@ -1476,7 +1485,7 @@ public class DeptInternal extends BasePage  {
 		}
 		
 		@Test(priority = 20)
-		void RiskSummaryMediumInternal() throws InterruptedException
+		void RiskSummaryMediumInternal() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			Thread.sleep(3000);
@@ -1563,7 +1572,7 @@ public class DeptInternal extends BasePage  {
 		}
 		
 		@Test(priority = 21)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			Thread.sleep(2000);
@@ -1648,7 +1657,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 22)
+		@Test(priority = 22)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -1760,7 +1769,7 @@ public class DeptInternal extends BasePage  {
 		
 		}
 		
-//		@Test(priority = 23)
+		@Test(priority = 23)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -1873,7 +1882,7 @@ public class DeptInternal extends BasePage  {
 			
 		}
 		
-//		@Test(priority = 24)
+		@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Not Completed' Count Verification");
@@ -1986,7 +1995,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-//		@Test(priority = 25)
+		@Test(priority = 25)
 			void NotApplicable_PieChartPeriod() throws InterruptedException
 			{
 				test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2101,7 +2110,7 @@ public class DeptInternal extends BasePage  {
 				
 			}
 			
-			@Test(priority = 0)
+			@Test(priority = 26)
 			void Upcoming_PieChartPeriod() throws InterruptedException
 			{
 			//	test = extent.startTest("Period-Pie Chart - Completion Status- ' Upcoming' Count Verification");
@@ -2160,10 +2169,10 @@ public class DeptInternal extends BasePage  {
 			String text =	roc.getText();
 			
 			if(text.equalsIgnoreCase("Upcoming")) {
-				test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+				test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (Completion compliance summary) due for a period.");
 
 			}else {
-				test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+				test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (Completion compliance summary) due for a period.");
 
 			}
 				
@@ -2258,7 +2267,7 @@ public class DeptInternal extends BasePage  {
 			
 			
 			
-//		@Test(priority = 26)
+		@Test(priority = 27)
 		void Overdue_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Overdue' Count Verification");
@@ -2371,7 +2380,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-		//	@Test(priority = 27)
+			@Test(priority = 28)
 		void dueToday_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - Not Completed Status-'due Today' Count Verification");
@@ -2490,10 +2499,10 @@ public class DeptInternal extends BasePage  {
 		}
 		
 		
-	//	@Test(priority = 28)
+		@Test(priority = 29)
 		void PFR_PieChartInternalPeriod() throws InterruptedException
 		{
-			test = extent.startTest("Period-Pie Chart - 'PFR' Count Verification");
+			test = extent.startTest("Period-Pie Chart - 'Pending For Review' Count Verification");
 		
 			
 		
@@ -2591,7 +2600,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 29)
+		@Test(priority = 30)
 		void InProgress_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - Not Completed Status - 'in Progress' Count Verification");
@@ -2708,7 +2717,7 @@ public class DeptInternal extends BasePage  {
 		
 	
 		
-//	@Test(priority = 31)
+	@Test(priority = 31)
 		void Rejected_PieChartInternalPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Rejected' Count Verification");

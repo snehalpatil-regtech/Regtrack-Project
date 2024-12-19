@@ -8,9 +8,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -23,6 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,6 +36,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import approval.ApprovalcountPOM;
+import auditor.AuditorcountPOM;
 import cfo.CFOcountPOM;
 import cfo.MgmtSonyMethod;
 import companyadmin.CompanyPOM;
@@ -12419,6 +12423,2349 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 			CFOcountPOM.closeDocument2().click();
 		}
 	
+	public static void IsSmetaColumn(ExtentTest test, String Status, int complianceCount)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+       Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+	//	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	//	js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+	//	int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
+	//	CFOcountPOM.clickNotCompleted().click();									//CLicking on 'Not Completed' count
+		
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Not Completed"))
+		{
+			CFOcountPOM.clickNotCompleted().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);
+//			Thread.sleep(2000);
+//			CFOcountPOM.readHigh().click();	
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readMedium().click();
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readLow().click();
+//			Thread.sleep(2000);
+			
+			}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			CFOcountPOM.clickClosedDelayed().click();
+			CFOcountPOM.readCritical().click();	
+			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);
+//			Thread.sleep(2000);
+//			CFOcountPOM.readHigh().click();	
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readMedium().click();
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readLow().click();
+//			Thread.sleep(2000);
+				}
+		else if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			CFOcountPOM.clickClosedTimely().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);
+//			Thread.sleep(2000);
+//			CFOcountPOM.readHigh().click();	
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readMedium().click();
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readLow().click();
+//			Thread.sleep(2000);
+					}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			CFOcountPOM.clickNotApplicableA().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);
+//			Thread.sleep(2000);
+//			CFOcountPOM.readHigh().click();	
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readMedium().click();
+//			Thread.sleep(2000);
+//			MethodsPOM.IsSmetaColum1(test,Status, complianceCount);	
+//			Thread.sleep(2000);
+//			CFOcountPOM.readLow().click();
+//			Thread.sleep(2000);
+					}
+		Thread.sleep(10000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.7);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		
+			Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1000)");
+	        
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+		// MgmtSonyMethod.ClickTri1().click();
+	   //  Thread.sleep(1000);
+	     
+     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Not Completed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Completed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Completed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("Closed Delayed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Closed Timely"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Not Applicable"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}		
+Thread.sleep(6000);
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+	Thread.sleep(5000);
+	
+	}
+	
+	
+	
+
+	public static void NotCompgraphIsSmetaColumn(ExtentTest test, String Status, int complianceCount)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+       Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		Thread.sleep(3000);
+		Thread.sleep(5000);									//CLicking on 'Not Completed' count
+		
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Overdue"))
+		{
+			CFOcountPOM.clickOverdue().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+			}
+		else if(Status.equalsIgnoreCase("DueToday"))
+		{
+			CFOcountPOM.clickdueToday().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+				}
+		else if(Status.equalsIgnoreCase("Pending For Review"))
+		{
+			CFOcountPOM.clickpendingForReview().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+					}
+		else if(Status.equalsIgnoreCase("In Progress"))
+		{
+			CFOcountPOM.clickinProgress().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();
+					}
+		else if(Status.equalsIgnoreCase("Rejected"))
+		{
+			CFOcountPOM.clickRejected().click();
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();
+		}
+		Thread.sleep(10000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.7);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1000)");
+		CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+		String s = CFOcountPOM.readTotalItemsD().getText();
+		Thread.sleep(500);
+		if(!s.equalsIgnoreCase("No items to display")) {
+		Thread.sleep(5000);
+			Thread.sleep(1000);
+		
+	        
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+		 MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     
+	  
+		/*
+		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("document.querySelector(\"div[id='grid'] div[class='k-grid-content k-auto-scrollable']\").scrollLeft=5000");
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,-500)");
+*/
+	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Overdue"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Overdue - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Overdue - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("DueToday"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "DueToday - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "DueToday - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Pending For Review"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Pending For Review - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Pending For Review - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("In Progress"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "In Progress - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "In Progress - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+			}
+				else if(Status.equalsIgnoreCase("Rejected"))
+				{
+					if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+						test.log(LogStatus.PASS, "Rejected - The additional column of \"Is SMETA Compliance \" display on the gird.");
+					}else {
+						test.log(LogStatus.FAIL, "Rejected - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+					}	//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+		}
+		else {
+			test.log(LogStatus.PASS, "No Record Found");
+
+		}
+		
+Thread.sleep(6000);
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+	Thread.sleep(5000);
+	
+	//CFOcountPOM.clickBack1().click();	//Clicking on Dashboard
+	//Thread.sleep(1000);
+	
+	}
+	public static void setZoomLevel(WebDriver driver, double zoomLevel) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.body.style.zoom='" + zoomLevel + "'");
+    }
+	
+	public static void IsSmetaColumnOverallFun(ExtentTest test, String Status, int complianceCount)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+       Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		Thread.sleep(3000);									//CLicking on 'Not Completed' count
+	//	int IndustrySpeCritical = Integer.parseInt(CFOcountPOM.clickIndustrySpeCriticalM().getText());	//Reading the High value of Labour compliance		
+		Thread.sleep(1000);
+									
+		Thread.sleep(500);
+
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			CFOcountPOM.clickBarClosedTimely().click();
+			Thread.sleep(2000);
+			
+			}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			CFOcountPOM.clickBarClosedDelayed().click();
+			Thread.sleep(2000);
+			
+				}
+		else if(Status.equalsIgnoreCase("Not Completed"))
+		{
+			CFOcountPOM.clickBarNotCompleted().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			CFOcountPOM.clickBarNotApplicable().click();
+			Thread.sleep(2000);
+			
+					}
+		Thread.sleep(10000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.7);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		
+			Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1000)");
+	        
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+		 MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     
+	  
+		/*
+		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("document.querySelector(\"div[id='grid'] div[class='k-grid-content k-auto-scrollable']\").scrollLeft=5000");
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,-500)");
+*/
+	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Closed Timely"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("Closed Delayed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Not Completed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Completed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Completed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Not Applicable"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+		
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+	Thread.sleep(5000);
+	
+	}
+	
+	public static void IsSmetaColumnRisksummary(ExtentTest test, String Status)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+       Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		Thread.sleep(3000);									//CLicking on 'Not Completed' count
+		Thread.sleep(1000);			
+		Thread.sleep(500);
+
+		if(Status.equalsIgnoreCase("Not Completed"))
+		{		
+			Thread.sleep(5000);
+			CFOcountPOM.clickRiskCriticalNotCompleted().click();
+			Thread.sleep(2000);
+			
+			}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			  Thread.sleep(2000);
+			CFOcountPOM.clickRiskHighClosedDelayed().click();
+			Thread.sleep(2000);
+			
+				}
+		else if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			
+			CFOcountPOM.clickRiskHighClosedTimely().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("DueToday"))
+		{
+			
+			CFOcountPOM.clickRiskHighDuetoday().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			
+			CFOcountPOM.clickRiskHighNotApplicable().click();
+			Thread.sleep(2000);
+			
+					}
+		
+		
+		Thread.sleep(10000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.7);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		
+			Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1000)");
+	        
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+		 MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     
+	  
+		/*
+		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("document.querySelector(\"div[id='grid'] div[class='k-grid-content k-auto-scrollable']\").scrollLeft=5000");
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,-500)");
+*/
+	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Closed Timely"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("Closed Delayed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Not Completed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Completed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Completed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("DueToday"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "DueToday - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "DueToday - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+			}
+			else if(Status.equalsIgnoreCase("Not Applicable"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+				//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+	Thread.sleep(5000);
+	
+	}
+	
+	
+	public static void IsSmeta(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+	       Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			Thread.sleep(3000);		
+	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+	Thread.sleep(8000);
+	try {
+           // Set zoom level to 50% (0.5) for zooming out
+          setZoomLevel(getDriver(), 0.7);
+           // Wait to observe the effect
+          Thread.sleep(2000);
+
+       // Set zoom level back to 100% (1.0) to reset to normal        
+		 // setZoomLevel(getDriver(), 1.0);
+		} catch (InterruptedException e) {
+	          e.printStackTrace();
+	        }
+	
+		Thread.sleep(1000);
+	JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	js.executeScript("window.scrollBy(0,1000)");
+        
+	Thread.sleep(3000);
+	MgmtSonyMethod.ClickTri1().click();
+     Thread.sleep(1000);
+     MgmtSonyMethod.Columns().click();
+     Thread.sleep(5000);
+	OverduePOM.IsSMETAColumnCheckBox().click();
+	Thread.sleep(2000);
+	 MgmtSonyMethod.ClickTri1().click();
+     Thread.sleep(1000);     
+     
+     Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+				test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+			}else {
+				test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+			}				
+		}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+				test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+			}else {
+				test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+			}				}
+		else if(Status.equalsIgnoreCase("Not Completed"))
+		{
+			if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+				test.log(LogStatus.PASS, "Not Completed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+			}else {
+				test.log(LogStatus.FAIL, "Not Completed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+			}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+		}
+		else if(Status.equalsIgnoreCase("DueToday"))
+		{
+			if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+				test.log(LogStatus.PASS, "DueToday - The additional column of \"Is SMETA Compliance \" display on the gird.");
+			}else {
+				test.log(LogStatus.FAIL, "DueToday - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+			}	
+		}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+				test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+			}else {
+				test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+			}	
+			//Clicking on Critical value of Pie Chart of 'Not Completed'.
+		}
 		
 	
+Thread.sleep(6000);
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+Thread.sleep(5000);
 }
+	
+	public static void IsSmetaColumnDepartSummary(ExtentTest test, String Status)throws InterruptedException
+	{
+       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+	    
+       Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		Thread.sleep(3000);									//CLicking on 'Not Completed' count
+		Thread.sleep(1000);			
+		Thread.sleep(500);
+
+		if(Status.equalsIgnoreCase("Overdue"))
+		{		
+			Thread.sleep(5000);
+			CFOcountPOM.clickHROverduem().click();
+			Thread.sleep(2000);			  
+			}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			  Thread.sleep(2000);
+			CFOcountPOM.clickHumanClosedDelayed().click();
+			Thread.sleep(2000);
+			
+				}
+		else if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			
+			CFOcountPOM.clickHumanClosedTimely().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("Pending For Review"))
+		{
+			
+			CFOcountPOM.clickHRPendingReviewm1().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("In Progress"))
+		{
+			
+			CFOcountPOM.clickAdminInprogress().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("Rejected"))
+		{
+			
+			CFOcountPOM.clickAdminInRejected().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			
+			CFOcountPOM.clickAdminNotApplicable().click();
+			Thread.sleep(2000);
+			
+					}
+		else if(Status.equalsIgnoreCase("DueToday"))
+		{
+			
+			CFOcountPOM.clickAdminDueToday().click();
+			Thread.sleep(2000);
+			
+					}
+		
+		Thread.sleep(10000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.7);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		
+			Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1000)");
+	        
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);   
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Overdue"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Overdue - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Overdue - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("Closed Delayed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Closed Timely"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Pending For Review"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Pending For Review - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Pending For Review - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("In Progress"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "In Progress - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "In Progress - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("In Progress"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "In Progress - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "In Progress - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Rejected"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Rejected - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Rejected - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+			}
+			else if(Status.equalsIgnoreCase("Not Applicable"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+			}
+			else if(Status.equalsIgnoreCase("DueToday"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "DueToday - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "DueToday - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}	
+			}
+		
+Thread.sleep(6000);
+getDriver().switchTo().parentFrame();
+Thread.sleep(1000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+	Thread.sleep(5000);
+	
+	}
+	public static void IsSmetaColumnDueForPeriod(ExtentTest test, String Status)throws InterruptedException
+	{
+//		 Thread.sleep(500);		
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+//			js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+//			Thread.sleep(3000);
+//			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+//			Thread.sleep(3000);
+//			CFOcountPOM.clickNotCompleted().click();
+//       Thread.sleep(500);		
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{			
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readHigh().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readMedium().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readLow().click();
+					}
+		
+		Thread.sleep(10000);
+		getDriver().switchTo().parentFrame();
+		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+			Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories1().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	
+	public static void IsSmetaColumn(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{			
+			Thread.sleep(2000);
+			CFOcountPOM.readCritical().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readHigh().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readMedium().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.readLow().click();
+					}
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	public static void IsSMETA(ExtentTest test, String Status)throws InterruptedException
+	{
+//		test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");				
+		Thread.sleep(5000);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	//	js.executeScript("window.scrollBy(0,300)");			//Scrolling down window by 1000 px.cfo
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
+		int ClosedDelayedValue = Integer.parseInt(CFOcountPOM.clickClosedDelayedA().getText());	//Reading value of 'After Due Date'
+		int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimelyA().getText());	//Reading value of 'After Due Date'
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotApplicableA().getText());	//Reading value of 'After Due Date'																
+		Thread.sleep(5000);				
+		int total = NotCompletedValue + ClosedDelayedValue + ClosedTimelyValue + NotApplicableValue;
+		/*
+		if(NotCompletedValue == total)
+		{
+			test.log(LogStatus.PASS, "Not Completed' Compliance Count matches to sum of all risked compliances.");
+			test.log(LogStatus.PASS, "Total Not Completed' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Not Completed' Compliance Count doesn't matches to sum of all risked compliances.");
+			test.log(LogStatus.FAIL, "Total 'Not Completed' Compliances : "+total+" | Total Sum : "+NotCompletedValue);
+		}
+	*/
+		
+		if(total > 0)
+		{
+			if(NotCompletedValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Not Completed",NotCompletedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Completed' Status Compliance Count = "+NotCompletedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(ClosedDelayedValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Closed Delayed",ClosedDelayedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+ClosedDelayedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(ClosedTimelyValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Closed Timely",ClosedTimelyValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+ClosedTimelyValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(NotApplicableValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Not Applicable",NotApplicableValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+NotApplicableValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+//			Thread.sleep(500);
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Completion Status' Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	//Clicking on Dashboard
+		}
+
+	}
+	
+	public static void IsSMETA1(ExtentTest test, String Status)throws InterruptedException
+	{
+//		test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");				
+		Thread.sleep(5000);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,300)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		int NotCompletedValue = Integer.parseInt(CFOcountPOM.clickNotCompleted().getText());	//Reading value of 'Not Completed'
+		int ClosedDelayedValue = Integer.parseInt(CFOcountPOM.clickClosedDelayedA().getText());	//Reading value of 'After Due Date'
+		int ClosedTimelyValue = Integer.parseInt(CFOcountPOM.clickClosedTimelyA().getText());	//Reading value of 'After Due Date'
+		int NotApplicableValue = Integer.parseInt(CFOcountPOM.clickNotApplicableA().getText());	//Reading value of 'After Due Date'																
+		Thread.sleep(5000);				
+		int total = NotCompletedValue + ClosedDelayedValue + ClosedTimelyValue + NotApplicableValue;
+		/*
+		if(NotCompletedValue == total)
+		{
+			test.log(LogStatus.PASS, "Not Completed' Compliance Count matches to sum of all risked compliances.");
+			test.log(LogStatus.PASS, "Total Not Completed' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Not Completed' Compliance Count doesn't matches to sum of all risked compliances.");
+			test.log(LogStatus.FAIL, "Total 'Not Completed' Compliances : "+total+" | Total Sum : "+NotCompletedValue);
+		}
+	*/
+		
+		if(total > 0)
+		{
+			if(NotCompletedValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Not Completed",NotCompletedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Completed' Status Compliance Count = "+NotCompletedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(ClosedDelayedValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Closed Delayed",ClosedDelayedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+ClosedDelayedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(ClosedTimelyValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Closed Timely",ClosedTimelyValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+ClosedTimelyValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(NotApplicableValue > 0)
+			{
+				MethodsPOM.IsSmetaColumn(test, "Not Applicable",NotApplicableValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+NotApplicableValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+//			Thread.sleep(500);
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Completion Status' Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	//Clicking on Dashboard
+		}
+
+	}
+	
+	public static void IsSMETANotCompletion(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	//	js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		int OverdueValue = Integer.parseInt(CFOcountPOM.clickOverdue().getText());	//Reading value of 'Not Completed'
+		int dueTodayValue = Integer.parseInt(CFOcountPOM.clickdueToday().getText());	//Reading value of 'Not Completed'			
+		int pendingForReviewValue = Integer.parseInt(CFOcountPOM.clickpendingForReview().getText());	//Reading value of 'Not Completed'			
+		int inProgressValue = Integer.parseInt(CFOcountPOM.clickinProgress().getText());	//Reading value of 'Not Completed'			
+		int rejectedValue = Integer.parseInt(CFOcountPOM.clickRejected().getText());	//Reading value of 'Not Completed'
+		Thread.sleep(5000);				
+		int total = OverdueValue + dueTodayValue + pendingForReviewValue + inProgressValue + rejectedValue;
+		if(total > 0)
+		{
+			if(OverdueValue > 0)
+			{
+				//AuditorcountPOM.GraphCount( test, "Critical", critical, "Statutory");
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Overdue",OverdueValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			
+
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Overdue' Status Compliance Count = "+OverdueValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(dueTodayValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "DueToday",dueTodayValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+dueTodayValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(pendingForReviewValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Pending For Review",pendingForReviewValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Pending For Review' Status Compliance Count = "+pendingForReviewValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(inProgressValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "In Progress",inProgressValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'In Progress' Status Compliance Count = "+inProgressValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			if(rejectedValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Rejected",rejectedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Rejected' Status Compliance Count = "+rejectedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+//			Thread.sleep(500);
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Not Completion Status' Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+		}
+		
+	}
+	
+	public static void IsSMETANotCompletion1(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,200)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		int OverdueValue = Integer.parseInt(CFOcountPOM.clickOverdue().getText());	//Reading value of 'Not Completed'
+		int dueTodayValue = Integer.parseInt(CFOcountPOM.clickdueToday().getText());	//Reading value of 'Not Completed'			
+		int pendingForReviewValue = Integer.parseInt(CFOcountPOM.clickpendingForReview().getText());	//Reading value of 'Not Completed'			
+		int inProgressValue = Integer.parseInt(CFOcountPOM.clickinProgress().getText());	//Reading value of 'Not Completed'			
+		int rejectedValue = Integer.parseInt(CFOcountPOM.clickRejected().getText());	//Reading value of 'Not Completed'
+		Thread.sleep(5000);				
+		int total = OverdueValue + dueTodayValue + pendingForReviewValue + inProgressValue + rejectedValue;
+		if(total > 0)
+		{
+			if(OverdueValue > 0)
+			{
+				//AuditorcountPOM.GraphCount( test, "Critical", critical, "Statutory");
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Overdue",OverdueValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			
+
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Overdue' Status Compliance Count = "+OverdueValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(dueTodayValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "DueToday",dueTodayValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+dueTodayValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(pendingForReviewValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Pending For Review",pendingForReviewValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Pending For Review' Status Compliance Count = "+pendingForReviewValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+			if(inProgressValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "In Progress",inProgressValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'In Progress' Status Compliance Count = "+inProgressValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			if(rejectedValue > 0)
+			{
+				MethodsPOM.NotCompgraphIsSmetaColumn(test, "Rejected",rejectedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Rejected' Status Compliance Count = "+rejectedValue);
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+			}
+			
+//			Thread.sleep(500);
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Not Completion Status' Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+		}
+		
+	}
+		
+	public static void IsSMETAOverallFunction(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,925)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		CFOcountPOM.clickIndustrySpeCriticalM().click();
+		Thread.sleep(3000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;	
+		if(total > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Closed Timely",ClosedTimely);
+				Thread.sleep(500);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+ClosedTimely);
+				Thread.sleep(500);
+				
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Closed Delayed",ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			
+			if(NotCompleted > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Not completed",NotCompleted);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not completed' Status Compliance Count = "+NotCompleted);
+				Thread.sleep(500);
+				
+			}
+			
+			if(NotApplicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Not Applicable",NotApplicable);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+NotApplicable);
+				Thread.sleep(500);
+				
+			}			
+			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Critical' Risk Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+		}
+		
+	}
+	
+	public static void IsSMETAOverallFunction1(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,800)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		CFOcountPOM.clickIndustrySpeCriticalM().click();
+		Thread.sleep(3000);
+		int ClosedTimely = Integer.parseInt(CFOcountPOM.clickBarClosedTimely().getText());			//reading Closed Timely count.
+		int ClosedDelayed = Integer.parseInt(CFOcountPOM.clickBarClosedDelayed().getText());	//reading Closed Delayed count.
+		int NotCompleted = Integer.parseInt(CFOcountPOM.clickBarNotCompleted().getText());	//reading Not Completed count.
+		int NotApplicable = Integer.parseInt(CFOcountPOM.clickBarNotApplicable().getText());	//reading Not Applicable count.
+		
+		int total = ClosedTimely + ClosedDelayed + NotCompleted + NotApplicable;	
+		if(total > 0)
+		{
+			if(ClosedTimely > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Closed Timely",ClosedTimely);
+				Thread.sleep(500);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+ClosedTimely);
+				Thread.sleep(500);
+				
+			}
+			
+			if(ClosedDelayed > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Closed Delayed",ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			
+			if(NotCompleted > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Not completed",NotCompleted);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not completed' Status Compliance Count = "+NotCompleted);
+				Thread.sleep(500);
+				
+			}
+			
+			if(NotApplicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnOverallFun(test, "Not Applicable",NotApplicable);
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+NotApplicable);
+				Thread.sleep(500);
+				
+			}			
+			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+			Thread.sleep(2000);
+	}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Critical' Risk Compliance Count = "+total);
+			
+			Thread.sleep(500);
+			action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+		}
+		
+	}
+	
+	public static void IsSMETARisksummary(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1500)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		String NotCompleted = CFOcountPOM.clickRiskHighNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
+		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskHigh_NotCompleted = Integer.parseInt(NotCompleted);
+	//	ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+		Thread.sleep(3000);
+		
+		if(RiskHigh_NotCompleted > 0)
+		{
+		//	ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+			Thread.sleep(2000);
+			MethodsPOM.IsSmetaColumnRisksummary(test, "Not completed");
+			Thread.sleep(2000);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Not completed' Status Compliance Count = "+NotCompleted);
+			Thread.sleep(500);
+			
+		}
+		List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Not Completed");
+		
+		String CloseDelayed = CFOcountPOM.clickRiskHighClosedDelayed().getText();		//Reading the Closed Timely value of Human Resource
+		CloseDelayed = CloseDelayed.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_ClosedDelayed = Integer.parseInt(CloseDelayed);
+		Thread.sleep(500);
+		
+		String CloseTimely = CFOcountPOM.clickRiskHighClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		CloseTimely = CloseTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_ClosedTimely = Integer.parseInt(NotCompleted);
+		
+		String NotApplicable = CFOcountPOM.clickRiskHighNotApplicable().getText();		//Reading the Closed Timely value of Human Resource
+		NotApplicable = NotApplicable.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_NotApplicable = Integer.parseInt(NotApplicable);
+		
+		String DueToday = CFOcountPOM.clickRiskHighDuetoday().getText();		//Reading the Closed Timely value of Human Resource
+		DueToday = DueToday.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_DueToday = Integer.parseInt(DueToday);
+		
+		Thread.sleep(2000);
+	//	int total = RiskHigh_NotCompleted + RiskCritical_ClosedDelayed + RiskCritical_ClosedTimely + RiskCritical_NotApplicable;	
+		
+			
+			if(RiskCritical_ClosedDelayed > 0)
+			{
+				List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+				ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+				Thread.sleep(2000);
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Closed Delayed");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+RiskCritical_ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			
+			if(RiskCritical_ClosedTimely > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Closed Timely");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+RiskCritical_ClosedTimely);
+				Thread.sleep(500);
+				
+			}
+			
+			if(RiskCritical_DueToday > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "DueToday");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+RiskCritical_DueToday);
+				Thread.sleep(500);
+				
+			}	
+			
+			if(RiskCritical_NotApplicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Not Applicable");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+RiskCritical_NotApplicable);
+				Thread.sleep(500);
+				
+			}			
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+//	}
+//		else
+//		{
+//		test.log(LogStatus.PASS, " 'Critical' Risk Compliance Count = "+total);
+//			
+//			Thread.sleep(500);
+////			//action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+//		}
+		
+	}
+
+	public static void IsSMETARisksummary1(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1200)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		String NotCompleted = CFOcountPOM.clickRiskHighNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
+		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskHigh_NotCompleted = Integer.parseInt(NotCompleted);
+		List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+		Thread.sleep(3000);
+		
+		String CloseDelayed = CFOcountPOM.clickRiskHighClosedDelayed().getText();		//Reading the Closed Timely value of Human Resource
+		CloseDelayed = CloseDelayed.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_ClosedDelayed = Integer.parseInt(CloseDelayed);
+		Thread.sleep(500);
+		String CloseTimely = CFOcountPOM.clickRiskHighClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		CloseTimely = CloseTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_ClosedTimely = Integer.parseInt(NotCompleted);
+		
+		String NotApplicable = CFOcountPOM.clickRiskHighNotApplicable().getText();		//Reading the Closed Timely value of Human Resource
+		NotApplicable = NotApplicable.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_NotApplicable = Integer.parseInt(NotApplicable);
+		
+		String DueToday = CFOcountPOM.clickRiskHighDuetoday().getText();		//Reading the Closed Timely value of Human Resource
+		DueToday = DueToday.replaceAll(" ","");									//Removing all white spaces from string. 
+		int RiskCritical_DueToday = Integer.parseInt(DueToday);
+		
+		Thread.sleep(2000);
+		int total = RiskHigh_NotCompleted + RiskCritical_ClosedDelayed + RiskCritical_ClosedTimely + RiskCritical_NotApplicable;	
+		if(total>0)
+		{
+			if(RiskHigh_NotCompleted > 0)
+			{
+				ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+				Thread.sleep(2000);
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Not completed");
+				Thread.sleep(2000);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not completed' Status Compliance Count = "+NotCompleted);
+				Thread.sleep(500);
+				
+			}
+			
+			if(RiskCritical_ClosedDelayed > 0)
+			{
+				ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
+				Thread.sleep(2000);
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Closed Delayed");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+RiskCritical_ClosedDelayed);
+				Thread.sleep(500);
+				
+			}
+			
+			if(RiskCritical_ClosedTimely > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Closed Timely");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+RiskCritical_ClosedTimely);
+				Thread.sleep(500);
+				
+			}
+			
+			if(RiskCritical_DueToday > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "DueToday");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+RiskCritical_DueToday);
+				Thread.sleep(500);
+				
+			}	
+			
+			if(RiskCritical_NotApplicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnRisksummary(test, "Not Applicable");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+RiskCritical_NotApplicable);
+				Thread.sleep(500);
+				
+			}			
+//			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+//			Thread.sleep(2000);
+	}
+		else
+		{
+		test.log(LogStatus.PASS, " 'Critical' Risk Compliance Count = "+total);
+			
+			Thread.sleep(500);
+//			//action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+		}
+		
+	}
+
+	
+	
+	public static void IsSMETADepSumm(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Thread.sleep(3000);
+		CFOcountPOM.YearTodate().click();
+		Thread.sleep(1000);
+		CFOcountPOM.ALL().click();
+		Thread.sleep(1000);
+		CFOcountPOM.clickApply().click();
+		Thread.sleep(5000);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,2000)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		
+		String NotCompleted = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
+		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Overdue = Integer.parseInt(NotCompleted);	
+		
+		if(Overdue > 0)
+		{
+//			roc.click();
+			Thread.sleep(500);
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "Overdue");
+			Thread.sleep(2000);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Overdue' Status Compliance Count = "+Overdue);
+			Thread.sleep(500);
+			
+		}
+
+		WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > rect"));		
+		roc.click();
+		Thread.sleep(3000);
+		
+		String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+		ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
+		Thread.sleep(500);
+		if(Closed_Delayed > 0)
+		{
+			//roc.click();
+			Thread.sleep(500);
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "Closed Delayed");
+			Thread.sleep(500);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+Closed_Delayed);
+			Thread.sleep(500);
+			
+		}
+		
+		Thread.sleep(3000);
+		String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Closed_Timely = Integer.parseInt(ClosedTimely);	
+		Thread.sleep(500);
+		if(Closed_Timely > 0)
+		{
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "Closed Timely");
+			Thread.sleep(500);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+Closed_Timely);
+			Thread.sleep(500);
+			
+		}
+		Thread.sleep(500);
+		String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
+		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Pending_Review = Integer.parseInt(PendingReview);
+		
+		if(Pending_Review > 0)
+		{
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "Pending For Review");
+			Thread.sleep(500);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Pending For Review' Status Compliance Count = "+Pending_Review);
+			
+			
+		}	
+		
+		WebElement roc1 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	
+		roc1.click();
+		
+		String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
+		int In_Progress = Integer.parseInt(InProgress);	
+
+		Thread.sleep(500);
+		if(In_Progress > 0)
+		{
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "In Progress");
+			Thread.sleep(500);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'In Progress' Status Compliance Count = "+In_Progress);
+			Thread.sleep(500);
+			
+		}	
+		  
+		
+		String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
+		int R_ejected = Integer.parseInt(Rejected);
+		Thread.sleep(500);
+		
+	if(R_ejected > 0)
+	{
+		MethodsPOM.IsSmetaColumnDepartSummary(test, "Rejected");
+		Thread.sleep(500);
+		
+	}
+	else
+	{
+		test.log(LogStatus.PASS, "'Rejected' Status Compliance Count = "+R_ejected);
+		Thread.sleep(500);
+		
+	}	
+
+		
+		String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Not_Applicable = Integer.parseInt(NotApplicable);	
+		WebElement r = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	
+		  r.click();
+		  Thread.sleep(2000);
+		  
+			if(Not_Applicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Not Applicable");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+Not_Applicable);
+				Thread.sleep(500);
+				
+			}	
+
+		String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+		DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Due_Today = Integer.parseInt(DueToday);	
+		Thread.sleep(2000);
+		roc1.click();
+		Thread.sleep(2000);
+		if(Due_Today > 0)
+		{
+			MethodsPOM.IsSmetaColumnDepartSummary(test, "DueToday");
+			Thread.sleep(500);
+			
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+Due_Today);
+			Thread.sleep(500);
+			
+		}	
+	//	int total = Overdue + Closed_Delayed + Closed_Timely + Pending_Review + In_Progress + R_ejected + Not_Applicable + Due_Today ;	
+//		if(total>0)
+//		{
+		
+			
+			
+			
+			
+
+//	}
+//		else
+//		{
+//		test.log(LogStatus.PASS, " 'Department wise' status Compliance Count = "+total);
+//			
+//			Thread.sleep(500);
+//		}
+		
+	}
+
+	public static void IsSMETADepSumm1(ExtentTest test, String Status)throws InterruptedException
+	{
+		Thread.sleep(500);
+		Actions action = new Actions(getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,1700)");			//Scrolling down window by 1000 px.cfo
+	//	js.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		
+		String NotCompleted = CFOcountPOM.clickHROverduem().getText();			//Reading the Overdue value of Human Resource
+		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Overdue = Integer.parseInt(NotCompleted);	
+		
+		WebElement roc =getDriver() .findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > rect"));		
+		roc.click();
+		Thread.sleep(3000);
+		
+		String ClosedDelayed = CFOcountPOM.clickHumanClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+		ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
+		Thread.sleep(500);
+		Thread.sleep(3000);
+		String ClosedTimely = CFOcountPOM.clickHumanClosedTimely().getText();		//Reading the Closed Timely value of Human Resource
+		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Closed_Timely = Integer.parseInt(ClosedTimely);			
+		String PendingReview = CFOcountPOM.clickHRPendingReviewm1().getText();	//Reading the Pending For Review value of Human Resource
+		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Pending_Review = Integer.parseInt(PendingReview);
+		
+		String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
+		int In_Progress = Integer.parseInt(InProgress);	
+		
+		String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
+		int R_ejected = Integer.parseInt(Rejected);	
+		
+		String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Not_Applicable = Integer.parseInt(NotApplicable);	
+		WebElement roc1 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-3 > rect"));	
+		  roc1.click();
+		  Thread.sleep(2000);
+		String DueToday = CFOcountPOM.clickAdminDueToday().getText();	//Reading the Pending For Review value of Human Resource
+		DueToday = DueToday.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Due_Today = Integer.parseInt(DueToday);	
+		Thread.sleep(2000);
+		roc1.click();
+		Thread.sleep(2000);
+		int total = Overdue + Closed_Delayed + Closed_Timely + Pending_Review + In_Progress + R_ejected + Not_Applicable + Due_Today ;	
+		if(total>0)
+		{
+			if(Overdue > 0)
+			{
+				roc.click();
+				Thread.sleep(500);
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Overdue");
+				Thread.sleep(2000);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Overdue' Status Compliance Count = "+Overdue);
+				Thread.sleep(500);
+				
+			}
+			
+			if(Closed_Delayed > 0)
+			{
+				roc.click();
+				Thread.sleep(500);
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Closed Delayed");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Delayed' Status Compliance Count = "+Closed_Delayed);
+				Thread.sleep(500);
+				
+			}
+			
+			if(Closed_Timely > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Closed Timely");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Closed Timely' Status Compliance Count = "+Closed_Timely);
+				Thread.sleep(500);
+				
+			}
+			
+			if(Pending_Review > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Pending For Review");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Pending For Review' Status Compliance Count = "+Pending_Review);
+				Thread.sleep(500);
+				
+			}	
+				
+			if(In_Progress > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "In Progress");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'In Progress' Status Compliance Count = "+In_Progress);
+				Thread.sleep(500);
+				
+			}		
+			if(R_ejected > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Rejected");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Rejected' Status Compliance Count = "+R_ejected);
+				Thread.sleep(500);
+				
+			}	
+			
+			if(Not_Applicable > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "Not Applicable");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Not Applicable' Status Compliance Count = "+Not_Applicable);
+				Thread.sleep(500);
+				
+			}	
+			if(Due_Today > 0)
+			{
+				MethodsPOM.IsSmetaColumnDepartSummary(test, "DueToday");
+				Thread.sleep(500);
+				
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'DueToday' Status Compliance Count = "+Due_Today);
+				Thread.sleep(500);
+				
+			}	
+	}
+		else
+		{
+		test.log(LogStatus.PASS, " 'Department wise' status Compliance Count = "+total);
+			
+			Thread.sleep(500);
+		}
+		
+	}
+
+
+
+	public static void PeriodIsSMETAColumn(ExtentTest test)throws InterruptedException
+	{
+	
+     Thread.sleep(500);		
+	WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+	Thread.sleep(500);
+	Actions action = new Actions(getDriver());
+//	int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
+//	int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
+//	int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
+//	int low = Integer.parseInt(CFOcountPOM.readLow().getText());	
+	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+	js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
+	Thread.sleep(3000);
+	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
+	try {
+	// Define statuses and their XPaths
+		Thread.sleep(2000);
+    Map<String, String> statusXpaths = new HashMap<>();
+    statusXpaths.put("Not Completed", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-0 highcharts-drilldown-data-label']");
+    statusXpaths.put("Closed Delayed", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-1 highcharts-drilldown-data-label']");
+    statusXpaths.put("Closed Timely", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-2 highcharts-drilldown-data-label']");
+    statusXpaths.put("Not Applicable", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-3 highcharts-drilldown-data-label']");
+    statusXpaths.put("Upcoming", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-4 highcharts-drilldown-data-label']");
+
+    // Define risks and their XPaths
+    Map<String, String> riskXpaths = new HashMap<>();
+    riskXpaths.put("Critical", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-0 ']");
+    riskXpaths.put("High", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-1 ']");
+    riskXpaths.put("Medium", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-2 ']");
+    riskXpaths.put("Low", "//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-4 ']");
+
+   // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    // Iterate over each status
+    for (Map.Entry<String, String> statusEntry : statusXpaths.entrySet()) {
+        String status = statusEntry.getKey();
+        String statusXPath = statusEntry.getValue();
+
+        // Click the status (if needed to drill down to risks)
+        WebElement statusElement = getDriver().findElement(By.xpath(statusXPath));
+        statusElement.click();
+
+        // Iterate over each risk
+        for (Map.Entry<String, String> riskEntry : riskXpaths.entrySet()) {
+            String risk = riskEntry.getKey();
+            String riskXPath = riskEntry.getValue();
+
+            // Click on the risk element
+            WebElement riskElement = getDriver().findElement(By.xpath(riskXPath));
+            riskElement.click();
+            Thread.sleep(2000);
+            getDriver().switchTo().parentFrame();
+			Thread.sleep(2000);
+            // Wait for the popup to appear
+        //    WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("popup-id")));
+            
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+    		Thread.sleep(8000);
+    		try {
+    	           // Set zoom level to 50% (0.5) for zooming out
+    	          setZoomLevel(getDriver(), 0.7);
+    	           // Wait to observe the effect
+    	          Thread.sleep(2000);
+
+    	       // Set zoom level back to 100% (1.0) to reset to normal        
+    			 // setZoomLevel(getDriver(), 1.0);
+    			} catch (InterruptedException e) {
+    		          e.printStackTrace();
+    		        }
+    		
+    		Thread.sleep(1000);
+    		js.executeScript("window.scrollBy(0,1000)");
+    	        
+    		Thread.sleep(3000);
+    		MgmtSonyMethod.ClickTri1().click();
+    	     Thread.sleep(1000);
+    	     MgmtSonyMethod.Columns().click();
+    	     Thread.sleep(5000);
+    		OverduePOM.IsSMETAColumnCheckBox().click();
+    		Thread.sleep(2000);
+    	//	 MgmtSonyMethod.ClickTri1().click();
+    	 //    Thread.sleep(1000);   
+
+    		// Check if "is smeta" column is present
+            boolean isSmetaPresent = getDriver().findElements(By.xpath("//table//th[@data-field='IsSmetaCompliance']")).size() > 0;
+
+            
+//    		if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+//				test.log(LogStatus.PASS, " The additional column of \"Is SMETA Compliance \" display on the gird.");
+//			}else {
+//				test.log(LogStatus.FAIL, "The additional column of \"Is SMETA Compliance\" not display on the gird.");
+//			}	
+
+            // Log the result
+            System.out.println("Status: " + status + ", Risk: " + risk + ", 'Is SMETA' column present: " + isSmetaPresent);
+
+            getDriver().switchTo().parentFrame();
+            Thread.sleep(1000);
+            CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+            Thread.sleep(2000);
+        }
+            }
+    
+} catch (Exception e) {
+    e.printStackTrace();
+}
+                                                            	
+		Thread.sleep(3000);
+		
+	}
+	}
+	

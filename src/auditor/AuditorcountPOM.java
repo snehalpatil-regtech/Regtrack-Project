@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;//
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -114,7 +116,7 @@ public class AuditorcountPOM extends BasePage {
 		date = getDriver().findElement(By.xpath("//*[@id='Myreport']"));
 		return date;
 	}
-	public static void GraphCount( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	public static void GraphCount( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		Thread.sleep(2000);
 		if(risk.equalsIgnoreCase("Critical"))
@@ -190,13 +192,15 @@ public class AuditorcountPOM extends BasePage {
 			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
 		}
 		
-		Thread.sleep(4000);
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
+//		Thread.sleep(4000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(3000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(8000);
@@ -353,7 +357,7 @@ public class AuditorcountPOM extends BasePage {
 	}
 	}
 	
-	public static void GraphCount1( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	public static void GraphCount1( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
@@ -432,12 +436,14 @@ public class AuditorcountPOM extends BasePage {
 		}
 	
 		Thread.sleep(5000);
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(6000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(6000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -478,7 +484,7 @@ public class AuditorcountPOM extends BasePage {
 		}
 	}
 	
-	public static void GraphCount2( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	public static void GraphCount2( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
@@ -555,12 +561,14 @@ public class AuditorcountPOM extends BasePage {
 		
 		Thread.sleep(8000);
 		
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(3000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -690,7 +698,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		}
 	}
 	
-	public static void RiskGraphCount2( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
+	public static void RiskGraphCount2( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		WebDriverWait wait = new WebDriverWait(getDriver(), (70));
 		Actions action = new Actions(getDriver());
@@ -740,12 +748,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a");
 		}
 		
 		Thread.sleep(5000);
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(4000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(4000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -790,7 +800,7 @@ Thread.sleep(5000);*/
 	}
 	
 	
-	public static void RiskGraphCount1( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
+	public static void RiskGraphCount1( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
 		Actions action = new Actions(getDriver());
@@ -841,12 +851,14 @@ Thread.sleep(5000);*/
 			test.log(LogStatus.FAIL, "'"+ComplianceType+"' Compliance Count = "+ ComplianceCount + " | Total no of items from grid = "+ count1);
 		}
 		Thread.sleep(4000);
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(3000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a[1]");
+By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -2096,7 +2108,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 				}
 	}
 	
-	public static void GraphCountSatPe( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	public static void GraphCountSatPe( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
@@ -2175,12 +2187,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 					test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
 				}
 		
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(3000);
+				AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+				Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[23]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -2227,7 +2241,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 	}
 	
 	
-	public static void GraphCountSatPe1( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException
+	public static void GraphCountSatPe1( ExtentTest test, String risk, int complianceCount, String Compliance)throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);
 		if(risk.equalsIgnoreCase("Critical"))
@@ -2306,12 +2320,14 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[19]/a[1]");
 			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
 			test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count = " + complianceCount + " | Total number of items from grid = "+count);
 		}
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
-			Thread.sleep(3000);
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//			Thread.sleep(3000);
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 			
-  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
+  By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[23]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -5568,5 +5584,109 @@ try {
 				CFOcountPOM.closeDocument2().click();
 			}
 	
+		public static void GridAndExcelCountMatch(ExtentTest test,XSSFWorkbook workbook  ) throws InterruptedException, IOException
+		{
+			JavascriptExecutor js = (JavascriptExecutor) getDriver();
+	        
+	        js.executeScript("window.scrollBy(0,1000)");
+	        Thread.sleep(2000); 		
+	        CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
+			Thread.sleep(1000);
+			String s = CFOcountPOM.readTotalItemsD().getText();
+			Thread.sleep(8000);
+			String[] bits = s.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of users)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   s = CFOcountPOM.readTotalItemsD().getText();
+				bits = s.split(" ");
+	        
+			}
+			
+			Thread.sleep(2000);
+	        JavascriptExecutor js1 = (JavascriptExecutor) getDriver();
+	        
+	        js1.executeScript("window.scrollBy(0,-1000)");
+	        Thread.sleep(2000);
+
+	Thread.sleep(1000);
+//	Thread.sleep(4000);
+//	 CFOcountPOM.clickExportImage().click();
+//		Thread.sleep(4000);
+//		test.log(LogStatus.PASS, "Excel file Export Successfully");
+//		Thread.sleep(3000);
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
+	File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
+
+	Thread.sleep(1000);
+	CFOcountPOM.clickExportImage().click();	Thread.sleep(9000);					//Clicking on 'Excel Report' image.
+	test.log(LogStatus.PASS, "File downloaded successfully.");
+
+	Thread.sleep(5500);
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
+	File[] allFilesNew = dir1.listFiles();							//Counting number of files in directory after download
+
+	if(dirContents.length < allFilesNew.length)
+	{
+		
+		
+		File lastModifiedFile = allFilesNew[0];			//Storing any 0th index file in 'lastModifiedFile' file name.
+	    for (int i = 1; i < allFilesNew.length; i++) 	//For loop till the number of files in directory.
+	    {
+	       if (lastModifiedFile.lastModified() < allFilesNew[i].lastModified()) 	//If allFilesNew[i] file is having large/latest time time of update then latest modified file be allFilesNew[i] file.
+	       {
+	           lastModifiedFile = allFilesNew[i];
+	       }
+	    }
+		
+		Thread.sleep(1000);
+		fis = new FileInputStream(lastModifiedFile);
+		workbook = new XSSFWorkbook(fis);
+		sheet = workbook.getSheetAt(0);					//Retrieving first sheet of Workbook
+		/*
+		int no = sheet.getFirstRowNum();
+		Row row = sheet.getRow(no);
+		Cell c1 = row.getCell(0);
+		int records =(int) c1.getNumericCellValue();
+		*/
+		sheet = workbook.getSheetAt(0);
+		int columnNumber = 3;
+		int rowCount = 0;
+		int actualRow=0;
+		
+		for(Row row : sheet)
+		{
+			
+			Cell cell =row.getCell(columnNumber);
+			if(cell != null) {
+				
+				rowCount++;
+				actualRow = rowCount-1;
+			}
+			
+		}
+		fis.close();
+		
+		if(count1 == actualRow)
+		{
+			//test.log(LogStatus.PASS, "No of records from grid matches to no of records in Excel Sheet.");
+			test.log(LogStatus.PASS, "Total records from Grid = "+count1+" | Total records from Report = "+actualRow);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "No of records from grid doesn't matches to no of records in Excel Sheet.");
+			test.log(LogStatus.FAIL, "Total records from Grid = "+count1+" | Total records from Excel Sheet = "+actualRow);
+		}
+	}
+	else
+	{
+		test.log(LogStatus.FAIL, "File doesn't downloaded successfully.");
+	}
+
+			
+		}
 	
 }

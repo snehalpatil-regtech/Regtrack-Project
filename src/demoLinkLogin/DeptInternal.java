@@ -1479,7 +1479,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 20)
-			void RiskSummaryMediumInternal() throws InterruptedException
+			void RiskSummaryMediumInternal() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 				Thread.sleep(3000);
@@ -1566,7 +1566,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 21)
-			void RiskSummaryLowStatutory() throws InterruptedException
+			void RiskSummaryLowStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'Low' Count Verification");
 				Thread.sleep(2000);

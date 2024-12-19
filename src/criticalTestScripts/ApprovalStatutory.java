@@ -269,7 +269,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 4)
+	//	@Test(priority = 4)
 		void CompliancesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -323,7 +323,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 5)
+//		@Test(priority = 5)
 		void UsersCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Users'");
@@ -609,7 +609,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-//		@Test(priority = 9)
+	//	@Test(priority = 9)
 		void NotApplicable_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -673,7 +673,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	@Test(priority = 10)
+//	@Test(priority = 10)
 		void Overdue_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -740,7 +740,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 11)
+	//	@Test(priority = 11)
 		void dueToday_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -828,7 +828,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 			
-		@Test(priority = 12)
+	//	@Test(priority = 12)
 		void pendingForReview_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -897,7 +897,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 13)
+//		@Test(priority = 13)
 		void inProgress_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -967,7 +967,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 14)
+//	@Test(priority = 14)
 		void rejected_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1044,8 +1044,8 @@ public class ApprovalStatutory extends BasePage {
 		
 		
 		
-		@Test(priority = 15)
-		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException
+	//	@Test(priority = 15)
+		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
 		
@@ -1145,8 +1145,8 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority =16)
-		void BargraphIndustrySpeHighStatutory() throws InterruptedException
+//		@Test(priority =16)
+		void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -1249,8 +1249,8 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 17)
-		void BargraphIndustrySpeMediumStatutory() throws InterruptedException
+//	@Test(priority = 17)
+		void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -1348,8 +1348,8 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-       @Test(priority = 18)
-		void BargraphIndustrySpeLowStatutory() throws InterruptedException
+    //   @Test(priority = 18)
+		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
 		
@@ -1456,8 +1456,8 @@ public class ApprovalStatutory extends BasePage {
 		
 		
 		
-	@Test(priority = 19)
-		void RiskSummaryCriticalStatutory() throws InterruptedException
+//	@Test(priority = 19)
+		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 		
 			Thread.sleep(3000);
@@ -1558,7 +1558,7 @@ public class ApprovalStatutory extends BasePage {
 		
 		
 		@Test(priority = 20)
-		void RiskSummaryHighStatutory() throws InterruptedException
+		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
 			
@@ -1663,7 +1663,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		@Test(priority =21)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -1769,7 +1769,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		@Test(priority = 22)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			
@@ -1839,6 +1839,8 @@ public class ApprovalStatutory extends BasePage {
 			Thread.sleep(3000);
 			List<WebElement>roc1 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-1'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc1, "Closed Delayed");
+			WebElement roc3 = getDriver().findElement(By.cssSelector("#highcharts-6 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-2 > rect"));			
+			  roc3.click();
 			Thread.sleep(3000);
 			int RiskLow_DueToday = Integer.parseInt(CFOcountPOM.clickRiskLowDueToday().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskLow_DueToday > 0)
@@ -1882,7 +1884,17 @@ public class ApprovalStatutory extends BasePage {
 		@Test(priority = 23)
 		void DepartmentSummaryAccountStatutory() throws InterruptedException
 		{
-			Thread.sleep(3000);		
+			Thread.sleep(3000);	
+			Thread.sleep(500);
+			Thread.sleep(3000);
+			CFOcountPOM.YearTodate().click();
+			Thread.sleep(1000);
+			CFOcountPOM.ALL().click();
+			Thread.sleep(1000);
+			CFOcountPOM.clickApply().click();
+			Thread.sleep(5000);
+			CFOcountPOM.RefreshNow().click();
+			Thread.sleep(5000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
 		//	js.executeScript("window.scrollBy(0,500)");
@@ -1960,6 +1972,9 @@ public class ApprovalStatutory extends BasePage {
 			 WebElement roc1 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-0 > rect"));
 				
 			  roc1.click();
+			  WebElement roc2 = getDriver().findElement(By.cssSelector("#highcharts-12 > svg > g.highcharts-legend > g > g > g.highcharts-legend-item.highcharts-column-series.highcharts-color-undefined.highcharts-series-1 > rect"));
+				
+			  roc1.click();
 			Thread.sleep(5000);
 			String Inprogress = CFOcountPOM.clickAccountInprogress().getText();	//Reading the Pending For Review value of Human Resource
 			//NotApplicable = NotApplicable.replaceAll(" ","");	
@@ -2010,6 +2025,21 @@ public class ApprovalStatutory extends BasePage {
 			}
 			
 			Thread.sleep(500);
+			Thread.sleep(3000);
+			String DueToday = CFOcountPOM.DueToday().getText();			//Reading the Overdue value of Human Resource
+			DueToday = DueToday.replaceAll(" ","");									//Removing all white spaces from string. 
+			int DueToday_de= Integer.parseInt(DueToday);						
+			if(DueToday_de > 0)
+			{
+				CFOcountPOM.DueToday().click();
+				ApprovalcountPOM.RiskGraphCount( test, " DueToday", DueToday_de, "Internal");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "' DueToday' Compliances Count = "+ DueToday_de + ".");
+			}
+			
+			Thread.sleep(500);
 
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 
@@ -2018,7 +2048,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 24)
+		@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -2146,7 +2176,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 25)
+		@Test(priority = 25)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2269,7 +2299,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 26)
+		@Test(priority = 26)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2394,7 +2424,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-//		@Test(priority = 27)
+	@Test(priority = 27)
 		void NotApplicable_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2518,9 +2548,9 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-	//	@Test(priority = 0)
+		@Test(priority = 28)
 
-		void UpcomingPieChartPeriod() throws InterruptedException
+		void UpcomingPieChartPeriod() throws InterruptedException, IOException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 		
@@ -2677,7 +2707,7 @@ public class ApprovalStatutory extends BasePage {
 		
 
 		
-	//	@Test(priority = 28)
+		@Test(priority = 28)
 		void Overdue_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -2804,7 +2834,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 			
-	//	@Test(priority = 31)
+		@Test(priority = 31)
 		void pendingForReview_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -2938,7 +2968,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	    @Test(priority = 32)
+	    @Test(priority = 32)
 		void inProgress_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3064,7 +3094,7 @@ public class ApprovalStatutory extends BasePage {
 		
 
 		
-//		@Test(priority = 34)
+		@Test(priority = 34)
 		void rejected_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");

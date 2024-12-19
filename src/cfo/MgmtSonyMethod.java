@@ -156,6 +156,11 @@ public class MgmtSonyMethod extends BasePage{
 		sony = getDriver().findElement(By.xpath("(//*[@class='k-icon k-i-more-vertical'])[2]"));
 		return sony;
 	}
+	public static WebElement ClickTri1()		//Method for reading Compliances value on Dashboard
+	{
+		sony = getDriver().findElement(By.xpath("//th[@class='k-header k-with-icon']//a//span"));
+		return sony;
+	}
 	
 	public static WebElement ClickTriStatus()		//Method for reading Compliances value on Dashboard
 	{

@@ -3207,7 +3207,13 @@ public class OverduePOM extends BasePage
 		performer = getDriver().findElement(By.xpath("//div[@class='k-animation-container']//ul//li[13]"));
 		return performer;
 	}
+	public static WebElement IsSMETAColumnCheckBox()					//
+	{
+		performer = getDriver().findElement(By.xpath("//input[@data-field='IsSmetaCompliance']"));
+		return performer;
+	}
 
+	
 	public static WebElement ReviewerEmailmenu()					//
 	{
 		performer = getDriver().findElement(By.xpath("//div[@class='k-animation-container']//ul//li[15]"));
