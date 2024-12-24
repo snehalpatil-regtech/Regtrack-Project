@@ -427,7 +427,7 @@ package demoLinkLogin;
 			}
 		
 		@Test(priority = 7)
-		void NotCompleted_PieChart() throws InterruptedException
+		void NotCompleted_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -676,7 +676,7 @@ package demoLinkLogin;
 			}
 			
 		@Test(priority = 10)
-			void Overdue_PieChart() throws InterruptedException
+			void Overdue_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -743,7 +743,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 11)
-			void dueToday_PieChart() throws InterruptedException
+			void dueToday_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1888,7 +1888,7 @@ package demoLinkLogin;
 		
 			
 			@Test(priority = 23)
-			void DepartmentSummaryAccountStatutory() throws InterruptedException
+			void DepartmentSummaryAccountStatutory() throws InterruptedException, IOException
 			{
 				Thread.sleep(3000);		
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2049,7 +2049,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 24)
-			void NotCompleted_PieChartPeriod() throws InterruptedException
+			void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 				
@@ -2657,7 +2657,7 @@ package demoLinkLogin;
 
 			
 			@Test(priority = 29)
-			void Overdue_PieChartPeriod() throws InterruptedException
+			void Overdue_PieChartPeriod() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 			//	test.log(LogStatus.INFO, "Test Initiated");

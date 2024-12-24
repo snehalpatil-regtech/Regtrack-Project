@@ -122,7 +122,7 @@ public class StatutoryMGMT extends BasePage {
 	}
 	
    @Test(priority = 2)
-	void CompliancesCountMatch() throws InterruptedException
+	void CompliancesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
 	//	test.log(LogStatus.INFO, "Test Initiated");
@@ -139,9 +139,11 @@ public class StatutoryMGMT extends BasePage {
 		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(3000);
-		CFOcountPOM.clickExportImage().click();                    //export excel
-		Thread.sleep(5000);
-		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+//		CFOcountPOM.clickExportImage().click();                    //export excel
+//		Thread.sleep(5000);
+//		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 		/*CFOcountPOM.clickLocation(driver).click();
 		Thread.sleep(500);
 		CFOcountPOM.clickElectricity(driver).click();
@@ -174,8 +176,8 @@ public class StatutoryMGMT extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-@Test(priority = 3)
-	void UsersCountMatch() throws InterruptedException
+   @Test(priority = 3)
+	void UsersCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Users'");
 		//test.log(LogStatus.INFO, "Test Initiated");
@@ -216,9 +218,11 @@ public class StatutoryMGMT extends BasePage {
 		
 		js.executeScript("window.scrollBy(500,0)");						//Scrolling UP window by 2000 px.
 		Thread.sleep(4000);
-		CFOcountPOM.clickExportImage().click();
-		Thread.sleep(5000);
-		test.log(LogStatus.PASS, "Excel file Export Successfully");
+//		CFOcountPOM.clickExportImage().click();
+//		Thread.sleep(5000);
+//		test.log(LogStatus.PASS, "Excel file Export Successfully");
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 		Thread.sleep(3000);
 		 getDriver().switchTo().defaultContent();
 		Thread.sleep(3000);
@@ -228,7 +232,7 @@ public class StatutoryMGMT extends BasePage {
 	}
 	
 @Test(priority = 4)
-	void SummaryofOverdueCompliances() throws InterruptedException
+	void SummaryofOverdueCompliances() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances");
 		//test.log(LogStatus.INFO, "Test Initiated");
@@ -253,9 +257,11 @@ public class StatutoryMGMT extends BasePage {
 	//	driver.findElement(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[16]/a[1]")).click();
 	//	Thread.sleep(3000);
 	//	CFOcountPOM.closeDocument(driver).click();						//Closing the View Document
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+		 AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+			Thread.sleep(3000);
 			Thread.sleep(4000);
 			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td/a[1]");
 			
@@ -283,8 +289,8 @@ public class StatutoryMGMT extends BasePage {
 		
 	}
 	
-@Test(priority = 5)
-		void NotCompleted_PieChart() throws InterruptedException
+        @Test(priority = 5)
+		void NotCompleted_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -380,7 +386,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 @Test(priority = 6)
-		void ClosedDelayed_PieChart() throws InterruptedException
+		void ClosedDelayed_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 			
@@ -474,7 +480,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 @Test(priority = 7)
-		void ClosedTimely_PieChart() throws InterruptedException
+		void ClosedTimely_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -568,7 +574,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 	@Test(priority = 8)
-		void NotApplicable_PieChart() throws InterruptedException
+		void NotApplicable_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -669,7 +675,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 			
 	@Test(priority = 9)
-		void Overdue_PieChart() throws InterruptedException
+		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -770,7 +776,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 @Test(priority = 10)
-		void dueToday_PieChart() throws InterruptedException
+		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 			
@@ -870,7 +876,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 	@Test(priority = 11)
-		void pendingForReview_PieChart() throws InterruptedException
+		void pendingForReview_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -972,7 +978,7 @@ public class StatutoryMGMT extends BasePage {
 		
 		
     @Test(priority = 12)
-		void inProgress_PieChart() throws InterruptedException
+		void inProgress_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -1072,7 +1078,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 @Test(priority = 13)
-		void rejected_PieChart() throws InterruptedException
+		void rejected_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -2191,7 +2197,7 @@ public class StatutoryMGMT extends BasePage {
 		
 		
   	@Test(priority = 31)
-		void NotCompleted_PieChartPeriod() throws InterruptedException
+		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
@@ -2666,8 +2672,166 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-   @Test(priority = 35)
-		void Overdue_PieChartPeriod() throws InterruptedException
+	@Test(priority = 35)
+
+	void UpcomingPieChartPeriod() throws InterruptedException
+	{
+		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
+	
+		Thread.sleep(2000);
+		
+		JavascriptExecutor js = (JavascriptExecutor) getDriver();
+		js.executeScript("window.scrollBy(0,2400)");			//Scrolling down window by 1000 px.
+		Thread.sleep(800);
+		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+		
+		AuditorcountPOM.DateText().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year1 = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Year().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month1 = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date1 = AuditorcountPOM.Date().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateTextEnd().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year = AuditorcountPOM.Years().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Years().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month = AuditorcountPOM.Month1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month1().click();	
+		Thread.sleep(3000);
+		String date = AuditorcountPOM.Date1().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date1().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.Apply().click();	
+		Thread.sleep(5000);
+		test = extent.startTest("Period-Pie Chart -"+date1+"-"+month1+"-"+year1+" - "+date+"-"+month+"-"+year+" "+"- Completion Status- ' Upcoming' Count Verification");				
+
+		Thread.sleep(4000);
+		WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
+	
+	String text =	roc.getText();
+	
+	if(text.equalsIgnoreCase("Upcoming")) {
+		test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+
+	}else {
+		test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
+
+	}
+		
+		int rejectedValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
+		CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
+		
+		Thread.sleep(3000);
+		int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
+		int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
+		int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
+		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
+		
+		int total = critical + high + medium + low;
+		/*
+		if(rejectedValue == total)
+		{
+			test.log(LogStatus.PASS, "' Rejected' Compliance Count matches to sum of all risked compliances.");
+			test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
+			test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
+		}
+	*/
+		if(rejectedValue > 0)
+		{
+			if(critical >= 0)
+			{
+				CFOcountPOM.GraphCountInPeUp1( test, "Critical", critical, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical' Risk Compliance Count = "+critical);
+			}
+			
+			if(high >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "High", high, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'High' Risk Compliance Count = "+high);
+			}
+			
+			if(medium >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "Medium", medium, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Medium' Risk Compliance Count = "+medium);
+			}
+			
+			if(low >= 0)
+			{
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
+				Thread.sleep(500);
+				CFOcountPOM.GraphCountInPeUp1( test, "Low", low, "Statutory");
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Low' Risk Compliance Count = "+low);
+			}
+			
+			//Thread.sleep(5000);
+		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+			
+			Thread.sleep(2000);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(3000);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, " 'Upcoming' Compliance Count = "+rejectedValue);
+			Thread.sleep(2000);
+			getDriver().switchTo().parentFrame();
+			Thread.sleep(2000);
+			Thread.sleep(500);
+		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
+			Thread.sleep(2000);
+			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			Thread.sleep(2000);
+		}
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	
+   @Test(priority = 36)
+		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -2788,8 +2952,8 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 36)
-		void dueToday_PieChartPeriod() throws InterruptedException
+	@Test(priority = 37)
+		void dueToday_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -2909,7 +3073,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 37)
+	@Test(priority = 38)
 		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -3030,7 +3194,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	@Test(priority = 38)
+	@Test(priority = 39)
 		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3151,140 +3315,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-@Test(priority = 39)
-		void Upcoming_PieChartPeriod() throws InterruptedException, IOException
-		{
-			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
-		
-			Thread.sleep(2000);
-			
-			JavascriptExecutor js = (JavascriptExecutor) getDriver();
-			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-			
-			Thread.sleep(4000);
-			AuditorcountPOM.DateText().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.DateYear().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.Year().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.DateMonth().click();	
-			Thread.sleep(1000);
-			AuditorcountPOM.Month().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.Date().click();	
-			Thread.sleep(3000);
-			AuditorcountPOM.Apply().click();	
-			Thread.sleep(5000);
-			
-			Thread.sleep(4000);
-			WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
-		
-			String text =	roc.getText();
-		
-			if(text.equalsIgnoreCase("Upcoming")) 
-			{
-				test.log(LogStatus.PASS, "The status named \"upcoming\" should reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
 
-			}
-			else 
-			{
-				test.log(LogStatus.FAIL, "The status named \"upcoming\" not reflects separately in the graph of the performance summary (not completed compliance summary) due for a period.");
-
-			}
-			
-			int upcomingValue = Integer.parseInt(CFOcountPOM.clickUpcomingPe().getText());	//Reading value of 'Not Completed'
-			CFOcountPOM.clickUpcomingPe().click();									//CLicking on 'Not Completed' count
-			
-			Thread.sleep(3000);
-			int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.
-			int high = Integer.parseInt(CFOcountPOM.readHigh().getText());			//Reading High risk count.
-			int medium = Integer.parseInt(CFOcountPOM.readMedium().getText());		//Reading Medium risk count.
-			int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
-			
-			int total = critical + high + medium + low;
-			/*
-			if(rejectedValue == total)
-			{
-				test.log(LogStatus.PASS, "' Rejected' Compliance Count matches to sum of all risked compliances.");
-				test.log(LogStatus.PASS, "Total Overdue' Compliances : "+total);
-			}
-			else
-			{
-				test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
-				test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+rejectedValue);
-			}
-		*/
-			if(upcomingValue > 0)
-			{
-				if(critical >= 0)
-				{
-					CFOcountPOM.GraphCountInPeUp( test, "Critical", critical, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Critical' Risk Compliance Count = "+critical);
-				}
-				
-				if(high >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "High", high, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'High' Risk Compliance Count = "+high);
-				}
-				
-				if(medium >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "Medium", medium, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Medium' Risk Compliance Count = "+medium);
-				}
-				
-				if(low >= 0)
-				{
-					wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
-					Thread.sleep(500);
-					CFOcountPOM.GraphCountInPeUp( test, "Low", low, "Statutory");
-				}
-				else
-				{
-					test.log(LogStatus.PASS, "'Low' Risk Compliance Count = "+low);
-				}
-				
-				//Thread.sleep(5000);
-			//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
-				Thread.sleep(2000);
-				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-				Thread.sleep(3000);
-			}
-			else
-			{
-				test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+upcomingValue);
-				Thread.sleep(2000);
-				getDriver().switchTo().parentFrame();
-				Thread.sleep(2000);
-				Thread.sleep(500);
-			//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	//Clicking on Dashboard
-				Thread.sleep(2000);
-				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
-				Thread.sleep(2000);
-			}
-			
-			extent.endTest(test);
-			extent.flush();
-		}
-		
 	  @Test(priority = 40)
 		void rejected_PieChartPeriod() throws InterruptedException, IOException
 		{
@@ -3405,7 +3436,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		  
        @Test(priority = 42)
-			void complianceCalendar() throws InterruptedException
+			void complianceCalendar() throws InterruptedException, IOException
 			{
 				test = extent.startTest("compliance Calendar Verifications");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -3420,9 +3451,12 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(5000);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("calframe"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(5000);
-				 CFOcountPOM.clickExportImage().click();
-				 Thread.sleep(2000);
-					test.log(LogStatus.PASS, "Excel file Export Successfully");
+//				 CFOcountPOM.clickExportImage().click();
+//				 Thread.sleep(2000);
+//					test.log(LogStatus.PASS, "Excel file Export Successfully");
+				AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+				Thread.sleep(3000);
+				
 					Thread.sleep(3000);
 					By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[7]/a");
 

@@ -954,7 +954,7 @@ public class AuditorInternal extends BasePage {
 	
 	
 //	@Test(priority = 11)
-	void BargraphBSECriticalStatutory() throws InterruptedException
+	void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
 		
@@ -1051,7 +1051,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 //	@Test(priority = 12)
-	void BargraphBSEHighStatutory() throws InterruptedException
+	void BargraphBSEHighStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
 		
@@ -1148,7 +1148,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 //	@Test(priority = 13)
-	void BargraphBSEMediumStatutory() throws InterruptedException
+	void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
 		
@@ -1243,7 +1243,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 //	@Test(priority =14)
-	void BargraphBSELowStatutory() throws InterruptedException
+	void BargraphBSELowStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
 		
@@ -1337,7 +1337,7 @@ public class AuditorInternal extends BasePage {
 	}
 
 //	@Test(priority = 15)
-	void RiskSummaryCriticalInternal() throws InterruptedException
+	void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 	{
 		//.navigate().refresh();
 		CFOcountPOM.YearTodate().click();
@@ -1530,7 +1530,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 //	@Test(priority = 17)
-	void RiskSummaryMediumStatutory() throws InterruptedException
+	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 		
@@ -1631,7 +1631,7 @@ public class AuditorInternal extends BasePage {
 	}
 	
 //	@Test(priority = 18)
-	void RiskSummaryLowStatutory() throws InterruptedException
+	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
 		
@@ -2346,7 +2346,7 @@ public class AuditorInternal extends BasePage {
 	
 	@Test(priority = 24)
 
-	void UpcomingPieChartPeriod() throws InterruptedException
+	void UpcomingPieChartPeriod() throws InterruptedException, IOException
 	{
 		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 	

@@ -191,7 +191,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	@Test(priority = 3)
-	void CompliancesCountMatch() throws InterruptedException
+	void CompliancesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
 	//	test.log(LogStatus.INFO, "Test Initiated");
@@ -207,10 +207,12 @@ public class ApprovalInCritical extends BasePage {
 		
 		WebDriverWait wait = new WebDriverWait( getDriver(), (60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
-		Thread.sleep(3000);
-		CFOcountPOM.clickExportImage().click();                    //export excel
-		Thread.sleep(5000);
-		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+//		Thread.sleep(3000);
+//		CFOcountPOM.clickExportImage().click();                    //export excel
+//		Thread.sleep(5000);
+//		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+//		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+//		Thread.sleep(3000);
 		/*CFOcountPOM.clickLocation().click();
 		Thread.sleep(500);
 		CFOcountPOM.clickElectricity().click();
@@ -236,7 +238,10 @@ public class ApprovalInCritical extends BasePage {
 			
 			test.log(LogStatus.FAIL, "No of Compliances in the grid = "+ComcountGrid+" | Dashboard Compliances  Count = "+CompliancesCountDas);
 		}
-		js.executeScript("window.scrollBy(500,0)");						//Scrolling UP window by 2000 px.
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(500,0)");	
+		//Scrolling UP window by 2000 px.
 		getDriver().switchTo().defaultContent();
 		Thread.sleep(3000);
 		CFOcountPOM.closeCategories().click();
@@ -245,8 +250,8 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	
-	@Test(priority = 4)
-	void clickUsersInternal() throws InterruptedException
+	@Test(priority = 0)
+	void clickUsersInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("'Users' Count by Clicking on 'Users'");
 		
@@ -265,10 +270,11 @@ public class ApprovalInCritical extends BasePage {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		Thread.sleep(2000);
-		CFOcountPOM.clickExportImage().click();                    //export excel
-		Thread.sleep(5000);
-		test.log(LogStatus.PASS, "Excel file Export Successfully");	
-		
+//		CFOcountPOM.clickExportImage().click();                    //export excel
+//		Thread.sleep(5000);
+//		test.log(LogStatus.PASS, "Excel file Export Successfully");	
+		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+		Thread.sleep(3000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1000)");					//Scrolling down window by 1000 px.
@@ -304,8 +310,8 @@ public class ApprovalInCritical extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 5)
-	void SummaryofOverdueCompliances() throws InterruptedException
+	@Test(priority = 0)
+	void SummaryofOverdueCompliances() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances Internal");
 		
@@ -328,9 +334,11 @@ public class ApprovalInCritical extends BasePage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
 		 Thread.sleep(3000); 
 						//Closing the View Document
-		 CFOcountPOM.clickExportImage().click();
-			Thread.sleep(4000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");
+//		 CFOcountPOM.clickExportImage().click();
+//			Thread.sleep(4000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");
+		 AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+			Thread.sleep(3000);
 			Thread.sleep(4000);
 			By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td/a[1]");
 			
@@ -1214,7 +1222,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	@Test(priority = 16)
-	void BargraphBSECriticalStatutory() throws InterruptedException
+	void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
 		
@@ -1313,7 +1321,7 @@ public class ApprovalInCritical extends BasePage {
 	
 	
 	@Test(priority =17)
-	void BargraphBSEHighStatutory() throws InterruptedException
+	void BargraphBSEHighStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
 		
@@ -1412,7 +1420,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	@Test(priority = 18)
-	void BargraphBSEMediumStatutory() throws InterruptedException
+	void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
 		
@@ -1508,7 +1516,7 @@ public class ApprovalInCritical extends BasePage {
 	}
 	
 	@Test(priority = 19)
-	void BargraphBSELowStatutory() throws InterruptedException
+	void BargraphBSELowStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
 		
@@ -2146,7 +2154,7 @@ public class ApprovalInCritical extends BasePage {
 		
 		
 //	@Test(priority = 0)
-	void DepartmentSummaryInternal() throws InterruptedException
+	void DepartmentSummaryInternal() throws InterruptedException, IOException
 	{
 		Thread.sleep(500);		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;

@@ -2738,7 +2738,7 @@ public class DeptcountInternal extends BasePage  {
 	}
 	
 	@Test(priority = 39)
-	void Upcoming_PieChartPeriod() throws InterruptedException
+	void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 	

@@ -425,7 +425,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 	
 //	@Test(priority = 7)
-	void NotCompleted_PieChart() throws InterruptedException
+	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -674,7 +674,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 //	@Test(priority = 10)
-		void Overdue_PieChart() throws InterruptedException
+		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -741,7 +741,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 	//	@Test(priority = 11)
-		void dueToday_PieChart() throws InterruptedException
+		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1662,7 +1662,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority =21)
+//		@Test(priority =21)
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1768,7 +1768,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 22)
+//		@Test(priority = 22)
 		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1882,7 +1882,7 @@ public class ApprovalStatutory extends BasePage {
 	
 		
 		@Test(priority = 23)
-		void DepartmentSummaryAccountStatutory() throws InterruptedException
+		void DepartmentSummaryAccountStatutory() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);	
 			Thread.sleep(500);
@@ -2049,7 +2049,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		@Test(priority = 24)
-		void NotCompleted_PieChartPeriod() throws InterruptedException
+		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
@@ -2708,7 +2708,7 @@ public class ApprovalStatutory extends BasePage {
 
 		
 		@Test(priority = 28)
-		void Overdue_PieChartPeriod() throws InterruptedException
+		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");

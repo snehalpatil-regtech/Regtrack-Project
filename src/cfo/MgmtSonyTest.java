@@ -465,7 +465,7 @@ int NotApplicable = Integer.parseInt(MgmtSonyMethod.Rejected().getText());	//Rea
 	}
 	
 	@Test(priority = 12)
-	void RiskSummaryCriticalStatutory() throws InterruptedException
+	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 	
 		Thread.sleep(3000);
@@ -533,7 +533,7 @@ int NotApplicable = Integer.parseInt(MgmtSonyMethod.Rejected().getText());	//Rea
 	}
 	
 	@Test(priority = 13)
-	void RiskSummaryHighStatutory() throws InterruptedException
+	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
 		Thread.sleep(3000);
@@ -600,7 +600,7 @@ int NotApplicable = Integer.parseInt(MgmtSonyMethod.Rejected().getText());	//Rea
 	}
 	
 	@Test(priority = 14)
-	void RiskSummaryMediumStatutory() throws InterruptedException
+	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -667,7 +667,7 @@ int NotApplicable = Integer.parseInt(MgmtSonyMethod.Rejected().getText());	//Rea
 	}
 	
 	@Test(priority = 15)
-	void RiskSummaryLowStatutory() throws InterruptedException
+	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'Low' Count Verification");
 		
@@ -740,7 +740,7 @@ int NotApplicable = Integer.parseInt(MgmtSonyMethod.Rejected().getText());	//Rea
 	}
 	
 	//@Test(priority = 16)
-	void DepartmentSummaryHumanResourceStatutory() throws InterruptedException
+	void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);		
 		

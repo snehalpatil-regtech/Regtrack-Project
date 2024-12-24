@@ -1447,7 +1447,7 @@ public class ApprovalcountInternal extends BasePage{
 	}
 	
 //	@Test(priority = 16)
-	void RiskSummaryCriticalInternal() throws InterruptedException
+	void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 	{
 	
 		Thread.sleep(3000);
@@ -1782,7 +1782,7 @@ public class ApprovalcountInternal extends BasePage{
 			
 		
 //	@Test(priority = 20)
-	void DepartmentSummaryInternal() throws InterruptedException
+	void DepartmentSummaryInternal() throws InterruptedException, IOException
 	{
 		Thread.sleep(500);		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;

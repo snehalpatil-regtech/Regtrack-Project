@@ -138,7 +138,7 @@ public class OverdueCount extends BasePage
 	}
 	
 	
-/*	@Test(priority = 2)//pass     Critical
+	@Test(priority = 2)//pass     Critical
 	void Upcoming_ComplianceStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Statutory Upcoming Compliance Verification");
@@ -378,7 +378,7 @@ public class OverdueCount extends BasePage
 		
 		extent.endTest(test);
 		extent.flush();
-	}*/
+	}
 	
 /*	@Test(priority = 9) //pass
 	void StatutoryOverdueMitigationplanM() throws InterruptedException, IOException

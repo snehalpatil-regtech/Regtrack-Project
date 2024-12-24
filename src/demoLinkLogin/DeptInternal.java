@@ -1309,7 +1309,7 @@ package demoLinkLogin;
 			}
 			
 			@Test(priority = 18)
-			void RiskSummaryCriticalInternal() throws InterruptedException
+			void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 			{
 			
 				Thread.sleep(3000);
@@ -2553,7 +2553,7 @@ package demoLinkLogin;
 			}
 			
 		//	@Test(priority = 30)
-			void Upcoming_PieChartPeriod() throws InterruptedException
+			void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 			

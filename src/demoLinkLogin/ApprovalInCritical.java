@@ -1216,7 +1216,7 @@ package demoLinkLogin;
 		}
 		
 //		@Test(priority = 16)
-		void BargraphBSECriticalStatutory() throws InterruptedException
+		void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
 			
@@ -1315,7 +1315,7 @@ package demoLinkLogin;
 		
 		
 //		@Test(priority =17)
-		void BargraphBSEHighStatutory() throws InterruptedException
+		void BargraphBSEHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
 			
@@ -1414,7 +1414,7 @@ package demoLinkLogin;
 		}
 		
 //		@Test(priority = 18)
-		void BargraphBSEMediumStatutory() throws InterruptedException
+		void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
 			
@@ -1510,7 +1510,7 @@ package demoLinkLogin;
 		}
 		
 //		@Test(priority = 19)
-		void BargraphBSELowStatutory() throws InterruptedException
+		void BargraphBSELowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
 			
@@ -2148,7 +2148,7 @@ package demoLinkLogin;
 			
 			
 //		@Test(priority = 0)
-		void DepartmentSummaryInternal() throws InterruptedException
+		void DepartmentSummaryInternal() throws InterruptedException, IOException
 		{
 			Thread.sleep(500);		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3089,7 +3089,7 @@ package demoLinkLogin;
 		}
 		
 		//@Test(priority = 28)
-		void Upcoming_PieChartPeriod() throws InterruptedException
+		void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 		

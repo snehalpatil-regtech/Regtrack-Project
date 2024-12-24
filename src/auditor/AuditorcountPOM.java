@@ -5588,7 +5588,7 @@ try {
 		{
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 	        
-	        js.executeScript("window.scrollBy(0,1000)");
+	        js.executeScript("window.scrollBy(0,700)");
 	        Thread.sleep(2000); 		
 	        CFOcountPOM.readTotalItemsD().click();					//Clicking on Text of total items just to scroll down.
 			Thread.sleep(1000);
@@ -5622,7 +5622,14 @@ try {
 	File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
 
 	Thread.sleep(1000);
-	CFOcountPOM.clickExportImage().click();	Thread.sleep(9000);					//Clicking on 'Excel Report' image.
+	try {
+	CFOcountPOM.clickExportImage().click();
+	Thread.sleep(9000);	
+	}
+	catch(Exception e)
+	{
+		CFOcountPOM.clickExportImage2().click();
+	}
 	test.log(LogStatus.PASS, "File downloaded successfully.");
 
 	Thread.sleep(5500);

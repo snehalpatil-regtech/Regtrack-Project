@@ -13473,6 +13473,576 @@ Thread.sleep(2000);
 	Thread.sleep(5000);
 
 	}
+	
+	public static void IsSmetaColumnDept(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Overdue"))
+		{			
+			Thread.sleep(2000);
+			CFOcountPOM.clickFinanceOverdueDept().click();	
+			}
+		else if(Status.equalsIgnoreCase("Closed Delayed"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickClosedDelayedDept().click();	
+				}
+		else if(Status.equalsIgnoreCase("Closed Timely"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickClosedTimelyDpt().click();	
+					}
+		else if(Status.equalsIgnoreCase("Pending For Review"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickPendingReviewDept().click();
+					}
+		else if(Status.equalsIgnoreCase("In Progress"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickHumanInprogress().click();
+					}
+		else if(Status.equalsIgnoreCase("Rejected"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickHumanRejected().click();
+					}
+		else if(Status.equalsIgnoreCase("Not Applicable"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickHumanNotApplicable().click();
+					}
+		
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Overdue"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Overdue - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Overdue - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("Closed Delayed"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Delayed - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Delayed - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Closed Timely"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Closed Timely - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Closed Timely - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Pending For Review"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Pending For Review - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Pending For Review - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("In Progress"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "In Progress - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "In Progress - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Rejected"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Rejected - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Rejected - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Not Applicable"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Not Applicable - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Not Applicable - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	
+	public static void IsSmetaColumnRiskSummNotComp(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{						
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskCriticalNotCompletedDept().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskHighNotCompletedDept().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskMediumNotCompletedDept().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskLowNotCompletedDept().click();
+					}
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	
+	
+	public static void IsSmetaColumnRiskSummCloDel(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{						
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskCriticalClosedDelayedDpt().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskHighClosedDelayedDpt().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskMediumClosedDelayedDpt().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskLowClosedDelayedDpt().click();
+					}
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	
+	public static void IsSmetaColumnRiskSummCloTimely(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{									
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskCriticalClosedTimelyDpt().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskHighClosedTimelyDpt().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskMediumClosedTimelyDpt().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskLowClosedTimelyDpt().click();
+					}
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
+	public static void IsSmetaColumnRiskNotAppli(ExtentTest test, String Status)throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			Thread.sleep(500);
+			Actions action = new Actions(getDriver());
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		Thread.sleep(2000);
+		if(Status.equalsIgnoreCase("Critical"))
+		{						
+						
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskCriticalNotApplicableDE().click();	
+			}
+		else if(Status.equalsIgnoreCase("High"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskHighNotApplicableDE().click();	
+				}
+		else if(Status.equalsIgnoreCase("Medium"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskMediumNotApplicableDE().click();	
+					}
+		else if(Status.equalsIgnoreCase("Low"))
+		{
+			Thread.sleep(2000);
+			CFOcountPOM.clickRiskLowNotApplicableDE().click();
+					}
+		
+		Thread.sleep(2000);
+//		getDriver().switchTo().parentFrame();
+//		Thread.sleep(3000);
+		
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
+		Thread.sleep(8000);
+		try {
+	           // Set zoom level to 50% (0.5) for zooming out
+	          setZoomLevel(getDriver(), 0.6);
+	           // Wait to observe the effect
+	          Thread.sleep(2000);
+
+	       // Set zoom level back to 100% (1.0) to reset to normal        
+			 // setZoomLevel(getDriver(), 1.0);
+			} catch (InterruptedException e) {
+		          e.printStackTrace();
+		        }
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("grid")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
+
+		Thread.sleep(1000);
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);
+		MgmtSonyMethod.ClickTri1().click();
+	     Thread.sleep(1000);
+	     MgmtSonyMethod.Columns().click();
+	     Thread.sleep(5000);
+		OverduePOM.IsSMETAColumnCheckBox().click();
+		Thread.sleep(2000);
+	//	 MgmtSonyMethod.ClickTri1().click();
+	 //    Thread.sleep(1000);
+	     	     
+	     
+	     Thread.sleep(2000);
+			if(Status.equalsIgnoreCase("Critical"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, " Critical - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, " Critical - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				
+			}
+			else if(Status.equalsIgnoreCase("High"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "High - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "High - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}				}
+			else if(Status.equalsIgnoreCase("Medium"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Medium - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Medium - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			else if(Status.equalsIgnoreCase("Low"))
+			{
+				if(CFOcountPOM.IsSmetaColumn().isDisplayed()) {
+					test.log(LogStatus.PASS, "Low - The additional column of \"Is SMETA Compliance \" display on the gird.");
+				}else {
+					test.log(LogStatus.FAIL, "Low - The additional column of \"Is SMETA Compliance\" not display on the gird.");
+				}					//Clicking on Critical value of Pie Chart of 'Not Completed'.
+			}
+			
+		
+Thread.sleep(6000);
+
+getDriver().switchTo().parentFrame();
+Thread.sleep(3000);
+CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
+Thread.sleep(2000);
+
+	Thread.sleep(5000);
+
+	}
 	public static void IsSMETA(ExtentTest test, String Status)throws InterruptedException
 	{
 //		test = extent.startTest("Pie Chart - Performance Summary - Completion Status- 'Is SMETA Column added' Verification");				

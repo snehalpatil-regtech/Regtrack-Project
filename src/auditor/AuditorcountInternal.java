@@ -1630,7 +1630,7 @@ public class AuditorcountInternal extends BasePage {
 	
 	@Test(priority = 19)
 
-	void UpcomingPieChartPeriod() throws InterruptedException
+	void UpcomingPieChartPeriod() throws InterruptedException, IOException
 	{
 		//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 	

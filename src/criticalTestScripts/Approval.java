@@ -275,7 +275,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 5)
-		void CompliancesCountMatch() throws InterruptedException
+		void CompliancesCountMatch() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Count by Clicking on 'Compliances'");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -292,9 +292,11 @@ public class Approval extends BasePage {
 			WebDriverWait wait = new WebDriverWait( getDriver(), (60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			Thread.sleep(3000);
-			CFOcountPOM.clickExportImage().click();                    //export excel
-			Thread.sleep(5000);
-			test.log(LogStatus.PASS, "Excel file Export Successfully");	
+//			CFOcountPOM.clickExportImage().click();                    //export excel
+//			Thread.sleep(5000);
+//			test.log(LogStatus.PASS, "Excel file Export Successfully");	
+			AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+			Thread.sleep(3000);
 			/*CFOcountPOM.clickLocation().click();
 			Thread.sleep(500);
 			CFOcountPOM.clickElectricity().click();
@@ -505,7 +507,7 @@ public class Approval extends BasePage {
 		}
 		
       	@Test(priority = 12)
-		void NotCompleted_PieChart() throws InterruptedException
+		void NotCompleted_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -579,7 +581,7 @@ public class Approval extends BasePage {
 		
 		
 		@Test(priority = 13)
-		void ClosedDelayed_PieChart() throws InterruptedException
+		void ClosedDelayed_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -650,7 +652,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 14)
-		void ClosedTimely_PieChart() throws InterruptedException
+		void ClosedTimely_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -721,7 +723,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 15)
-		void NotApplicable_PieChart() throws InterruptedException
+		void NotApplicable_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
@@ -794,7 +796,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 16)
-		void Overdue_PieChart() throws InterruptedException
+		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -869,7 +871,7 @@ public class Approval extends BasePage {
 		}
 		
 	@Test(priority = 17)
-		void dueToday_PieChart() throws InterruptedException
+		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 			
@@ -968,7 +970,7 @@ public class Approval extends BasePage {
 		
 			
 		@Test(priority = 18)
-		void pendingForReview_PieChart() throws InterruptedException
+		void pendingForReview_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 		
@@ -1053,7 +1055,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 19)
-		void inProgress_PieChart() throws InterruptedException
+		void inProgress_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
 			Thread.sleep(3000);
@@ -1138,7 +1140,7 @@ public class Approval extends BasePage {
 		
 		
 		@Test(priority = 20)
-		void rejected_PieChart() throws InterruptedException
+		void rejected_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
 		
@@ -1637,7 +1639,7 @@ public class Approval extends BasePage {
 	
 		
 		@Test(priority = 25)
-		void RiskSummaryCriticalStatutory() throws InterruptedException
+		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 		
 			Thread.sleep(3000);
@@ -1723,7 +1725,7 @@ public class Approval extends BasePage {
 		
 		
 		@Test(priority = 26)
-		void RiskSummaryHighStatutory() throws InterruptedException
+		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
 			
@@ -1794,7 +1796,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 27)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			CFOcountPOM.YearTodate().click();
@@ -1864,7 +1866,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 28)//not data
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			
@@ -1938,7 +1940,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 29)
-		void DepartmentSummaryAccountStatutory() throws InterruptedException
+		void DepartmentSummaryAccountStatutory() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2042,7 +2044,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 30)
-		void NotCompleted_PieChartPeriod() throws InterruptedException
+		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
@@ -2161,7 +2163,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 31)
-		void ClosedDelayed_PieChartPeriod() throws InterruptedException
+		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 			
@@ -2275,7 +2277,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 32)
-		void ClosedTimely_PieChartPeriod() throws InterruptedException
+		void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 			
@@ -2391,7 +2393,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 33)
-		void NotApplicable_PieChartPeriod() throws InterruptedException
+		void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 			
@@ -2648,7 +2650,7 @@ public class Approval extends BasePage {
 			}
 			else
 			{
-				test.log(LogStatus.PASS, " 'Rejected' Compliance Count = "+rejectedValue);
+				test.log(LogStatus.PASS, " 'Upcoming' Compliance Count = "+rejectedValue);
 				Thread.sleep(2000);
 				getDriver().switchTo().parentFrame();
 				Thread.sleep(2000);
@@ -2666,7 +2668,7 @@ public class Approval extends BasePage {
 
 		
 		@Test(priority = 35)
-		void Overdue_PieChartPeriod() throws InterruptedException
+		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -2785,7 +2787,7 @@ public class Approval extends BasePage {
 		}
 			
 		@Test(priority = 36)
-		void pendingForReview_PieChartPeriod() throws InterruptedException
+		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 		
@@ -2911,7 +2913,7 @@ public class Approval extends BasePage {
 		}
 		
 	    @Test(priority = 37)
-		void inProgress_PieChartPeriod() throws InterruptedException
+		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
 			
@@ -3027,7 +3029,7 @@ public class Approval extends BasePage {
 		}
 		
 		@Test(priority = 38)
-		void rejected_PieChartPeriod() throws InterruptedException
+		void rejected_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
 		
@@ -3147,8 +3149,8 @@ public class Approval extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 39)
-		void complianceCalendar() throws InterruptedException
+		@Test(priority = 0)
+		void complianceCalendar() throws InterruptedException, IOException
 		{
 			test = extent.startTest("compliance Calendar Verifications");
 			
@@ -3156,17 +3158,19 @@ public class Approval extends BasePage {
 			WebDriverWait wait = new WebDriverWait( getDriver(),(70));
 		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,3600)");					//Scrolling down window by 2600 px.
+			js.executeScript("window.scrollBy(0,3900)");					//Scrolling down window by 2600 px.
 		//	js.executeScript("window.scrollBy(0,600)");
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='collapsePerformerCalender']")));
 			Thread.sleep(5000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("calframe"));	//Wait until frame get visible and switch to it.
 			Thread.sleep(5000);
-			 CFOcountPOM.clickExportImage().click();
-			 Thread.sleep(2000);
-				test.log(LogStatus.PASS, "Excel file Export Successfully");
-				Thread.sleep(3000);
+//			 CFOcountPOM.clickExportImage().click();
+//			 Thread.sleep(2000);
+//				test.log(LogStatus.PASS, "Excel file Export Successfully");
+//				Thread.sleep(3000);
+			AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
+			Thread.sleep(3000);
 	By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]/a");
 
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));

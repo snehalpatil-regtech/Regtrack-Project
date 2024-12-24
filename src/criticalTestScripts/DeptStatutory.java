@@ -1274,7 +1274,7 @@ public class DeptStatutory extends BasePage {
 			{
 				test.log(LogStatus.PASS, "Not Applicable Compliance Count = "+ Not_Applicable + ".");
 			}
-	
+
 		
 		Thread.sleep(2000);
 		

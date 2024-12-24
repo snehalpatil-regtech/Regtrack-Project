@@ -956,7 +956,7 @@ package demoLinkLogin;
 		
 		
 		@Test(priority = 11)
-		void BargraphBSECriticalStatutory() throws InterruptedException
+		void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
 			
@@ -1053,7 +1053,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 12)
-		void BargraphBSEHighStatutory() throws InterruptedException
+		void BargraphBSEHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
 			
@@ -1150,7 +1150,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 13)
-		void BargraphBSEMediumStatutory() throws InterruptedException
+		void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
 			
@@ -1245,7 +1245,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority =14)
-		void BargraphBSELowStatutory() throws InterruptedException
+		void BargraphBSELowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
 			
@@ -1339,7 +1339,7 @@ package demoLinkLogin;
 		}
 
 		@Test(priority = 15)
-		void RiskSummaryCriticalInternal() throws InterruptedException
+		void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 		{
 			//.navigate().refresh();
 			CFOcountPOM.YearTodate().click();
@@ -1532,7 +1532,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 17)
-		void RiskSummaryMediumStatutory() throws InterruptedException
+		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
 			
@@ -1633,7 +1633,7 @@ package demoLinkLogin;
 		}
 		
 		@Test(priority = 18)
-		void RiskSummaryLowStatutory() throws InterruptedException
+		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
 			
@@ -2348,7 +2348,7 @@ package demoLinkLogin;
 		
 		@Test(priority = 0)
 
-		void UpcomingPieChartPeriod() throws InterruptedException
+		void UpcomingPieChartPeriod() throws InterruptedException, IOException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 		
@@ -2951,7 +2951,7 @@ package demoLinkLogin;
 		}
 		
 //		@Test(priority = 28)
-		void Upcoming_PieChartPeriod() throws InterruptedException
+		void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 		

@@ -579,7 +579,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 9)
-	void ClosedTimely_PieChart() throws InterruptedException
+	void ClosedTimely_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -659,7 +659,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 10)
-	void ClosedDelayed_PieChart() throws InterruptedException
+	void ClosedDelayed_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 		CFOcountPOM.YearTodate().click();
@@ -739,7 +739,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 11)
-	void NotCompleted_PieChart() throws InterruptedException
+	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 		
@@ -821,7 +821,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 12)
-	void NotApplicable_PieChartIN() throws InterruptedException
+	void NotApplicable_PieChartIN() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 		Thread.sleep(1500);
@@ -913,7 +913,7 @@ public class CFOcountInternal extends BasePage
 	}
 		
 	@Test(priority = 13)
-	void Overdue_PieChartInternal() throws InterruptedException
+	void Overdue_PieChartInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		
@@ -1007,7 +1007,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 14)
-	void dueToday_PieChartInternal() throws InterruptedException
+	void dueToday_PieChartInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 	
@@ -1103,7 +1103,7 @@ public class CFOcountInternal extends BasePage
 	
 	
 	@Test(priority = 15)
-	void PFR_PieChartInternal() throws InterruptedException
+	void PFR_PieChartInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status-  'Pending for Review' Count Verification");
 		
@@ -1198,7 +1198,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 @Test(priority = 15)
-	void inProgress_PieChartInternal() throws InterruptedException
+	void inProgress_PieChartInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status-  'In Progress' Count Verification");
 		
@@ -1294,7 +1294,7 @@ public class CFOcountInternal extends BasePage
 	
 	
 @Test(priority = 16)
-	void Rejected_PieChartInternal() throws InterruptedException
+	void Rejected_PieChartInternal() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Not Completed Status- 'Rejected' Count Verification");
 		
@@ -1390,7 +1390,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 @Test(priority = 17)
-	void BargraphBSECriticalStatutory() throws InterruptedException
+	void BargraphBSECriticalStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Critical' risk");
 		
@@ -1487,7 +1487,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 18)
-	void BargraphBSEHighStatutory() throws InterruptedException
+	void BargraphBSEHighStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'High' risk");
 		
@@ -1584,7 +1584,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 19)
-	void BargraphBSEMediumStatutory() throws InterruptedException
+	void BargraphBSEMediumStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'Medium' risk");
 		
@@ -1679,7 +1679,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 20)
-	void BargraphBSELowStatutory() throws InterruptedException
+	void BargraphBSELowStatutory() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - 'Internal Audit' Count Verification with 'LOW' risk");
 		
@@ -1773,7 +1773,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 21)
-	void RiskSummaryCriticalInternal() throws InterruptedException
+	void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 	{
 	
 		Thread.sleep(3000);
@@ -2093,7 +2093,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 25)
-	void DepartmentSummaryInternal() throws InterruptedException
+	void DepartmentSummaryInternal() throws InterruptedException, IOException
 	{
 		Thread.sleep(3000);	
 		CFOcountPOM.YearTodate().click();
@@ -2219,7 +2219,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 26)
-	void ClosedTimely_PieChartPeriod() throws InterruptedException
+	void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Closed Timely' Count Verification");
 		
@@ -2320,7 +2320,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 27)
-	void ClosedDelayed_PieChartPeriod() throws InterruptedException
+	void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Closed Delayed' Count Verification");
 		Thread.sleep(2000);
@@ -2431,7 +2431,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 28)
-	void NotCompleted_PieChartPeriod() throws InterruptedException
+	void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - 'Not Completed' Count Verification");
 		
@@ -2542,7 +2542,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 29)
-	void NotApplicable_PieChartPeriod() throws InterruptedException
+	void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - Completion Status- 'Not Applicable' Count Verification");
 		Thread.sleep(1000);
@@ -2656,7 +2656,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 30)
-	void Overdue_PieChartInternalPeriod() throws InterruptedException
+	void Overdue_PieChartInternalPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status-'Overdue' Count Verification");
 		
@@ -2772,7 +2772,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 31)
-	void dueToday_PieChartPeriod() throws InterruptedException
+	void dueToday_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status-'due Today' Count Verification");
 		
@@ -2891,7 +2891,7 @@ public class CFOcountInternal extends BasePage
 	
 	
 	@Test(priority = 32)
-	void PFR_PieChartInternalPeriod() throws InterruptedException
+	void PFR_PieChartInternalPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 	
@@ -3128,7 +3128,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 34)
-	void Upcoming_PieChartPeriod() throws InterruptedException
+	void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Upcoming' Count Verification");
 	
@@ -3259,7 +3259,7 @@ public class CFOcountInternal extends BasePage
 	}
 	
 	@Test(priority = 35)
-	void Rejected_PieChartInternalPeriod() throws InterruptedException
+	void Rejected_PieChartInternalPeriod() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status- 'Rejected' Count Verification");
 		

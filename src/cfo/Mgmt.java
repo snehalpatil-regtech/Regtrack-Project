@@ -540,7 +540,7 @@
 		
 		
 //@Test(priority = 12)
-			void NotCompleted_PieChart() throws InterruptedException
+			void NotCompleted_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -639,7 +639,7 @@
 			
 			
 //@Test(priority = 13)
-			void ClosedDelayed_PieChart() throws InterruptedException
+			void ClosedDelayed_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 				
@@ -732,7 +732,7 @@
 				extent.flush();
 			}
 //@Test(priority = 14)
-			void ClosedTimely_PieChart() throws InterruptedException
+			void ClosedTimely_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -826,7 +826,7 @@
 			}
 			
 //@Test(priority = 15)
-			void NotApplicable_PieChart() throws InterruptedException
+			void NotApplicable_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
 			//	test.log(LogStatus.INFO, "Test Initiated");
@@ -937,7 +937,7 @@
 			}
 
 //@Test(priority = 17)
-			void Overdue_PieChart() throws InterruptedException
+			void Overdue_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 			//	test.log(LogStatus.INFO, "Test Initiated");
@@ -1037,7 +1037,7 @@
 				extent.flush();
 			}
 //@Test(priority = 18)
-			void dueToday_PieChart() throws InterruptedException
+			void dueToday_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 				
@@ -1136,7 +1136,7 @@
 				extent.flush();
 			}
 //@Test(priority = 19)
-			void pendingForReview_PieChart() throws InterruptedException
+			void pendingForReview_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -1238,7 +1238,7 @@
 			
 			
 // @Test(priority = 20)
-			void inProgress_PieChart() throws InterruptedException
+			void inProgress_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -1339,7 +1339,7 @@
 			}
 			
 //	@Test(priority = 21)
-			void rejected_PieChart() throws InterruptedException
+			void rejected_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
 				//test.log(LogStatus.INFO, "Test Initiated");
@@ -2405,7 +2405,7 @@
 
 			
 		@Test(priority = 31)
-		void NotCompleted_PieChartPeriod() throws InterruptedException
+		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
 			
@@ -3250,7 +3250,7 @@
 	
 	
    @Test(priority = 41)
-		void Overdue_PieChartPeriod() throws InterruptedException
+		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -3414,7 +3414,7 @@
 	}
 		
 	@Test(priority = 43)
-		void dueToday_PieChartPeriod() throws InterruptedException
+		void dueToday_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");

@@ -1315,7 +1315,7 @@ public class DeptInternal extends BasePage  {
 		}
 		
 		@Test(priority = 18)
-		void RiskSummaryCriticalInternal() throws InterruptedException
+		void RiskSummaryCriticalInternal() throws InterruptedException, IOException
 		{
 		
 			Thread.sleep(3000);
@@ -2111,7 +2111,7 @@ public class DeptInternal extends BasePage  {
 			}
 			
 			@Test(priority = 26)
-			void Upcoming_PieChartPeriod() throws InterruptedException
+			void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 			{
 			//	test = extent.startTest("Period-Pie Chart - Completion Status- ' Upcoming' Count Verification");
 			
