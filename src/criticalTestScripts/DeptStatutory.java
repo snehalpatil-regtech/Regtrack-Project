@@ -1153,7 +1153,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(4000);
 		Thread.sleep(500);		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,1300)");					//Scrolling down window by 1500 px.
+		js.executeScript("window.scrollBy(0,1500)");					//Scrolling down window by 1500 px.
 		
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
 		
@@ -1299,7 +1299,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,1800)");					//Scrolling down window by 1000 px.cfo
+		js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1000 px.cfo
 	
 		test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 		
@@ -1387,7 +1387,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,1800)");
+		js.executeScript("window.scrollBy(0,2000)");
 		//js.executeScript("window.scrollBy(0,500)");
 		Thread.sleep(3000);
 		String NotCompleted = CFOcountPOM.clickRiskHighNotCompletedDept().getText();		//Reading the Closed Timely value of Human Resource
@@ -1473,7 +1473,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,1800)");		
+		js.executeScript("window.scrollBy(0,2000)");		
 		Thread.sleep(1000);
 		String NotCompleted = CFOcountPOM.clickRiskMediumNotCompletedDept().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -1562,7 +1562,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(5000);
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		js.executeScript("window.scrollBy(0,1800)");
+		js.executeScript("window.scrollBy(0,2000)");
 		Thread.sleep(4000);
 		String NotCompleted = CFOcountPOM.clickRiskLowNotCompletedDept().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 

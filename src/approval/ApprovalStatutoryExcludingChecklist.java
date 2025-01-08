@@ -155,7 +155,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		}
 	}
 	
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -166,7 +166,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	void LocationCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Location");
@@ -262,7 +262,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 	}
 	
 	
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	void CategoriesCountMatch() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -469,7 +469,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 6)
+	@Test(priority = 6)
 	void UniqueCompliancesCountMatch() throws InterruptedException
 	{
 		test = extent.startTest(" Count by Clicking on 'Unique Compliances'");

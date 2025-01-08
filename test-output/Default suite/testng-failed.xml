@@ -3,51 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.Approval">
+      <class name="criticalTestScripts.DeptStatutory">
         <methods>
-          <include name="BargraphIndustrySpeCriticalStatutory"/>
-          <include name="Closing"/>
-          <include name="UpcomingPieChartPeriod"/>
-          <include name="ClosedTimely_PieChart"/>
-          <include name="ClosedDelayed_PieChart"/>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="SummaryofOverdueCompliances"/>
           <include name="setBrowser"/>
-          <include name="NotApplicable_PieChart"/>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="BargraphIndustrySpeHighStatutory"/>
-          <include name="DepartmentSummaryAccountStatutory"/>
-          <include name="NotCompleted_PieChart"/>
-          <include name="browserClosing"/>
-          <include name="CategoriesCountMatch"/>
-          <include name="BargraphIndustrySpeMediumStatutory"/>
-          <include name="ClosedDelayed_PieChartPeriod"/>
-          <include name="complianceCalendar"/>
-          <include name="DetailedReport"/>
-          <include name="BargraphIndustrySpeLowStatutory"/>
-          <include name="Entities"/>
-          <include name="inProgress_PieChartPeriod"/>
           <include name="Login"/>
-          <include name="RiskSummaryMediumStatutory"/>
-          <include name="clickPenaltyStatutory"/>
-          <include name="Overdue_PieChartPeriod"/>
-          <include name="UsersCountMatch"/>
+          <include name="Closing"/>
+          <include name="browserClosing"/>
+          <include name="complianceCalendar"/>
           <include name="ComplianceDocuments"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="dueToday_PieChart"/>
-          <include name="NotApplicable_PieChartPeriod"/>
-          <include name="pendingForReview_PieChartPeriod"/>
-          <include name="Overdue_PieChart"/>
-          <include name="CompliancesCountMatch"/>
-          <include name="rejected_PieChart"/>
-          <include name="LocationCount"/>
-          <include name="NotCompleted_PieChartPeriod"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="inProgress_PieChart"/>
-          <include name="pendingForReview_PieChart"/>
+          <include name="AssignmentReport"/>
+          <include name="Inprogress_PieChartPeriod"/>
+          <include name="DetailedReport"/>
+          <include name="rejected_PieChartPeriod"/>
+          <include name="UsersCountMatch"/>
         </methods>
-      </class> <!-- criticalTestScripts.Approval -->
+      </class> <!-- criticalTestScripts.DeptStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

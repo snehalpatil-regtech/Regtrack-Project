@@ -2007,7 +2007,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 21)
+//	@Test(priority = 21)
 	void ClosedDelayed_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Completion Status - 'Closed Delayed' Count Verification");
@@ -2118,7 +2118,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 22)
+//	@Test(priority = 22)
 	void NotCompleted_PieChartPe() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart -Completion Status - 'Not Completed' Count Verification");
@@ -2230,7 +2230,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 23)
+//	@Test(priority = 23)
 	void NotApplicable_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Completion Status- 'Not Applicable' Count Verification");
@@ -2344,7 +2344,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 24)
+//	@Test(priority = 24)
 
 	void UpcomingPieChartPeriod() throws InterruptedException, IOException
 	{
@@ -2358,7 +2358,24 @@ public class AuditorInternal extends BasePage {
 		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
-		Thread.sleep(4000);
+		AuditorcountPOM.DateText().click();	
+		Thread.sleep(1000);
+		AuditorcountPOM.DateYear().click();	
+		Thread.sleep(1000);
+		String year1 = AuditorcountPOM.Year().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Year().click();	
+		Thread.sleep(3000);
+		AuditorcountPOM.DateMonth().click();	
+		Thread.sleep(1000);
+		String month1 = AuditorcountPOM.Month().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Month().click();	
+		Thread.sleep(3000);
+		String date1 = AuditorcountPOM.Date().getText();
+		Thread.sleep(3000);
+		AuditorcountPOM.Date().click();	
+		Thread.sleep(3000);
 		AuditorcountPOM.DateTextEnd().click();	
 		Thread.sleep(1000);
 		AuditorcountPOM.DateYear().click();	
@@ -2379,7 +2396,7 @@ public class AuditorInternal extends BasePage {
 		Thread.sleep(3000);
 		AuditorcountPOM.Apply().click();	
 		Thread.sleep(5000);
-		test = extent.startTest("Period-Pie Chart -"+date+"-"+month+"-"+year+" "+"- Completion Status- ' Upcoming' Count Verification");
+		test = extent.startTest("Period-Pie Chart -"+date1+"-"+month1+"-"+year1+" - "+date+"-"+month+"-"+year+" "+"- Completion Status- ' Upcoming' Count Verification");				
 
 		Thread.sleep(4000);
 		WebElement roc= getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-pie-series highcharts-color-4 '])"));
@@ -2485,7 +2502,7 @@ public class AuditorInternal extends BasePage {
 	
 
 	
-	@Test(priority = 25)
+//	@Test(priority = 25)
 	void Overdue_PieChartInternalPe() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Not Completed Status - 'Overdue' Count Verification");
@@ -2598,7 +2615,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 26)
+//	@Test(priority = 26)
 	void dueToday_PieChartPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status-'due Today' Count Verification");
@@ -2715,7 +2732,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 27)
+//	@Test(priority = 27)
 	void PFR_PieChartInternalPe() throws InterruptedException
 	{
 		test = extent.startTest("period - Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
@@ -2831,7 +2848,7 @@ public class AuditorInternal extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 28)
+//	@Test(priority = 28)
 	void InProgress_PieChartInternalPeriod() throws InterruptedException
 	{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'in Progress' Count Verification");

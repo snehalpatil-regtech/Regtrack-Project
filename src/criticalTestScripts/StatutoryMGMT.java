@@ -110,6 +110,7 @@ public class StatutoryMGMT extends BasePage {
 			
 		}
 	}
+	
 	@Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
