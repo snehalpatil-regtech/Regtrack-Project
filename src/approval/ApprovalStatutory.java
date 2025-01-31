@@ -142,10 +142,10 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 	}
-	
+	/*
 	
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -156,7 +156,7 @@ public class ApprovalStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 2)
+	@Test(priority = 2)
 	void LocationCount() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Location");
@@ -165,9 +165,9 @@ public class ApprovalStatutory extends BasePage {
 		
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
-//	@Test(priority = 4)
+	//@Test(priority = 4)
 		void CategoriesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -387,7 +387,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 9)
+//		@Test(priority = 9)
 			void clickPenaltyStatutory() throws InterruptedException
 			{
 				test = extent.startTest("'Penalty' ");
@@ -470,7 +470,7 @@ public class ApprovalStatutory extends BasePage {
 				extent.flush();
 			}
 
-//		@Test(priority = 10)
+	//	@Test(priority = 10)
 		void PenaltyMultipleFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
@@ -481,7 +481,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 
-//		@Test(priority = 10)
+	//	@Test(priority = 10)
 		void PenaltyMultipleFilterInterest() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty- Interest box Popup selection wise filter working or not.");
@@ -803,7 +803,7 @@ public class ApprovalStatutory extends BasePage {
 	}
 
 		
-	//	@Test(priority = 16)
+		@Test(priority = 16)
 		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -1026,7 +1026,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 19)
+	//	@Test(priority = 19)
 		void inProgress_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1096,7 +1096,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 20)
+		@Test(priority = 20)
 		void rejected_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");

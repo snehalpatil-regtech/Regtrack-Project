@@ -137,7 +137,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 	}
 	
-// 	@Test(priority = 2)
+// @Test(priority = 2)
 	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -504,7 +504,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 
 		
-//	@Test(priority = 7)
+	@Test(priority = 7)
 	void Overdue_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -971,7 +971,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 12)
+	@Test(priority = 12)
 	void NotCompletion_IsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Performance Summary - Not Completion Status- 'Is SMETA Column added' Verification");					
@@ -1084,7 +1084,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 		
 		
-//		@Test(priority = 14)
+		@Test(priority = 14)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1190,7 +1190,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 
 		
-//	    @Test(priority = 15)
+	    @Test(priority = 15)
 
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 		{
@@ -1290,7 +1290,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//	   @Test(priority = 16)
+	   @Test(priority = 16)
 
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
@@ -1396,7 +1396,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	//	@Test(priority = 17)
+		@Test(priority = 17)
 		void OverallFunIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Completion Status- Overall Function - 'Is SMETA Column added' Verification");					
@@ -1407,7 +1407,7 @@ public class AuditorcountStatutory extends BasePage {
 		}
 
 	
-//	@Test(priority = 18)
+	@Test(priority = 18)
 	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 		Thread.sleep(2000);
@@ -1501,7 +1501,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 19)
+	@Test(priority = 19)
 	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1598,7 +1598,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	//	@Test(priority = 20)
+		@Test(priority = 20)
 
 	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
@@ -1700,7 +1700,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 21)
+	@Test(priority = 21)
 
 	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
@@ -1804,7 +1804,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 	
-//	@Test(priority = 22)
+	@Test(priority = 22)
 	void RiskSummaryFilterNA() throws InterruptedException, IOException
 	{
 		test = extent.startTest("To check whether the filters of Location,period,FY,Risk,User,Start Date,End Date,Act,Category,Compliance Id,Status,License Type,Mitigation plan are working on the graph of Risk Summary - Not applicable Status or not?");
@@ -1814,7 +1814,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-//	@Test(priority = 23)
+	@Test(priority = 23)
 		void RiskSummIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Risk Summary graph - 'Is SMETA Column added' Verification");					
@@ -1824,7 +1824,7 @@ public class AuditorcountStatutory extends BasePage {
 			extent.flush();
 		}
 
-//	@Test(priority = 24)
+	@Test(priority = 24)
 
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException, IOException
 	{
@@ -1969,7 +1969,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 	
-//	@Test(priority = 35)
+	@Test(priority = 35)
 	void DepartSummIsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - Department Summary graph - 'Is SMETA Column added' Verification");					
@@ -1979,7 +1979,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 	}
 
-//	@Test(priority = 26)
+	@Test(priority = 26)
 
 	void NotCompleted_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2100,7 +2100,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 27)
+	@Test(priority = 27)
 
 	void ClosedDelayed_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2222,7 +2222,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 28)
+	@Test(priority = 28)
 
 	void ClosedTimely_PieChartPe() throws InterruptedException, IOException
 	{
@@ -2346,7 +2346,7 @@ public class AuditorcountStatutory extends BasePage {
 	}
 	
 
-//	@Test(priority = 29)
+	@Test(priority = 29)
 
 	void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 	{
@@ -2468,7 +2468,7 @@ public class AuditorcountStatutory extends BasePage {
 		extent.flush();
 		
 	}	
-//	@Test(priority = 30)
+	@Test(priority = 30)
 
 	void UpcomingPieChartPeriod() throws InterruptedException
 	{
@@ -4720,7 +4720,7 @@ public class AuditorcountStatutory extends BasePage {
 				extent.flush();
 			}
 			
-	       @Test(priority = 81)
+	       @Test(priority = 0)
 			void DetailedReportDA() throws InterruptedException, IOException
 			{
 				test = extent.startTest("my Report - Detailed  report - To check that the 3 new status (Deviation Applied, Deviation Approved, Deviation Rejected) are reflects or not in the status dropdown on the grid of my report page?");
@@ -4731,7 +4731,7 @@ public class AuditorcountStatutory extends BasePage {
 				extent.flush();
 			}
 	       
-			@Test(priority = 82)
+			@Test(priority = 1)
 			void PerformReviewEmailCol() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Detailed Report - Performer Email column and Reviewer Email column Visible on grid Verification. ");
@@ -4743,7 +4743,7 @@ public class AuditorcountStatutory extends BasePage {
 			}
 			
 
-			@Test(priority = 83)
+			@Test(priority = 2)
 			void PerformReviewEmailColIn() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Detailed Report - Internal - Performer Email column and Reviewer Email column Visible on grid Verification. ");

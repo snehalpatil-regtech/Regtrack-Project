@@ -119,7 +119,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 	
-	@Test(priority = 2)
+//	@Test(priority = 0)
 	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -194,6 +194,15 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(NotCompletedValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -209,7 +218,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void ClosedDelayed_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -283,6 +292,16 @@ public class AuditorStatutory extends BasePage {
 			
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+			if(ClosedDelayedValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -290,12 +309,14 @@ public class AuditorStatutory extends BasePage {
 			
 			Thread.sleep(2000);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	//Clicking on Dashboard
+			
 		}
+		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-	@Test(priority = 4)
+//	@Test(priority = 4)
 	void ClosedTimely_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -368,6 +389,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(ClosedTimelyValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -375,13 +406,15 @@ public class AuditorStatutory extends BasePage {
 			
 			Thread.sleep(3000);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	//Clicking on Dashboard
+			
 		}
+		
 		extent.endTest(test);
 		extent.flush();
 		
 	}
 	
-	@Test(priority = 5)
+//	@Test(priority = 5)
 	void NotApplicable_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -461,6 +494,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(3000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(4000);
+			if(NotApplicableValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Not Applicable Count="+NotApplicableValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Not Applicable Count="+NotApplicableValue+" | Sum of Total Risk Count="+total);
+			}//Clicking on Dashboard
 		}
 		else
 		{
@@ -470,13 +513,15 @@ public class AuditorStatutory extends BasePage {
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	//Clicking on Dashboard
 			
 			Thread.sleep(3000);
-			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			performer.OverduePOM.clickDashboard().click();	
+			
 		}
+		
 		extent.endTest(test);
 		extent.flush();
 	}
 		
-	@Test(priority = 6)
+//	@Test(priority = 6)
 	void Overdue_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -553,6 +598,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			if(OverdueValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -563,13 +618,14 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			
 		}
 		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-	@Test(priority = 7)
+//	@Test(priority = 7)
 	void dueToday_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -646,6 +702,17 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(3000);
+		
+		if(dueTodayValue == total)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+		}
 		}
 		else
 		{
@@ -662,7 +729,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	void pendingForReview_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -739,6 +806,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			if(pendingForReviewValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Pending For Review Count="+pendingForReviewValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Pending For Review Count="+pendingForReviewValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -755,7 +832,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 	
-	@Test(priority = 9)
+//	@Test(priority = 9)
 	void inProgress_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -831,6 +908,16 @@ public class AuditorStatutory extends BasePage {
 		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+			if(inProgressValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of In Progress Count="+inProgressValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of In Progress Count="+inProgressValue+" | Sum of Total Risk Count="+total);
+			}
 	
 		}
 		else
@@ -848,7 +935,7 @@ public class AuditorStatutory extends BasePage {
 		extent.flush();
 	}
 
-	@Test(priority = 10)
+//	@Test(priority = 10)
 	void rejected_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -924,6 +1011,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(2000);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			if(rejectedValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Rejected Count="+rejectedValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Rejected Count="+rejectedValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -1029,6 +1126,16 @@ public class AuditorStatutory extends BasePage {
 			Actions actions = new Actions(getDriver());
 			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 			Thread.sleep(2000);
+			if(IndustrySpeCritical == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+IndustrySpeCritical+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+IndustrySpeCritical+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 		}else
 			{
 				test.log(LogStatus.PASS, "'Commercial - Critical' Count = "+IndustrySpeCritical);
@@ -1133,6 +1240,17 @@ public class AuditorStatutory extends BasePage {
 		
 			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 			Thread.sleep(3000);
+			
+			if(IndustrySpeHigh == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeHigh+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeHigh+" | Sum of Total Risk Count="+total);
+			}//Clicking on Dashboard
 		}
 		else
 		{
@@ -1234,6 +1352,16 @@ public class AuditorStatutory extends BasePage {
 			Actions actions = new Actions(getDriver());
 			actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 			Thread.sleep(2000);
+			if(IndustrySpeMedium == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeMedium+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeMedium+" | Sum of Total Risk Count="+total);
+			}//Clicking on Dashboard
 		}
 		else
 		{
@@ -1337,6 +1465,16 @@ public class AuditorStatutory extends BasePage {
 			Thread.sleep(500);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			if(IndustrySpeLow == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeLow+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeLow+" | Sum of Total Risk Count="+total);
+			}//Clicking on Dashboard
 		}
 		else
 		{
@@ -1354,11 +1492,124 @@ public class AuditorStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-	
-	
-	
-	
-	@Test(priority = 15)
+//  @Test(priority = 15)
+	void riskSummaryCriticalNotCompleted() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary count match with Detailed Report Count Verification");
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+    	int riskSummaryCriticalNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskCriticalNotCompleted().getText());
+    	String risk = CFOcountPOM.clickRiskHighNotCompleted().getText();
+    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+		int riskSummaryHighNotCompleted = Integer.parseInt(risk);  	
+		
+    	int riskSummaryMediumNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskMediumNotCompleted().getText());
+    	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+    	
+    	if(riskSummaryCriticalNotCompleted > 0)
+		{
+			
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical", riskSummaryCriticalNotCompleted);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Critical - Not Completed' Count = "+riskSummaryCriticalNotCompleted);
+		}
+    	if(riskSummaryHighNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "High", riskSummaryHighNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'High - Not Completed' Count = "+riskSummaryHighNotCompleted);
+		}
+    	if(riskSummaryMediumNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Medium", riskSummaryMediumNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+riskSummaryMediumNotCompleted);
+		}
+    	if(riskSummaryLowNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Low", riskSummaryLowNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+riskSummaryLowNotCompleted);
+		}
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+	 @Test(priority = 0)
+		void riskSummaryCriticalClosedDelayed() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Risk summary Closed Delayed count match with Detailed Report Count Verification");
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+			js.executeScript("window.scroll(0,1300)");
+			Thread.sleep(3000);
+	    	int riskSummaryCriticalclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedDelayed().getText());
+	    	String risk = CFOcountPOM.clickRiskHighClosedDelayed().getText();
+	    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+			int riskSummaryHighclosedDelayed = Integer.parseInt(risk);  	
+			
+	    	int riskSummaryMediumclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayed().getText());
+	    	int riskSummaryLowclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());
+	    	
+	    	if(riskSummaryCriticalclosedDelayed > 0)
+			{
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+riskSummaryCriticalclosedDelayed);
+			}
+	    	if(riskSummaryHighclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'High - Closed Delayed' Count = "+riskSummaryHighclosedDelayed);
+			}
+	    	if(riskSummaryMediumclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'Medium - Closed Delayed' Count = "+riskSummaryMediumclosedDelayed);
+			}
+	    	if(riskSummaryLowclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+riskSummaryLowclosedDelayed);
+			}
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+
+//	@Test(priority = 16)
 	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 		Thread.sleep(2000);
@@ -1376,6 +1627,10 @@ public class AuditorStatutory extends BasePage {
 		test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 		
 		Thread.sleep(500);
+		String Critical = CFOcountPOM.TotalCountRiskSummaryCritical().getText();		//Reading the Closed Timely value of Human Resource
+		Critical = Critical.replaceAll(" ","");									//Removing all white spaces from string. 
+		int CriticalTotalCount = Integer.parseInt(Critical);
+				
 		String NotCompleted = CFOcountPOM.clickRiskCriticalNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int RiskCritical_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1434,8 +1689,6 @@ public class AuditorStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Not Applicable' Count = "+RiskCritical_NotApplicable);
 		}
-		
-		
 		Thread.sleep(3000);
 		int RiskCritical_DueToday = Integer.parseInt(CFOcountPOM.clickRiskCriticalDueToday().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskCritical_DueToday > 0)
@@ -1448,12 +1701,23 @@ public class AuditorStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_DueToday);
 		}
+		int total = RiskCritical_NotCompleted + RiskCritical_ClosedDelayed + RiskCritical_ClosedTimely + RiskCritical_NotApplicable + RiskCritical_DueToday;				//Calculating the values to match with High value of Labour.
 		
+		if(CriticalTotalCount == total)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "Total of Critical Count="+CriticalTotalCount+" | Sum of Total Status Count="+total);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "Total of Critical Count="+CriticalTotalCount+" | Sum of Total Status Count="+total);
+		}//Clicking on Dashboard
 		extent.endTest(test);
 		extent.flush();
 	}
 	
-	@Test(priority = 16)
+//	@Test(priority = 17)
 	void RiskSummaryHighStatutory() throws InterruptedException, IOException
 	{		
 		test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1469,6 +1733,12 @@ public class AuditorStatutory extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,1200)");	
 		Thread.sleep(3000);
+		Thread.sleep(500);
+		
+		String High = CFOcountPOM.TotalCountRiskSummaryHigh().getText();		//Reading the Closed Timely value of Human Resource
+		High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+		int HighTotalCount = Integer.parseInt(High);
+		
 		String NotCompleted = CFOcountPOM.clickRiskHighNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int RiskHigh_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1487,16 +1757,13 @@ public class AuditorStatutory extends BasePage {
 		}
 		Thread.sleep(4000);
 		List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])"));
-		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");
-			
+		ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Not Completed");		
 		Thread.sleep(5000);
-	
 		int RiskHigh_ClosedDelayed = Integer.parseInt(CFOcountPOM.clickRiskHighClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
 		if(RiskHigh_ClosedDelayed > 0)
 		{
 			Thread.sleep(500);
-			CFOcountPOM.clickRiskHighClosedDelayed().click();			//Clicking on Not Completed compliances bar of High risk.  
-			
+			CFOcountPOM.clickRiskHighClosedDelayed().click();			//Clicking on Not Completed compliances bar of High risk.  		
 			AuditorcountPOM.RiskGraphCount1( test, "High - Closed Delayed", RiskHigh_ClosedDelayed, "Statutory");
 		}
 		else
@@ -1545,13 +1812,25 @@ public class AuditorStatutory extends BasePage {
 		{
 			test.log(LogStatus.PASS, "'High - Due Today' Count = "+RiskHigh_DueToday);
 		}
+        int total = RiskHigh_NotCompleted + RiskHigh_ClosedDelayed + RiskHigh_ClosedTimely + RiskHigh_NotApplicable + RiskHigh_DueToday;				//Calculating the values to match with High value of Labour.
+		
+		if(HighTotalCount == total)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "Total of Critical Count="+HighTotalCount+" | Sum of Total Status Count="+total);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "Total of Critical Count="+HighTotalCount+" | Sum of Total Status Count="+total);
+		}//Clicking on Dashboard
 		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
 
-	@Test(priority = 17)
+//	@Test(priority = 18)
 
 	void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 	{
@@ -1568,6 +1847,11 @@ public class AuditorStatutory extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,1200)");
 		Thread.sleep(2000);
+
+		String High = CFOcountPOM.TotalCountRiskSummaryMedium().getText();		//Reading the Closed Timely value of Human Resource
+		High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+		int MediumTotalCount = Integer.parseInt(High);
+		
 		String NotCompleted = CFOcountPOM.clickRiskMediumNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int RiskMedium_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1649,6 +1933,19 @@ public class AuditorStatutory extends BasePage {
 			test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
 		}
 		
+		 int total = RiskMedium_NotCompleted + RiskMedium_ClosedDelayed + RiskMedium_ClosedTimely + RiskMedium_NotApplicable + RiskMedium_DueToday;				//Calculating the values to match with High value of Labour.
+			System.out.print(total);
+		 if(MediumTotalCount == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+MediumTotalCount+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+MediumTotalCount+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
+		
 		//performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 		
 		extent.endTest(test);
@@ -1656,7 +1953,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 
-	@Test(priority = 18)
+	//@Test(priority = 0)
 
 	void RiskSummaryLowStatutory() throws InterruptedException, IOException
 	{		
@@ -1674,6 +1971,11 @@ public class AuditorStatutory extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,1200)");
 	Thread.sleep(3000);
+	
+	String High = CFOcountPOM.TotalCountRiskSummaryLow().getText();		//Reading the Closed Timely value of Human Resource
+	High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+	int LowTotalCount = Integer.parseInt(High);
+	
 		String NotCompleted = CFOcountPOM.clickRiskLowNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int RiskLow_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1759,13 +2061,25 @@ public class AuditorStatutory extends BasePage {
 		}
 		
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+		 int total = RiskLow_NotCompleted + RiskLow_ClosedDelayed + RiskLow_ClosedTimely + RiskLow_NotApplicable + RiskLow_DueToday;				//Calculating the values to match with High value of Labour.
+			
+			if(LowTotalCount == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+LowTotalCount+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+LowTotalCount+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 		
 		extent.endTest(test);
 		extent.flush();
 	}
 	
 
-	@Test(priority = 19)
+//	@Test(priority = 0)
 
 	void DepartmentSummaryFinanceStatutory() throws InterruptedException, IOException
 	{
@@ -1774,8 +2088,10 @@ public class AuditorStatutory extends BasePage {
 		js.executeScript("window.scrollBy(0,1700)");					//Scrolling down window by 1500 px.
 		Thread.sleep(3000);	
 		test = extent.startTest("Department Summary - 'Admin' Count Verification");
+		String High = CFOcountPOM.TotalCountDeprtmentAdmin().getText();		//Reading the Closed Timely value of Human Resource
+		High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+		int TotalCountDept = Integer.parseInt(High);
 		
-	 
 		String NotCompleted = CFOcountPOM.clickAdminOverdueA().getText();			//Reading the Overdue value of Human Resource
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);						
@@ -1797,7 +2113,7 @@ public class AuditorStatutory extends BasePage {
 		
 		Thread.sleep(500);
 		String ClosedDelayed = CFOcountPOM.clickAdminClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
-		//ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+		ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
 		int Closed_Delayed = Integer.parseInt(ClosedDelayed);	
 	//	int Closed_Delayed = Integer.parseInt(CFOcountPOM.clickHumanClosedDelayed().getText());	//Reading the High Risk value of Not Completed compliance
 
@@ -1866,7 +2182,7 @@ public class AuditorStatutory extends BasePage {
 			String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
 			Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
 			int R_ejected = Integer.parseInt(Rejected);						
-			if(In_Progress > 0)
+			if(R_ejected > 0)
 			{
 				CFOcountPOM.clickAdminInRejected().click();
 				AuditorcountPOM.RiskGraphCount2( test, "Rejected", R_ejected, "Statutory");
@@ -1901,7 +2217,7 @@ public class AuditorStatutory extends BasePage {
 			if(Due_Today > 0)
 			{
 				CFOcountPOM.clickAdminDueToday().click();
-				AuditorcountPOM.RiskGraphCount2( test, "DueToday", Due_Today, "Statutory");
+				AuditorcountPOM.RiskGraphCount1( test, "DueToday", Due_Today, "Statutory");
 			}
 			else
 			{
@@ -1911,17 +2227,28 @@ public class AuditorStatutory extends BasePage {
 		Thread.sleep(500);
 		performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 		Thread.sleep(2000);
+		int total = Overdue+Closed_Delayed+Closed_Timely + Pending_Review + In_Progress + R_ejected+ Not_Applicable + Due_Today;				//Calculating the values to match with High value of Labour.
+		
+		if(TotalCountDept == total)
+		{
+			//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+			test.log(LogStatus.PASS, "Total of Department Count="+TotalCountDept+" | Sum of Total Status Count="+total);
+		}
+		else
+		{
+			//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+			test.log(LogStatus.FAIL, "Total of Department Count="+TotalCountDept+" | Sum of Total Status Count="+total);
+		}//Clicking on Dashboard
 		extent.endTest(test);
 		extent.flush();
 	}
+	
 	
 	@Test(priority = 20)
 
 	void NotCompleted_PieChartPe() throws InterruptedException, IOException
 	{
 	//	test = extent.startTest("period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
-		
-		
 		Thread.sleep(3000);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();

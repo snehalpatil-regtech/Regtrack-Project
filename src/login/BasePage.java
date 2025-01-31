@@ -303,8 +303,8 @@ import performer.OverduePOM;
 		{
 		}
 		Thread.sleep(3000);
-		ApprovalcountPOM.clickManagement().click();
-		Thread.sleep(3000);
+	//	ApprovalcountPOM.clickManagement().click();
+	//	Thread.sleep(3000);
 		if(text.equalsIgnoreCase("internal")) {
 			Thread.sleep(3000);
 		Select drp = new Select(CFOcountPOM.selectInternal());

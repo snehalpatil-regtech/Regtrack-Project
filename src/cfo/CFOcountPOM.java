@@ -72,7 +72,10 @@ public class CFOcountPOM extends BasePage
 	private static List<WebElement> elementsList2 = null;
 	private static WebElement SummaryofOverdueCom = null;
 	private static List<WebElement> viewList = null;
-	public static WebElement clickCategories( )		//Method for closing Message Popup
+	static WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	public static WebElement clickCategories( )	//Method for closing Message Popup
+	
+	
 	{
 		categories = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divFunctionCount']"));
 		return categories;
@@ -431,7 +434,7 @@ public class CFOcountPOM extends BasePage
 		return compliances;                       
 	} 
 	
-	public static WebElement StartDate( )		//Method for reading Compliances value on Dashboard
+	public static WebElement StartDates( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_txtAdvStartDate']"));
 		return compliances;                       
@@ -443,7 +446,7 @@ public class CFOcountPOM extends BasePage
 		return compliances;                       
 	} 
 	
-	public static WebElement EndDate( )		//Method for reading Compliances value on Dashboard
+	public static WebElement EndDates( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_txtAdvEndDate']"));
 		return compliances;                       
@@ -849,7 +852,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickClosedDelayedA( )			//Method to search After Due Date count to click on from Pie Chart.
 	{
-		piechart = getDriver().findElement(By.xpath("//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-2 highcharts-drilldown-data-label']"));
+		piechart = getDriver().findElement(By.xpath("//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-1 highcharts-drilldown-data-label']"));
 		return piechart;
 	}
 	
@@ -879,7 +882,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickClosedTimelyA( )					//Method to search In Time count to click on from Pie Chart.
 	{
-		piechart = getDriver().findElement(By.xpath("//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-3 highcharts-drilldown-data-label']"));
+		piechart = getDriver().findElement(By.xpath("//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-2 highcharts-drilldown-data-label']"));
 		return piechart;                       
 	}
 	
@@ -1144,13 +1147,6 @@ public class CFOcountPOM extends BasePage
 	
 	
 	public static WebElement readTotalItemsD( )				//Method to read total no of items.
-	{
-		piechart = getDriver().findElement(By.xpath("//*[@class='k-pager-info k-label']"));
-	
-		return piechart;
-	}
-	
-	public static WebElement readTotalItemsD1( )				//Method to read total no of items.
 	{
 		piechart = getDriver().findElement(By.xpath("(//*[@class='k-pager-info k-label'])"));
 	
@@ -3066,7 +3062,7 @@ public class CFOcountPOM extends BasePage
 		return reports;
 	}
 	
-	public static WebElement Status( )
+	public static WebElement Status1( )
 	{
 		reports = getDriver().findElement(By.xpath("//*[@id='childrow']/div/div[2]/div[1]/div[1]/div[4]/div/div/span[1]"));
 		return reports;
@@ -3538,13 +3534,6 @@ public class CFOcountPOM extends BasePage
 		return compliances;
 	} 
 	
-	
-	public static WebElement Apply( )		//Method for reading Compliances value on Dashboard
-	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
-		return compliances;
-	} 
-	
 	public static WebElement ComplianceID( )		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='txtSearchComplianceID']"));
@@ -3598,9 +3587,354 @@ public class CFOcountPOM extends BasePage
 		compliances = getDriver().findElement(By.xpath("//*[@id='Myreport7']/a"));
 		return compliances;
 	} 
+	public static WebElement TotalCountRiskSummaryCritical( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[local-name()='svg']//*[name()='g' and @class='highcharts-stack-labels']//*[name()='text']//*[name()='tspan'])[1]"));
+		return compliances;
+	} 
+	public static WebElement TotalCountRiskSummaryHigh( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[local-name()='svg']//*[name()='g' and @class='highcharts-stack-labels']//*[name()='text']//*[name()='tspan'])[2]"));
+		return compliances;
+	} 
+	
+	public static WebElement TotalCountRiskSummaryMedium( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[local-name()='svg']//*[name()='g' and @class='highcharts-stack-labels']//*[name()='text']//*[name()='tspan'])[3]"));
+		return compliances;
+	} 
+	public static WebElement TotalCountRiskSummaryLow( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[local-name()='svg']//*[name()='g' and @class='highcharts-stack-labels']//*[name()='text']//*[name()='tspan'])[4]"));
+		return compliances;
+	} 
+	public static WebElement TotalCountDeprtmentAdmin( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("(//*[local-name()='svg']//*[name()='g' and @class='highcharts-stack-labels']//*[name()='text']//*[name()='tspan'])[9]"));
+		return compliances;
+	} 
 	
 	
 	
+	public static WebElement Apply( )		//Method for reading Compliances value on Dashboard
+	{
+		compliances = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
+		return compliances;
+	} 
+	
+	
+    public static WebElement ComplianceTypeEventBased()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Event Based']"));
+		return compliances;
+   	 
+    }
+    public static WebElement ComplianceTypeStatutoryCheckList()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Statutory CheckList']"));
+		return compliances;
+   	 
+    }
+    public static WebElement ComplianceTypeEventBasedCheckList()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Event Based CheckList']"));
+		return compliances;
+   	 
+    }
+    public static WebElement Status()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Status']"));
+		return compliances;
+   	 
+    }
+
+    public static WebElement Risk()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Risk']"));
+		return compliances;
+   	 
+    }
+    public static WebElement SelectAllRisk()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//span[@class='k-checkbox-label' and .='Select All'])[1]"));
+		return compliances;
+   	 
+    }
+    
+    
+    public static WebElement RiskCritical()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Critical']"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskHigh()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='High']"));
+		return compliances;
+    }
+    public static WebElement RiskMedium()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Medium']"));
+		return compliances;
+    }
+    public static WebElement RiskLow()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Low']"));
+		return compliances;
+    }
+    public static WebElement PeriodDropDown()
+    {
+    	compliances = getDriver().findElement(By.xpath("//div[@class='dashboard']//div//div[2]//div[1]//span[1]//span[1]//span[2]//span[1]"));
+		return compliances;
+    }
+    public static WebElement PeriodAll()
+    {
+    	compliances = getDriver().findElement(By.xpath("//*[@id='dropdownPastData_listbox']/li[5]"));
+		return compliances;
+    }
+    public static WebElement StartDate()
+    {
+    	compliances = getDriver().findElement(By.xpath("//*[@id='Startdatepicker']"));
+		return compliances;
+    }
+    public static WebElement EndDate()
+    {
+    	compliances = getDriver().findElement(By.xpath("//*[@id='Lastdatepicker']"));
+		return compliances;
+    }
+    public static WebElement Apply1()
+    {
+    	compliances = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
+		return compliances;
+    }
+    public static WebElement readTotalItemsD1()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='k-pager-info k-label'])[1]"));
+		return compliances;
+   	 
+    }
+   
+    public static WebElement RiskSummaryCriticalDueToday()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[13]"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusDueToday()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='DueToday']"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryCriticalClosedTimely()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[9]"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusClosedTimely()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Closed Timely']"));
+		return compliances;
+   	 
+    }
+   
+    public static WebElement StatusRejected()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Rejected']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusNotApplicable()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Not Applicable']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusPendingReview()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='In Progress']"));
+		return compliances;
+   	 
+    }
+    
+  
+  
+    public static WebElement RiskSummaryCriticalClosedDelay()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[5]"));
+		return compliances;
+   	
+    }
+    public static WebElement StatusClosedDelay()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Closed Delayed']"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryCriticalNotCompleted()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[1]"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusOverDue()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Overdue']"));
+		return compliances;
+   	 
+    }
+    
+
+    public static WebElement StatusUpcoming()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Upcoming']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusPendingForReview()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Pending For Review']"));
+		return compliances;
+   	 
+    }
+    
+    public static WebElement StatusInProgress()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='In Progress']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusDeviationApplied()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Deviation Applied']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusDeviationRejected()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Deviation Rejected']"));
+		return compliances;
+   	 
+    }
+    public static WebElement StatusDeviationApproved()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Deviation Approved']"));
+		return compliances;
+   	 
+    }
+    public static WebElement DepartmentFilter()
+    {
+    	compliances = getDriver().findElement(By.xpath("//*[@id='dvDepartment']/div"));
+		return compliances;
+   	 
+    }
+    public static WebElement DepartmentvalueAdmin()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='Admin']"));
+		return compliances;
+   	 
+    }
+    
+  
+    public static WebElement RiskSummaryHighNotApplicable()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[18]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryHighDueToday()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[14]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryHighClosedTimely()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[10]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryHighClosedDelay()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[6]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryHighNotCompleted()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[2]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryMediumNotApplicable()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[19]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryMediumDueToday()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[15]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryMediumClosedTimely()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[11]"));
+		return compliances;
+   	
+    }
+    public static WebElement RiskSummaryMediumClosedDelay()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[7]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryMediumNotCompleted()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[3]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryLowNotApplicable()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[20]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryLowDueToday()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[16]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryLowClosedTimely()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[12]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryLowClosedDelay()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[8]"));
+		return compliances;
+   	 
+    }
+    public static WebElement RiskSummaryLowNotCompleted()
+    {
+    	compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-label highcharts-data-label highcharts-data-label-color-undefined '])[4]"));
+		return compliances;
+   	
+    }
+    public static WebElement DashBoardAfterCount()
+    {
+    	compliances = getDriver().findElement(By.xpath("//span[normalize-space()='My Dashboard']"));
+		return compliances;
+   	 
+    }
+    
 	
 	public static void CategoriesCountMatch(  ExtentTest test) throws InterruptedException, IOException
 	{
@@ -8570,8 +8904,8 @@ By locator1 = By.cssSelector("#ContentPlaceHolder1_myFunctionShowInternal");
 		Thread.sleep(2000);
 		CFOcountPOM.Apply().click();
 		Thread.sleep(2000);
-		CFOcountPOM.Apply().click();
-		Thread.sleep(4000);
+//		CFOcountPOM.Apply().click();
+	//	Thread.sleep(4000);
 	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
 		
 		Thread.sleep(4000);

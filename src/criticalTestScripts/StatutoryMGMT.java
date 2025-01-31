@@ -372,6 +372,15 @@ public class StatutoryMGMT extends BasePage {
 				
 				Thread.sleep(500);
 				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				if(NotCompletedValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					test.log(LogStatus.FAIL, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -468,6 +477,17 @@ public class StatutoryMGMT extends BasePage {
 				
 				Thread.sleep(500);
 				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				if(ClosedDelayedValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -561,6 +581,19 @@ public class StatutoryMGMT extends BasePage {
 				
 				Thread.sleep(500);
 				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(500);
+				action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
+				Thread.sleep(2000);
+				if(ClosedTimelyValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -659,6 +692,19 @@ public class StatutoryMGMT extends BasePage {
 				
 				Thread.sleep(1000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+				Thread.sleep(3000);
+				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+				Thread.sleep(4000);
+				if(NotApplicableValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Not Applicable Count="+NotApplicableValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Not Applicable Count="+NotApplicableValue+" | Sum of Total Risk Count="+total);
+				}//Clicking on Dashboard
 			}
 			else
 			{
@@ -760,6 +806,21 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(2000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				Thread.sleep(5000);
+				//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
+					Thread.sleep(2000);
+					performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
+					Thread.sleep(2000);
+					if(OverdueValue == total)
+					{
+						//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+						test.log(LogStatus.PASS, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+					}
+					else
+					{
+						//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+						test.log(LogStatus.FAIL, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+					}
 			}
 			else
 			{
@@ -776,7 +837,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-@Test(priority = 10)
+       @Test(priority = 10)
 		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -860,6 +921,16 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(2000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				if(dueTodayValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -961,6 +1032,17 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(2000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				Thread.sleep(2000);
+				if(pendingForReviewValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Pending For Review Count="+pendingForReviewValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Pending For Review Count="+pendingForReviewValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -1063,6 +1145,16 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(2000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				if(inProgressValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of In Progress Count="+inProgressValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of In Progress Count="+inProgressValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -1162,6 +1254,16 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(2000);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				if(rejectedValue == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Rejected Count="+rejectedValue+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Rejected Count="+rejectedValue+" | Sum of Total Risk Count="+total);
+				}
 			}
 			else
 			{
@@ -1266,6 +1368,16 @@ public class StatutoryMGMT extends BasePage {
 				Actions actions = new Actions(getDriver());
 				actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 				Thread.sleep(2000);
+				if(IndustrySpeCritical == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Critical Count="+IndustrySpeCritical+" | Sum of Total Status Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Critical Count="+IndustrySpeCritical+" | Sum of Total Status Count="+total);
+				}//Clicking on Dashboard
 			}else
 				{
 					test.log(LogStatus.PASS, "'Commercial - Critical' Count = "+IndustrySpeCritical);
@@ -1368,6 +1480,16 @@ public class StatutoryMGMT extends BasePage {
 			
 				actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 				Thread.sleep(3000);
+				if(IndustrySpeHigh == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeHigh+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeHigh+" | Sum of Total Risk Count="+total);
+				}//Clicking on Dashboard
 			}
 			else
 			{
@@ -1466,6 +1588,16 @@ public class StatutoryMGMT extends BasePage {
 				Actions actions = new Actions(getDriver());
 				actions.moveToElement(element).click().perform();				//Clicking on Back button of Bar Graph.
 				Thread.sleep(2000);
+				if(IndustrySpeMedium == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeMedium+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeMedium+" | Sum of Total Risk Count="+total);
+				}//Clicking on Dashboard
 			}
 			else
 			{
@@ -1568,6 +1700,16 @@ public class StatutoryMGMT extends BasePage {
 				Thread.sleep(500);
 				performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 				Thread.sleep(2000);
+				if(IndustrySpeLow == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Closed Delayed Count="+IndustrySpeLow+" | Sum of Total Risk Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+IndustrySpeLow+" | Sum of Total Risk Count="+total);
+				}//Clicking on Dashboard
 			}
 			else
 			{
@@ -1604,7 +1746,10 @@ public class StatutoryMGMT extends BasePage {
 		//	js.executeScript("window.scrollBy(0,800)");
 			test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 			
-			
+			Thread.sleep(500);
+			String Critical = CFOcountPOM.TotalCountRiskSummaryCritical().getText();		//Reading the Closed Timely value of Human Resource
+			Critical = Critical.replaceAll(" ","");									//Removing all white spaces from string. 
+			int CriticalTotalCount = Integer.parseInt(Critical);
 			Thread.sleep(4000);
 			String NotCompleted = CFOcountPOM.clickRiskCriticalNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
@@ -1684,7 +1829,18 @@ public class StatutoryMGMT extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Critical - Due Today' Count = "+RiskCritical_DueToday);
 			}
+			int total = RiskCritical_NotCompleted + RiskCritical_ClosedDelayed + RiskCritical_ClosedTimely + RiskCritical_NotApplicable + RiskCritical_DueToday;				//Calculating the values to match with High value of Labour.
 			
+			if(CriticalTotalCount == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+CriticalTotalCount+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+CriticalTotalCount+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 			
 			
 			Thread.sleep(2000);
@@ -1701,13 +1857,16 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(1000);
 			CFOcountPOM.ALL().click();
 			Thread.sleep(1000);
-	//\//////		CFOcountPOM.clickApply().click();
+	CFOcountPOM.clickApply().click();
 			Thread.sleep(5000);
 			CFOcountPOM.RefreshNow().click();
 			Thread.sleep(1000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1450)");		
 			Thread.sleep(1000);
+			String High = CFOcountPOM.TotalCountRiskSummaryHigh().getText();		//Reading the Closed Timely value of Human Resource
+			High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+			int HighTotalCount = Integer.parseInt(High);
 			String NotCompleted = CFOcountPOM.clickRiskHighNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 			int RiskHigh_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1791,12 +1950,23 @@ public class StatutoryMGMT extends BasePage {
 				test.log(LogStatus.PASS, "'High - Due Today' Count = "+RiskHigh_DueToday);
 			}
 			
+			int total = RiskHigh_NotCompleted + RiskHigh_ClosedDelayed + RiskHigh_ClosedTimely + RiskHigh_NotApplicable + RiskHigh_DueToday;				//Calculating the values to match with High value of Labour.
 			
+			if(HighTotalCount == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+HighTotalCount+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+HighTotalCount+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-@Test(priority = 28)
+        @Test(priority = 28)
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -1811,6 +1981,10 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,1450)");		
 			Thread.sleep(1000);
+			
+			String High = CFOcountPOM.TotalCountRiskSummaryMedium().getText();		//Reading the Closed Timely value of Human Resource
+			High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+			int MediumTotalCount = Integer.parseInt(High);
 			String NotCompleted = CFOcountPOM.clickRiskMediumNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 			int RiskMedium_NotCompleted = Integer.parseInt(NotCompleted);
@@ -1897,11 +2071,23 @@ public class StatutoryMGMT extends BasePage {
 			{
 				test.log(LogStatus.PASS, "'Medium - Due Today' Count = "+RiskMedium_DueToday);
 			}
+            int total = RiskMedium_NotCompleted + RiskMedium_ClosedDelayed + RiskMedium_ClosedTimely + RiskMedium_NotApplicable + RiskMedium_DueToday;				//Calculating the values to match with High value of Labour.
+			
+			if(MediumTotalCount == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Critical Count="+MediumTotalCount+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Critical Count="+MediumTotalCount+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-@Test(priority = 29)
+       @Test(priority = 29)
 		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1919,6 +2105,11 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,1450)");
 			Thread.sleep(4000);
+			
+			String High = CFOcountPOM.TotalCountRiskSummaryLow().getText();		//Reading the Closed Timely value of Human Resource
+			High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+			int LowTotalCount = Integer.parseInt(High);
+			
 			String NotCompleted = CFOcountPOM.clickRiskLowNotCompleted().getText();		//Reading the Closed Timely value of Human Resource
 			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 			int RiskLow_NotCompleted = Integer.parseInt(NotCompleted);
@@ -2007,11 +2198,24 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(500);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			 int total = RiskLow_NotCompleted + RiskLow_ClosedDelayed + RiskLow_ClosedTimely + RiskLow_NotApplicable + RiskLow_DueToday;				//Calculating the values to match with High value of Labour.
+				
+				if(LowTotalCount == total)
+				{
+					//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+					test.log(LogStatus.PASS, "Total of Critical Count="+LowTotalCount+" | Sum of Total Status Count="+total);
+				}
+				else
+				{
+					//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+					test.log(LogStatus.FAIL, "Total of Critical Count="+LowTotalCount+" | Sum of Total Status Count="+total);
+				}//Clicking on Dashboard
+			
 			extent.endTest(test);
 			extent.flush();
 		}
 		
-	@Test(priority = 30)
+	@Test(priority = 0)
 		void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
@@ -2030,6 +2234,9 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 1500 px.
 			
 			test = extent.startTest("Department Summary - 'Admin' Count Verification");
+			String High = CFOcountPOM.TotalCountDeprtmentAdmin().getText();		//Reading the Closed Timely value of Human Resource
+			High = High.replaceAll(" ","");									//Removing all white spaces from string. 
+			int TotalCountDept = Integer.parseInt(High);
 			
 			
 			Thread.sleep(3000);
@@ -2192,6 +2399,18 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(500);
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			int total = Overdue+Closed_Delayed+Closed_Timely + Pending_Review + Fina_InProgress + Fina_Rejected+ Not_Applicable + Due_Today;				//Calculating the values to match with High value of Labour.
+			
+			if(TotalCountDept == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Department Count="+TotalCountDept+" | Sum of Total Status Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Department Count="+TotalCountDept+" | Sum of Total Status Count="+total);
+			}//Clicking on Dashboard
 			extent.endTest(test);
 			extent.flush();
 		}

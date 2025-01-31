@@ -451,6 +451,16 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(ClosedTimelyValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Timely Count="+ClosedTimelyValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -533,6 +543,16 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(ClosedDelayedValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Closed Delayed Count="+ClosedDelayedValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -617,6 +637,15 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(NotCompletedValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Total of Not Completed Count="+NotCompletedValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -711,6 +740,16 @@ public class InternalMgmt extends BasePage {
 			Thread.sleep(2000);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			if(NotApplicable == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Not Applicable Count="+NotApplicable+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Not Applicable Count="+NotApplicable+" | Sum of Total Risk Count="+total);
+			}//Clicking on Dashboard
 		}
 		else
 		{
@@ -806,6 +845,16 @@ public class InternalMgmt extends BasePage {
 			//action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(1000);
+			if(OverdueValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Overdue Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -902,6 +951,16 @@ public class InternalMgmt extends BasePage {
 			//action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(3000);
+			if(dueTodayValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Due Today Count="+dueTodayValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -1000,6 +1059,16 @@ public class InternalMgmt extends BasePage {
 		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(3000);
+			if(OverdueValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Pending For Review Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Pending For Review Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -1097,6 +1166,16 @@ public class InternalMgmt extends BasePage {
 		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(3200);
+			if(OverdueValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of In Progress Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of In Progress Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{
@@ -1196,6 +1275,16 @@ public class InternalMgmt extends BasePage {
 		//	action.moveToElement(CFOcountPOM.clickBack2()).click().build().perform();	 //Clicking on Back button
 			performer.OverduePOM.clickDashboard().click();			//Clicking on Dashboard
 			Thread.sleep(2000);
+			if(OverdueValue == total)
+			{
+				//test.log(LogStatus.PASS, "'"+risk+"' risk compliance count matches to numbers of items from grid.");
+				test.log(LogStatus.PASS, "Total of Rejected Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
+			else
+			{
+				//test.log(LogStatus.FAIL, "'"+risk+"' risk compliance count does not matches to numbers of Items.");
+				test.log(LogStatus.FAIL, "Total of Rejected Count="+OverdueValue+" | Sum of Total Risk Count="+total);
+			}
 		}
 		else
 		{

@@ -3,21 +3,43 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="criticalTestScripts.DeptStatutory">
+      <class name="departmentHead.DeptStatutory">
         <methods>
+          <include name="RiskSummaryLowStatutory"/>
           <include name="setBrowser"/>
-          <include name="Login"/>
-          <include name="Closing"/>
+          <include name="IsSMETAColumnNotAppli"/>
+          <include name="clickPenaltyStatutory"/>
           <include name="browserClosing"/>
+          <include name="DepartmentSummaryFinanceStatutory"/>
           <include name="complianceCalendar"/>
-          <include name="ComplianceDocuments"/>
-          <include name="AssignmentReport"/>
-          <include name="Inprogress_PieChartPeriod"/>
+          <include name="CompletionStatusFilter"/>
+          <include name="IsSMETAColumnNotComp"/>
+          <include name="PerformReviewEmailColIn"/>
           <include name="DetailedReport"/>
+          <include name="IsSMETAColumnDeptSumm"/>
+          <include name="NotCompletionStatusFilter"/>
+          <include name="RiskSummaryFilter"/>
+          <include name="Closing"/>
+          <include name="PerformReviewEmailCol"/>
+          <include name="IsSMETAColumnClosedDel"/>
+          <include name="AssignmentReport"/>
+          <include name="DetailedReportIn"/>
           <include name="rejected_PieChartPeriod"/>
-          <include name="UsersCountMatch"/>
+          <include name="RiskSummaryCriticalStatutory"/>
+          <include name="DueforperiodIsSMETAColumn"/>
+          <include name="Upcoming_PieChartPeriod"/>
+          <include name="periodIsSMETAColumnRejected"/>
+          <include name="DeptSummaryFilter"/>
+          <include name="UpcomingFilter"/>
+          <include name="RiskSummaryHighStatutory"/>
+          <include name="Login"/>
+          <include name="RiskSummaryMediumStatutory"/>
+          <include name="ComplianceDocuments"/>
+          <include name="ClosedTimely_PieChartPeriod"/>
+          <include name="periodIsSMETAColumnInprogress"/>
+          <include name="IsSMETAColumnClosedTimely"/>
         </methods>
-      </class> <!-- criticalTestScripts.DeptStatutory -->
+      </class> <!-- departmentHead.DeptStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

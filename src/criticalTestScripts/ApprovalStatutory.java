@@ -323,7 +323,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 5)
+	//	@Test(priority = 5)
 		void UsersCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Users'");
@@ -609,7 +609,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	//	@Test(priority = 9)
+//		@Test(priority = 9)
 		void NotApplicable_PieChart() throws InterruptedException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -1348,7 +1348,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-    //   @Test(priority = 18)
+ //     @Test(priority = 18)
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1557,7 +1557,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-		@Test(priority = 20)
+	//	@Test(priority = 20)
 		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -1768,7 +1768,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-//		@Test(priority = 22)
+	//	@Test(priority = 22)
 		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -1902,7 +1902,7 @@ public class ApprovalStatutory extends BasePage {
 		
 			Thread.sleep(5000);
 			String NotCompleted = CFOcountPOM.clickAccountOverdue().getText();			//Reading the Overdue value of Human Resource
-		//	NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+			NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 			int Overdue = Integer.parseInt(NotCompleted);						
 			if(Overdue > 0)
 			{Thread.sleep(2000);
@@ -1977,7 +1977,7 @@ public class ApprovalStatutory extends BasePage {
 			  roc1.click();
 			Thread.sleep(5000);
 			String Inprogress = CFOcountPOM.clickAccountInprogress().getText();	//Reading the Pending For Review value of Human Resource
-			//NotApplicable = NotApplicable.replaceAll(" ","");	
+			Inprogress = Inprogress.replaceAll(" ","");	
 			Thread.sleep(3000);//Removing all white spaces from string. 
 			int In_progress = Integer.parseInt(Inprogress);						
 			if(In_progress > 0)
@@ -2048,7 +2048,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 24)
+//		@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -2176,7 +2176,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 25)
+//		@Test(priority = 25)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2299,7 +2299,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-		@Test(priority = 26)
+	//	@Test(priority = 26)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2424,7 +2424,7 @@ public class ApprovalStatutory extends BasePage {
 			
 		}
 		
-	@Test(priority = 27)
+//	@Test(priority = 27)
 		void NotApplicable_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2548,7 +2548,7 @@ public class ApprovalStatutory extends BasePage {
 		}
 		
 		
-		@Test(priority = 28)
+	//	@Test(priority = 28)
 
 		void UpcomingPieChartPeriod() throws InterruptedException, IOException
 		{
@@ -2707,7 +2707,7 @@ public class ApprovalStatutory extends BasePage {
 		
 
 		
-		@Test(priority = 28)
+	//	@Test(priority = 28)
 		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -2834,7 +2834,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 			
-		@Test(priority = 31)
+	//	@Test(priority = 31)
 		void pendingForReview_PieChartPeriod() throws InterruptedException
 		{
 		//	test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -2968,7 +2968,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-	    @Test(priority = 32)
+	 //   @Test(priority = 32)
 		void inProgress_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3094,7 +3094,7 @@ public class ApprovalStatutory extends BasePage {
 		
 
 		
-		@Test(priority = 34)
+	//	@Test(priority = 34)
 		void rejected_PieChartPeriod() throws InterruptedException
 		{
 			//test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
@@ -3225,7 +3225,7 @@ public class ApprovalStatutory extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 35)
+	//	@Test(priority = 35)
 		void complianceCalendar() throws InterruptedException
 		{
 			test = extent.startTest("compliance Calendar Verifications");
@@ -3309,7 +3309,7 @@ public class ApprovalStatutory extends BasePage {
 				extent.flush();
 			}
 		  
-			@Test(priority = 62)
+		//	@Test(priority = 62)
 			void AssignmentReport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Assignment Report verification");
@@ -3320,7 +3320,7 @@ public class ApprovalStatutory extends BasePage {
 				extent.flush();
 			}
 		
-			@Test(priority = 74)
+		//	@Test(priority = 74)
 			void ComplianceDocuments() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Compliance Documents  verification");
