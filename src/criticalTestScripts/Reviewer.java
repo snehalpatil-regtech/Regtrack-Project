@@ -28,6 +28,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import cfo.CFOcountPOM;
+import departmentHead.DeptCountPOM;
 import login.BasePage;
 import performer.MethodsPOM;
 import performer.OverduePOM;
@@ -45,7 +46,7 @@ public class Reviewer  extends BasePage {
 	public static XSSFSheet sheet = null;		//Sheet variable
 	public static List<WebElement> elementsList = null;
 	public static List<WebElement> elementsList1 = null;
-	static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="D:\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	public static String link = "mgmt1";
 	
 	/*
@@ -62,9 +63,9 @@ public class Reviewer  extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\ReviewerResults.html",true);
 		test = extent.startTest("Logging In - Reviewer");
-		test.log(LogStatus.PASS, "Logging into system");
+		test.log(LogStatus.PASS, "Logging id - snehal.patil12@tlregtech.in , Password - admin@123");
 		
 					
 		
@@ -280,7 +281,7 @@ public class Reviewer  extends BasePage {
 		js.executeScript("window.scrollBy(0,400)"," ");
 		
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextArea()));
+	//	wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextArea()));
 		Row row6 = sheet.getRow(6);											//Selected 6th index row (Seventh row)
 		Cell c4 = row6.getCell(1);											//Selected cell (6 row,1 column)
 		String remark = c4.getStringCellValue();							//Got the URL stored at position 6,1
@@ -433,7 +434,7 @@ public class Reviewer  extends BasePage {
 			Thread.sleep(500);
 		}
 		
-		wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextArea()));
+	//	wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextArea()));
 		Row row6 = sheet.getRow(6);											//Selected 6th index row (Seventh row)
 		Cell c4 = row6.getCell(1);											//Selected cell (6 row,1 column)
 		String remark = c4.getStringCellValue();							//Got the URL stored at position 6,1
@@ -656,8 +657,32 @@ public class Reviewer  extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-
+	
 	@Test(priority = 19) 
+	void SMETAReport() throws InterruptedException, IOException
+	{
+		test = extent.startTest("My Reports - SMETA Report Verification");
+		
+		
+		ReMethodsPOM.SMETAReport(test, "Statutory");
+
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	@Test(priority = 20) 
+	void SMETAReportFilterMgmt() throws InterruptedException, IOException
+	{
+		test = extent.startTest("My Reports -  To Check Whether Smeta Report Grid all filter working or not ? ");
+		
+		
+		DeptCountPOM.SMETAReportFilterMgmt(test);
+
+		extent.endTest(test);
+		extent.flush();
+	}
+
+	@Test(priority = 21) 
 	void ComplianceDocumentsSat() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Compliance Documents Statutory verification");
@@ -668,7 +693,7 @@ public class Reviewer  extends BasePage {
 				extent.flush();
 	}
 	
-	@Test(priority = 20) 
+	@Test(priority = 22) 
 		void ComplianceDocumentsInter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents Internal verification");
@@ -681,7 +706,7 @@ public class Reviewer  extends BasePage {
 		 
 		}
 
-//	@Test(priority = 16)
+	@Test(priority = 23)
 	void MyEscalation() throws InterruptedException, IOException
 	{
 		test = extent.startTest("My Escalation verification");

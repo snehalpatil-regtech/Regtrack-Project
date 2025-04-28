@@ -94,10 +94,18 @@ public class Login extends BasePage
 		WebDriverWait wait1 = new WebDriverWait(getDriver(), 60);
 		
 		LoginPOM.setUname().sendKeys(username);		//Sent username to input box 
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		LoginPOM.setPassword().sendKeys(password);	//Sent password to input box
+		Thread.sleep(3000);
 		LoginPOM.clickSubmit().click();				//Clicked on Sign-in button
+		Thread.sleep(3000);
 		
+		try {
+			getDriver().switchTo().alert().accept();
+			
+		}catch(Exception e) {
+			
+		}
 		if(!username.equalsIgnoreCase("performer@avantis.info"))
 		{
 			try
@@ -116,6 +124,13 @@ public class Login extends BasePage
 				
 			}
 			
+			Thread.sleep(500);
+			try {
+				getDriver().switchTo().alert().accept();
+				
+			}catch(Exception e) {
+				
+			}
 			Thread.sleep(500);
 			try
 			{

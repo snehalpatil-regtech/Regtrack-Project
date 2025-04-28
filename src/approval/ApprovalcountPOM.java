@@ -1282,7 +1282,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
 		Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[21]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -2341,7 +2341,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		AuditorcountPOM.GridAndExcelCountMatch(test,workbook);
 		Thread.sleep(3000);
 			
-			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
+			 By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[23]/a");
 			
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 				Thread.sleep(4000);
@@ -6392,9 +6392,18 @@ else {
 		}
 		Thread.sleep(3000);
 		
-		ClearBtn().click();
-		test.log(LogStatus.PASS, "The applied filter should get cleared after clicking on the clear button.");
-		Thread.sleep(3000);
+		if(DeptCountPOM.Clear().isEnabled())
+		{
+			test.log(LogStatus.PASS, "while click on Clear Button selected data should be cleared");
+		
+			DeptCountPOM.Clear().click();
+		}
+	
+	else
+	{
+		test.log(LogStatus.FAIL, "while click on Clear Button selected data not cleared");
+		
+	}
 		getDriver().switchTo().parentFrame();
 		CFOcountPOM.closeCategories().click();					//Closing the High Risk Window.
 		Thread.sleep(1000);

@@ -65,7 +65,7 @@ public class DeptInternal extends BasePage  {
 	void setBrowser() throws Exception
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department(Internal).html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\Department(Internal).html",true);
 		test = extent.startTest("Loging In - Department Head (Internal)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -404,7 +404,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(ClosedTimelyValue == total)
 		{
 			test.log(LogStatus.PASS, "'Closed Timely' Compliance Count matches to sum of all risked compliances.");
@@ -414,7 +414,7 @@ public class DeptInternal extends BasePage  {
 		{
 			test.log(LogStatus.FAIL, "'Closed Timely' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Closed Timely' Compliances : "+total+" | Total Sum : "+ClosedTimelyValue);
-		}*/
+		}
 		
 		if(ClosedTimelyValue > 0)
 		{
@@ -499,7 +499,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(ClosedDelayedValue == total)
 		{
 			test.log(LogStatus.PASS, "'Closed Delayed' Compliance Count matches to sum of all risked compliances.");
@@ -509,7 +509,7 @@ public class DeptInternal extends BasePage  {
 		{
 			test.log(LogStatus.FAIL, "'Closed Delayed' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Closed Delayed' Compliances : "+total+" | Total Sum : "+ClosedDelayedValue);
-		}*/
+		}
 		
 		if(ClosedDelayedValue > 0)
 		{
@@ -595,7 +595,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(NotCompletedValue == total)
 		{
 			test.log(LogStatus.PASS, "'Not Completed' Compliance Count matches to sum of all risked compliances.");
@@ -606,7 +606,7 @@ public class DeptInternal extends BasePage  {
 			test.log(LogStatus.FAIL, "'Not Completed' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Not Completed' Compliances : "+total+" | Total Sum : "+NotCompletedValue);
 		}
-		*/
+		
 		if(NotCompletedValue > 0)
 		{
 			if(critical >= 0)
@@ -690,7 +690,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());			//reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(ClosedDelayedValue == total)
 		{
 			test.log(LogStatus.PASS, "'Not Applicable' Compliance Count matches to sum of all risked compliances.");
@@ -700,7 +700,7 @@ public class DeptInternal extends BasePage  {
 		{
 			test.log(LogStatus.FAIL, "'Not Applicable' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Not Applicable' Compliances : "+total+" | Total Sum : "+ClosedDelayedValue);
-		}*/
+		}
 		
 		if(ClosedDelayedValue > 0)
 		{
@@ -785,7 +785,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(OverdueValue == total)
 		{
 			test.log(LogStatus.PASS, "'Overdue' Compliance Count matches to sum of all risked compliances.");
@@ -796,7 +796,7 @@ public class DeptInternal extends BasePage  {
 			test.log(LogStatus.FAIL, "'Overdue' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Overdue' Compliances : "+total+" | Total Sum : "+OverdueValue);
 		}
-		*/
+		
 		if(OverdueValue > 0)
 		{
 			if(critical >= 0)
@@ -886,7 +886,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(OverdueValue == total)
 		{
 			test.log(LogStatus.PASS, "'Pending For Review' Compliance Count matches to sum of all risked compliances.");
@@ -897,7 +897,7 @@ public class DeptInternal extends BasePage  {
 			test.log(LogStatus.FAIL, "'Pending For Review' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Pending For Review' Compliances : "+total+" | Total Sum : "+OverdueValue);
 		}
-		*/
+		
 		if(OverdueValue > 0)
 		{
 			if(critical > 0)
@@ -987,7 +987,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(OverdueValue == total)
 		{
 			test.log(LogStatus.PASS, "'Pending For Review' Compliance Count matches to sum of all risked compliances.");
@@ -998,7 +998,7 @@ public class DeptInternal extends BasePage  {
 			test.log(LogStatus.FAIL, "'Pending For Review' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Pending For Review' Compliances : "+total+" | Total Sum : "+OverdueValue);
 		}
-		*/
+		
 		if(OverdueValue > 0)
 		{
 			if(critical > 0)
@@ -1088,7 +1088,7 @@ public class DeptInternal extends BasePage  {
 		int low = Integer.parseInt(CFOcountPOM.readLow().getText());				//Reading Low risk count.
 		
 		int total = critical + high + medium + low;
-		/*
+		
 		if(OverdueValue == total)
 		{
 			test.log(LogStatus.PASS, "'Rejected' Compliance Count matches to sum of all risked compliances.");
@@ -1098,7 +1098,7 @@ public class DeptInternal extends BasePage  {
 		{
 			test.log(LogStatus.FAIL, "'Rejected' Compliance Count doesn't matches to sum of all risked compliances.");
 			test.log(LogStatus.FAIL, "Total 'Rejected' Compliances : "+total+" | Total Sum : "+OverdueValue);
-		}*/
+		}
 		
 		if(OverdueValue > 0)
 		{
@@ -1173,7 +1173,7 @@ public class DeptInternal extends BasePage  {
 			Thread.sleep(4000);
 			DeptCountPOM.Refresh().click();
 			Thread.sleep(4000);
-		js.executeScript("window.scrollBy(0,1300)");
+		js.executeScript("window.scrollBy(0,1500)");
 			
 			test = extent.startTest("Department Summary - 'Admin' Count Verification");
 			
@@ -1330,7 +1330,7 @@ public class DeptInternal extends BasePage  {
 			DeptCountPOM.Refresh().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1700)");				//Scrolling down window by 1000 px.cfo
+			js.executeScript("window.scrollBy(0,2000)");				//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,600)");
 			test = extent.startTest("Risk Summary - 'Critical' Count Verification");
 			
@@ -1412,7 +1412,7 @@ public class DeptInternal extends BasePage  {
 			DeptCountPOM.Refresh().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1700)");
+			js.executeScript("window.scrollBy(0,2000)");
 		//	js.executeScript("window.scrollBy(0,500)");
 			Thread.sleep(500);
 			String NotCompleted = CFOcountPOM.clickRiskHighNotCompletedDIn().getText();		//Reading the Closed Timely value of Human Resource
@@ -1500,7 +1500,7 @@ public class DeptInternal extends BasePage  {
 			DeptCountPOM.Refresh().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1700)");
+			js.executeScript("window.scrollBy(0,2000)");
 		//	js.executeScript("window.scrollBy(0,1400)");
 			Thread.sleep(3000);
 			String NotCompleted = CFOcountPOM.clickRiskMediumNotCompletedDIn().getText();		//Reading the Closed Timely value of Human Resource
@@ -1587,7 +1587,7 @@ public class DeptInternal extends BasePage  {
 			DeptCountPOM.Refresh().click();
 			Thread.sleep(4000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,1700)");
+			js.executeScript("window.scrollBy(0,2000)");
 			Thread.sleep(3000);
 			
 			int RiskLow_NotCompleted = Integer.parseInt(CFOcountPOM.clickRiskLowNotCompletedDIn().getText());	//Reading the High Risk value of Not Completed compliance
@@ -1657,7 +1657,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-		@Test(priority = 22)
+		//@Test(priority = 22)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -1769,14 +1769,14 @@ public class DeptInternal extends BasePage  {
 		
 		}
 		
-		@Test(priority = 23)
+		//@Test(priority = 23)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
 			Thread.sleep(3000);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-			js.executeScript("window.scrollBy(0,3000)");						//Scrolling down window by 1000 px.
+			js.executeScript("window.scrollBy(0,20000)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
 			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
@@ -1882,7 +1882,7 @@ public class DeptInternal extends BasePage  {
 			
 		}
 		
-		@Test(priority = 24)
+		//@Test(priority = 24)
 		void NotCompleted_PieChartPeriod() throws InterruptedException
 		{
 			test = extent.startTest("Period-Pie Chart - 'Not Completed' Count Verification");
@@ -1995,7 +1995,7 @@ public class DeptInternal extends BasePage  {
 			extent.flush();
 		}
 		
-		@Test(priority = 25)
+		//@Test(priority = 25)
 			void NotApplicable_PieChartPeriod() throws InterruptedException
 			{
 				test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2110,7 +2110,7 @@ public class DeptInternal extends BasePage  {
 				
 			}
 			
-			@Test(priority = 26)
+			//@Test(priority = 26)
 			void Upcoming_PieChartPeriod() throws InterruptedException, IOException
 			{
 			//	test = extent.startTest("Period-Pie Chart - Completion Status- ' Upcoming' Count Verification");

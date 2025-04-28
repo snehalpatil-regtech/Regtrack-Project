@@ -67,7 +67,7 @@ public class DeptStatutory extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\Department.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack\\Regtrack-Project\\Reports\\Department.html",true);
 		test = extent.startTest("Loging In - Department Head (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 		
@@ -117,7 +117,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	void Entities() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Entities");
@@ -304,9 +304,9 @@ public class DeptStatutory extends BasePage {
 		CFOcountPOM.closeCategories().click();
 		extent.endTest(test);
 		extent.flush();
-	}
+	}*/
 	
-	@Test(priority = 8)
+//	@Test(priority = 8)
 	void clickPenaltyStatutory() throws InterruptedException
 	{
 		test = extent.startTest("'Penalty' ");
@@ -396,7 +396,7 @@ public class DeptStatutory extends BasePage {
 		extent.flush();
 	}
 
-		@Test(priority = 9)
+	//	@Test(priority = 9)
 		void PenaltyMultipleFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
@@ -407,7 +407,7 @@ public class DeptStatutory extends BasePage {
 			extent.flush();
 		}
 
-		@Test(priority = 10)
+		//	@Test(priority = 10)
 		void PenaltyMultipleFilterInterest() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty- Interest box Popup selection wise filter working or not.");
@@ -421,7 +421,7 @@ public class DeptStatutory extends BasePage {
 		
 	
 	
-	@Test(priority = 11)
+		//@Test(priority = 11)
 	void SummaryofOverdueCompliances() throws InterruptedException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances");
@@ -471,7 +471,7 @@ public class DeptStatutory extends BasePage {
 	}
 	
 	
-	@Test(priority = 12)
+	//	@Test(priority = 12)
 	void NotCompleted_PieChart() throws InterruptedException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");

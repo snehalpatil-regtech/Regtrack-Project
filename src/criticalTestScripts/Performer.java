@@ -31,6 +31,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import cfo.CFOcountPOM;
+import departmentHead.DeptCountPOM;
 import login.BasePage;
 import performer.MethodsPOM;
 import performer.OverduePOM;
@@ -72,9 +73,9 @@ public class Performer extends BasePage {
 	void setBrowser() throws InterruptedException, IOException
 	{
 		
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\PerformerResults.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\PerformerResults.html",true);
 		test = extent.startTest("Loging In - Performer");
-		test.log(LogStatus.PASS, "Logging into system");
+		test.log(LogStatus.PASS, "Logging id - deepali12@tlregtech.in , Password - admin@123");
 		
 		extent.endTest(test);
 		extent.flush();
@@ -144,7 +145,7 @@ public class Performer extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
-	 
+	
 	 @Test(priority = 3) 
 		void StatutoryOverdueCri() throws InterruptedException, IOException
 		{
@@ -325,7 +326,7 @@ public class Performer extends BasePage {
 		extent.flush();
 	}
 	
-	 @Test(priority = 18) //pass
+//	 @Test(priority = 18) //pass
 	   void PerformerTaskRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Statutory Rejected Count Match");
@@ -337,7 +338,7 @@ public class Performer extends BasePage {
 			extent.flush();
 		}
 		
-		@Test(priority = 19) //pass
+	//	@Test(priority = 19) //pass
 	   void PerformerTaskRejectedIn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Performer Task Summary - Internal Rejected Count Match");
@@ -445,7 +446,7 @@ public class Performer extends BasePage {
 		}
 	
 	
-    	@Test(priority = 28) 
+    	//@Test(priority = 28) 
 	       void ComplianceSatCalender() throws InterruptedException
 				{
 					test = extent.startTest("My Compliance Calender Statutory perform Verification");
@@ -480,7 +481,7 @@ public class Performer extends BasePage {
 					Thread.sleep(500);
 					wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 					Thread.sleep(3000);
-					OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+					OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 										//Clicking on 'Add Link' button of Compliance Documents
 					Thread.sleep(2000);
 					Thread.sleep(1000);
@@ -534,7 +535,7 @@ public class Performer extends BasePage {
 	   	extent.flush(); 
 	   	}
 	   	
-		@Test(priority = 29) 
+		//@Test(priority = 29) 
     void ComplianceSatCalender1() throws InterruptedException, AWTException
 			{
 				test = extent.startTest(" Calender Statutory Count Verification");
@@ -653,8 +654,32 @@ public class Performer extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-
+	
 	@Test(priority = 32) 
+	void SMETAReport() throws InterruptedException, IOException
+	{
+		test = extent.startTest("My Reports -  SMETA Report Verification");
+		
+		
+		ReMethodsPOM.SMETAReport(test, "Statutory");
+
+		extent.endTest(test);
+		extent.flush();
+	}
+	
+	//@Test(priority = 33) 
+	void SMETAReportFilterMgmt() throws InterruptedException, IOException
+	{
+		test = extent.startTest("My Reports -  To Check Whether Smeta Report Grid all filter working or not ? ");
+		
+		
+		DeptCountPOM.SMETAReportFilterMgmt(test);
+
+		extent.endTest(test);
+		extent.flush();
+	}
+
+	@Test(priority = 34) 
 	void ComplianceDocumentsSat() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Compliance Documents Statutory verification");
@@ -665,7 +690,7 @@ public class Performer extends BasePage {
 				extent.flush();
 	}
 	
-	@Test(priority = 33) 
+	@Test(priority = 35) 
 		void ComplianceDocumentsInter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents Internal verification");
@@ -685,9 +710,6 @@ public class Performer extends BasePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.body.style.zoom='" + zoomLevel + "'");
     }
-	
-	
-
 	
 		@AfterMethod
       	void browserClosing() throws InterruptedException

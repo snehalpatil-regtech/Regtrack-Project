@@ -14,7 +14,8 @@
 	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
-	import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.interactions.Actions;
 	import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.Select;
@@ -71,7 +72,7 @@
 		void setBrowser() throws InterruptedException, IOException
 		{
 		//	String workingDir = System.getProperty("web.chrome.","C:/March2022/PerformerPom//chrome.exe");
-			extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\MgmtBita.htm",true);
+			extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\MgmtBita.html",true);
 			test = extent.startTest("Loging In - MGMT (Statutory)");
 			test.log(LogStatus.PASS, "https://login.teamleaseregtech.com/");
 			test.log(LogStatus.PASS, "snehal10.patil@tlregtech.in");
@@ -133,7 +134,7 @@
 			}
 		}
 
-//@Test(priority = 1)
+      @Test(priority = 1)
 		void Entities() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Entities");
@@ -144,7 +145,7 @@
 			extent.flush();
 		}
 		
-//@Test(priority = 2)
+    @Test(priority = 2)
 		void LocationCount() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Location");
@@ -155,7 +156,7 @@
 			extent.flush();
 		}
 		
-//@Test(priority = 3)
+@Test(priority = 3)
 		void CategoriesCountMatch() throws InterruptedException, IOException
 		{
 			test = extent.startTest(" Count by Clicking on 'Categories'");
@@ -166,7 +167,8 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-//	@Test(priority = 4)
+
+	@Test(priority = 4)
 		void FilterWiseCategoriesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" To Check On Category popup Category filter working or not ");
@@ -241,6 +243,21 @@
 				// System.out.println("Pass : "+Pas);
 			 }
 			 
+			 
+			
+				Thread.sleep(8000);
+				if(DeptCountPOM.Clear().isEnabled())
+				{
+					test.log(LogStatus.PASS, "while click on Clear Button selected data should be cleared");
+				
+					DeptCountPOM.Clear().click();
+				}
+			
+			else
+			{
+				test.log(LogStatus.FAIL, "while click on Clear Button selected data not cleared");
+				
+			}
 			 getDriver().switchTo().defaultContent();
 				
 			Thread.sleep(4000);
@@ -250,7 +267,7 @@
 			extent.flush();
 		}
 		
-//	@Test(priority = 5)
+	@Test(priority = 5)
 		void CompliancesCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -275,9 +292,7 @@
 			Thread.sleep(500);
 			CFOcountPOM.clickElectricity().click();
 			Thread.sleep(3000);*/
-			CFOcountPOM.clickClear().click();
-			Thread.sleep(2000);
-			test.log(LogStatus.PASS, "Clear Button is working Successfully");	
+			
 			js.executeScript("window.scrollBy(0,500)");
 			Thread.sleep(3000);
 			CFOcountPOM.readTotalItemsD().click();					//Clicking on total items count
@@ -304,7 +319,7 @@
 			extent.flush();
 		}
 		
-//	@Test(priority = 6)
+	@Test(priority = 6)
 		void FilterWiseCompliancesCountMatch() throws InterruptedException, IOException
 		{
 			test = extent.startTest("'Compliances' filter working or not");
@@ -315,7 +330,7 @@
 			extent.flush();
 		}
 		
-//@Test(priority = 7)
+@Test(priority = 7)
 		void UsersCountMatch() throws InterruptedException
 		{
 			test = extent.startTest(" Count by Clicking on 'Users'");
@@ -364,7 +379,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-//	@Test(priority = 8)
+	@Test(priority = 8)
 		void clickPenaltyStatutory() throws InterruptedException
 		{
 			test = extent.startTest("'Penalty' ");
@@ -389,9 +404,7 @@
 			Thread.sleep(1000);
 			CFOcountPOM.clickABita().click();*/
 			Thread.sleep(500);
-			CFOcountPOM.clickClear().click();
-			test.log(LogStatus.PASS, " Penalty - Clear Button Working  Successfully");
-			Thread.sleep(1000);
+			
 			CFOcountPOM.clickInterest().click();
 			Thread.sleep(4000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFGradingGraphDisplay"));	//Wait until frame get visible and switch to it.
@@ -437,7 +450,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-//		@Test(priority = 9)
+		@Test(priority = 9)
 		void PenaltyMultipleFilter() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Whether On  Penalty box Popup selection wise filter working or not.");
@@ -460,11 +473,10 @@
 		}
 
 		
-		
-//@Test(priority = 10)
+@Test(priority = 10)
 		void SummaryofOverdueCompliances() throws InterruptedException
 		{
-			test = extent.startTest(" Summary of Overdue Compliances");
+			test = extent.startTest("Summary of Overdue Compliances");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
 			Thread.sleep(4000);
@@ -506,8 +518,7 @@
 				Thread.sleep(1000);
 				OverduePOM.clickRiskSAhigh().click();
 				Thread.sleep(1000);
-				OverduePOM.clickclearBtn().click();
-				test.log(LogStatus.PASS, "Clear successfully");
+				
 				getDriver().switchTo().defaultContent();
 				Thread.sleep(3000);
 				CFOcountPOM.closeCategories().click();
@@ -527,7 +538,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-//@Test(priority = 11)
+@Test(priority = 11)
 		void SummaryofOverdueMail() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To Check Mail send funtionality from summary of overdue compliance working or not?.");
@@ -539,7 +550,7 @@
 		}
 		
 		
-//@Test(priority = 12)
+@Test(priority = 12)
 			void NotCompleted_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -638,7 +649,7 @@
 		
 			
 			
-//@Test(priority = 13)
+@Test(priority = 13)
 			void ClosedDelayed_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -731,7 +742,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-//@Test(priority = 14)
+@Test(priority = 14)
 			void ClosedTimely_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -825,7 +836,7 @@
 				
 			}
 			
-//@Test(priority = 15)
+@Test(priority = 15)
 			void NotApplicable_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -936,7 +947,7 @@
 				extent.flush();
 			}
 
-//@Test(priority = 17)
+@Test(priority = 17)
 			void Overdue_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -1036,7 +1047,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-//@Test(priority = 18)
+@Test(priority = 18)
 			void dueToday_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -1135,7 +1146,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-//@Test(priority = 19)
+@Test(priority = 19)
 			void pendingForReview_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -1237,7 +1248,7 @@
 			}
 			
 			
-// @Test(priority = 20)
+ @Test(priority = 20)
 			void inProgress_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1338,7 +1349,7 @@
 				extent.flush();
 			}
 			
-//	@Test(priority = 21)
+	@Test(priority = 21)
 			void rejected_PieChart() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1447,7 +1458,8 @@
 						extent.endTest(test);
 						extent.flush();
 					}
-	@Test(priority = 22)
+					
+						@Test(priority = 22)
 			void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1652,7 +1664,7 @@
 				extent.flush();
 			}
 			
-@Test(priority = 24)
+			@Test(priority = 24)
 			void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1751,7 +1763,7 @@
 				extent.flush();
 			}
 			
-	@Test(priority = 25)
+				@Test(priority = 25)
 			void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
@@ -1856,7 +1868,7 @@
 				extent.flush();
 			}
 	
-	@Test(priority = 26)
+			@Test(priority = 26)
 		void OverallFunIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Completion Status- Overall Function - 'Is SMETA Column added' Verification");					
@@ -1867,7 +1879,7 @@
 		}
 
 			
-@Test(priority = 27)
+		@Test(priority = 27)
 			void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 			{
 			
@@ -1952,7 +1964,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-		@Test(priority = 28)
+			//	@Test(priority = 28)
 			void RiskSummaryHighStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -2041,7 +2053,7 @@
 				extent.flush();
 			}
 			
-@Test(priority = 29)
+			@Test(priority = 29)
 			void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -2130,7 +2142,7 @@
 				extent.endTest(test);
 				extent.flush();
 			}
-@Test(priority =30)
+			@Test(priority =30)
 			void RiskSummaryLowStatutory() throws InterruptedException, IOException
 			{		
 				test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -2225,7 +2237,7 @@
 				extent.flush();
 			}
 			
-    @Test(priority = 31)
+			//   @Test(priority = 31)
 	void RiskSummIsSmeta() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Bar Graph - Risk Summary graph - 'Is SMETA Column added' Verification");					
@@ -2235,7 +2247,7 @@
 		extent.flush();
 	}
 
-		@Test(priority = 32)
+	//	@Test(priority = 32)
 			void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
 			{
 				Thread.sleep(3000);		
@@ -2393,7 +2405,7 @@
 				extent.flush();
 			}
 			
-		@Test(priority = 33)
+			//	@Test(priority = 33)
 		void DepartSummIsSmeta() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - Department Summary graph - 'Is SMETA Column added' Verification");					
@@ -2404,7 +2416,7 @@
 		}
 
 			
-		@Test(priority = 31)
+		//	@Test(priority = 31)
 		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -2522,7 +2534,7 @@
 			extent.flush();
 		}
 		
-	@Test(priority = 32)
+		//	@Test(priority = 32)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2639,7 +2651,7 @@
 			extent.flush();
 		}
 		
-	@Test(priority = 33)
+		//	@Test(priority = 33)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -3122,7 +3134,7 @@
 		extent.flush();
 	}
     
-	@Test(priority = 38)
+	//	@Test(priority = 38)
 	void periodIsSMETAColumnTimely() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
@@ -3249,8 +3261,8 @@
 	}
 	
 	
-   @Test(priority = 41)
-		void Overdue_PieChartPeriod() throws InterruptedException, IOException
+  // @Test(priority = 41)
+   		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
@@ -3371,7 +3383,7 @@
 			extent.flush();
 		}
    
-	@Test(priority =42)
+   //	@Test(priority =42)
 	void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Overdue - Is SMETA Column Count Verification");
@@ -3413,7 +3425,7 @@
 		extent.flush();
 	}
 		
-	@Test(priority = 43)
+	//	@Test(priority = 43)
 		void dueToday_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -3534,7 +3546,7 @@
 			extent.flush();
 		}
 		
-	@Test(priority =44)
+		//	@Test(priority =44)
 	void periodIsSMETAColumnDuetoday() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - DueToday - Is SMETA Column Count Verification");
@@ -3576,7 +3588,7 @@
 		extent.flush();
 	}
 	
-	@Test(priority = 45)
+		@Test(priority = 45)
 		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -3697,7 +3709,7 @@
 			extent.flush();
 		}
 	
-	@Test(priority = 46)
+			@Test(priority = 46)
 	void periodIsSMETAColumnPendingForReview() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Pending For Review - Is SMETA Column Count Verification");
@@ -3739,7 +3751,7 @@
 		extent.flush();
 	}
 		
-	@Test(priority = 47)
+	//	@Test(priority = 47)
 		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3860,7 +3872,7 @@
 			extent.flush();
 		}
 	
-	@Test(priority = 48)
+		//	@Test(priority = 48)
 	void periodIsSMETAColumnInprogress() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - In Progress - Is SMETA Column Count Verification");
@@ -4022,7 +4034,7 @@
 			extent.flush();
 		}
 	  
-		@Test(priority = 50)
+			@Test(priority = 50)
 		void periodIsSMETAColumnRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Rejected - Is SMETA Column Count Verification");
@@ -4065,7 +4077,7 @@
 		}
 			
 	  
-		@Test(priority = 51)
+	/*	@Test(priority = 51)
 		void UpcomingFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the all filters functionally working or not while clicking on Period-Pie Chart - Not Completed Status- ' Upcoming ' -  Critical Risk or not?.");
@@ -4310,8 +4322,8 @@
 				extent.endTest(test);
 				extent.flush();
 		}
-		
-		@Test(priority = 54)
+		*/
+	//	@Test(priority = 54)
 		void complianceCalendar() throws InterruptedException
 		{
 			test = extent.startTest("compliance Calendar Verifications");
@@ -4384,7 +4396,7 @@
 				extent.flush();
 		}
 		
-		@Test(priority = 55)
+	/*	@Test(priority = 55)
 		void DailyUpdates() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
@@ -4621,7 +4633,7 @@
 			extent.flush();
 		}*/
 		
-		@Test(priority = 59)
+	/*	@Test(priority = 59)
 		void DetailedReport() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Detailed Report Count Verification");
@@ -4831,7 +4843,7 @@
 			extent.flush();
 		}*/
 
-		@Test(priority = 55)
+		/*@Test(priority = 55)
 		void ComplianceDocuments() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Compliance Documents  verification");
@@ -4903,7 +4915,7 @@
 			extent.flush();
 		}
 
-		//@Test(priority = 80) // pass
+		@Test(priority = 80) // pass
 		void MyEscalation() throws InterruptedException, IOException
 		{
 			test = extent.startTest("My  Escalation - Verification");
@@ -4924,7 +4936,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}*/
-		
+	/*	
 		@Test(priority = 81) 
 		void MyNotifications() throws InterruptedException, IOException
 		{
@@ -5085,7 +5097,7 @@
 					extent.flush();
 				}
 			
-		
+		*/
 		@Test(priority = 90)
 		void CompletionStatusFilter() throws InterruptedException, IOException
 		{
@@ -5097,7 +5109,7 @@
 			extent.flush();
 		}
 		
-		@Test(priority =91)
+		/*@Test(priority =91)
 		void NotCompletionStatusFilterMgmt() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the filters of Performance Summary Graph for Not Completed Status working or not?");
@@ -5330,7 +5342,7 @@
 		}*/
 		
 		
-		@Test(priority = 112)
+		/*@Test(priority = 112)
 		void SummaryofOverdueSF() throws InterruptedException, IOException
 		{
 			test = extent.startTest("To check whether the view and download icon working or not in the sample form /attachment on the details popup of the overview icon of Summary of Overdue Compliances?");
@@ -5436,7 +5448,7 @@
 			
 			extent.endTest(test);
 			extent.flush();
-		}
+		}*/
 		@AfterMethod
 	  	void browserClosing() throws InterruptedException
 	  	{
@@ -5455,7 +5467,7 @@
 			 
 			 
 		
-		//@Test(priority = 57)
+		@Test(priority = 57)
 		void FilterWiseCategoriesCountMatch1() throws InterruptedException
 		{
 			test = extent.startTest(" Count Match Filter Wise by Clicking on 'Categories' - Compliances ");
@@ -5525,7 +5537,7 @@
 			extent.endTest(test);
 			extent.flush();
 		}
-
+//management.tlcg@gmail.com
 
 		
 		
