@@ -58,7 +58,7 @@ public class StatutoryMGMT extends BasePage {
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
-		fis = new FileInputStream("E:\Regtrack Merge Project\Regtrack-Project\TestData\\ComplianceSheet.xlsx");
+		fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(11);					//Retrieving third sheet of Workbook
 		return sheet;
@@ -68,7 +68,7 @@ public class StatutoryMGMT extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("E:\Regtrack Merge Project\Regtrack-Project\Reports\\MgmtBita.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\\Regtrack Merge Project\\Regtrack-Project\\Reports\\MgmtBita.html",true);
 		test = extent.startTest("Loging In - MGMT (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 
