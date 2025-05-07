@@ -68,7 +68,7 @@ public class StatutoryMGMT extends BasePage {
 	@BeforeTest
 	void setBrowser() throws InterruptedException, IOException
 	{
-		extent = new com.relevantcodes.extentreports.ExtentReports("D:\\Regtrack-Project\\Reports\\MgmtBita.html",true);
+		extent = new com.relevantcodes.extentreports.ExtentReports("E:\Regtrack Merge Project\Regtrack-Project\Reports\\MgmtBita.html",true);
 		test = extent.startTest("Loging In - MGMT (Statutory)");
 		test.log(LogStatus.PASS, "Logging into system");
 
