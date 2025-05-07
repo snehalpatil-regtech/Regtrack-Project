@@ -6,6 +6,11 @@
    
   
   <dependencies>
+	  <dependency>
+    <groupId>com.applitools</groupId>
+    <artifactId>eyes-selenium-java5</artifactId>
+    <version>5.14.0</version>
+</dependency>
   	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
