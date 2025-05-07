@@ -57,7 +57,7 @@ import performer.OverduePOM;
 	    protected   String password;
 	    protected String url;
 	    
-	    String filePath ="E:\Regtrack Merge Project\Regtrack-Project\TestData\\ComplianceSheet.xlsx";
+	    String filePath ="E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	    
 		public static WebDriver getDriver() {
 			return driver.get();
@@ -66,7 +66,7 @@ import performer.OverduePOM;
 		public static XSSFSheet ReadExcel(int no) throws IOException
 		{
 			//String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-			fis = new FileInputStream("E:\Regtrack Merge Project\Regtrack-Project\TestData\\ComplianceSheet.xlsxx");
+			fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsxx");
 			workbook = new XSSFWorkbook(fis);
 			sheet = workbook.getSheetAt(no);					//Retrieving third sheet of Workbook
 			return sheet;
@@ -165,7 +165,7 @@ import performer.OverduePOM;
 	private void openBrower(int no) throws IOException {
 
 		if (browser.contains("chrome")) {
-					System.setProperty("webdriver.chrome.driver", "E:\driver\chromedriver-win64\chromedriver-win64\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "E:\\driver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 					//WebDriverManager.chromedriver().setup();
 					ChromeOptions options = new ChromeOptions();
 					options.addArguments("--remote-allow-origins=*");
