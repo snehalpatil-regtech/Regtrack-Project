@@ -58,7 +58,7 @@ public class StatutoryMGMT extends BasePage {
 /*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
-		fis = new FileInputStream("D:\\Avacom22Nov\\AvacomUpdated26JULY2023\\TestData\\ComplianceSheet.xlsx");
+		fis = new FileInputStream("E:\Regtrack Merge Project\Regtrack-Project\TestData\\ComplianceSheet.xlsx");
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(11);					//Retrieving third sheet of Workbook
 		return sheet;
