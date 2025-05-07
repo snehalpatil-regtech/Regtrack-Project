@@ -165,7 +165,7 @@ import performer.OverduePOM;
 	private void openBrower(int no) throws IOException {
 
 		if (browser.contains("chrome")) {
-					System.setProperty("webdriver.chrome.driver", "E:\\eclips-projects\\Selenium\\chromedriver-win64_1\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver", "E:\\driver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 					//WebDriverManager.chromedriver().setup();
 					ChromeOptions options = new ChromeOptions();
 					options.addArguments("--remote-allow-origins=*");
@@ -204,8 +204,8 @@ import performer.OverduePOM;
 		String password = c2.getStringCellValue();		//Got the URL stored at position 2,1
 		*/
 		
-		read_Login_username( no);
-		read_Login_password( no);
+		read_Login_username(no);
+		read_Login_password(no);
 		
 		
 		login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
@@ -220,6 +220,8 @@ import performer.OverduePOM;
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(3000);
 		}else if(text.equalsIgnoreCase("StatutoryExcludingChecklist")) {
+			Thread.sleep(3000);
+			CFOcountPOM.RefreshNow().click();
 			Thread.sleep(3000);
 			ApprovalcountPOM.Filters().click();
 			Thread.sleep(2000);
@@ -303,8 +305,8 @@ import performer.OverduePOM;
 		{
 		}
 		Thread.sleep(3000);
-	//	ApprovalcountPOM.clickManagement().click();
-	//	Thread.sleep(3000);
+		ApprovalcountPOM.clickManagement().click();
+		Thread.sleep(3000);
 		if(text.equalsIgnoreCase("internal")) {
 			Thread.sleep(3000);
 		Select drp = new Select(CFOcountPOM.selectInternal());
@@ -315,9 +317,9 @@ import performer.OverduePOM;
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(3000);
 		}else if(text.equalsIgnoreCase("StatutoryExcludingChecklist")) {
-			ApprovalcountPOM.Filters().click();
-			Thread.sleep(2000);
-			ApprovalcountPOM.StatutoryExcludingChecklist().click();
+			Select drp = new Select(CFOcountPOM.selectInternal());
+			Thread.sleep(700);
+			drp.selectByIndex(0);
 			Thread.sleep(4000);
 			CFOcountPOM.clickApply().click();
 		}
@@ -338,8 +340,10 @@ import performer.OverduePOM;
         }
 		
 	}
-	
-	
+/*	1) RND ci/cd pipeline for Jenkins Pipeline
+	2)Modify the script of secretarial product on Dot Net live Testing Link.
+3)Modify the scripts of compliance product
+*/	
 	
 
 	public void closeBrowser() {

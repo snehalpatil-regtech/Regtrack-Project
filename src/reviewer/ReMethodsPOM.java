@@ -1,6 +1,9 @@
 
 package reviewer;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -30,9 +34,11 @@ import org.openqa.selenium.interactions.Actions;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import approval.ApprovalcountPOM;
 import cfo.CFOcountPOM;
 import cfo.MgmtSonyMethod;
 import departmentHead.DeptCountPOM;
+import implementation.ImplementPOM;
 import login.BasePage;
 import performer.OverduePOM;
 
@@ -43,7 +49,7 @@ public class ReMethodsPOM extends BasePage
 	private static List<WebElement> elementsList = null;
 	private static List<WebElement> elementsList1 = null;
 	private static List<WebElement> elementsList2 = null;
-	static String filePath ="E:\\AVACOM Project\\AvacomModified\\TestData\\ComplianceSheet.xlsx";
+	static String filePath ="D:\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx";
 	
 	
 	
@@ -543,14 +549,14 @@ public class ReMethodsPOM extends BasePage
 		
 		
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -969,7 +975,7 @@ public class ReMethodsPOM extends BasePage
 		int OldCountCompletedIn = Integer.parseInt(ReviewerPOM.ClickCompletedIn().getText());	//Reading old value of Internal Reject
 
 		ReviewerPOM.clickInternalReview().click();		//Clicking on Statutory Review value.
-		
+		Thread.sleep(5000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@role='grid'][@class='k-selectable']")));
 	//	elementsList = ReviewerPOM.clickStatus();				//CLicking on Status to sort it in ascending order
 	//	elementsList.get(0).click();
@@ -1071,7 +1077,7 @@ public class ReMethodsPOM extends BasePage
 		ReviewerPOM.insertTextAreaInternal().sendKeys(remark);				//Inserting remark in Text area
 		try
 		{
-			wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextAreaInternal()));
+		//	wait.until(ExpectedConditions.elementToBeClickable(ReviewerPOM.insertTextAreaInternal()));
 			ReviewerPOM.insertTextAreaInternal().sendKeys(remark);		//Inserting remark in Text area
 		}
 		catch(Exception e)
@@ -1158,14 +1164,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1369,14 +1375,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1517,14 +1523,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[4]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1609,14 +1615,14 @@ public class ReMethodsPOM extends BasePage
 		 Thread.sleep(8000);
 		 getDriver().switchTo().frame("frameMitigationOverViews");		
 			 Thread.sleep(4000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		ReviewerPOM.MPDownload().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1694,14 +1700,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[4]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1784,14 +1790,14 @@ public class ReMethodsPOM extends BasePage
 		 Thread.sleep(8000);
 		 getDriver().switchTo().frame("frameMitigationOverViews");		
 			 Thread.sleep(4000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		ReviewerPOM.MPDownload().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -1943,7 +1949,7 @@ public class ReMethodsPOM extends BasePage
 		
 		Thread.sleep(8000);
 		elementsList = ReviewerPOM.clickOverView();
-		elementsList.get(2).click();
+		elementsList.get(1).click();
 		Thread.sleep(2000);
 		ReviewerPOM.CloseOverview().click();
 		Thread.sleep(3000);
@@ -2003,14 +2009,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[4]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -2043,14 +2049,14 @@ public class ReMethodsPOM extends BasePage
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table")));
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -2685,14 +2691,14 @@ jse.executeScript("arguments[0].click();", ClickSta);
 		test.log(LogStatus.PASS, "While click on ' Download ' Button  Month Wise Calendar Report should be Downloaded.");
 		Thread.sleep(3000);
 		Thread.sleep(1000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.CalendarIcon().click();		//Exporting (Downloading) file
 		Thread.sleep(8000);
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		Thread.sleep(3000);
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
@@ -3536,14 +3542,14 @@ Thread.sleep(3000);
 	
 	
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -3567,6 +3573,213 @@ Thread.sleep(3000);
 		//CFOcountPOM.closeCategories().click();
 		//Thread.sleep(1000);
 	}
+	
+	public static void  SMETAReport(ExtentTest test, String user) throws InterruptedException, IOException
+	{		
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+	    
+		Thread.sleep(500);
+		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
+		Thread.sleep(4000);
+		if(CFOcountPOM.SMETAReport().isDisplayed())
+		{
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Smeta Report  should be present under My Reports section.");
+			if(CFOcountPOM.SMETAReport().isEnabled())
+			{
+				test.log(LogStatus.PASS, "Smeta Report screen should be opened.");
+			
+			CFOcountPOM.SMETAReport().click();
+			}
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "Smeta Report not present under My Reports section.");
+			
+		}
+
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		if(user.equalsIgnoreCase("Internal")) {
+			CFOcountPOM.InternalRe().click();
+			Thread.sleep(4000);
+		}
+		else {
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Statutory");
+		//CFOcountPOM.StatutoryRe().click();
+		Thread.sleep(4000);
+	}
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(4000);
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+		
+		Thread.sleep(4000);
+		
+		 File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+			
+			Thread.sleep(500);
+			CFOcountPOM.clickExportImage2().click();					//Exporting (Downloading) file
+			
+			Thread.sleep(3000);//C://Users//jiya//Downloads//
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+			Thread.sleep(3000);
+			if(dirContents.length < allFilesNew.length)
+			{
+				test.log(LogStatus.PASS, " File downloaded successfully.");	
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, " File does not downloaded.");
+			}
+		
+		
+	
+		By locator = By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[1]/td/a");
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(4000);
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	Thread.sleep(2000);
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		CFOcountPOM.closeDocument2().click();
+		test.log(LogStatus.PASS, "overView successfully");
+	
+		
+			performer.OverduePOM.clickDashboard().click();
+	}
+
+	
+	public static void  SMETAReport1(ExtentTest test, String user) throws InterruptedException, IOException, AWTException
+	{		
+		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+	    
+		Thread.sleep(500);
+		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
+		Thread.sleep(4000);
+		 Robot robot = new Robot();
+		  robot.keyPress(KeyEvent.VK_CONTROL);
+		  robot.keyPress(KeyEvent.VK_SUBTRACT);
+		  robot.keyRelease(KeyEvent.VK_SUBTRACT);
+		  robot.keyPress(KeyEvent.VK_CONTROL);
+		  robot.keyPress(KeyEvent.VK_SUBTRACT);
+		  robot.keyPress(KeyEvent.VK_CONTROL);
+		  robot.keyPress(KeyEvent.VK_SUBTRACT);
+		  robot.keyPress(KeyEvent.VK_CONTROL);
+		  robot.keyPress(KeyEvent.VK_SUBTRACT);
+		  robot.keyPress(KeyEvent.VK_CONTROL);
+		  robot.keyPress(KeyEvent.VK_SUBTRACT);
+		  robot.keyRelease(KeyEvent.VK_CONTROL);
+			
+		Thread.sleep(4000);
+		
+		if(CFOcountPOM.SMETAReport().isDisplayed())
+		{
+			Thread.sleep(4000);
+			test.log(LogStatus.PASS, "Smeta Report  should be present under My Reports section.");
+			if(CFOcountPOM.SMETAReport().isEnabled())
+			{
+				test.log(LogStatus.PASS, "Smeta Report screen should be opened.");
+			
+			CFOcountPOM.SMETAReport().click();
+			}
+		}
+		else
+		{
+			test.log(LogStatus.FAIL, "Smeta Report not present under My Reports section.");
+			
+		}
+		
+		try {
+	           
+
+            // Set zoom level to 50% (0.5) for zooming out
+         //   setZoomLevel(getDriver(), 0.9);
+
+            // Wait to observe the effect
+            Thread.sleep(2000);
+
+            // Set zoom level back to 100% (1.0) to reset to normal
+            setZoomLevel(getDriver(), 1.0);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		if(user.equalsIgnoreCase("Internal")) {
+			CFOcountPOM.InternalRe().click();
+			Thread.sleep(4000);
+		}
+		else {
+			List<WebElement>roc = getDriver().findElements(By.xpath("(//*[@class='k-in'])"));
+			ApprovalcountPOM.selectOptionFromDropDown_bs(roc, "Statutory");
+		//CFOcountPOM.StatutoryRe().click();
+		Thread.sleep(4000);
+	}
+		CFOcountPOM.ComplianceType().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(2000);
+		CFOcountPOM.Apply().click();
+		Thread.sleep(4000);
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));	//Wait till records table gets visible
+		
+		Thread.sleep(4000);
+		
+		 File dir = new File("C:\\Users\\mayurig\\Downloads");
+			File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+			
+			Thread.sleep(500);
+			CFOcountPOM.clickExportImage2().click();					//Exporting (Downloading) file
+			
+			Thread.sleep(3000);//C://Users//jiya//Downloads//
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+			File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+			Thread.sleep(3000);
+			if(dirContents.length < allFilesNew.length)
+			{
+				test.log(LogStatus.PASS, " File downloaded successfully.");	
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, " File does not downloaded.");
+			}
+		
+		
+	
+		By locator = By.xpath("//*[@id='grid']/div[2]/table/tbody/tr[1]/td/a");
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		Thread.sleep(4000);
+		
+		WebElement ViewButton = getDriver().findElement(locator);	
+		Thread.sleep(4000);
+	JavascriptExecutor jse=(JavascriptExecutor) getDriver();
+	Thread.sleep(2000);
+	jse.executeScript("arguments[0].click();", ViewButton);
+		Thread.sleep(4000);
+		CFOcountPOM.closeDocument2().click();
+		test.log(LogStatus.PASS, "overView successfully");
+	
+		
+			performer.OverduePOM.clickDashboard().click();
+	}
+
+	public static void setZoomLevel(WebDriver driver, double zoomLevel) 
+	{
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.body.style.zoom='" + zoomLevel + "'");
+    }
 	
 	
 }

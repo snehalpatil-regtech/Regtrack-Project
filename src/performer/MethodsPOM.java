@@ -82,7 +82,7 @@ public class MethodsPOM  extends BasePage
 		OverduePOM.RemediationSteps().sendKeys("Remediation Steps");
 		Thread.sleep(1000);
 		try {
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
 		}catch(Exception e) {
 			
@@ -156,9 +156,9 @@ getDriver().switchTo().parentFrame();
 		OverduePOM.RemediationSteps().sendKeys("Remediation Steps");
 		Thread.sleep(1000);
 		try {
-		//OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		//OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		//Thread.sleep(1000);
-		//OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		//OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(3000);
 		}catch(Exception e) {
 			
@@ -206,14 +206,14 @@ getDriver().switchTo().parentFrame();
 		
 		try {
 			Thread.sleep(3000);
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 			
 			Thread.sleep(500);
 			OverduePOM.Dwounload().click();				//Exporting (Downloading) file
 			
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 			
 			
@@ -454,7 +454,7 @@ Thread.sleep(4000);
 		OverduePOM.RemediationSteps().sendKeys("Remediation Steps");
 		Thread.sleep(1000);
 		try {
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
 	}catch(Exception e) {
 		
@@ -525,9 +525,9 @@ getDriver().switchTo().parentFrame();
 		OverduePOM.RemediationSteps().sendKeys("Remediation Steps");
 		Thread.sleep(1000);
 		try {
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
 }catch(Exception e) {
 			
@@ -572,14 +572,14 @@ getDriver().switchTo().parentFrame();
 		
 		try {
 			Thread.sleep(3000);
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 			
 			Thread.sleep(500);
 			OverduePOM.Dwounload().click();				//Exporting (Downloading) file
 			
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 			
 			
@@ -1208,7 +1208,7 @@ Thread.sleep(4000);
 		Thread.sleep(1000);
 		OverduePOM.Date28().click();
 		//Thread.sleep(2000);
-		//OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		//OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
 		OverduePOM.submit().click();
 		Thread.sleep(3000);
@@ -1274,9 +1274,9 @@ Thread.sleep(4000);
 		Thread.sleep(1000);
 		OverduePOM.Date28().click();
 //		Thread.sleep(2000);
-//		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+//		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 //		Thread.sleep(2000);
-//		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+//		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(3000);
 		OverduePOM.submit().click();
 		Thread.sleep(3000);
@@ -1314,14 +1314,14 @@ Thread.sleep(4000);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("frameMitigationOverViews"));	//Switching to iFrame.
 		try {
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Dwounload().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -1525,7 +1525,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		Thread.sleep(1000);
@@ -1563,7 +1563,7 @@ Thread.sleep(4000);
 		}catch(Exception e){
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");
+			OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");
 		}
 		Thread.sleep(500);
 		OverduePOM.remark().sendKeys("Automation Testing");			//Sending Remark
@@ -1603,7 +1603,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		Thread.sleep(1000);
@@ -1708,13 +1708,13 @@ Thread.sleep(4000);
 		js.executeScript("window.scrollBy(0,2000)"," ");				//Scrolling down window by 2000 px.
 		try {
 		Thread.sleep(500);
-		Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
-		status.selectByIndex(1);											//Selecting 2nd value from dropdown.
+	//	Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
+	//	status.selectByIndex(1);											//Selecting 2nd value from dropdown.
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		Thread.sleep(1000);
@@ -1752,7 +1752,7 @@ Thread.sleep(4000);
 		}catch(Exception e){
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");
 		}
 		Thread.sleep(500);
 		OverduePOM.remark().sendKeys("Automation Testing");			//Sending Remark
@@ -1859,7 +1859,7 @@ Thread.sleep(4000);
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 			Thread.sleep(2000);
 			Thread.sleep(1000);
@@ -1897,7 +1897,7 @@ Thread.sleep(4000);
 			}catch(Exception e2){
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 				Thread.sleep(3000);
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");
 			}
 			Thread.sleep(500);
 			OverduePOM.remark().sendKeys("Automation Testing");			//Sending Remark
@@ -1932,14 +1932,14 @@ Thread.sleep(4000);
 	{
 			
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 			
 		if(dirContents.length < allFilesNew.length)
@@ -1960,14 +1960,14 @@ Thread.sleep(4000);
 	{
 			
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn2().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -2019,7 +2019,7 @@ Thread.sleep(4000);
 		Thread.sleep(1000);
 		OverduePOM.Date28().click();
 		//Thread.sleep(2000);
-		//OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		//OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(1000);
 		OverduePOM.submit().click();
 		Thread.sleep(3000);
@@ -2082,9 +2082,9 @@ Thread.sleep(4000);
 		Thread.sleep(1000);
 		OverduePOM.Date28().click();
 		Thread.sleep(2000);
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(2000);
-		OverduePOM.UploadFiles().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+		OverduePOM.UploadFiles().sendKeys("D:\\Automation File\\Charge.xlsx");
 		Thread.sleep(3000);
 		OverduePOM.submit().click();
 		Thread.sleep(3000);
@@ -2122,14 +2122,14 @@ Thread.sleep(4000);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("frameMitigationOverViews"));	//Switching to iFrame.
 		try {
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Dwounload().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -2402,7 +2402,7 @@ Thread.sleep(4000);
 				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
 				Thread.sleep(3000);
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLinkInternal().click();		//Clicking on 'Add Link' button of Compliance Documents
 				
 				Thread.sleep(1000);
@@ -2455,7 +2455,7 @@ Thread.sleep(4000);
 			Thread.sleep(1000);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.buttonAddLinkInternal().click();		//Clicking on 'Add Link' button of Compliance Documents
 			
 			Thread.sleep(1000);
@@ -2557,17 +2557,33 @@ Thread.sleep(4000);
 			else														//We will proceed if the message not shown.
 			{*/
 				js.executeScript("window.scrollBy(0,2000)"," ");		//Scrolling down window by 2000 px.
-				
+				try {
+					if(OverduePOM.text1().isDisplayed()) {
+						getDriver().switchTo().parentFrame();
+						OverduePOM.close().click();	
+						elementsList1 = OverduePOM.clickActionButtonList();	//Getting all action buttons (Statutory/Internal)
+						elementsList1.get(1).click();					//Clicking on ith action button which has blue status 
+						wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iInternalPerformerFrame"));
+						Thread.sleep(500);
+						js.executeScript("window.scrollBy(0,550)");	
 				Thread.sleep(500);
+					}
+				}catch(Exception e) {
+					
+				}
+				try {
 				Select status1 = new Select(OverduePOM.selectInternalDropdown());	//Selecting dropdown box.
 				status1.selectByIndex(1);								//Selecting 2nd value from dropdown.
+				}catch(Exception e) {
+					
+				}
 				
 				js.executeScript("window.scrollBy(0,2000)"," ");		//Scrolling down window by 2000 px.
 				
 				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
 				Thread.sleep(3000);
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLinkInternal().click();		//Clicking on 'Add Link' button of Compliance Documents
 				
 				Thread.sleep(1000);
@@ -2724,7 +2740,7 @@ Thread.sleep(4000);
 			
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 			
 			Thread.sleep(1000);
@@ -2777,7 +2793,7 @@ Thread.sleep(4000);
 		js.executeScript("window.scrollBy(0,1500)");
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-		OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 		
 		Thread.sleep(1000);
@@ -2857,7 +2873,7 @@ Thread.sleep(4000);
 		{
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 			
 			
@@ -2876,7 +2892,7 @@ Thread.sleep(4000);
 			Thread.sleep(2000);
 			OverduePOM.clickClosedDelayed().click();	  //Clicking on 'Closed Delayed' button.
 			
-//			Thread.sleep(2000);
+			Thread.sleep(8000);
 //			if(action.equalsIgnoreCase("submit"))
 //			{
 //				Thread.sleep(2000);
@@ -2895,12 +2911,13 @@ Thread.sleep(4000);
 			//getDriver().switchTo().alert().accept();
 			try
 			{
-				Thread.sleep(1000);
+				Thread.sleep(3000);
 				getDriver().switchTo().alert().accept();							//Clicking on OK of alert.
 				Thread.sleep(2000);
 			}
 			catch(Exception e)
 			{
+				Thread.sleep(3000);
 				OverduePOM.clickClose().click();
 				Thread.sleep(1000);
 			}
@@ -3390,7 +3407,7 @@ Thread.sleep(4000);
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-		OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 		OverduePOM.remark().sendKeys("Automation Testing");
 		Thread.sleep(500);
@@ -3418,7 +3435,7 @@ Thread.sleep(4000);
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-		OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 		OverduePOM.remark().sendKeys("Automation Testing");
 		Thread.sleep(500);
@@ -3497,7 +3514,7 @@ Thread.sleep(4000);
 				
 				Thread.sleep(500);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 				//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 				OverduePOM.remark().sendKeys("Automation Testing");
 				Thread.sleep(500);
@@ -3532,7 +3549,7 @@ Thread.sleep(4000);
 				
 				Thread.sleep(500);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 				//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 				OverduePOM.remark().sendKeys("Automation Testing");
 				Thread.sleep(500);
@@ -3652,13 +3669,13 @@ Thread.sleep(4000);
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-		OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 		OverduePOM.remark().sendKeys("Automation Testing");
 		Thread.sleep(500);
 		//OverduePOM.clickComplianceSubmit().click();				//Clicking on 'Submit' button.	
 		getDriver().findElement(By.xpath("//*[@id='btnSave2']")).click();
-		Thread.sleep(1000);
+		Thread.sleep(8000);
 		getDriver().switchTo().alert().accept();								//Clicking on alert to accept the message.
 		getDriver().switchTo().parentFrame();								//Switching back to parent frame.
 		Thread.sleep(2000);
@@ -3799,7 +3816,7 @@ Thread.sleep(4000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		elementsList = OverduePOM.clickStatutoryActionButton();
-		elementsList.get(1).click();			//Clicking on third Action button.
+		elementsList.get(0).click();			//Clicking on third Action button.
 		int flag = 0;
 		if(Compliance.equalsIgnoreCase("Statutory"))
 		{
@@ -3816,7 +3833,7 @@ Thread.sleep(4000);
 			{
 				Thread.sleep(500);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 				Thread.sleep(2000);//OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 			}
 			else
@@ -3824,7 +3841,7 @@ Thread.sleep(4000);
 				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 				String workingDir = System.getProperty("user.dir");
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Uploading file by sending file to Upload Button.
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Uploading file by sending file to Upload Button.
 				
 				Thread.sleep(500);
 				js.executeScript("window.scrollBy(0,500)");					//Scrolling down window by 2000 px.
@@ -3841,7 +3858,7 @@ Thread.sleep(4000);
 			Thread.sleep(500);
 			}catch(Exception e) {
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");
 			}
 		}
 		else if(Compliance.equalsIgnoreCase("Internal"))
@@ -3859,7 +3876,7 @@ Thread.sleep(4000);
 			{
 				Thread.sleep(500);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 				//OverduePOM.buttonAddLinkInternal().click();						//Clicking on 'Add Link' button of Compliance Documents
 			}
 			else
@@ -3867,7 +3884,7 @@ Thread.sleep(4000);
 				Thread.sleep(1000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
 			//	String workingDir = System.getProperty("user.dir");
-				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Uploading file by sending file to Upload Button.
+				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Uploading file by sending file to Upload Button.
 			}
 			Thread.sleep(500);
 			js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 2000 px.
@@ -3881,7 +3898,7 @@ Thread.sleep(4000);
 			flag = 2;
 			}catch(Exception e) {
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	
+				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	
 			}
 		}
 		Actions action = new Actions(getDriver());
@@ -3909,8 +3926,9 @@ Thread.sleep(4000);
 			Thread.sleep(3000);
 			OverduePOM.clickComplianceSubmit2().click();
 		}
-		Thread.sleep(500);
+		Thread.sleep(8000);
 		getDriver().switchTo().alert().accept();
+		Thread.sleep(1000);
 		getDriver().switchTo().parentFrame();
 		
 		Thread.sleep(2000);
@@ -4840,7 +4858,7 @@ Thread.sleep(4000);
 		{
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			Thread.sleep(300);
 		//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		}
@@ -4932,7 +4950,7 @@ Thread.sleep(4000);
 				{
 					Thread.sleep(500);
 					wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-					OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+					OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 					Thread.sleep(300);
 					//OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 				}
@@ -5196,14 +5214,14 @@ Thread.sleep(4000);
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.checkTable()));	//Waiting for records table to get displayed.
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -5287,14 +5305,14 @@ Thread.sleep(4000);
 		}
 		int count = Integer.parseInt(compliancesCount1);
 		*/
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.Exportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);//C://Users//jiya//Downloads//
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -5389,7 +5407,7 @@ Thread.sleep(4000);
 			{
 				Thread.sleep(2000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5422,7 +5440,7 @@ Thread.sleep(4000);
 			catch(Exception e1)
 			{
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");
 			}
 			
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.remark()));
@@ -5449,7 +5467,7 @@ Thread.sleep(4000);
 				js.executeScript("window.scrollBy(0,700)");					//Scrolling down window by 2600 px.
 				
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLinkInternal().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5469,7 +5487,7 @@ Thread.sleep(4000);
 			}
 			catch(Exception e) {
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	
 			}
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickInternalRemark()));
@@ -5553,7 +5571,7 @@ Thread.sleep(4000);
 			{
 				Thread.sleep(2000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadStatutory().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5607,7 +5625,7 @@ Thread.sleep(4000);
 				js1.executeScript("window.scrollBy(0,700)");					//Scrolling down window by 2600 px.
 				
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\snehalp\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("C:\\Users\\mayurig\\Downloads\\Report .xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLinkInternal().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5846,7 +5864,7 @@ Thread.sleep(4000);
 		}
 		
 		elementsList1 = OverduePOM.clickCalenderAction();	//Getting all action buttons (Statutory/Internal)
-		elementsList1.get(0).click();					//Clicking on ith action button which has blue status 
+		elementsList1.get(1).click();					//Clicking on ith action button which has blue status 
 		
 		
 		if(Compliance.equalsIgnoreCase("Statutory"))
@@ -5860,9 +5878,16 @@ Thread.sleep(4000);
 			if(OverduePOM.text().isDisplayed()) {
 				getDriver().switchTo().parentFrame();
 				OverduePOM.close().click();	
-				test.log(LogStatus.PASS, "Compliance related task is not yet completed.");
+				elementsList1 = OverduePOM.clickCalenderAction();	//Getting all action buttons (Statutory/Internal)
+				elementsList1.get(1).click();					//Clicking on ith action button which has blue status 
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iPerformerFrame"));
+				Thread.sleep(500);
+				js.executeScript("window.scrollBy(0,550)");	
+				//test.log(LogStatus.PASS, "Compliance related task is not yet completed.");
+			}}catch(Exception e) {
+				
 			}
-			}catch(Exception e) {
+			try{
 				try {
 			Thread.sleep(500);
 			Select status = new Select(OverduePOM.selectStatutoryDropdown());	//Selecting dropdown box
@@ -5877,7 +5902,7 @@ Thread.sleep(4000);
 			{
 				Thread.sleep(2000);
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5910,7 +5935,7 @@ Thread.sleep(4000);
 			catch(Exception e1)
 			{
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-				OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
+				OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");
 			}
 			
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.remark()));
@@ -5940,6 +5965,9 @@ Thread.sleep(4000);
 			Thread.sleep(3000);
 			
 
+			}catch(Exception e1)
+			{
+				
 			}
 		}
 	
@@ -5952,7 +5980,11 @@ Thread.sleep(4000);
 			if(OverduePOM.text1().isDisplayed()) {
 				getDriver().switchTo().parentFrame();
 				OverduePOM.close1().click();	
-				test.log(LogStatus.PASS, "Compliance related task is not yet completed.");
+				elementsList1 = OverduePOM.clickCalenderAction();	//Getting all action buttons (Statutory/Internal)
+				elementsList1.get(1).click();	
+				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("iInternalPerformerFrame"));
+				Thread.sleep(500);
+				js.executeScript("window.scrollBy(0,550)");	
 			}
 			}catch(Exception e) {
 			try {
@@ -5971,7 +6003,7 @@ Thread.sleep(4000);
 				js.executeScript("window.scrollBy(0,700)");					//Scrolling down window by 2600 px.
 				
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 			//	OverduePOM.buttonAddLinkInternal().click();						//Clicking on 'Add Link' button of Compliance Documents
 				Thread.sleep(1000);
 			}
@@ -5991,7 +6023,7 @@ Thread.sleep(4000);
 			}
 			catch(Exception e1) {
 				wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadInternal()));
-				OverduePOM.fileUploadInternal().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	
+				OverduePOM.fileUploadInternal().sendKeys("D:\\Automation File\\Charge.xlsx");	
 			}
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickInternalRemark()));
@@ -6132,14 +6164,14 @@ Thread.sleep(4000);
 		Thread.sleep(3000);
 		OverduePOM.clickAdvancedSearch().click();			//Clicking on 'Compliance' under My Workspace
 		Thread.sleep(2000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.ASExportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -6256,14 +6288,14 @@ Thread.sleep(4000);
 		OverduePOM.SelectInternal1().click();			//Clicking on 'Compliance' under My Workspace
 		Thread.sleep(2000);
 		
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		Thread.sleep(500);
 		OverduePOM.ASExportbtn().click();				//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(500);
@@ -6509,7 +6541,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -6622,7 +6654,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -6704,7 +6736,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -6790,7 +6822,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -6874,7 +6906,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -6960,7 +6992,7 @@ Thread.sleep(4000);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -7087,14 +7119,14 @@ Thread.sleep(4000);
 		Thread.sleep(3000);
 		OverduePOM.ClickEventReport().click();
 		Thread.sleep(1000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		CFOcountPOM.clickExportExcel().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) {
@@ -7925,7 +7957,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		OverduePOM.WhatsNewDownload().click();		//Exporting (Downloading) file
 		Thread.sleep(5000);
 		
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		Thread.sleep(3000);
@@ -7960,7 +7992,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		OverduePOM.Apply().click();			//Clicking on 'Compliance Documents ' 
 		Thread.sleep(8000);
 		
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[22]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr[1]/td[24]/a");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(4000);
@@ -8031,9 +8063,9 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		OverduePOM.Apply().click();			//Clicking on 'Compliance Documents ' 
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[22]/a")));	//Wait till records table gets visible
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[24]/a")));	//Wait till records table gets visible
 		Thread.sleep(8000);
-		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[22]/a");
+		 By locator = By.xpath("//*[@id='grid1']/div[3]/table/tbody/tr/td[24]/a");
 			Thread.sleep(8000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			Thread.sleep(8000);
@@ -10109,7 +10141,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -10245,7 +10277,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -10373,7 +10405,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		js.executeScript("window.scrollBy(0,500)");
@@ -10516,7 +10548,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 			Thread.sleep(2000);
 			js.executeScript("window.scrollBy(0,500)");
@@ -10540,7 +10572,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 				Thread.sleep(3000);
 				JavascriptExecutor jse=(JavascriptExecutor) getDriver();
 				jse.executeScript("arguments[0].click();", ViewButton);
-				Thread.sleep(4000);
+				Thread.sleep(5000);
 				String Msg=		OverduePOM.PerformReviewMsg().getText(); 							//Selecting date - second row and fifth column date from calendar
 				test.log(LogStatus.PASS, "Perform Review Message Displayed :-"+Msg);
 				Thread.sleep(500);
@@ -10666,7 +10698,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 			Thread.sleep(500);
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadUpStatutory()));
 			Thread.sleep(3000);
-			OverduePOM.fileUploadUpStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+			OverduePOM.fileUploadUpStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 		//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 			Thread.sleep(2000);
 			js.executeScript("window.scrollBy(0,500)");
@@ -10973,7 +11005,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 		
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		Thread.sleep(1000);
@@ -11139,7 +11171,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 		
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
 		Thread.sleep(3000);
-		OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+		OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	//	OverduePOM.buttonAddLink().click();						//Clicking on 'Add Link' button of Compliance Documents
 		Thread.sleep(2000);
 		
@@ -11211,7 +11243,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	             try { 
 	            	 try {
 	            	 wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-	     			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+	     			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	     		//	OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
                         }catch(Exception e){
 	            		 
@@ -11289,7 +11321,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	             try {  
 	            	 try {
 	            	 wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.fileUploadStatutory()));
-	     			OverduePOM.fileUploadStatutory().sendKeys("E:\\Test Cases\\Act Sub_Industry Test Cases.xlsx");	//Providing Compliance Documents link
+	     			OverduePOM.fileUploadStatutory().sendKeys("D:\\Automation File\\Charge.xlsx");	//Providing Compliance Documents link
 	     		//	OverduePOM.statutoryAddLinkButton().click();						//Clicking on 'Add Link' button of Compliance Documents
 	            	 }catch(Exception e){
 	            		 
@@ -12328,14 +12360,14 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 
 
 		Thread.sleep(3000);
-		File dir = new File("C:\\Users\\snehalp\\Downloads");
+		File dir = new File("C:\\Users\\mayurig\\Downloads");
 		File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 		Thread.sleep(500);
 		OverduePOM.Download().click(); // Exporting (Downloading) file
 
 		Thread.sleep(3000);
-		File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+		File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 		File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 		Thread.sleep(3000);
 		if (dirContents.length < allFilesNew.length) 
@@ -12398,14 +12430,14 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 
 
 			Thread.sleep(3000);
-			File dir = new File("C:\\Users\\snehalp\\Downloads");
+			File dir = new File("C:\\Users\\mayurig\\Downloads");
 			File[] dirContents = dir.listFiles(); // Counting number of files in directory before download
 
 			Thread.sleep(500);
 			OverduePOM.Download().click(); // Exporting (Downloading) file
 
 			Thread.sleep(3000);
-			File dir1 = new File("C:\\Users\\snehalp\\Downloads");
+			File dir1 = new File("C:\\Users\\mayurig\\Downloads");
 			File[] allFilesNew = dir1.listFiles(); // Counting number of files in directory after download
 			Thread.sleep(3000);
 			if (dirContents.length < allFilesNew.length) 
@@ -15338,4 +15370,4 @@ Thread.sleep(2000);
 		
 	}
 	}
-	
+	//614 81 63 758

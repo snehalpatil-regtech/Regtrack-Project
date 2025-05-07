@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="criticalTestScripts.AuditorStatutory">
         <methods>
           <include name="riskSummaryCriticalClosedDelayed"/>
@@ -30,6 +31,18 @@
           <include name="rejected_PieChartPeriod"/>
         </methods>
       </class> <!-- criticalTestScripts.AuditorStatutory -->
+=======
+      <class name="criticalTestScripts.Reviewer">
+        <methods>
+          <include name="SMETAReportFilterMgmt"/>
+          <include name="setBrowser"/>
+          <include name="MyEscalation"/>
+          <include name="Login"/>
+          <include name="SMETAReport"/>
+          <include name="browserClosing"/>
+        </methods>
+      </class> <!-- criticalTestScripts.Reviewer -->
+>>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
