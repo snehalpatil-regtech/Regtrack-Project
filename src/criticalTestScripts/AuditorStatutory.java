@@ -119,7 +119,7 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 	
-//	@Test(priority = 0)
+	@Test(priority = 0)
 	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -1492,7 +1492,8 @@ public class AuditorStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-//  @Test(priority = 15)
+  /*
+  @Test(priority = 15)
 	void riskSummaryCriticalNotCompleted() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary count match with Detailed Report Count Verification");
@@ -1550,6 +1551,7 @@ public class AuditorStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
+	*/
 	 @Test(priority = 0)
 		void riskSummaryCriticalClosedDelayed() throws InterruptedException, IOException
 		{

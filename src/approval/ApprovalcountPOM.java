@@ -37,19 +37,16 @@ public class ApprovalcountPOM extends BasePage {
 	private static List<WebElement> elementsList = null;
 	private static WebElement compliances = null;
 	
-	
 	public static WebElement clickManagement()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_LinkButton3']"));
 		return compliances;
 	}
-	
 	public static WebElement ClearBtn()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='ClearfilterMain']"));
 		return compliances;
 	}
-	
 	public static WebElement NotCompletedRadio()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0'])[2]"));
@@ -67,19 +64,16 @@ public class ApprovalcountPOM extends BasePage {
 		compliances = getDriver().findElement(By.xpath("(//*[@id='example']/div/div)"));
 		return compliances;
 	}
-	
 	public static WebElement SelectCategoryA()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[1]/div[3]/div"));
 		return compliances;
-	}
-	
+	}	
 	public static WebElement CommercialA()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[37]"));
 		return compliances;
-	}
-	
+	}	
 	public static WebElement Commercial()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-checkbox-label checkbox-span'])"));
@@ -132,8 +126,7 @@ public class ApprovalcountPOM extends BasePage {
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='example']/div[2]/div[3]/div/span[1]"));
 		return compliances;
-	}
-	
+	}	
 	public static WebElement Apply()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("//*[@id='Applybtn']"));
@@ -162,8 +155,7 @@ public class ApprovalcountPOM extends BasePage {
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[13]"));
 		return compliances;
-	}
-	
+	}	
 	public static WebElement PFRMGMT()		//Method for reading Compliances value on Dashboard
 	{
 		compliances = getDriver().findElement(By.xpath("(//*[@class='k-in'])[14]"));

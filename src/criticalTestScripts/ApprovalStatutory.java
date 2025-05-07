@@ -471,6 +471,7 @@ public class ApprovalStatutory extends BasePage {
 				Thread.sleep(500);
 			action.moveToElement(CFOcountPOM.clickBack1()).click().build().perform();	 //Clicking on Back button
 			Thread.sleep(2000);
+			
 		}
 		else
 		{

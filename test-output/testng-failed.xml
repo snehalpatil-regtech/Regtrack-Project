@@ -3,43 +3,33 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="departmentHead.DeptStatutory">
+      <class name="criticalTestScripts.AuditorStatutory">
         <methods>
-          <include name="RiskSummaryLowStatutory"/>
-          <include name="setBrowser"/>
-          <include name="IsSMETAColumnNotAppli"/>
-          <include name="clickPenaltyStatutory"/>
+          <include name="riskSummaryCriticalClosedDelayed"/>
           <include name="browserClosing"/>
-          <include name="DepartmentSummaryFinanceStatutory"/>
-          <include name="complianceCalendar"/>
-          <include name="CompletionStatusFilter"/>
-          <include name="IsSMETAColumnNotComp"/>
-          <include name="PerformReviewEmailColIn"/>
+          <include name="BargraphIndustrySpeMediumStatutory"/>
+          <include name="BargraphIndustrySpeHighStatutory"/>
+          <include name="pendingForReview_PieChartPeriod"/>
+          <include name="NotApplicable_PieChartPeriod"/>
+          <include name="setBrowser"/>
+          <include name="NotCompleted_PieChart"/>
+          <include name="ClosedDelayed_PieChartPe"/>
+          <include name="ClosedTimely_PieChartPe"/>
           <include name="DetailedReport"/>
-          <include name="IsSMETAColumnDeptSumm"/>
-          <include name="NotCompletionStatusFilter"/>
-          <include name="RiskSummaryFilter"/>
-          <include name="Closing"/>
-          <include name="PerformReviewEmailCol"/>
-          <include name="IsSMETAColumnClosedDel"/>
           <include name="AssignmentReport"/>
-          <include name="DetailedReportIn"/>
-          <include name="rejected_PieChartPeriod"/>
-          <include name="RiskSummaryCriticalStatutory"/>
-          <include name="DueforperiodIsSMETAColumn"/>
-          <include name="Upcoming_PieChartPeriod"/>
-          <include name="periodIsSMETAColumnRejected"/>
-          <include name="DeptSummaryFilter"/>
-          <include name="UpcomingFilter"/>
-          <include name="RiskSummaryHighStatutory"/>
-          <include name="Login"/>
-          <include name="RiskSummaryMediumStatutory"/>
+          <include name="Overdue_PieChartperiod"/>
+          <include name="UpcomingPieChartPeriod"/>
           <include name="ComplianceDocuments"/>
-          <include name="ClosedTimely_PieChartPeriod"/>
-          <include name="periodIsSMETAColumnInprogress"/>
-          <include name="IsSMETAColumnClosedTimely"/>
+          <include name="dueToday_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeLowStatutory"/>
+          <include name="Login"/>
+          <include name="Closing"/>
+          <include name="inProgress_PieChartPeriod"/>
+          <include name="BargraphIndustrySpeCriticalStatutory"/>
+          <include name="NotCompleted_PieChartPe"/>
+          <include name="rejected_PieChartPeriod"/>
         </methods>
-      </class> <!-- departmentHead.DeptStatutory -->
+      </class> <!-- criticalTestScripts.AuditorStatutory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

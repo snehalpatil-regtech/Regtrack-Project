@@ -1847,6 +1847,178 @@ public class StatutoryMGMT extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
+	
+	@Test(priority = 15)
+	void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void riskSummaryClosedDelayed() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary Closed Delayed dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.riskSummaryClosedDelayed( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void riskSummaryClosedTimely() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary Closed Timely dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.riskSummaryClosedTimely( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void riskSummaryNotApplicable() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	
+	@Test(priority = 15)
+	void DepartmentSummaryOverdue() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Overdue dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepartmentSummaryOverdue( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void DepartmentSummaryClosedDelayed() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Closed Delayed dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepartmentSummaryClosedDelayed( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	
+	@Test(priority = 15)
+	void DepartmentSummaryClosedT() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Closed Timely dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepartmentSummaryClosedT( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void DepartmentSummaPR() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Pending Review dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepartmentSummaPR( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	@Test(priority = 15)
+	void DepaINPROGRESSR() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary In Progress dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepaINPROGRESSR( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void DepartmentSummaryRejected() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Rejected dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepaRejectedR( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	@Test(priority = 15)
+	void DepartmentSummaryNotApplicable() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Department Summary Not Applicable dashboard count match with Detailed Report Count Verification");
+		AuditorcountPOM.DepaNotApplic( test, "Critical");
+		extent.endTest(test);
+		extent.flush();
+    	
+	}
+	
+	/*
+  @Test(priority = 15)
+	void riskSummaryCriticalNotCompleted() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Risk summary count match with Detailed Report Count Verification");
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+    	int riskSummaryCriticalNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskCriticalNotCompleted().getText());
+    	String risk = CFOcountPOM.clickRiskHighNotCompleted().getText();
+    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+		int riskSummaryHighNotCompleted = Integer.parseInt(risk);  	
+		
+    	int riskSummaryMediumNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskMediumNotCompleted().getText());
+    	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+    	
+    	if(riskSummaryCriticalNotCompleted > 0)
+		{
+			
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical", riskSummaryCriticalNotCompleted);
+		}
+		else
+		{
+			test.log(LogStatus.PASS, "'Critical - Not Completed' Count = "+riskSummaryCriticalNotCompleted);
+		}
+    	if(riskSummaryHighNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "High", riskSummaryHighNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'High - Not Completed' Count = "+riskSummaryHighNotCompleted);
+		}
+    	if(riskSummaryMediumNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Medium", riskSummaryMediumNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'Medium - Not Completed' Count = "+riskSummaryMediumNotCompleted);
+		}
+    	if(riskSummaryLowNotCompleted > 0)
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Low", riskSummaryLowNotCompleted);
+		}
+		else
+		{
+    		js.executeScript("window.scroll(0,1300)");
+			test.log(LogStatus.PASS, "'Low - Not Completed' Count = "+riskSummaryLowNotCompleted);
+		}
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+*/
 		
 	@Test(priority = 27)
 		void RiskSummaryHighStatutory() throws InterruptedException, IOException
@@ -1966,6 +2138,65 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
+	 @Test(priority = 0)
+		void riskSummaryCriticalClosedDelayed() throws InterruptedException, IOException
+		{
+			test = extent.startTest("Risk summary Closed Delayed count match with Detailed Report Count Verification");
+			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+			js.executeScript("window.scroll(0,1300)");
+			Thread.sleep(3000);
+	    	int riskSummaryCriticalclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedDelayed().getText());
+	    	String risk = CFOcountPOM.clickRiskHighClosedDelayed().getText();
+	    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+			int riskSummaryHighclosedDelayed = Integer.parseInt(risk);  	
+			
+	    	int riskSummaryMediumclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayed().getText());
+	    	int riskSummaryLowclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());
+	    	
+	    	if(riskSummaryCriticalclosedDelayed > 0)
+			{
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
+			}
+			else
+			{
+				test.log(LogStatus.PASS, "'Critical - Closed Delayed' Count = "+riskSummaryCriticalclosedDelayed);
+			}
+	    	if(riskSummaryHighclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'High - Closed Delayed' Count = "+riskSummaryHighclosedDelayed);
+			}
+	    	if(riskSummaryMediumclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'Medium - Closed Delayed' Count = "+riskSummaryMediumclosedDelayed);
+			}
+	    	if(riskSummaryLowclosedDelayed > 0)
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
+			}
+			else
+			{
+	    		js.executeScript("window.scroll(0,1300)");
+				test.log(LogStatus.PASS, "'Low - Closed Delayed' Count = "+riskSummaryLowclosedDelayed);
+			}
+			
+			extent.endTest(test);
+			extent.flush();
+		}
+		
+	
         @Test(priority = 28)
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
@@ -2045,6 +2276,7 @@ public class StatutoryMGMT extends BasePage {
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc2, "Closed Timely");
 			
 			Thread.sleep(5000);
+
 			int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskMedium_NotApplicable > 0)
 			{
@@ -2168,6 +2400,7 @@ public class StatutoryMGMT extends BasePage {
 			List<WebElement>roc2 = getDriver().findElements(By.xpath("(//*[@class='highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-2'])"));
 			ApprovalcountPOM.selectOptionFromDropDown_bs(roc2, "Closed Timely");
 			Thread.sleep(4000);
+			
 			int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
 			if(RiskLow_NotApplicable > 0)
 			{

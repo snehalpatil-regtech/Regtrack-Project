@@ -5866,29 +5866,21 @@ try {
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void riskSummaryCriticalNotCompleted(ExtentTest test,String risk, int compliancecount)throws InterruptedException
+		public static void riskSummaryCriticalNotCompleted(ExtentTest test,String risk)throws InterruptedException
 		{
-			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-//			js.executeScript("window.scroll(0,1400)");
-			Thread.sleep(3000);
-			String risk2 = CFOcountPOM.clickRiskCriticalNotCompleted().getText();
-	    	risk2 = risk2.replaceAll(" ","");									//Removing all white spaces from string. 
-			int riskSummaryCriticalNotCompleted = Integer.parseInt(risk2);	
-			
-	    //	int riskSummaryCriticalNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskCriticalNotCompleted().getText());
-	    	String risk1 = CFOcountPOM.clickRiskHighNotCompleted().getText();
-	    	risk1 = risk1.replaceAll(" ","");									//Removing all white spaces from string. 
-			int riskSummaryHighNotCompleted = Integer.parseInt(risk1);	 
-			
-			String risk3 = CFOcountPOM.clickRiskMediumNotCompleted().getText();
-	    	risk3 = risk3.replaceAll(" ","");									//Removing all white spaces from string. 
-			int riskSummaryMediumNotCompleted = Integer.parseInt(risk3);	 
-			
-		//	int riskSummaryMediumNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskMediumNotCompleted().getText());
-			String risk4 = CFOcountPOM.clickRiskLowNotCompleted().getText();
-	    	risk4 = risk4.replaceAll(" ","");									//Removing all white spaces from string. 
-			int riskSummaryLowNotCompleted = Integer.parseInt(risk4);
-			
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+    	int riskSummaryCriticalNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskCriticalNotCompleted().getText());
+    	String risk1 = CFOcountPOM.clickRiskHighNotCompleted().getText();
+    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+		int riskSummaryHighNotCompleted = Integer.parseInt(risk1);  	
+		
+    	int riskSummaryMediumNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskMediumNotCompleted().getText());
+    	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+    	
+    	int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
 	    	Thread.sleep(500);
@@ -5927,39 +5919,16 @@ try {
 	    	CFOcountPOM.StatusDeviationRejected().click();
 	    	Thread.sleep(2000);
 	    	Thread.sleep(500);
-			if(risk.equalsIgnoreCase("Critical"))
-			{
-				Thread.sleep(2000);
-		    	CFOcountPOM.Risk().click();
-		    	Thread.sleep(2000);
-		    	CFOcountPOM.RiskCritical().click();
-		    	Thread.sleep(2000);				//Clicking on Critical value of Pie Chart of 'Not Completed'.
-			}
-			else if(risk.equalsIgnoreCase("High"))
-			{
-				Thread.sleep(2000);
-		    	CFOcountPOM.Risk().click();
-		    	Thread.sleep(2000);
-		    	CFOcountPOM.RiskHigh().click();
-		    	Thread.sleep(2000);				
-			}
-			else if(risk.equalsIgnoreCase("Medium"))
-			{
-				Thread.sleep(2000);
-		    	CFOcountPOM.Risk().click();
-		    	Thread.sleep(2000);
-		    	CFOcountPOM.RiskMedium().click();
-		    	Thread.sleep(2000);						
-			}
-			else if(risk.equalsIgnoreCase("Low"))
-			{
-				Thread.sleep(2000);
-		    	CFOcountPOM.Risk().click();
-		    	Thread.sleep(2000);
-		    	CFOcountPOM.RiskLow().click();
-		    	Thread.sleep(2000);	
-		    	}
-	    	
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
 	    	CFOcountPOM.PeriodDropDown().click();
 	    	Thread.sleep(2000);
 	    	CFOcountPOM.PeriodAll().click();
@@ -5990,51 +5959,1018 @@ try {
 			   item = CFOcountPOM.readTotalItemsD().getText();
 				bits = item.split(" ");
 	       	}
-			if(risk.equalsIgnoreCase("Critical"))
-			{
-				if(riskSummaryCriticalNotCompleted==count1)
+			
+			
+				if(total==count1)
 			    {
-			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+riskSummaryCriticalNotCompleted+" | Detailed Report Total ="+count1);
+			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+total+" | Detailed Report Total ="+count1);
 			    }
 			    else
 			    {
-			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Completed Count="+riskSummaryCriticalNotCompleted+" | Detailed Report Total ="+count1);
-			    }		
-			}
-			else if(risk.equalsIgnoreCase("High"))
+			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Completed Count="+total+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String NotCompleted = CFOcountPOM.clickAdminOverdueA().getText();			//Reading the Overdue value of Human Resource
+		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Overdue = Integer.parseInt(NotCompleted);
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusOverDue().click();
+	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusPendingForReview().click();
+//	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusRejected().click();
+//	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusInProgress().click();
+//	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusDeviationApplied().click();
+//	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusDeviationApproved().click();
+//	    	Thread.sleep(2000);
+//	    	CFOcountPOM.StatusDeviationRejected().click();
+//	    	Thread.sleep(2000);
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
 			{
-				if(riskSummaryHighNotCompleted==count1)
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(Overdue==count1)
 			    {
-			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+riskSummaryHighNotCompleted+" | Detailed Report Total ="+count1);
+			    	test.log(LogStatus.PASS, "Department Summary Overdue Count="+Overdue+" | Detailed Report Total ="+count1);
 			    }
 			    else
 			    {
-			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Completed Count="+riskSummaryHighNotCompleted+" | Detailed Report Total ="+count1);
-			    }				
-			}
-			else if(risk.equalsIgnoreCase("Medium"))
+			    	test.log(LogStatus.FAIL, "Department Summary Overdue Count="+Overdue+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		
+		public static void DepartmentSummaryClosedDelayed(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String ClosedDelayed = CFOcountPOM.clickAdminClosedDelayed().getText();	//Reading the Closed Delayed value of Human Resource
+		ClosedDelayed = ClosedDelayed.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Closed_Delayed = Integer.parseInt(ClosedDelayed);
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusClosedDelay().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
 			{
-				if(riskSummaryMediumNotCompleted==count1)
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(Closed_Delayed==count1)
 			    {
-			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+riskSummaryMediumNotCompleted+" | Detailed Report Total ="+count1);
+			    	test.log(LogStatus.PASS, "Department Summary Closed Delayed Count="+Closed_Delayed+" | Detailed Report Total ="+count1);
 			    }
 			    else
 			    {
-			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Completed Count="+riskSummaryMediumNotCompleted+" | Detailed Report Total ="+count1);
-			    }						
-			}
-			else if(risk.equalsIgnoreCase("Low"))
+			    	test.log(LogStatus.FAIL, "Department Summary Closed Delayed Count="+Closed_Delayed+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void DepartmentSummaryClosedT(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String ClosedTimely = CFOcountPOM.clickAccountClosedTimelyA().getText();		//Reading the Closed Timely value of Human Resource
+		ClosedTimely = ClosedTimely.replaceAll(" ","");									//Removing all white spaces from string. 
+		int Closed_Timely = Integer.parseInt(ClosedTimely);	
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusClosedTimely().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
 			{
-				if(riskSummaryLowNotCompleted==count1)
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(Closed_Timely==count1)
 			    {
-			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+riskSummaryLowNotCompleted+" | Detailed Report Total ="+count1);
+			    	test.log(LogStatus.PASS, "Department Summary Closed Delayed Count="+Closed_Timely+" | Detailed Report Total ="+count1);
 			    }
 			    else
 			    {
-			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Completed Count="+riskSummaryLowNotCompleted+" | Detailed Report Total ="+count1);
-			    }	
-		    	}
-	    	
+			    	test.log(LogStatus.FAIL, "Department Summary Closed Delayed Count="+Closed_Timely+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void DepartmentSummaPR(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String PendingReview = CFOcountPOM.clickAdminPendingReview().getText();	//Reading the Pending For Review value of Human Resource
+		PendingReview = PendingReview.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Pending_Review = Integer.parseInt(PendingReview);	
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusPendingForReview().click();
+	    	Thread.sleep(2000);	   
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(Pending_Review==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Department Summary Closed Delayed Count="+Pending_Review+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Department Summary Closed Delayed Count="+Pending_Review+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		public static void DepaINPROGRESSR(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String InProgress = CFOcountPOM.clickAdminInprogress().getText();	//Reading the Pending For Review value of Human Resource
+		InProgress = InProgress.replaceAll(" ","");								//Removing all white spaces from string. 
+		int In_Progress = Integer.parseInt(InProgress);		
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusInProgress().click();
+	    	Thread.sleep(2000);	   
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(In_Progress==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Department Summary In_Progress Count="+In_Progress+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Department Summary In_Progress Count="+In_Progress+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void DepaRejectedR(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String Rejected = CFOcountPOM.clickAdminInRejected().getText();	//Reading the Pending For Review value of Human Resource
+		Rejected = Rejected.replaceAll(" ","");								//Removing all white spaces from string. 
+		int R_ejected = Integer.parseInt(Rejected);			
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusRejected().click();
+	    	Thread.sleep(2000);	   
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(R_ejected==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Department Summary R_ejected Count="+R_ejected+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Department Summary R_ejected Count="+R_ejected+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void DepaNotApplic(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,2000)");
+		Thread.sleep(3000);
+		String NotApplicable = CFOcountPOM.clickAdminNotApplicable().getText();	//Reading the Pending For Review value of Human Resource
+		NotApplicable = NotApplicable.replaceAll(" ","");								//Removing all white spaces from string. 
+		int Not_Applicable = Integer.parseInt(NotApplicable);			
+    	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusNotApplicable().click();
+	    	Thread.sleep(2000);	   
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentFilter().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.DepartmentvalueAdmin().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(Not_Applicable==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Department Summary NotApplicable Count="+Not_Applicable+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Department Summary  NotApplicable Count="+Not_Applicable+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		public static void riskSummaryClosedDelayed(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+    	int riskSummaryCriticalclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedDelayed().getText());
+    	String risk1 = CFOcountPOM.clickRiskHighClosedDelayed().getText();
+    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+		int riskSummaryHighclosedDelayed = Integer.parseInt(risk1);  	
+		
+    	int riskSummaryMediumclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskMediumClosedDelayed().getText());
+    	int riskSummaryLowclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());
+    	
+    	int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSummaryMediumclosedDelayed+riskSummaryLowclosedDelayed;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusClosedDelay().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(total==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Total of Risk Summary Closed Delayed Count="+total+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Total of Risk Summary Closed Delayed Count="+total+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void riskSummaryClosedTimely(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+		int RiskCritical_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskCriticalClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+		int RiskHigh_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskHighClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+
+//    	String risk1 = CFOcountPOM.clickRiskHighClosedDelayed().getText();
+//    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+//		int riskSummaryHighclosedDelayed = Integer.parseInt(risk1);  	
+		
+		int RiskMedium_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskMediumClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+		int RiskLow_ClosedTimely = Integer.parseInt(CFOcountPOM.clickRiskLowClosedTimely().getText());	//Reading the High Risk value of Not Completed compliance
+    	
+    	int total = RiskCritical_ClosedTimely+RiskHigh_ClosedTimely+RiskMedium_ClosedTimely+RiskLow_ClosedTimely;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusClosedTimely().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(total==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Total of Risk Summary Closed Timely Count="+total+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Total of Risk Summary Closed Timely Count="+total+" | Detailed Report Total ="+count1);
+			    }			    	
+		}else 
+		{
+			test.log(LogStatus.PASS, "No records found.");
+		}
+	    	CFOcountPOM.DashBoardAfterCount().click();
+	 	}	
+		
+		public static void riskSummaryNotApplicable(ExtentTest test,String risk)throws InterruptedException
+		{
+		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
+		js.executeScript("window.scroll(0,1300)");
+		Thread.sleep(3000);
+		int RiskCritical_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskCriticalNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
+
+//    	String risk1 = CFOcountPOM.clickRiskHighClosedDelayed().getText();
+//    	risk = risk.replaceAll(" ","");									//Removing all white spaces from string. 
+//		int riskSummaryHighclosedDelayed = Integer.parseInt(risk1);  	
+		int RiskHigh_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskHighNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
+
+		int RiskMedium_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskMediumNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
+		
+		int RiskLow_NotApplicable = Integer.parseInt(CFOcountPOM.clickRiskLowNotApplicable().getText());	//Reading the High Risk value of Not Completed compliance
+	
+			
+    	int total = RiskCritical_NotApplicable+RiskHigh_NotApplicable+RiskMedium_NotApplicable+RiskLow_NotApplicable;
+    			
+	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
+	    	Thread.sleep(3000);
+	    	Thread.sleep(500);
+			clickReports().click();					//Clicking on 'My Reports'
+			Thread.sleep(3000);
+			clickDetailedReport().click();			//Clicking on 'Detailed Reports' 
+			Thread.sleep(2000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+			CFOcountPOM.StatutoryM().click();
+			Thread.sleep(4000);
+			CFOcountPOM.Apply().click();
+			Thread.sleep(4000);
+			CFOcountPOM.ComplianceType().click();
+			Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBased().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeEventBasedCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.ComplianceTypeStatutoryCheckList().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.StatusNotApplicable().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Status().click();
+	    	Thread.sleep(500);
+	    	Thread.sleep(500);
+	    	CFOcountPOM.Risk().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.RiskCritical().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskHigh().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskMedium().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.RiskLow().click();
+	    	Thread.sleep(2000);	
+	    	CFOcountPOM.PeriodDropDown().click();
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.PeriodAll().click();
+	    	Thread.sleep(2000);
+	       	CFOcountPOM.StartDate().sendKeys("1-Jan-2020");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.EndDate().sendKeys("31-Dec-2025");
+	    	Thread.sleep(2000);
+	    	CFOcountPOM.Apply().click();
+	    	Thread.sleep(5000);
+			WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+
+	    // Reading Total Count of Detail Report Count
+	    	js.executeScript("window.scrollBy(0,500)");
+	        Thread.sleep(2000); 		
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//*[@class='k-pager-info k-label'])")));	//Wait until records table get visible.
+	        CFOcountPOM.readTotalItemsD().click();
+			String item = CFOcountPOM.readTotalItemsD().getText();
+			if(!item.equalsIgnoreCase("No items to display")) 
+			{
+			String[] bits = item.split(" ");								//Splitting the String
+			String compliancesCount = bits[bits.length - 2];				//Getting the second last word (total number of r)
+			int count1 = Integer.parseInt(compliancesCount);
+		
+			if(compliancesCount.equalsIgnoreCase("to"))
+			{
+				Thread.sleep(5000);
+			   item = CFOcountPOM.readTotalItemsD().getText();
+				bits = item.split(" ");
+	       	}
+			
+			
+				if(total==count1)
+			    {
+			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Applicable Count="+total+" | Detailed Report Total ="+count1);
+			    }
+			    else
+			    {
+			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Applicable Count="+total+" | Detailed Report Total ="+count1);
+			    }			    	
 		}else 
 		{
 			test.log(LogStatus.PASS, "No records found.");
