@@ -55,7 +55,7 @@ public class StatutoryMGMT extends BasePage {
 	
 	public static String link = "mgmt1";  
 	
-/***	public static XSSFSheet ReadExcel() throws IOException
+/*	public static XSSFSheet ReadExcel() throws IOException
 	{
 		
 		fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
@@ -119,7 +119,7 @@ public class StatutoryMGMT extends BasePage {
 	 @Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
-		test = extent.startTest(" Count by Clicking on 'Categories'");
+		test = extent.startTest(" Count by Clicking on 'Categoriess'");
 		
 		CFOcountPOM.CategoriesCountMatch(test);
 		
