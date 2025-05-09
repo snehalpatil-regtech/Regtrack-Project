@@ -119,7 +119,7 @@ public class StatutoryMGMT extends BasePage {
 	 @Test(priority = 1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
-		test = extent.startTest(" Count by Clicking on 'Categories'");
+		test = extent.startTest(" Count by Clicking on 'Categoriess'");
 		
 		CFOcountPOM.CategoriesCountMatch(test);
 		
@@ -1728,7 +1728,7 @@ public class StatutoryMGMT extends BasePage {
 	void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
-		AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+		AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical","");
 		extent.endTest(test);
 		extent.flush();
     	
@@ -1758,7 +1758,7 @@ public class StatutoryMGMT extends BasePage {
 	void riskSummaryNotApplicable() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
-		AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+		AuditorcountPOM.riskSummaryNotApplicable1( test, "Critical");
 		extent.endTest(test);
 		extent.flush();
     	
@@ -2019,7 +2019,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-<<<<<<< HEAD
+
 	 @Test(priority = 0)
 		void riskSummaryCriticalClosedDelayed() throws InterruptedException, IOException
 		{
@@ -2037,7 +2037,7 @@ public class StatutoryMGMT extends BasePage {
 	    	
 	    	if(riskSummaryCriticalclosedDelayed > 0)
 			{
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
 			}
 			else
 			{
@@ -2046,7 +2046,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryHighclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
 			}
 			else
 			{
@@ -2056,7 +2056,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryMediumclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
+				//AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
 			}
 			else
 			{
@@ -2066,7 +2066,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryLowclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
 			}
 			else
 			{
@@ -2079,10 +2079,10 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 	
-        @Test(priority = 28)
-=======
+ 
+
  @Test(priority = 28)
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
+
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -3841,7 +3841,7 @@ public class StatutoryMGMT extends BasePage {
 				extent.flush();
 			}
 		  
-	@Test(priority = 60)
+	@Test(priority = 0)
 			void AssignmentReport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Assignment Report verification");
@@ -4173,17 +4173,17 @@ public class StatutoryMGMT extends BasePage {
 				    }
 				
 			 @Test(priority = 92)
-			void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
+			void riskSummaryCriticalNotCompleted11() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
-				AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+				AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical","");
 				extent.endTest(test);
 				extent.flush();
 		    	
 			}
 			
 			 @Test(priority = 93)
-			void riskSummaryClosedDelayed() throws InterruptedException, IOException
+			void riskSummaryClosedDelayed1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Closed Delayed dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.riskSummaryClosedDelayed( test, "Critical");
@@ -4193,7 +4193,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 94)
-			void riskSummaryClosedTimely() throws InterruptedException, IOException
+			void riskSummaryClosedTimely1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Closed Timely dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.riskSummaryClosedTimely( test, "Critical");
@@ -4203,17 +4203,17 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 95)
-			void riskSummaryNotApplicable() throws InterruptedException, IOException
+			void riskSummaryNotApplicable1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
-				AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+				AuditorcountPOM.riskSummaryNotApplicable1( test, "Critical");
 				extent.endTest(test);
 				extent.flush();
 		    	
 			}
 			
 			 @Test(priority = 96)
-			void DepartmentSummaryOverdue() throws InterruptedException, IOException
+			void DepartmentSummaryOverdue1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Overdue dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryOverdue( test, "Critical");
@@ -4223,7 +4223,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 97)
-			void DepartmentSummaryClosedDelayed() throws InterruptedException, IOException
+			void DepartmentSummaryClosedDelayed1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Closed Delayed dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryClosedDelayed( test, "Critical");
@@ -4233,7 +4233,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 98)
-			void DepartmentSummaryClosedT() throws InterruptedException, IOException
+			void DepartmentSummaryClosedT1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Closed Timely dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryClosedT( test, "Critical");
@@ -4243,7 +4243,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 99)
-			void DepartmentSummaPR() throws InterruptedException, IOException
+			void DepartmentSummaPR1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Pending Review dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaPR( test, "Critical");
@@ -4253,7 +4253,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 100)
-			void DepaINPROGRESSR() throws InterruptedException, IOException
+			void DepaINPROGRESSR1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary In Progress dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaINPROGRESSR( test, "Critical");
@@ -4263,7 +4263,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 101)
-			void DepartmentSummaryRejected() throws InterruptedException, IOException
+			void DepartmentSummaryRejected1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Rejected dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaRejectedR( test, "Critical");
@@ -4273,7 +4273,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 102)
-			void DepartmentSummaryNotApplicable() throws InterruptedException, IOException
+			void DepartmentSummaryNotApplicable1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Not Applicable dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaNotApplic( test, "Critical");
