@@ -74,7 +74,7 @@ public class CFOcountPOM extends BasePage
 	private static List<WebElement> viewList = null;
 	public static WebElement clickCategories( )		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divFunctionCount']"));
+		categories = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divFunctionCounts']"));
 		return categories;
 	}
 	
@@ -3041,7 +3041,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement clickAssignmentReport( )		//Searching 'Assignment Report' element under 'My reports'
 	{
-		reports = getDriver().findElement(By.xpath("//*[@id='Myreport1']/a"));
+		reports = getDriver().findElement(By.xpath("//*[@id='Myrepor']/a"));
 		return reports;
 	}
 	
@@ -10287,7 +10287,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		elementsList = clickType2();
 		elementsList.get(1).click();
 		
-		String file = "C:\\Users\\mayurig\\Downloads\\Report.xlsx";
+		String file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
 		String compliance = "Statutory";
 		Assignment( test, file, compliance);
 		Thread.sleep(1000);
@@ -10325,7 +10325,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 		Thread.sleep(1000);
 		//litigationPerformer.MethodsPOM.progress();
 		
-		String	file = "C:\\Users\\mayurig\\Downloads\\Report.xlsx";
+		String	file = "C:\\Users\\shitalb\\Downloads\\Report.xlsx";
 		String	compliance = "Internal";
 		Assignment(test, file, compliance);
 		Thread.sleep(1000);
@@ -10369,7 +10369,7 @@ Thread.sleep(1000);
 //	Thread.sleep(4000);
 //	test.log(LogStatus.PASS, "Excel file Export Successfully");
 //	Thread.sleep(3000);
-File dir = new File("C:\\Users\\mayurig\\Downloads");
+File dir = new File("C:\\Users\\shitalb\\Downloads");
 File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
 
 Thread.sleep(1000);
@@ -10378,7 +10378,7 @@ Thread.sleep(9000);
 test.log(LogStatus.PASS, compliance +" :- File downloaded successfully.");
 
 Thread.sleep(5500);
-File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 File[] allFilesNew = dir1.listFiles();							//Counting number of files in directory after download
 
 if(dirContents.length < allFilesNew.length)

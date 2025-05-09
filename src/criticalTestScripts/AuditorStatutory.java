@@ -121,11 +121,8 @@ public class AuditorStatutory extends BasePage {
 	}
 	
 	
-<<<<<<< HEAD
-	@Test(priority = 0)
-=======
+
 	@Test(priority = 2)
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
 	void NotCompleted_PieChart() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -1357,7 +1354,7 @@ public class AuditorStatutory extends BasePage {
 		extent.endTest(test);
 		extent.flush();
 	}
-<<<<<<< HEAD
+
   /*
   @Test(priority = 15)
 	void riskSummaryCriticalNotCompleted() throws InterruptedException, IOException
@@ -1435,7 +1432,7 @@ public class AuditorStatutory extends BasePage {
 	    	
 	    	if(riskSummaryCriticalclosedDelayed > 0)
 			{
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
+				AuditorcountPOM.riskSummaryClosedDelayed1( test, "Critical");
 			}
 			else
 			{
@@ -1444,7 +1441,7 @@ public class AuditorStatutory extends BasePage {
 	    	if(riskSummaryHighclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
+				AuditorcountPOM.riskSummaryClosedDelayed1( test, "High");
 			}
 			else
 			{
@@ -1454,7 +1451,7 @@ public class AuditorStatutory extends BasePage {
 	    	if(riskSummaryMediumclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
+				AuditorcountPOM.riskSummaryClosedDelayed1( test, "Medium");
 			}
 			else
 			{
@@ -1464,7 +1461,7 @@ public class AuditorStatutory extends BasePage {
 	    	if(riskSummaryLowclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
+				AuditorcountPOM.riskSummaryClosedDelayed1( test, "Low" );
 			}
 			else
 			{
@@ -1476,12 +1473,9 @@ public class AuditorStatutory extends BasePage {
 			extent.flush();
 		}
 		
-
-//	@Test(priority = 16)
-=======
 	
 	@Test(priority = 15)
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
+
 	void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 	{
 		Thread.sleep(2000);

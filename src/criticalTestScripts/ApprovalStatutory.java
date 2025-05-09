@@ -3679,7 +3679,7 @@ public class ApprovalStatutory extends BasePage {
 					void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
 					{
 						test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
-						AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+						AuditorcountPOM.riskSummaryCriticalNotCompleted1( test, "Critical");
 						extent.endTest(test);
 						extent.flush();
 				    	
@@ -3709,7 +3709,7 @@ public class ApprovalStatutory extends BasePage {
 					void riskSummaryNotApplicable() throws InterruptedException, IOException
 					{
 						test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
-						AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+						AuditorcountPOM.riskSummaryNotApplicable1( test, "Critical");
 						extent.endTest(test);
 						extent.flush();
 				    	
