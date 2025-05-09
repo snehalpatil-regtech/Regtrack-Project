@@ -5618,7 +5618,7 @@ try {
 //		Thread.sleep(4000);
 //		test.log(LogStatus.PASS, "Excel file Export Successfully");
 //		Thread.sleep(3000);
-	File dir = new File("C:\\Users\\mayurig\\Downloads");
+	File dir = new File("C:\\Users\\shitalb\\Downloads");
 	File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
 
 	Thread.sleep(1000);
@@ -5633,7 +5633,7 @@ try {
 	test.log(LogStatus.PASS, "File downloaded successfully.");
 
 	Thread.sleep(5500);
-	File dir1 = new File("C:\\Users\\mayurig\\Downloads");
+	File dir1 = new File("C:\\Users\\shitalb\\Downloads");
 	File[] allFilesNew = dir1.listFiles();							//Counting number of files in directory after download
 
 	if(dirContents.length < allFilesNew.length)
@@ -5697,7 +5697,7 @@ try {
 		}
 		
 		
-		public static void riskSummaryCriticalNotCompleted(ExtentTest test,String risk)throws InterruptedException
+		public static void riskSummaryCriticalNotCompleted1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1500)");
@@ -6278,7 +6278,7 @@ try {
 
 
 
-public static void riskSummaryClosedDelayed(ExtentTest test,String risk)throws InterruptedException
+public static void riskSummaryClosedDelayed1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1500)");
@@ -6403,9 +6403,9 @@ int riskSummaryMediumclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskMediumC
 int riskSummaryLowclosedDelayed=Integer.parseInt(CFOcountPOM.clickRiskLowClosedDelayed().getText());
 
 int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSummaryMediumclosedDelayed+riskSummaryLowclosedDelayed;
+}
 		
-<<<<<<< HEAD
-		public static void riskSummaryCriticalNotCompleted(ExtentTest test,String risk)throws InterruptedException
+		public static void riskSummaryCriticalNotCompleted(ExtentTest test,String risk, String text)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1300)");
@@ -6419,7 +6419,6 @@ int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSu
     	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
     	
     	int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
-=======
 //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	Thread.sleep(3000);
 	Thread.sleep(500);
@@ -6832,7 +6831,7 @@ int total = riskSummaryCriticalclosedDelayed+riskSummaryHighclosedDelayed+riskSu
 
 
 
-public static void riskSummaryClosedTimely(ExtentTest test,String risk)throws InterruptedException
+public static void riskSummaryClosedTimely1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1500)");
@@ -7378,7 +7377,7 @@ int total = RiskCritical_ClosedTimely+RiskHigh_ClosedTimely+RiskMedium_ClosedTim
 	}	
 
 
-public static void riskSummaryNotApplicable(ExtentTest test,String risk)throws InterruptedException
+public static void riskSummaryNotApplicable1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1500)");
@@ -7970,7 +7969,7 @@ int total = RiskCritical_NotApplicable+RiskHigh_NotApplicable+RiskMedium_NotAppl
 	}	
 
 
-public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws InterruptedException
+public static void DepartmentSummaryOverdue1(ExtentTest test,String risk, int total)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -7979,7 +7978,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 		NotCompleted = NotCompleted.replaceAll(" ","");									//Removing all white spaces from string. 
 		int Overdue = Integer.parseInt(NotCompleted);
     	//int total = riskSummaryCriticalNotCompleted+riskSummaryHighNotCompleted+riskSummaryMediumNotCompleted+riskSummaryLowNotCompleted;
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
+
     			
 	    //	int riskSummaryLowNotCompleted=Integer.parseInt(CFOcountPOM.clickRiskLowNotCompleted().getText());
 	    	Thread.sleep(3000);
@@ -8068,7 +8067,6 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	       	}
 			
 			
-<<<<<<< HEAD
 				if(total==count1)
 			    {
 			    	test.log(LogStatus.PASS, "Total of Risk Summary Not Completed Count="+total+" | Detailed Report Total ="+count1);
@@ -8194,7 +8192,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	 	}	
 		
 		
-		public static void DepartmentSummaryClosedDelayed(ExtentTest test,String risk)throws InterruptedException
+		public static void DepartmentSummaryClosedDelayed1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8292,7 +8290,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void DepartmentSummaryClosedT(ExtentTest test,String risk)throws InterruptedException
+		public static void DepartmentSummaryClosedT1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8390,7 +8388,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void DepartmentSummaPR(ExtentTest test,String risk)throws InterruptedException
+		public static void DepartmentSummaPR1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8487,7 +8485,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 		}
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
-		public static void DepaINPROGRESSR(ExtentTest test,String risk)throws InterruptedException
+		public static void DepaINPROGRESSR1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8585,7 +8583,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void DepaRejectedR(ExtentTest test,String risk)throws InterruptedException
+		public static void DepaRejectedR1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8683,7 +8681,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void DepaNotApplic(ExtentTest test,String risk)throws InterruptedException
+		public static void DepaNotApplic1(ExtentTest test,String risk)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,2000)");
@@ -8982,7 +8980,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 	    	CFOcountPOM.DashBoardAfterCount().click();
 	 	}	
 		
-		public static void riskSummaryNotApplicable(ExtentTest test,String risk)throws InterruptedException
+		public static void riskSummaryNotApplicable(ExtentTest test,String risk, int Overdue)throws InterruptedException
 		{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scroll(0,1300)");
@@ -9079,7 +9077,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 			    {
 			    	test.log(LogStatus.FAIL, "Total of Risk Summary Not Applicable Count="+total+" | Detailed Report Total ="+count1);
 			    }			    	
-=======
+
 				if(Overdue==count1)
 			    {
 			    	test.log(LogStatus.PASS, "Department Summary Overdue Count="+Overdue+" | Detailed Report Total ="+count1);
@@ -9088,7 +9086,7 @@ public static void DepartmentSummaryOverdue(ExtentTest test,String risk)throws I
 			    {
 			    	test.log(LogStatus.FAIL, "Department Summary Overdue Count="+Overdue+" | Detailed Report Total ="+count1);
 			    }			    	
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
+
 		}else 
 		{
 			test.log(LogStatus.PASS, "No records found.");
