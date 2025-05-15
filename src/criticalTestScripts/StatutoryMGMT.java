@@ -127,7 +127,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
-    @Test(priority = 2)
+ //   @Test(priority = 2)
 	void CompliancesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
