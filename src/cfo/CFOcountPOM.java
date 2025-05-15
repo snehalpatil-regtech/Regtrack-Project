@@ -74,7 +74,7 @@ public class CFOcountPOM extends BasePage
 	private static List<WebElement> viewList = null;
 	public static WebElement clickCategories( )		//Method for closing Message Popup
 	{
-		categories = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divFunctionCount']"));
+		categories = getDriver().findElement(By.xpath("//div[@id='ContentPlaceHolder1_divFunctionCounts']"));
 		return categories;
 	}
 	
