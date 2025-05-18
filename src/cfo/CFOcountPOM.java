@@ -397,7 +397,7 @@ public class CFOcountPOM extends BasePage
 	
 	public static WebElement readCompliancesInternal( )		//Method for reading Compliances value on Dashboard
 	{
-		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divCompliancesCount']"));
+		compliances = getDriver().findElement(By.xpath("//*[@id='ContentPlaceHolder1_divCompliancesCounts']"));
 		return compliances;//*[@id="ContentPlaceHolder1_divCompliancesCount"]
 	}      
 	
