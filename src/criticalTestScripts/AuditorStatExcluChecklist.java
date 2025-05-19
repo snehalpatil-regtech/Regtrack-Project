@@ -3,6 +3,7 @@ package criticalTestScripts;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -106,7 +107,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -386,7 +387,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		
 		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,200)");						//Scrolling down window by 1000 px.
 		Thread.sleep(2000);
@@ -953,7 +954,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		Thread.sleep(5000);
 		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickCategories()));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -1054,7 +1055,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		Thread.sleep(5000);
 		CFOcountPOM.RefreshNow().click();
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,800)");						//Scrolling down window by 1000 px.
 		
@@ -2026,7 +2027,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 	//	js.executeScript("window.scrollBy(0,500)");			//Scrolling down window by 1000 px.cfo
 		js.executeScript("window.scrollBy(0,2100)");
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateText().click();	
@@ -2144,7 +2145,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 	//	js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2100)");	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -2266,7 +2267,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2100)");						//Scrolling down window by 1000 px.
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -2390,7 +2391,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2100)");						//Scrolling down window by 1000 px.
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -2515,7 +2516,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2100)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
 		AuditorcountPOM.DateText().click();	
@@ -2675,7 +2676,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		//js.executeScript("window.scrollBy(0,300)");			//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2100)");	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -2804,7 +2805,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		//js.executeScript("window.scrollBy(0,300)");			//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2100)");	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -2932,7 +2933,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
 	//	js.executeScript("window.scrollBy(0,300)");
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		Thread.sleep(3000);
@@ -3060,7 +3061,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 	//	Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(2000);
 		AuditorcountPOM.DateText().click();	
@@ -3187,7 +3188,7 @@ public class AuditorStatExcluChecklist extends BasePage {
 	
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		//Thread.sleep(2000);
 		Thread.sleep(3000);

@@ -2,6 +2,7 @@ package companyAdminDiy;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -74,7 +75,7 @@ public class CompanyAdminDiyMethod  extends BasePage{
 	public static void User( ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		SwitchtoChild(test,workbook);
@@ -108,7 +109,7 @@ public class CompanyAdminDiyMethod  extends BasePage{
 	public static void ModifyAssignments( ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		SwitchtoChild(test,workbook);
@@ -138,7 +139,7 @@ public class CompanyAdminDiyMethod  extends BasePage{
 	public static void ReopeningofCompliance( ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		SwitchtoChild(test,workbook);

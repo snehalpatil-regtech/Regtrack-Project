@@ -2,6 +2,7 @@ package criticalTestScripts;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -104,7 +105,7 @@ public class DeptStatutory extends BasePage {
 	
 	public static void progress1()
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -155,7 +156,7 @@ public class DeptStatutory extends BasePage {
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));
@@ -207,7 +208,7 @@ public class DeptStatutory extends BasePage {
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(5000);
 		CFOcountPOM.clickExportImage().click();                    //export excel
@@ -257,7 +258,7 @@ public class DeptStatutory extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 
 		js.executeScript("window.scrollBy(0,500)");
@@ -308,7 +309,7 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(3000);
 	//	litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -1745,7 +1746,7 @@ public class DeptStatutory extends BasePage {
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 		
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			
@@ -1871,7 +1872,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2700)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 
@@ -1995,7 +1996,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2700)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 
@@ -2117,7 +2118,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2238,7 +2239,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 				Thread.sleep(800);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(4000);
 				AuditorcountPOM.DateText().click();	
@@ -2393,7 +2394,7 @@ public class DeptStatutory extends BasePage {
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(2000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -2522,7 +2523,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 
@@ -2650,7 +2651,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2776,7 +2777,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(2000);
 			AuditorcountPOM.DateText().click();	
@@ -2904,7 +2905,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			AuditorcountPOM.DateText().click();	
@@ -3024,7 +3025,7 @@ public class DeptStatutory extends BasePage {
 			test = extent.startTest("compliance Calendar Verifications");
 			
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (70));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,3000)");					//Scrolling down window by 2600 px.

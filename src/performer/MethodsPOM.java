@@ -58,7 +58,7 @@ public class MethodsPOM  extends BasePage
 	{
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -132,7 +132,7 @@ getDriver().switchTo().parentFrame();
 	{
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -192,7 +192,7 @@ getDriver().switchTo().parentFrame();
 	{
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -246,7 +246,7 @@ getDriver().switchTo().parentFrame();
 	
 	public static void StatutoryCheckListMitigationPView(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -287,7 +287,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryCheckListMitigationPDe(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -325,7 +325,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryCheckListMitigationPDeWD(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -377,7 +377,7 @@ Thread.sleep(4000);
 	public static void StatutoryCheckListMP(ExtentTest test) throws InterruptedException
 	{
 	
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		OverduePOM.clickStatutoryChecklist().click();				//Clicking on Statutory overdue.
@@ -426,7 +426,7 @@ Thread.sleep(4000);
 	public static void InternalCheckListMitigationP( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -499,7 +499,7 @@ getDriver().switchTo().parentFrame();
 	public static void InternalCheckListMpMul( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -558,7 +558,7 @@ getDriver().switchTo().parentFrame();
 	{
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -612,7 +612,7 @@ getDriver().switchTo().parentFrame();
 	
 	public static void InternalCheckListMitigationPView(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -653,7 +653,7 @@ Thread.sleep(4000);
 	
 	public static void InternalCheckListMitigationPDe(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -691,7 +691,7 @@ Thread.sleep(4000);
 	
 	public static void InternalCheckListMitigationPDeWD(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -743,7 +743,7 @@ Thread.sleep(4000);
 	public static void InternalCheckListMP(ExtentTest test) throws InterruptedException
 	{
 	
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		OverduePOM.clickInternalChecklist().click();	
@@ -793,7 +793,7 @@ Thread.sleep(4000);
 	public static void InternalCheckListMitigationPFilter( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -877,7 +877,7 @@ Thread.sleep(4000);
 	public static void StatutoryCheckListMitigationPFilter( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -967,7 +967,7 @@ Thread.sleep(4000);
 	public static void StatutoryOverdueMitigationPFilter( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -1071,7 +1071,7 @@ Thread.sleep(4000);
 	public static void InternalOverdueMitigationPFilter( ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(1200));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	
 		
@@ -1178,7 +1178,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplan(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1245,7 +1245,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplanMul(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1298,7 +1298,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplanDDoc(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1352,7 +1352,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplanView(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1395,7 +1395,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplanDe(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1440,7 +1440,7 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueMitigationplanWD(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -1497,8 +1497,8 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdue( ) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(45));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)"," ");
 		
@@ -1656,8 +1656,8 @@ Thread.sleep(4000);
 	
 	public static void StatutoryOverdueCri(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		String string_overdueStatutory = OverduePOM.clickStatutoryOverdue().getText();		//Storing old value of Statutory overdue.
 		int	overdueStatutory = Integer.parseInt(string_overdueStatutory);
@@ -1804,7 +1804,7 @@ Thread.sleep(4000);
 	public static void StatutoryOverdueMP(ExtentTest test) throws InterruptedException
 	{
 	
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		OverduePOM.clickStatutoryOverdue().click();				//Clicking on Statutory overdue.
@@ -1837,7 +1837,7 @@ Thread.sleep(4000);
 		}
 		catch(Exception e) 
 		{
-			WebDriverWait wait = new WebDriverWait(getDriver(),(60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			//test.log(LogStatus.PASS,"mitigation plan already updated ");
 			Thread.sleep(3000);
 			 //Actions at1 = new Actions(getDriver());
@@ -1986,7 +1986,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplan(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2056,7 +2056,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplanMul(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2106,7 +2106,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplanDDoc(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2160,7 +2160,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplanView(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2203,7 +2203,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplanDe(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2248,7 +2248,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueMitigationplanWD(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
@@ -2303,7 +2303,7 @@ Thread.sleep(4000);
 	public static void InternalOverdueMP(ExtentTest test) throws InterruptedException
 	{
 	
-		WebDriverWait wait1 = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		OverduePOM.clickInternalOverdue().click();	
@@ -2352,7 +2352,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdue( ) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(2000);
 		//js.executeScript("window.scrollBy(0,1000)");
@@ -2491,7 +2491,7 @@ Thread.sleep(4000);
 	
 	public static void InternalOverdueCri(ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(2000);
 		Thread.sleep(1000);
@@ -2659,7 +2659,7 @@ Thread.sleep(4000);
 	static void CheckList( String action) throws InterruptedException
 	{
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		//div[@class = 'k-multiselect-wrap k-floatwrap']
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2706,7 +2706,7 @@ Thread.sleep(4000);
 	static void Action( String action, String frame) throws InterruptedException
 	{
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		Thread.sleep(3000);
@@ -2855,7 +2855,7 @@ Thread.sleep(4000);
 	static void ActionCri( String action, String frame) throws InterruptedException
 	{
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
 		Thread.sleep(3000);
@@ -2943,7 +2943,7 @@ Thread.sleep(4000);
 		//-----------------------------Closed Timely after multiple checkbox click--------------------
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickStatutoryChecklist().click();	
 		Thread.sleep(6000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='grid']/div[4]"))); //Waiting until grid/kendo gets visible.
@@ -3183,7 +3183,7 @@ Thread.sleep(4000);
 		
 		//---------------------------Submit after Action button click--------------------------
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		Thread.sleep(1000);
 		int oldStatutoryChecklistValue = Integer.parseInt(OverduePOM.clickStatutoryChecklist().getText());	//Storing old value of Statutory Checkilist.
@@ -3386,7 +3386,7 @@ Thread.sleep(4000);
 		
 		OverduePOM.clickInternalChecklist().click();					//Clicking on Internal Checklist Value
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		Thread.sleep(1000);
@@ -3494,7 +3494,7 @@ Thread.sleep(4000);
 				
 				OverduePOM.clickInternalChecklist().click();					//Clicking on Internal Checklist Value
 				
-				//WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+				//WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			//	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				
 				Thread.sleep(4000);
@@ -3648,7 +3648,7 @@ Thread.sleep(4000);
 		
 		OverduePOM.clickInternalChecklist().click();					//Clicking on Internal Checklist Value
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		Thread.sleep(1000);
@@ -3698,7 +3698,7 @@ Thread.sleep(4000);
 	
 	static void RejectDelete( String Compliance,ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		elementsList = OverduePOM.clickStatutoryActionButton();
@@ -3812,7 +3812,7 @@ Thread.sleep(4000);
 
 	static void RejectAction( String Compliance,ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		elementsList = OverduePOM.clickStatutoryActionButton();
@@ -4061,7 +4061,7 @@ Thread.sleep(4000);
 	
 	public static void DashboardRejected( ExtentTest test, String Compliance) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPEOcount']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
@@ -4185,7 +4185,7 @@ Thread.sleep(4000);
 
 	public static void DashboardRejectedCri( ExtentTest test, String Compliance) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_divPerformerRejectedPEOcount']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
@@ -4305,7 +4305,7 @@ Thread.sleep(4000);
 	
 	static void AssignTask( String task) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		Thread.sleep(1000);
 		wait.until(ExpectedConditions.visibilityOf(OverduePOM.clickComplianceLocation()));
@@ -4401,7 +4401,7 @@ Thread.sleep(4000);
 		//-------------------------------Create Main Task--------------------------------------
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@onclick='CheckProduct();']")));	//Waiting for 'My Workspace' link to be visible.
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
@@ -4432,7 +4432,7 @@ Thread.sleep(4000);
 		//-------------------------------Create Main Task--------------------------------------
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@onclick='CheckProduct();']")));	//Waiting for 'My Workspace' link to be visible.
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
@@ -4688,7 +4688,7 @@ Thread.sleep(4000);
 	{
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(),  50);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(3000);
@@ -4777,7 +4777,7 @@ Thread.sleep(4000);
 	{
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(1000);
@@ -4851,7 +4851,7 @@ Thread.sleep(4000);
 		Select drp = new Select(OverduePOM.selectStatutoryDropdown());
 		drp.selectByIndex(1);
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(1000);
 		
 				if(OverduePOM.fileUploadStatutory().isEnabled())
@@ -4881,7 +4881,7 @@ Thread.sleep(4000);
 	public static void MyCalendarCompliance( ExtentTest test) throws InterruptedException
 	{
 		Thread.sleep(500);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickStatutoryChecklist()));
 	//	int oldStatutoryChecklistValue = Integer.parseInt(OverduePOM.clickStatutoryChecklist().getText());	//Storing old value of Statutory Checkilist.
 	//	int oldOverdueStatutoryValue = Integer.parseInt(OverduePOM.clickStatutoryOverdue().getText());
@@ -5058,7 +5058,7 @@ Thread.sleep(4000);
 	
 	public static void UpdateLeave( ExtentTest test) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (20));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickMyWorkspace()));	//Waiting for 'My Workspace' link to be visible.
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -5141,7 +5141,7 @@ Thread.sleep(4000);
 	public static void UpcomingComplianceADView( ExtentTest test) throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(50));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickUpcomingStatutory()));	//Waiting for 'Upcoming Statutory' count to be clickable.
 		OverduePOM.clickUpcomingStatutory().click();
@@ -5191,7 +5191,7 @@ Thread.sleep(4000);
 	
 	public static void PFR( ExtentTest test, String Compliance) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickPFRStatutory()));	//Waiting for 'Upcoming Statutory' count to be clickable.
 		
@@ -5243,7 +5243,7 @@ Thread.sleep(4000);
 	
 	public static void UpcomingCompliance( ExtentTest test, String Compliance, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickUpcomingStatutory()));	//Waiting for 'Upcoming Statutory' count to be clickable.
 		
@@ -5774,7 +5774,7 @@ Thread.sleep(4000);
 	
 	public static void UpcomingComplianceCri( ExtentTest test, String Compliance, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.clickUpcomingStatutory()));	//Waiting for 'Upcoming Statutory' count to be clickable.
 		
@@ -6152,7 +6152,7 @@ Thread.sleep(4000);
 	
 	public static void WorkspaceADExportStatutory( ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -6198,7 +6198,7 @@ Thread.sleep(4000);
 
 	public static void WorkspaceOverdueStatutory( ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -6264,7 +6264,7 @@ Thread.sleep(4000);
 	
 	public static void WorkspaceADExportInternal( ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -6321,7 +6321,7 @@ Thread.sleep(4000);
 	
 	public static void WorkspaceOverdueInternal( ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		//wait.until(ExpectedConditions.visibilityOf(OverduePOM.clickMyWorkspace()));
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
@@ -6414,7 +6414,7 @@ Thread.sleep(4000);
 	{
 
 		
-  		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+  		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -6467,7 +6467,7 @@ Thread.sleep(4000);
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	//Scrolling down window by 2000 px.
 		
@@ -6620,7 +6620,7 @@ Thread.sleep(4000);
 	public static void PerformUpcomingInternal( ExtentTest test)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		
@@ -6706,7 +6706,7 @@ Thread.sleep(4000);
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		
@@ -6787,7 +6787,7 @@ Thread.sleep(4000);
 	public static void PerformOverdueInternal( ExtentTest test)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 	
@@ -6874,7 +6874,7 @@ Thread.sleep(4000);
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 	
@@ -6957,7 +6957,7 @@ Thread.sleep(4000);
 	public static void PerformRejectedInternal( ExtentTest test)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		
@@ -7043,7 +7043,7 @@ Thread.sleep(4000);
 	public static void TaskReport( ExtentTest test)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		//------------------------------------- Statutory ------------------------------------
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -7107,7 +7107,7 @@ Thread.sleep(4000);
 	public static void EventReport( ExtentTest test)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -7158,7 +7158,7 @@ Thread.sleep(4000);
 	
 	public static void DetailedReportRisk(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -7228,7 +7228,7 @@ Thread.sleep(4000);
 	
 	public static void DetailedReportCD(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -7320,7 +7320,7 @@ Thread.sleep(4000);
 	
 	public static void DetailedReport1(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -7463,7 +7463,7 @@ Thread.sleep(4000);
 
 	public static void DetailedReportIn(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -7617,7 +7617,7 @@ Thread.sleep(4000);
 	public static void complianceRepository(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		 WebDriverWait wait = new WebDriverWait(getDriver(), (160));
+		 WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	 	    
 	 		Thread.sleep(500);
 	 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -7639,7 +7639,7 @@ Thread.sleep(4000);
 	public static void complianceDocumentSta(ExtentTest test) throws InterruptedException, IOException
 	{
 
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -7751,7 +7751,7 @@ Thread.sleep(4000);
 	public static void complianceDocumentIn(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -7873,7 +7873,7 @@ Thread.sleep(4000);
 	{
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(1000);
 		OverduePOM.ClickSupportTicket().click();
 		Thread.sleep(4000);
@@ -7894,7 +7894,7 @@ Thread.sleep(4000);
 	public static void ActDocuments(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -7930,7 +7930,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void WhatsNew(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		if(OverduePOM.WhatsNewIcon().isDisplayed()) {
 		
@@ -7976,7 +7976,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void complianceDocumentStaCri(ExtentTest test) throws InterruptedException, IOException
 	{
 
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -8042,7 +8042,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void complianceDocumentInCri(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -8116,7 +8116,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void MyLeave(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 	
@@ -8172,7 +8172,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void MyLeaveIn(ExtentTest test) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 	
@@ -8234,7 +8234,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8281,7 +8281,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8327,7 +8327,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void SecondaryReDisplay( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 	
@@ -8420,7 +8420,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void SecondaryReDisplayFm( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 	
@@ -8516,7 +8516,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8566,7 +8566,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8616,7 +8616,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8716,7 +8716,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8815,7 +8815,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -8864,7 +8864,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void SecondaryReDisplayIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 	
@@ -8962,7 +8962,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -9016,7 +9016,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -9120,7 +9120,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -9168,7 +9168,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void SecondaryReDisplayFmIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 	
@@ -9267,7 +9267,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 		
 		
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		OverduePOM.clickMyWorkspace1().click();		//Clicking on 'My Workspace'
 		
 		Thread.sleep(500);
@@ -9318,7 +9318,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void DueButNotSubmitted(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9349,7 +9349,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void DueButNotSubmittedIn(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9388,7 +9388,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void PendingForReview(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9508,7 +9508,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	}
 	public static void PendingForReviewInt(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9618,7 +9618,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	}
 	public static void PendingForReviewTaskRejected(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9759,7 +9759,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void PendingForReviewTaskInRejected(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -9891,7 +9891,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	}
 	public static void PendingForReviewInternalTask(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -10014,7 +10014,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void Rejectedtask(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,200)");	
 		Thread.sleep(1000);
@@ -10071,7 +10071,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void PerformerTaskUpcoming(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	
 		Thread.sleep(1000);
@@ -10211,7 +10211,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	//Scrolling down window by 2000 px.
 		
@@ -10352,7 +10352,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	public static void PerformerTaskOverdueInternal(ExtentTest test,String type)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	//Scrolling down window by 2000 px.
 		
@@ -10481,7 +10481,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	{
 
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedStat']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
@@ -10640,7 +10640,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	{
 
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_DivPerformerRejectedInt']")));	//Waiting for 'Statutory Reject' value to get visible on Dashboard
 		
 		String string_rejected = null;
@@ -10788,7 +10788,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void PerformerTaskPFR(ExtentTest test,String type)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,500)");	
 		Thread.sleep(1000);
@@ -10838,7 +10838,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void DeviationApplied(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,1000)");	
 		Thread.sleep(1000);
@@ -10907,7 +10907,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(), 30);
 	
 	public static void DeviationAppliedW(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -10969,7 +10969,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationAppliedWS(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11055,7 +11055,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationAppliedWD(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11135,7 +11135,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationAppliedWR(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11216,7 +11216,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationAppliedWC(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		OverduePOM.clickStatutoryChecklist().click();				//Clicking on Statutory Checklist value
 		Thread.sleep(4000);
@@ -11294,7 +11294,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationAppliedWCD(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		OverduePOM.clickStatutoryChecklist().click();				//Clicking on Statutory Checklist value
 		Thread.sleep(4000);
@@ -11369,7 +11369,7 @@ getDriver().switchTo().frame("iPerformerFrame");						//Switching 1st iFrame.
 	
 	public static void DeviationApproverCol(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11403,7 +11403,7 @@ String textDA=	OverduePOM.DeviationApprover().getText();
 	
 	public static void DeviationClosureStatuscol(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11437,7 +11437,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void DeviationApproverColRE(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11479,7 +11479,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void DeviationClosureStatuscolRE(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
         OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 		
@@ -11522,7 +11522,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void ComplianceDocumentsDA(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -11552,7 +11552,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void ComplianceDocumentsDAM(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -11582,7 +11582,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void ComplianceDocumentsDAMAu(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -11612,7 +11612,7 @@ String textDA=	OverduePOM.DeviationClosureStatus().getText();
 	
 	public static void DeviationApproverColCD(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -11757,7 +11757,7 @@ String textDA=	OverduePOM.DeviationApprover().getText();
 	
 	public static void DeviationApproverColCDAPP(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -11891,7 +11891,7 @@ String textDA=	OverduePOM.DeviationApprover().getText();
 	
 	public static void DeviationApproverColCRE(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		 OverduePOM.clickMyWorkspace().click();		//Clicking on 'My Workspace'
 			
@@ -12041,7 +12041,7 @@ String textDA=	OverduePOM.DeviationApprover().getText();
 	
 	public static void DeviationClosureStatuscolCD(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -12074,7 +12074,7 @@ Thread.sleep(3000);
 	
 	public static void PerformReviewEmailCol(ExtentTest test)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(4000);
 		CFOcountPOM.clickReport().click();					//Clicking on 'My Reports'
@@ -12138,7 +12138,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	public static void PerformReviewEmailColIn(ExtentTest test)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(4000);
 		CFOcountPOM.clickReport().click();					//Clicking on 'My Reports'
@@ -12203,7 +12203,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 
 	public static void DetailedReportDA(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
 		Thread.sleep(3000);
@@ -12248,7 +12248,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	public static void DetailedReportDAM(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
 		Thread.sleep(3000);
@@ -12289,7 +12289,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	public static void OverdueDA(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		OverduePOM.clickStatutoryOverdue().click();		
 		Thread.sleep(3000);
@@ -12316,7 +12316,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	public static void DetailedReportSF(ExtentTest test) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		OverduePOM.clickReports().click();					//Clicking on 'My Reports'
@@ -12388,7 +12388,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	public static void ComplianceDocumentsSF(ExtentTest test  ) throws InterruptedException, IOException
 	{
 		
-			WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 			Thread.sleep(1000);
 			CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -12457,7 +12457,7 @@ if(OverduePOM.Performercol().isDisplayed()&& OverduePOM.Reviewercol().isDisplaye
 	
 	public static void IsSmetaColumn(ExtentTest test, String Status, int complianceCount)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -12621,7 +12621,7 @@ Thread.sleep(2000);
 
 	public static void NotCompgraphIsSmetaColumn(ExtentTest test, String Status, int complianceCount)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -12767,7 +12767,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnOverallFun(ExtentTest test, String Status, int complianceCount)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -12887,7 +12887,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnRisksummary(ExtentTest test, String Status)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -13026,7 +13026,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmeta(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 	       Thread.sleep(500);
 			Actions action = new Actions(getDriver());
@@ -13112,7 +13112,7 @@ Thread.sleep(5000);
 	
 	public static void IsSmetaColumnDepartSummary(ExtentTest test, String Status)throws InterruptedException
 	{
-       WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -13290,7 +13290,7 @@ Thread.sleep(2000);
 	public static void IsSmetaColumnDueForPeriod(ExtentTest test, String Status)throws InterruptedException
 	{
 //		 Thread.sleep(500);		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13402,7 +13402,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumn(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13508,7 +13508,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnDept(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13653,7 +13653,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnRiskSummNotComp(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13760,7 +13760,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnRiskSummCloDel(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13866,7 +13866,7 @@ Thread.sleep(2000);
 	
 	public static void IsSmetaColumnRiskSummCloTimely(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -13971,7 +13971,7 @@ Thread.sleep(2000);
 	}
 	public static void IsSmetaColumnRiskNotAppli(ExtentTest test, String Status)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -15262,7 +15262,7 @@ Thread.sleep(2000);
 	{
 	
      Thread.sleep(500);		
-	WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(500);
 	Actions action = new Actions(getDriver());
 //	int critical = Integer.parseInt(CFOcountPOM.readCritical().getText());	//Reading Critical risk count.

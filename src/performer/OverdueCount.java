@@ -122,7 +122,7 @@ public class OverdueCount extends BasePage
 	
 	public static void message()
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.closeMessage()));
@@ -180,7 +180,7 @@ public class OverdueCount extends BasePage
 		test = extent.startTest("Dashboard Statutory Overdue Value Verification");
 		
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 	//	test.log(LogStatus.PASS, "***********Statutory Overdue************ ");
@@ -1541,7 +1541,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		
 		
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		
 		test.log(LogStatus.INFO, "***********Upcoming Statutory Performer Task************ ");
@@ -1754,7 +1754,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		void PerformerTaskUpcomingInternal() throws InterruptedException{
 		 test = extent.startTest("Dashboard Internal Upcoming Performer Task Verification");
 			test.log(LogStatus.INFO, "Test Initiated");
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			
 			test.log(LogStatus.INFO, "***********Upcoming Internal Performer Task************ ");
@@ -1958,7 +1958,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		 
 		 test = extent.startTest("Dashboard Statutory Overdue Performer Task Verification");
 			test.log(LogStatus.INFO, "Test Initiated");
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			
 			test.log(LogStatus.INFO, "***********Overdue Statutory Performer Task************ ");
@@ -2151,7 +2151,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		 
 		 test = extent.startTest("Dashboard Internal Overdue Performer Task Verification");
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			
 			test.log(LogStatus.INFO, "***********Overdue Statutory Performer Task************ ");
@@ -2346,7 +2346,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			 
 			 test = extent.startTest("Dashboard Statutory Overdue Performer Task Verification");
 				test.log(LogStatus.INFO, "Test Initiated");
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				
 				test.log(LogStatus.INFO, "***********Rejected Statutory Performer Task************ ");
@@ -2538,7 +2538,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			 
 			 test = extent.startTest("Dashboard Internal Rejected Performer Task Verification");
 				
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				
 				test.log(LogStatus.INFO, "***********Rejected Internal  Performer Task************ ");
@@ -2806,7 +2806,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 					test = extent.startTest("My Compliance Calender Statutory perform Verification");
 					
 					Thread.sleep(3000);
-					WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+					WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 					JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 					js.executeScript("window.scrollBy(0,650)");					//Scrolling down window by 2600 px.
 					Thread.sleep(8000);
@@ -2961,7 +2961,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 			test = extent.startTest("'News Letters'  OverView");
 			
 			Thread.sleep(500);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,1500)","");					//Scrolling down window by 2600 px.
@@ -2988,7 +2988,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				test = extent.startTest("'Internal Msg  '  Verification");
 				
 					Thread.sleep(3000);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(40));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				Thread.sleep(500);
 				OverduePOM.ClickInternalMsg().click();
 				Thread.sleep(4000);
@@ -3038,7 +3038,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 		      				test = extent.startTest("My Escalation Verification");
 		      			
 		      				Thread.sleep(3000);
-		      				WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		      				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		      				OverduePOM.clickMyEscalation().click();
 		      				Thread.sleep(4000);
 		      				getDriver().findElement(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[1]")).click();
@@ -3390,7 +3390,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				test = extent.startTest("'Live Chat '  Verification");
 				
 				Thread.sleep(1000);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				Thread.sleep(500);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='tawk-custom-color tawk-custom-border-color tawk-button tawk-button-circle tawk-button-large']")));
 				Thread.sleep(500);
@@ -3423,7 +3423,7 @@ void PerformReviewEmailCol() throws InterruptedException, IOException
 				test = extent.startTest("My Compliance Calender Count Verification");
 				
 				Thread.sleep(3000);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,650)");					//Scrolling down window by 2600 px.

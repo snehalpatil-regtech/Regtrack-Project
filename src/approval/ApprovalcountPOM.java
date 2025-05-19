@@ -3,6 +3,7 @@ package approval;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -590,7 +591,7 @@ public static void Entities( ExtentTest test)throws InterruptedException
 	}
 	Entities().click();
 	Thread.sleep(3000);
-	WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	Thread.sleep(2000);
 	
@@ -887,7 +888,7 @@ public static void SummaryofOverdueCompliancesFilter( ExtentTest test)throws Int
 		CFOcountPOM.ClickShowAll().click();        //Clicking on Show All
 		
 //	litigationPerformer.MethodsPOM.progress();
-	WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 getDriver() .switchTo().frame(farme);
@@ -983,7 +984,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 		CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 	}
 	
-	WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	Thread.sleep(8000);
 	Status().click();
@@ -1089,7 +1090,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -1212,7 +1213,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -1342,7 +1343,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -1465,7 +1466,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -1590,7 +1591,7 @@ public static void GraphCountPFR( ExtentTest test, String risk, int complianceCo
 	
 	public static void RiskGraphCount( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), 70);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -1697,7 +1698,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a");
 	
 	public static void RiskGraphCountS( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), 70);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -1805,7 +1806,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void RiskGraphCount2( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-				WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -1904,7 +1905,7 @@ Thread.sleep(5000);
 	
 	public static void RiskGraphCount1( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -2012,7 +2013,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void RiskGraphCount1S( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -2146,7 +2147,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		}
 		Thread.sleep(3000);
 		getDriver().switchTo().parentFrame();
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 	
 		Thread.sleep(8000);
@@ -2272,7 +2273,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		}
 		Thread.sleep(3000);
 		getDriver().switchTo().parentFrame();
-		WebDriverWait wait = new WebDriverWait(getDriver(),50);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -2401,7 +2402,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		}
 		Thread.sleep(3000);
 		getDriver().switchTo().parentFrame();
-		WebDriverWait wait = new WebDriverWait(getDriver(),50);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -2517,7 +2518,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 30);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		Thread.sleep(8000);
@@ -2642,7 +2643,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Status().click();
@@ -2747,7 +2748,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 			CFOcountPOM.readLow().click();						//Clicking on Low value of Pie Chart of 'Not Completed'.
 		}
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	
 		Thread.sleep(8000);
@@ -2870,7 +2871,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 		}
 		Thread.sleep(3000);
 		getDriver().switchTo().parentFrame();
-		WebDriverWait wait = new WebDriverWait(getDriver(), 60);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 	
 		Thread.sleep(8000);
@@ -2980,7 +2981,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReport(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3091,7 +3092,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportFilter(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3249,7 +3250,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportFilterRe(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3407,7 +3408,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportFilterper(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3565,7 +3566,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportFilterDep(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3724,7 +3725,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportFilterMgmt(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -3897,7 +3898,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	
 	public static void DetailedReportIn(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 160);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4046,7 +4047,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[22]/a[1]");
 	public static void ComplianceDocuments(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -4165,7 +4166,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(180));
 	public static void ComplianceDocumentsFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -4320,7 +4321,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(180));
 	public static void complianceDocumentIn(ExtentTest test ) throws InterruptedException, IOException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -4440,7 +4441,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(180));
 	
 	public static void DetailedReportRe(ExtentTest test,  String user) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4491,7 +4492,7 @@ Thread.sleep(2000);
 	
 	public static void RiskGraphCountIn1( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(8000);
@@ -4575,7 +4576,7 @@ Thread.sleep(2000);
 	
 	public static void RiskGraphCountIn( ExtentTest test, String ComplianceType, int ComplianceCount, String Compliance)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -4709,7 +4710,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[19]/a");
 		Thread.sleep(3000);
 		getDriver().switchTo().parentFrame();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetailsNewGraph"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -4815,7 +4816,7 @@ else {
 	
 	public static void AssignmentReportFilter(ExtentTest test ) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	//	Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -4971,7 +4972,7 @@ else {
 	
 	public static void AssignmentReportFilterDept(ExtentTest test ) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	//	Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -5129,7 +5130,7 @@ else {
 	public static void ActRepositoryFilter(ExtentTest test ) throws InterruptedException, IOException
 	{
 		
-           WebDriverWait wait = new WebDriverWait(getDriver(), (160));
+          WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -5217,7 +5218,7 @@ else {
 	
 	public static void AssignmentReportFilterMGmt(ExtentTest test ) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	//	Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -5382,7 +5383,7 @@ else {
 	
 	public static void AssignmentReportFilterRevi(ExtentTest test ) throws InterruptedException, IOException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	//	Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(CFOcountPOM.clickReports()));
@@ -5548,7 +5549,7 @@ else {
 	public static void ActRepositoryFilterRe(ExtentTest test ) throws InterruptedException, IOException
 	{
 		
-           WebDriverWait wait = new WebDriverWait(getDriver(), (160));
+          WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
            JavascriptExecutor jse=(JavascriptExecutor) getDriver();
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -5644,7 +5645,7 @@ else {
 	public static void MyApprovals (ExtentTest test ) throws InterruptedException, IOException
 	{
 		
-           WebDriverWait wait = new WebDriverWait(getDriver(), (160));
+          WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
            JavascriptExecutor jse=(JavascriptExecutor) getDriver();
 		Thread.sleep(3000);
 	
@@ -5665,7 +5666,7 @@ else {
 	public static void DepCompletionStatusFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -5848,7 +5849,7 @@ else {
 	public static void DepNotCompletionStatusFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6031,7 +6032,7 @@ else {
 	public static void CompletionStatusFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6214,7 +6215,7 @@ else {
 	public static void CompletionStatusFilterMgmt(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6406,7 +6407,7 @@ else {
 	public static void NotCompletionStatusFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6589,7 +6590,7 @@ else {
 	public static void NotCompletionStatusFilterMgmt(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	   
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6770,7 +6771,7 @@ else {
 	public static void RiskSummaryFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -6950,7 +6951,7 @@ else {
 	public static void RiskSummaryFilterNA(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
     /*   CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -7155,7 +7156,7 @@ else {
 	public static void RiskSummaryFilterNAIn(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -7359,7 +7360,7 @@ else {
 	public static void RiskSummaryFilterM(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -7537,7 +7538,7 @@ else {
 	public static void RiskSummaryFilterDep(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -7717,7 +7718,7 @@ else {
 	public static void DeptSummaryFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -7902,7 +7903,7 @@ else {
 	public static void DeptSummaryFilterM(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -8087,7 +8088,7 @@ else {
 	public static void DeptSummaryFilterDept(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        CFOcountPOM.YearTodate().click();
 		Thread.sleep(1000);
@@ -8273,7 +8274,7 @@ else {
 	public static void CompletionStatusFilterMgmtPe(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        JavascriptExecutor js = (JavascriptExecutor) getDriver();
        js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
@@ -8472,7 +8473,7 @@ else {
 	public static void NotCompletionStatusFilterMgmtPe(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
    	JavascriptExecutor js = (JavascriptExecutor) getDriver();
 	js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
@@ -8690,7 +8691,7 @@ else {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -8799,7 +8800,7 @@ else {
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -8897,7 +8898,7 @@ else {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -9024,7 +9025,7 @@ else {
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -9117,7 +9118,7 @@ else {
 	
 	public static void DeviationApprover(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		ApprovalcountPOM.DeviationApproval().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -9154,7 +9155,7 @@ else {
 	
 	public static void DeviationApproverReject(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		ApprovalcountPOM.DeviationApproval().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -9191,7 +9192,7 @@ else {
 	
 	public static void DeviationApproverClear(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		ApprovalcountPOM.DeviationApproval().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -9219,7 +9220,7 @@ else {
 	
 	public static void DeviationApproverExport(ExtentTest test)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		ApprovalcountPOM.DeviationApproval().click();					//Clicking on 'My Documents'
 		Thread.sleep(3000);
@@ -9260,7 +9261,7 @@ else {
 			Thread.sleep(5000);
 			CFOcountPOM.ClickShowAll().click();        //Clicking on Show All
 			Thread.sleep(8000);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 			WebElement farme=getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 			getDriver().switchTo().frame(farme);
@@ -9323,7 +9324,7 @@ else {
 	
 	public static void PerformanceSummarySF(ExtentTest test)throws InterruptedException
 	{
-			WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			Thread.sleep(1000);
 			CFOcountPOM.ALL().click();
@@ -9406,7 +9407,7 @@ else {
 	
 	public static void RiskSummarySF(ExtentTest test)throws InterruptedException
 	{
-			WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			Thread.sleep(1000);
 			CFOcountPOM.ALL().click();
@@ -9488,7 +9489,7 @@ else {
 	
 	public static void DepartmentSummarySF(ExtentTest test)throws InterruptedException
 	{
-			WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			Thread.sleep(1000);
 			CFOcountPOM.ALL().click();
@@ -9570,7 +9571,7 @@ else {
 	
 	public static void PerformerSummaryDueForPeriodSF(ExtentTest test)throws InterruptedException
 	{
-			WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			
 			
@@ -9648,7 +9649,7 @@ else {
 		Thread.sleep(2000);	
 		CFOcountPOM.clickRedGrading2().click();
 		Thread.sleep(8000);	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 			CFOcountPOM.ComplianceID().sendKeys("66196");
 			
@@ -9706,7 +9707,7 @@ else {
 	}
 	public static void DetailedReportSF(ExtentTest test) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		clickReports().click();					//Clicking on 'My Reports'
@@ -9778,7 +9779,7 @@ else {
 	public static void ComplianceDocumentsSF(ExtentTest test  ) throws InterruptedException, IOException
 	{
 		
-			WebDriverWait wait = new WebDriverWait(getDriver(), (140));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 			Thread.sleep(1000);
 			CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -9852,7 +9853,7 @@ else {
 		Thread.sleep(2000);
 	CFOcountPOM.readPenaltyCount().click();					//Clicking on 'Penalty'.
 	Thread.sleep(3000);
-	WebDriverWait wait = new WebDriverWait( getDriver(),(140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	Thread.sleep(1000);
 
@@ -9997,7 +9998,7 @@ else {
 		Thread.sleep(2000);
 	CFOcountPOM.readPenaltyCount().click();					//Clicking on 'Penalty'.
 	Thread.sleep(3000);
-	WebDriverWait wait = new WebDriverWait( getDriver(),(140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	Thread.sleep(1000);
 
@@ -10142,7 +10143,7 @@ else {
 	public static void UpcomingFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(2000);
 		
@@ -10360,7 +10361,7 @@ else {
 	public static void UpcomingFilter1(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
        Thread.sleep(2000);
 		
@@ -10586,7 +10587,7 @@ else {
 		public static void UpcomingFilterIn(ExtentTest test ) throws InterruptedException, IOException
 		{	
 			
-	       WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+	       WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		    
 	       Thread.sleep(2000);
 			

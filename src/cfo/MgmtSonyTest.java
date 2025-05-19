@@ -2,6 +2,7 @@ package cfo;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -96,7 +97,7 @@ public class MgmtSonyTest extends BasePage {
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -150,7 +151,7 @@ public class MgmtSonyTest extends BasePage {
 		Thread.sleep(500);
 		ApprovalcountPOM.TotalCompliances().click();					//Clicking on 'Users'. 
 		Thread.sleep(5000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		Thread.sleep(2000);
@@ -208,7 +209,7 @@ public class MgmtSonyTest extends BasePage {
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (1600));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		CFOcountPOM.clickExportImage2().click();                    //export excel
@@ -258,7 +259,7 @@ public class MgmtSonyTest extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 
 		js.executeScript("window.scrollBy(0,500)");

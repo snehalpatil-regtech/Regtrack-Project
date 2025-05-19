@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 //import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -76,7 +77,7 @@ public static WebElement EntitySubEntityLocation1()		//Method for closing Messag
 public static void ComplianceCertificate( ExtentTest test)
 		throws InterruptedException, IOException {
 
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	js.executeScript("window.scrollBy(0,3600)");					//Scrolling down window by 2600 px.
@@ -146,7 +147,7 @@ Thread.sleep(5000);
 public static void ComplianceCertificateParticularPeriod( ExtentTest test)
 		throws InterruptedException, IOException {
 
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -224,7 +225,7 @@ public static void ComplianceCertificateParticularPeriod( ExtentTest test)
 public static void CertificateParticularPeriodCompliance( ExtentTest test)
 		throws InterruptedException, IOException {
 
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -267,7 +268,7 @@ public static void CertificateParticularPeriodCompliance( ExtentTest test)
 public static void CertificateUser( ExtentTest test)
 		throws InterruptedException, IOException {
 
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;

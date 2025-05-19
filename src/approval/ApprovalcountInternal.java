@@ -2,6 +2,7 @@ package approval;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -105,7 +106,7 @@ public class ApprovalcountInternal extends BasePage{
 		//Write "CFO" for login.avantis
 		 = login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		ApprovalcountPOM.clickManagement().click();
@@ -136,7 +137,7 @@ public class ApprovalcountInternal extends BasePage{
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),60);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -162,7 +163,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),70);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));
@@ -245,7 +246,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), 70);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
@@ -375,7 +376,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		
 		Thread.sleep(1500);
-		WebDriverWait wait1 = new WebDriverWait( getDriver(),30);
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait1.until(ExpectedConditions.visibilityOf(CFOcountPOM.uniqueCompliances()));
 		int valueCompliances = Integer.parseInt(CFOcountPOM.uniqueCompliances().getText());	//Storing value of 'Compliances' as a String to compare.
 		
@@ -385,7 +386,7 @@ public class ApprovalcountInternal extends BasePage{
 		Thread.sleep(500);
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), 10);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
@@ -447,7 +448,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		CFOcountPOM.clickUsersCount().click();					//Clicking on 'Users'. 
 		Thread.sleep(5000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 15);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		Thread.sleep(2000);
@@ -506,7 +507,7 @@ public class ApprovalcountInternal extends BasePage{
 
 		Thread.sleep(3000);
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -1149,7 +1150,7 @@ public class ApprovalcountInternal extends BasePage{
 		test = extent.startTest("Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -1251,7 +1252,7 @@ public class ApprovalcountInternal extends BasePage{
 		test = extent.startTest("Pie Chart -  Not Completed Status-  'In Progress' Count Verification");
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -1351,7 +1352,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		Thread.sleep(500);
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -1913,7 +1914,7 @@ public class ApprovalcountInternal extends BasePage{
 
 	//	js.executeScript("window.scrollBy(0,500)");
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);   
 		AuditorcountPOM.DateText().click();	
@@ -2024,7 +2025,7 @@ public class ApprovalcountInternal extends BasePage{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		AuditorcountPOM.DateText().click();	
@@ -2131,7 +2132,7 @@ public class ApprovalcountInternal extends BasePage{
 	{
 		test = extent.startTest("Period-Pie Chart - Completion Status - 'Not Completed' Count Verification");
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -2256,7 +2257,7 @@ public class ApprovalcountInternal extends BasePage{
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		
@@ -2372,7 +2373,7 @@ public class ApprovalcountInternal extends BasePage{
 	//	js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2000)");
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(),30);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 		int OverdueValue = Integer.parseInt(CFOcountPOM.clickOverdueInternal().getText());	//Reading value of 'Not Completed'
@@ -2468,7 +2469,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -2589,7 +2590,7 @@ public class ApprovalcountInternal extends BasePage{
 		
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -2710,7 +2711,7 @@ public class ApprovalcountInternal extends BasePage{
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'Rejected' Count Verification");
 		
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//ApprovalcountPOM.clickManagement().click();
@@ -2836,7 +2837,7 @@ public class ApprovalcountInternal extends BasePage{
 		Thread.sleep(500);	
 		CFOcountPOM.clickRedGrading().click();
 		Thread.sleep(4000);	
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		//*[@id="showGRdetails"]
@@ -2877,7 +2878,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[11]/a");
 	{
 		test = extent.startTest("compliance Calendar Verifications");
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,3200)");					//Scrolling down window by 2600 px.
@@ -2987,7 +2988,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[7]/a");
 		test = extent.startTest("'News Letters'  OverView");
 		//test.log(LogStatus.INFO, "Test Initiated");
 		Thread.sleep(500);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();

@@ -3,6 +3,7 @@ package complianceCertificateOwner;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -36,7 +37,7 @@ public class CertificateOwnerMethod extends BasePage{
 	public static void CertificateOwner( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -121,7 +122,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void CertificateOwnerReviewer( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -177,7 +178,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void CertificateOwnerParticularPeriod( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -259,7 +260,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void CertificateOwnerParticularPeriodCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -294,7 +295,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void CertificateOwnerReopen( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -338,7 +339,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	
 	public static void NoticeCreated( ExtentTest test)throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -419,7 +420,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void NoticeCreatedEdit( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -474,7 +475,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void NoticeCreatedDelete( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 
@@ -507,7 +508,7 @@ test.log(LogStatus.PASS,  " Clear Filter Working successfully." );
 	public static void NoticeCreatedExport( ExtentTest test)
 			throws InterruptedException, IOException {
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		getDriver().manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='leftworkspacemenuCer']/a"))); 

@@ -1,5 +1,6 @@
 package performer;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
@@ -3564,8 +3565,8 @@ public class OverduePOM extends BasePage
 	
 	public static void MyReminder(  ExtentTest test, String compliance) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
-		WebDriverWait wait1 = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(clickMyReminder()));
@@ -3772,7 +3773,7 @@ public class OverduePOM extends BasePage
 		Thread.sleep(1000);
 		clickCriticalDocuments().click();				//Clicking on 'Critical Documents'
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (20));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ContentPlaceHolder1_grdFolderDetail']")));	//Wating till the content table gets visible
 		
 		Thread.sleep(500);
@@ -3975,7 +3976,7 @@ public class OverduePOM extends BasePage
 
 	public static void ReviseCompliance(  ExtentTest test, int no) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (20));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(1500);
 		Actions action = new Actions(getDriver());
 		//action.moveToElement(clickMyWorkspace1()).click().perform();

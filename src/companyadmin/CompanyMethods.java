@@ -3,6 +3,7 @@ package companyadmin;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -128,7 +129,7 @@ public class CompanyMethods extends BasePage {
 	public static void Reports( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -393,7 +394,7 @@ public class CompanyMethods extends BasePage {
 	public static void EventAssignments( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -457,7 +458,7 @@ public class CompanyMethods extends BasePage {
 	public static void Eventassignmentexportimport( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -520,7 +521,7 @@ public class CompanyMethods extends BasePage {
 	public static void EventassignmentexportimportValidation( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -553,7 +554,7 @@ public class CompanyMethods extends BasePage {
 	public static void ImportBlankScript( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -584,7 +585,7 @@ public class CompanyMethods extends BasePage {
 	public static void ImportInvalidSheet( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -615,7 +616,7 @@ public class CompanyMethods extends BasePage {
 	public static void ImportValidSheet( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -646,7 +647,7 @@ public class CompanyMethods extends BasePage {
 	public static void UploadedFileisplay ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -677,7 +678,7 @@ public class CompanyMethods extends BasePage {
 	public static void UploadedFileisplayEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -707,7 +708,7 @@ public class CompanyMethods extends BasePage {
 	public static void DownloadEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -747,7 +748,7 @@ public class CompanyMethods extends BasePage {
 	public static void ValidationEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -780,7 +781,7 @@ public class CompanyMethods extends BasePage {
 	public static void InValidSheet ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -814,7 +815,7 @@ public class CompanyMethods extends BasePage {
 	public static void ValidSheetEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -854,7 +855,7 @@ public class CompanyMethods extends BasePage {
 	public static void Department ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -954,7 +955,7 @@ public class CompanyMethods extends BasePage {
 	public static void  User( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -1081,7 +1082,7 @@ public class CompanyMethods extends BasePage {
 	public static void  MyCompanies( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -1116,7 +1117,7 @@ public class CompanyMethods extends BasePage {
 	public static void  Fortnightlycompliance( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -1183,7 +1184,7 @@ public class CompanyMethods extends BasePage {
 	public static void  BlockScheduleStatutory( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -1259,7 +1260,7 @@ public class CompanyMethods extends BasePage {
 	public static void  BlockScheduleInternal( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		SwitchtoChild(test);
@@ -1335,7 +1336,7 @@ public class CompanyMethods extends BasePage {
 	public static void UserDept( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		SwitchtoChild(test);
@@ -1367,7 +1368,7 @@ public class CompanyMethods extends BasePage {
 	public static void ModifyAssignmentsDept( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		SwitchtoChild(test);
@@ -1397,7 +1398,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsTask( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1460,7 +1461,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsTaskIN( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1526,7 +1527,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsCom( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1588,7 +1589,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComEB( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1653,7 +1654,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComChecklist( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1718,7 +1719,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComIN( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1783,7 +1784,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComINChecklist( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1850,7 +1851,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComExclude( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1899,7 +1900,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComExcludeEB( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -1951,7 +1952,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComExcludeCL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2003,7 +2004,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComExcludeIN( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2056,7 +2057,7 @@ public class CompanyMethods extends BasePage {
 	public static void modifyAssignmentsComExcludeINCL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2111,7 +2112,7 @@ public class CompanyMethods extends BasePage {
 	public static void Acts( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2159,7 +2160,7 @@ CompanyPOM.ActsFilter().click();
 	public static void EditCompliances( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2184,7 +2185,7 @@ if( CompanyPOM.DetailedDescription().isDisplayed()&&CompanyPOM.EventBasedchk().i
 	public static void GroupingMaster( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2207,7 +2208,7 @@ if( CompanyPOM.GroupingMaster().isDisplayed())
 	
 	public static void GroupingMasterDis( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2234,7 +2235,7 @@ if( CompanyPOM.GroupMaster().isDisplayed()&&CompanyPOM.ComplianceTagging().isDis
 	
 	public static void GroupMaster( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2265,7 +2266,7 @@ if( CompanyPOM.GroupMaster().isEnabled())
 	
 	public static void GroupMasterAN( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2298,7 +2299,7 @@ Thread.sleep(2000);
 	
 	public static void GroupMasterANW( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2334,7 +2335,7 @@ Thread.sleep(2000);
 	
 	public static void AddNewGM( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2378,7 +2379,7 @@ Thread.sleep(2000);
 	
 	public static void AddNewAE( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2422,7 +2423,7 @@ Thread.sleep(2000);
 	
 	public static void UpdateGM( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2474,7 +2475,7 @@ Thread.sleep(2000);
 	
 	public static void DeleteGM( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2520,7 +2521,7 @@ Thread.sleep(2000);
 	
 	public static void DeleteGMT( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2560,7 +2561,7 @@ Thread.sleep(2000);
 	
 	public static void FilterGM( ExtentTest test,XSSFWorkbook workbook)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2586,7 +2587,7 @@ Thread.sleep(2000);
 	
 	public static void ComplianceTagging( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2617,7 +2618,7 @@ if( CompanyPOM.ComplianceTagging().isEnabled())
 	
 	public static void ComplianceTaggingAN( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2650,7 +2651,7 @@ Thread.sleep(2000);
 	
 	public static void FilterCT( ExtentTest test)	throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2677,7 +2678,7 @@ Thread.sleep(2000);
 	public static void IPAddressAddNew( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2732,7 +2733,7 @@ Thread.sleep(2000);
 	public static void IPAddressFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2773,7 +2774,7 @@ Thread.sleep(2000);
 	public static void IPAddressUpload( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2803,7 +2804,7 @@ Thread.sleep(2000);
 	public static void IPAddressSampleFormat( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2838,7 +2839,7 @@ Thread.sleep(2000);
 	public static void IPAddressDeleteAll( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2868,7 +2869,7 @@ Thread.sleep(2000);
 	public static void IPAddressEdit( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2924,7 +2925,7 @@ Thread.sleep(2000);
 	public static void IPAddressDelete( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2951,7 +2952,7 @@ Thread.sleep(2000);
 	public static void IPAddressExport( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -2986,7 +2987,7 @@ Thread.sleep(2000);
 	public static void IPAddressAddNewWD( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3019,7 +3020,7 @@ Thread.sleep(2000);
 	public static void SecurityGroup( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3073,7 +3074,7 @@ Thread.sleep(2000);
 	public static void SecurityGroupAdd( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3105,7 +3106,7 @@ Thread.sleep(2000);
 	public static void SecurityGroupFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3203,7 +3204,7 @@ Thread.sleep(2000);
 	public static void SecurityGroupEdit( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3257,7 +3258,7 @@ Thread.sleep(2000);
 	public static void SecurityGroupDelete( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3303,7 +3304,7 @@ Thread.sleep(2000);
 	public static void SecondaryRe( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3340,7 +3341,7 @@ Thread.sleep(2000);
 	public static void SecondaryReIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3381,7 +3382,7 @@ Thread.sleep(2000);
 	public static void SecondaryReDisplay( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3461,7 +3462,7 @@ Thread.sleep(2000);
 	public static void SecondaryReDisplayIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -3547,7 +3548,7 @@ Thread.sleep(2000);
 	public static void STSecondaryRe( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -3586,7 +3587,7 @@ Thread.sleep(2000);
 	public static void STSecondaryReIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -3629,7 +3630,7 @@ Thread.sleep(2000);
 	public static void STSecondaryReDisplay( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -3708,7 +3709,7 @@ Thread.sleep(2000);
 	public static void STSecondaryReDisplayIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -3792,7 +3793,7 @@ Thread.sleep(2000);
 	public static void WidgetMaster( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3910,7 +3911,7 @@ Thread.sleep(2000);
 	public static void WidgetMasterSF ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -3962,7 +3963,7 @@ Thread.sleep(2000);
 	public static void ComplianceFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -4051,7 +4052,7 @@ Thread.sleep(2000);
 	public static void ComplianceCategoriesFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -4140,7 +4141,7 @@ Thread.sleep(2000);
 	public static void ComplianceTypeFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		Thread.sleep(3000);
@@ -4227,7 +4228,7 @@ Thread.sleep(2000);
 	public static void ComplianceAssignment( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
@@ -4286,7 +4287,7 @@ Thread.sleep(2000);
 	public static void AssignCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -4350,7 +4351,7 @@ Thread.sleep(2000);
 	public static void IntermediateComplianceCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		action.moveToElement(CompanyPOM.ManageCompliances()).click().build().perform();
@@ -4419,7 +4420,7 @@ Thread.sleep(2000);
 	public static void IntermediateCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		
@@ -4483,7 +4484,7 @@ Thread.sleep(2000);
 	public static void ActivateComplianceCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -4548,7 +4549,7 @@ Thread.sleep(2000);
 	public static void ActivateCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -4616,7 +4617,7 @@ Thread.sleep(2000);
 	public static void ComplianceMappingCopy( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -4680,7 +4681,7 @@ Thread.sleep(2000);
 	public static void ReOpeningofCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4721,7 +4722,7 @@ Thread.sleep(2000);
 	public static void ClientComplianceRiskMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		SwitchtoChild(test);
@@ -4808,7 +4809,7 @@ Thread.sleep(2000);
 	public static void ClientFrequencyMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -4935,7 +4936,7 @@ Thread.sleep(2000);
 	public static void Targetdate( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -4982,7 +4983,7 @@ Thread.sleep(2000);
 	public static void DocumentNotApplicable( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		SwitchtoChild(test);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -5049,7 +5050,7 @@ Thread.sleep(2000);
 	
 	{
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -5189,7 +5190,7 @@ Thread.sleep(2000);
 	public static void DepartmentEntitiesAssignmentsMC( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -5284,7 +5285,7 @@ Thread.sleep(2000);
 	public static void LicenseEntitiesAssignmentsMC( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -5399,7 +5400,7 @@ Thread.sleep(2000);
 public static void AssignComplianceInternal( ExtentTest test) throws InterruptedException, IOException
 	{
 	Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		// switching child window
 		SwitchtoChild(test);
@@ -5465,7 +5466,7 @@ public static void AssignComplianceInternal( ExtentTest test) throws Interrupted
 public static void DepartmentReassignmentExport( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	SwitchtoChild(test);
 	Thread.sleep(3000);
@@ -5511,7 +5512,7 @@ public static void DepartmentReassignmentExport( ExtentTest test)
 public static void DepartmentReassignmentUpload( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	SwitchtoChild(test);
 	Thread.sleep(3000);
@@ -5536,7 +5537,7 @@ public static void DepartmentReassignmentUpload( ExtentTest test)
 	  	 
 	  	try {
             // Wait up to 70 seconds for the link to appear
-	  		WebDriverWait wait1 = new WebDriverWait( getDriver(), 70);
+	  		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
             By locator = By.xpath("//div[@id='BodyContent_ctl01']//li");
             
 			wait1.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -5569,7 +5570,7 @@ public static void AllReport( ExtentTest test) throws InterruptedException, IOEx
 {
 			
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -5692,7 +5693,7 @@ public static void LogReport( ExtentTest test) throws InterruptedException, IOEx
 {
 			
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -5746,7 +5747,7 @@ public static void UserLogReport( ExtentTest test) throws InterruptedException, 
 {
 			
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -5783,7 +5784,7 @@ public static void ReassignmentExcludeReport( ExtentTest test) throws Interrupte
 {
 			
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		SwitchtoChild(test);
@@ -5932,7 +5933,7 @@ test.log(LogStatus.FAIL, "File doesn't downloaded successfully.");
 public static void UsageReport( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	
@@ -5996,7 +5997,7 @@ public static void UsageReport( ExtentTest test)
 public static void LicenceList( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	SwitchtoChild(test);
 	Thread.sleep(3000);
@@ -6104,7 +6105,7 @@ public static void LicenceList( ExtentTest test)
 public static void UploadInternalData( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6173,7 +6174,7 @@ Actions action = new Actions(getDriver());
 public static void LicenseEntitiesAssignment( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6210,7 +6211,7 @@ Actions action = new Actions(getDriver());
 public static void EntitiesAssignment( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6246,7 +6247,7 @@ Actions action = new Actions(getDriver());
 public static void UploadAssignment( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6283,7 +6284,7 @@ Actions action = new Actions(getDriver());
 public static void ActivateChecklist( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6320,7 +6321,7 @@ Actions action = new Actions(getDriver());
 public static void ComplianceAssignments( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6357,7 +6358,7 @@ Actions action = new Actions(getDriver());
 public static void Compliance( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);
@@ -6394,7 +6395,7 @@ Actions action = new Actions(getDriver());
 public static void ComplianceAddnewlink( ExtentTest test) throws InterruptedException, IOException
 {
 Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 	// switching child window
 	SwitchtoChild(test);

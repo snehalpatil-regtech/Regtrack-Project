@@ -114,7 +114,7 @@ public class ReviewerCount extends BasePage
 			test = extent.startTest("Statutory Pending For Review Count and Completed when Approved");
 		
 			Thread.sleep(4000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),  30);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			
 			wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.clickStatutoryReview()));	//Wait until Statutory Pending For Review count gets visible.
 			
@@ -296,7 +296,7 @@ public class ReviewerCount extends BasePage
 		test = extent.startTest("Statutory 'Pending For Review' and 'Rejected' Count when Rejected");
 		
 		
-		WebDriverWait wait = new WebDriverWait( getDriver() ,(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.clickStatutoryReview()));	//Wait until Statutory Pending For Review count gets visible.
 		int oldStatutoryReviewValue = Integer.parseInt(ReviewerPOM.clickStatutoryReview().getText());	//Reading old value of Statutory Pending For Review
@@ -1900,7 +1900,7 @@ extent.flush();
         		{
         			test = extent.startTest(" Message Center - Verification");
         			
-        			WebDriverWait wait = new WebDriverWait( getDriver() ,(30));
+        			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
         			Thread.sleep(8000);
         			CFOcountPOM.clickMessageCenter().click();
         			Thread.sleep(4000);
@@ -1918,7 +1918,7 @@ extent.flush();
         		{
         			test = extent.startTest("My Notifications - Verification");
         			
-        			WebDriverWait wait = new WebDriverWait( getDriver() ,(30));
+        			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
         			Thread.sleep(8000);
         			CFOcountPOM.clickMyNotifications().click();
         			Thread.sleep(4000);
@@ -1949,7 +1949,7 @@ extent.flush();
      				test = extent.startTest("'Internal Msg  '  Verification");
      				
      					Thread.sleep(1000);
-     				WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+     				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
      				Thread.sleep(500);
      				OverduePOM.ClickInternalMsg().click();
      				Thread.sleep(4000);

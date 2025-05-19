@@ -3,6 +3,7 @@ package departmentHead;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -104,7 +105,7 @@ public class DeptStatutory extends BasePage {
 	
 	public static void progress1()
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -319,7 +320,7 @@ public class DeptStatutory extends BasePage {
 		
 		CFOcountPOM.readPenaltyCount().click();					//Clicking on 'Penalty'.
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		CFOcountPOM.clickExportImage().click();
@@ -437,7 +438,7 @@ public class DeptStatutory extends BasePage {
 		
 		Thread.sleep(3000);
 	//	litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -850,7 +851,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnNotcom() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status - Not Completed status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -885,7 +886,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnclosedDel() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status - Closed Delayed status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -920,7 +921,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnclosedTime() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status - Closed Timely status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -954,7 +955,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnNotApp() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart -Completion Status - Not Applicable status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1086,7 +1087,7 @@ public class DeptStatutory extends BasePage {
 		void IsSMETAColumnoverdue() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart - Not Completion Status - Overdue status - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1221,7 +1222,7 @@ public class DeptStatutory extends BasePage {
 		void IsSMETAColumnPFR() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart - Not Completion Status - Pending For Review status - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1356,7 +1357,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnInProg() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Pie Chart - Not Completion Status - In Progress status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1492,7 +1493,7 @@ public class DeptStatutory extends BasePage {
 		void IsSMETAColumnRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart - Not Completion Status - Rejected status - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1703,7 +1704,7 @@ public class DeptStatutory extends BasePage {
 		Thread.sleep(3000);
 		DeptCountPOM.ClickApply().click();
 		test = extent.startTest("Bar Graph - Department Summary - - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2115,7 +2116,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnNotComp() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Risk Summary Graph - Not Completed status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2150,7 +2151,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnClosedDel() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Risk Summary Graph - Closed Delayed status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2188,7 +2189,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnClosedTimely() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Risk Summary Graph - Closed Timely status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2226,7 +2227,7 @@ public class DeptStatutory extends BasePage {
 	void IsSMETAColumnNotAppli() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Risk Summary Graph - Not Applicable status - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2274,7 +2275,7 @@ public class DeptStatutory extends BasePage {
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,100)");
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			
@@ -2399,7 +2400,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2700)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 
@@ -2522,7 +2523,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2700)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 
@@ -2644,7 +2645,7 @@ public class DeptStatutory extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2764,7 +2765,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2600)");			//Scrolling down window by 1000 px.
 				Thread.sleep(800);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(4000);
 				AuditorcountPOM.DateText().click();	
@@ -2912,7 +2913,7 @@ public class DeptStatutory extends BasePage {
 		void DueforperiodIsSMETAColumn() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Not Completed - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2956,7 +2957,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnCloseddelayed() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Closed Delayed - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2998,7 +2999,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnTimely() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3040,7 +3041,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnNotApplicable() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Not Applicable - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3082,7 +3083,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnUpcoming() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Upcoming - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3132,7 +3133,7 @@ public class DeptStatutory extends BasePage {
 				Actions action = new Actions(getDriver());
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				Thread.sleep(2000);
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(3000);
@@ -3252,7 +3253,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Overdue - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3301,7 +3302,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 				Thread.sleep(800);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(3000);
 
@@ -3421,7 +3422,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnDuetoday() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - DueToday - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3470,7 +3471,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 				Thread.sleep(800);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(3000);
 				Thread.sleep(3000);
@@ -3589,7 +3590,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnPendingForReview() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Pending For Review - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3637,7 +3638,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 				Thread.sleep(2000);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(2000);
 				AuditorcountPOM.DateText().click();	
@@ -3756,7 +3757,7 @@ public class DeptStatutory extends BasePage {
 			void periodIsSMETAColumnInprogress() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Period-Pie Chart -Completion Status - In Progress - Is SMETA Column Count Verification");
-				WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				Thread.sleep(500);
 				Actions action = new Actions(getDriver());
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3806,7 +3807,7 @@ public class DeptStatutory extends BasePage {
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 				Thread.sleep(800);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 				Thread.sleep(3000);
 				AuditorcountPOM.DateText().click();	
@@ -3924,7 +3925,7 @@ public class DeptStatutory extends BasePage {
 		void periodIsSMETAColumnRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Rejected - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3978,7 +3979,7 @@ public class DeptStatutory extends BasePage {
 				test = extent.startTest("compliance Calendar Verifications");
 				
 				
-				WebDriverWait wait = new WebDriverWait( getDriver(), (70));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,3000)");					//Scrolling down window by 2600 px.

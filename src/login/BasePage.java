@@ -1,7 +1,7 @@
 package login;
 
 
-	
+import java.time.Duration;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import javax.xml.datatype.Duration;
+
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -66,7 +66,7 @@ import performer.OverduePOM;
 		public static XSSFSheet ReadExcel(int no) throws IOException
 		{
 			//String workingDir = System.getProperty("webdriver.chrome.driver","C:/March2022/PerformerPom/Driver/chromedriver.exe");
-			fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsxx");
+			fis = new FileInputStream("E:\\Regtrack Merge Project\\Regtrack-Project\\TestData\\ComplianceSheet.xlsx");
 			workbook = new XSSFWorkbook(fis);
 			sheet = workbook.getSheetAt(no);					//Retrieving third sheet of Workbook
 			return sheet;
@@ -286,7 +286,7 @@ import performer.OverduePOM;
 		read_Login_password( no);
 		login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		

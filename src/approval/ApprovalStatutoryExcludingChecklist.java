@@ -3,6 +3,7 @@ package approval;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.*;
 import org.apache.poi.ss.usermodel.Cell;
@@ -110,7 +111,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		//Write "CFO" for login.avantis
 		 = login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		ApprovalcountPOM.clickManagement().click();
@@ -143,7 +144,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -191,7 +192,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		////litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[4]/a")));
@@ -276,7 +277,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));
@@ -381,7 +382,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		
@@ -484,7 +485,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		CFOcountPOM.clickExportImage().click();                    //export excel
@@ -531,7 +532,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		CFOcountPOM.clickExportExcel().click();                    //export excel
@@ -577,7 +578,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		
 		//litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 
 		js.executeScript("window.scrollBy(0,500)");
@@ -628,7 +629,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 			test.log(LogStatus.PASS, " 'Show All ' link Clickable Successfully");
 			}
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -1211,7 +1212,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(5000);
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	/*	ApprovalcountPOM.clickManagement().click();
@@ -1295,7 +1296,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(5000);
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	/*	ApprovalcountPOM.clickManagement().click();
@@ -1382,7 +1383,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		CFOcountPOM.clickApply().click();
 		Thread.sleep(5000);
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -1855,7 +1856,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		js.executeScript("window.scrollBy(0,2000)");
 		Thread.sleep(3000);
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		
@@ -1970,7 +1971,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		
@@ -2085,7 +2086,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateText().click();	
@@ -2201,7 +2202,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateText().click();	
@@ -2318,7 +2319,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateText().click();	
@@ -2433,7 +2434,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
 	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	/*	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		ApprovalcountPOM.clickManagement().click();
@@ -2562,7 +2563,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2000)");						//Scrolling down window by 1000 px.
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		AuditorcountPOM.DateText().click();	
@@ -2676,7 +2677,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Rejected' Count Verification");
 	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	/*	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		ApprovalcountPOM.clickManagement().click();
@@ -2804,7 +2805,7 @@ public class ApprovalStatutoryExcludingChecklist extends BasePage {
 		Thread.sleep(500);	
 		CFOcountPOM.clickRedGrading().click();
 		Thread.sleep(4000);	
-		WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		
@@ -2844,7 +2845,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[13]/a");
 		test = extent.startTest("compliance Calendar Verifications");
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2800)");					//Scrolling down window by 2600 px.
@@ -2957,7 +2958,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]/a");
 		test = extent.startTest("'News Letters'  OverView");
 		//test.log(LogStatus.INFO, "Test Initiated");
 		Thread.sleep(500);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -3377,7 +3378,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr/td[6]/a");
 		test = extent.startTest("Act Documents  verification");
 
 		
-WebDriverWait wait = new WebDriverWait(getDriver(),(140));
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickDocuments().click();					//Clicking on 'My Documents'
@@ -3455,7 +3456,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 			test = extent.startTest("'Internal Msg  '  Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
 				Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait(getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			OverduePOM.ClickInternalMsg().click();
 			Thread.sleep(4000);
@@ -3502,7 +3503,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 	{
 		test = extent.startTest("My Notifications - Verification");
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(8000);
 		CFOcountPOM.clickMyNotifications().click();
 		Thread.sleep(5000);
@@ -3535,7 +3536,7 @@ WebDriverWait wait = new WebDriverWait(getDriver(),(140));
 	{
 		test = extent.startTest(" Message Center - Verification");
 		//test.log(LogStatus.INFO, "Test Initiated");
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(8000);
 		CFOcountPOM.clickMessageCenter().click();
 		Thread.sleep(4000);

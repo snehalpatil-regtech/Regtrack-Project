@@ -3,6 +3,7 @@ package researchReviewer;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -30,7 +31,7 @@ public class RRMethods extends BasePage {
 	public static void MinistryMaster(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -128,7 +129,7 @@ public class RRMethods extends BasePage {
 	public static void RegulatorMaster(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -226,7 +227,7 @@ public class RRMethods extends BasePage {
 	public static void ActDepartmentMaster(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -324,7 +325,7 @@ public class RRMethods extends BasePage {
 	public static void ActAddNew(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -413,7 +414,7 @@ public class RRMethods extends BasePage {
 	public static void Actupdate(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -475,7 +476,7 @@ public class RRMethods extends BasePage {
 	public static void ActDelete(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -508,7 +509,7 @@ public class RRMethods extends BasePage {
 	public static void ActGroupAddNew(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		
@@ -551,7 +552,7 @@ public class RRMethods extends BasePage {
 	public static void MinistryMasterAddNew(ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		
 		

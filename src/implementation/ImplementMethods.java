@@ -3,6 +3,7 @@ package implementation;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -47,7 +48,7 @@ public class ImplementMethods extends BasePage {
 	public static void CreateCustomers( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -118,7 +119,7 @@ public class ImplementMethods extends BasePage {
 	public static void CustomersAssignment( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 		  FileInputStream fis = new FileInputStream(filePath);
 	        Workbook workbook = WorkbookFactory.create(fis);
@@ -186,7 +187,7 @@ public class ImplementMethods extends BasePage {
 	public static void SubEntity( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -289,7 +290,7 @@ public class ImplementMethods extends BasePage {
 	public static void Department( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -376,7 +377,7 @@ public class ImplementMethods extends BasePage {
 
 	public static void UserandBranchUpload( ExtentTest test) throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -420,7 +421,7 @@ public class ImplementMethods extends BasePage {
 	public static void Users( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -575,7 +576,7 @@ public class ImplementMethods extends BasePage {
 
 	public static void productMapping( ExtentTest test) throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]")));
@@ -633,7 +634,7 @@ public class ImplementMethods extends BasePage {
 	public static void modifyAssignmentsReassign( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -803,7 +804,7 @@ public class ImplementMethods extends BasePage {
 	public static void modifyAssignmentsExclude( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -954,7 +955,7 @@ public class ImplementMethods extends BasePage {
 	public static void modifyAssignmentsTask( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -1077,7 +1078,7 @@ public class ImplementMethods extends BasePage {
 	public static void UsageReportCustomer( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1130,7 +1131,7 @@ public class ImplementMethods extends BasePage {
 	public static void UsageReport( ExtentTest test,String report) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]")));	//Wait until records table get visible.
@@ -1178,7 +1179,7 @@ public class ImplementMethods extends BasePage {
 	public static void StatutoryAssignmentReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1218,7 +1219,7 @@ public class ImplementMethods extends BasePage {
 	public static void CheckListAssignmentReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1257,7 +1258,7 @@ public class ImplementMethods extends BasePage {
 	public static void EventBasedAssignmentReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1296,7 +1297,7 @@ public class ImplementMethods extends BasePage {
 	public static void InternalAssignmentReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1337,7 +1338,7 @@ public class ImplementMethods extends BasePage {
 	public static void InternalCheckListAssignment( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1377,7 +1378,7 @@ public class ImplementMethods extends BasePage {
 	public static void StatutoryLabelReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1418,7 +1419,7 @@ public class ImplementMethods extends BasePage {
 	public static void InternalLabelReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1458,7 +1459,7 @@ public class ImplementMethods extends BasePage {
 	public static void AllReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1497,7 +1498,7 @@ public class ImplementMethods extends BasePage {
 	public static void LogReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1571,7 +1572,7 @@ public class ImplementMethods extends BasePage {
 	public static void CompliaceCountReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -1611,7 +1612,7 @@ public class ImplementMethods extends BasePage {
 	public static void AssignCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1664,7 +1665,7 @@ public class ImplementMethods extends BasePage {
 	public static void IntermediateCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1710,7 +1711,7 @@ public class ImplementMethods extends BasePage {
 	public static void ActivateCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1778,7 +1779,7 @@ public class ImplementMethods extends BasePage {
 	public static void AssignCheckList( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1846,7 +1847,7 @@ public class ImplementMethods extends BasePage {
 	public static void IntermediateCheckList( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1892,7 +1893,7 @@ public class ImplementMethods extends BasePage {
 	public static void ActivateCheckList( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -1970,7 +1971,7 @@ public class ImplementMethods extends BasePage {
 	public static void ComplianceCategory( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2059,7 +2060,7 @@ public class ImplementMethods extends BasePage {
 	public static void Compliances( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2244,7 +2245,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void EditCompliances( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2313,7 +2314,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void UploadAssignment( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2351,7 +2352,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void PreviousInternalComplianceDepartmentMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2407,7 +2408,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void EntitiesAssignments( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2522,7 +2523,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void LicenseEntitiesAssignments( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -2634,7 +2635,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void MasterCompliances( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -2693,7 +2694,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void Acts( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -2766,7 +2767,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void HolidayMaster( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -2866,7 +2867,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void WidgetMaster( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -2985,7 +2986,7 @@ String Msg2=ImplementPOM.RecordSavemsg().getText();
 	public static void UploadInternalCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3031,7 +3032,7 @@ String Msg2=ImplementPOM.ReadMsg1().getText();
 	public static void UploadAssignmentUU( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3075,7 +3076,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void UploadEventBasedComplianceAssignment( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3120,7 +3121,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void UploadAssignmentAll( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3165,7 +3166,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void AssignComplianceCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3227,7 +3228,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void IntermediateComplianceCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3282,7 +3283,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ActivateComplianceCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3350,7 +3351,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void AssignCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3413,7 +3414,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void IntermediateCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3459,7 +3460,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ActivateCheckListCA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3527,7 +3528,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void EntitiesAssignmentsMC( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3659,7 +3660,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void LicenseEntitiesAssignmentsMC( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -3764,7 +3765,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void DaysBeforeDueDate( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3873,7 +3874,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ReOpeningofCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3912,7 +3913,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void BlockScheduleInternal( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -3968,7 +3969,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void BlockScheduleStatutory( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4043,7 +4044,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void DocumentMandatoryNonMandatory( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4085,7 +4086,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void StartDateChange( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4175,7 +4176,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ChangeDueDate( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4268,7 +4269,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void CertificateFrequencyMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4327,7 +4328,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ClientComplianceRiskMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4400,7 +4401,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void PreviousComplianceDepartmentMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4454,7 +4455,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ClientFrequencyMapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4574,7 +4575,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void ComplianceCertificate( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -4674,7 +4675,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void UsersDeptDisplay( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -4713,7 +4714,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void Uploadeventassignment( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -4744,7 +4745,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void Event( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -4784,7 +4785,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void Compliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -4817,7 +4818,7 @@ String Msg1=ImplementPOM.ReadMsg().getText();
 	public static void Eventdeactivation( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -4885,7 +4886,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Eventassignments( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -4957,7 +4958,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void EventassignmentsExport( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -5021,7 +5022,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Eventfrequencymapping( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 //------------------------- Add New-------------------------------
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -5144,7 +5145,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void HideMulticheckchecklist( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -5173,7 +5174,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void HideMulticheckchecklistEdit( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -5202,7 +5203,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Eventassignmentexportimport( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -5257,7 +5258,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void EventassignmentexportimportD( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -5285,7 +5286,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UploadedFilewithOutFile ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 	
@@ -5317,7 +5318,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void ImportInvalidSheet( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		
@@ -5353,7 +5354,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UploadedFileisplay ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		
@@ -5387,7 +5388,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UploadedFileisplayEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		
@@ -5425,7 +5426,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void DownloadFileEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    // switching child window
 		
@@ -5468,7 +5469,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UploadedEC ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 	    
 		
@@ -5495,7 +5496,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void InValidSheet ( ExtentTest test) throws InterruptedException, IOException
 	{		
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		
@@ -5531,7 +5532,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Autoreconciliation( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -5568,7 +5569,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void AutoreconciliationWC( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -5595,7 +5596,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void ReassignmentExcludeReport( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -5633,7 +5634,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void ReassignmentExcludeReportL( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -5680,7 +5681,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void ReassignmentExcludeReportWC( ExtentTest test, String report)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[4]"))); 
@@ -5708,7 +5709,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Compliancetype( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -5798,7 +5799,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Complianceassignments( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[5]"))); 
@@ -5862,7 +5863,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Unsubscribe( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -5889,7 +5890,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UnsubscribeInvalid( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -5916,7 +5917,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Unsubscribe2( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -5944,7 +5945,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofCompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -5981,7 +5982,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUpload( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6023,7 +6024,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadw( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6055,7 +6056,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadLL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6097,7 +6098,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceExport( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6140,7 +6141,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadValidC( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6186,7 +6187,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadValidL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6232,7 +6233,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Customerspecificduedateforstatutorycompliance( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6269,7 +6270,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadValidCL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6315,7 +6316,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void GroupingofComplianceUploadValidLL( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6361,7 +6362,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void Targetdate( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6404,7 +6405,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UsersEA( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -6480,7 +6481,7 @@ test.log(LogStatus.PASS, Msg1);
 	public static void UsersEADelete( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -6555,7 +6556,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void UsersEAIn( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -6628,7 +6629,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void UsersEADeleteIN( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -6707,7 +6708,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void ReleaseNoteDocument( ExtentTest test, XSSFWorkbook workbook)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -6813,7 +6814,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void BulkExcluding( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6869,7 +6870,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void BulkExcludingImport( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6901,7 +6902,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void UploadActionableProcedure( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6953,7 +6954,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void UploadActionableProcedureUpload( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -6986,7 +6987,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void UploadActionableProcedureUploadInvalid( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -7022,7 +7023,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void CompliancetypeFilter( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[3]/a"))); 
@@ -7045,7 +7046,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void modifyAssignmentsCheck( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7083,7 +7084,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 	public static void modifyAssignmentsCheck1( ExtentTest test)
 			throws InterruptedException, IOException {
 		Actions action = new Actions(getDriver());
-		WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(3000);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7133,7 +7134,7 @@ String msg1 =getDriver().switchTo().alert().getText();
 public static void modifyAssignmentsCheckLi( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7179,7 +7180,7 @@ public static void modifyAssignmentsCheckLi( ExtentTest test)
 public static void StatusDelete( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7227,7 +7228,7 @@ public static void StatusDelete( ExtentTest test)
 public static void StatusDeleteWS( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7273,7 +7274,7 @@ public static void StatusDeleteWS( ExtentTest test)
 public static void modifyAssignmentsCheck1In( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7326,7 +7327,7 @@ public static void modifyAssignmentsCheck1In( ExtentTest test)
 public static void modifyAssignmentsCheckLiIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7373,7 +7374,7 @@ public static void modifyAssignmentsCheckLiIn( ExtentTest test)
 public static void StatusDeleteIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7423,7 +7424,7 @@ public static void StatusDeleteIn( ExtentTest test)
 public static void StatusDeleteWSIN( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -7472,7 +7473,7 @@ public static void StatusDeleteWSIN( ExtentTest test)
 public static void SecondaryRe( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7511,7 +7512,7 @@ public static void SecondaryRe( ExtentTest test)
 public static void SecondaryReIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7555,7 +7556,7 @@ public static void SecondaryReIn( ExtentTest test)
 public static void SecondaryReDisplay( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7632,7 +7633,7 @@ public static void SecondaryReDisplay( ExtentTest test)
 public static void SecondaryReDisplayIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7714,7 +7715,7 @@ public static void SecondaryReDisplayIn( ExtentTest test)
 public static void STSecondaryRe( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7757,7 +7758,7 @@ public static void STSecondaryRe( ExtentTest test)
 public static void STSecondaryReDisplay( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7836,7 +7837,7 @@ public static void STSecondaryReDisplay( ExtentTest test)
 public static void STSecondaryReIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7885,7 +7886,7 @@ public static void STSecondaryReIn( ExtentTest test)
 public static void STSecondaryReDisplayIn( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (140));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[8]/a"))); 
@@ -7966,7 +7967,7 @@ public static void STSecondaryReDisplayIn( ExtentTest test)
 public static void CustomersBrand( ExtentTest test, XSSFWorkbook workbook)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -8043,7 +8044,7 @@ public static void CustomersBrand( ExtentTest test, XSSFWorkbook workbook)
 public static void CustomersBrandW( ExtentTest test, XSSFWorkbook workbook)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[1]"))); 
@@ -8115,7 +8116,7 @@ public static void CustomersBrandW( ExtentTest test, XSSFWorkbook workbook)
 public static void DeReOpeningofCompliance( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -8158,7 +8159,7 @@ public static void DeReOpeningofCompliance( ExtentTest test)
 public static void DeReOpeningofComplianceDis( ExtentTest test)
 		throws InterruptedException, IOException {
 	Actions action = new Actions(getDriver());
-	WebDriverWait wait = new WebDriverWait( getDriver(), (80));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	Thread.sleep(3000);
 
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='CMPMenuBar']/ul/li[2]/a"))); 
@@ -8709,7 +8710,7 @@ public static void EventAssignmentExportImport( ExtentTest test) throws Interrup
 public static void EventAssignmentTab( ExtentTest test) throws InterruptedException
 {
 	Thread.sleep(4000);
-	WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	ImplementPOM.ManageEvents().click();
 	Thread.sleep(4000);
 	if(ImplementPOM.eventReassignment().isDisplayed())
@@ -8801,7 +8802,7 @@ public static void EventAssignmentTab( ExtentTest test) throws InterruptedExcept
 public static void EventReassignment( ExtentTest test) throws InterruptedException
 {
 	Thread.sleep(4000);
-	WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	ImplementPOM.ManageEvents().click();
 	Thread.sleep(4000);
 	ImplementPOM.eventReassignment().click();
