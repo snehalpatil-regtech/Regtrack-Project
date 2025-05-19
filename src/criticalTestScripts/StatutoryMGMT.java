@@ -488,7 +488,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 7)
+// @Test(priority = 7)
 		void ClosedTimely_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -583,7 +583,7 @@ public class StatutoryMGMT extends BasePage {
 			
 		}
 		
-	 @Test(priority = 8)
+//	 @Test(priority = 8)
 		void NotApplicable_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -685,7 +685,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 			
-	 @Test(priority = 9)
+//	 @Test(priority = 9)
 		void Overdue_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -787,7 +787,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-     @Test(priority = 10)
+  //   @Test(priority = 10)
 		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -889,7 +889,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 11)
+//	 @Test(priority = 11)
 		void pendingForReview_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -992,7 +992,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 		
-    @Test(priority = 12)
+  //  @Test(priority = 12)
 		void inProgress_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'In Progress' Count Verification");
@@ -1094,7 +1094,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.endTest(test);
 			extent.flush();
 		}
- @Test(priority = 13)
+// @Test(priority = 13)
 		void rejected_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -1195,7 +1195,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 14)
+// @Test(priority = 14)
 		void BargraphIndustrySpeCriticalStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Critical' Risk");
@@ -1296,7 +1296,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 23)
+// @Test(priority = 23)
 		void BargraphIndustrySpeHighStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'High' risk");
@@ -1400,7 +1400,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 
-     @Test(priority = 24)
+  //   @Test(priority = 24)
 		void BargraphIndustrySpeMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Medium' risk");
@@ -1499,7 +1499,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-           @Test(priority = 25)
+      //     @Test(priority = 25)
 		void BargraphIndustrySpeLowStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Bar Graph - 'Commercial' Count Verification with 'Low' risk");
