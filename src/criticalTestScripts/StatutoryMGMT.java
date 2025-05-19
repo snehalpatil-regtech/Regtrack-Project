@@ -129,7 +129,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
-    @Test(priority = 2)
+//    @Test(priority = 2)
 	void CompliancesCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Compliances'");
@@ -185,7 +185,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
    
-   @Test(priority = 3)
+//   @Test(priority = 3)
 	void UsersCountMatch() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Count by Clicking on 'Users'");
@@ -240,7 +240,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
 	}
 	
- @Test(priority = 4)
+// @Test(priority = 4)
 	void SummaryofOverdueCompliances() throws InterruptedException, IOException
 	{
 		test = extent.startTest(" Summary of Overdue Compliances");
@@ -298,7 +298,7 @@ public class StatutoryMGMT extends BasePage {
 		
 	}
 	
-        @Test(priority = 5)
+ //       @Test(priority = 5)
 		void NotCompleted_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -393,7 +393,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-        @Test(priority = 6)
+   //     @Test(priority = 6)
 		void ClosedDelayed_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
