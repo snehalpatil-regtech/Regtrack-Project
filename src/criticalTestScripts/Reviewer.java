@@ -3,6 +3,7 @@ package criticalTestScripts;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -151,7 +152,7 @@ public class Reviewer  extends BasePage {
 		test = extent.startTest("Statutory Pending For Review Count and Completed when Approved");
 	
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait( getDriver(),  30);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.clickStatutoryReview()));	//Wait until Statutory Pending For Review count gets visible.
 		
@@ -333,7 +334,7 @@ public class Reviewer  extends BasePage {
 		test = extent.startTest("Statutory 'Pending For Review' and 'Rejected' Count when Rejected");
 		
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.visibilityOf(ReviewerPOM.clickStatutoryReview()));	//Wait until Statutory Pending For Review count gets visible.
 		int oldStatutoryReviewValue = Integer.parseInt(ReviewerPOM.clickStatutoryReview().getText());	//Reading old value of Statutory Pending For Review

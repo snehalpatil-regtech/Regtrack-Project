@@ -3,6 +3,7 @@ package cfo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -440,7 +441,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "The Statutory Ex. Checklist Compliance Due box should be seen on the my dashboard page");	
 		}
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.ReadComplianceDue().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.ReadComplianceDue().click();
@@ -506,7 +507,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void ComplianceDueFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		MgmtSonyMethod.ReadComplianceDue().click();
@@ -707,7 +708,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "The Statutory Ex. Checklist Compliance Reported box should be seen on the my dashboard page");	
 		}
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.readComplianceReported().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.readComplianceReported().click();
@@ -773,7 +774,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void CompliancereportedFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(2000);
 		MgmtSonyMethod.readComplianceReported().click();
@@ -930,7 +931,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "TheStatutory Ex. Checklist Overdue Compliance box should be seen on the my dashboard page");	
 		}
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.ReadOverdueCompliance().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.ReadOverdueCompliance().click();
@@ -996,7 +997,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void OverdurComplianceFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		MgmtSonyMethod.ReadOverdueCompliance().click();
@@ -1188,7 +1189,7 @@ public class MgmtSonyMethod extends BasePage{
 	{
 		Thread.sleep(2000);
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -1296,7 +1297,7 @@ public class MgmtSonyMethod extends BasePage{
 	{
 		Thread.sleep(1000);
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(160));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
@@ -1424,7 +1425,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "The Internal compliance due box should be seen on the my dashboard page");	
 		}
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.ReadComplianceDue().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.ReadComplianceDue().click();
@@ -1490,7 +1491,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void ComplianceDueInFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		MgmtSonyMethod.ReadComplianceDue().click();
@@ -1696,7 +1697,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "The Internal Compliance Reported box should be seen on the my dashboard page");	
 		}
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.readComplianceReported().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.readComplianceReported().click();
@@ -1761,7 +1762,7 @@ public class MgmtSonyMethod extends BasePage{
 	
 	public static void RiskGraphCount1( ExtentTest test, String ComplianceType, int ComplianceCount, String Complaince)throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Actions action = new Actions(getDriver());
 		
 		Thread.sleep(4000);
@@ -1840,7 +1841,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void CompliancereportedInFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(2000);
 		MgmtSonyMethod.readComplianceReported().click();
@@ -2008,7 +2009,7 @@ public class MgmtSonyMethod extends BasePage{
 			test.log(LogStatus.FAIL, "The Internal compliance reported box should be seen on the my dashboard page");	
 		}
 	
-		WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		String string_Compliances =MgmtSonyMethod.ReadOverdueCompliance().getText();		//Storing old value of Statutory overdue.
 	int	CompliancesCountDas = Integer.parseInt(string_Compliances);
 	MgmtSonyMethod.ReadOverdueCompliance().click();
@@ -2074,7 +2075,7 @@ public class MgmtSonyMethod extends BasePage{
 	public static void OverdurComplianceInFilter(ExtentTest test ) throws InterruptedException, IOException
 	{	
 		
-       WebDriverWait wait = new WebDriverWait( getDriver(), 140);
+      WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		MgmtSonyMethod.ReadOverdueCompliance().click();
@@ -2252,7 +2253,7 @@ public class MgmtSonyMethod extends BasePage{
 	{
 		Thread.sleep(2000);
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -2361,7 +2362,7 @@ public class MgmtSonyMethod extends BasePage{
 	{
 		Thread.sleep(2000);
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,300)");	
@@ -2393,7 +2394,7 @@ public static void ColourCD( ExtentTest test)throws InterruptedException
 {
 	Thread.sleep(2000);
 	
-	WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	js.executeScript("window.scrollBy(0,300)");	
@@ -2424,7 +2425,7 @@ public static void ColourCTR( ExtentTest test)throws InterruptedException
 {
 	Thread.sleep(2000);
 	
-	WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	js.executeScript("window.scrollBy(0,800)");	
@@ -2455,7 +2456,7 @@ public static void ColourCDR( ExtentTest test)throws InterruptedException
 {
 Thread.sleep(2000);
 
-WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 
 JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 js.executeScript("window.scrollBy(0,800)");	
@@ -2487,7 +2488,7 @@ public static void ColourCTD( ExtentTest test)throws InterruptedException
 {
 	Thread.sleep(2000);
 	
-	WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+	WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	
 	JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	js.executeScript("window.scrollBy(0,1500)");	
@@ -2518,7 +2519,7 @@ public static void ColourCDD( ExtentTest test)throws InterruptedException
 {
 Thread.sleep(2000);
 
-WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 
 JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 js.executeScript("window.scrollBy(0,1500)");	

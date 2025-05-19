@@ -3,6 +3,7 @@ package cfo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -38,7 +39,7 @@ public class MgmtAMethod extends BasePage{
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		Thread.sleep(3000);
 		OverduePOM.ClickBtn().click();
@@ -247,7 +248,7 @@ public class MgmtAMethod extends BasePage{
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		Thread.sleep(4000);
 		//-------------------------------Create Sub Task--------------------------------------
@@ -426,7 +427,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	{
 
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		Thread.sleep(3000);
 		OverduePOM.ClickBtn().click();
@@ -629,7 +630,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	public static void myTaskSubTaskIn( ExtentTest test,XSSFWorkbook workbook)throws InterruptedException
 	{
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		Thread.sleep(4000);
 		//-------------------------------Create Sub Task--------------------------------------
@@ -811,7 +812,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		 Thread.sleep(8000); 
 		
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -863,7 +864,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		 Thread.sleep(8000); 
 		
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver().switchTo().frame(farme);
@@ -916,7 +917,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		 Thread.sleep(8000); 
 		
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 	getDriver() .switchTo().frame(farme);
@@ -982,7 +983,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -1078,7 +1079,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1188,7 +1189,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1288,7 +1289,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.readHigh().click();		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1415,7 +1416,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1530,7 +1531,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1638,7 +1639,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1735,7 +1736,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1860,7 +1861,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -1977,7 +1978,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -2086,7 +2087,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -2184,7 +2185,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -2311,7 +2312,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -2422,7 +2423,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -2515,7 +2516,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readCritical().click();	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -2605,7 +2606,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readCritical().click();	
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -2696,7 +2697,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -2786,7 +2787,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		Thread.sleep(8000);
@@ -2876,7 +2877,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readCritical().click();			
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		 CFOcountPOM.ComplianceID().sendKeys("110124",Keys.ENTER);
@@ -2967,7 +2968,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		CFOcountPOM.readCritical().click();			
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		CFOcountPOM.ComplianceID().sendKeys("110124",Keys.ENTER);
@@ -3062,7 +3063,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickRiskHighClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		
@@ -3155,7 +3156,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickRiskCriticalClosedTimely().click();			
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		
@@ -3249,7 +3250,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickRiskHighClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		
@@ -3343,7 +3344,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickRiskCriticalClosedTimelyDpt().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		 CFOcountPOM.ComplianceID().sendKeys("110124",Keys.ENTER);
@@ -3436,7 +3437,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickRiskHighClosedTimely().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		
@@ -3512,7 +3513,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -3613,7 +3614,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -3714,7 +3715,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -3815,7 +3816,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -3916,7 +3917,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -4017,7 +4018,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -4119,7 +4120,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -4220,7 +4221,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		JavascriptExecutor js = (JavascriptExecutor)  getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -4338,14 +4339,14 @@ String msg=	OverduePOM.TAmsg().getText();
 		
 		CFOcountPOM.clickPenaltyLow().click();
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 	}
 	
 	public static void DetailedReportAP(ExtentTest test ) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4431,7 +4432,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	
 	public static void DetailedReportAPAu(ExtentTest test ) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4519,7 +4520,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	
 	public static void DetailedReportAPD(ExtentTest test ) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4605,7 +4606,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	
 	public static void DetailedReportAPP(ExtentTest test ) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4715,7 +4716,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickAccountPendingReview().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		
@@ -4809,7 +4810,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		CFOcountPOM.clickAdminPendingReview().click();			//Clicking on Not Completed compliances bar of High risk.  
 		Thread.sleep(8000);
 	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		 CFOcountPOM.ComplianceID().sendKeys("129027",Keys.ENTER);
@@ -4882,7 +4883,7 @@ String msg=	OverduePOM.TAmsg().getText();
 	
 	public static void DetailedReportAPer(ExtentTest test ) throws InterruptedException, IOException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(180));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	    
 		Thread.sleep(500);
 		CFOcountPOM.clickReports().click();					//Clicking on 'My Reports'
@@ -4987,7 +4988,7 @@ String msg=	OverduePOM.TAmsg().getText();
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -5119,7 +5120,7 @@ try {
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -5241,7 +5242,7 @@ try {
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -5392,7 +5393,7 @@ try {
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -5544,7 +5545,7 @@ try {
 		
 		CFOcountPOM.clickRedGrading().click();
 		Thread.sleep(8000);	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(4000);
 		//ApprovalcountPOM.MitigationPlan().click();
@@ -5639,7 +5640,7 @@ try {
 		
 		CFOcountPOM.clickRedGrading().click();
 		Thread.sleep(8000);	
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(5000);
 		//ApprovalcountPOM.MitigationPlan().click();
@@ -5757,7 +5758,7 @@ try {
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -5870,7 +5871,7 @@ try {
 		CFOcountPOM.readHigh().click();		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -5971,7 +5972,7 @@ try {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6082,7 +6083,7 @@ try {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6184,7 +6185,7 @@ try {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6296,7 +6297,7 @@ try {
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6397,7 +6398,7 @@ try {
 		
 		Thread.sleep(8000);
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6509,7 +6510,7 @@ try {
 		
 		
 		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(8000);
 		ApprovalcountPOM.MitigationPlan().click();
@@ -6603,7 +6604,7 @@ try {
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);
@@ -6741,7 +6742,7 @@ try {
 		Thread.sleep(3000);
 		
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		Thread.sleep(3000);
 		Thread.sleep(3000);

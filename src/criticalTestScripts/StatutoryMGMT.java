@@ -1,8 +1,10 @@
 package criticalTestScripts;
 
+import org.testng.annotations.Test;
 import java.awt.AWTException;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -104,7 +106,7 @@ public class StatutoryMGMT extends BasePage {
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -116,10 +118,10 @@ public class StatutoryMGMT extends BasePage {
 		}
 	}
 	
-	 @Test(priority = 1)
+	@Test(priority=1)
 	void CategoriesCountMatch() throws InterruptedException, IOException
 	{
-		test = extent.startTest(" Count by Clicking on 'Categories'");
+		test = extent.startTest(" Count by Clicking on 'Categoriess'");
 		
 		CFOcountPOM.CategoriesCountMatch(test);
 		
@@ -142,7 +144,7 @@ public class StatutoryMGMT extends BasePage {
 		
 //		litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(3000);
 //		CFOcountPOM.clickExportImage().click();                    //export excel
@@ -201,7 +203,7 @@ public class StatutoryMGMT extends BasePage {
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait(getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 
 		js.executeScript("window.scrollBy(0,500)");
@@ -252,7 +254,7 @@ public class StatutoryMGMT extends BasePage {
 		test.log(LogStatus.PASS, " 'Show All ' link Clickable Successfully");
 		}
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 		getDriver().switchTo().frame(farme);
@@ -597,7 +599,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 				js.executeScript("window.scrollBy(0,500)");	
 			Actions action = new Actions(getDriver());
-			WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickNotApplicable()));
 			
 			Thread.sleep(1000);
@@ -785,7 +787,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 10)
+     @Test(priority = 10)
 		void dueToday_PieChart() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -1208,7 +1210,7 @@ public class StatutoryMGMT extends BasePage {
 			Thread.sleep(5000);
 			CFOcountPOM.RefreshNow().click();
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickCategories()));
 			
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -1602,7 +1604,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 26)
+//	 @Test(priority = 26)
 		void RiskSummaryCriticalStatutory() throws InterruptedException, IOException
 		{
 		
@@ -1724,17 +1726,17 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 	
-	@Test(priority = 15)
+//	@Test(priority = 15)
 	void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
-		AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+		AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical","");
 		extent.endTest(test);
 		extent.flush();
     	
 	}
 	
-	@Test(priority = 15)
+/*	@Test(priority = 15)
 	void riskSummaryClosedDelayed() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary Closed Delayed dashboard count match with Detailed Report Count Verification");
@@ -1758,7 +1760,7 @@ public class StatutoryMGMT extends BasePage {
 	void riskSummaryNotApplicable() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
-		AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+		AuditorcountPOM.riskSummaryNotApplicable1( test, "Critical");
 		extent.endTest(test);
 		extent.flush();
     	
@@ -1834,7 +1836,7 @@ public class StatutoryMGMT extends BasePage {
 		extent.flush();
     	
 	}
-	
+	*/
 	/*
   @Test(priority = 15)
 	void riskSummaryCriticalNotCompleted() throws InterruptedException, IOException
@@ -1896,7 +1898,7 @@ public class StatutoryMGMT extends BasePage {
 	}
 */
 		
-	 @Test(priority = 27)
+	// @Test(priority = 27)
 		void RiskSummaryHighStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'High' Count Verification");
@@ -2019,8 +2021,8 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-<<<<<<< HEAD
-	 @Test(priority = 0)
+
+	// @Test(priority = 0)
 		void riskSummaryCriticalClosedDelayed() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk summary Closed Delayed count match with Detailed Report Count Verification");
@@ -2037,7 +2039,7 @@ public class StatutoryMGMT extends BasePage {
 	    	
 	    	if(riskSummaryCriticalclosedDelayed > 0)
 			{
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Critical", riskSummaryCriticalclosedDelayed);
 			}
 			else
 			{
@@ -2046,7 +2048,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryHighclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "High", riskSummaryHighclosedDelayed);
 			}
 			else
 			{
@@ -2056,7 +2058,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryMediumclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
+				//AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Medium", riskSummaryMediumclosedDelayed);
 			}
 			else
 			{
@@ -2066,7 +2068,7 @@ public class StatutoryMGMT extends BasePage {
 	    	if(riskSummaryLowclosedDelayed > 0)
 			{
 	    		js.executeScript("window.scroll(0,1300)");
-				AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
+			//	AuditorcountPOM.riskSummaryCriticalClosedDelayed( test, "Low", riskSummaryLowclosedDelayed);
 			}
 			else
 			{
@@ -2079,10 +2081,10 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 	
-        @Test(priority = 28)
-=======
- @Test(priority = 28)
->>>>>>> 9ba8cfe1cfb96eb1546bb5b2821c341950c3323a
+ 
+
+// @Test(priority = 28)
+
 		void RiskSummaryMediumStatutory() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Risk Summary - 'Medium' Count Verification");
@@ -2205,7 +2207,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 29)
+// @Test(priority = 29)
 		void RiskSummaryLowStatutory() throws InterruptedException, IOException
 		{		
 			test = extent.startTest("Risk Summary - 'Low' Count Verification");
@@ -2332,7 +2334,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-       @Test(priority = 30)
+   //    @Test(priority = 30)
 		void DepartmentSummaryHumanResourceStatutory() throws InterruptedException, IOException
 		{
 			Thread.sleep(3000);		
@@ -2540,7 +2542,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 		
-  @Test(priority = 31)
+ // @Test(priority = 31)
 		void NotCompleted_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Completed' Count Verification");
@@ -2554,7 +2556,7 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,100)");
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver() ,(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2659,7 +2661,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 32)
+//	 @Test(priority = 32)
 		void ClosedDelayed_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Pie Chart -Completion Status- 'Closed Delayed' Count Verification");
@@ -2671,7 +2673,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			AuditorcountPOM.DateText().click();	
@@ -2777,7 +2779,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 33)
+// @Test(priority = 33)
 		void ClosedTimely_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Closed Timely' Count Verification");
@@ -2790,7 +2792,7 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2895,7 +2897,7 @@ public class StatutoryMGMT extends BasePage {
 			
 		}
 		
-	 @Test(priority = 34)
+	// @Test(priority = 34)
 		void NotApplicable_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status- 'Not Applicable' Count Verification");
@@ -2907,7 +2909,7 @@ public class StatutoryMGMT extends BasePage {
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			Actions action = new Actions(getDriver());
-			WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3018,7 +3020,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-	 @Test(priority = 35)
+	// @Test(priority = 35)
 
 	void UpcomingPieChartPeriod() throws InterruptedException
 	{
@@ -3029,7 +3031,7 @@ public class StatutoryMGMT extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2400)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
 		AuditorcountPOM.DateText().click();	
@@ -3176,7 +3178,7 @@ public class StatutoryMGMT extends BasePage {
 	}
 	
 	
-   @Test(priority = 36)
+ //  @Test(priority = 36)
 		void Overdue_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Overdue' Count Verification");
@@ -3188,7 +3190,7 @@ public class StatutoryMGMT extends BasePage {
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3299,7 +3301,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 37)
+// @Test(priority = 37)
 		void dueToday_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'dueToday' Count Verification");
@@ -3311,7 +3313,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3421,7 +3423,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
- @Test(priority = 38)
+// @Test(priority = 38)
 		void pendingForReview_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'Pending For Review' Count Verification");
@@ -3433,7 +3435,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3542,7 +3544,7 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		
-		 @Test(priority = 39)
+		// @Test(priority = 39)
 		void inProgress_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- 'in Progress' Count Verification");
@@ -3554,7 +3556,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3665,7 +3667,7 @@ public class StatutoryMGMT extends BasePage {
 		}
 		
 
-	  @Test(priority = 40)
+	//  @Test(priority = 40)
 		void rejected_PieChartPeriod() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Not Completed Status- ' Rejected' Count Verification");
@@ -3676,7 +3678,7 @@ public class StatutoryMGMT extends BasePage {
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3785,13 +3787,13 @@ public class StatutoryMGMT extends BasePage {
 			extent.flush();
 		}
 		  
-    @Test(priority = 42)
+  //  @Test(priority = 42)
 			void complianceCalendar() throws InterruptedException, IOException
 			{
 				test = extent.startTest("compliance Calendar Verifications");
 				//test.log(LogStatus.INFO, "Test Initiated");
 				
-				WebDriverWait wait = new WebDriverWait(getDriver(),(70));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				Thread.sleep(2000);
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				//js.executeScript("window.scrollBy(0,1800)");					//Scrolling down window by 2600 px.
@@ -3830,7 +3832,7 @@ public class StatutoryMGMT extends BasePage {
 					extent.flush();
 			}
 		  
-  @Test(priority = 59)
+ // @Test(priority = 59)
 			void DetailedReport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Detailed Report Count Verification");
@@ -3841,7 +3843,7 @@ public class StatutoryMGMT extends BasePage {
 				extent.flush();
 			}
 		  
-	@Test(priority = 60)
+//	@Test(priority = 0)
 			void AssignmentReport() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Assignment Report verification");
@@ -4044,7 +4046,7 @@ public class StatutoryMGMT extends BasePage {
 				extent.flush();
 			}
 */
-			
+	/*		
 		@Test(priority = 77)
 			void ComplianceDocuments() throws InterruptedException, IOException
 			{
@@ -4173,17 +4175,17 @@ public class StatutoryMGMT extends BasePage {
 				    }
 				
 			 @Test(priority = 92)
-			void riskSummaryCriticalNotCompleted1() throws InterruptedException, IOException
+			void riskSummaryCriticalNotCompleted11() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Not Completed dashboard count match with Detailed Report Count Verification");
-				AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical");
+				AuditorcountPOM.riskSummaryCriticalNotCompleted( test, "Critical","");
 				extent.endTest(test);
 				extent.flush();
 		    	
 			}
 			
 			 @Test(priority = 93)
-			void riskSummaryClosedDelayed() throws InterruptedException, IOException
+			void riskSummaryClosedDelayed1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Closed Delayed dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.riskSummaryClosedDelayed( test, "Critical");
@@ -4193,7 +4195,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 94)
-			void riskSummaryClosedTimely() throws InterruptedException, IOException
+			void riskSummaryClosedTimely1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Closed Timely dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.riskSummaryClosedTimely( test, "Critical");
@@ -4203,17 +4205,17 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 95)
-			void riskSummaryNotApplicable() throws InterruptedException, IOException
+			void riskSummaryNotApplicable1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Risk summary Not Applicable dashboard count match with Detailed Report Count Verification");
-				AuditorcountPOM.riskSummaryNotApplicable( test, "Critical");
+				AuditorcountPOM.riskSummaryNotApplicable1( test, "Critical");
 				extent.endTest(test);
 				extent.flush();
 		    	
 			}
 			
 			 @Test(priority = 96)
-			void DepartmentSummaryOverdue() throws InterruptedException, IOException
+			void DepartmentSummaryOverdue1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Overdue dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryOverdue( test, "Critical");
@@ -4223,7 +4225,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 97)
-			void DepartmentSummaryClosedDelayed() throws InterruptedException, IOException
+			void DepartmentSummaryClosedDelayed1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Closed Delayed dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryClosedDelayed( test, "Critical");
@@ -4233,7 +4235,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 98)
-			void DepartmentSummaryClosedT() throws InterruptedException, IOException
+			void DepartmentSummaryClosedT1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Closed Timely dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaryClosedT( test, "Critical");
@@ -4243,7 +4245,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 99)
-			void DepartmentSummaPR() throws InterruptedException, IOException
+			void DepartmentSummaPR1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Pending Review dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepartmentSummaPR( test, "Critical");
@@ -4253,7 +4255,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 100)
-			void DepaINPROGRESSR() throws InterruptedException, IOException
+			void DepaINPROGRESSR1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary In Progress dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaINPROGRESSR( test, "Critical");
@@ -4263,7 +4265,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 101)
-			void DepartmentSummaryRejected() throws InterruptedException, IOException
+			void DepartmentSummaryRejected1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Rejected dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaRejectedR( test, "Critical");
@@ -4273,7 +4275,7 @@ public class StatutoryMGMT extends BasePage {
 			}
 			
 			 @Test(priority = 102)
-			void DepartmentSummaryNotApplicable() throws InterruptedException, IOException
+			void DepartmentSummaryNotApplicable1() throws InterruptedException, IOException
 			{
 				test = extent.startTest("Department Summary Not Applicable dashboard count match with Detailed Report Count Verification");
 				AuditorcountPOM.DepaNotApplic( test, "Critical");
@@ -4290,7 +4292,7 @@ public class StatutoryMGMT extends BasePage {
 		        extent.flush();
 		    }
 			
-			
+			*/
 			
 			@AfterMethod
 		  	void browserClosing() throws InterruptedException

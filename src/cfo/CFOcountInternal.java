@@ -2,6 +2,7 @@ package cfo;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -123,7 +124,7 @@ public class CFOcountInternal extends BasePage
 	
 	public static void progress1( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -174,7 +175,7 @@ public class CFOcountInternal extends BasePage
 		
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));
@@ -311,7 +312,7 @@ public class CFOcountInternal extends BasePage
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[4]/a")));
@@ -388,7 +389,7 @@ public class CFOcountInternal extends BasePage
 	//	test.log(LogStatus.PASS, "Test Initiated");
 		
 		Thread.sleep(1500);
-		WebDriverWait wait1 = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait1.until(ExpectedConditions.visibilityOf(CFOcountPOM.TotalCompliancesM()));
 		int valueCompliances = Integer.parseInt(CFOcountPOM.TotalCompliancesM().getText());	//Storing value of 'Compliances' as a String to compare.
 		
@@ -398,7 +399,7 @@ public class CFOcountInternal extends BasePage
 		Thread.sleep(500);
 	//	litigationPerformer.MethodsPOM.progress();
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (10));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='k-selectable']")));
@@ -477,7 +478,7 @@ public class CFOcountInternal extends BasePage
 		
 		CFOcountPOM.clickUsersCount().click();					//Clicking on 'Users'. 
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (15));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		
 		Thread.sleep(5000);
@@ -536,7 +537,7 @@ public class CFOcountInternal extends BasePage
 		        
 		Thread.sleep(3000);
 		//litigationPerformer.MethodsPOM.progress();
-		WebDriverWait wait = new WebDriverWait( getDriver(), (40));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 	WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
       getDriver().switchTo().frame(farme);
@@ -2228,7 +2229,7 @@ public class CFOcountInternal extends BasePage
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(3000);
 
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);   
 		AuditorcountPOM.DateText().click();	
@@ -2328,7 +2329,7 @@ public class CFOcountInternal extends BasePage
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		AuditorcountPOM.DateText().click();	
@@ -2440,7 +2441,7 @@ public class CFOcountInternal extends BasePage
 	      JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(500);
 		Thread.sleep(1500);
@@ -2550,7 +2551,7 @@ public class CFOcountInternal extends BasePage
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		
@@ -2666,7 +2667,7 @@ public class CFOcountInternal extends BasePage
 	//	js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2500)");
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 		AuditorcountPOM.DateText().click();	
@@ -2784,7 +2785,7 @@ public class CFOcountInternal extends BasePage
 	//	js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2500)");
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 		Thread.sleep(1000);
@@ -2903,7 +2904,7 @@ public class CFOcountInternal extends BasePage
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 	//	js.executeScript("window.scrollBy(0,300)");
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(500);
 		Thread.sleep(1000);
@@ -3013,7 +3014,7 @@ public class CFOcountInternal extends BasePage
 		
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 	//	ApprovalcountPOM.clickManagement().click();
@@ -3137,7 +3138,7 @@ public class CFOcountInternal extends BasePage
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
 		Thread.sleep(4000);
@@ -3270,7 +3271,7 @@ public class CFOcountInternal extends BasePage
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 		Thread.sleep(1000);
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(500);
 		Thread.sleep(1000);
@@ -3387,7 +3388,7 @@ public class CFOcountInternal extends BasePage
 		Thread.sleep(500);	
 		CFOcountPOM.clickRedGrading().click();
 		Thread.sleep(4000);	
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 		Thread.sleep(1000);
 		//*[@id="showGRdetails"]
@@ -3427,7 +3428,7 @@ By locator = By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[12]/a");
 		test = extent.startTest("compliance Calendar Verifications");
 		
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(),(70));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
 	//	js.executeScript("window.scrollBy(0,2000)");					//Scrolling down window by 2600 px.

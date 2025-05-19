@@ -2,6 +2,7 @@ package criticalTestScripts;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -107,7 +108,7 @@ public class Performer extends BasePage {
 	
 	public static void message( )
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.closeMessage()));
@@ -452,7 +453,7 @@ public class Performer extends BasePage {
 					test = extent.startTest("My Compliance Calender Statutory perform Verification");
 					
 					Thread.sleep(3000);
-					WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+					WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 					JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 					js.executeScript("window.scrollBy(0,650)");					//Scrolling down window by 2600 px.
 					Thread.sleep(8000);
@@ -541,7 +542,7 @@ public class Performer extends BasePage {
 				test = extent.startTest(" Calender Statutory Count Verification");
 				
 				Thread.sleep(3000);
-				WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 				js.executeScript("window.scrollBy(0,650)");					//Scrolling down window by 2600 px.
 //				Thread.sleep(8000);

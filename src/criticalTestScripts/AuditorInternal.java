@@ -2,6 +2,7 @@ package criticalTestScripts;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -115,7 +116,7 @@ public class AuditorInternal extends BasePage {
 	
 	public static void progress1()
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			Thread.sleep(500);
@@ -2027,7 +2028,7 @@ public class AuditorInternal extends BasePage {
 		//js.executeScript("window.scrollBy(0,1000)");						//Scrolling down window by 1000 px.
 		js.executeScript("window.scrollBy(0,2300)");
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(3000);  
 		Thread.sleep(2000);
@@ -2139,7 +2140,7 @@ public class AuditorInternal extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2200)");					//Scrolling down window by 1000 px.
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		AuditorcountPOM.DateText().click();	
@@ -2251,7 +2252,7 @@ public class AuditorInternal extends BasePage {
 		Actions action = new Actions(getDriver());
 	      JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 	      js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(3000);
 		
@@ -2363,7 +2364,7 @@ public class AuditorInternal extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1500);
 		
@@ -2480,7 +2481,7 @@ public class AuditorInternal extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2100)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
 		AuditorcountPOM.DateText().click();	
@@ -2636,7 +2637,7 @@ public class AuditorInternal extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 	
@@ -2753,7 +2754,7 @@ public class AuditorInternal extends BasePage {
 	
 		js.executeScript("window.scrollBy(0,2200)");
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 		Thread.sleep(1000);
@@ -2871,7 +2872,7 @@ public class AuditorInternal extends BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 		Thread.sleep(1000);
 		Thread.sleep(2000);
@@ -2982,7 +2983,7 @@ public class AuditorInternal extends BasePage {
 		
 		
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
@@ -3101,7 +3102,7 @@ public class AuditorInternal extends BasePage {
 		test = extent.startTest("Period-Pie Chart - Not Completed Status - 'Rejected' Count Verification");
 		
 		Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 	//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//ApprovalcountPOM.clickManagement().click();

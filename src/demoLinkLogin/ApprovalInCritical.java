@@ -4,7 +4,8 @@ package demoLinkLogin;
 
 	import java.io.FileInputStream;
 	import java.io.IOException;
-	import java.util.List;
+import java.time.Duration;
+import java.util.List;
 
 	import org.apache.poi.ss.usermodel.Cell;
 	import org.apache.poi.ss.usermodel.Row;
@@ -99,7 +100,7 @@ package demoLinkLogin;
 		
 			 = login.Login.UserLogin(uname,password,link);		//Method of Login class to login user.
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 			ApprovalcountPOM.clickManagement().click();
@@ -154,7 +155,7 @@ package demoLinkLogin;
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), 70);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']")));
@@ -207,7 +208,7 @@ package demoLinkLogin;
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			Thread.sleep(3000);
 			CFOcountPOM.clickExportImage().click();                    //export excel
@@ -263,7 +264,7 @@ package demoLinkLogin;
 			
 			CFOcountPOM.clickUsersCount().click();					//Clicking on 'Users'. 
 			Thread.sleep(5000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 15);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			
 			Thread.sleep(2000);
@@ -322,7 +323,7 @@ package demoLinkLogin;
 
 			Thread.sleep(3000);
 			//litigationPerformer.MethodsPOM.progress();
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 		WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 		getDriver().switchTo().frame(farme);
@@ -923,7 +924,7 @@ package demoLinkLogin;
 			test = extent.startTest("Pie Chart - Not Completed Status - 'Pending For Review' Count Verification");
 			
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -1027,7 +1028,7 @@ package demoLinkLogin;
 			test = extent.startTest("Pie Chart -  Not Completed Status-  'In Progress' Count Verification");
 			
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -1129,7 +1130,7 @@ package demoLinkLogin;
 			
 			Thread.sleep(500);
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -2284,7 +2285,7 @@ package demoLinkLogin;
 
 		
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1500);   
 			AuditorcountPOM.DateText().click();	
@@ -2395,7 +2396,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1500);
 			AuditorcountPOM.DateText().click();	
@@ -2502,7 +2503,7 @@ package demoLinkLogin;
 		{
 			test = extent.startTest("Period-Pie Chart - Completion Status - 'Not Completed' Count Verification");
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			//wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -2627,7 +2628,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");						//Scrolling down window by 1000 px.
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1500);
 			
@@ -2743,7 +2744,7 @@ package demoLinkLogin;
 		//	js.executeScript("window.scrollBy(0,300)");						//Scrolling down window by 1000 px.
 			js.executeScript("window.scrollBy(0,2500)");
 			Thread.sleep(1000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),30);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1000);
 			AuditorcountPOM.DateText().click();	
@@ -2853,7 +2854,7 @@ package demoLinkLogin;
 			
 			
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -2974,7 +2975,7 @@ package demoLinkLogin;
 			
 			
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 		//	ApprovalcountPOM.clickManagement().click();
@@ -3098,7 +3099,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			
 			Thread.sleep(4000);
@@ -3226,7 +3227,7 @@ package demoLinkLogin;
 			test = extent.startTest("Period-Pie Chart - Not Completed Status - 'Rejected' Count Verification");
 			
 			Thread.sleep(4000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 			//ApprovalcountPOM.clickManagement().click();
@@ -3344,7 +3345,7 @@ package demoLinkLogin;
 		{
 			test = extent.startTest("compliance Calendar Verifications");
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(),(70));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,3500)");					//Scrolling down window by 2600 px.

@@ -3,7 +3,8 @@
 	import java.io.File;
 	import java.io.FileInputStream;
 	import java.io.IOException;
-	import java.util.ArrayList;
+import java.time.Duration;
+import java.util.ArrayList;
 	import java.util.HashSet;
 	import java.util.LinkedHashSet;
 	import java.util.List;
@@ -122,7 +123,7 @@ import org.openqa.selenium.WebElement;
 		
 		public static void progress1( )
 		{
-			WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			try
 			{
 				Thread.sleep(500);
@@ -182,7 +183,7 @@ import org.openqa.selenium.WebElement;
 			
 			//litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[1]/td[4]/a")));
@@ -282,7 +283,7 @@ import org.openqa.selenium.WebElement;
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			Thread.sleep(3000);
 			CFOcountPOM.clickExportImage().click();                    //export excel
@@ -345,7 +346,7 @@ import org.openqa.selenium.WebElement;
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 
 			js.executeScript("window.scrollBy(0,500)");
@@ -392,7 +393,7 @@ import org.openqa.selenium.WebElement;
 			
 			CFOcountPOM.readPenaltyCount().click();					//Clicking on 'Penalty'.
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			Thread.sleep(1000);
 			CFOcountPOM.clickExportImage().click();
@@ -487,7 +488,7 @@ import org.openqa.selenium.WebElement;
 			test.log(LogStatus.PASS, " 'Show All ' link Clickable Successfully");
 			}
 		//	litigationPerformer.MethodsPOM.progress();
-			WebDriverWait wait = new WebDriverWait( getDriver(), (100));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			WebElement farme=	getDriver().findElement(By.xpath("//*[@id='showdetails']"));
 			getDriver().switchTo().frame(farme);
@@ -852,7 +853,7 @@ import org.openqa.selenium.WebElement;
 				JavascriptExecutor js = (JavascriptExecutor) getDriver();
 					js.executeScript("window.scrollBy(0,500)");	
 				Actions action = new Actions(getDriver());
-				WebDriverWait wait = new WebDriverWait(getDriver(), (100));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickNotApplicable()));
 				
 				Thread.sleep(1000);
@@ -1474,7 +1475,7 @@ import org.openqa.selenium.WebElement;
 				Thread.sleep(5000);
 				CFOcountPOM.RefreshNow().click();
 				Thread.sleep(1000);
-				WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.visibilityOf(CFOcountPOM.clickCategories()));
 				
 				JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -2429,7 +2430,7 @@ import org.openqa.selenium.WebElement;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.cfo
 		//	js.executeScript("window.scrollBy(0,100)");
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver() ,(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2546,7 +2547,7 @@ import org.openqa.selenium.WebElement;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");					//Scrolling down window by 1000 px.
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			AuditorcountPOM.DateText().click();	
@@ -2664,7 +2665,7 @@ import org.openqa.selenium.WebElement;
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2781,7 +2782,7 @@ import org.openqa.selenium.WebElement;
 			js.executeScript("window.scrollBy(0,2400)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
 			Actions action = new Actions(getDriver());
-			WebDriverWait wait = new WebDriverWait(getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -2901,7 +2902,7 @@ import org.openqa.selenium.WebElement;
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
 		js.executeScript("window.scrollBy(0,2400)");			//Scrolling down window by 1000 px.
 		Thread.sleep(800);
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 		
 		AuditorcountPOM.DateText().click();	
@@ -3052,7 +3053,7 @@ import org.openqa.selenium.WebElement;
 	void DueforperiodIsSMETAColumn() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Not Completed - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3096,7 +3097,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnCloseddelayed() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Delayed - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3138,7 +3139,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnTimely() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Closed Timely - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3180,7 +3181,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnNotApplicable() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Not Applicable - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3222,7 +3223,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnUpcoming() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Upcoming - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3273,7 +3274,7 @@ import org.openqa.selenium.WebElement;
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(3000);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
@@ -3387,7 +3388,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnOverdue() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Overdue - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3437,7 +3438,7 @@ import org.openqa.selenium.WebElement;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3550,7 +3551,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnDuetoday() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - DueToday - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3600,7 +3601,7 @@ import org.openqa.selenium.WebElement;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3713,7 +3714,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnPendingForReview() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - Pending For Review - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3763,7 +3764,7 @@ import org.openqa.selenium.WebElement;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -3876,7 +3877,7 @@ import org.openqa.selenium.WebElement;
 	void periodIsSMETAColumnInprogress() throws InterruptedException, IOException
 	{
 		test = extent.startTest("Period-Pie Chart -Completion Status - In Progress - Is SMETA Column Count Verification");
-		WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(500);
 		Actions action = new Actions(getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -3927,7 +3928,7 @@ import org.openqa.selenium.WebElement;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2500)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait(getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			Thread.sleep(3000);
 			Thread.sleep(3000);
@@ -4038,7 +4039,7 @@ import org.openqa.selenium.WebElement;
 		void periodIsSMETAColumnRejected() throws InterruptedException, IOException
 		{
 			test = extent.startTest("Period-Pie Chart -Completion Status - Rejected - Is SMETA Column Count Verification");
-			WebDriverWait wait = new WebDriverWait( getDriver(),(120));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
@@ -4130,7 +4131,7 @@ import org.openqa.selenium.WebElement;
 				CFOcountPOM.clickPenaltyCritical().click();
 			//	CFOcountPOM.CountPenalty( test, PenaltyCritical);
 				Thread.sleep(5000);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				
 				 CFOcountPOM.clickExportImage().click();
@@ -4169,7 +4170,7 @@ import org.openqa.selenium.WebElement;
 				CFOcountPOM.clickPenaltyHigh().click();
 				//CFOcountPOM.CountPenalty( test, PenaltyHigh);
 				Thread.sleep(5000);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				
 				 CFOcountPOM.clickExportImage().click();
@@ -4207,7 +4208,7 @@ import org.openqa.selenium.WebElement;
 				CFOcountPOM.clickPenaltyMedium().click();
 			//	CFOcountPOM.CountPenalty( test, PenaltyMedium);
 				Thread.sleep(5000);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				
 				 CFOcountPOM.clickExportImage().click();
@@ -4245,7 +4246,7 @@ import org.openqa.selenium.WebElement;
 				CFOcountPOM.clickPenaltyLow().click();
 			//	CFOcountPOM.CountPenalty( test, PenaltyLow);
 				Thread.sleep(5000);
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 				
 				 CFOcountPOM.clickExportImage().click();
@@ -4288,7 +4289,7 @@ import org.openqa.selenium.WebElement;
 				Thread.sleep(2000);	
 				CFOcountPOM.clickRedGrading().click();
 				Thread.sleep(8000);	
-				WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+				WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 				wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showGRdetails"));	//Wait until frame get visible and switch to it.
 				Thread.sleep(1000);
 			
@@ -4329,7 +4330,7 @@ import org.openqa.selenium.WebElement;
 			test = extent.startTest("compliance Calendar Verifications");
 			//test.log(LogStatus.INFO, "Test Initiated");
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(),(70));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(2000);
 			JavascriptExecutor js = (JavascriptExecutor) getDriver(); ;
 			//js.executeScript("window.scrollBy(0,1800)");					//Scrolling down window by 2600 px.
@@ -4942,7 +4943,7 @@ import org.openqa.selenium.WebElement;
 		{
 			test = extent.startTest("My Notifications - Verification");
 		//	test.log(LogStatus.INFO, "Test Initiated");
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(8000);
 			CFOcountPOM.clickMyNotifications().click();
 			Thread.sleep(4000);
@@ -4971,7 +4972,7 @@ import org.openqa.selenium.WebElement;
 		{
 			test = extent.startTest(" Message Center - Verification");
 			//test.log(LogStatus.INFO, "Test Initiated");
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			Thread.sleep(8000);
 			CFOcountPOM.clickMessageCenter().click();
 			Thread.sleep(4000);
@@ -5481,7 +5482,7 @@ import org.openqa.selenium.WebElement;
 			
 		//	litigationPerformer.MethodsPOM.progress();
 			
-			WebDriverWait wait = new WebDriverWait( getDriver(), (70));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("showdetails"));	//Wait until frame get visible and switch to it.
 			
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='grid']/div[3]/table/tbody/tr[3]/td[4]/div")));

@@ -104,7 +104,7 @@ public class FePerformer extends BasePage {
 	
 	public static void message()
 	{
-		WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		try
 		{
 			wait.until(ExpectedConditions.elementToBeClickable(OverduePOM.closeMessage()));
@@ -124,7 +124,7 @@ public class FePerformer extends BasePage {
 	{
 		test = extent.startTest("Assigned Events Count using Assigned button");
 		
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(2000);
 		int dasAssignedEventVal = Integer.parseInt(OverduePOM.clickAssignedEventsOw().getText());	//Storing old Activated Events value
 		
@@ -192,7 +192,7 @@ public class FePerformer extends BasePage {
 	{
 		test = extent.startTest("Activated Events Count using Activate button");
 		test.log(LogStatus.INFO, "Test Initiated");
-		WebDriverWait wait = new WebDriverWait( getDriver(), (35));
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		Thread.sleep(2000);
 		int dasActivatedEventVal = Integer.parseInt(OverduePOM.readActivatedEventsOw().getText());	//Storing old Activated Events value
 		

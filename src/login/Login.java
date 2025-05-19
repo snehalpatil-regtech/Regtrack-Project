@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -91,7 +91,7 @@ public class Login extends BasePage
 	public static WebDriver UserLogin(String username, String password, String method) throws InterruptedException
 	{		
 		//WebDriverWait wait = new WebDriverWait(getDriver(), 40);
-		WebDriverWait wait1 = new WebDriverWait(getDriver(), 60);
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		LoginPOM.setUname().sendKeys(username);		//Sent username to input box 
 		Thread.sleep(3000);
@@ -585,8 +585,8 @@ public class Login extends BasePage
 	
 	public static WebDriver UserLogin1(String username, String password, String method) throws InterruptedException
 	{		
-		WebDriverWait wait = new WebDriverWait(getDriver(), 40);
-		WebDriverWait wait1 = new WebDriverWait(getDriver(), 40);
+		WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
+		WebDriverWait wait1 = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		
 		LoginPOM.setUname().sendKeys(username);		//Sent username to input box 
 		Thread.sleep(500);

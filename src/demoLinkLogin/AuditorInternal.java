@@ -4,7 +4,8 @@ package demoLinkLogin;
 
 	import java.io.FileInputStream;
 	import java.io.IOException;
-	import java.util.List;
+import java.time.Duration;
+import java.util.List;
 
 	import org.apache.poi.ss.usermodel.Cell;
 	import org.apache.poi.ss.usermodel.Row;
@@ -117,7 +118,7 @@ package demoLinkLogin;
 		
 		public static void progress1()
 		{
-			WebDriverWait wait = new WebDriverWait( getDriver(),(60));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			try
 			{
 				Thread.sleep(500);
@@ -1904,7 +1905,7 @@ package demoLinkLogin;
 			//js.executeScript("window.scrollBy(0,1000)");						//Scrolling down window by 1000 px.
 			js.executeScript("window.scrollBy(0,2300)");
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(3000);  
 			Thread.sleep(2000);
@@ -2018,7 +2019,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2200)");					//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1500);
 			AuditorcountPOM.DateText().click();	
@@ -2129,7 +2130,7 @@ package demoLinkLogin;
 			Actions action = new Actions(getDriver());
 		      JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 		      js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(3000);
 			
@@ -2241,7 +2242,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1500);
 			
@@ -2357,7 +2358,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver();
 			js.executeScript("window.scrollBy(0,2100)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			
 			Thread.sleep(4000);
@@ -2497,7 +2498,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1000);
 		
@@ -2612,7 +2613,7 @@ package demoLinkLogin;
 		
 			js.executeScript("window.scrollBy(0,2200)");
 			Thread.sleep(2000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1000);
 			Thread.sleep(1000);
@@ -2729,7 +2730,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2200)");						//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(),(30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));
 			Thread.sleep(1000);
 			Thread.sleep(2000);
@@ -2840,7 +2841,7 @@ package demoLinkLogin;
 			
 			
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			
 			Thread.sleep(500);
 			Actions action = new Actions(getDriver());
@@ -2960,7 +2961,7 @@ package demoLinkLogin;
 			JavascriptExecutor js = (JavascriptExecutor) getDriver() ;
 			js.executeScript("window.scrollBy(0,2200)");			//Scrolling down window by 1000 px.
 			Thread.sleep(800);
-			WebDriverWait wait = new WebDriverWait( getDriver(), (30));
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IFNewPeriodGraphCompliance"));                                                            	
 			
 			Thread.sleep(4000);
@@ -3089,7 +3090,7 @@ package demoLinkLogin;
 			test = extent.startTest("Period-Pie Chart - Not Completed Status - 'Rejected' Count Verification");
 			
 			Thread.sleep(4000);
-			WebDriverWait wait = new WebDriverWait( getDriver(), 40);
+			WebDriverWait wait = new WebDriverWait( getDriver(),Duration.ofSeconds(60));
 		//	wait.until(ExpectedConditions.visibilityOf(ApprovalcountPOM.clickManagement()));
 
 			//ApprovalcountPOM.clickManagement().click();
